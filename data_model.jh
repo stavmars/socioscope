@@ -1,0 +1,21 @@
+entity CodeList {
+	name String required,
+	description String,
+	createdDate Instant required
+}
+
+entity Code {
+    codeListId String required,
+    name String required,
+	description String,
+	parentCodeId String,
+	order Integer,
+	color String
+}
+
+
+relationship ManyToOne {
+	CodeList{creator} to User
+}
+
+service CodeList with serviceClass
