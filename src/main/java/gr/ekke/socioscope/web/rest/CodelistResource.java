@@ -52,9 +52,9 @@ public class CodelistResource {
         if (codelist.getId() != null) {
             throw new BadRequestAlertException("A new codelist cannot already have an ID", ENTITY_NAME, "idexists");
         }
-        Codelist result = codelistService.save(codelist);
+        Codelist result = codelistService.createCodelist(codelist);
         return ResponseEntity.created(new URI("/api/codelists/" + result.getId()))
-            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
+            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId()))
             .body(result);
     }
 
@@ -74,10 +74,8 @@ public class CodelistResource {
         if (codelist.getId() == null) {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
-        Codelist result = codelistService.save(codelist);
-        return ResponseEntity.ok()
-            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, codelist.getId().toString()))
-            .body(result);
+        Optional<Codelist> updatedCodeList = codelistService.updateCodelist(codelist);
+        return ResponseUtil.wrapOrNotFound(updatedCodeList, HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, codelist.getId()));
     }
 
     /**

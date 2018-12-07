@@ -27,23 +27,49 @@ public class CodelistService {
 
     private final CodelistSearchRepository codelistSearchRepository;
 
-    public CodelistService(CodelistRepository codelistRepository, CodelistSearchRepository codelistSearchRepository) {
+    private final UserService userService;
+
+    public CodelistService(CodelistRepository codelistRepository, CodelistSearchRepository codelistSearchRepository, UserService userService) {
         this.codelistRepository = codelistRepository;
         this.codelistSearchRepository = codelistSearchRepository;
+        this.userService = userService;
     }
 
     /**
-     * Save a codelist.
+     * Create a codelist.
      *
-     * @param codelist the entity to save
-     * @return the persisted entity
+     * @param codelist the codelist to save
+     * @return the persisted codelist
      */
-    public Codelist save(Codelist codelist) {
-        log.debug("Request to save Codelist : {}", codelist);
-        Codelist result = codelistRepository.save(codelist);
-        codelistSearchRepository.save(result);
-        return result;
+    public Codelist createCodelist(Codelist codelist) {
+        codelist.setCreator(userService.getUserWithAuthorities().orElse(null));
+        codelistRepository.save(codelist);
+        codelistSearchRepository.save(codelist);
+        log.debug("Created Codelist: {}", codelist);
+        return codelist;
     }
+
+    /**
+     * Update all information for a specific codelist, and return the modified codelist.
+     *
+     * @param updatedCodelist codelist to update
+     * @return updated codelist
+     */
+    public Optional<Codelist> updateCodelist(Codelist updatedCodelist) {
+        return Optional.of(codelistRepository
+            .findById(updatedCodelist.getId()))
+            .filter(Optional::isPresent)
+            .map(Optional::get)
+            .map(codelist -> {
+                codelist.setName(updatedCodelist.getName());
+                codelist.setDescription(updatedCodelist.getDescription());
+                codelistRepository.save(codelist);
+                codelistSearchRepository.save(codelist);
+                log.debug("Changed Information for Codelist: {}", codelist);
+                return codelist;
+            });
+    }
+
 
     /**
      * Get all the codelists.

@@ -1,6 +1,7 @@
 package gr.ekke.socioscope.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -30,6 +31,7 @@ public class Codelist implements Serializable {
     @Field("description")
     private String description;
 
+    @CreatedDate
     @Field("created_date")
     private Instant createdDate;
 

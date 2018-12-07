@@ -50,8 +50,6 @@ public class CodelistResourceIntTest {
     private static final String DEFAULT_DESCRIPTION = "AAAAAAAAAA";
     private static final String UPDATED_DESCRIPTION = "BBBBBBBBBB";
 
-    private static final Instant DEFAULT_CREATED_DATE = Instant.ofEpochMilli(0L);
-    private static final Instant UPDATED_CREATED_DATE = Instant.now().truncatedTo(ChronoUnit.MILLIS);
 
     @Autowired
     private CodelistRepository codelistRepository;
@@ -100,8 +98,7 @@ public class CodelistResourceIntTest {
     public static Codelist createEntity() {
         Codelist codelist = new Codelist()
             .name(DEFAULT_NAME)
-            .description(DEFAULT_DESCRIPTION)
-            .createdDate(DEFAULT_CREATED_DATE);
+            .description(DEFAULT_DESCRIPTION);
         return codelist;
     }
 
@@ -127,7 +124,6 @@ public class CodelistResourceIntTest {
         Codelist testCodelist = codelistList.get(codelistList.size() - 1);
         assertThat(testCodelist.getName()).isEqualTo(DEFAULT_NAME);
         assertThat(testCodelist.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
-        assertThat(testCodelist.getCreatedDate()).isEqualTo(DEFAULT_CREATED_DATE);
 
         // Validate the Codelist in Elasticsearch
         verify(mockCodelistSearchRepository, times(1)).save(testCodelist);
@@ -182,8 +178,7 @@ public class CodelistResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(codelist.getId())))
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
-            .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
-            .andExpect(jsonPath("$.[*].createdDate").value(hasItem(DEFAULT_CREATED_DATE.toString())));
+            .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())));
     }
     
     @Test
@@ -197,8 +192,7 @@ public class CodelistResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(codelist.getId()))
             .andExpect(jsonPath("$.name").value(DEFAULT_NAME.toString()))
-            .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()))
-            .andExpect(jsonPath("$.createdDate").value(DEFAULT_CREATED_DATE.toString()));
+            .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()));
     }
 
     @Test
@@ -211,7 +205,7 @@ public class CodelistResourceIntTest {
     @Test
     public void updateCodelist() throws Exception {
         // Initialize the database
-        codelistService.save(codelist);
+        codelistService.createCodelist(codelist);
         // As the test used the service layer, reset the Elasticsearch mock repository
         reset(mockCodelistSearchRepository);
 
@@ -221,8 +215,7 @@ public class CodelistResourceIntTest {
         Codelist updatedCodelist = codelistRepository.findById(codelist.getId()).get();
         updatedCodelist
             .name(UPDATED_NAME)
-            .description(UPDATED_DESCRIPTION)
-            .createdDate(UPDATED_CREATED_DATE);
+            .description(UPDATED_DESCRIPTION);
 
         restCodelistMockMvc.perform(put("/api/codelists")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -235,7 +228,6 @@ public class CodelistResourceIntTest {
         Codelist testCodelist = codelistList.get(codelistList.size() - 1);
         assertThat(testCodelist.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testCodelist.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
-        assertThat(testCodelist.getCreatedDate()).isEqualTo(UPDATED_CREATED_DATE);
 
         // Validate the Codelist in Elasticsearch
         verify(mockCodelistSearchRepository, times(1)).save(testCodelist);
@@ -264,7 +256,7 @@ public class CodelistResourceIntTest {
     @Test
     public void deleteCodelist() throws Exception {
         // Initialize the database
-        codelistService.save(codelist);
+        codelistService.createCodelist(codelist);
 
         int databaseSizeBeforeDelete = codelistRepository.findAll().size();
 
@@ -284,7 +276,7 @@ public class CodelistResourceIntTest {
     @Test
     public void searchCodelist() throws Exception {
         // Initialize the database
-        codelistService.save(codelist);
+        codelistService.createCodelist(codelist);
         when(mockCodelistSearchRepository.search(queryStringQuery("id:" + codelist.getId())))
             .thenReturn(Collections.singletonList(codelist));
         // Search the codelist
@@ -293,8 +285,7 @@ public class CodelistResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(codelist.getId())))
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME)))
-            .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION)))
-            .andExpect(jsonPath("$.[*].createdDate").value(hasItem(DEFAULT_CREATED_DATE.toString())));
+            .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION)));
     }
 
     @Test
