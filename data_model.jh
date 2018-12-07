@@ -1,11 +1,11 @@
-entity CodeList {
+entity Codelist {
 	name String required,
 	description String,
-	createdDate Instant required
+	createdDate Instant
 }
 
 entity Code {
-    codeListId String required,
+    codelistId String required,
     name String required,
 	description String,
 	parentCodeId String,
@@ -15,7 +15,7 @@ entity Code {
 
 
 relationship ManyToOne {
-	CodeList{creator} to User
+	Codelist{creator(login)} to User
 }
 
-service CodeList with serviceClass
+service Codelist with serviceClass

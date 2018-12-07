@@ -1,0 +1,27 @@
+{
+  "socioscopeApp": {
+    "code": {
+      "home": {
+        "title": "Codes",
+        "createLabel": "Δημιουργήστε ένα νέο Code",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Code",
+        "search": "Αναζήτηση για Code"
+      },
+      "created": "Ένα νέο Code έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Code έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Code έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Code {{ id }};"
+      },
+      "detail": {
+        "title": "Code"
+      },
+      "codelistId": "Codelist Id",
+      "name": "Name",
+      "description": "Description",
+      "parentCodeId": "Parent Code Id",
+      "order": "Order",
+      "color": "Color"
+    }
+  }
+}
