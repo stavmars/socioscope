@@ -4,16 +4,6 @@ entity Codelist {
 	createdDate Instant
 }
 
-entity Code {
-    codelistId String required,
-    name String required,
-	description String,
-	parentCodeId String,
-	order Integer,
-	color String
-}
-
-
 relationship ManyToOne {
 	Codelist{creator(login)} to User
 }

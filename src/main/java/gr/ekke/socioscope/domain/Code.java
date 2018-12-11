@@ -2,8 +2,6 @@ package gr.ekke.socioscope.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Field;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
@@ -12,18 +10,11 @@ import java.util.Objects;
 /**
  * A Code.
  */
-@Document(collection = "code")
-@org.springframework.data.elasticsearch.annotations.Document(indexName = "code")
 public class Code implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @Id
     private String id;
-
-    @NotNull
-    @Field("codelist_id")
-    private String codelistId;
 
     @NotNull
     @Field("name")
@@ -32,7 +23,6 @@ public class Code implements Serializable {
     @Field("description")
     private String description;
 
-    @Field("parent_code_id")
     private String parentCodeId;
 
     @Field("order")
@@ -41,26 +31,12 @@ public class Code implements Serializable {
     @Field("color")
     private String color;
 
-    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
         return id;
     }
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getCodelistId() {
-        return codelistId;
-    }
-
-    public Code codelistId(String codelistId) {
-        this.codelistId = codelistId;
-        return this;
-    }
-
-    public void setCodelistId(String codelistId) {
-        this.codelistId = codelistId;
     }
 
     public String getName() {
@@ -127,7 +103,6 @@ public class Code implements Serializable {
     public void setColor(String color) {
         this.color = color;
     }
-    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
     public boolean equals(Object o) {
@@ -153,7 +128,6 @@ public class Code implements Serializable {
     public String toString() {
         return "Code{" +
             "id=" + getId() +
-            ", codelistId='" + getCodelistId() + "'" +
             ", name='" + getName() + "'" +
             ", description='" + getDescription() + "'" +
             ", parentCodeId='" + getParentCodeId() + "'" +

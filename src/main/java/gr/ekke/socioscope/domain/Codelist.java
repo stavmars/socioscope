@@ -10,6 +10,7 @@ import javax.validation.constraints.*;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -32,13 +33,15 @@ public class Codelist implements Serializable {
     private String description;
 
     @CreatedDate
-    @Field("created_date")
     private Instant createdDate;
 
     @DBRef
     @Field("creator")
     @JsonIgnoreProperties("")
     private User creator;
+
+    @Field("codes")
+    private List<Code> codes;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
@@ -100,6 +103,20 @@ public class Codelist implements Serializable {
     public void setCreator(User user) {
         this.creator = user;
     }
+
+    public List<Code> getCodes() {
+        return codes;
+    }
+
+    public Codelist codes(List<Code> codes) {
+        this.codes = codes;
+        return this;
+    }
+
+    public void setCodes(List<Code> codes) {
+        this.codes = codes;
+    }
+
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -125,10 +142,12 @@ public class Codelist implements Serializable {
     @Override
     public String toString() {
         return "Codelist{" +
-            "id=" + getId() +
-            ", name='" + getName() + "'" +
-            ", description='" + getDescription() + "'" +
-            ", createdDate='" + getCreatedDate() + "'" +
-            "}";
+            "id='" + id + '\'' +
+            ", name='" + name + '\'' +
+            ", description='" + description + '\'' +
+            ", createdDate=" + createdDate +
+            ", creator=" + creator +
+            ", codes=" + codes +
+            '}';
     }
 }
