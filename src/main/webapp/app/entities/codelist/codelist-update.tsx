@@ -20,14 +20,12 @@ export interface ICodelistUpdateProps extends StateProps, DispatchProps, RouteCo
 
 export interface ICodelistUpdateState {
   isNew: boolean;
-  creatorId: string;
 }
 
 export class CodelistUpdate extends React.Component<ICodelistUpdateProps, ICodelistUpdateState> {
   constructor(props) {
     super(props);
     this.state = {
-      creatorId: '0',
       isNew: !this.props.match.params || !this.props.match.params.id
     };
   }
@@ -116,33 +114,29 @@ export class CodelistUpdate extends React.Component<ICodelistUpdateProps, ICodel
                   </Label>
                   <AvField id="codelist-description" type="text" name="description" />
                 </AvGroup>
-                <AvGroup>
-                  <Label id="createdDateLabel" for="createdDate">
-                    <Translate contentKey="socioscopeApp.codelist.createdDate">Created Date</Translate>
-                  </Label>
-                  <AvInput
-                    id="codelist-createdDate"
-                    type="datetime-local"
-                    className="form-control"
-                    name="createdDate"
-                    value={isNew ? null : convertDateTimeFromServer(this.props.codelistEntity.createdDate)}
-                  />
-                </AvGroup>
-                <AvGroup>
-                  <Label for="creator.login">
-                    <Translate contentKey="socioscopeApp.codelist.creator">Creator</Translate>
-                  </Label>
-                  <AvInput id="codelist-creator" type="select" className="form-control" name="creator.id">
-                    <option value="" key="0" />
-                    {users
-                      ? users.map(otherEntity => (
-                          <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.login}
-                          </option>
-                        ))
-                      : null}
-                  </AvInput>
-                </AvGroup>
+                {!isNew ? (
+                  <AvGroup>
+                    <Label id="createdDateLabel" for="createdDate">
+                      <Translate contentKey="socioscopeApp.codelist.createdDate">Created Date</Translate>
+                    </Label>
+                    <AvInput
+                      id="codelist-createdDate"
+                      type="datetime-local"
+                      className="form-control"
+                      name="creatdedDate"
+                      value={convertDateTimeFromServer(this.props.codelistEntity.createdDate)}
+                      readOnly
+                    />
+                  </AvGroup>
+                ) : null}
+                {!isNew ? (
+                  <AvGroup>
+                    <Label for="creator.login">
+                      <Translate contentKey="socioscopeApp.codelist.creator">Creator</Translate>
+                    </Label>
+                    <AvInput id="codelist-creator" type="text" className="form-control" name="creator.login" readOnly />
+                  </AvGroup>
+                ) : null}
                 <Button tag={Link} id="cancel-save" to="/entity/codelist" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />
                   &nbsp;

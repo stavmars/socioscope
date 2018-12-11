@@ -83,9 +83,6 @@ export class Codelist extends React.Component<ICodelistProps, ICodelistState> {
             <thead>
               <tr>
                 <th>
-                  <Translate contentKey="global.field.id">ID</Translate>
-                </th>
-                <th>
                   <Translate contentKey="socioscopeApp.codelist.name">Name</Translate>
                 </th>
                 <th>
@@ -104,11 +101,8 @@ export class Codelist extends React.Component<ICodelistProps, ICodelistState> {
               {codelistList.map((codelist, i) => (
                 <tr key={`entity-${i}`}>
                   <td>
-                    <Button tag={Link} to={`${match.url}/${codelist.id}`} color="link" size="sm">
-                      {codelist.id}
-                    </Button>
+                    <Link to={`${match.url}/${codelist.id}`}>{codelist.name}</Link>
                   </td>
-                  <td>{codelist.name}</td>
                   <td>{codelist.description}</td>
                   <td>
                     <TextFormat type="date" value={codelist.createdDate} format={APP_DATE_FORMAT} />
