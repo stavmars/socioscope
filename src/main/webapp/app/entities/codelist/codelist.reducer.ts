@@ -22,6 +22,7 @@ const initialState = {
   entities: [] as ReadonlyArray<ICodelist>,
   entity: defaultValue,
   updating: false,
+  totalItems: 0,
   updateSuccess: false
 };
 
@@ -72,6 +73,7 @@ export default (state: CodelistState = initialState, action): CodelistState => {
       return {
         ...state,
         loading: false,
+        totalItems: action.payload.headers['x-total-count'],
         entities: action.payload.data
       };
     case SUCCESS(ACTION_TYPES.FETCH_CODELIST):
@@ -114,10 +116,13 @@ export const getSearchEntities: ICrudSearchAction<ICodelist> = query => ({
   payload: axios.get<ICodelist>(`${apiSearchUrl}?query=` + query)
 });
 
-export const getEntities: ICrudGetAllAction<ICodelist> = (page, size, sort) => ({
-  type: ACTION_TYPES.FETCH_CODELIST_LIST,
-  payload: axios.get<ICodelist>(`${apiUrl}?cacheBuster=${new Date().getTime()}`)
-});
+export const getEntities: ICrudGetAllAction<ICodelist> = (page, size, sort) => {
+  const requestUrl = `${apiUrl}${sort ? `?page=${page}&size=${size}&sort=${sort}` : ''}`;
+  return {
+    type: ACTION_TYPES.FETCH_CODELIST_LIST,
+    payload: axios.get<ICodelist>(`${requestUrl}${sort ? '&' : '?'}cacheBuster=${new Date().getTime()}`)
+  };
+};
 
 export const getEntity: ICrudGetAction<ICodelist> = id => {
   const requestUrl = `${apiUrl}/${id}`;

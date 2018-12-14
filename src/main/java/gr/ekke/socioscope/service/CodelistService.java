@@ -6,6 +6,8 @@ import gr.ekke.socioscope.repository.search.CodelistSearchRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -50,10 +52,10 @@ public class CodelistService {
     }
 
     /**
-     * Update all information for a specific codelist, and return the modified codelist.
+     * Save a codelist.
      *
-     * @param updatedCodelist codelist to update
-     * @return updated codelist
+     * @param updatedCodelist the entity to save
+     * @return the persisted entity
      */
     public Optional<Codelist> updateCodelist(Codelist updatedCodelist) {
         return Optional.of(codelistRepository
@@ -70,15 +72,15 @@ public class CodelistService {
             });
     }
 
-
     /**
      * Get all the codelists.
      *
+     * @param pageable the pagination information
      * @return the list of entities
      */
-    public List<Codelist> findAll() {
+    public Page<Codelist> findAll(Pageable pageable) {
         log.debug("Request to get all Codelists");
-        return codelistRepository.findAll();
+        return codelistRepository.findAll(pageable);
     }
 
 
@@ -108,12 +110,10 @@ public class CodelistService {
      * Search for the codelist corresponding to the query.
      *
      * @param query the query of the search
+     * @param pageable the pagination information
      * @return the list of entities
      */
-    public List<Codelist> search(String query) {
-        log.debug("Request to search Codelists for query {}", query);
-        return StreamSupport
-            .stream(codelistSearchRepository.search(queryStringQuery(query)).spliterator(), false)
-            .collect(Collectors.toList());
-    }
+    public Page<Codelist> search(String query, Pageable pageable) {
+        log.debug("Request to search for a page of Codelists for query {}", query);
+        return codelistSearchRepository.search(queryStringQuery(query), pageable);    }
 }

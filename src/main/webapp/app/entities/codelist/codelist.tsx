@@ -4,7 +4,17 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, InputGroup, Col, Row, Table } from 'reactstrap';
 import { AvForm, AvGroup, AvInput } from 'availity-reactstrap-validation';
 // tslint:disable-next-line:no-unused-variable
-import { Translate, translate, ICrudSearchAction, ICrudGetAllAction, TextFormat } from 'react-jhipster';
+import {
+  Translate,
+  translate,
+  ICrudSearchAction,
+  ICrudGetAllAction,
+  TextFormat,
+  getSortState,
+  IPaginationBaseState,
+  getPaginationItemsNumber,
+  JhiPagination
+} from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -12,20 +22,22 @@ import { getSearchEntities, getEntities } from './codelist.reducer';
 import { ICodelist } from 'app/shared/model/codelist.model';
 // tslint:disable-next-line:no-unused-variable
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
+import { ITEMS_PER_PAGE } from 'app/shared/util/pagination.constants';
 
 export interface ICodelistProps extends StateProps, DispatchProps, RouteComponentProps<{ url: string }> {}
 
-export interface ICodelistState {
+export interface ICodelistState extends IPaginationBaseState {
   search: string;
 }
 
 export class Codelist extends React.Component<ICodelistProps, ICodelistState> {
   state: ICodelistState = {
-    search: ''
+    search: '',
+    ...getSortState(this.props.location, ITEMS_PER_PAGE)
   };
 
   componentDidMount() {
-    this.props.getEntities();
+    this.getEntities();
   }
 
   search = () => {
@@ -43,8 +55,30 @@ export class Codelist extends React.Component<ICodelistProps, ICodelistState> {
 
   handleSearch = event => this.setState({ search: event.target.value });
 
+  sort = prop => () => {
+    this.setState(
+      {
+        order: this.state.order === 'asc' ? 'desc' : 'asc',
+        sort: prop
+      },
+      () => this.sortEntities()
+    );
+  };
+
+  sortEntities() {
+    this.getEntities();
+    this.props.history.push(`${this.props.location.pathname}?page=${this.state.activePage}&sort=${this.state.sort},${this.state.order}`);
+  }
+
+  handlePagination = activePage => this.setState({ activePage }, () => this.sortEntities());
+
+  getEntities = () => {
+    const { activePage, itemsPerPage, sort, order } = this.state;
+    this.props.getEntities(activePage - 1, itemsPerPage, `${sort},${order}`);
+  };
+
   render() {
-    const { codelistList, match } = this.props;
+    const { codelistList, match, totalItems } = this.props;
     return (
       <div>
         <h2 id="codelist-heading">
@@ -82,17 +116,17 @@ export class Codelist extends React.Component<ICodelistProps, ICodelistState> {
           <Table responsive>
             <thead>
               <tr>
-                <th>
-                  <Translate contentKey="socioscopeApp.codelist.name">Name</Translate>
+                <th className="hand" onClick={this.sort('name')}>
+                  <Translate contentKey="socioscopeApp.codelist.name">Name</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('description')}>
+                  <Translate contentKey="socioscopeApp.codelist.description">Description</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('createdDate')}>
+                  <Translate contentKey="socioscopeApp.codelist.createdDate">Created Date</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th>
-                  <Translate contentKey="socioscopeApp.codelist.description">Description</Translate>
-                </th>
-                <th>
-                  <Translate contentKey="socioscopeApp.codelist.createdDate">Created Date</Translate>
-                </th>
-                <th>
-                  <Translate contentKey="socioscopeApp.codelist.creator">Creator</Translate>
+                  <Translate contentKey="socioscopeApp.codelist.creator">Creator</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
@@ -135,13 +169,22 @@ export class Codelist extends React.Component<ICodelistProps, ICodelistState> {
             </tbody>
           </Table>
         </div>
+        <Row className="justify-content-center">
+          <JhiPagination
+            items={getPaginationItemsNumber(totalItems, this.state.itemsPerPage)}
+            activePage={this.state.activePage}
+            onSelect={this.handlePagination}
+            maxButtons={5}
+          />
+        </Row>
       </div>
     );
   }
 }
 
 const mapStateToProps = ({ codelist }: IRootState) => ({
-  codelistList: codelist.entities
+  codelistList: codelist.entities,
+  totalItems: codelist.totalItems
 });
 
 const mapDispatchToProps = {

@@ -8,4 +8,7 @@ relationship ManyToOne {
 	Codelist{creator(login)} to User
 }
 
+paginate Codelist with pagination
+
+
 service Codelist with serviceClass

@@ -5,9 +5,14 @@ import gr.ekke.socioscope.domain.Codelist;
 import gr.ekke.socioscope.service.CodelistService;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
 import gr.ekke.socioscope.web.rest.util.HeaderUtil;
+import gr.ekke.socioscope.web.rest.util.PaginationUtil;
 import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -54,7 +59,7 @@ public class CodelistResource {
         }
         Codelist result = codelistService.createCodelist(codelist);
         return ResponseEntity.created(new URI("/api/codelists/" + result.getId()))
-            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId()))
+            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
             .body(result);
     }
 
@@ -81,13 +86,16 @@ public class CodelistResource {
     /**
      * GET  /codelists : get all the codelists.
      *
+     * @param pageable the pagination information
      * @return the ResponseEntity with status 200 (OK) and the list of codelists in body
      */
     @GetMapping("/codelists")
     @Timed
-    public List<Codelist> getAllCodelists() {
-        log.debug("REST request to get all Codelists");
-        return codelistService.findAll();
+    public ResponseEntity<List<Codelist>> getAllCodelists(Pageable pageable) {
+        log.debug("REST request to get a page of Codelists");
+        Page<Codelist> page = codelistService.findAll(pageable);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/codelists");
+        return ResponseEntity.ok().headers(headers).body(page.getContent());
     }
 
     /**
@@ -123,13 +131,16 @@ public class CodelistResource {
      * to the query.
      *
      * @param query the query of the codelist search
+     * @param pageable the pagination information
      * @return the result of the search
      */
     @GetMapping("/_search/codelists")
     @Timed
-    public List<Codelist> searchCodelists(@RequestParam String query) {
-        log.debug("REST request to search Codelists for query {}", query);
-        return codelistService.search(query);
+    public ResponseEntity<List<Codelist>> searchCodelists(@RequestParam String query, Pageable pageable) {
+        log.debug("REST request to search for a page of Codelists for query {}", query);
+        Page<Codelist> page = codelistService.search(query, pageable);
+        HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/codelists");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
 
 }
