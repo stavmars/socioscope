@@ -12,3 +12,36 @@ paginate Codelist with pagination
 
 
 service Codelist with serviceClass
+
+entity DataSet {
+    name String required minlength(3),
+    type String required minlength(2),
+    comment String
+}
+
+service DataSet with serviceClass
+
+entity Dimension {
+    name String required minlength(3),
+    type String required minlength(2)
+}
+
+service Dimension with serviceClass
+
+entity Measure {
+    name String required minlength(3),
+    unit String required minlength(2)
+}
+
+service Measure with serviceClass
+
+relationship OneToMany {
+    DataSet{dimensions(name)} to Dimension{dataset(name)}
+    DataSet{measures(name)} to Measure{dataset(name)}
+    DataSet{measures(name)} to Measure{dataset(name)}
+}
+
+relationship ManyToOne {
+    DataSet{creator(login)} to User
+}
+

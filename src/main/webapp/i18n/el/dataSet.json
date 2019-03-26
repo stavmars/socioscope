@@ -1,0 +1,27 @@
+{
+  "socioscopeApp": {
+    "dataSet": {
+      "home": {
+        "title": "Data Sets",
+        "createLabel": "Δημιουργήστε ένα νέο Data Set",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Data Set",
+        "search": "Αναζήτηση για Data Set"
+      },
+      "created": "Ένα νέο Data Set έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Data Set έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Data Set έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Data Set {{ id }};"
+      },
+      "detail": {
+        "title": "Data Set"
+      },
+      "name": "Name",
+      "type": "Type",
+      "comment": "Comment",
+      "dimensions": "Dimensions",
+      "measures": "Measures",
+      "creator": "Creator"
+    }
+  }
+}
