@@ -1,6 +1,8 @@
 package gr.ekke.socioscope.service;
 
+import gr.ekke.socioscope.domain.DataSet;
 import gr.ekke.socioscope.domain.Measure;
+import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.MeasureRepository;
 import gr.ekke.socioscope.repository.search.MeasureSearchRepository;
 import org.slf4j.Logger;
@@ -27,9 +29,12 @@ public class MeasureService {
 
     private final MeasureSearchRepository measureSearchRepository;
 
-    public MeasureService(MeasureRepository measureRepository, MeasureSearchRepository measureSearchRepository) {
+    private final DataSetRepository dataSetRepository;
+
+    public MeasureService(MeasureRepository measureRepository, MeasureSearchRepository measureSearchRepository, DataSetRepository dataSetRepository) {
         this.measureRepository = measureRepository;
         this.measureSearchRepository = measureSearchRepository;
+        this.dataSetRepository = dataSetRepository;
     }
 
     /**
@@ -41,6 +46,9 @@ public class MeasureService {
     public Measure save(Measure measure) {
         log.debug("Request to save Measure : {}", measure);
         Measure result = measureRepository.save(measure);
+        DataSet dataSet = dataSetRepository.findById(result.getDataset().getId()).get();
+        dataSet.addMeasures(result);
+        dataSetRepository.save(dataSet);
         measureSearchRepository.save(result);
         return result;
     }

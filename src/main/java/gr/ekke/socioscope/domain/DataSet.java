@@ -40,9 +40,11 @@ public class DataSet implements Serializable {
 
     @DBRef
     @Field("dimensions")
+    @JsonIgnore
     private Set<Dimension> dimensions = new HashSet<>();
     @DBRef
     @Field("measures")
+    @JsonIgnore
     private Set<Measure> measures = new HashSet<>();
     @DBRef
     @Field("creator")

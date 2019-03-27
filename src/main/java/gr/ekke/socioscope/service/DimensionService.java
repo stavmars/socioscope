@@ -1,6 +1,8 @@
 package gr.ekke.socioscope.service;
 
+import gr.ekke.socioscope.domain.DataSet;
 import gr.ekke.socioscope.domain.Dimension;
+import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.DimensionRepository;
 import gr.ekke.socioscope.repository.search.DimensionSearchRepository;
 import org.slf4j.Logger;
@@ -27,9 +29,12 @@ public class DimensionService {
 
     private final DimensionSearchRepository dimensionSearchRepository;
 
-    public DimensionService(DimensionRepository dimensionRepository, DimensionSearchRepository dimensionSearchRepository) {
+    private final DataSetRepository dataSetRepository;
+
+    public DimensionService(DimensionRepository dimensionRepository, DimensionSearchRepository dimensionSearchRepository, DataSetRepository dataSetRepository) {
         this.dimensionRepository = dimensionRepository;
         this.dimensionSearchRepository = dimensionSearchRepository;
+        this.dataSetRepository = dataSetRepository;
     }
 
     /**
@@ -41,6 +46,9 @@ public class DimensionService {
     public Dimension save(Dimension dimension) {
         log.debug("Request to save Dimension : {}", dimension);
         Dimension result = dimensionRepository.save(dimension);
+        DataSet dataSet = dataSetRepository.findById(result.getDataset().getId()).get();
+        dataSet.addDimensions(result);
+        dataSetRepository.save(dataSet);
         dimensionSearchRepository.save(result);
         return result;
     }
