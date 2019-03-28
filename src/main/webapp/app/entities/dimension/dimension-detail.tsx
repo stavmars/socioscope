@@ -41,6 +41,10 @@ export class DimensionDetail extends React.Component<IDimensionDetailProps> {
             </dt>
             <dd>{dimensionEntity.type}</dd>
             <dt>
+              <Translate contentKey="socioscopeApp.dimension.creator">Creator</Translate>
+            </dt>
+            <dd>{dimensionEntity.creator ? dimensionEntity.creator.login : ''}</dd>
+            <dt>
               <Translate contentKey="socioscopeApp.dimension.dataset">Dataset</Translate>
             </dt>
             <dd>{dimensionEntity.dataset ? dimensionEntity.dataset.name : ''}</dd>

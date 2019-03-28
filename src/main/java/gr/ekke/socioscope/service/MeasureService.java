@@ -1,20 +1,23 @@
 package gr.ekke.socioscope.service;
 
-import gr.ekke.socioscope.domain.DataSet;
+import gr.ekke.socioscope.domain.Dimension;
 import gr.ekke.socioscope.domain.Measure;
-import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.MeasureRepository;
+import gr.ekke.socioscope.repository.UserRepository;
 import gr.ekke.socioscope.repository.search.MeasureSearchRepository;
+import gr.ekke.socioscope.security.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+import static gr.ekke.socioscope.security.AuthoritiesConstants.ADMIN;
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
@@ -29,12 +32,12 @@ public class MeasureService {
 
     private final MeasureSearchRepository measureSearchRepository;
 
-    private final DataSetRepository dataSetRepository;
+    private final UserRepository userRepository;
 
-    public MeasureService(MeasureRepository measureRepository, MeasureSearchRepository measureSearchRepository, DataSetRepository dataSetRepository) {
+    public MeasureService(MeasureRepository measureRepository, MeasureSearchRepository measureSearchRepository, UserRepository userRepository) {
         this.measureRepository = measureRepository;
         this.measureSearchRepository = measureSearchRepository;
-        this.dataSetRepository = dataSetRepository;
+        this.userRepository = userRepository;
     }
 
     /**
@@ -45,10 +48,9 @@ public class MeasureService {
      */
     public Measure save(Measure measure) {
         log.debug("Request to save Measure : {}", measure);
+        String login = SecurityUtils.getCurrentUserLogin().get();
+        measure.setCreator(userRepository.findOneByLogin(login).get());
         Measure result = measureRepository.save(measure);
-        DataSet dataSet = dataSetRepository.findById(result.getDataset().getId()).get();
-        dataSet.addMeasures(result);
-        dataSetRepository.save(dataSet);
         measureSearchRepository.save(result);
         return result;
     }
@@ -60,7 +62,21 @@ public class MeasureService {
      */
     public List<Measure> findAll() {
         log.debug("Request to get all Measures");
-        return measureRepository.findAll();
+        List<Measure> all = measureRepository.findAll();
+        if (SecurityUtils.isCurrentUserInRole(ADMIN)) {
+            System.out.println("EIMAI O ADMIN");
+            return all;
+        }
+        else {
+            System.out.println("EIMAI ENAS USER");
+            List<Measure> result = new ArrayList<>();
+            for (Measure measure: all) {
+                if (!measure.getCreator().getLogin().equals("admin")) {
+                    result.add(measure);
+                }
+            }
+            return result;
+        }
     }
 
 

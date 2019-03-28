@@ -33,6 +33,11 @@ public class Dimension implements Serializable {
     private String type;
 
     @DBRef
+    @Field("creator")
+    @JsonIgnoreProperties("")
+    private User creator;
+
+    @DBRef
     @Field("dataset")
     @JsonIgnoreProperties("dimensions")
     private DataSet dataset;
@@ -70,6 +75,19 @@ public class Dimension implements Serializable {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public User getCreator() {
+        return creator;
+    }
+
+    public Dimension creator(User user) {
+        this.creator = user;
+        return this;
+    }
+
+    public void setCreator(User user) {
+        this.creator = user;
     }
 
     public DataSet getDataset() {

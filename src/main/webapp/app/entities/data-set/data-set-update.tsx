@@ -129,21 +129,6 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                   </Label>
                   <AvField id="data-set-comment" type="text" name="comment" />
                 </AvGroup>
-                <AvGroup>
-                  <Label for="creator.login">
-                    <Translate contentKey="socioscopeApp.dataSet.creator">Creator</Translate>
-                  </Label>
-                  <AvInput id="data-set-creator" type="select" className="form-control" name="creator.id">
-                    <option value="" key="0" />
-                    {users
-                      ? users.map(otherEntity => (
-                          <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.login}
-                          </option>
-                        ))
-                      : null}
-                  </AvInput>
-                </AvGroup>
                 <Button tag={Link} id="cancel-save" to="/entity/data-set" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />
                   &nbsp;

@@ -1,20 +1,23 @@
 package gr.ekke.socioscope.service;
 
-import gr.ekke.socioscope.domain.DataSet;
 import gr.ekke.socioscope.domain.Dimension;
-import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.DimensionRepository;
+import gr.ekke.socioscope.repository.UserRepository;
 import gr.ekke.socioscope.repository.search.DimensionSearchRepository;
+import gr.ekke.socioscope.security.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+import static gr.ekke.socioscope.security.AuthoritiesConstants.ADMIN;
+import static gr.ekke.socioscope.security.AuthoritiesConstants.USER;
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
@@ -29,12 +32,12 @@ public class DimensionService {
 
     private final DimensionSearchRepository dimensionSearchRepository;
 
-    private final DataSetRepository dataSetRepository;
+    private final UserRepository userRepository;
 
-    public DimensionService(DimensionRepository dimensionRepository, DimensionSearchRepository dimensionSearchRepository, DataSetRepository dataSetRepository) {
+    public DimensionService(DimensionRepository dimensionRepository, DimensionSearchRepository dimensionSearchRepository, UserRepository userRepository) {
         this.dimensionRepository = dimensionRepository;
         this.dimensionSearchRepository = dimensionSearchRepository;
-        this.dataSetRepository = dataSetRepository;
+        this.userRepository = userRepository;
     }
 
     /**
@@ -45,10 +48,9 @@ public class DimensionService {
      */
     public Dimension save(Dimension dimension) {
         log.debug("Request to save Dimension : {}", dimension);
+        String login = SecurityUtils.getCurrentUserLogin().get();
+        dimension.setCreator(userRepository.findOneByLogin(login).get());
         Dimension result = dimensionRepository.save(dimension);
-        DataSet dataSet = dataSetRepository.findById(result.getDataset().getId()).get();
-        dataSet.addDimensions(result);
-        dataSetRepository.save(dataSet);
         dimensionSearchRepository.save(result);
         return result;
     }
@@ -60,7 +62,21 @@ public class DimensionService {
      */
     public List<Dimension> findAll() {
         log.debug("Request to get all Dimensions");
-        return dimensionRepository.findAll();
+        List<Dimension> all = dimensionRepository.findAll();
+        if (SecurityUtils.isCurrentUserInRole(ADMIN)) {
+            System.out.println("EIMAI O ADMIN");
+            return all;
+        }
+        else {
+            System.out.println("EIMAI ENAS USERS");
+            List<Dimension> result = new ArrayList<>();
+            for (Dimension dimension: all) {
+                if (!dimension.getCreator().getLogin().equals("admin")) {
+                    result.add(dimension);
+                }
+            }
+            return result;
+        }
     }
 
 

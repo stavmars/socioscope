@@ -33,6 +33,11 @@ public class Measure implements Serializable {
     private String unit;
 
     @DBRef
+    @Field("creator")
+    @JsonIgnoreProperties("")
+    private User creator;
+
+    @DBRef
     @Field("dataset")
     @JsonIgnoreProperties("measures")
     private DataSet dataset;
@@ -70,6 +75,19 @@ public class Measure implements Serializable {
 
     public void setUnit(String unit) {
         this.unit = unit;
+    }
+
+    public User getCreator() {
+        return creator;
+    }
+
+    public Measure creator(User user) {
+        this.creator = user;
+        return this;
+    }
+
+    public void setCreator(User user) {
+        this.creator = user;
     }
 
     public DataSet getDataset() {

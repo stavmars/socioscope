@@ -92,6 +92,9 @@ export class Dimension extends React.Component<IDimensionProps, IDimensionState>
                   <Translate contentKey="socioscopeApp.dimension.type">Type</Translate>
                 </th>
                 <th>
+                  <Translate contentKey="socioscopeApp.dimension.creator">Creator</Translate>
+                </th>
+                <th>
                   <Translate contentKey="socioscopeApp.dimension.dataset">Dataset</Translate>
                 </th>
                 <th />
@@ -107,6 +110,7 @@ export class Dimension extends React.Component<IDimensionProps, IDimensionState>
                   </td>
                   <td>{dimension.name}</td>
                   <td>{dimension.type}</td>
+                  <td>{dimension.creator ? dimension.creator.login : ''}</td>
                   <td>{dimension.dataset ? <Link to={`data-set/${dimension.dataset.id}`}>{dimension.dataset.name}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">

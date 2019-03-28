@@ -23,6 +23,12 @@
     "relationships": [
         {
             "relationshipType": "many-to-one",
+            "relationshipName": "creator",
+            "otherEntityName": "user",
+            "otherEntityField": "login"
+        },
+        {
+            "relationshipType": "many-to-one",
             "relationshipName": "dataset",
             "otherEntityName": "dataSet",
             "otherEntityField": "name"

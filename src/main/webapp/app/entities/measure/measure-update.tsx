@@ -8,6 +8,8 @@ import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
 
+import { IUser } from 'app/shared/model/user.model';
+import { getUsers } from 'app/modules/administration/user-management/user-management.reducer';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { getEntities as getDataSets } from 'app/entities/data-set/data-set.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './measure.reducer';
@@ -20,6 +22,7 @@ export interface IMeasureUpdateProps extends StateProps, DispatchProps, RouteCom
 
 export interface IMeasureUpdateState {
   isNew: boolean;
+  creatorId: string;
   datasetId: string;
 }
 
@@ -27,6 +30,7 @@ export class MeasureUpdate extends React.Component<IMeasureUpdateProps, IMeasure
   constructor(props) {
     super(props);
     this.state = {
+      creatorId: '0',
       datasetId: '0',
       isNew: !this.props.match.params || !this.props.match.params.id
     };
@@ -45,6 +49,7 @@ export class MeasureUpdate extends React.Component<IMeasureUpdateProps, IMeasure
       this.props.getEntity(this.props.match.params.id);
     }
 
+    this.props.getUsers();
     this.props.getDataSets();
   }
 
@@ -69,7 +74,7 @@ export class MeasureUpdate extends React.Component<IMeasureUpdateProps, IMeasure
   };
 
   render() {
-    const { measureEntity, dataSets, loading, updating } = this.props;
+    const { measureEntity, users, dataSets, loading, updating } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -127,7 +132,15 @@ export class MeasureUpdate extends React.Component<IMeasureUpdateProps, IMeasure
                   <Label for="dataset.name">
                     <Translate contentKey="socioscopeApp.measure.dataset">Dataset</Translate>
                   </Label>
-                  <AvInput id="measure-dataset" type="select" className="form-control" name="dataset.id">
+                  <AvField
+                    id="measure-dataset"
+                    type="select"
+                    className="form-control"
+                    name="dataset.id"
+                    validate={{
+                      required: { value: true, errorMessage: translate('entity.validation.required') }
+                    }}
+                  >
                     <option value="" key="0" />
                     {dataSets
                       ? dataSets.map(otherEntity => (
@@ -136,7 +149,7 @@ export class MeasureUpdate extends React.Component<IMeasureUpdateProps, IMeasure
                           </option>
                         ))
                       : null}
-                  </AvInput>
+                  </AvField>
                 </AvGroup>
                 <Button tag={Link} id="cancel-save" to="/entity/measure" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />
@@ -161,6 +174,7 @@ export class MeasureUpdate extends React.Component<IMeasureUpdateProps, IMeasure
 }
 
 const mapStateToProps = (storeState: IRootState) => ({
+  users: storeState.userManagement.users,
   dataSets: storeState.dataSet.entities,
   measureEntity: storeState.measure.entity,
   loading: storeState.measure.loading,
@@ -169,6 +183,7 @@ const mapStateToProps = (storeState: IRootState) => ({
 });
 
 const mapDispatchToProps = {
+  getUsers,
   getDataSets,
   getEntity,
   updateEntity,

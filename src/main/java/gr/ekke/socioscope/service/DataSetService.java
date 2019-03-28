@@ -2,17 +2,16 @@ package gr.ekke.socioscope.service;
 
 import gr.ekke.socioscope.domain.DataSet;
 import gr.ekke.socioscope.repository.DataSetRepository;
+import gr.ekke.socioscope.repository.UserRepository;
 import gr.ekke.socioscope.repository.search.DataSetSearchRepository;
 import gr.ekke.socioscope.security.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.springframework.expression.spel.ast.NullLiteral;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -32,9 +31,12 @@ public class DataSetService {
 
     private final DataSetSearchRepository dataSetSearchRepository;
 
-    public DataSetService(DataSetRepository dataSetRepository, DataSetSearchRepository dataSetSearchRepository) {
+    private final UserRepository userRepository;
+
+    public DataSetService(DataSetRepository dataSetRepository, DataSetSearchRepository dataSetSearchRepository, UserRepository userRepository) {
         this.dataSetRepository = dataSetRepository;
         this.dataSetSearchRepository = dataSetSearchRepository;
+        this.userRepository = userRepository;
     }
 
     /**
@@ -45,6 +47,8 @@ public class DataSetService {
      */
     public DataSet save(DataSet dataSet) {
         log.debug("Request to save DataSet : {}", dataSet);
+        String login = SecurityUtils.getCurrentUserLogin().get();
+        dataSet.setCreator(userRepository.findOneByLogin(login).get());
         DataSet result = dataSetRepository.save(dataSet);
         dataSetSearchRepository.save(result);
         return result;

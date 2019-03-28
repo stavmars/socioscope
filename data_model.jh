@@ -43,5 +43,7 @@ relationship OneToMany {
 
 relationship ManyToOne {
     DataSet{creator(login)} to User
+    Dimension{creator(login)} to User
+    Measure{creator(login)} to User
 }
 
