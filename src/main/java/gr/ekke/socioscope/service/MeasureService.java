@@ -1,7 +1,8 @@
 package gr.ekke.socioscope.service;
 
-import gr.ekke.socioscope.domain.Dimension;
+import gr.ekke.socioscope.domain.DataSet;
 import gr.ekke.socioscope.domain.Measure;
+import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.MeasureRepository;
 import gr.ekke.socioscope.repository.UserRepository;
 import gr.ekke.socioscope.repository.search.MeasureSearchRepository;
@@ -34,10 +35,13 @@ public class MeasureService {
 
     private final UserRepository userRepository;
 
-    public MeasureService(MeasureRepository measureRepository, MeasureSearchRepository measureSearchRepository, UserRepository userRepository) {
+    private final DataSetRepository dataSetRepository;
+
+    public MeasureService(MeasureRepository measureRepository, MeasureSearchRepository measureSearchRepository, UserRepository userRepository, DataSetRepository dataSetRepository) {
         this.measureRepository = measureRepository;
         this.measureSearchRepository = measureSearchRepository;
         this.userRepository = userRepository;
+        this.dataSetRepository = dataSetRepository;
     }
 
     /**
@@ -51,6 +55,9 @@ public class MeasureService {
         String login = SecurityUtils.getCurrentUserLogin().get();
         measure.setCreator(userRepository.findOneByLogin(login).get());
         Measure result = measureRepository.save(measure);
+        DataSet dataSet = dataSetRepository.findById(result.getDataset().getId()).get();
+        dataSet.addMeasures(result);
+        dataSetRepository.save(dataSet);
         measureSearchRepository.save(result);
         return result;
     }

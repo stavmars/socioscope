@@ -1,6 +1,8 @@
 package gr.ekke.socioscope.service;
 
+import gr.ekke.socioscope.domain.DataSet;
 import gr.ekke.socioscope.domain.Dimension;
+import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.DimensionRepository;
 import gr.ekke.socioscope.repository.UserRepository;
 import gr.ekke.socioscope.repository.search.DimensionSearchRepository;
@@ -17,7 +19,6 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 import static gr.ekke.socioscope.security.AuthoritiesConstants.ADMIN;
-import static gr.ekke.socioscope.security.AuthoritiesConstants.USER;
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
@@ -34,10 +35,13 @@ public class DimensionService {
 
     private final UserRepository userRepository;
 
-    public DimensionService(DimensionRepository dimensionRepository, DimensionSearchRepository dimensionSearchRepository, UserRepository userRepository) {
+    private final DataSetRepository dataSetRepository;
+
+    public DimensionService(DimensionRepository dimensionRepository, DimensionSearchRepository dimensionSearchRepository, UserRepository userRepository, DataSetRepository dataSetRepository) {
         this.dimensionRepository = dimensionRepository;
         this.dimensionSearchRepository = dimensionSearchRepository;
         this.userRepository = userRepository;
+        this.dataSetRepository = dataSetRepository;
     }
 
     /**
@@ -51,6 +55,9 @@ public class DimensionService {
         String login = SecurityUtils.getCurrentUserLogin().get();
         dimension.setCreator(userRepository.findOneByLogin(login).get());
         Dimension result = dimensionRepository.save(dimension);
+        DataSet dataSet = dataSetRepository.findById(result.getDataset().getId()).get();
+        dataSet.addDimensions(result);
+        dataSetRepository.save(dataSet);
         dimensionSearchRepository.save(result);
         return result;
     }
