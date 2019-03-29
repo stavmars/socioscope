@@ -105,6 +105,10 @@ public class DimensionService {
      */
     public void delete(String id) {
         log.debug("Request to delete Dimension : {}", id);
+        Dimension dimension = dimensionRepository.findById(id).get();
+        DataSet dataSet = dataSetRepository.findById(dimension.getDataset().getId()).get();
+        dataSet.removeDimensions(dimension);
+        dataSetRepository.save(dataSet);
         dimensionRepository.deleteById(id);
         dimensionSearchRepository.deleteById(id);
     }

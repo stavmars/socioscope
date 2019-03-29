@@ -105,6 +105,10 @@ public class MeasureService {
      */
     public void delete(String id) {
         log.debug("Request to delete Measure : {}", id);
+        Measure measure = findOne(id).get();
+        DataSet dataSet = dataSetRepository.findById(measure.getDataset().getId()).get();
+        dataSet.removeMeasures(measure);
+        dataSetRepository.save(dataSet);
         measureRepository.deleteById(id);
         measureSearchRepository.deleteById(id);
     }

@@ -38,14 +38,14 @@ public class DataSet implements Serializable {
     @Field("comment")
     private String comment;
 
-    @DBRef
     @Field("dimensions")
     @JsonIgnore
     private Set<Dimension> dimensions = new HashSet<>();
-    @DBRef
+
     @Field("measures")
     @JsonIgnore
     private Set<Measure> measures = new HashSet<>();
+
     @DBRef
     @Field("creator")
     @JsonIgnoreProperties("")
