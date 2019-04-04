@@ -53,11 +53,17 @@ export class DataSetDetail extends React.Component<IDataSetDetailProps> {
             <dt>
               <Translate contentKey="socioscopeApp.dataSet.dimensions">Dimensions</Translate>
             </dt>
-            <dd>{dataSetEntity.dimensions ? dataSetEntity.dimensions.map(otherEntity => <dd>{otherEntity.name}</dd>) : null}</dd>
+            <dd>
+              {dataSetEntity.dimensions
+                ? dataSetEntity.dimensions.map(otherEntity => <dd key={otherEntity.id}>{otherEntity.name}</dd>)
+                : null}
+            </dd>
             <dt>
               <Translate contentKey="socioscopeApp.dataSet.measures">Measures</Translate>
             </dt>
-            <dd>{dataSetEntity.measures ? dataSetEntity.measures.map(otherEntity => <dd>{otherEntity.name}</dd>) : null}</dd>
+            <dd>
+              {dataSetEntity.measures ? dataSetEntity.measures.map(otherEntity => <dd key={otherEntity.id}>{otherEntity.name}</dd>) : null}
+            </dd>
           </dl>
           <Button tag={Link} to="/entity/data-set" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}
