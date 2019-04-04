@@ -5,11 +5,13 @@ import { cleanEntity } from 'app/shared/util/entity-utils';
 import { REQUEST, SUCCESS, FAILURE } from 'app/shared/reducers/action-type.util';
 
 import { IDataSet, defaultValue } from 'app/shared/model/data-set.model';
+import { IDimension } from 'app/shared/model/dimension.model';
 
 export const ACTION_TYPES = {
   SEARCH_DATASETS: 'dataSet/SEARCH_DATASETS',
   FETCH_DATASET_LIST: 'dataSet/FETCH_DATASET_LIST',
   FETCH_DATASET: 'dataSet/FETCH_DATASET',
+  FETCH_DATASET_DIMENSIONS: 'dataset/FETCH_DATASET_DIMENSIONS',
   CREATE_DATASET: 'dataSet/CREATE_DATASET',
   UPDATE_DATASET: 'dataSet/UPDATE_DATASET',
   DELETE_DATASET: 'dataSet/DELETE_DATASET',
@@ -34,6 +36,7 @@ export default (state: DataSetState = initialState, action): DataSetState => {
     case REQUEST(ACTION_TYPES.SEARCH_DATASETS):
     case REQUEST(ACTION_TYPES.FETCH_DATASET_LIST):
     case REQUEST(ACTION_TYPES.FETCH_DATASET):
+    case REQUEST(ACTION_TYPES.FETCH_DATASET_DIMENSIONS):
       return {
         ...state,
         errorMessage: null,
@@ -52,6 +55,7 @@ export default (state: DataSetState = initialState, action): DataSetState => {
     case FAILURE(ACTION_TYPES.SEARCH_DATASETS):
     case FAILURE(ACTION_TYPES.FETCH_DATASET_LIST):
     case FAILURE(ACTION_TYPES.FETCH_DATASET):
+    case FAILURE(ACTION_TYPES.FETCH_DATASET_DIMENSIONS):
     case FAILURE(ACTION_TYPES.CREATE_DATASET):
     case FAILURE(ACTION_TYPES.UPDATE_DATASET):
     case FAILURE(ACTION_TYPES.DELETE_DATASET):
@@ -69,6 +73,7 @@ export default (state: DataSetState = initialState, action): DataSetState => {
         entities: action.payload.data
       };
     case SUCCESS(ACTION_TYPES.FETCH_DATASET_LIST):
+    case SUCCESS(ACTION_TYPES.FETCH_DATASET_DIMENSIONS):
       return {
         ...state,
         loading: false,
@@ -124,6 +129,14 @@ export const getEntity: ICrudGetAction<IDataSet> = id => {
   return {
     type: ACTION_TYPES.FETCH_DATASET,
     payload: axios.get<IDataSet>(requestUrl)
+  };
+};
+
+export const getDimensions: ICrudGetAllAction<IDimension> = id => {
+  const requestUrl = `${apiUrl}/dimensions/${id}`;
+  return {
+    type: ACTION_TYPES.FETCH_DATASET_DIMENSIONS,
+    payload: axios.get<IDimension>(requestUrl)
   };
 };
 

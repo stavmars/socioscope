@@ -2,6 +2,8 @@ package gr.ekke.socioscope.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import gr.ekke.socioscope.domain.DataSet;
+import gr.ekke.socioscope.domain.Dimension;
+import gr.ekke.socioscope.domain.Measure;
 import gr.ekke.socioscope.security.SecurityUtils;
 import gr.ekke.socioscope.service.DataSetService;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
@@ -20,6 +22,7 @@ import java.net.URISyntaxException;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.StreamSupport;
 
 import static org.elasticsearch.index.query.QueryBuilders.*;
@@ -107,7 +110,9 @@ public class DataSetResource {
         log.debug("REST request to get DataSet : {}", id);
         Optional<DataSet> dataSet = dataSetService.findOne(id);
         if (dataSet.isPresent() && dataSet.get().getCreator() != null &&
+            !SecurityUtils.getCurrentUserLogin().get().equals("admin") &&
             !dataSet.get().getCreator().getLogin().equals(SecurityUtils.getCurrentUserLogin().orElse(""))){
+            System.out.println("POUTSA");
             return new ResponseEntity<>("error.http.403", HttpStatus.FORBIDDEN);
         }
         return ResponseUtil.wrapOrNotFound(dataSet);
@@ -140,5 +145,30 @@ public class DataSetResource {
         log.debug("REST request to search DataSets for query {}", query);
         return dataSetService.search(query);
     }
-
+//
+//    /**
+//     * GET  /data-sets/dimensions/:id : get dimensions of the "id" dataSet.
+//     *
+//     * @param id the id of the dataSet to retrieve
+//     * @return the dimensions of the dataSet
+//     */
+//    @GetMapping("/data-sets/dimensions/{id}")
+//    @Timed
+//    public Set<Dimension> getDataSetDimensions(@PathVariable String id) {
+//        log.debug("REST request to get Dimensions of DataSet : {}", id);
+//        return (dataSetService.getAllDimensions(id));
+//    }
+//
+//    /**
+//     * GET  /data-sets/measures/:id : get measures of the "id" dataSet.
+//     *
+//     * @param id the id of the dataSet to retrieve
+//     * @return the measures of the dataSet
+//     */
+//    @GetMapping("/data-sets/measures/{id}")
+//    @Timed
+//    public Set<Measure> getDataSetMeasures(@PathVariable String id) {
+//        log.debug("REST request to get Measures of DataSet : {}", id);
+//        return (dataSetService.getAllMeasures(id));
+//    }
 }

@@ -7,7 +7,7 @@ import { Translate, ICrudGetAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
-import { getEntity } from './data-set.reducer';
+import { getDimensions, getEntity } from './data-set.reducer';
 import { IDataSet } from 'app/shared/model/data-set.model';
 // tslint:disable-next-line:no-unused-variable
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
@@ -50,6 +50,14 @@ export class DataSetDetail extends React.Component<IDataSetDetailProps> {
               <Translate contentKey="socioscopeApp.dataSet.creator">Creator</Translate>
             </dt>
             <dd>{dataSetEntity.creator ? dataSetEntity.creator.login : ''}</dd>
+            <dt>
+              <Translate contentKey="socioscopeApp.dataSet.dimensions">Dimensions</Translate>
+            </dt>
+            <dd>{dataSetEntity.dimensions ? dataSetEntity.dimensions.map(otherEntity => <dd>{otherEntity.name}</dd>) : null}</dd>
+            <dt>
+              <Translate contentKey="socioscopeApp.dataSet.measures">Measures</Translate>
+            </dt>
+            <dd>{dataSetEntity.measures ? dataSetEntity.measures.map(otherEntity => <dd>{otherEntity.name}</dd>) : null}</dd>
           </dl>
           <Button tag={Link} to="/entity/data-set" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

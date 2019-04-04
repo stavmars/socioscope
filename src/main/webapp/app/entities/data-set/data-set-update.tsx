@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
-import { Button, Row, Col, Label } from 'reactstrap';
+import { Button, Row, Col, Label, ListGroup, ListGroupItem } from 'reactstrap';
 import { AvForm, AvGroup, AvInput, AvField } from 'availity-reactstrap-validation';
 // tslint:disable-next-line:no-unused-variable
 import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction } from 'react-jhipster';
@@ -129,6 +129,94 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                   </Label>
                   <AvField id="data-set-comment" type="text" name="comment" />
                 </AvGroup>
+                {!isNew ? (
+                  <AvGroup>
+                    <Label>
+                      <Translate contentKey="socioscopeApp.dataSet.dimensions">Dimensions</Translate>
+                    </Label>
+                    <ListGroup>
+                      {dataSetEntity.dimensions
+                        ? dataSetEntity.dimensions.map(otherEntity => (
+                            <ListGroupItem>
+                              {otherEntity.name}
+                              <Button
+                                tag={Link}
+                                to={`/entity/dimension/${otherEntity.id}/edit`}
+                                color="primary"
+                                className="float-right"
+                                size="sm"
+                              >
+                                <FontAwesomeIcon icon="pencil-alt" />{' '}
+                                <span className="d-none d-md-inline">
+                                  <Translate contentKey="entity.action.edit">Edit</Translate>
+                                </span>
+                              </Button>
+                              <Button
+                                tag={Link}
+                                to={`/entity/dimension/${otherEntity.id}/delete`}
+                                color="danger"
+                                className="float-right"
+                                size="sm"
+                              >
+                                <FontAwesomeIcon icon="trash" />{' '}
+                                <span className="d-none d-md-inline">
+                                  <Translate contentKey="entity.action.delete">Delete</Translate>
+                                </span>
+                              </Button>
+                            </ListGroupItem>
+                          ))
+                        : null}
+                      <ListGroupItem>
+                        <Button tag={Link} to="/entity/dimension/new" color="primary" className="float-center" size="sm">
+                          <FontAwesomeIcon icon="plus" />
+                          <Translate contentKey="socioscopeApp.dimension.home.createLabel">Create new Dimension</Translate>
+                        </Button>
+                      </ListGroupItem>
+                    </ListGroup>
+                    <Label>
+                      <Translate contentKey="socioscopeApp.dataSet.measures">Measures</Translate>
+                    </Label>
+                    <ListGroup>
+                      {dataSetEntity.measures
+                        ? dataSetEntity.measures.map(otherEntity => (
+                            <ListGroupItem>
+                              {otherEntity.name}
+                              <Button
+                                tag={Link}
+                                to={`/entity/measure/${otherEntity.id}/edit`}
+                                color="primary"
+                                className="float-right"
+                                size="sm"
+                              >
+                                <FontAwesomeIcon icon="pencil-alt" />{' '}
+                                <span className="d-none d-md-inline">
+                                  <Translate contentKey="entity.action.edit">Edit</Translate>
+                                </span>
+                              </Button>
+                              <Button
+                                tag={Link}
+                                to={`/entity/measure/${otherEntity.id}/delete`}
+                                color="danger"
+                                className="float-right"
+                                size="sm"
+                              >
+                                <FontAwesomeIcon icon="trash" />{' '}
+                                <span className="d-none d-md-inline">
+                                  <Translate contentKey="entity.action.delete">Delete</Translate>
+                                </span>
+                              </Button>
+                            </ListGroupItem>
+                          ))
+                        : null}
+                      <ListGroupItem>
+                        <Button tag={Link} to="/entity/measure/new" color="primary" className="float-center" size="sm">
+                          <FontAwesomeIcon icon="plus" />
+                          <Translate contentKey="socioscopeApp.measure.home.createLabel">Create new Measure</Translate>
+                        </Button>
+                      </ListGroupItem>
+                    </ListGroup>
+                  </AvGroup>
+                ) : null}
                 <Button tag={Link} id="cancel-save" to="/entity/data-set" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />
                   &nbsp;

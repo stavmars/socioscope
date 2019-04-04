@@ -1,5 +1,6 @@
 package gr.ekke.socioscope.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -39,7 +40,8 @@ public class Dimension implements Serializable {
 
     @DBRef
     @Field("dataset")
-    @JsonIgnoreProperties("dimensions")
+//    @JsonIgnoreProperties("dimensions")
+    @JsonIgnore
     private DataSet dataset;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove

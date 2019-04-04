@@ -39,11 +39,11 @@ public class DataSet implements Serializable {
     private String comment;
 
     @Field("dimensions")
-    @JsonIgnore
+//    @JsonIgnore
     private Set<Dimension> dimensions = new HashSet<>();
 
     @Field("measures")
-    @JsonIgnore
+//    @JsonIgnore
     private Set<Measure> measures = new HashSet<>();
 
     @DBRef

@@ -1,7 +1,11 @@
 package gr.ekke.socioscope.service;
 
 import gr.ekke.socioscope.domain.DataSet;
+import gr.ekke.socioscope.domain.Dimension;
+import gr.ekke.socioscope.domain.Measure;
 import gr.ekke.socioscope.repository.DataSetRepository;
+import gr.ekke.socioscope.repository.DimensionRepository;
+import gr.ekke.socioscope.repository.MeasureRepository;
 import gr.ekke.socioscope.repository.UserRepository;
 import gr.ekke.socioscope.repository.search.DataSetSearchRepository;
 import gr.ekke.socioscope.security.SecurityUtils;
@@ -13,6 +17,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -33,10 +38,16 @@ public class DataSetService {
 
     private final UserRepository userRepository;
 
-    public DataSetService(DataSetRepository dataSetRepository, DataSetSearchRepository dataSetSearchRepository, UserRepository userRepository) {
+    private final DimensionRepository dimensionRepository;
+
+    private final MeasureRepository measureRepository;
+
+    public DataSetService(DataSetRepository dataSetRepository, DataSetSearchRepository dataSetSearchRepository, UserRepository userRepository, DimensionRepository dimensionRepository, MeasureRepository measureRepository) {
         this.dataSetRepository = dataSetRepository;
         this.dataSetSearchRepository = dataSetSearchRepository;
         this.userRepository = userRepository;
+        this.dimensionRepository = dimensionRepository;
+        this.measureRepository = measureRepository;
     }
 
     /**
@@ -112,5 +123,69 @@ public class DataSetService {
         return StreamSupport
             .stream(dataSetSearchRepository.search(queryStringQuery(query)).spliterator(), false)
             .collect(Collectors.toList());
+    }
+
+    /**
+     * Get all dimensions of a dataSet by its id
+     *
+     * @param id the id of the entity
+     * @return the list of entities
+     */
+    public Set<Dimension> getAllDimensions(String id) {
+        log.debug("Request to get all the Dimensions of DataSet : {}", id);
+        Optional<DataSet> dataSet = dataSetRepository.findById(id);
+        if (dataSet.isPresent()) {
+            return dataSet.get().getDimensions();
+        }
+        else {
+            return null;
+        }
+    }
+
+    /**
+     * Add given dimension to the dataset by its id
+     *
+     * @param id the if of the dataset
+     * @param dimension the given dimension
+     */
+    public void addDimension(String id, Dimension dimension) {
+        log.debug("Request to add Dimension : {} to DataSet : {}", dimension, id);
+        Optional<DataSet> dataSet = dataSetRepository.findById(id);
+        if (dataSet.isPresent()) {
+            dataSet.get().addDimensions(dimension);
+            dataSetRepository.save(dataSet.get());
+            dimensionRepository.save(dimension);
+        }
+    }
+
+    /**
+     * Get all measures of a dataSet by its id
+     *
+     * @param id the id of the entity
+     * @return the list of entities
+     */
+    public Set<Measure> getAllMeasures(String id) {
+        log.debug("Request to get all the Measures of DataSet : {}", id);
+        Optional<DataSet> dataSet = dataSetRepository.findById(id);
+        if (dataSet.isPresent()) {
+            return dataSet.get().getMeasures();
+        }
+        return null;
+    }
+
+    /**
+     * Add given measure to the dataset by its id
+     *
+     * @param id the if of the dataset
+     * @param measure the given measure
+     */
+    public void addMeasure(String id, Measure measure) {
+        log.debug("Request to add Measure : {} to DataSet : {}", measure, id);
+        Optional<DataSet> dataSet = dataSetRepository.findById(id);
+        if (dataSet.isPresent()) {
+            dataSet.get().addMeasures(measure);
+            dataSetRepository.save(dataSet.get());
+            measureRepository.save(measure);
+        }
     }
 }
