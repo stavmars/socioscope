@@ -70,7 +70,7 @@ export class MeasureUpdate extends React.Component<IMeasureUpdateProps, IMeasure
   };
 
   handleClose = () => {
-    this.props.history.push('/entity/measure');
+    this.props.history.goBack();
   };
 
   render() {
@@ -151,7 +151,7 @@ export class MeasureUpdate extends React.Component<IMeasureUpdateProps, IMeasure
                       : null}
                   </AvField>
                 </AvGroup>
-                <Button tag={Link} id="cancel-save" to="/entity/measure" replace color="info">
+                <Button id="cancel-save" onClick={this.handleClose} color="info">
                   <FontAwesomeIcon icon="arrow-left" />
                   &nbsp;
                   <span className="d-none d-md-inline">
