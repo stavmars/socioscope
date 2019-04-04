@@ -40,8 +40,7 @@ public class Measure implements Serializable {
 
     @DBRef
     @Field("dataset")
-//    @JsonIgnoreProperties("measures")
-    @JsonIgnore
+    @JsonIgnoreProperties("measures")
     private DataSet dataset;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove

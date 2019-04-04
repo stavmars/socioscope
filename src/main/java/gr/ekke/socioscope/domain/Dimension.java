@@ -40,8 +40,7 @@ public class Dimension implements Serializable {
 
     @DBRef
     @Field("dataset")
-//    @JsonIgnoreProperties("dimensions")
-    @JsonIgnore
+    @JsonIgnoreProperties("dimensions")
     private DataSet dataset;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
