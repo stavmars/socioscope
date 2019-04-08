@@ -19,6 +19,7 @@
       "name": "Name",
       "type": "Type",
       "comment": "Comment",
+      "createdDate": "Created Date",
       "dimensions": "Dimensions",
       "measures": "Measures",
       "creator": "Creator"

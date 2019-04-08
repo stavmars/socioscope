@@ -2,6 +2,7 @@ package gr.ekke.socioscope.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -9,6 +10,7 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Objects;
@@ -37,6 +39,9 @@ public class DataSet implements Serializable {
 
     @Field("comment")
     private String comment;
+
+    @CreatedDate
+    private Instant createdDate;
 
     @Field("dimensions")
     @JsonIgnoreProperties("dataset")
@@ -97,6 +102,19 @@ public class DataSet implements Serializable {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public Instant getCreatedDate() {
+        return createdDate;
+    }
+
+    public DataSet createdDate(Instant createdDate) {
+        this.createdDate = createdDate;
+        return this;
+    }
+
+    public void setCreatedDate(Instant createdDate) {
+        this.createdDate = createdDate;
     }
 
     public Set<Dimension> getDimensions() {

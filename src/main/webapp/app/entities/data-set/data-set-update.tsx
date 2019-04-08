@@ -131,6 +131,21 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                 </AvGroup>
                 {!isNew ? (
                   <AvGroup>
+                    <Label id="createdDateLabel" for="createdDate">
+                      <Translate contentKey="socioscopeApp.dataSet.createdDate">Created Date</Translate>
+                    </Label>
+                    <AvInput
+                      id="data-set-createdDate"
+                      type="datetime-local"
+                      className="form-control"
+                      name="creatdedDate"
+                      value={convertDateTimeFromServer(this.props.dataSetEntity.createdDate)}
+                      readOnly
+                    />
+                  </AvGroup>
+                ) : null}
+                {!isNew ? (
+                  <AvGroup>
                     <Label>
                       <Translate contentKey="socioscopeApp.dataSet.dimensions">Dimensions</Translate>
                     </Label>
