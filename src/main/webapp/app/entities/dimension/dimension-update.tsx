@@ -11,7 +11,7 @@ import { IRootState } from 'app/shared/reducers';
 import { IUser } from 'app/shared/model/user.model';
 import { getUsers } from 'app/modules/administration/user-management/user-management.reducer';
 import { IDataSet } from 'app/shared/model/data-set.model';
-import { getEntities as getDataSets } from 'app/entities/data-set/data-set.reducer';
+import { getEntities as getCodelists } from 'app/entities/codelist/codelist.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './dimension.reducer';
 import { IDimension } from 'app/shared/model/dimension.model';
 // tslint:disable-next-line:no-unused-variable
@@ -23,7 +23,7 @@ export interface IDimensionUpdateProps extends StateProps, DispatchProps, RouteC
 export interface IDimensionUpdateState {
   isNew: boolean;
   creatorId: string;
-  datasetId: string;
+  codelistId: string;
 }
 
 export class DimensionUpdate extends React.Component<IDimensionUpdateProps, IDimensionUpdateState> {
@@ -31,7 +31,7 @@ export class DimensionUpdate extends React.Component<IDimensionUpdateProps, IDim
     super(props);
     this.state = {
       creatorId: '0',
-      datasetId: '0',
+      codelistId: '0',
       isNew: !this.props.match.params || !this.props.match.params.id
     };
   }
@@ -50,7 +50,7 @@ export class DimensionUpdate extends React.Component<IDimensionUpdateProps, IDim
     }
 
     this.props.getUsers();
-    this.props.getDataSets();
+    this.props.getCodelists();
   }
 
   saveEntity = (event, errors, values) => {
@@ -74,7 +74,7 @@ export class DimensionUpdate extends React.Component<IDimensionUpdateProps, IDim
   };
 
   render() {
-    const { dimensionEntity, users, dataSets, loading, updating } = this.props;
+    const { dimensionEntity, users, codelists, loading, updating } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -129,21 +129,21 @@ export class DimensionUpdate extends React.Component<IDimensionUpdateProps, IDim
                   />
                 </AvGroup>
                 <AvGroup>
-                  <Label for="dataset.name">
-                    <Translate contentKey="socioscopeApp.dimension.dataset">Dataset</Translate>
+                  <Label for="codelist.name">
+                    <Translate contentKey="socioscopeApp.dimension.codelist">Codelist</Translate>
                   </Label>
                   <AvField
-                    id="dimension-dataset"
+                    id="dimension-codelist"
                     type="select"
                     className="form-control"
-                    name="dataset.id"
+                    name="codelist.id"
                     validate={{
                       required: { value: true, errorMessage: translate('entity.validation.required') }
                     }}
                   >
                     <option value="" key="0" />
-                    {dataSets
-                      ? dataSets.map(otherEntity => (
+                    {codelists
+                      ? codelists.map(otherEntity => (
                           <option value={otherEntity.id} key={otherEntity.id}>
                             {otherEntity.name}
                           </option>
@@ -175,7 +175,7 @@ export class DimensionUpdate extends React.Component<IDimensionUpdateProps, IDim
 
 const mapStateToProps = (storeState: IRootState) => ({
   users: storeState.userManagement.users,
-  dataSets: storeState.dataSet.entities,
+  codelists: storeState.codelist.entities,
   dimensionEntity: storeState.dimension.entity,
   loading: storeState.dimension.loading,
   updating: storeState.dimension.updating,
@@ -184,7 +184,7 @@ const mapStateToProps = (storeState: IRootState) => ({
 
 const mapDispatchToProps = {
   getUsers,
-  getDataSets,
+  getCodelists,
   getEntity,
   updateEntity,
   createEntity,

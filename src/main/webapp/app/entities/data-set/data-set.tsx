@@ -4,7 +4,7 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, InputGroup, Col, Row, Table } from 'reactstrap';
 import { AvForm, AvGroup, AvInput } from 'availity-reactstrap-validation';
 // tslint:disable-next-line:no-unused-variable
-import { Translate, translate, ICrudSearchAction, ICrudGetAllAction } from 'react-jhipster';
+import { Translate, translate, ICrudSearchAction, ICrudGetAllAction, TextFormat } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
@@ -97,6 +97,9 @@ export class DataSet extends React.Component<IDataSetProps, IDataSetState> {
                 <th>
                   <Translate contentKey="socioscopeApp.dataSet.creator">Creator</Translate>
                 </th>
+                <th>
+                  <Translate contentKey="socioscopeApp.dataSet.createdDate">Created Date</Translate>
+                </th>
                 <th />
               </tr>
             </thead>
@@ -112,6 +115,9 @@ export class DataSet extends React.Component<IDataSetProps, IDataSetState> {
                   <td>{dataSet.type}</td>
                   <td>{dataSet.comment}</td>
                   <td>{dataSet.creator ? dataSet.creator.login : ''}</td>
+                  <td>
+                    <TextFormat type="date" value={dataSet.createdDate} format={APP_DATE_FORMAT} />
+                  </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${dataSet.id}`} color="info" size="sm">

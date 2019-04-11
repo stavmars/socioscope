@@ -6,14 +6,19 @@ import { REQUEST, SUCCESS, FAILURE } from 'app/shared/reducers/action-type.util'
 
 import { IDataSet, defaultValue } from 'app/shared/model/data-set.model';
 import { IDimension } from 'app/shared/model/dimension.model';
+import { IMeasure } from 'app/shared/model/measure.model';
+import dimension from 'app/entities/dimension/dimension';
 
 export const ACTION_TYPES = {
   SEARCH_DATASETS: 'dataSet/SEARCH_DATASETS',
   FETCH_DATASET_LIST: 'dataSet/FETCH_DATASET_LIST',
   FETCH_DATASET: 'dataSet/FETCH_DATASET',
   FETCH_DATASET_DIMENSIONS: 'dataset/FETCH_DATASET_DIMENSIONS',
+  FETCH_DATASET_MEASURES: 'dataSet/FETCH_DATASET_MEASURES',
   CREATE_DATASET: 'dataSet/CREATE_DATASET',
   UPDATE_DATASET: 'dataSet/UPDATE_DATASET',
+  ADD_DIMENSIONS: 'dataSet/ADD_DIMENSIONS',
+  ADD_MEASURES: 'dataSet/ADD_MEASURES',
   DELETE_DATASET: 'dataSet/DELETE_DATASET',
   RESET: 'dataSet/RESET'
 };
@@ -37,6 +42,7 @@ export default (state: DataSetState = initialState, action): DataSetState => {
     case REQUEST(ACTION_TYPES.FETCH_DATASET_LIST):
     case REQUEST(ACTION_TYPES.FETCH_DATASET):
     case REQUEST(ACTION_TYPES.FETCH_DATASET_DIMENSIONS):
+    case REQUEST(ACTION_TYPES.FETCH_DATASET_MEASURES):
       return {
         ...state,
         errorMessage: null,
@@ -46,6 +52,8 @@ export default (state: DataSetState = initialState, action): DataSetState => {
     case REQUEST(ACTION_TYPES.CREATE_DATASET):
     case REQUEST(ACTION_TYPES.UPDATE_DATASET):
     case REQUEST(ACTION_TYPES.DELETE_DATASET):
+    case REQUEST(ACTION_TYPES.ADD_DIMENSIONS):
+    case REQUEST(ACTION_TYPES.ADD_MEASURES):
       return {
         ...state,
         errorMessage: null,
@@ -56,8 +64,11 @@ export default (state: DataSetState = initialState, action): DataSetState => {
     case FAILURE(ACTION_TYPES.FETCH_DATASET_LIST):
     case FAILURE(ACTION_TYPES.FETCH_DATASET):
     case FAILURE(ACTION_TYPES.FETCH_DATASET_DIMENSIONS):
+    case FAILURE(ACTION_TYPES.FETCH_DATASET_MEASURES):
     case FAILURE(ACTION_TYPES.CREATE_DATASET):
     case FAILURE(ACTION_TYPES.UPDATE_DATASET):
+    case FAILURE(ACTION_TYPES.ADD_DIMENSIONS):
+    case FAILURE(ACTION_TYPES.ADD_MEASURES):
     case FAILURE(ACTION_TYPES.DELETE_DATASET):
       return {
         ...state,
@@ -74,6 +85,7 @@ export default (state: DataSetState = initialState, action): DataSetState => {
       };
     case SUCCESS(ACTION_TYPES.FETCH_DATASET_LIST):
     case SUCCESS(ACTION_TYPES.FETCH_DATASET_DIMENSIONS):
+    case SUCCESS(ACTION_TYPES.FETCH_DATASET_MEASURES):
       return {
         ...state,
         loading: false,
@@ -87,6 +99,8 @@ export default (state: DataSetState = initialState, action): DataSetState => {
       };
     case SUCCESS(ACTION_TYPES.CREATE_DATASET):
     case SUCCESS(ACTION_TYPES.UPDATE_DATASET):
+    case SUCCESS(ACTION_TYPES.ADD_DIMENSIONS):
+    case SUCCESS(ACTION_TYPES.ADD_MEASURES):
       return {
         ...state,
         updating: false,
@@ -140,6 +154,14 @@ export const getDimensions: ICrudGetAllAction<IDimension> = id => {
   };
 };
 
+export const getMeasures: ICrudGetAllAction<IMeasure> = id => {
+  const requestUrl = `${apiUrl}/measures/${id}`;
+  return {
+    type: ACTION_TYPES.FETCH_DATASET_MEASURES,
+    payload: axios.get<IMeasure>(requestUrl)
+  };
+};
+
 export const createEntity: ICrudPutAction<IDataSet> = entity => async dispatch => {
   const result = await dispatch({
     type: ACTION_TYPES.CREATE_DATASET,
@@ -153,6 +175,26 @@ export const updateEntity: ICrudPutAction<IDataSet> = entity => async dispatch =
   const result = await dispatch({
     type: ACTION_TYPES.UPDATE_DATASET,
     payload: axios.put(apiUrl, cleanEntity(entity))
+  });
+  dispatch(getEntities());
+  return result;
+};
+
+export const addDimensions: ICrudPutAction<IDataSet> = id => async dispatch => {
+  const requestUrl = `${apiUrl}/dimensions/${id}`;
+  const result = await dispatch({
+    type: ACTION_TYPES.ADD_DIMENSIONS,
+    payload: axios.put(requestUrl)
+  });
+  dispatch(getEntities());
+  return result;
+};
+
+export const addMeasures: ICrudPutAction<IDataSet> = id => async dispatch => {
+  const requestUrl = `${apiUrl}/measures/${id}`;
+  const result = await dispatch({
+    type: ACTION_TYPES.ADD_MEASURES,
+    payload: axios.put(requestUrl)
   });
   dispatch(getEntities());
   return result;

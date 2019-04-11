@@ -44,10 +44,6 @@ export class MeasureDetail extends React.Component<IMeasureDetailProps> {
               <Translate contentKey="socioscopeApp.measure.creator">Creator</Translate>
             </dt>
             <dd>{measureEntity.creator ? measureEntity.creator.login : ''}</dd>
-            <dt>
-              <Translate contentKey="socioscopeApp.measure.dataset">Dataset</Translate>
-            </dt>
-            <dd>{measureEntity.dataset ? measureEntity.dataset.name : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/measure" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

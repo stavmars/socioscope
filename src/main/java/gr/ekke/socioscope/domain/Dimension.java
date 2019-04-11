@@ -34,14 +34,13 @@ public class Dimension implements Serializable {
     private String type;
 
     @DBRef
+    @Field("codelist")
+    private Codelist codelist = new Codelist();
+
+    @DBRef
     @Field("creator")
     @JsonIgnoreProperties("")
     private User creator;
-
-    @DBRef
-    @Field("dataset")
-    @JsonIgnoreProperties("dimensions")
-    private DataSet dataset;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
@@ -78,6 +77,19 @@ public class Dimension implements Serializable {
         this.type = type;
     }
 
+    public Codelist getCodelist() {
+        return codelist;
+    }
+
+    public Dimension codelist(Codelist codelist) {
+        this.codelist = codelist;
+        return this;
+    }
+
+    public void setCodelist(Codelist codelist) {
+        this.codelist = codelist;
+    }
+
     public User getCreator() {
         return creator;
     }
@@ -89,19 +101,6 @@ public class Dimension implements Serializable {
 
     public void setCreator(User user) {
         this.creator = user;
-    }
-
-    public DataSet getDataset() {
-        return dataset;
-    }
-
-    public Dimension dataset(DataSet dataSet) {
-        this.dataset = dataSet;
-        return this;
-    }
-
-    public void setDataset(DataSet dataSet) {
-        this.dataset = dataSet;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

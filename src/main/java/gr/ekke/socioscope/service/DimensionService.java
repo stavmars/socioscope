@@ -35,13 +35,10 @@ public class DimensionService {
 
     private final UserRepository userRepository;
 
-    private final DataSetRepository dataSetRepository;
-
-    public DimensionService(DimensionRepository dimensionRepository, DimensionSearchRepository dimensionSearchRepository, UserRepository userRepository, DataSetRepository dataSetRepository) {
+    public DimensionService(DimensionRepository dimensionRepository, DimensionSearchRepository dimensionSearchRepository, UserRepository userRepository) {
         this.dimensionRepository = dimensionRepository;
         this.dimensionSearchRepository = dimensionSearchRepository;
         this.userRepository = userRepository;
-        this.dataSetRepository = dataSetRepository;
     }
 
     /**
@@ -55,9 +52,6 @@ public class DimensionService {
         String login = SecurityUtils.getCurrentUserLogin().get();
         dimension.setCreator(userRepository.findOneByLogin(login).get());
         Dimension result = dimensionRepository.save(dimension);
-        DataSet dataSet = dataSetRepository.findById(result.getDataset().getId()).get();
-        dataSet.addDimensions(result);
-        dataSetRepository.save(dataSet);
         dimensionSearchRepository.save(result);
         return result;
     }
@@ -105,10 +99,6 @@ public class DimensionService {
      */
     public void delete(String id) {
         log.debug("Request to delete Dimension : {}", id);
-        Dimension dimension = dimensionRepository.findById(id).get();
-        DataSet dataSet = dataSetRepository.findById(dimension.getDataset().getId()).get();
-        dataSet.removeDimensions(dimension);
-        dataSetRepository.save(dataSet);
         dimensionRepository.deleteById(id);
         dimensionSearchRepository.deleteById(id);
     }

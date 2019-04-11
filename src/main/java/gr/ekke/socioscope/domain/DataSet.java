@@ -128,13 +128,11 @@ public class DataSet implements Serializable {
 
     public DataSet addDimensions(Dimension dimension) {
         this.dimensions.add(dimension);
-        dimension.setDataset(this);
         return this;
     }
 
     public DataSet removeDimensions(Dimension dimension) {
         this.dimensions.remove(dimension);
-        dimension.setDataset(null);
         return this;
     }
 
@@ -153,13 +151,11 @@ public class DataSet implements Serializable {
 
     public DataSet addMeasures(Measure measure) {
         this.measures.add(measure);
-        measure.setDataset(this);
         return this;
     }
 
     public DataSet removeMeasures(Measure measure) {
         this.measures.remove(measure);
-        measure.setDataset(null);
         return this;
     }
 

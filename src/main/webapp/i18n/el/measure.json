@@ -18,8 +18,7 @@
       },
       "name": "Name",
       "unit": "Unit",
-      "creator": "Creator",
-      "dataset": "Dataset"
+      "creator": "Creator"
     }
   }
 }

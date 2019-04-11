@@ -94,9 +94,6 @@ export class Measure extends React.Component<IMeasureProps, IMeasureState> {
                 <th>
                   <Translate contentKey="socioscopeApp.measure.creator">Creator</Translate>
                 </th>
-                <th>
-                  <Translate contentKey="socioscopeApp.measure.dataset">Dataset</Translate>
-                </th>
                 <th />
               </tr>
             </thead>
@@ -111,7 +108,6 @@ export class Measure extends React.Component<IMeasureProps, IMeasureState> {
                   <td>{measure.name}</td>
                   <td>{measure.unit}</td>
                   <td>{measure.creator ? measure.creator.login : ''}</td>
-                  <td>{measure.dataset ? <Link to={`data-set/${measure.dataset.id}`}>{measure.dataset.name}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${measure.id}`} color="info" size="sm">

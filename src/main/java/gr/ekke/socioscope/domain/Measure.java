@@ -38,11 +38,6 @@ public class Measure implements Serializable {
     @JsonIgnoreProperties("")
     private User creator;
 
-    @DBRef
-    @Field("dataset")
-    @JsonIgnoreProperties("measures")
-    private DataSet dataset;
-
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
         return id;
@@ -89,19 +84,6 @@ public class Measure implements Serializable {
 
     public void setCreator(User user) {
         this.creator = user;
-    }
-
-    public DataSet getDataset() {
-        return dataset;
-    }
-
-    public Measure dataset(DataSet dataSet) {
-        this.dataset = dataSet;
-        return this;
-    }
-
-    public void setDataset(DataSet dataSet) {
-        this.dataset = dataSet;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

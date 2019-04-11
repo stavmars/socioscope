@@ -41,13 +41,15 @@ export class DimensionDetail extends React.Component<IDimensionDetailProps> {
             </dt>
             <dd>{dimensionEntity.type}</dd>
             <dt>
+              <span id="codelist">
+                <Translate contentKey="socioscopeApp.dimension.codelist">Codelist</Translate>
+              </span>
+            </dt>
+            <dd>{dimensionEntity.codelist ? dimensionEntity.codelist.name : ''}</dd>
+            <dt>
               <Translate contentKey="socioscopeApp.dimension.creator">Creator</Translate>
             </dt>
             <dd>{dimensionEntity.creator ? dimensionEntity.creator.login : ''}</dd>
-            <dt>
-              <Translate contentKey="socioscopeApp.dimension.dataset">Dataset</Translate>
-            </dt>
-            <dd>{dimensionEntity.dataset ? dimensionEntity.dataset.name : ''}</dd>
           </dl>
           <Button tag={Link} to="/entity/dimension" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

@@ -18,8 +18,8 @@
       },
       "name": "Name",
       "type": "Type",
-      "creator": "Creator",
-      "dataset": "Dataset"
+      "codelist": "Codelist",
+      "creator": "Creator"
     }
   }
 }

@@ -92,10 +92,10 @@ export class Dimension extends React.Component<IDimensionProps, IDimensionState>
                   <Translate contentKey="socioscopeApp.dimension.type">Type</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="socioscopeApp.dimension.creator">Creator</Translate>
+                  <Translate contentKey="socioscopeApp.dimension.codelist">Codelist</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="socioscopeApp.dimension.dataset">Dataset</Translate>
+                  <Translate contentKey="socioscopeApp.dimension.creator">Creator</Translate>
                 </th>
                 <th />
               </tr>
@@ -110,8 +110,8 @@ export class Dimension extends React.Component<IDimensionProps, IDimensionState>
                   </td>
                   <td>{dimension.name}</td>
                   <td>{dimension.type}</td>
+                  <td>{dimension.codelist ? <Link to={`codelist/${dimension.codelist.id}`}>{dimension.codelist.name}</Link> : ''}</td>
                   <td>{dimension.creator ? dimension.creator.login : ''}</td>
-                  <td>{dimension.dataset ? <Link to={`data-set/${dimension.dataset.id}`}>{dimension.dataset.name}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${dimension.id}`} color="info" size="sm">

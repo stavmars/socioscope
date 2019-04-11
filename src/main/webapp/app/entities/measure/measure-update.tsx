@@ -23,7 +23,6 @@ export interface IMeasureUpdateProps extends StateProps, DispatchProps, RouteCom
 export interface IMeasureUpdateState {
   isNew: boolean;
   creatorId: string;
-  datasetId: string;
 }
 
 export class MeasureUpdate extends React.Component<IMeasureUpdateProps, IMeasureUpdateState> {
@@ -31,7 +30,6 @@ export class MeasureUpdate extends React.Component<IMeasureUpdateProps, IMeasure
     super(props);
     this.state = {
       creatorId: '0',
-      datasetId: '0',
       isNew: !this.props.match.params || !this.props.match.params.id
     };
   }
@@ -50,7 +48,6 @@ export class MeasureUpdate extends React.Component<IMeasureUpdateProps, IMeasure
     }
 
     this.props.getUsers();
-    this.props.getDataSets();
   }
 
   saveEntity = (event, errors, values) => {
@@ -74,7 +71,7 @@ export class MeasureUpdate extends React.Component<IMeasureUpdateProps, IMeasure
   };
 
   render() {
-    const { measureEntity, users, dataSets, loading, updating } = this.props;
+    const { measureEntity, users, loading, updating } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -128,29 +125,6 @@ export class MeasureUpdate extends React.Component<IMeasureUpdateProps, IMeasure
                     }}
                   />
                 </AvGroup>
-                <AvGroup>
-                  <Label for="dataset.name">
-                    <Translate contentKey="socioscopeApp.measure.dataset">Dataset</Translate>
-                  </Label>
-                  <AvField
-                    id="measure-dataset"
-                    type="select"
-                    className="form-control"
-                    name="dataset.id"
-                    validate={{
-                      required: { value: true, errorMessage: translate('entity.validation.required') }
-                    }}
-                  >
-                    <option value="" key="0" />
-                    {dataSets
-                      ? dataSets.map(otherEntity => (
-                          <option value={otherEntity.id} key={otherEntity.id}>
-                            {otherEntity.name}
-                          </option>
-                        ))
-                      : null}
-                  </AvField>
-                </AvGroup>
                 <Button id="cancel-save" onClick={this.handleClose} color="info">
                   <FontAwesomeIcon icon="arrow-left" />
                   &nbsp;
@@ -184,7 +158,6 @@ const mapStateToProps = (storeState: IRootState) => ({
 
 const mapDispatchToProps = {
   getUsers,
-  getDataSets,
   getEntity,
   updateEntity,
   createEntity,

@@ -10,7 +10,9 @@ import { IRootState } from 'app/shared/reducers';
 
 import { IUser } from 'app/shared/model/user.model';
 import { getUsers } from 'app/modules/administration/user-management/user-management.reducer';
-import { getEntity, updateEntity, createEntity, reset } from './data-set.reducer';
+import { getEntity, updateEntity, createEntity, reset, getDimensions, getMeasures, addDimensions, addMeasures } from './data-set.reducer';
+import { getEntities as getAllDimensions } from 'app/entities/dimension/dimension.reducer';
+import { getEntities as getAllMeasures } from 'app/entities/measure/measure.reducer';
 import { IDataSet } from 'app/shared/model/data-set.model';
 // tslint:disable-next-line:no-unused-variable
 import { convertDateTimeFromServer } from 'app/shared/util/date-utils';
@@ -46,6 +48,8 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
     }
 
     this.props.getUsers();
+    this.props.getAllDimensions();
+    this.props.getAllMeasures();
   }
 
   saveEntity = (event, errors, values) => {
@@ -69,7 +73,7 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
   };
 
   render() {
-    const { dataSetEntity, users, loading, updating } = this.props;
+    const { dataSetEntity, users, loading, updating, dimensions, measures } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -181,6 +185,10 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                             </ListGroupItem>
                           ))
                         : null}
+                      {/*{dimensions*/}
+                      {/*  ? dimensions.map(dimEntity => (*/}
+                      {/*    ))*/}
+                      {/*  : null}*/}
                       <ListGroupItem>
                         <Button tag={Link} to="/entity/dimension/new" color="primary" className="float-center" size="sm">
                           <FontAwesomeIcon icon="plus" />
@@ -257,6 +265,8 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
 const mapStateToProps = (storeState: IRootState) => ({
   users: storeState.userManagement.users,
   dataSetEntity: storeState.dataSet.entity,
+  dimensions: storeState.dimension.entities,
+  measures: storeState.measure.entities,
   loading: storeState.dataSet.loading,
   updating: storeState.dataSet.updating,
   updateSuccess: storeState.dataSet.updateSuccess
@@ -265,6 +275,12 @@ const mapStateToProps = (storeState: IRootState) => ({
 const mapDispatchToProps = {
   getUsers,
   getEntity,
+  getDimensions,
+  getMeasures,
+  addDimensions,
+  addMeasures,
+  getAllDimensions,
+  getAllMeasures,
   updateEntity,
   createEntity,
   reset

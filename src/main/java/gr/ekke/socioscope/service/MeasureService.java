@@ -35,13 +35,10 @@ public class MeasureService {
 
     private final UserRepository userRepository;
 
-    private final DataSetRepository dataSetRepository;
-
-    public MeasureService(MeasureRepository measureRepository, MeasureSearchRepository measureSearchRepository, UserRepository userRepository, DataSetRepository dataSetRepository) {
+    public MeasureService(MeasureRepository measureRepository, MeasureSearchRepository measureSearchRepository, UserRepository userRepository) {
         this.measureRepository = measureRepository;
         this.measureSearchRepository = measureSearchRepository;
         this.userRepository = userRepository;
-        this.dataSetRepository = dataSetRepository;
     }
 
     /**
@@ -55,9 +52,6 @@ public class MeasureService {
         String login = SecurityUtils.getCurrentUserLogin().get();
         measure.setCreator(userRepository.findOneByLogin(login).get());
         Measure result = measureRepository.save(measure);
-        DataSet dataSet = dataSetRepository.findById(result.getDataset().getId()).get();
-        dataSet.addMeasures(result);
-        dataSetRepository.save(dataSet);
         measureSearchRepository.save(result);
         return result;
     }
@@ -105,10 +99,6 @@ public class MeasureService {
      */
     public void delete(String id) {
         log.debug("Request to delete Measure : {}", id);
-        Measure measure = findOne(id).get();
-        DataSet dataSet = dataSetRepository.findById(measure.getDataset().getId()).get();
-        dataSet.removeMeasures(measure);
-        dataSetRepository.save(dataSet);
         measureRepository.deleteById(id);
         measureSearchRepository.deleteById(id);
     }

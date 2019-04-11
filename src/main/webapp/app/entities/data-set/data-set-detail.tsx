@@ -7,7 +7,7 @@ import { Translate, ICrudGetAction, TextFormat } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IRootState } from 'app/shared/reducers';
-import { getDimensions, getEntity } from './data-set.reducer';
+import { getEntity } from './data-set.reducer';
 import { IDataSet } from 'app/shared/model/data-set.model';
 // tslint:disable-next-line:no-unused-variable
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
