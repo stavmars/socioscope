@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
-import { Button, Row, Col, Label } from 'reactstrap';
+import { Button, Row, Col, Label, Table } from 'reactstrap';
 import { AvForm, AvGroup, AvInput, AvField } from 'availity-reactstrap-validation';
 // tslint:disable-next-line:no-unused-variable
 import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction } from 'react-jhipster';
@@ -15,18 +15,21 @@ import { ICodelist } from 'app/shared/model/codelist.model';
 // tslint:disable-next-line:no-unused-variable
 import { convertDateTimeFromServer } from 'app/shared/util/date-utils';
 import { mapIdList } from 'app/shared/util/entity-utils';
+import { ICode } from 'app/shared/model/code.model';
 
 export interface ICodelistUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
 export interface ICodelistUpdateState {
   isNew: boolean;
+  iCodes: ICode[];
 }
 
 export class CodelistUpdate extends React.Component<ICodelistUpdateProps, ICodelistUpdateState> {
   constructor(props) {
     super(props);
     this.state = {
-      isNew: !this.props.match.params || !this.props.match.params.id
+      isNew: !this.props.match.params || !this.props.match.params.id,
+      iCodes: this.props.codelistEntity.codes ? this.props.codelistEntity.codes : []
     };
   }
 
@@ -48,7 +51,6 @@ export class CodelistUpdate extends React.Component<ICodelistUpdateProps, ICodel
 
   saveEntity = (event, errors, values) => {
     values.createdDate = new Date(values.createdDate);
-
     if (errors.length === 0) {
       const { codelistEntity } = this.props;
       const entity = {
@@ -62,6 +64,35 @@ export class CodelistUpdate extends React.Component<ICodelistUpdateProps, ICodel
         this.props.updateEntity(entity);
       }
     }
+  };
+
+  addCode = () => {
+    const { codelistEntity } = this.props;
+    const codes = codelistEntity.codes ? codelistEntity.codes : {};
+    const i = codelistEntity.codes ? codelistEntity.codes.length : 0;
+    console.log(codes);
+    return (
+      <tr key={`${i}`}>
+        <td>
+          <AvInput type="text" name={`codes[${i}].id`} className="form-control" placeholder="Code Id" />
+        </td>
+        <td>
+          <AvInput type="text" name={`codes[${i}].name`} className="form-control" placeholder="Name" />
+        </td>
+        <td>
+          <AvInput type="text" name={`codes[${i}].description`} className="form-control" placeholder="Description" />
+        </td>
+        <td>
+          <AvInput type="text" name={`codes[${i}].parentCodeId`} className="form-control" placeholder="Parent Code Id" />
+        </td>
+        <td>
+          <AvInput type="number" name={`codes[${i}].order`} className="form-control" placeholder="Order" />
+        </td>
+        <td>
+          <AvInput type="text" name={`codes[${i}].color`} className="form-control" placeholder="Color" />
+        </td>
+      </tr>
+    );
   };
 
   handleClose = () => {
@@ -114,6 +145,55 @@ export class CodelistUpdate extends React.Component<ICodelistUpdateProps, ICodel
                   </Label>
                   <AvField id="codelist-description" type="text" name="description" />
                 </AvGroup>
+                <Label id="codesLabel" for="codes">
+                  <Translate contentKey="socioscopeApp.codelist.codes">Codes</Translate>
+                </Label>
+                <Table responsive>
+                  <thead>
+                    <tr>
+                      <th>
+                        <Translate contentKey="socioscopeApp.code.codeId">Code Id</Translate>
+                      </th>
+                      <th>
+                        <Translate contentKey="socioscopeApp.code.name">Name</Translate>
+                      </th>
+                      <th>
+                        <Translate contentKey="socioscopeApp.code.description">Description</Translate>
+                      </th>
+                      <th>
+                        <Translate contentKey="socioscopeApp.code.parentCodeId">Parent Code Id</Translate>
+                      </th>
+                      <th>
+                        <Translate contentKey="socioscopeApp.code.order">Order</Translate>
+                      </th>
+                      <th>
+                        <Translate contentKey="socioscopeApp.code.color">Color</Translate>
+                      </th>
+                      <th>
+                        <Button color="primary" size="sm" onClick={this.addCode}>
+                          <FontAwesomeIcon icon="plus" />{' '}
+                          <span className="d-none d-md-inline">
+                            <Translate contentKey="socioscopeApp.code.home.createLabel">Create a new Code</Translate>
+                          </span>
+                        </Button>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {codelistEntity.codes
+                      ? codelistEntity.codes.map((code, i) => (
+                          <tr key={`code-${i}`}>
+                            <td>{code.id}</td>
+                            <td>{code.name}</td>
+                            <td>{code.description}</td>
+                            <td>{code.parentCodeId}</td>
+                            <td>{code.order}</td>
+                            <td>{code.color}</td>
+                          </tr>
+                        ))
+                      : null}
+                  </tbody>
+                </Table>
                 {!isNew ? (
                   <AvGroup>
                     <Label id="createdDateLabel" for="createdDate">
@@ -123,7 +203,7 @@ export class CodelistUpdate extends React.Component<ICodelistUpdateProps, ICodel
                       id="codelist-createdDate"
                       type="datetime-local"
                       className="form-control"
-                      name="creatdedDate"
+                      name="createdDate"
                       value={convertDateTimeFromServer(this.props.codelistEntity.createdDate)}
                       readOnly
                     />

@@ -65,6 +65,7 @@ public class CodelistService {
             .map(codelist -> {
                 codelist.setName(updatedCodelist.getName());
                 codelist.setDescription(updatedCodelist.getDescription());
+                codelist.setCodes(updatedCodelist.getCodes());
                 codelistRepository.save(codelist);
                 codelistSearchRepository.save(codelist);
                 log.debug("Changed Information for Codelist: {}", codelist);

@@ -19,6 +19,7 @@
       "name": "Name",
       "description": "Description",
       "createdDate": "Created Date",
+      "codes": "Codes",
       "creator": "Creator"
     }
   }

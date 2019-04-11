@@ -10,6 +10,7 @@ import javax.validation.constraints.*;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -41,7 +42,7 @@ public class Codelist implements Serializable {
     private User creator;
 
     @Field("codes")
-    private List<Code> codes;
+    private List<Code> codes = new ArrayList<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {

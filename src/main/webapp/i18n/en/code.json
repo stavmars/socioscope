@@ -16,7 +16,7 @@
       "detail": {
         "title": "Code"
       },
-      "codelistId": "Codelist Id",
+      "codeId": "Code Id",
       "name": "Name",
       "description": "Description",
       "parentCodeId": "Parent Code Id",

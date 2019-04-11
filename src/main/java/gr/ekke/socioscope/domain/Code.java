@@ -14,6 +14,8 @@ public class Code implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @NotNull
+    @Field("id")
     private String id;
 
     @NotNull
