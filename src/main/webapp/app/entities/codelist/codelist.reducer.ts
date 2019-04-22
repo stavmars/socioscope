@@ -5,7 +5,6 @@ import { cleanEntity } from 'app/shared/util/entity-utils';
 import { REQUEST, SUCCESS, FAILURE } from 'app/shared/reducers/action-type.util';
 
 import { ICodelist, defaultValue } from 'app/shared/model/codelist.model';
-import { ICode } from 'app/shared/model/code.model';
 
 export const ACTION_TYPES = {
   SEARCH_CODELISTS: 'codelist/SEARCH_CODELISTS',
@@ -14,9 +13,7 @@ export const ACTION_TYPES = {
   CREATE_CODELIST: 'codelist/CREATE_CODELIST',
   UPDATE_CODELIST: 'codelist/UPDATE_CODELIST',
   DELETE_CODELIST: 'codelist/DELETE_CODELIST',
-  CREATE_CODE: 'codelist/CREATE_CODE',
-  UPDATE_CODE: 'codelist/UPDATE_CODE',
-  DELETE_CODE: 'codelist/DELETE_CODE',
+  ADD_CODES: 'codelist/ADD_CDOES',
   RESET: 'codelist/RESET'
 };
 
@@ -48,9 +45,7 @@ export default (state: CodelistState = initialState, action): CodelistState => {
     case REQUEST(ACTION_TYPES.CREATE_CODELIST):
     case REQUEST(ACTION_TYPES.UPDATE_CODELIST):
     case REQUEST(ACTION_TYPES.DELETE_CODELIST):
-    case REQUEST(ACTION_TYPES.CREATE_CODE):
-    case REQUEST(ACTION_TYPES.UPDATE_CODE):
-    case REQUEST(ACTION_TYPES.DELETE_CODE):
+    case REQUEST(ACTION_TYPES.ADD_CODES):
       return {
         ...state,
         errorMessage: null,
@@ -63,9 +58,7 @@ export default (state: CodelistState = initialState, action): CodelistState => {
     case FAILURE(ACTION_TYPES.CREATE_CODELIST):
     case FAILURE(ACTION_TYPES.UPDATE_CODELIST):
     case FAILURE(ACTION_TYPES.DELETE_CODELIST):
-    case FAILURE(ACTION_TYPES.CREATE_CODE):
-    case FAILURE(ACTION_TYPES.UPDATE_CODE):
-    case FAILURE(ACTION_TYPES.DELETE_CODE):
+    case FAILURE(ACTION_TYPES.ADD_CODES):
       return {
         ...state,
         loading: false,
@@ -94,9 +87,7 @@ export default (state: CodelistState = initialState, action): CodelistState => {
       };
     case SUCCESS(ACTION_TYPES.CREATE_CODELIST):
     case SUCCESS(ACTION_TYPES.UPDATE_CODELIST):
-    case SUCCESS(ACTION_TYPES.CREATE_CODE):
-    case SUCCESS(ACTION_TYPES.UPDATE_CODE):
-    case SUCCESS(ACTION_TYPES.DELETE_CODE):
+    case SUCCESS(ACTION_TYPES.ADD_CODES):
       return {
         ...state,
         updating: false,
@@ -163,6 +154,14 @@ export const updateEntity: ICrudPutAction<ICodelist> = entity => async dispatch 
   return result;
 };
 
+export const addCodes: ICrudPutAction<ICodelist> = entity => async dispatch => {
+  const result = await dispatch({
+    type: ACTION_TYPES.ADD_CODES,
+    payload: axios.put(apiUrl, cleanEntity(entity))
+  });
+  return result;
+};
+
 export const deleteEntity: ICrudDeleteAction<ICodelist> = id => async dispatch => {
   const requestUrl = `${apiUrl}/${id}`;
   const result = await dispatch({
@@ -172,13 +171,6 @@ export const deleteEntity: ICrudDeleteAction<ICodelist> = id => async dispatch =
   dispatch(getEntities());
   return result;
 };
-
-export const createCode = (code: ICode) => ({
-  type: ACTION_TYPES.CREATE_CODE,
-  payload: code
-});
-
-// export const
 
 export const reset = () => ({
   type: ACTION_TYPES.RESET

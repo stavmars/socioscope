@@ -1,6 +1,5 @@
 package gr.ekke.socioscope.domain;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Field;
 import javax.validation.constraints.*;
 
@@ -25,7 +24,8 @@ public class Code implements Serializable {
     @Field("description")
     private String description;
 
-    private String parentCodeId;
+    @Field("parentId")
+    private String parentId;
 
     @Field("order")
     private Integer order;
@@ -67,17 +67,17 @@ public class Code implements Serializable {
         this.description = description;
     }
 
-    public String getParentCodeId() {
-        return parentCodeId;
+    public String getParentId() {
+        return parentId;
     }
 
-    public Code parentCodeId(String parentCodeId) {
-        this.parentCodeId = parentCodeId;
+    public Code parentId(String parentId) {
+        this.parentId = parentId;
         return this;
     }
 
-    public void setParentCodeId(String parentCodeId) {
-        this.parentCodeId = parentCodeId;
+    public void setParentId(String parentId) {
+        this.parentId = parentId;
     }
 
     public Integer getOrder() {
@@ -132,7 +132,7 @@ public class Code implements Serializable {
             "id=" + getId() +
             ", name='" + getName() + "'" +
             ", description='" + getDescription() + "'" +
-            ", parentCodeId='" + getParentCodeId() + "'" +
+            ", parentId='" + getParentId() + "'" +
             ", order=" + getOrder() +
             ", color='" + getColor() + "'" +
             "}";

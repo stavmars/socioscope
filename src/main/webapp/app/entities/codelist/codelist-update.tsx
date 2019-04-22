@@ -21,15 +21,13 @@ export interface ICodelistUpdateProps extends StateProps, DispatchProps, RouteCo
 
 export interface ICodelistUpdateState {
   isNew: boolean;
-  iCodes: ICode[];
 }
 
 export class CodelistUpdate extends React.Component<ICodelistUpdateProps, ICodelistUpdateState> {
   constructor(props) {
     super(props);
     this.state = {
-      isNew: !this.props.match.params || !this.props.match.params.id,
-      iCodes: this.props.codelistEntity.codes ? this.props.codelistEntity.codes : []
+      isNew: !this.props.match.params || !this.props.match.params.id
     };
   }
 
@@ -66,41 +64,12 @@ export class CodelistUpdate extends React.Component<ICodelistUpdateProps, ICodel
     }
   };
 
-  addCode = () => {
-    const { codelistEntity } = this.props;
-    const codes = codelistEntity.codes ? codelistEntity.codes : {};
-    const i = codelistEntity.codes ? codelistEntity.codes.length : 0;
-    console.log(codes);
-    return (
-      <tr key={`${i}`}>
-        <td>
-          <AvInput type="text" name={`codes[${i}].id`} className="form-control" placeholder="Code Id" />
-        </td>
-        <td>
-          <AvInput type="text" name={`codes[${i}].name`} className="form-control" placeholder="Name" />
-        </td>
-        <td>
-          <AvInput type="text" name={`codes[${i}].description`} className="form-control" placeholder="Description" />
-        </td>
-        <td>
-          <AvInput type="text" name={`codes[${i}].parentCodeId`} className="form-control" placeholder="Parent Code Id" />
-        </td>
-        <td>
-          <AvInput type="number" name={`codes[${i}].order`} className="form-control" placeholder="Order" />
-        </td>
-        <td>
-          <AvInput type="text" name={`codes[${i}].color`} className="form-control" placeholder="Color" />
-        </td>
-      </tr>
-    );
-  };
-
   handleClose = () => {
     this.props.history.push('/entity/codelist');
   };
 
   render() {
-    const { codelistEntity, users, loading, updating } = this.props;
+    const { codelistEntity, users, loading, updating, match } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -145,55 +114,54 @@ export class CodelistUpdate extends React.Component<ICodelistUpdateProps, ICodel
                   </Label>
                   <AvField id="codelist-description" type="text" name="description" />
                 </AvGroup>
-                <Label id="codesLabel" for="codes">
-                  <Translate contentKey="socioscopeApp.codelist.codes">Codes</Translate>
-                </Label>
-                <Table responsive>
-                  <thead>
-                    <tr>
-                      <th>
-                        <Translate contentKey="socioscopeApp.code.codeId">Code Id</Translate>
-                      </th>
-                      <th>
-                        <Translate contentKey="socioscopeApp.code.name">Name</Translate>
-                      </th>
-                      <th>
-                        <Translate contentKey="socioscopeApp.code.description">Description</Translate>
-                      </th>
-                      <th>
-                        <Translate contentKey="socioscopeApp.code.parentCodeId">Parent Code Id</Translate>
-                      </th>
-                      <th>
-                        <Translate contentKey="socioscopeApp.code.order">Order</Translate>
-                      </th>
-                      <th>
-                        <Translate contentKey="socioscopeApp.code.color">Color</Translate>
-                      </th>
-                      <th>
-                        <Button color="primary" size="sm" onClick={this.addCode}>
-                          <FontAwesomeIcon icon="plus" />{' '}
-                          <span className="d-none d-md-inline">
-                            <Translate contentKey="socioscopeApp.code.home.createLabel">Create a new Code</Translate>
-                          </span>
-                        </Button>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {codelistEntity.codes
-                      ? codelistEntity.codes.map((code, i) => (
-                          <tr key={`code-${i}`}>
-                            <td>{code.id}</td>
-                            <td>{code.name}</td>
-                            <td>{code.description}</td>
-                            <td>{code.parentCodeId}</td>
-                            <td>{code.order}</td>
-                            <td>{code.color}</td>
-                          </tr>
-                        ))
-                      : null}
-                  </tbody>
-                </Table>
+                {!isNew ? (
+                  <Table responsive>
+                    <thead>
+                      <tr>
+                        <th>
+                          <Translate contentKey="socioscopeApp.code.id">Id</Translate>
+                        </th>
+                        <th>
+                          <Translate contentKey="socioscopeApp.code.name">Name</Translate>
+                        </th>
+                        <th>
+                          <Translate contentKey="socioscopeApp.code.description">Description</Translate>
+                        </th>
+                        <th>
+                          <Translate contentKey="socioscopeApp.code.parentId">Parent Id</Translate>
+                        </th>
+                        <th>
+                          <Translate contentKey="socioscopeApp.code.order">Order</Translate>
+                        </th>
+                        <th>
+                          <Translate contentKey="socioscopeApp.code.color">Color</Translate>
+                        </th>
+                        <th>
+                          <Button tag={Link} to={`/entity/codelist/${codelistEntity.id}/edit/codes`} color="primary" size="sm">
+                            <FontAwesomeIcon icon="plus" />{' '}
+                            <span className="d-none d-md-inline">
+                              <Translate contentKey="socioscopeApp.code.home.editLabel">Edit Codes</Translate>
+                            </span>
+                          </Button>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {codelistEntity.codes
+                        ? codelistEntity.codes.map((code, i) => (
+                            <tr key={`code-${i}`}>
+                              <td>{code.id}</td>
+                              <td>{code.name}</td>
+                              <td>{code.description}</td>
+                              <td>{code.parentId}</td>
+                              <td>{code.order}</td>
+                              <td>{code.color}</td>
+                            </tr>
+                          ))
+                        : null}
+                    </tbody>
+                  </Table>
+                ) : null}
                 {!isNew ? (
                   <AvGroup>
                     <Label id="createdDateLabel" for="createdDate">

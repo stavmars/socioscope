@@ -29,6 +29,7 @@ import dimension, {
 import measure, {
   MeasureState
 } from 'app/entities/measure/measure.reducer';
+import codes, { CodeState } from 'app/entities/codelist/code-dialog.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -46,6 +47,7 @@ export interface IRootState {
   readonly dataSet: DataSetState;
   readonly dimension: DimensionState;
   readonly measure: MeasureState;
+  readonly codes: CodeState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -65,6 +67,7 @@ const rootReducer = combineReducers<IRootState>({
   dataSet,
   dimension,
   measure,
+  codes,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

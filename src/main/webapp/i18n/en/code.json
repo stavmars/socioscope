@@ -5,6 +5,8 @@
         "title": "Codes",
         "createLabel": "Create a new Code",
         "createOrEditLabel": "Create or edit a Code",
+        "editLabel": "Edit Codes",
+        "saveRow": "Save Row",
         "search": "Search for Code"
       },
       "created": "A new Code is created with identifier {{ param }}",
@@ -16,12 +18,13 @@
       "detail": {
         "title": "Code"
       },
-      "codeId": "Code Id",
+      "id": "Id",
       "name": "Name",
       "description": "Description",
-      "parentCodeId": "Parent Code Id",
+      "parentId": "Parent Id",
       "order": "Order",
-      "color": "Color"
+      "color": "Color",
+      "addCode": "Add Code"
     }
   }
 }
