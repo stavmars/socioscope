@@ -10,7 +10,7 @@ import { IRootState } from 'app/shared/reducers';
 
 import { IUser } from 'app/shared/model/user.model';
 import { getUsers } from 'app/modules/administration/user-management/user-management.reducer';
-import { getEntity, updateEntity, createEntity, reset, getDimensions, getMeasures, addDimensions, addMeasures } from './data-set.reducer';
+import { getEntity, updateEntity, createEntity, reset, addDimensions, addMeasures } from './data-set.reducer';
 import { getEntities as getAllDimensions } from 'app/entities/dimension/dimension.reducer';
 import { getEntities as getAllMeasures } from 'app/entities/measure/measure.reducer';
 import { IDataSet } from 'app/shared/model/data-set.model';
@@ -55,10 +55,12 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
   saveEntity = (event, errors, values) => {
     if (errors.length === 0) {
       const { dataSetEntity } = this.props;
+
       const entity = {
         ...dataSetEntity,
         ...values
       };
+      console.log(values);
 
       if (this.state.isNew) {
         this.props.createEntity(entity);
@@ -148,98 +150,110 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                     />
                   </AvGroup>
                 ) : null}
-                {!isNew ? (
-                  <AvGroup>
-                    <Label>
-                      <Translate contentKey="socioscopeApp.dataSet.dimensions">Dimensions</Translate>
-                    </Label>
-                    <ListGroup>
-                      {dataSetEntity.dimensions
-                        ? dataSetEntity.dimensions.map(otherEntity => (
-                            <ListGroupItem>
-                              {otherEntity.name}
-                              <Button
-                                tag={Link}
-                                to={`/entity/dimension/${otherEntity.id}/edit`}
-                                color="primary"
-                                className="float-right"
-                                size="sm"
-                              >
-                                <FontAwesomeIcon icon="pencil-alt" />{' '}
-                                <span className="d-none d-md-inline">
-                                  <Translate contentKey="entity.action.edit">Edit</Translate>
-                                </span>
-                              </Button>
-                              <Button
-                                tag={Link}
-                                to={`/entity/dimension/${otherEntity.id}/delete`}
-                                color="danger"
-                                className="float-right"
-                                size="sm"
-                              >
-                                <FontAwesomeIcon icon="trash" />{' '}
-                                <span className="d-none d-md-inline">
-                                  <Translate contentKey="entity.action.delete">Delete</Translate>
-                                </span>
-                              </Button>
-                            </ListGroupItem>
-                          ))
-                        : null}
-                      {/*{dimensions*/}
-                      {/*  ? dimensions.map(dimEntity => (*/}
-                      {/*    ))*/}
-                      {/*  : null}*/}
-                      <ListGroupItem>
-                        <Button tag={Link} to="/entity/dimension/new" color="primary" className="float-center" size="sm">
-                          <FontAwesomeIcon icon="plus" />
-                          <Translate contentKey="socioscopeApp.dimension.home.createLabel">Create new Dimension</Translate>
-                        </Button>
-                      </ListGroupItem>
-                    </ListGroup>
-                    <Label>
-                      <Translate contentKey="socioscopeApp.dataSet.measures">Measures</Translate>
-                    </Label>
-                    <ListGroup>
-                      {dataSetEntity.measures
-                        ? dataSetEntity.measures.map(otherEntity => (
-                            <ListGroupItem>
-                              {otherEntity.name}
-                              <Button
-                                tag={Link}
-                                to={`/entity/measure/${otherEntity.id}/edit`}
-                                color="primary"
-                                className="float-right"
-                                size="sm"
-                              >
-                                <FontAwesomeIcon icon="pencil-alt" />{' '}
-                                <span className="d-none d-md-inline">
-                                  <Translate contentKey="entity.action.edit">Edit</Translate>
-                                </span>
-                              </Button>
-                              <Button
-                                tag={Link}
-                                to={`/entity/measure/${otherEntity.id}/delete`}
-                                color="danger"
-                                className="float-right"
-                                size="sm"
-                              >
-                                <FontAwesomeIcon icon="trash" />{' '}
-                                <span className="d-none d-md-inline">
-                                  <Translate contentKey="entity.action.delete">Delete</Translate>
-                                </span>
-                              </Button>
-                            </ListGroupItem>
-                          ))
-                        : null}
-                      <ListGroupItem>
-                        <Button tag={Link} to="/entity/measure/new" color="primary" className="float-center" size="sm">
-                          <FontAwesomeIcon icon="plus" />
-                          <Translate contentKey="socioscopeApp.measure.home.createLabel">Create new Measure</Translate>
-                        </Button>
-                      </ListGroupItem>
-                    </ListGroup>
-                  </AvGroup>
-                ) : null}
+                <AvGroup>
+                  <Label>
+                    <Translate contentKey="socioscopeApp.dataSet.dimensions">Dimensions</Translate>
+                  </Label>
+                  <ListGroup>
+                    {dataSetEntity.dimensions
+                      ? dataSetEntity.dimensions.map(otherEntity => (
+                          <ListGroupItem>
+                            {otherEntity.name}
+                            <Button
+                              tag={Link}
+                              to={`/entity/dimension/${otherEntity.id}/edit`}
+                              color="primary"
+                              className="float-right"
+                              size="sm"
+                            >
+                              <FontAwesomeIcon icon="pencil-alt" />{' '}
+                              <span className="d-none d-md-inline">
+                                <Translate contentKey="entity.action.edit">Edit</Translate>
+                              </span>
+                            </Button>
+                            <Button
+                              tag={Link}
+                              to={`/entity/dimension/${otherEntity.id}/delete`}
+                              color="danger"
+                              className="float-right"
+                              size="sm"
+                            >
+                              <FontAwesomeIcon icon="trash" />{' '}
+                              <span className="d-none d-md-inline">
+                                <Translate contentKey="entity.action.delete">Delete</Translate>
+                              </span>
+                            </Button>
+                          </ListGroupItem>
+                        ))
+                      : null}
+                    <ListGroupItem>
+                      <AvField type="select" name="dimensions" helpMessage="MULTIPLE!" multiple>
+                        {dimensions
+                          ? dimensions.map(dimension => (
+                              <option value={JSON.stringify(dimension)} key={dimension.id}>
+                                {dimension.name}
+                              </option>
+                            ))
+                          : null}
+                      </AvField>
+                      <Button tag={Link} to="/entity/dimension/new" color="primary" className="float-center" size="sm">
+                        <FontAwesomeIcon icon="plus" />
+                        <Translate contentKey="socioscopeApp.dimension.home.createLabel">Create new Dimension</Translate>
+                      </Button>
+                    </ListGroupItem>
+                  </ListGroup>
+                  <Label>
+                    <Translate contentKey="socioscopeApp.dataSet.measures">Measures</Translate>
+                  </Label>
+                  <ListGroup>
+                    {dataSetEntity.measures
+                      ? dataSetEntity.measures.map(otherEntity => (
+                          <ListGroupItem>
+                            {otherEntity.name}
+                            {/*<Button*/}
+                            {/*  tag={Link}*/}
+                            {/*  to={`/entity/measure/${otherEntity.id}/edit`}*/}
+                            {/*  color="primary"*/}
+                            {/*  className="float-right"*/}
+                            {/*  size="sm"*/}
+                            {/*>*/}
+                            {/*  <FontAwesomeIcon icon="pencil-alt" />{' '}*/}
+                            {/*  <span className="d-none d-md-inline">*/}
+                            {/*    <Translate contentKey="entity.action.edit">Edit</Translate>*/}
+                            {/*  </span>*/}
+                            {/*</Button>*/}
+                            {/*<Button*/}
+                            {/*  tag={Link}*/}
+                            {/*  to={`/entity/measure/${otherEntity.id}/delete`}*/}
+                            {/*  color="danger"*/}
+                            {/*  className="float-right"*/}
+                            {/*  size="sm"*/}
+                            {/*>*/}
+                            {/*  <FontAwesomeIcon icon="trash" />{' '}*/}
+                            {/*  <span className="d-none d-md-inline">*/}
+                            {/*    <Translate contentKey="entity.action.delete">Delete</Translate>*/}
+                            {/*  </span>*/}
+                            {/*</Button>*/}
+                          </ListGroupItem>
+                        ))
+                      : null}
+                    <ListGroupItem>
+                      <AvField type="select" name="measures" helpMessage="MULTIPLE!" multiple>
+                        {measures
+                          ? measures.map(measure => (
+                              <option value={JSON.stringify(measure)} key={measure.id}>
+                                {measure.name}
+                              </option>
+                            ))
+                          : null}
+                      </AvField>
+                      <Button tag={Link} to="/entity/measure/new" color="primary" className="float-center" size="sm">
+                        <FontAwesomeIcon icon="plus" />
+                        <Translate contentKey="socioscopeApp.measure.home.createLabel">Create new Measure</Translate>
+                      </Button>
+                    </ListGroupItem>
+                  </ListGroup>
+                </AvGroup>
                 <Button tag={Link} id="cancel-save" to="/entity/data-set" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />
                   &nbsp;
@@ -275,8 +289,6 @@ const mapStateToProps = (storeState: IRootState) => ({
 const mapDispatchToProps = {
   getUsers,
   getEntity,
-  getDimensions,
-  getMeasures,
   addDimensions,
   addMeasures,
   getAllDimensions,

@@ -1,13 +1,19 @@
 package gr.ekke.socioscope.domain;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import javax.validation.constraints.*;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -39,6 +45,25 @@ public class Measure implements Serializable {
     private User creator;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    public Measure() {
+    }
+
+    public Measure(String id, @NotNull @Size(min = 3) String name, @NotNull @Size(min = 2) String unit, User creator) {
+        this.id = id;
+        this.name = name;
+        this.unit = unit;
+        this.creator = creator;
+    }
+
+    @JsonCreator
+    public static Measure create(String jsonString) throws JsonParseException, JsonMappingException, IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+        Measure measure = null;
+        measure = mapper.readValue(jsonString, Measure.class);
+        return measure;
+    }
+
     public String getId() {
         return id;
     }

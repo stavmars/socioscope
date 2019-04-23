@@ -45,6 +45,19 @@ public class Codelist implements Serializable {
     private List<Code> codes = new ArrayList<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+
+    public Codelist() {
+    }
+
+    public Codelist(String id, @NotNull String name, String description, Instant createdDate, User creator, List<Code> codes) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.createdDate = createdDate;
+        this.creator = creator;
+        this.codes = codes;
+    }
+
     public String getId() {
         return id;
     }

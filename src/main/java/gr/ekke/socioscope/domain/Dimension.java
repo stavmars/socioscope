@@ -1,13 +1,19 @@
 package gr.ekke.socioscope.domain;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import org.bson.json.JsonParseException;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import javax.validation.constraints.*;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -43,6 +49,26 @@ public class Dimension implements Serializable {
     private User creator;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    public Dimension() {
+    }
+
+    public Dimension(String id, @NotNull @Size(min = 3) String name, @NotNull @Size(min = 2) String type, Codelist codelist, User creator) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.codelist = codelist;
+        this.creator = creator;
+    }
+
+    @JsonCreator
+    public static Dimension create(String jsonString) throws JsonParseException, JsonMappingException, IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+        Dimension dimension = null;
+        dimension = mapper.readValue(jsonString, Dimension.class);
+        return dimension;
+    }
+
     public String getId() {
         return id;
     }
