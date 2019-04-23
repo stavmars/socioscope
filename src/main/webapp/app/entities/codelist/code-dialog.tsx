@@ -13,7 +13,7 @@ import update from 'immutability-helper';
 
 export interface ICodeDialogProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
-export class CodeDialogModal extends React.Component<ICodeDialogProps> {
+export class CodeDialog extends React.Component<ICodeDialogProps> {
   componentDidMount() {
     this.props.getEntity(this.props.codelistEntity.id);
     this.props.insertTable(this.props.codelistEntity.codes);
@@ -93,6 +93,7 @@ export class CodeDialogModal extends React.Component<ICodeDialogProps> {
                 <Col>{code.color}</Col>
                 <Col>
                   &nbsp;
+                  {/*tslint:disable-next-line:jsx-no-lambda*/}
                   <Button onClick={e => this.removeRow(e, i)} color="danger" size="sm">
                     <FontAwesomeIcon icon="trash" />
                   </Button>
@@ -173,4 +174,4 @@ type DispatchProps = typeof mapDispatchToProps;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(CodeDialogModal);
+)(CodeDialog);

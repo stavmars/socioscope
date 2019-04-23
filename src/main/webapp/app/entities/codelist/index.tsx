@@ -7,7 +7,7 @@ import Codelist from './codelist';
 import CodelistDetail from './codelist-detail';
 import CodelistUpdate from './codelist-update';
 import CodelistDeleteDialog from './codelist-delete-dialog';
-import CodeDialog from './code-dialog-modal';
+import CodeDialog from './code-dialog';
 
 const Routes = ({ match }) => (
   <>
