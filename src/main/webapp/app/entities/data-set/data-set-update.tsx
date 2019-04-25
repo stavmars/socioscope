@@ -8,15 +8,14 @@ import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
 
-import { IUser } from 'app/shared/model/user.model';
 import { getUsers } from 'app/modules/administration/user-management/user-management.reducer';
-import { getEntity, updateEntity, createEntity, reset, addDimensions, addMeasures } from './data-set.reducer';
+import { getEntity, updateEntity, createEntity, reset, removeDimension, removeMeasure } from './data-set.reducer';
 import { getEntities as getAllDimensions } from 'app/entities/dimension/dimension.reducer';
 import { getEntities as getAllMeasures } from 'app/entities/measure/measure.reducer';
-import { IDataSet } from 'app/shared/model/data-set.model';
 // tslint:disable-next-line:no-unused-variable
 import { convertDateTimeFromServer } from 'app/shared/util/date-utils';
-import { mapIdList } from 'app/shared/util/entity-utils';
+import update from 'immutability-helper';
+import codelist from 'app/entities/codelist/codelist';
 
 export interface IDataSetUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
@@ -56,11 +55,13 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
     if (errors.length === 0) {
       const { dataSetEntity } = this.props;
 
-      const entity = {
-        ...dataSetEntity,
-        ...values
-      };
-      console.log(values);
+      const entity = update(dataSetEntity, {
+        name: { $set: values.name },
+        type: { $set: values.type },
+        comment: { $set: values.comment },
+        dimensions: { $push: values.dimensions },
+        measures: { $push: values.measures }
+      });
 
       if (this.state.isNew) {
         this.props.createEntity(entity);
@@ -68,6 +69,14 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
         this.props.updateEntity(entity);
       }
     }
+  };
+
+  removeDimension = (dataSetId, dimensionId) => {
+    this.props.removeDimension(dataSetId, dimensionId);
+  };
+
+  removeMeasure = (dataSetId, measureId) => {
+    this.props.removeMeasure(dataSetId, measureId);
   };
 
   handleClose = () => {
@@ -157,43 +166,35 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                   <ListGroup>
                     {dataSetEntity.dimensions
                       ? dataSetEntity.dimensions.map(otherEntity => (
-                          <ListGroupItem>
+                          <ListGroupItem key={otherEntity.id}>
                             {otherEntity.name}
-                            <Button
-                              tag={Link}
-                              to={`/entity/dimension/${otherEntity.id}/edit`}
-                              color="primary"
-                              className="float-right"
-                              size="sm"
-                            >
-                              <FontAwesomeIcon icon="pencil-alt" />{' '}
-                              <span className="d-none d-md-inline">
-                                <Translate contentKey="entity.action.edit">Edit</Translate>
-                              </span>
-                            </Button>
-                            <Button
-                              tag={Link}
-                              to={`/entity/dimension/${otherEntity.id}/delete`}
-                              color="danger"
-                              className="float-right"
-                              size="sm"
-                            >
-                              <FontAwesomeIcon icon="trash" />{' '}
-                              <span className="d-none d-md-inline">
-                                <Translate contentKey="entity.action.delete">Delete</Translate>
-                              </span>
-                            </Button>
+                            {/*<Button onClick={this.removeDimension(dataSetEntity.id, otherEntity.id)} color="danger" className="float-center" size="sm">*/}
+                            {/*  <FontAwesomeIcon icon="trash" />*/}
+                            {/*</Button>*/}
                           </ListGroupItem>
                         ))
                       : null}
                     <ListGroupItem>
                       <AvField type="select" name="dimensions" helpMessage="MULTIPLE!" multiple>
                         {dimensions
-                          ? dimensions.map(dimension => (
-                              <option value={JSON.stringify(dimension)} key={dimension.id}>
-                                {dimension.name}
-                              </option>
-                            ))
+                          ? dimensions.map(dimension => {
+                              let valid = true;
+                              if (dataSetEntity.dimensions) {
+                                for (const val of dataSetEntity.dimensions) {
+                                  if (val.id === dimension.id) {
+                                    valid = false;
+                                    break;
+                                  }
+                                }
+                              }
+                              if (valid) {
+                                return (
+                                  <option value={JSON.stringify(dimension)} key={dimension.id}>
+                                    {dimension.name}
+                                  </option>
+                                );
+                              }
+                            })
                           : null}
                       </AvField>
                       <Button tag={Link} to="/entity/dimension/new" color="primary" className="float-center" size="sm">
@@ -208,31 +209,10 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                   <ListGroup>
                     {dataSetEntity.measures
                       ? dataSetEntity.measures.map(otherEntity => (
-                          <ListGroupItem>
+                          <ListGroupItem key={otherEntity.id}>
                             {otherEntity.name}
-                            {/*<Button*/}
-                            {/*  tag={Link}*/}
-                            {/*  to={`/entity/measure/${otherEntity.id}/edit`}*/}
-                            {/*  color="primary"*/}
-                            {/*  className="float-right"*/}
-                            {/*  size="sm"*/}
-                            {/*>*/}
-                            {/*  <FontAwesomeIcon icon="pencil-alt" />{' '}*/}
-                            {/*  <span className="d-none d-md-inline">*/}
-                            {/*    <Translate contentKey="entity.action.edit">Edit</Translate>*/}
-                            {/*  </span>*/}
-                            {/*</Button>*/}
-                            {/*<Button*/}
-                            {/*  tag={Link}*/}
-                            {/*  to={`/entity/measure/${otherEntity.id}/delete`}*/}
-                            {/*  color="danger"*/}
-                            {/*  className="float-right"*/}
-                            {/*  size="sm"*/}
-                            {/*>*/}
-                            {/*  <FontAwesomeIcon icon="trash" />{' '}*/}
-                            {/*  <span className="d-none d-md-inline">*/}
-                            {/*    <Translate contentKey="entity.action.delete">Delete</Translate>*/}
-                            {/*  </span>*/}
+                            {/*<Button onClick={this.removeMeasure(dataSetEntity.id, otherEntity.id)} color="danger" className="float-center" size="sm">*/}
+                            {/*  <FontAwesomeIcon icon="trash" />*/}
                             {/*</Button>*/}
                           </ListGroupItem>
                         ))
@@ -240,11 +220,24 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                     <ListGroupItem>
                       <AvField type="select" name="measures" helpMessage="MULTIPLE!" multiple>
                         {measures
-                          ? measures.map(measure => (
-                              <option value={JSON.stringify(measure)} key={measure.id}>
-                                {measure.name}
-                              </option>
-                            ))
+                          ? measures.map(measure => {
+                              let valid = true;
+                              if (dataSetEntity.measures) {
+                                for (const val of dataSetEntity.measures) {
+                                  if (val.id === measure.id) {
+                                    valid = false;
+                                    break;
+                                  }
+                                }
+                              }
+                              if (valid) {
+                                return (
+                                  <option value={JSON.stringify(measure)} key={measure.id}>
+                                    {measure.name}
+                                  </option>
+                                );
+                              }
+                            })
                           : null}
                       </AvField>
                       <Button tag={Link} to="/entity/measure/new" color="primary" className="float-center" size="sm">
@@ -289,10 +282,10 @@ const mapStateToProps = (storeState: IRootState) => ({
 const mapDispatchToProps = {
   getUsers,
   getEntity,
-  addDimensions,
-  addMeasures,
   getAllDimensions,
   getAllMeasures,
+  removeDimension,
+  removeMeasure,
   updateEntity,
   createEntity,
   reset

@@ -11,6 +11,7 @@ import { getEntity } from './data-set.reducer';
 import { IDataSet } from 'app/shared/model/data-set.model';
 // tslint:disable-next-line:no-unused-variable
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
+import { text } from '@fortawesome/fontawesome-svg-core';
 
 export interface IDataSetDetailProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
@@ -61,17 +62,11 @@ export class DataSetDetail extends React.Component<IDataSetDetailProps> {
             <dt>
               <Translate contentKey="socioscopeApp.dataSet.dimensions">Dimensions</Translate>
             </dt>
-            <dd>
-              {dataSetEntity.dimensions
-                ? dataSetEntity.dimensions.map(otherEntity => <dd key={otherEntity.id}>{otherEntity.name}</dd>)
-                : null}
-            </dd>
+            <dd>{dataSetEntity.dimensions ? dataSetEntity.dimensions.map(otherEntity => otherEntity.name + ' / ') : null}</dd>
             <dt>
               <Translate contentKey="socioscopeApp.dataSet.measures">Measures</Translate>
             </dt>
-            <dd>
-              {dataSetEntity.measures ? dataSetEntity.measures.map(otherEntity => <dd key={otherEntity.id}>{otherEntity.name}</dd>) : null}
-            </dd>
+            <dd>{dataSetEntity.measures ? dataSetEntity.measures.map(otherEntity => otherEntity.name + ' / ') : null}</dd>
           </dl>
           <Button tag={Link} to="/entity/data-set" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

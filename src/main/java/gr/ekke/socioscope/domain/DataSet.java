@@ -126,12 +126,7 @@ public class DataSet implements Serializable {
         return this;
     }
 
-    public DataSet addDimensions(Dimension dimension) {
-        this.dimensions.add(dimension);
-        return this;
-    }
-
-    public DataSet removeDimensions(Dimension dimension) {
+    public DataSet removeDimension(Dimension dimension) {
         this.dimensions.remove(dimension);
         return this;
     }
@@ -149,12 +144,7 @@ public class DataSet implements Serializable {
         return this;
     }
 
-    public DataSet addMeasures(Measure measure) {
-        this.measures.add(measure);
-        return this;
-    }
-
-    public DataSet removeMeasures(Measure measure) {
+    public DataSet removeMeasure(Measure measure) {
         this.measures.remove(measure);
         return this;
     }

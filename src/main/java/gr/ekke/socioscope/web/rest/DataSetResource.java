@@ -145,30 +145,50 @@ public class DataSetResource {
         log.debug("REST request to search DataSets for query {}", query);
         return dataSetService.search(query);
     }
-//
-//    /**
-//     * GET  /data-sets/dimensions/:id : get dimensions of the "id" dataSet.
-//     *
-//     * @param id the id of the dataSet to retrieve
-//     * @return the dimensions of the dataSet
-//     */
-//    @GetMapping("/data-sets/dimensions/{id}")
-//    @Timed
-//    public Set<Dimension> getDataSetDimensions(@PathVariable String id) {
-//        log.debug("REST request to get Dimensions of DataSet : {}", id);
-//        return (dataSetService.getAllDimensions(id));
-//    }
-//
-//    /**
-//     * GET  /data-sets/measures/:id : get measures of the "id" dataSet.
-//     *
-//     * @param id the id of the dataSet to retrieve
-//     * @return the measures of the dataSet
-//     */
-//    @GetMapping("/data-sets/measures/{id}")
-//    @Timed
-//    public Set<Measure> getDataSetMeasures(@PathVariable String id) {
-//        log.debug("REST request to get Measures of DataSet : {}", id);
-//        return (dataSetService.getAllMeasures(id));
-//    }
+
+    /**
+     * PUT  /data-sets/:dataSetId/:dimensionId : Remove a dimension from an existing dataSet.
+     *
+     * @param dataSetId the dataSet to update
+     * @param dimensionId the dimension to remove
+     * @return the ResponseEntity with status 200 (OK) and with body the updated dataSet,
+     * or with status 400 (Bad Request) if the dataSet is not valid,
+     * or with status 500 (Internal Server Error) if the dataSet couldn't be updated
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PutMapping("/data-sets/{dataSetId}/{dimensionId}")
+    @Timed
+    public ResponseEntity<DataSet> removeDimension(@PathVariable String dataSetId, @PathVariable String dimensionId) throws URISyntaxException {
+        log.debug("REST request to remove Dimension : {} from DataSet : {}", dataSetId, dimensionId);
+        DataSet result = dataSetService.removeDimension(dataSetId, dimensionId);
+        if (result == null) {
+            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
+        }
+        return ResponseEntity.ok()
+            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, dataSetId))
+            .body(result);
+    }
+
+    /**
+     * PUT  /data-sets/:dataSetId/:measureId : Remove a dimension from an existing dataSet.
+     *
+     * @param dataSetId the dataSet to update
+     * @param measureId the measure to remove
+     * @return the ResponseEntity with status 200 (OK) and with body the updated dataSet,
+     * or with status 400 (Bad Request) if the dataSet is not valid,
+     * or with status 500 (Internal Server Error) if the dataSet couldn't be updated
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PutMapping("/data-sets/{dataSetId}/{measureId}")
+    @Timed
+    public ResponseEntity<DataSet> removeMeasure(@PathVariable String dataSetId, @PathVariable String measureId) throws URISyntaxException {
+        log.debug("REST request to remove Measure : {} from DataSet : {}", dataSetId, measureId);
+        DataSet result = dataSetService.removeMeasure(dataSetId, measureId);
+        if (result == null) {
+            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
+        }
+        return ResponseEntity.ok()
+            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, dataSetId))
+            .body(result);
+    }
 }

@@ -126,66 +126,38 @@ public class DataSetService {
     }
 
     /**
-     * Get all dimensions of a dataSet by its id
+     * Remove one dimension dimensionId from dataSet with dataSetId
      *
-     * @param id the id of the entity
-     * @return the list of entities
+     * @param dimensionId the id of the dimension entity
+     * @param dataSetId the id of the dataSet entity
+     * @return the entity
      */
-    public Set<Dimension> getAllDimensions(String id) {
-        log.debug("Request to get all the Dimensions of DataSet : {}", id);
-        Optional<DataSet> dataSet = dataSetRepository.findById(id);
-        if (dataSet.isPresent()) {
-            return dataSet.get().getDimensions();
-        }
-        else {
+    public DataSet removeDimension(String dataSetId, String dimensionId) {
+        log.debug("Request to remove Dimension : {} from DataSet : {}", dimensionId, dataSetId);
+        Optional<DataSet> dataSet = dataSetRepository.findById(dataSetId);
+        Optional<Dimension> dimension = dimensionRepository.findById(dimensionId);
+
+        if (!dataSet.isPresent() || !dimension.isPresent()) {
             return null;
         }
+        return dataSet.get().removeDimension(dimension.get());
     }
 
     /**
-     * Add given dimension to the dataset by its id
+     * Remove one measure measureId from dataSet with dataSetId
      *
-     * @param id the if of the dataset
-     * @param dimension the given dimension
+     * @param measureId the id of the measure entity
+     * @param dataSetId the id of the dataSet entity
+     * @return the entity
      */
-    public void addDimension(String id, Dimension dimension) {
-        log.debug("Request to add Dimension : {} to DataSet : {}", dimension, id);
-        Optional<DataSet> dataSet = dataSetRepository.findById(id);
-        if (dataSet.isPresent()) {
-            dataSet.get().addDimensions(dimension);
-            dataSetRepository.save(dataSet.get());
-            dimensionRepository.save(dimension);
-        }
-    }
+    public DataSet removeMeasure(String dataSetId, String measureId) {
+        log.debug("Request to remove Measure : {} from DataSet : {}", measureId, dataSetId);
+        Optional<DataSet> dataSet = dataSetRepository.findById(dataSetId);
+        Optional<Measure> measure = measureRepository.findById(measureId);
 
-    /**
-     * Get all measures of a dataSet by its id
-     *
-     * @param id the id of the entity
-     * @return the list of entities
-     */
-    public Set<Measure> getAllMeasures(String id) {
-        log.debug("Request to get all the Measures of DataSet : {}", id);
-        Optional<DataSet> dataSet = dataSetRepository.findById(id);
-        if (dataSet.isPresent()) {
-            return dataSet.get().getMeasures();
+        if (!dataSet.isPresent() || !measure.isPresent()) {
+            return null;
         }
-        return null;
-    }
-
-    /**
-     * Add given measure to the dataset by its id
-     *
-     * @param id the if of the dataset
-     * @param measure the given measure
-     */
-    public void addMeasure(String id, Measure measure) {
-        log.debug("Request to add Measure : {} to DataSet : {}", measure, id);
-        Optional<DataSet> dataSet = dataSetRepository.findById(id);
-        if (dataSet.isPresent()) {
-            dataSet.get().addMeasures(measure);
-            dataSetRepository.save(dataSet.get());
-            measureRepository.save(measure);
-        }
+        return dataSet.get().removeMeasure(measure.get());
     }
 }
