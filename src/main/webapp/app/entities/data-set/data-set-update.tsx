@@ -55,17 +55,25 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
     if (errors.length === 0) {
       const { dataSetEntity } = this.props;
 
-      const entity = update(dataSetEntity, {
-        name: { $set: values.name },
-        type: { $set: values.type },
-        comment: { $set: values.comment },
-        dimensions: { $push: values.dimensions },
-        measures: { $push: values.measures }
-      });
+      let entity;
 
       if (this.state.isNew) {
+        entity = update(dataSetEntity, {
+          name: { $set: values.name },
+          type: { $set: values.type },
+          comment: { $set: values.comment },
+          dimensions: { $set: values.dimensions },
+          measures: { $set: values.measures }
+        });
         this.props.createEntity(entity);
       } else {
+        entity = update(dataSetEntity, {
+          name: { $set: values.name },
+          type: { $set: values.type },
+          comment: { $set: values.comment },
+          dimensions: { $push: values.dimensions },
+          measures: { $push: values.measures }
+        });
         this.props.updateEntity(entity);
       }
     }
