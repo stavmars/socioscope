@@ -1,6 +1,5 @@
 package gr.ekke.socioscope.service;
 
-import gr.ekke.socioscope.domain.DataSet;
 import gr.ekke.socioscope.domain.Measure;
 import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.MeasureRepository;
@@ -33,11 +32,14 @@ public class MeasureService {
 
     private final MeasureSearchRepository measureSearchRepository;
 
+    private final DataSetRepository dataSetRepository;
+
     private final UserRepository userRepository;
 
-    public MeasureService(MeasureRepository measureRepository, MeasureSearchRepository measureSearchRepository, UserRepository userRepository) {
+    public MeasureService(MeasureRepository measureRepository, MeasureSearchRepository measureSearchRepository, DataSetRepository dataSetRepository, UserRepository userRepository) {
         this.measureRepository = measureRepository;
         this.measureSearchRepository = measureSearchRepository;
+        this.dataSetRepository = dataSetRepository;
         this.userRepository = userRepository;
     }
 
@@ -97,10 +99,16 @@ public class MeasureService {
      *
      * @param id the id of the entity
      */
-    public void delete(String id) {
+    public boolean delete(String id) {
         log.debug("Request to delete Measure : {}", id);
-        measureRepository.deleteById(id);
-        measureSearchRepository.deleteById(id);
+        Optional<Measure> measure = measureRepository.findById(id);
+        if (measure.isPresent() && dataSetRepository.findAllByMeasuresContains(measure.get()).isEmpty()) {
+            measureRepository.deleteById(id);
+            measureSearchRepository.deleteById(id);
+            return true;
+        }
+        System.out.println("YPARXEI SE KAPOIO DATASET");
+        return false;
     }
 
     /**

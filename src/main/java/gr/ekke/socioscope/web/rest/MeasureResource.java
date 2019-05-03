@@ -116,8 +116,10 @@ public class MeasureResource {
     @Timed
     public ResponseEntity<Void> deleteMeasure(@PathVariable String id) {
         log.debug("REST request to delete Measure : {}", id);
-        measureService.delete(id);
-        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id)).build();
+        if (measureService.delete(id)) {
+            return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id)).build();
+        }
+        return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert(ENTITY_NAME, "dim_mes", id)).build();
     }
 
     /**

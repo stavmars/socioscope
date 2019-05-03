@@ -1,6 +1,5 @@
 package gr.ekke.socioscope.service;
 
-import gr.ekke.socioscope.domain.DataSet;
 import gr.ekke.socioscope.domain.Dimension;
 import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.DimensionRepository;
@@ -33,11 +32,14 @@ public class DimensionService {
 
     private final DimensionSearchRepository dimensionSearchRepository;
 
+    private final DataSetRepository dataSetRepository;
+
     private final UserRepository userRepository;
 
-    public DimensionService(DimensionRepository dimensionRepository, DimensionSearchRepository dimensionSearchRepository, UserRepository userRepository) {
+    public DimensionService(DimensionRepository dimensionRepository, DimensionSearchRepository dimensionSearchRepository, DataSetRepository dataSetRepository, UserRepository userRepository) {
         this.dimensionRepository = dimensionRepository;
         this.dimensionSearchRepository = dimensionSearchRepository;
+        this.dataSetRepository = dataSetRepository;
         this.userRepository = userRepository;
     }
 
@@ -97,10 +99,16 @@ public class DimensionService {
      *
      * @param id the id of the entity
      */
-    public void delete(String id) {
+    public boolean delete(String id) {
         log.debug("Request to delete Dimension : {}", id);
-        dimensionRepository.deleteById(id);
-        dimensionSearchRepository.deleteById(id);
+        Optional<Dimension> dimension = findOne(id);
+        if (dimension.isPresent() && dataSetRepository.findAllByDimensionsContains(dimension.get()).isEmpty()) {
+            dimensionRepository.delete(dimension.get());
+            dimensionSearchRepository.deleteById(id);
+            return true;
+        }
+        System.out.println("YPARXEI SE KAPOIO DATASET");
+        return false;
     }
 
     /**

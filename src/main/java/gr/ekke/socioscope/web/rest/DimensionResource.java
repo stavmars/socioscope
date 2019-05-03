@@ -116,8 +116,10 @@ public class DimensionResource {
     @Timed
     public ResponseEntity<Void> deleteDimension(@PathVariable String id) {
         log.debug("REST request to delete Dimension : {}", id);
-        dimensionService.delete(id);
-        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id)).build();
+        if (dimensionService.delete(id)) {
+            return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id)).build();
+        }
+        return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert(ENTITY_NAME, "dim_mes", id)).build();
     }
 
     /**
