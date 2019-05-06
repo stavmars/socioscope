@@ -176,9 +176,16 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                       ? dataSetEntity.dimensions.map(otherEntity => (
                           <ListGroupItem key={otherEntity.id}>
                             {otherEntity.name}
-                            {/*<Button onClick={this.removeDimension(dataSetEntity.id, otherEntity.id)} color="danger" className="float-center" size="sm">*/}
-                            {/*  <FontAwesomeIcon icon="trash" />*/}
-                            {/*</Button>*/}
+                            <Button
+                              onClick={() => {
+                                this.removeDimension(dataSetEntity.id, otherEntity.id);
+                              }}
+                              color="danger"
+                              className="float-center"
+                              size="sm"
+                            >
+                              <FontAwesomeIcon icon="trash" />
+                            </Button>
                           </ListGroupItem>
                         ))
                       : null}
@@ -219,9 +226,16 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                       ? dataSetEntity.measures.map(otherEntity => (
                           <ListGroupItem key={otherEntity.id}>
                             {otherEntity.name}
-                            {/*<Button onClick={this.removeMeasure(dataSetEntity.id, otherEntity.id)} color="danger" className="float-center" size="sm">*/}
-                            {/*  <FontAwesomeIcon icon="trash" />*/}
-                            {/*</Button>*/}
+                            <Button
+                              onClick={() => {
+                                this.removeMeasure(dataSetEntity.id, otherEntity.id);
+                              }}
+                              color="danger"
+                              className="float-center"
+                              size="sm"
+                            >
+                              <FontAwesomeIcon icon="trash" />
+                            </Button>
                           </ListGroupItem>
                         ))
                       : null}

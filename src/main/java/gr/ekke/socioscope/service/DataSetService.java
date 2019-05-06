@@ -140,7 +140,8 @@ public class DataSetService {
         if (!dataSet.isPresent() || !dimension.isPresent()) {
             return null;
         }
-        return dataSet.get().removeDimension(dimension.get());
+        DataSet result = dataSetRepository.save(dataSet.get().removeDimension(dimension.get()));
+        return result;
     }
 
     /**
@@ -158,6 +159,7 @@ public class DataSetService {
         if (!dataSet.isPresent() || !measure.isPresent()) {
             return null;
         }
-        return dataSet.get().removeMeasure(measure.get());
+        DataSet result = dataSetRepository.save(dataSet.get().removeMeasure(measure.get()));
+        return result;
     }
 }

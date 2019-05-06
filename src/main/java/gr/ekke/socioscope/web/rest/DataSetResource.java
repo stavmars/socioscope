@@ -156,7 +156,7 @@ public class DataSetResource {
      * or with status 500 (Internal Server Error) if the dataSet couldn't be updated
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
-    @PutMapping("/data-sets/{dataSetId}/{dimensionId}")
+    @PutMapping("/data-sets/{dataSetId}/dimension/{dimensionId}")
     @Timed
     public ResponseEntity<DataSet> removeDimension(@PathVariable String dataSetId, @PathVariable String dimensionId) throws URISyntaxException {
         log.debug("REST request to remove Dimension : {} from DataSet : {}", dataSetId, dimensionId);
@@ -179,7 +179,7 @@ public class DataSetResource {
      * or with status 500 (Internal Server Error) if the dataSet couldn't be updated
      * @throws URISyntaxException if the Location URI syntax is incorrect
      */
-    @PutMapping("/data-sets/{dataSetId}/{measureId}")
+    @PutMapping("/data-sets/{dataSetId}/measure/{measureId}")
     @Timed
     public ResponseEntity<DataSet> removeMeasure(@PathVariable String dataSetId, @PathVariable String measureId) throws URISyntaxException {
         log.debug("REST request to remove Measure : {} from DataSet : {}", dataSetId, measureId);

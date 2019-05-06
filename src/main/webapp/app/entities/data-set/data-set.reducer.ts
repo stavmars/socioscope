@@ -157,7 +157,7 @@ export const updateEntity: ICrudPutAction<IDataSet> = entity => async dispatch =
 };
 
 export const removeDimension = (dataSetId, dimensionId) => async dispatch => {
-  const requestUrl = `${apiUrl}/${dataSetId}/${dimensionId}`;
+  const requestUrl = `${apiUrl}/${dataSetId}/dimension/${dimensionId}`;
   const result = await dispatch({
     type: ACTION_TYPES.REMOVE_DIMENSION,
     payload: axios.put(requestUrl)
@@ -166,7 +166,7 @@ export const removeDimension = (dataSetId, dimensionId) => async dispatch => {
 };
 
 export const removeMeasure = (dataSetId, measureId) => async dispatch => {
-  const requestUrl = `${apiUrl}/${dataSetId}/${measureId}`;
+  const requestUrl = `${apiUrl}/${dataSetId}/measure/${measureId}`;
   const result = await dispatch({
     type: ACTION_TYPES.REMOVE_MEASURE,
     payload: axios.put(requestUrl)
