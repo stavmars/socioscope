@@ -158,15 +158,9 @@ public class DataSetResource {
      */
     @PutMapping("/data-sets/{dataSetId}/dimension/{dimensionId}")
     @Timed
-    public ResponseEntity<DataSet> removeDimension(@PathVariable String dataSetId, @PathVariable String dimensionId) throws URISyntaxException {
+    public DataSet removeDimension(@PathVariable String dataSetId, @PathVariable String dimensionId) throws URISyntaxException {
         log.debug("REST request to remove Dimension : {} from DataSet : {}", dataSetId, dimensionId);
-        DataSet result = dataSetService.removeDimension(dataSetId, dimensionId);
-        if (result == null) {
-            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
-        }
-        return ResponseEntity.ok()
-            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, dataSetId))
-            .body(result);
+        return dataSetService.removeDimension(dataSetId, dimensionId);
     }
 
     /**
@@ -181,14 +175,8 @@ public class DataSetResource {
      */
     @PutMapping("/data-sets/{dataSetId}/measure/{measureId}")
     @Timed
-    public ResponseEntity<DataSet> removeMeasure(@PathVariable String dataSetId, @PathVariable String measureId) throws URISyntaxException {
+    public DataSet removeMeasure(@PathVariable String dataSetId, @PathVariable String measureId) throws URISyntaxException {
         log.debug("REST request to remove Measure : {} from DataSet : {}", dataSetId, measureId);
-        DataSet result = dataSetService.removeMeasure(dataSetId, measureId);
-        if (result == null) {
-            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
-        }
-        return ResponseEntity.ok()
-            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, dataSetId))
-            .body(result);
+        return dataSetService.removeMeasure(dataSetId, measureId);
     }
 }

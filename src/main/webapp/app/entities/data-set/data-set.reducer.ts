@@ -91,12 +91,18 @@ export default (state: DataSetState = initialState, action): DataSetState => {
       };
     case SUCCESS(ACTION_TYPES.CREATE_DATASET):
     case SUCCESS(ACTION_TYPES.UPDATE_DATASET):
+      return {
+        ...state,
+        updating: false,
+        updateSuccess: true,
+        entity: action.payload.data
+      };
     case SUCCESS(ACTION_TYPES.REMOVE_DIMENSION):
     case SUCCESS(ACTION_TYPES.REMOVE_MEASURE):
       return {
         ...state,
         updating: false,
-        updateSuccess: true,
+        updateSuccess: false,
         entity: action.payload.data
       };
     case SUCCESS(ACTION_TYPES.DELETE_DATASET):
