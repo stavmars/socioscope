@@ -2,7 +2,7 @@ export interface ICode {
   id?: string;
   name?: string;
   description?: string;
-  parentCodeId?: string;
+  parentId?: string;
   order?: number;
   color?: string;
 }

@@ -1,0 +1,24 @@
+{
+  "socioscopeApp": {
+    "measure": {
+      "home": {
+        "title": "Measures",
+        "createLabel": "Δημιουργήστε ένα νέο Measure",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Measure",
+        "search": "Αναζήτηση για Measure"
+      },
+      "created": "Ένα νέο Measure έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Measure έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Measure έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Measure {{ id }};"
+      },
+      "detail": {
+        "title": "Measure"
+      },
+      "name": "Name",
+      "unit": "Unit",
+      "creator": "Creator"
+    }
+  }
+}

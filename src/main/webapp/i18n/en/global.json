@@ -8,6 +8,9 @@
       "entities": {
         "main": "Entities",
         "codelist": "Codelist",
+        "dataSet": "Data Set",
+        "dimension": "Dimension",
+        "measure": "Measure",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

@@ -13,6 +13,7 @@ export const ACTION_TYPES = {
   CREATE_CODELIST: 'codelist/CREATE_CODELIST',
   UPDATE_CODELIST: 'codelist/UPDATE_CODELIST',
   DELETE_CODELIST: 'codelist/DELETE_CODELIST',
+  ADD_CODES: 'codelist/ADD_CDOES',
   RESET: 'codelist/RESET'
 };
 
@@ -44,6 +45,7 @@ export default (state: CodelistState = initialState, action): CodelistState => {
     case REQUEST(ACTION_TYPES.CREATE_CODELIST):
     case REQUEST(ACTION_TYPES.UPDATE_CODELIST):
     case REQUEST(ACTION_TYPES.DELETE_CODELIST):
+    case REQUEST(ACTION_TYPES.ADD_CODES):
       return {
         ...state,
         errorMessage: null,
@@ -56,6 +58,7 @@ export default (state: CodelistState = initialState, action): CodelistState => {
     case FAILURE(ACTION_TYPES.CREATE_CODELIST):
     case FAILURE(ACTION_TYPES.UPDATE_CODELIST):
     case FAILURE(ACTION_TYPES.DELETE_CODELIST):
+    case FAILURE(ACTION_TYPES.ADD_CODES):
       return {
         ...state,
         loading: false,
@@ -84,6 +87,7 @@ export default (state: CodelistState = initialState, action): CodelistState => {
       };
     case SUCCESS(ACTION_TYPES.CREATE_CODELIST):
     case SUCCESS(ACTION_TYPES.UPDATE_CODELIST):
+    case SUCCESS(ACTION_TYPES.ADD_CODES):
       return {
         ...state,
         updating: false,
@@ -147,6 +151,14 @@ export const updateEntity: ICrudPutAction<ICodelist> = entity => async dispatch 
     payload: axios.put(apiUrl, cleanEntity(entity))
   });
   dispatch(getEntities());
+  return result;
+};
+
+export const addCodes: ICrudPutAction<ICodelist> = entity => async dispatch => {
+  const result = await dispatch({
+    type: ACTION_TYPES.ADD_CODES,
+    payload: axios.put(apiUrl, cleanEntity(entity))
+  });
   return result;
 };
 

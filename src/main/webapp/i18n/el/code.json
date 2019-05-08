@@ -5,6 +5,8 @@
         "title": "Codes",
         "createLabel": "Δημιουργήστε ένα νέο Code",
         "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Code",
+        "editLabel": "Επεξεργαστείτε τα Codes",
+        "saveRow": "Αποθήκευση γραμμής",
         "search": "Αναζήτηση για Code"
       },
       "created": "Ένα νέο Code έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
@@ -16,12 +18,13 @@
       "detail": {
         "title": "Code"
       },
-      "codelistId": "Codelist Id",
+      "id": "Id",
       "name": "Name",
       "description": "Description",
-      "parentCodeId": "Parent Code Id",
+      "parentId": "Parent Id",
       "order": "Order",
-      "color": "Color"
+      "color": "Color",
+      "addCode": "Προσθήκη Code"
     }
   }
 }

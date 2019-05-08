@@ -41,6 +41,28 @@ export class CodelistDetail extends React.Component<ICodelistDetailProps> {
             </dt>
             <dd>{codelistEntity.description}</dd>
             <dt>
+              <span id="codes">
+                <Translate contentKey="socioscopeApp.codelist.codes">Codes</Translate>
+              </span>
+            </dt>
+            {codelistEntity.codes
+              ? codelistEntity.codes.map((code, i) => (
+                  <dd key={`code-${i}`}>
+                    {code.id +
+                      ' | ' +
+                      code.name +
+                      ' | ' +
+                      code.description +
+                      ' | ' +
+                      code.parentId +
+                      ' | ' +
+                      code.order +
+                      ' | ' +
+                      code.color}
+                  </dd>
+                ))
+              : null}
+            <dt>
               <span id="createdDate">
                 <Translate contentKey="socioscopeApp.codelist.createdDate">Created Date</Translate>
               </span>

@@ -1,0 +1,25 @@
+{
+  "socioscopeApp": {
+    "dimension": {
+      "home": {
+        "title": "Dimensions",
+        "createLabel": "Δημιουργήστε ένα νέο Dimension",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Dimension",
+        "search": "Αναζήτηση για Dimension"
+      },
+      "created": "Ένα νέο Dimension έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Dimension έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Dimension έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Dimension {{ id }};"
+      },
+      "detail": {
+        "title": "Dimension"
+      },
+      "name": "Name",
+      "type": "Type",
+      "codelist": "Codelist",
+      "creator": "Creator"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "socioscopeApp": {
+    "dataSet": {
+      "home": {
+        "title": "Data Sets",
+        "createLabel": "Create a new Data Set",
+        "createOrEditLabel": "Create or edit a Data Set",
+        "search": "Search for Data Set"
+      },
+      "created": "A new Data Set is created with identifier {{ param }}",
+      "updated": "A Data Set is updated with identifier {{ param }}",
+      "deleted": "A Data Set is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Data Set {{ id }}?"
+      },
+      "detail": {
+        "title": "Data Set"
+      },
+      "name": "Name",
+      "type": "Type",
+      "comment": "Comment",
+      "createdDate": "Created Date",
+      "dimensions": "Dimensions",
+      "measures": "Measures",
+      "creator": "Creator"
+    }
+  }
+}

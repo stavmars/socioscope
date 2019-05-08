@@ -17,6 +17,19 @@ import codelist, {
   CodelistState
 } from 'app/entities/codelist/codelist.reducer';
 // prettier-ignore
+// prettier-ignore
+import dataSet, {
+  DataSetState
+} from 'app/entities/data-set/data-set.reducer';
+// prettier-ignore
+import dimension, {
+  DimensionState
+} from 'app/entities/dimension/dimension.reducer';
+// prettier-ignore
+import measure, {
+  MeasureState
+} from 'app/entities/measure/measure.reducer';
+import codes, { CodeState } from 'app/entities/codelist/code-dialog.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -31,6 +44,10 @@ export interface IRootState {
   readonly password: PasswordState;
   readonly settings: SettingsState;
   readonly codelist: CodelistState;
+  readonly dataSet: DataSetState;
+  readonly dimension: DimensionState;
+  readonly measure: MeasureState;
+  readonly codes: CodeState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -47,6 +64,10 @@ const rootReducer = combineReducers<IRootState>({
   password,
   settings,
   codelist,
+  dataSet,
+  dimension,
+  measure,
+  codes,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });
