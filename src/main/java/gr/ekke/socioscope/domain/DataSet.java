@@ -43,12 +43,12 @@ public class DataSet implements Serializable {
     @CreatedDate
     private Instant createdDate;
 
+    @DBRef
     @Field("dimensions")
-    @JsonIgnoreProperties("dataset")
     private Set<Dimension> dimensions = new HashSet<>();
 
+    @DBRef
     @Field("measures")
-    @JsonIgnoreProperties("dataset")
     private Set<Measure> measures = new HashSet<>();
 
     @DBRef
