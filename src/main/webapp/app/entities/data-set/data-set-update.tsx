@@ -16,6 +16,7 @@ import { getEntities as getAllMeasures } from 'app/entities/measure/measure.redu
 import { convertDateTimeFromServer } from 'app/shared/util/date-utils';
 import update from 'immutability-helper';
 import codelist from 'app/entities/codelist/codelist';
+// tslint:disable:jsx-no-lambda
 
 export interface IDataSetUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
@@ -62,8 +63,8 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
           name: { $set: values.name },
           type: { $set: values.type },
           comment: { $set: values.comment },
-          dimensions: { $set: values.dimensions },
-          measures: { $set: values.measures }
+          dimensions: { $set: values.new_dimensions },
+          measures: { $set: values.new_measures }
         });
         this.props.createEntity(entity);
       } else {
@@ -71,8 +72,8 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
           name: { $set: values.name },
           type: { $set: values.type },
           comment: { $set: values.comment },
-          dimensions: { $push: values.dimensions },
-          measures: { $push: values.measures }
+          dimensions: { $push: values.new_dimensions },
+          measures: { $push: values.new_measures }
         });
         this.props.updateEntity(entity);
       }
@@ -190,7 +191,7 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                         ))
                       : null}
                     <ListGroupItem>
-                      <AvField type="select" name="dimensions" helpMessage="MULTIPLE!" multiple>
+                      <AvField type="select" name="new_dimensions" helpMessage="MULTIPLE!" multiple>
                         {dimensions
                           ? dimensions.map(dimension => {
                               let valid = true;
@@ -240,7 +241,7 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                         ))
                       : null}
                     <ListGroupItem>
-                      <AvField type="select" name="measures" helpMessage="MULTIPLE!" multiple>
+                      <AvField type="select" name="new_measures" helpMessage="MULTIPLE!" multiple>
                         {measures
                           ? measures.map(measure => {
                               let valid = true;
