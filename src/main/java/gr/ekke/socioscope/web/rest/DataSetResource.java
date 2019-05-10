@@ -20,6 +20,7 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -60,7 +61,7 @@ public class DataSetResource {
         }
         DataSet result = dataSetService.save(dataSet);
         return ResponseEntity.created(new URI("/api/data-sets/" + result.getId()))
-            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
+            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId()))
             .body(result);
     }
 
@@ -82,7 +83,7 @@ public class DataSetResource {
         }
         DataSet result = dataSetService.save(dataSet);
         return ResponseEntity.ok()
-            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, dataSet.getId().toString()))
+            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, dataSet.getId()))
             .body(result);
     }
 
@@ -112,7 +113,6 @@ public class DataSetResource {
         if (dataSet.isPresent() && dataSet.get().getCreator() != null &&
             !SecurityUtils.getCurrentUserLogin().get().equals("admin") &&
             !dataSet.get().getCreator().getLogin().equals(SecurityUtils.getCurrentUserLogin().orElse(""))){
-            System.out.println("POUTSA");
             return new ResponseEntity<>("error.http.403", HttpStatus.FORBIDDEN);
         }
         return ResponseUtil.wrapOrNotFound(dataSet);
@@ -178,5 +178,25 @@ public class DataSetResource {
     public DataSet removeMeasure(@PathVariable String dataSetId, @PathVariable String measureId) throws URISyntaxException {
         log.debug("REST request to remove Measure : {} from DataSet : {}", dataSetId, measureId);
         return dataSetService.removeMeasure(dataSetId, measureId);
+    }
+
+    /**
+     * POST  /data-sets/list : Import a list of dataSets.
+     *
+     * @param dataSets the dataSets to import
+     * @return the ResponseEntity with status 201 (Created) and with body the new dataSets, or with status 403 (FORBIDDEN) if not a user or admin.
+     */
+    @PostMapping("/data-sets/list")
+    @Timed
+    public ResponseEntity<?> importDataSets(@Valid @RequestBody DataSet[] dataSets) {
+        log.debug("REST request to import {} DataSets", dataSets.length);
+        if (!SecurityUtils.getCurrentUserLogin().isPresent()) {
+            return new ResponseEntity<>("error.http.403", HttpStatus.FORBIDDEN);
+        }
+        List<DataSet> result = new ArrayList<>();
+        for (DataSet dataset: dataSets) {
+            result.add(dataSetService.save(dataset));
+        }
+        return ResponseEntity.ok().body(result);
     }
 }
