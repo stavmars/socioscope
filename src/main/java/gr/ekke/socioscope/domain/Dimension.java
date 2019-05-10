@@ -1,7 +1,6 @@
 package gr.ekke.socioscope.domain;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -11,11 +10,12 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
 import org.bson.json.JsonParseException;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Field;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DBRef;
-import javax.validation.constraints.*;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Objects;
@@ -38,7 +38,6 @@ public class Dimension implements Serializable {
     private String name;
 
     @NotNull
-    @Size(min = 2)
     @Field("type")
     private String type;
 
@@ -50,7 +49,7 @@ public class Dimension implements Serializable {
     @Field("creator")
     @JsonIgnoreProperties("")
     private User creator;
-
+    
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Dimension() {
     }
@@ -87,17 +86,21 @@ public class Dimension implements Serializable {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Dimension name(String name) {
         this.name = name;
         return this;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getType() {
         return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public Dimension type(String type) {
@@ -105,12 +108,12 @@ public class Dimension implements Serializable {
         return this;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public Codelist getCodelist() {
         return codelist;
+    }
+
+    public void setCodelist(Codelist codelist) {
+        this.codelist = codelist;
     }
 
     public Dimension codelist(Codelist codelist) {
@@ -118,21 +121,17 @@ public class Dimension implements Serializable {
         return this;
     }
 
-    public void setCodelist(Codelist codelist) {
-        this.codelist = codelist;
-    }
-
     public User getCreator() {
         return creator;
+    }
+
+    public void setCreator(User user) {
+        this.creator = user;
     }
 
     public Dimension creator(User user) {
         this.creator = user;
         return this;
-    }
-
-    public void setCreator(User user) {
-        this.creator = user;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
