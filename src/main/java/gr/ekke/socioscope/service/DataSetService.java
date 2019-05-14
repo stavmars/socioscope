@@ -56,10 +56,26 @@ public class DataSetService {
      * @param dataSet the entity to save
      * @return the persisted entity
      */
-    public DataSet save(DataSet dataSet) {
-        log.debug("Request to save DataSet : {}", dataSet);
+    public DataSet create(DataSet dataSet) {
+        log.debug("Request to create DataSet : {}", dataSet);
+        if (dataSet.getId() != null && dataSetRepository.existsById(dataSet.getId())) {
+            return null;
+        }
         String login = SecurityUtils.getCurrentUserLogin().get();
         dataSet.setCreator(userRepository.findOneByLogin(login).get());
+        DataSet result = dataSetRepository.save(dataSet);
+        dataSetSearchRepository.save(result);
+        return result;
+    }
+
+    /**
+     * Update a dataSet.
+     *
+     * @param dataSet the entity to update
+     * @return the persisted entity
+     */
+    public DataSet update(DataSet dataSet) {
+        log.debug("Request to update DataSet : {}", dataSet);
         DataSet result = dataSetRepository.save(dataSet);
         dataSetSearchRepository.save(result);
         return result;

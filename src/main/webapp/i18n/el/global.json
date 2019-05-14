@@ -3,10 +3,10 @@
     "title": "Socioscope",
     "browsehappy": "Χρησιμοποείται ένα <strong>απαρχαιωμένο</strong> πρόγραμμα περιήγησης. Παρακαλώ <a href=\"http://browsehappy.com/?locale=en\">αναβαθμίστε το πρόγραμμα περιήγησης σας</a> να βελτιωθεί η εμπειρία σας.",
     "menu": {
-      "home": "Home",
+      "home": "Αρχική",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
-        "main": "Entities",
+        "main": "Οντότητες",
         "codelist": "Codelist",
         "dataSet": "Data Set",
         "dimension": "Dimension",

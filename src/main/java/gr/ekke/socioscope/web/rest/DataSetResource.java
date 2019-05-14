@@ -55,11 +55,11 @@ public class DataSetResource {
     @PostMapping("/data-sets")
     @Timed
     public ResponseEntity<DataSet> createDataSet(@Valid @RequestBody DataSet dataSet) throws URISyntaxException {
-        log.debug("REST request to save DataSet : {}", dataSet);
-        if (dataSet.getId() != null) {
-            throw new BadRequestAlertException("A new dataSet cannot already have an ID", ENTITY_NAME, "idexists");
+        log.debug("REST request to create DataSet : {}", dataSet);
+        DataSet result = dataSetService.create(dataSet);
+        if (result == null) {
+            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
-        DataSet result = dataSetService.save(dataSet);
         return ResponseEntity.created(new URI("/api/data-sets/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId()))
             .body(result);
@@ -81,7 +81,7 @@ public class DataSetResource {
         if (dataSet.getId() == null) {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
-        DataSet result = dataSetService.save(dataSet);
+        DataSet result = dataSetService.update(dataSet);
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, dataSet.getId()))
             .body(result);
@@ -195,7 +195,7 @@ public class DataSetResource {
         }
         List<DataSet> result = new ArrayList<>();
         for (DataSet dataset: dataSets) {
-            result.add(dataSetService.save(dataset));
+            result.add(dataSetService.create(dataset));
         }
         return ResponseEntity.ok().body(result);
     }

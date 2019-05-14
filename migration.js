@@ -38,8 +38,8 @@ const migrateData = async () => {
     for (const key in oldSocioscope.data) {
       if (oldSocioscope.data.hasOwnProperty(key)) {
         dataSets.push({
-          'name' : oldSocioscope.data[key].id,
-          'comment' : oldSocioscope.data[key].label,
+          'id' : oldSocioscope.data[key].id,
+          'name' : oldSocioscope.data[key].label,
           'type' : oldSocioscope.data[key].type
         })
       }
