@@ -179,24 +179,4 @@ public class DataSetResource {
         log.debug("REST request to remove Measure : {} from DataSet : {}", dataSetId, measureId);
         return dataSetService.removeMeasure(dataSetId, measureId);
     }
-
-    /**
-     * POST  /data-sets/list : Import a list of dataSets.
-     *
-     * @param dataSets the dataSets to import
-     * @return the ResponseEntity with status 201 (Created) and with body the new dataSets, or with status 403 (FORBIDDEN) if not a user or admin.
-     */
-    @PostMapping("/data-sets/list")
-    @Timed
-    public ResponseEntity<?> importDataSets(@Valid @RequestBody DataSet[] dataSets) {
-        log.debug("REST request to import {} DataSets", dataSets.length);
-        if (!SecurityUtils.getCurrentUserLogin().isPresent()) {
-            return new ResponseEntity<>("error.http.403", HttpStatus.FORBIDDEN);
-        }
-        List<DataSet> result = new ArrayList<>();
-        for (DataSet dataset: dataSets) {
-            result.add(dataSetService.create(dataset));
-        }
-        return ResponseEntity.ok().body(result);
-    }
 }

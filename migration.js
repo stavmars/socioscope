@@ -9,43 +9,45 @@ const getData = async () => {
   }
 };
 
-const postData = async dataSets => {
-  try {
-    axios.post('http://localhost:9000/api/authenticate', {
-      'username' : "admin",
-      'password' : "admin",
-      'rememberMe' : false
-    }).then(async response => {
-      if (response.headers) {
-        return await axios.post('http://localhost:9000/api/data-sets/list', dataSets, {
-          headers: { 'Authorization': response.headers.authorization}
-        });
-      }
-    });
-  }
-  catch (e) {
-    console.error(e);
-  }
-};
-
 const migrateData = async () => {
   const oldSocioscope = await getData();
   
   if (oldSocioscope.data) {
     console.log(`Got ${Object.entries(oldSocioscope.data).length} DataSets`);
 
-    let dataSets = [];
-    for (const key in oldSocioscope.data) {
-      if (oldSocioscope.data.hasOwnProperty(key)) {
-        dataSets.push({
-          'id' : oldSocioscope.data[key].id,
-          'name' : oldSocioscope.data[key].label,
-          'type' : oldSocioscope.data[key].type
-        })
-      }
+    try {
+      axios.post('http://localhost:9000/api/authenticate', {
+        'username' : "admin",
+        'password' : "admin",
+        'rememberMe' : false
+      }).then(async response => {
+        if (response.headers) {
+          for (const key in oldSocioscope.data) {
+            if (oldSocioscope.data.hasOwnProperty(key)) {
+              try {
+                return await axios.post('http://localhost:9000/api/data-sets',
+                  {
+                    'id' : oldSocioscope.data[key].id,
+                    'name' : oldSocioscope.data[key].label,
+                    'type' : oldSocioscope.data[key].type
+                  },
+                  {
+                    headers: { 'Authorization': response.headers.authorization}
+                  });
+              }
+              catch (e) {
+                console.error(e);
+              }
+            }
+          }
+        }
+      });
     }
-    postData(dataSets);
+    catch (e) {
+      console.error(e);
+    }
   }
 };
 
 migrateData();
+
