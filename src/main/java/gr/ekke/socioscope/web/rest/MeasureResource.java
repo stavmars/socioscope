@@ -48,11 +48,11 @@ public class MeasureResource {
     @PostMapping("/measures")
     @Timed
     public ResponseEntity<Measure> createMeasure(@Valid @RequestBody Measure measure) throws URISyntaxException {
-        log.debug("REST request to save Measure : {}", measure);
-        if (measure.getId() != null) {
-            throw new BadRequestAlertException("A new measure cannot already have an ID", ENTITY_NAME, "idexists");
+        log.debug("REST request to create Measure : {}", measure);
+        Measure result = measureService.create(measure);
+        if (result == null) {
+            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
-        Measure result = measureService.save(measure);
         return ResponseEntity.created(new URI("/api/measures/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
             .body(result);
@@ -74,7 +74,7 @@ public class MeasureResource {
         if (measure.getId() == null) {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
-        Measure result = measureService.save(measure);
+        Measure result = measureService.update(measure);
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, measure.getId().toString()))
             .body(result);

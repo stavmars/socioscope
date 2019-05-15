@@ -44,15 +44,31 @@ public class DimensionService {
     }
 
     /**
-     * Save a dimension.
+     * Create a dimension.
      *
-     * @param dimension the entity to save
+     * @param dimension the entity to create
      * @return the persisted entity
      */
-    public Dimension save(Dimension dimension) {
-        log.debug("Request to save Dimension : {}", dimension);
+    public Dimension create(Dimension dimension) {
+        log.debug("Request to create Dimension : {}", dimension);
+        if (dimension.getId() != null && dimensionRepository.existsById(dimension.getId())) {
+            return null;
+        }
         String login = SecurityUtils.getCurrentUserLogin().get();
         dimension.setCreator(userRepository.findOneByLogin(login).get());
+        Dimension result = dimensionRepository.save(dimension);
+        dimensionSearchRepository.save(result);
+        return result;
+    }
+
+    /**
+     * Update a dimension.
+     *
+     * @param dimension the entity to update
+     * @return the persisted entity
+     */
+    public Dimension update(Dimension dimension) {
+        log.debug("Request to update Dimension : {}", dimension);
         Dimension result = dimensionRepository.save(dimension);
         dimensionSearchRepository.save(result);
         return result;
@@ -67,11 +83,9 @@ public class DimensionService {
         log.debug("Request to get all Dimensions");
         List<Dimension> all = dimensionRepository.findAll();
         if (SecurityUtils.isCurrentUserInRole(ADMIN)) {
-            System.out.println("EIMAI O ADMIN");
             return all;
         }
         else {
-            System.out.println("EIMAI ENAS USERS");
             List<Dimension> result = new ArrayList<>();
             for (Dimension dimension: all) {
                 if (!dimension.getCreator().getLogin().equals("admin")) {
@@ -107,7 +121,6 @@ public class DimensionService {
             dimensionSearchRepository.deleteById(id);
             return true;
         }
-        System.out.println("YPARXEI SE KAPOIO DATASET");
         return false;
     }
 

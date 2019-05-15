@@ -90,11 +90,9 @@ public class DataSetService {
         log.debug("Request to get all DataSets");
         List<DataSet> all = dataSetRepository.findAll();
         if (SecurityUtils.isCurrentUserInRole(ADMIN)) {
-            System.out.println("EIMAI O ADMIN");
             return all;
         }
         else {
-            System.out.println("EIMAI ENAS USER");
             List<DataSet> result = new ArrayList<>();
             for (DataSet dataset: all) {
                 if (!dataset.getCreator().getLogin().equals("admin")) {
