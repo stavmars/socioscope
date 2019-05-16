@@ -219,7 +219,7 @@ public class MeasureResourceIntTest {
     @Test
     public void updateMeasure() throws Exception {
         // Initialize the database
-        measureService.save(measure);
+        measureService.create(measure);
         // As the test used the service layer, reset the Elasticsearch mock repository
         reset(mockMeasureSearchRepository);
 
@@ -270,7 +270,7 @@ public class MeasureResourceIntTest {
     @Test
     public void deleteMeasure() throws Exception {
         // Initialize the database
-        measureService.save(measure);
+        measureService.create(measure);
 
         int databaseSizeBeforeDelete = measureRepository.findAll().size();
 
@@ -290,7 +290,7 @@ public class MeasureResourceIntTest {
     @Test
     public void searchMeasure() throws Exception {
         // Initialize the database
-        measureService.save(measure);
+        measureService.create(measure);
         when(mockMeasureSearchRepository.search(queryStringQuery("id:" + measure.getId())))
             .thenReturn(Collections.singletonList(measure));
         // Search the measure

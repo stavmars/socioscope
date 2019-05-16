@@ -44,15 +44,31 @@ public class MeasureService {
     }
 
     /**
-     * Save a measure.
+     * Create a measure.
      *
-     * @param measure the entity to save
+     * @param measure the entity to create
      * @return the persisted entity
      */
-    public Measure save(Measure measure) {
-        log.debug("Request to save Measure : {}", measure);
+    public Measure create(Measure measure) {
+        log.debug("Request to create Measure : {}", measure);
+        if (measure.getId() != null && measureRepository.existsById(measure.getId())) {
+            return null;
+        }
         String login = SecurityUtils.getCurrentUserLogin().get();
         measure.setCreator(userRepository.findOneByLogin(login).get());
+        Measure result = measureRepository.save(measure);
+        measureSearchRepository.save(result);
+        return result;
+    }
+
+    /**
+     * Update a measure.
+     *
+     * @param measure the entity to update
+     * @return the persisted entity
+     */
+    public Measure update(Measure measure) {
+        log.debug("Request to update Measure : {}", measure);
         Measure result = measureRepository.save(measure);
         measureSearchRepository.save(result);
         return result;
@@ -67,11 +83,9 @@ public class MeasureService {
         log.debug("Request to get all Measures");
         List<Measure> all = measureRepository.findAll();
         if (SecurityUtils.isCurrentUserInRole(ADMIN)) {
-            System.out.println("EIMAI O ADMIN");
             return all;
         }
         else {
-            System.out.println("EIMAI ENAS USER");
             List<Measure> result = new ArrayList<>();
             for (Measure measure: all) {
                 if (!measure.getCreator().getLogin().equals("admin")) {
@@ -107,7 +121,6 @@ public class MeasureService {
             measureSearchRepository.deleteById(id);
             return true;
         }
-        System.out.println("YPARXEI SE KAPOIO DATASET");
         return false;
     }
 

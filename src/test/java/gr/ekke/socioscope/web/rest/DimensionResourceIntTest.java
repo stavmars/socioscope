@@ -219,7 +219,7 @@ public class DimensionResourceIntTest {
     @Test
     public void updateDimension() throws Exception {
         // Initialize the database
-        dimensionService.save(dimension);
+        dimensionService.create(dimension);
         // As the test used the service layer, reset the Elasticsearch mock repository
         reset(mockDimensionSearchRepository);
 
@@ -270,7 +270,7 @@ public class DimensionResourceIntTest {
     @Test
     public void deleteDimension() throws Exception {
         // Initialize the database
-        dimensionService.save(dimension);
+        dimensionService.create(dimension);
 
         int databaseSizeBeforeDelete = dimensionRepository.findAll().size();
 
@@ -290,7 +290,7 @@ public class DimensionResourceIntTest {
     @Test
     public void searchDimension() throws Exception {
         // Initialize the database
-        dimensionService.save(dimension);
+        dimensionService.create(dimension);
         when(mockDimensionSearchRepository.search(queryStringQuery("id:" + dimension.getId())))
             .thenReturn(Collections.singletonList(dimension));
         // Search the dimension

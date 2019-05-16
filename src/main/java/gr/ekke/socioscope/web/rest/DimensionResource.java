@@ -48,11 +48,11 @@ public class DimensionResource {
     @PostMapping("/dimensions")
     @Timed
     public ResponseEntity<Dimension> createDimension(@Valid @RequestBody Dimension dimension) throws URISyntaxException {
-        log.debug("REST request to save Dimension : {}", dimension);
-        if (dimension.getId() != null) {
-            throw new BadRequestAlertException("A new dimension cannot already have an ID", ENTITY_NAME, "idexists");
+        log.debug("REST request to create Dimension : {}", dimension);
+        Dimension result = dimensionService.create(dimension);
+        if (result == null) {
+            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
-        Dimension result = dimensionService.save(dimension);
         return ResponseEntity.created(new URI("/api/dimensions/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
             .body(result);
@@ -74,7 +74,7 @@ public class DimensionResource {
         if (dimension.getId() == null) {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
-        Dimension result = dimensionService.save(dimension);
+        Dimension result = dimensionService.update(dimension);
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, dimension.getId().toString()))
             .body(result);

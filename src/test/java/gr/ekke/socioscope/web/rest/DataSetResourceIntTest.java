@@ -226,7 +226,7 @@ public class DataSetResourceIntTest {
     @Test
     public void updateDataSet() throws Exception {
         // Initialize the database
-        dataSetService.save(dataSet);
+        dataSetService.create(dataSet);
         // As the test used the service layer, reset the Elasticsearch mock repository
         reset(mockDataSetSearchRepository);
 
@@ -279,7 +279,7 @@ public class DataSetResourceIntTest {
     @Test
     public void deleteDataSet() throws Exception {
         // Initialize the database
-        dataSetService.save(dataSet);
+        dataSetService.create(dataSet);
 
         int databaseSizeBeforeDelete = dataSetRepository.findAll().size();
 
@@ -299,7 +299,7 @@ public class DataSetResourceIntTest {
     @Test
     public void searchDataSet() throws Exception {
         // Initialize the database
-        dataSetService.save(dataSet);
+        dataSetService.create(dataSet);
         when(mockDataSetSearchRepository.search(queryStringQuery("id:" + dataSet.getId())))
             .thenReturn(Collections.singletonList(dataSet));
         // Search the dataSet

@@ -20,6 +20,7 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -54,13 +55,13 @@ public class DataSetResource {
     @PostMapping("/data-sets")
     @Timed
     public ResponseEntity<DataSet> createDataSet(@Valid @RequestBody DataSet dataSet) throws URISyntaxException {
-        log.debug("REST request to save DataSet : {}", dataSet);
-        if (dataSet.getId() != null) {
-            throw new BadRequestAlertException("A new dataSet cannot already have an ID", ENTITY_NAME, "idexists");
+        log.debug("REST request to create DataSet : {}", dataSet);
+        DataSet result = dataSetService.create(dataSet);
+        if (result == null) {
+            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
-        DataSet result = dataSetService.save(dataSet);
         return ResponseEntity.created(new URI("/api/data-sets/" + result.getId()))
-            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
+            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId()))
             .body(result);
     }
 
@@ -80,9 +81,9 @@ public class DataSetResource {
         if (dataSet.getId() == null) {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
-        DataSet result = dataSetService.save(dataSet);
+        DataSet result = dataSetService.update(dataSet);
         return ResponseEntity.ok()
-            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, dataSet.getId().toString()))
+            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, dataSet.getId()))
             .body(result);
     }
 
@@ -112,7 +113,6 @@ public class DataSetResource {
         if (dataSet.isPresent() && dataSet.get().getCreator() != null &&
             !SecurityUtils.getCurrentUserLogin().get().equals("admin") &&
             !dataSet.get().getCreator().getLogin().equals(SecurityUtils.getCurrentUserLogin().orElse(""))){
-            System.out.println("POUTSA");
             return new ResponseEntity<>("error.http.403", HttpStatus.FORBIDDEN);
         }
         return ResponseUtil.wrapOrNotFound(dataSet);

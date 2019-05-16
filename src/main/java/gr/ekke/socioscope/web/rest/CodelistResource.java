@@ -80,7 +80,6 @@ public class CodelistResource {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
         Optional<Codelist> updatedCodeList = codelistService.updateCodelist(codelist);
-        System.out.println("PSOLIII "+updatedCodeList.toString());
         return ResponseUtil.wrapOrNotFound(updatedCodeList, HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, codelist.getId()));
     }
 
