@@ -1,18 +1,3 @@
-entity Codelist {
-	name String required,
-	description String,
-	createdDate Instant
-}
-
-relationship ManyToOne {
-	Codelist{creator(login)} to User
-}
-
-paginate Codelist with pagination
-
-
-service Codelist with serviceClass
-
 entity DataSet {
     name String required minlength(3),
     type String required minlength(2),

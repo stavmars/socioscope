@@ -42,23 +42,18 @@ public class Dimension implements Serializable {
     private String type;
 
     @DBRef
-    @Field("codelist")
-    private Codelist codelist = new Codelist();
-
-    @DBRef
     @Field("creator")
     @JsonIgnoreProperties("")
     private User creator;
-    
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Dimension() {
     }
 
-    public Dimension(String id, @NotNull @Size(min = 3) String name, @NotNull @Size(min = 2) String type, Codelist codelist, User creator) {
+    public Dimension(String id, @NotNull @Size(min = 3) String name, @NotNull @Size(min = 2) String type, User creator) {
         this.id = id;
         this.name = name;
         this.type = type;
-        this.codelist = codelist;
         this.creator = creator;
     }
 
@@ -105,19 +100,6 @@ public class Dimension implements Serializable {
 
     public Dimension type(String type) {
         this.type = type;
-        return this;
-    }
-
-    public Codelist getCodelist() {
-        return codelist;
-    }
-
-    public void setCodelist(Codelist codelist) {
-        this.codelist = codelist;
-    }
-
-    public Dimension codelist(Codelist codelist) {
-        this.codelist = codelist;
         return this;
     }
 

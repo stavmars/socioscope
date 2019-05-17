@@ -18,7 +18,6 @@
       },
       "name": "Name",
       "type": "Type",
-      "codelist": "Codelist",
       "creator": "Creator"
     }
   }

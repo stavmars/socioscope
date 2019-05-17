@@ -6,9 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 /**
  * An Observation.
@@ -29,7 +27,7 @@ public class Observation implements Serializable {
     private Set<DimensionValue> dimensions = new HashSet<>();
 
     @Field("measures")
-    private Set<MeasureValue> measures = new HashSet<>();
+    private Map<String, Double> measures = new HashMap<>();
 
     public String getId() {
         return id;
@@ -55,11 +53,11 @@ public class Observation implements Serializable {
         this.dimensions = dimensions;
     }
 
-    public Set<MeasureValue> getMeasures() {
+    public Map<String, Double> getMeasures() {
         return measures;
     }
 
-    public void setMeasures(Set<MeasureValue> measures) {
+    public void setMeasures(Map<String, Double> measures) {
         this.measures = measures;
     }
 

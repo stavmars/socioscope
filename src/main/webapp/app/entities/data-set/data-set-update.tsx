@@ -15,7 +15,6 @@ import { getEntities as getAllMeasures } from 'app/entities/measure/measure.redu
 // tslint:disable-next-line:no-unused-variable
 import { convertDateTimeFromServer } from 'app/shared/util/date-utils';
 import update from 'immutability-helper';
-import codelist from 'app/entities/codelist/codelist';
 // tslint:disable:jsx-no-lambda
 
 export interface IDataSetUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}

@@ -4,7 +4,6 @@ import { Switch } from 'react-router-dom';
 // tslint:disable-next-line:no-unused-variable
 import ErrorBoundaryRoute from 'app/shared/error/error-boundary-route';
 
-import Codelist from './codelist';
 import DataSet from './data-set';
 import Dimension from './dimension';
 import Measure from './measure';
@@ -14,7 +13,6 @@ const Routes = ({ match }) => (
   <div>
     <Switch>
       {/* prettier-ignore */}
-      <ErrorBoundaryRoute path={`${match.url}/codelist`} component={Codelist} />
       <ErrorBoundaryRoute path={`${match.url}/data-set`} component={DataSet} />
       <ErrorBoundaryRoute path={`${match.url}/dimension`} component={Dimension} />
       <ErrorBoundaryRoute path={`${match.url}/measure`} component={Measure} />
