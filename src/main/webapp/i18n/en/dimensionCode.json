@@ -1,0 +1,28 @@
+{
+  "socioscopeApp": {
+    "dimensionCode": {
+      "home": {
+        "title": "Dimension Codes",
+        "createLabel": "Create a new Dimension Code",
+        "createOrEditLabel": "Create or edit a Dimension Code",
+        "search": "Search for Dimension Code"
+      },
+      "created": "A new Dimension Code is created with identifier {{ param }}",
+      "updated": "A Dimension Code is updated with identifier {{ param }}",
+      "deleted": "A Dimension Code is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Dimension Code {{ id }}?"
+      },
+      "detail": {
+        "title": "Dimension Code"
+      },
+      "dimensionId": "Dimension Id",
+      "notation": "Notation",
+      "name": "Name",
+      "description": "Description",
+      "parentId": "Parent Id",
+      "order": "Order",
+      "color": "Color"
+    }
+  }
+}

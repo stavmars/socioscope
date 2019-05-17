@@ -1,0 +1,28 @@
+{
+  "socioscopeApp": {
+    "dimensionCode": {
+      "home": {
+        "title": "Dimension Codes",
+        "createLabel": "Δημιουργήστε ένα νέο Dimension Code",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Dimension Code",
+        "search": "Αναζήτηση για Dimension Code"
+      },
+      "created": "Ένα νέο Dimension Code έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Dimension Code έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Dimension Code έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Dimension Code {{ id }};"
+      },
+      "detail": {
+        "title": "Dimension Code"
+      },
+      "dimensionId": "Dimension Id",
+      "notation": "Notation",
+      "name": "Name",
+      "description": "Description",
+      "parentId": "Parent Id",
+      "order": "Order",
+      "color": "Color"
+    }
+  }
+}

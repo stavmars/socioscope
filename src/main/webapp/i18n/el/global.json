@@ -10,6 +10,7 @@
         "dataSet": "Data Set",
         "dimension": "Dimension",
         "measure": "Measure",
+        "dimensionCode": "Dimension Code",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

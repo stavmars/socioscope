@@ -18,6 +18,16 @@ entity Measure {
     unit String required minlength(2)
 }
 
+entity DimensionCode {
+    dimensionId String required,
+    notation String required,
+    name String required minlength(3),
+    description String,
+    parentId String,
+    order Integer,
+    color String
+}
+
 service Measure with serviceClass
 
 relationship OneToMany {
