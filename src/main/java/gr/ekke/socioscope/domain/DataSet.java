@@ -12,6 +12,7 @@ import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import java.util.Objects;
 
@@ -27,10 +28,9 @@ public class DataSet implements Serializable {
     @Id
     private String id;
 
-    @NotNull
-    @Size(min = 3)
+    @Size(min = 1)
     @Field("name")
-    private String name;
+    private Map<String, @NotBlank String> name;
 
     @NotNull
     @Size(min = 2)
@@ -38,7 +38,7 @@ public class DataSet implements Serializable {
     private String type;
 
     @Field("comment")
-    private String comment;
+    private Map<String, String> comment;
 
     @CreatedDate
     private Instant createdDate;
@@ -65,16 +65,16 @@ public class DataSet implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
+    public Map<String, String> getName() {
         return name;
     }
 
-    public DataSet name(String name) {
+    public DataSet name(Map<String, String> name) {
         this.name = name;
         return this;
     }
 
-    public void setName(String name) {
+    public void setName(Map<String, String> name) {
         this.name = name;
     }
 
@@ -91,16 +91,16 @@ public class DataSet implements Serializable {
         this.type = type;
     }
 
-    public String getComment() {
+    public Map<String, String> getComment() {
         return comment;
     }
 
-    public DataSet comment(String comment) {
+    public DataSet comment(Map<String, String> comment) {
         this.comment = comment;
         return this;
     }
 
-    public void setComment(String comment) {
+    public void setComment(Map<String, String> comment) {
         this.comment = comment;
     }
 

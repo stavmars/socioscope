@@ -22,7 +22,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 import static gr.ekke.socioscope.web.rest.TestUtil.createFormattingConversionService;
@@ -96,10 +98,14 @@ public class DataSetResourceIntTest {
      * if they test an entity which requires the current entity.
      */
     public static DataSet createEntity() {
+        Map<String, String> name = new HashMap<>();
+        name.put(DEFAULT_NAME, DEFAULT_NAME);
+        Map<String, String> comment = new HashMap<>();
+        comment.put(DEFAULT_COMMENT, DEFAULT_COMMENT);
         DataSet dataSet = new DataSet()
-            .name(DEFAULT_NAME)
+            .name(name)
             .type(DEFAULT_TYPE)
-            .comment(DEFAULT_COMMENT);
+            .comment(comment);
         return dataSet;
     }
 
@@ -232,12 +238,16 @@ public class DataSetResourceIntTest {
 
         int databaseSizeBeforeUpdate = dataSetRepository.findAll().size();
 
+        Map<String, String> name = new HashMap<>();
+        name.put(UPDATED_NAME, UPDATED_NAME);
+        Map<String, String> comment = new HashMap<>();
+        comment.put(UPDATED_COMMENT, UPDATED_COMMENT);
         // Update the dataSet
         DataSet updatedDataSet = dataSetRepository.findById(dataSet.getId()).get();
         updatedDataSet
-            .name(UPDATED_NAME)
+            .name(name)
             .type(UPDATED_TYPE)
-            .comment(UPDATED_COMMENT);
+            .comment(comment);
 
         restDataSetMockMvc.perform(put("/api/data-sets")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
