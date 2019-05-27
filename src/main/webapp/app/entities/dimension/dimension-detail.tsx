@@ -15,12 +15,16 @@ import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 export interface IDimensionDetailProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
 export class DimensionDetail extends React.Component<IDimensionDetailProps> {
+  componentWillMount() {
+    this.props.getEntity(this.props.match.params.id);
+  }
+
   componentDidMount() {
     this.props.getEntity(this.props.match.params.id);
   }
 
   render() {
-    const { dimensionEntity } = this.props;
+    const { dimensionEntity, currentLocale } = this.props;
     return (
       <Row>
         <Col md="8">
@@ -33,7 +37,7 @@ export class DimensionDetail extends React.Component<IDimensionDetailProps> {
                 <Translate contentKey="socioscopeApp.dimension.name">Name</Translate>
               </span>
             </dt>
-            <dd>{dimensionEntity.name}</dd>
+            <dd>{currentLocale === 'el' ? dimensionEntity.name.el : dimensionEntity.name.en}</dd>
             <dt>
               <span id="type">
                 <Translate contentKey="socioscopeApp.dimension.type">Type</Translate>
@@ -64,8 +68,9 @@ export class DimensionDetail extends React.Component<IDimensionDetailProps> {
   }
 }
 
-const mapStateToProps = ({ dimension }: IRootState) => ({
-  dimensionEntity: dimension.entity
+const mapStateToProps = (storeState: IRootState) => ({
+  dimensionEntity: storeState.dimension.entity,
+  currentLocale: storeState.locale.currentLocale
 });
 
 const mapDispatchToProps = { getEntity };

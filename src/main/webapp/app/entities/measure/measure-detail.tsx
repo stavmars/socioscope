@@ -15,12 +15,16 @@ import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 export interface IMeasureDetailProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
 export class MeasureDetail extends React.Component<IMeasureDetailProps> {
+  componentWillMount() {
+    this.props.getEntity(this.props.match.params.id);
+  }
+
   componentDidMount() {
     this.props.getEntity(this.props.match.params.id);
   }
 
   render() {
-    const { measureEntity } = this.props;
+    const { measureEntity, currentLocale } = this.props;
     return (
       <Row>
         <Col md="8">
@@ -33,7 +37,7 @@ export class MeasureDetail extends React.Component<IMeasureDetailProps> {
                 <Translate contentKey="socioscopeApp.measure.name">Name</Translate>
               </span>
             </dt>
-            <dd>{measureEntity.name}</dd>
+            <dd>{currentLocale === 'el' ? measureEntity.name.el : measureEntity.name.en}</dd>
             <dt>
               <span id="unit">
                 <Translate contentKey="socioscopeApp.measure.unit">Unit</Translate>
@@ -64,8 +68,9 @@ export class MeasureDetail extends React.Component<IMeasureDetailProps> {
   }
 }
 
-const mapStateToProps = ({ measure }: IRootState) => ({
-  measureEntity: measure.entity
+const mapStateToProps = (storeState: IRootState) => ({
+  measureEntity: storeState.measure.entity,
+  currentLocale: storeState.locale.currentLocale
 });
 
 const mapDispatchToProps = { getEntity };

@@ -3,11 +3,16 @@ import { IMeasure } from 'app/shared/model//measure.model';
 import { IUser } from 'app/shared/model/user.model';
 import { Moment } from 'moment';
 
+interface ILang {
+  el?: string;
+  en?: string;
+}
+
 export interface IDataSet {
   id?: string;
-  name?: string;
+  name?: ILang;
   type?: string;
-  comment?: string;
+  comment?: ILang;
   createdDate?: Moment;
   dimensions?: IDimension[];
   measures?: IMeasure[];

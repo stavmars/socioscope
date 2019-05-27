@@ -71,7 +71,7 @@ export class MeasureUpdate extends React.Component<IMeasureUpdateProps, IMeasure
   };
 
   render() {
-    const { measureEntity, users, loading, updating } = this.props;
+    const { measureEntity, users, loading, updating, currentLocale } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -102,9 +102,20 @@ export class MeasureUpdate extends React.Component<IMeasureUpdateProps, IMeasure
                     <Translate contentKey="socioscopeApp.measure.name">Name</Translate>
                   </Label>
                   <AvField
-                    id="measure-name"
+                    id="measure-name-el"
                     type="text"
-                    name="name"
+                    name="name.el"
+                    helpMessage="Ελληνικά"
+                    validate={{
+                      required: { value: true, errorMessage: translate('entity.validation.required') },
+                      minLength: { value: 3, errorMessage: translate('entity.validation.minlength', { min: 3 }) }
+                    }}
+                  />
+                  <AvField
+                    id="measure-name-en"
+                    type="text"
+                    name="name.en"
+                    helpMessage="English"
                     validate={{
                       required: { value: true, errorMessage: translate('entity.validation.required') },
                       minLength: { value: 3, errorMessage: translate('entity.validation.minlength', { min: 3 }) }
@@ -153,7 +164,8 @@ const mapStateToProps = (storeState: IRootState) => ({
   measureEntity: storeState.measure.entity,
   loading: storeState.measure.loading,
   updating: storeState.measure.updating,
-  updateSuccess: storeState.measure.updateSuccess
+  updateSuccess: storeState.measure.updateSuccess,
+  currentLocale: storeState.locale.currentLocale
 });
 
 const mapDispatchToProps = {

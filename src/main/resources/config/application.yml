@@ -49,8 +49,6 @@ spring:
             enabled: false
     thymeleaf:
         mode: HTML
-    jackson:
-        serialization: false
 
 server:
     servlet:

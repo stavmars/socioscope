@@ -44,7 +44,7 @@ export class Measure extends React.Component<IMeasureProps, IMeasureState> {
   handleSearch = event => this.setState({ search: event.target.value });
 
   render() {
-    const { measureList, match } = this.props;
+    const { measureList, currentLocale, match } = this.props;
     return (
       <div>
         <h2 id="measure-heading">
@@ -105,7 +105,7 @@ export class Measure extends React.Component<IMeasureProps, IMeasureState> {
                       {measure.id}
                     </Button>
                   </td>
-                  <td>{measure.name}</td>
+                  <td>{currentLocale === 'el' ? measure.name.el : measure.name.en}</td>
                   <td>{measure.unit}</td>
                   <td>{measure.creator ? measure.creator.login : ''}</td>
                   <td className="text-right">
@@ -140,8 +140,9 @@ export class Measure extends React.Component<IMeasureProps, IMeasureState> {
   }
 }
 
-const mapStateToProps = ({ measure }: IRootState) => ({
-  measureList: measure.entities
+const mapStateToProps = (storeState: IRootState) => ({
+  measureList: storeState.measure.entities,
+  currentLocale: storeState.locale.currentLocale
 });
 
 const mapDispatchToProps = {

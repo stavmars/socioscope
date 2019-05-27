@@ -44,7 +44,7 @@ export class Dimension extends React.Component<IDimensionProps, IDimensionState>
   handleSearch = event => this.setState({ search: event.target.value });
 
   render() {
-    const { dimensionList, match } = this.props;
+    const { dimensionList, locale, match } = this.props;
     return (
       <div>
         <h2 id="dimension-heading">
@@ -105,7 +105,7 @@ export class Dimension extends React.Component<IDimensionProps, IDimensionState>
                       {dimension.id}
                     </Button>
                   </td>
-                  <td>{dimension.name}</td>
+                  <td>{locale.currentLocale === 'el' ? dimension.name.el : dimension.name.en}</td>
                   <td>{dimension.type}</td>
                   <td>{dimension.creator ? dimension.creator.login : ''}</td>
                   <td className="text-right">
@@ -140,8 +140,9 @@ export class Dimension extends React.Component<IDimensionProps, IDimensionState>
   }
 }
 
-const mapStateToProps = ({ dimension }: IRootState) => ({
-  dimensionList: dimension.entities
+const mapStateToProps = (storeState: IRootState) => ({
+  dimensionList: storeState.dimension.entities,
+  locale: storeState.locale
 });
 
 const mapDispatchToProps = {

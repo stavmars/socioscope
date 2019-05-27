@@ -16,12 +16,16 @@ import { text } from '@fortawesome/fontawesome-svg-core';
 export interface IDataSetDetailProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
 export class DataSetDetail extends React.Component<IDataSetDetailProps> {
+  componentWillMount() {
+    this.props.getEntity(this.props.match.params.id);
+  }
+
   componentDidMount() {
     this.props.getEntity(this.props.match.params.id);
   }
 
   render() {
-    const { dataSetEntity } = this.props;
+    const { dataSetEntity, currentLocale } = this.props;
     return (
       <Row>
         <Col md="8">
@@ -34,7 +38,7 @@ export class DataSetDetail extends React.Component<IDataSetDetailProps> {
                 <Translate contentKey="socioscopeApp.dataSet.name">Name</Translate>
               </span>
             </dt>
-            <dd>{dataSetEntity.name}</dd>
+            <dd>{currentLocale === 'el' ? dataSetEntity.name.el : dataSetEntity.name.en}</dd>
             <dt>
               <span id="type">
                 <Translate contentKey="socioscopeApp.dataSet.type">Type</Translate>
@@ -46,7 +50,7 @@ export class DataSetDetail extends React.Component<IDataSetDetailProps> {
                 <Translate contentKey="socioscopeApp.dataSet.comment">Comment</Translate>
               </span>
             </dt>
-            <dd>{dataSetEntity.comment}</dd>
+            <dd>{currentLocale === 'el' ? dataSetEntity.comment.el : dataSetEntity.comment.en}</dd>
             <dt>
               <span id="createdDate">
                 <Translate contentKey="socioscopeApp.dataSet.createdDate">Created Date</Translate>
@@ -62,11 +66,19 @@ export class DataSetDetail extends React.Component<IDataSetDetailProps> {
             <dt>
               <Translate contentKey="socioscopeApp.dataSet.dimensions">Dimensions</Translate>
             </dt>
-            <dd>{dataSetEntity.dimensions ? dataSetEntity.dimensions.map(otherEntity => otherEntity.name + ' / ') : null}</dd>
+            <dd>
+              {dataSetEntity.dimensions
+                ? dataSetEntity.dimensions.map(otherEntity => (currentLocale === 'el' ? otherEntity.name.el : otherEntity.name.en + ' / '))
+                : null}
+            </dd>
             <dt>
               <Translate contentKey="socioscopeApp.dataSet.measures">Measures</Translate>
             </dt>
-            <dd>{dataSetEntity.measures ? dataSetEntity.measures.map(otherEntity => otherEntity.name + ' / ') : null}</dd>
+            <dd>
+              {dataSetEntity.measures
+                ? dataSetEntity.measures.map(otherEntity => (currentLocale === 'el' ? otherEntity.name.el : otherEntity.name.en + ' / '))
+                : null}
+            </dd>
           </dl>
           <Button tag={Link} to="/entity/data-set" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}
@@ -87,8 +99,9 @@ export class DataSetDetail extends React.Component<IDataSetDetailProps> {
   }
 }
 
-const mapStateToProps = ({ dataSet }: IRootState) => ({
-  dataSetEntity: dataSet.entity
+const mapStateToProps = (storeState: IRootState) => ({
+  dataSetEntity: storeState.dataSet.entity,
+  currentLocale: storeState.locale.currentLocale
 });
 
 const mapDispatchToProps = { getEntity };
