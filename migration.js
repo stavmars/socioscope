@@ -19,7 +19,7 @@ const migrateData = async () => {
 
     try {
       // Log in as the admin to the new socioscope site.
-      axios.post('http://localhost:9000/api/authenticate', {
+      axios.post('http://localhost:8080/api/authenticate', {
         'username' : "admin",
         'password' : "admin",
         'rememberMe' : false
@@ -34,7 +34,7 @@ const migrateData = async () => {
                 for (const key in greekData.data.dimensions) {
                   // Add each new dimension to the database.
                   try {
-                    await axios.post('http://localhost:9000/api/dimensions',
+                    await axios.post('http://localhost:8080/api/dimensions',
                       {
                         'id' : greekData.data.dimensions[key].id,
                         'name' : {
@@ -54,7 +54,7 @@ const migrateData = async () => {
                 for (const key in greekData.data.measures) {
                   // Add each new measure to the database.
                   try {
-                    await axios.post('http://localhost:9000/api/measures',
+                    await axios.post('http://localhost:8080/api/measures',
                       {
                         'id' : greekData.data.measures[key].id,
                         'name' : {
@@ -73,7 +73,7 @@ const migrateData = async () => {
                 }
                 // Finally add the DataSet to the database.
                 try {
-                  await axios.post('http://localhost:9000/api/data-sets',
+                  await axios.post('http://localhost:8080/api/data-sets',
                     {
                       'id' : greekData.data.id,
                       'name' : {
