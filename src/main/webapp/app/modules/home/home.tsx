@@ -20,47 +20,13 @@ export class Home extends React.Component<IHomeProp> {
     const { account } = this.props;
     return (
       <Row>
-        <Col md="9">
-          <h2>
-            <Translate contentKey="home.title">Welcome to Socioscope!</Translate>
-          </h2>
+        <Col>
+          <h2>Ανοικτά Κοινωνικά Δεδομένα</h2>
           <p className="lead">
-            <Translate contentKey="home.subtitle">This is your homepage</Translate>
+            Το socioscope είναι μια πλατφόρμα οπτικοποίησης κοινωνικών και πολιτικών δεδομένων. Εξερευνήστε τις θεματικές και διαμορφώστε τα
+            δικά σας διαγράμματα, πίνακες και χάρτες.
           </p>
-          {account && account.login ? (
-            <div>
-              <Alert color="success">
-                <Translate contentKey="home.logged.message" interpolate={{ username: account.login }}>
-                  You are logged in as user {account.login}.
-                </Translate>
-              </Alert>
-            </div>
-          ) : (
-            <div>
-              <Alert color="warning">
-                <Translate contentKey="global.messages.info.authenticated.prefix">If you want to </Translate>
-                <Link to="/login" className="alert-link">
-                  <Translate contentKey="global.messages.info.authenticated.link"> sign in</Translate>
-                </Link>
-                <Translate contentKey="global.messages.info.authenticated.suffix">
-                  , you can try the default accounts:
-                  <br />- Administrator (login=&quot;admin&quot; and password=&quot;admin&quot;)
-                  <br />- User (login=&quot;user&quot; and password=&quot;user&quot;).
-                </Translate>
-              </Alert>
-
-              <Alert color="warning">
-                <Translate contentKey="global.messages.info.register.noaccount">You do not have an account yet?</Translate>
-                &nbsp;
-                <Link to="/register" className="alert-link">
-                  <Translate contentKey="global.messages.info.register.link">Register a new account</Translate>
-                </Link>
-              </Alert>
-            </div>
-          )}
-        </Col>
-        <Col md="3" className="pad">
-          {/*<span className="hipster rounded" />*/}
+          <h3>ΕΞΕΡΕΥΝΗΣΤΕ</h3>
         </Col>
       </Row>
     );

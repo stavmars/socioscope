@@ -2,8 +2,45 @@
 @import 'bootstrap-variables';
 // Import Bootstrap source files from node_modules
 @import 'node_modules/bootstrap/scss/bootstrap';
+
+@font-face {
+  font-family: 'BPnoScript';
+  src: url('../static/Fonts/BPnoScript/BPnoScript.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BPnoScriptLight';
+  src: url('../static/Fonts/BPnoScript/BPnoScriptLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BPnoScriptBold';
+  font-weight: bold;
+  src: url('../static/Fonts/BPnoScript/BPnoScriptBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ProximaNovaBold';
+  src: url('../static/Fonts/ProximaNova/ProximaNovaBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ProximaNovaLight';
+  src: url('../static/Fonts/ProximaNova/ProximaNovaLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ProximaNovaRegular';
+  src: url('../static/Fonts/ProximaNova/ProximaNovaRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ProximaNovaSemibold';
+  src: url('../static/Fonts/ProximaNova/ProximaNovaSemibold.ttf') format('truetype');
+}
+
 body {
-  background: #96b5eb;
+  background-image: url('../static/images/Assets/Homepage-bg.jpg');
   margin: 0;
 }
 
@@ -31,7 +68,8 @@ a {
     overflow-x: hidden;
     padding: 1rem;
     .card {
-      padding: 1rem;
+      background-color: transparent;
+      border: none;
     }
     .view-routes {
       height: 100%;

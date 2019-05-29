@@ -8,3 +8,31 @@ Main page styles
   background: url('../../../static/images/logo-jhipster-react.svg') no-repeat center top;
   background-size: contain;
 }
+
+h2 {
+  font-family: 'BPnoScriptBold';
+  font-size: 80px;
+  color: #ffffff;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'BPnoScriptBold';
+  font-size: 30px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+
+p {
+  font-family: 'ProximaNovaSemibold';
+  font-weight: normal;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  height: 121px;
+  width: 672px;
+  margin: auto;
+  alignment: center;
+}
