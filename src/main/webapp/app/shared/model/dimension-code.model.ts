@@ -1,7 +1,4 @@
-interface ILang {
-  el?: string;
-  en?: string;
-}
+import { ILang } from 'app/shared/model/language.interface';
 
 export interface IDimensionCode {
   id?: string;
