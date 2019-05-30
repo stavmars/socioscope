@@ -50,9 +50,6 @@ public class MeasureResource {
     public ResponseEntity<Measure> createMeasure(@Valid @RequestBody Measure measure) throws URISyntaxException {
         log.debug("REST request to create Measure : {}", measure);
         Measure result = measureService.create(measure);
-        if (result == null) {
-            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
-        }
         return ResponseEntity.created(new URI("/api/measures/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
             .body(result);

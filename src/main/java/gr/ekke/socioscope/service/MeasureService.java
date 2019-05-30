@@ -3,12 +3,11 @@ package gr.ekke.socioscope.service;
 import gr.ekke.socioscope.domain.Measure;
 import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.MeasureRepository;
-import gr.ekke.socioscope.repository.UserRepository;
 import gr.ekke.socioscope.repository.search.MeasureSearchRepository;
 import gr.ekke.socioscope.security.SecurityUtils;
+import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 import static gr.ekke.socioscope.security.AuthoritiesConstants.ADMIN;
-import static org.elasticsearch.index.query.QueryBuilders.*;
+import static org.elasticsearch.index.query.QueryBuilders.queryStringQuery;
 
 /**
  * Service Implementation for managing Measure.
@@ -34,13 +33,13 @@ public class MeasureService {
 
     private final DataSetRepository dataSetRepository;
 
-    private final UserRepository userRepository;
+    private final UserService userService;
 
-    public MeasureService(MeasureRepository measureRepository, MeasureSearchRepository measureSearchRepository, DataSetRepository dataSetRepository, UserRepository userRepository) {
+    public MeasureService(MeasureRepository measureRepository, MeasureSearchRepository measureSearchRepository, DataSetRepository dataSetRepository, UserService userService) {
         this.measureRepository = measureRepository;
         this.measureSearchRepository = measureSearchRepository;
         this.dataSetRepository = dataSetRepository;
-        this.userRepository = userRepository;
+        this.userService = userService;
     }
 
     /**
@@ -52,10 +51,9 @@ public class MeasureService {
     public Measure create(Measure measure) {
         log.debug("Request to create Measure : {}", measure);
         if (measure.getId() != null && measureRepository.existsById(measure.getId())) {
-            return null;
+            throw new BadRequestAlertException("Measure already exists", "measure", "measureexists");
         }
-        String login = SecurityUtils.getCurrentUserLogin().get();
-        measure.setCreator(userRepository.findOneByLogin(login).get());
+        measure.setCreator(userService.getUserWithAuthorities().orElse(null));
         Measure result = measureRepository.save(measure);
         measureSearchRepository.save(result);
         return result;
@@ -84,10 +82,9 @@ public class MeasureService {
         List<Measure> all = measureRepository.findAll();
         if (SecurityUtils.isCurrentUserInRole(ADMIN)) {
             return all;
-        }
-        else {
+        } else {
             List<Measure> result = new ArrayList<>();
-            for (Measure measure: all) {
+            for (Measure measure : all) {
                 if (!measure.getCreator().getLogin().equals("admin")) {
                     result.add(measure);
                 }

@@ -6,23 +6,21 @@ import gr.ekke.socioscope.domain.Measure;
 import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.DimensionRepository;
 import gr.ekke.socioscope.repository.MeasureRepository;
-import gr.ekke.socioscope.repository.UserRepository;
 import gr.ekke.socioscope.repository.search.DataSetSearchRepository;
 import gr.ekke.socioscope.security.SecurityUtils;
+import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 import static gr.ekke.socioscope.security.AuthoritiesConstants.ADMIN;
-import static org.elasticsearch.index.query.QueryBuilders.*;
+import static org.elasticsearch.index.query.QueryBuilders.queryStringQuery;
 
 /**
  * Service Implementation for managing DataSet.
@@ -36,18 +34,18 @@ public class DataSetService {
 
     private final DataSetSearchRepository dataSetSearchRepository;
 
-    private final UserRepository userRepository;
-
     private final DimensionRepository dimensionRepository;
 
     private final MeasureRepository measureRepository;
 
-    public DataSetService(DataSetRepository dataSetRepository, DataSetSearchRepository dataSetSearchRepository, UserRepository userRepository, DimensionRepository dimensionRepository, MeasureRepository measureRepository) {
+    private final UserService userService;
+
+    public DataSetService(DataSetRepository dataSetRepository, DataSetSearchRepository dataSetSearchRepository, DimensionRepository dimensionRepository, MeasureRepository measureRepository, UserService userService) {
         this.dataSetRepository = dataSetRepository;
         this.dataSetSearchRepository = dataSetSearchRepository;
-        this.userRepository = userRepository;
         this.dimensionRepository = dimensionRepository;
         this.measureRepository = measureRepository;
+        this.userService = userService;
     }
 
     /**
@@ -59,10 +57,9 @@ public class DataSetService {
     public DataSet create(DataSet dataSet) {
         log.debug("Request to create DataSet : {}", dataSet);
         if (dataSet.getId() != null && dataSetRepository.existsById(dataSet.getId())) {
-            return null;
+            throw new BadRequestAlertException("DataSet already exists", "dataSet", "datasetexists");
         }
-        String login = SecurityUtils.getCurrentUserLogin().get();
-        dataSet.setCreator(userRepository.findOneByLogin(login).get());
+        dataSet.setCreator(userService.getUserWithAuthorities().orElse(null));
         DataSet result = dataSetRepository.save(dataSet);
         dataSetSearchRepository.save(result);
         return result;

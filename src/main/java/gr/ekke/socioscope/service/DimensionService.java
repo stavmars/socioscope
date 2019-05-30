@@ -3,12 +3,11 @@ package gr.ekke.socioscope.service;
 import gr.ekke.socioscope.domain.Dimension;
 import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.DimensionRepository;
-import gr.ekke.socioscope.repository.UserRepository;
 import gr.ekke.socioscope.repository.search.DimensionSearchRepository;
 import gr.ekke.socioscope.security.SecurityUtils;
+import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 import static gr.ekke.socioscope.security.AuthoritiesConstants.ADMIN;
-import static org.elasticsearch.index.query.QueryBuilders.*;
+import static org.elasticsearch.index.query.QueryBuilders.queryStringQuery;
 
 /**
  * Service Implementation for managing Dimension.
@@ -34,13 +33,13 @@ public class DimensionService {
 
     private final DataSetRepository dataSetRepository;
 
-    private final UserRepository userRepository;
+    private final UserService userService;
 
-    public DimensionService(DimensionRepository dimensionRepository, DimensionSearchRepository dimensionSearchRepository, DataSetRepository dataSetRepository, UserRepository userRepository) {
+    public DimensionService(DimensionRepository dimensionRepository, DimensionSearchRepository dimensionSearchRepository, DataSetRepository dataSetRepository, UserService userService) {
         this.dimensionRepository = dimensionRepository;
         this.dimensionSearchRepository = dimensionSearchRepository;
         this.dataSetRepository = dataSetRepository;
-        this.userRepository = userRepository;
+        this.userService = userService;
     }
 
     /**
@@ -52,10 +51,9 @@ public class DimensionService {
     public Dimension create(Dimension dimension) {
         log.debug("Request to create Dimension : {}", dimension);
         if (dimension.getId() != null && dimensionRepository.existsById(dimension.getId())) {
-            return null;
+            throw new BadRequestAlertException("Dimension already exists", "dimension", "dimensionexists");
         }
-        String login = SecurityUtils.getCurrentUserLogin().get();
-        dimension.setCreator(userRepository.findOneByLogin(login).get());
+        dimension.setCreator(userService.getUserWithAuthorities().orElse(null));
         Dimension result = dimensionRepository.save(dimension);
         dimensionSearchRepository.save(result);
         return result;
@@ -84,10 +82,9 @@ public class DimensionService {
         List<Dimension> all = dimensionRepository.findAll();
         if (SecurityUtils.isCurrentUserInRole(ADMIN)) {
             return all;
-        }
-        else {
+        } else {
             List<Dimension> result = new ArrayList<>();
-            for (Dimension dimension: all) {
+            for (Dimension dimension : all) {
                 if (!dimension.getCreator().getLogin().equals("admin")) {
                     result.add(dimension);
                 }

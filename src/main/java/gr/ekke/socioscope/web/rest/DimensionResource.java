@@ -14,12 +14,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
-
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * REST controller for managing Dimension.
@@ -28,10 +24,8 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 @RequestMapping("/api")
 public class DimensionResource {
 
-    private final Logger log = LoggerFactory.getLogger(DimensionResource.class);
-
     private static final String ENTITY_NAME = "dimension";
-
+    private final Logger log = LoggerFactory.getLogger(DimensionResource.class);
     private final DimensionService dimensionService;
 
     public DimensionResource(DimensionService dimensionService) {
@@ -50,9 +44,6 @@ public class DimensionResource {
     public ResponseEntity<Dimension> createDimension(@Valid @RequestBody Dimension dimension) throws URISyntaxException {
         log.debug("REST request to create Dimension : {}", dimension);
         Dimension result = dimensionService.create(dimension);
-        if (result == null) {
-            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
-        }
         return ResponseEntity.created(new URI("/api/dimensions/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
             .body(result);
