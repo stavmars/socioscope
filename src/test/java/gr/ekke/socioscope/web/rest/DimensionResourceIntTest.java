@@ -22,7 +22,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 import static gr.ekke.socioscope.web.rest.TestUtil.createFormattingConversionService;
@@ -93,8 +95,10 @@ public class DimensionResourceIntTest {
      * if they test an entity which requires the current entity.
      */
     public static Dimension createEntity() {
+        Map<String, String> name = new HashMap<>();
+        name.put(DEFAULT_NAME, DEFAULT_NAME);
         Dimension dimension = new Dimension()
-            .name(DEFAULT_NAME)
+            .name(name)
             .type(DEFAULT_TYPE);
         return dimension;
     }
@@ -225,10 +229,12 @@ public class DimensionResourceIntTest {
 
         int databaseSizeBeforeUpdate = dimensionRepository.findAll().size();
 
+        Map<String, String> name = new HashMap<>();
+        name.put(DEFAULT_NAME, DEFAULT_NAME);
         // Update the dimension
         Dimension updatedDimension = dimensionRepository.findById(dimension.getId()).get();
         updatedDimension
-            .name(UPDATED_NAME)
+            .name(name)
             .type(UPDATED_TYPE);
 
         restDimensionMockMvc.perform(put("/api/dimensions")

@@ -22,7 +22,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 import static gr.ekke.socioscope.web.rest.TestUtil.createFormattingConversionService;
@@ -93,8 +95,10 @@ public class MeasureResourceIntTest {
      * if they test an entity which requires the current entity.
      */
     public static Measure createEntity() {
+        Map<String, String> name = new HashMap<>();
+        name.put(DEFAULT_NAME, DEFAULT_NAME);
         Measure measure = new Measure()
-            .name(DEFAULT_NAME)
+            .name(name)
             .unit(DEFAULT_UNIT);
         return measure;
     }
@@ -225,10 +229,12 @@ public class MeasureResourceIntTest {
 
         int databaseSizeBeforeUpdate = measureRepository.findAll().size();
 
+        Map<String, String> name = new HashMap<>();
+        name.put(DEFAULT_NAME, DEFAULT_NAME);
         // Update the measure
         Measure updatedMeasure = measureRepository.findById(measure.getId()).get();
         updatedMeasure
-            .name(UPDATED_NAME)
+            .name(name)
             .unit(UPDATED_UNIT);
 
         restMeasureMockMvc.perform(put("/api/measures")

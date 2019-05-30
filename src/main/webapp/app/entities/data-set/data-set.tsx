@@ -44,7 +44,7 @@ export class DataSet extends React.Component<IDataSetProps, IDataSetState> {
   handleSearch = event => this.setState({ search: event.target.value });
 
   render() {
-    const { dataSetList, match } = this.props;
+    const { dataSetList, locale, match } = this.props;
     return (
       <div>
         <h2 id="data-set-heading">
@@ -111,9 +111,9 @@ export class DataSet extends React.Component<IDataSetProps, IDataSetState> {
                       {dataSet.id}
                     </Button>
                   </td>
-                  <td>{dataSet.name}</td>
+                  <td>{locale.currentLocale === 'el' ? dataSet.name.el : dataSet.name.en}</td>
                   <td>{dataSet.type}</td>
-                  <td>{dataSet.comment}</td>
+                  <td>{locale.currentLocale === 'el' ? dataSet.comment.el : dataSet.comment.en}</td>
                   <td>{dataSet.creator ? dataSet.creator.login : ''}</td>
                   <td>
                     <TextFormat type="date" value={dataSet.createdDate} format={APP_DATE_FORMAT} />
@@ -150,8 +150,9 @@ export class DataSet extends React.Component<IDataSetProps, IDataSetState> {
   }
 }
 
-const mapStateToProps = ({ dataSet }: IRootState) => ({
-  dataSetList: dataSet.entities
+const mapStateToProps = (storeState: IRootState) => ({
+  dataSetList: storeState.dataSet.entities,
+  locale: storeState.locale
 });
 
 const mapDispatchToProps = {

@@ -14,10 +14,12 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -32,10 +34,9 @@ public class Dimension implements Serializable {
     @Id
     private String id;
 
-    @NotNull
-    @Size(min = 3)
+    @Size(min = 1)
     @Field("name")
-    private String name;
+    private Map<String, @NotBlank String> name;
 
     @NotNull
     @Field("type")
@@ -50,7 +51,7 @@ public class Dimension implements Serializable {
     public Dimension() {
     }
 
-    public Dimension(String id, @NotNull @Size(min = 3) String name, @NotNull @Size(min = 2) String type, User creator) {
+    public Dimension(String id, @Size(min = 1) Map<String, @NotBlank String> name, @NotNull @Size(min = 2) String type, User creator) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -77,15 +78,15 @@ public class Dimension implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
+    public Map<String, String> getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(Map<String, String> name) {
         this.name = name;
     }
 
-    public Dimension name(String name) {
+    public Dimension name(Map<String, String> name) {
         this.name = name;
         return this;
     }

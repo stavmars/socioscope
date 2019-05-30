@@ -15,6 +15,7 @@ import javax.validation.constraints.*;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -29,10 +30,9 @@ public class Measure implements Serializable {
     @Id
     private String id;
 
-    @NotNull
-    @Size(min = 3)
+    @Size(min = 1)
     @Field("name")
-    private String name;
+    private Map<String, @NotBlank String> name;
 
     @NotNull
     @Size(min = 2)
@@ -48,7 +48,7 @@ public class Measure implements Serializable {
     public Measure() {
     }
 
-    public Measure(String id, @NotNull @Size(min = 3) String name, @NotNull @Size(min = 2) String unit, User creator) {
+    public Measure(String id, @Size(min = 1) Map<String, @NotBlank String> name, @NotNull @Size(min = 2) String unit, User creator) {
         this.id = id;
         this.name = name;
         this.unit = unit;
@@ -72,16 +72,16 @@ public class Measure implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
+    public Map<String, String> getName() {
         return name;
     }
 
-    public Measure name(String name) {
+    public Measure name(Map<String, String> name) {
         this.name = name;
         return this;
     }
 
-    public void setName(String name) {
+    public void setName(Map<String, String> name) {
         this.name = name;
     }
 

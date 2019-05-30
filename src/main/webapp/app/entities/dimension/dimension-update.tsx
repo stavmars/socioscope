@@ -70,7 +70,7 @@ export class DimensionUpdate extends React.Component<IDimensionUpdateProps, IDim
   };
 
   render() {
-    const { dimensionEntity, users, loading, updating } = this.props;
+    const { dimensionEntity, users, loading, updating, currentLocale } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -101,9 +101,20 @@ export class DimensionUpdate extends React.Component<IDimensionUpdateProps, IDim
                     <Translate contentKey="socioscopeApp.dimension.name">Name</Translate>
                   </Label>
                   <AvField
-                    id="dimension-name"
+                    id="dimension-name-el"
                     type="text"
-                    name="name"
+                    name="name.el"
+                    helpMessage="Ελληνικά"
+                    validate={{
+                      required: { value: true, errorMessage: translate('entity.validation.required') },
+                      minLength: { value: 3, errorMessage: translate('entity.validation.minlength', { min: 3 }) }
+                    }}
+                  />
+                  <AvField
+                    id="dimension-name-en"
+                    type="text"
+                    name="name.en"
+                    helpMessage="English"
                     validate={{
                       required: { value: true, errorMessage: translate('entity.validation.required') },
                       minLength: { value: 3, errorMessage: translate('entity.validation.minlength', { min: 3 }) }
@@ -151,7 +162,8 @@ const mapStateToProps = (storeState: IRootState) => ({
   dimensionEntity: storeState.dimension.entity,
   loading: storeState.dimension.loading,
   updating: storeState.dimension.updating,
-  updateSuccess: storeState.dimension.updateSuccess
+  updateSuccess: storeState.dimension.updateSuccess,
+  currentLocale: storeState.locale.currentLocale
 });
 
 const mapDispatchToProps = {

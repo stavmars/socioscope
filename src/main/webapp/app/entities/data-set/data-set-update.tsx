@@ -53,7 +53,7 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
 
   saveEntity = (event, errors, values) => {
     if (errors.length === 0) {
-      const { dataSetEntity } = this.props;
+      const { dataSetEntity, currentLocale } = this.props;
 
       let entity;
 
@@ -92,7 +92,7 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
   };
 
   render() {
-    const { dataSetEntity, users, loading, updating, dimensions, measures } = this.props;
+    const { dataSetEntity, users, loading, updating, dimensions, measures, currentLocale } = this.props;
     const { isNew } = this.state;
 
     return (
@@ -123,9 +123,20 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                     <Translate contentKey="socioscopeApp.dataSet.name">Name</Translate>
                   </Label>
                   <AvField
-                    id="data-set-name"
+                    id="data-set-name-el"
                     type="text"
-                    name="name"
+                    name="name.el"
+                    helpMessage="Ελληνικά"
+                    validate={{
+                      required: { value: true, errorMessage: translate('entity.validation.required') },
+                      minLength: { value: 3, errorMessage: translate('entity.validation.minlength', { min: 3 }) }
+                    }}
+                  />
+                  <AvField
+                    id="data-set-name-en"
+                    type="text"
+                    name="name.en"
+                    helpMessage="English"
                     validate={{
                       required: { value: true, errorMessage: translate('entity.validation.required') },
                       minLength: { value: 3, errorMessage: translate('entity.validation.minlength', { min: 3 }) }
@@ -150,7 +161,8 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                   <Label id="commentLabel" for="comment">
                     <Translate contentKey="socioscopeApp.dataSet.comment">Comment</Translate>
                   </Label>
-                  <AvField id="data-set-comment" type="text" name="comment" />
+                  <AvField id="data-set-comment" type="text" name="comment.el" helpMessage="Ελληνικά" />
+                  <AvField id="data-set-comment" type="text" name="comment.en" helpMessage="Englush" />
                 </AvGroup>
                 {!isNew ? (
                   <AvGroup>
@@ -175,7 +187,7 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                     {dataSetEntity.dimensions
                       ? dataSetEntity.dimensions.map(otherEntity => (
                           <ListGroupItem key={otherEntity.id}>
-                            {otherEntity.name}
+                            {currentLocale === 'el' ? otherEntity.name.el : otherEntity.name.en}
                             <Button
                               onClick={() => {
                                 this.removeDimension(dataSetEntity.id, otherEntity.id);
@@ -205,7 +217,7 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                               if (valid) {
                                 return (
                                   <option value={JSON.stringify(dimension)} key={dimension.id}>
-                                    {dimension.name}
+                                    {currentLocale === 'el' ? dimension.name.el : dimension.name.en}
                                   </option>
                                 );
                               }
@@ -225,7 +237,7 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                     {dataSetEntity.measures
                       ? dataSetEntity.measures.map(otherEntity => (
                           <ListGroupItem key={otherEntity.id}>
-                            {otherEntity.name}
+                            {currentLocale === 'el' ? otherEntity.name.el : otherEntity.name.en}
                             <Button
                               onClick={() => {
                                 this.removeMeasure(dataSetEntity.id, otherEntity.id);
@@ -255,7 +267,7 @@ export class DataSetUpdate extends React.Component<IDataSetUpdateProps, IDataSet
                               if (valid) {
                                 return (
                                   <option value={JSON.stringify(measure)} key={measure.id}>
-                                    {measure.name}
+                                    {currentLocale === 'el' ? measure.name.el : measure.name.en}
                                   </option>
                                 );
                               }
@@ -298,7 +310,8 @@ const mapStateToProps = (storeState: IRootState) => ({
   measures: storeState.measure.entities,
   loading: storeState.dataSet.loading,
   updating: storeState.dataSet.updating,
-  updateSuccess: storeState.dataSet.updateSuccess
+  updateSuccess: storeState.dataSet.updateSuccess,
+  currentLocale: storeState.locale.currentLocale
 });
 
 const mapDispatchToProps = {
