@@ -15,4 +15,4 @@ export interface IDataSet {
   creator?: IUser;
 }
 
-export const defaultValue: Readonly<IDataSet> = {};
+export const defaultValue: Readonly<IDataSet> = { name: {}, comment: {} };

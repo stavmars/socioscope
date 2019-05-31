@@ -8,4 +8,4 @@ export interface IMeasure {
   creator?: IUser;
 }
 
-export const defaultValue: Readonly<IMeasure> = {};
+export const defaultValue: Readonly<IMeasure> = { name: {} };

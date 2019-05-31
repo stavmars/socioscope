@@ -8,4 +8,4 @@ export interface IDimension {
   creator?: IUser;
 }
 
-export const defaultValue: Readonly<IDimension> = {};
+export const defaultValue: Readonly<IDimension> = { name: {} };

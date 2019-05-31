@@ -11,4 +11,4 @@ export interface IDimensionCode {
   color?: string;
 }
 
-export const defaultValue: Readonly<IDimensionCode> = {};
+export const defaultValue: Readonly<IDimensionCode> = { name: {}, description: {} };
