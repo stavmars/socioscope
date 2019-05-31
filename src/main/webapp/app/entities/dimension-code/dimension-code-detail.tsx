@@ -20,7 +20,7 @@ export class DimensionCodeDetail extends React.Component<IDimensionCodeDetailPro
   }
 
   render() {
-    const { dimensionCodeEntity } = this.props;
+    const { dimensionCodeEntity, currentLocale } = this.props;
     return (
       <Row>
         <Col md="8">
@@ -45,13 +45,13 @@ export class DimensionCodeDetail extends React.Component<IDimensionCodeDetailPro
                 <Translate contentKey="socioscopeApp.dimensionCode.name">Name</Translate>
               </span>
             </dt>
-            <dd>{dimensionCodeEntity.name}</dd>
+            <dd>{currentLocale === 'el' ? dimensionCodeEntity.name.el : dimensionCodeEntity.name.en}</dd>
             <dt>
               <span id="description">
                 <Translate contentKey="socioscopeApp.dimensionCode.description">Description</Translate>
               </span>
             </dt>
-            <dd>{dimensionCodeEntity.description}</dd>
+            <dd>{currentLocale === 'el' ? dimensionCodeEntity.description.el : dimensionCodeEntity.description.en}</dd>
             <dt>
               <span id="parentId">
                 <Translate contentKey="socioscopeApp.dimensionCode.parentId">Parent Id</Translate>
@@ -90,8 +90,9 @@ export class DimensionCodeDetail extends React.Component<IDimensionCodeDetailPro
   }
 }
 
-const mapStateToProps = ({ dimensionCode }: IRootState) => ({
-  dimensionCodeEntity: dimensionCode.entity
+const mapStateToProps = (storeState: IRootState) => ({
+  dimensionCodeEntity: storeState.dimensionCode.entity,
+  currentLocale: storeState.locale.currentLocale
 });
 
 const mapDispatchToProps = { getEntity };

@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -30,12 +31,12 @@ public class DimensionCode implements Serializable {
     private String notation;
 
     @NotNull
-    @Size(min = 3)
+    @Size(min = 1)
     @Field("name")
-    private String name;
+    private Map<String, @NotBlank String> name;
 
     @Field("description")
-    private String description;
+    private Map<String, String> description;
 
     @Field("parent_id")
     private String parentId;
@@ -81,29 +82,29 @@ public class DimensionCode implements Serializable {
         this.notation = notation;
     }
 
-    public String getName() {
+    public Map<String, String> getName() {
         return name;
     }
 
-    public DimensionCode name(String name) {
+    public DimensionCode name(Map<String, String> name) {
         this.name = name;
         return this;
     }
 
-    public void setName(String name) {
+    public void setName(Map<String, String> name) {
         this.name = name;
     }
 
-    public String getDescription() {
+    public Map<String, String> getDescription() {
         return description;
     }
 
-    public DimensionCode description(String description) {
+    public DimensionCode description(Map<String, String> description) {
         this.description = description;
         return this;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(Map<String, String> description) {
         this.description = description;
     }
 

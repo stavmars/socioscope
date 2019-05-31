@@ -120,9 +120,20 @@ export class DimensionCodeUpdate extends React.Component<IDimensionCodeUpdatePro
                     <Translate contentKey="socioscopeApp.dimensionCode.name">Name</Translate>
                   </Label>
                   <AvField
-                    id="dimension-code-name"
+                    id="dimension-code-name-el"
                     type="text"
-                    name="name"
+                    name="name.el"
+                    helpMessage="Ελληνικά"
+                    validate={{
+                      required: { value: true, errorMessage: translate('entity.validation.required') },
+                      minLength: { value: 3, errorMessage: translate('entity.validation.minlength', { min: 3 }) }
+                    }}
+                  />
+                  <AvField
+                    id="dimension-code-name-en"
+                    type="text"
+                    name="name.en"
+                    helpMessage="English"
                     validate={{
                       required: { value: true, errorMessage: translate('entity.validation.required') },
                       minLength: { value: 3, errorMessage: translate('entity.validation.minlength', { min: 3 }) }
@@ -133,7 +144,8 @@ export class DimensionCodeUpdate extends React.Component<IDimensionCodeUpdatePro
                   <Label id="descriptionLabel" for="description">
                     <Translate contentKey="socioscopeApp.dimensionCode.description">Description</Translate>
                   </Label>
-                  <AvField id="dimension-code-description" type="text" name="description" />
+                  <AvField id="dimension-code-description-el" type="text" name="description.el" helpMessage="Ελληνικά" />
+                  <AvField id="dimension-code-description-en" type="text" name="description.en" helpMessage="English" />
                 </AvGroup>
                 <AvGroup>
                   <Label id="parentIdLabel" for="parentId">
