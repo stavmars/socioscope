@@ -1,9 +1,5 @@
 import { IUser } from 'app/shared/model/user.model';
-
-interface ILang {
-  el?: string;
-  en?: string;
-}
+import { ILang } from 'app/shared/model/language.interface';
 
 export interface IDimension {
   id?: string;
@@ -12,4 +8,4 @@ export interface IDimension {
   creator?: IUser;
 }
 
-export const defaultValue: Readonly<IDimension> = {};
+export const defaultValue: Readonly<IDimension> = { name: {} };

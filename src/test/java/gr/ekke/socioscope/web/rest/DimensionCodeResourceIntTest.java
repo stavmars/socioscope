@@ -21,7 +21,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 import static gr.ekke.socioscope.web.rest.TestUtil.createFormattingConversionService;
@@ -104,11 +106,15 @@ public class DimensionCodeResourceIntTest {
      * if they test an entity which requires the current entity.
      */
     public static DimensionCode createEntity() {
+        Map<String, String> name = new HashMap<>();
+        Map<String, String> description = new HashMap<>();
+        name.put(DEFAULT_NAME, DEFAULT_NAME);
+        description.put(DEFAULT_DESCRIPTION, DEFAULT_DESCRIPTION);
         DimensionCode dimensionCode = new DimensionCode()
             .dimensionId(DEFAULT_DIMENSION_ID)
             .notation(DEFAULT_NOTATION)
-            .name(DEFAULT_NAME)
-            .description(DEFAULT_DESCRIPTION)
+            .name(name)
+            .description(description)
             .parentId(DEFAULT_PARENT_ID)
             .order(DEFAULT_ORDER)
             .color(DEFAULT_COLOR);
@@ -271,13 +277,17 @@ public class DimensionCodeResourceIntTest {
 
         int databaseSizeBeforeUpdate = dimensionCodeRepository.findAll().size();
 
+        Map<String, String> name = new HashMap<>();
+        name.put(UPDATED_NAME, UPDATED_NAME);
+        Map<String, String> description = new HashMap<>();
+        description.put(UPDATED_DESCRIPTION, UPDATED_DESCRIPTION);
         // Update the dimensionCode
         DimensionCode updatedDimensionCode = dimensionCodeRepository.findById(dimensionCode.getId()).get();
         updatedDimensionCode
             .dimensionId(UPDATED_DIMENSION_ID)
             .notation(UPDATED_NOTATION)
-            .name(UPDATED_NAME)
-            .description(UPDATED_DESCRIPTION)
+            .name(name)
+            .description(description)
             .parentId(UPDATED_PARENT_ID)
             .order(UPDATED_ORDER)
             .color(UPDATED_COLOR);

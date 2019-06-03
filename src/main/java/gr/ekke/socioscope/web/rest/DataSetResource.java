@@ -2,8 +2,6 @@ package gr.ekke.socioscope.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import gr.ekke.socioscope.domain.DataSet;
-import gr.ekke.socioscope.domain.Dimension;
-import gr.ekke.socioscope.domain.Measure;
 import gr.ekke.socioscope.security.SecurityUtils;
 import gr.ekke.socioscope.service.DataSetService;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
@@ -13,20 +11,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * REST controller for managing DataSet.
@@ -35,10 +26,8 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 @RequestMapping("/api")
 public class DataSetResource {
 
-    private final Logger log = LoggerFactory.getLogger(DataSetResource.class);
-
     private static final String ENTITY_NAME = "dataSet";
-
+    private final Logger log = LoggerFactory.getLogger(DataSetResource.class);
     private final DataSetService dataSetService;
 
     public DataSetResource(DataSetService dataSetService) {
@@ -57,9 +46,6 @@ public class DataSetResource {
     public ResponseEntity<DataSet> createDataSet(@Valid @RequestBody DataSet dataSet) throws URISyntaxException {
         log.debug("REST request to create DataSet : {}", dataSet);
         DataSet result = dataSetService.create(dataSet);
-        if (result == null) {
-            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
-        }
         return ResponseEntity.created(new URI("/api/data-sets/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId()))
             .body(result);
@@ -112,7 +98,7 @@ public class DataSetResource {
         Optional<DataSet> dataSet = dataSetService.findOne(id);
         if (dataSet.isPresent() && dataSet.get().getCreator() != null &&
             !SecurityUtils.getCurrentUserLogin().get().equals("admin") &&
-            !dataSet.get().getCreator().getLogin().equals(SecurityUtils.getCurrentUserLogin().orElse(""))){
+            !dataSet.get().getCreator().getLogin().equals(SecurityUtils.getCurrentUserLogin().orElse(""))) {
             return new ResponseEntity<>("error.http.403", HttpStatus.FORBIDDEN);
         }
         return ResponseUtil.wrapOrNotFound(dataSet);
@@ -149,7 +135,7 @@ public class DataSetResource {
     /**
      * PUT  /data-sets/:dataSetId/:dimensionId : Remove a dimension from an existing dataSet.
      *
-     * @param dataSetId the dataSet to update
+     * @param dataSetId   the dataSet to update
      * @param dimensionId the dimension to remove
      * @return the ResponseEntity with status 200 (OK) and with body the updated dataSet,
      * or with status 400 (Bad Request) if the dataSet is not valid,

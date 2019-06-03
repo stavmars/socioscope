@@ -1,12 +1,14 @@
+import { ILang } from 'app/shared/model/language.interface';
+
 export interface IDimensionCode {
   id?: string;
   dimensionId?: string;
   notation?: string;
-  name?: string;
-  description?: string;
+  name?: ILang;
+  description?: ILang;
   parentId?: string;
   order?: number;
   color?: string;
 }
 
-export const defaultValue: Readonly<IDimensionCode> = {};
+export const defaultValue: Readonly<IDimensionCode> = { name: {}, description: {} };

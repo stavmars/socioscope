@@ -44,7 +44,7 @@ export class DimensionCode extends React.Component<IDimensionCodeProps, IDimensi
   handleSearch = event => this.setState({ search: event.target.value });
 
   render() {
-    const { dimensionCodeList, match } = this.props;
+    const { dimensionCodeList, currentLocale, match } = this.props;
     return (
       <div>
         <h2 id="dimension-code-heading">
@@ -119,8 +119,8 @@ export class DimensionCode extends React.Component<IDimensionCodeProps, IDimensi
                   </td>
                   <td>{dimensionCode.dimensionId}</td>
                   <td>{dimensionCode.notation}</td>
-                  <td>{dimensionCode.name}</td>
-                  <td>{dimensionCode.description}</td>
+                  <td>{currentLocale === 'el' ? dimensionCode.name.el : dimensionCode.name.en}</td>
+                  <td>{currentLocale === 'el' ? dimensionCode.description.el : dimensionCode.description.en}</td>
                   <td>{dimensionCode.parentId}</td>
                   <td>{dimensionCode.order}</td>
                   <td>{dimensionCode.color}</td>
@@ -156,8 +156,9 @@ export class DimensionCode extends React.Component<IDimensionCodeProps, IDimensi
   }
 }
 
-const mapStateToProps = ({ dimensionCode }: IRootState) => ({
-  dimensionCodeList: dimensionCode.entities
+const mapStateToProps = (storeState: IRootState) => ({
+  dimensionCodeList: storeState.dimensionCode.entities,
+  currentLocale: storeState.locale.currentLocale
 });
 
 const mapDispatchToProps = {
