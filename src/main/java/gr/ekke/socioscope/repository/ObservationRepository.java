@@ -15,4 +15,6 @@ public interface ObservationRepository extends MongoRepository<Observation, Stri
 
     List<Observation> findAllByDatasetId(String datasetId);
 
+    long deleteByDatasetId(String datasetId);
+
 }

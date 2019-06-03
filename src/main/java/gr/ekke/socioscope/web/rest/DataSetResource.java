@@ -2,6 +2,9 @@ package gr.ekke.socioscope.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import gr.ekke.socioscope.domain.DataSet;
+import gr.ekke.socioscope.domain.Observation;
+import gr.ekke.socioscope.repository.DataSetRepository;
+import gr.ekke.socioscope.repository.ObservationRepository;
 import gr.ekke.socioscope.security.SecurityUtils;
 import gr.ekke.socioscope.service.DataSetService;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
@@ -29,9 +32,14 @@ public class DataSetResource {
     private static final String ENTITY_NAME = "dataSet";
     private final Logger log = LoggerFactory.getLogger(DataSetResource.class);
     private final DataSetService dataSetService;
+    private final DataSetRepository dataSetRepository;
+    private final ObservationRepository observationRepository;
 
-    public DataSetResource(DataSetService dataSetService) {
+
+    public DataSetResource(DataSetService dataSetService, DataSetRepository dataSetRepository, ObservationRepository observationRepository) {
         this.dataSetService = dataSetService;
+        this.dataSetRepository = dataSetRepository;
+        this.observationRepository = observationRepository;
     }
 
     /**
@@ -164,5 +172,31 @@ public class DataSetResource {
     public DataSet removeMeasure(@PathVariable String dataSetId, @PathVariable String measureId) throws URISyntaxException {
         log.debug("REST request to remove Measure : {} from DataSet : {}", dataSetId, measureId);
         return dataSetService.removeMeasure(dataSetId, measureId);
+    }
+
+    /**
+     * POST  /data-sets/:dataSetId/data : Add observations to a dataset.
+     *
+     * @param dataSetId    the dataSet to update
+     * @param observations the observations to add
+     * @return the ResponseEntity with status 201 (Created) and with body the number of new observations created, or with status 400 (Bad Request)
+     * if any of the observations have already an ID or the dataset does not exist
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PostMapping("/data-sets/{dataSetId}/data")
+    @Timed
+    public ResponseEntity<Integer> addObservations(@PathVariable String dataSetId, @Valid @RequestBody List<Observation> observations) throws URISyntaxException {
+        log.debug("REST request to add {} observations to dataset {}", observations.size(), dataSetId);
+        for (Observation observation : observations) {
+            if (observation.getId() != null) {
+                throw new BadRequestAlertException("A new observation cannot already have an ID", "observation", "idexists");
+            }
+            if (!dataSetRepository.existsById(dataSetId)) {
+                return ResponseEntity.notFound().build();
+            }
+            observation.setDatasetId(dataSetId);
+        }
+        List<Observation> result = observationRepository.saveAll(observations);
+        return ResponseEntity.status(HttpStatus.CREATED).body(result.size());
     }
 }

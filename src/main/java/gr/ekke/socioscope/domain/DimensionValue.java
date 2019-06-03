@@ -21,6 +21,8 @@ public class DimensionValue implements Serializable {
     @Field("value")
     private String value;
 
+    public DimensionValue() {
+    }
 
     public DimensionValue(@NotNull String id, @NotNull String value) {
         this.id = id;

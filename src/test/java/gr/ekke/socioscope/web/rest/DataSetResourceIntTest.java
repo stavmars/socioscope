@@ -4,6 +4,7 @@ import gr.ekke.socioscope.SocioscopeApp;
 
 import gr.ekke.socioscope.domain.DataSet;
 import gr.ekke.socioscope.repository.DataSetRepository;
+import gr.ekke.socioscope.repository.ObservationRepository;
 import gr.ekke.socioscope.repository.search.DataSetSearchRepository;
 import gr.ekke.socioscope.service.DataSetService;
 import gr.ekke.socioscope.web.rest.errors.ExceptionTranslator;
@@ -57,6 +58,9 @@ public class DataSetResourceIntTest {
     private DataSetRepository dataSetRepository;
 
     @Autowired
+    private ObservationRepository observationRepository;
+
+    @Autowired
     private DataSetService dataSetService;
 
     /**
@@ -83,7 +87,7 @@ public class DataSetResourceIntTest {
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        final DataSetResource dataSetResource = new DataSetResource(dataSetService);
+        final DataSetResource dataSetResource = new DataSetResource(dataSetService, dataSetRepository, observationRepository);
         this.restDataSetMockMvc = MockMvcBuilders.standaloneSetup(dataSetResource)
             .setCustomArgumentResolvers(pageableArgumentResolver)
             .setControllerAdvice(exceptionTranslator)

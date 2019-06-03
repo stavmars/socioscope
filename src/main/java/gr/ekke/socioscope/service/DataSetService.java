@@ -6,6 +6,7 @@ import gr.ekke.socioscope.domain.Measure;
 import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.DimensionRepository;
 import gr.ekke.socioscope.repository.MeasureRepository;
+import gr.ekke.socioscope.repository.ObservationRepository;
 import gr.ekke.socioscope.repository.search.DataSetSearchRepository;
 import gr.ekke.socioscope.security.SecurityUtils;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
@@ -38,13 +39,18 @@ public class DataSetService {
 
     private final MeasureRepository measureRepository;
 
+    private final ObservationRepository observationRepository;
+
+
     private final UserService userService;
 
-    public DataSetService(DataSetRepository dataSetRepository, DataSetSearchRepository dataSetSearchRepository, DimensionRepository dimensionRepository, MeasureRepository measureRepository, UserService userService) {
+    public DataSetService(DataSetRepository dataSetRepository, DataSetSearchRepository dataSetSearchRepository, DimensionRepository dimensionRepository, MeasureRepository measureRepository,
+                          ObservationRepository observationRepository, UserService userService) {
         this.dataSetRepository = dataSetRepository;
         this.dataSetSearchRepository = dataSetSearchRepository;
         this.dimensionRepository = dimensionRepository;
         this.measureRepository = measureRepository;
+        this.observationRepository = observationRepository;
         this.userService = userService;
     }
 
@@ -88,10 +94,9 @@ public class DataSetService {
         List<DataSet> all = dataSetRepository.findAll();
         if (SecurityUtils.isCurrentUserInRole(ADMIN)) {
             return all;
-        }
-        else {
+        } else {
             List<DataSet> result = new ArrayList<>();
-            for (DataSet dataset: all) {
+            for (DataSet dataset : all) {
                 if (!dataset.getCreator().getLogin().equals("admin")) {
                     result.add(dataset);
                 }
@@ -119,6 +124,7 @@ public class DataSetService {
      */
     public void delete(String id) {
         log.debug("Request to delete DataSet : {}", id);
+        observationRepository.deleteByDatasetId(id);
         dataSetRepository.deleteById(id);
         dataSetSearchRepository.deleteById(id);
     }
@@ -140,7 +146,7 @@ public class DataSetService {
      * Remove one dimension dimensionId from dataSet with dataSetId
      *
      * @param dimensionId the id of the dimension entity
-     * @param dataSetId the id of the dataSet entity
+     * @param dataSetId   the id of the dataSet entity
      * @return the entity
      */
     public DataSet removeDimension(String dataSetId, String dimensionId) {

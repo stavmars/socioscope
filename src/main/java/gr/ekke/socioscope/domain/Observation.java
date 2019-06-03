@@ -1,10 +1,10 @@
 package gr.ekke.socioscope.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.*;
 
@@ -19,7 +19,7 @@ public class Observation implements Serializable {
     @Id
     private String id;
 
-    @NotNull
+    @JsonIgnore
     @Field("datasetId")
     private String datasetId;
 
