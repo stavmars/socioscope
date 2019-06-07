@@ -3,6 +3,8 @@ package gr.ekke.socioscope.web.rest;
 import com.codahale.metrics.annotation.Timed;
 import gr.ekke.socioscope.domain.DataSet;
 import gr.ekke.socioscope.domain.Observation;
+import gr.ekke.socioscope.service.dto.Series;
+import gr.ekke.socioscope.service.dto.SeriesOptions;
 import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.ObservationRepository;
 import gr.ekke.socioscope.security.SecurityUtils;
@@ -198,5 +200,21 @@ public class DataSetResource {
         }
         List<Observation> result = observationRepository.saveAll(observations);
         return ResponseEntity.status(HttpStatus.CREATED).body(result.size());
+    }
+
+    /**
+     * POST  /data-sets/:dataSetId/series : Get series data from a dataset.
+     *
+     * @param dataSetId
+     * @param seriesOptions the observations to add
+     * @return the ResponseEntity with status 201 (Created) and with body the requested series, or with status 400 (Bad Request)
+     * if any of the observations have already an ID or the dataset does not exist
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @PostMapping("/data-sets/{dataSetId}/series")
+    @Timed
+    public ResponseEntity<List<Series>> getSeries(@PathVariable String dataSetId, @Valid @RequestBody SeriesOptions seriesOptions) throws URISyntaxException {
+        log.debug("REST request to get series for dataset {} with options {}", dataSetId, seriesOptions);
+        return ResponseUtil.wrapOrNotFound(dataSetService.getSeries(dataSetId, seriesOptions));
     }
 }
