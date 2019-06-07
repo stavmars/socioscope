@@ -1,10 +1,12 @@
 .footer {
   opacity: 1;
-  position: absolute;
+  position: relative;
   bottom: 0;
   height: 189px;
   width: 100%;
   background-color: #000000;
+  align-items: center;
+  alignment: center;
   .col-1 {
     .boxed1 {
       opacity: 1;

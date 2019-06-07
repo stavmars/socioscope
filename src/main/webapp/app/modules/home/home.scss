@@ -1,34 +1,32 @@
 /* ==========================================================================
 Main page styles
 ========================================================================== */
-.hipster {
-  display: inline-block;
-  width: 100%;
-  height: 497px;
-  background: url('../../../static/images/logo-jhipster-react.svg') no-repeat center top;
-  background-size: contain;
-}
 
 .home {
-  margin-top: 229.18px;
-  h2 {
+  margin-top: -150px;
+  background-color: rgba(30, 30, 30, 0.6) !important;
+  background-image: url('/content/images/Assets/Homepage-bg.jpg');
+  background-blend-mode: color;
+  .title {
+    margin-top: 171.18px;
     font-family: 'BPnoScriptBold';
     font-size: 80px;
     color: #ffffff;
     text-align: center;
   }
 
-  h3 {
-    margin-top: 111px;
-    font-family: 'BPnoScriptBold';
-    font-size: 30px;
-    color: #ffffff;
+  .link {
     text-align: center;
-    text-decoration: underline;
-    text-decoration-color: red;
+    a {
+      font-family: 'BPnoScriptBold';
+      font-size: 30px;
+      color: #ffffff;
+      text-decoration: underline;
+      text-decoration-color: red;
+    }
   }
 
-  p {
+  .text {
     font-family: 'ProximaNovaSemibold';
     font-weight: normal;
     font-size: 20px;
