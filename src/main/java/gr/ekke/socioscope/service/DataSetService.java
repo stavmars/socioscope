@@ -195,8 +195,20 @@ public class DataSetService {
     public Optional<List<Series>> getSeries(String datasetId, SeriesOptions seriesOptions) {
         log.debug("Request to get series for dataset {} with options {}", datasetId, seriesOptions);
         return dataSetRepository.findById(datasetId)
-            .map(dataSet -> observationRepository.findByDatasetAndDimensions(datasetId,
-                seriesOptions.getDimensionValues()))
+            .map(dataSet -> {
+                //if measure is not specified for the series, pick the first one
+                if (seriesOptions.getMeasure() == null) {
+                    seriesOptions.setMeasure(dataSet.getMeasures().stream().findFirst().get().getId());
+                } else {
+                    dataSet.getMeasures().stream().filter(measure -> measure.getId().equals(seriesOptions.getMeasure()))
+                        .findFirst().orElseThrow(() ->
+                        new BadRequestAlertException("Dataset does not contain the specified measure", "dataSet", "invalid_measure"));
+
+                }
+
+                return observationRepository.findByDatasetAndDimensions(datasetId,
+                    seriesOptions.getDimensionValues());
+            })
             .map(observations -> observationMapper.observationsToMultipleSeries(observations, seriesOptions));
     }
 }

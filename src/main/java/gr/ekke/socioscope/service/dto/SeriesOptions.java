@@ -9,6 +9,7 @@ public class SeriesOptions {
 
     @NotBlank
     private String xAxis;
+
     private String compareBy;
 
     private List<DimensionValue> dimensionValues;
