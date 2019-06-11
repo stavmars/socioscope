@@ -2,7 +2,38 @@
 About page styles
 ========================================================================== */
 .about {
-  background-image: none;
-  background-color: #e6e6e6;
   margin: 0;
+  .title {
+    font-family: BPnoScriptBold;
+    font-size: 40px;
+    color: #401b00;
+    margin-bottom: 3%;
+    margin-top: 4%;
+  }
+  .bullets {
+    color: #1e1e1e;
+    font-family: BPnoScriptBold;
+    font-size: 35px;
+    ul {
+      list-style-type: none;
+      li {
+        margin: 2%;
+      }
+    }
+  }
+  .content {
+    font-family: ProximaNovaRegular;
+    font-size: 16px;
+    color: #1e1e1e;
+    margin-bottom: 5%;
+  }
+  h2 {
+    font-family: ProximaNovaBold;
+    color: #1e1e1e;
+    margin-bottom: 10%;
+  }
+  h3 {
+    font-family: ProximaNovaRegular;
+    color: #1e1e1e;
+  }
 }
