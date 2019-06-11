@@ -61,6 +61,11 @@ public class Observation implements Serializable {
         this.measures = measures;
     }
 
+    public String getDimensionValue(String dimensionId) {
+        return dimensions.stream().filter(dimensionValue -> dimensionValue.getId().equals(dimensionId)).
+            findFirst().map(DimensionValue::getValue).get();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

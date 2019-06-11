@@ -9,6 +9,9 @@ import gr.ekke.socioscope.repository.MeasureRepository;
 import gr.ekke.socioscope.repository.ObservationRepository;
 import gr.ekke.socioscope.repository.search.DataSetSearchRepository;
 import gr.ekke.socioscope.security.SecurityUtils;
+import gr.ekke.socioscope.service.dto.Series;
+import gr.ekke.socioscope.service.dto.SeriesOptions;
+import gr.ekke.socioscope.service.mapper.ObservationMapper;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,16 +44,18 @@ public class DataSetService {
 
     private final ObservationRepository observationRepository;
 
+    private final ObservationMapper observationMapper;
 
     private final UserService userService;
 
-    public DataSetService(DataSetRepository dataSetRepository, DataSetSearchRepository dataSetSearchRepository, DimensionRepository dimensionRepository, MeasureRepository measureRepository,
-                          ObservationRepository observationRepository, UserService userService) {
+    public DataSetService(DataSetRepository dataSetRepository, DataSetSearchRepository dataSetSearchRepository, DimensionRepository dimensionRepository,
+                          MeasureRepository measureRepository, ObservationRepository observationRepository, ObservationMapper observationMapper, UserService userService) {
         this.dataSetRepository = dataSetRepository;
         this.dataSetSearchRepository = dataSetSearchRepository;
         this.dimensionRepository = dimensionRepository;
         this.measureRepository = measureRepository;
         this.observationRepository = observationRepository;
+        this.observationMapper = observationMapper;
         this.userService = userService;
     }
 
@@ -178,5 +183,32 @@ public class DataSetService {
         }
         DataSet result = dataSetRepository.save(dataSet.get().removeMeasure(measure.get()));
         return result;
+    }
+
+    /**
+     * Get series data from a dataset.
+     *
+     * @param datasetId
+     * @param seriesOptions the observations to add
+     * @return the requested series
+     */
+    public Optional<List<Series>> getSeries(String datasetId, SeriesOptions seriesOptions) {
+        log.debug("Request to get series for dataset {} with options {}", datasetId, seriesOptions);
+        return dataSetRepository.findById(datasetId)
+            .map(dataSet -> {
+                //if measure is not specified for the series, pick the first one
+                if (seriesOptions.getMeasure() == null) {
+                    seriesOptions.setMeasure(dataSet.getMeasures().stream().findFirst().get().getId());
+                } else {
+                    dataSet.getMeasures().stream().filter(measure -> measure.getId().equals(seriesOptions.getMeasure()))
+                        .findFirst().orElseThrow(() ->
+                        new BadRequestAlertException("Dataset does not contain the specified measure", "dataSet", "invalid_measure"));
+
+                }
+
+                return observationRepository.findByDatasetAndDimensions(datasetId,
+                    seriesOptions.getDimensionValues());
+            })
+            .map(observations -> observationMapper.observationsToMultipleSeries(observations, seriesOptions));
     }
 }

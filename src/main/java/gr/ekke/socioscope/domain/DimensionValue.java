@@ -2,7 +2,7 @@ package gr.ekke.socioscope.domain;
 
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -13,18 +13,18 @@ public class DimensionValue implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @NotNull
+    @NotBlank
     @Field("id")
     private String id;
 
-    @NotNull
+    @NotBlank
     @Field("value")
     private String value;
 
     public DimensionValue() {
     }
 
-    public DimensionValue(@NotNull String id, @NotNull String value) {
+    public DimensionValue(@NotBlank String id, @NotBlank String value) {
         this.id = id;
         this.value = value;
     }
