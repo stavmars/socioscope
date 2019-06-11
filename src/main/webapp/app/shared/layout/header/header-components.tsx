@@ -22,14 +22,14 @@ export const NavDropdown = props => (
 );
 
 export const BrandIcon = props => (
-  <div {...props} className="brand-icon">
-    <img src="/content/images/Assets/Logo-white.png" alt="Logo" />
+  <div className="brand-icon">
+    <img src={`/content/images/Assets/Logo-${props.logo}.png`} alt="Logo" />
   </div>
 );
 
 export const Brand = props => (
   <NavbarBrand tag={Link} to="/" className="brand-logo">
-    <BrandIcon />
+    <BrandIcon {...props} />
   </NavbarBrand>
 );
 

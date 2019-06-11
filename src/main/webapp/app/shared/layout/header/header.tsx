@@ -19,6 +19,7 @@ export interface IHeaderProps {
   isSwaggerEnabled: boolean;
   currentLocale: string;
   onLocaleChange: Function;
+  logo: string;
 }
 
 export interface IHeaderState {
@@ -50,7 +51,7 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
   };
 
   render() {
-    const { currentLocale, isAuthenticated, isAdmin, isSwaggerEnabled, isInProduction } = this.props;
+    const { currentLocale, isAuthenticated, isAdmin, isSwaggerEnabled, isInProduction, logo } = this.props;
 
     /* jhipster-needle-add-element-to-menu - JHipster will add new menu items here */
 
@@ -58,9 +59,9 @@ export default class Header extends React.Component<IHeaderProps, IHeaderState> 
       <div id="app-header">
         {this.renderDevRibbon()}
         <LoadingBar className="loading-bar" />
-        <Navbar dark expand="sm" fixed="top" className="jh-navbar">
+        <Navbar dark expand="sm" fixed="top" className={logo === 'white' ? 'transparentNavBar' : 'whiteNavBar'}>
           <NavbarToggler aria-label="Menu" onClick={this.toggleMenu} />
-          <Brand />
+          <Brand logo={logo} />
           <Collapse isOpen={this.state.menuOpen} navbar>
             <Nav id="header-tabs" className="ml-auto" navbar>
               <Home />
