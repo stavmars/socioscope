@@ -36,23 +36,21 @@ export class App extends React.Component<IAppProps> {
             className="toastify-container"
             toastClassName="toastify-toast"
           />
+          {/*<ErrorBoundary>*/}
+          {/*  <Header*/}
+          {/*    isAuthenticated={this.props.isAuthenticated}*/}
+          {/*    isAdmin={this.props.isAdmin}*/}
+          {/*    currentLocale={this.props.currentLocale}*/}
+          {/*    onLocaleChange={this.props.setLocale}*/}
+          {/*    ribbonEnv={this.props.ribbonEnv}*/}
+          {/*    isInProduction={this.props.isInProduction}*/}
+          {/*    isSwaggerEnabled={this.props.isSwaggerEnabled}*/}
+          {/*  />*/}
+          {/*</ErrorBoundary>*/}
           <ErrorBoundary>
-            <Header
-              isAuthenticated={this.props.isAuthenticated}
-              isAdmin={this.props.isAdmin}
-              currentLocale={this.props.currentLocale}
-              onLocaleChange={this.props.setLocale}
-              ribbonEnv={this.props.ribbonEnv}
-              isInProduction={this.props.isInProduction}
-              isSwaggerEnabled={this.props.isSwaggerEnabled}
-            />
+            <AppRoutes {...this.props} />
           </ErrorBoundary>
-          <div className="container-fluid view-container" id="app-view-container">
-            <ErrorBoundary>
-              <AppRoutes />
-            </ErrorBoundary>
-            <Footer />
-          </div>
+          <Footer />
         </div>
       </Router>
     );
