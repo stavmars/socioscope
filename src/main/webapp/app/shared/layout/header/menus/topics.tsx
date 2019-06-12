@@ -4,7 +4,7 @@ import { Translate, translate } from 'react-jhipster';
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 export const TopicsMenu = () => (
-  <UncontrolledDropdown nav inNavBar id="topics">
+  <UncontrolledDropdown nav id="topics">
     <DropdownToggle nav caret className="mega-menu">
       <span>{translate('global.menu.topics')}</span>
     </DropdownToggle>
