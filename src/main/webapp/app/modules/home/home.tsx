@@ -36,7 +36,7 @@ export class Home extends React.Component<IHomeProp> {
                   <br />
                   <br />
                   <span className="link">
-                    <HashLink to="/firstHighlight" tabIndex={0} replace={false}>
+                    <HashLink to="#discover" replace={false}>
                       ΕΞΕΡΕΥΝΗΣΤΕ
                     </HashLink>
                   </span>
@@ -46,7 +46,7 @@ export class Home extends React.Component<IHomeProp> {
           </Col>
         </Row>
         {/* for the first highlight */}
-        <a tabIndex={0} id="/firstHighlight" />
+        <a id="discover" />
         <Row style={{ marginTop: '-150px' }}>
           <Col sm="12" md={{ size: 12, offset: 0 }}>
             <Politicians />

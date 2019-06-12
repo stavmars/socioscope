@@ -3,6 +3,7 @@ import './about.scss';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Row, Col, Alert } from 'reactstrap';
+import { HashLink } from 'react-router-hash-link';
 
 import { IRootState } from 'app/shared/reducers';
 import { getSession } from 'app/shared/reducers/authentication';
@@ -17,6 +18,7 @@ export class About extends React.Component<IAbooutProp> {
   render() {
     return (
       <div className="about">
+        <a id="/about" />
         <Row>
           <Col sm="12" md={{ size: 6, offset: 4 }} className="title">
             Καλειδοσκόπιο κοινωνικών δεδομένων
@@ -25,10 +27,26 @@ export class About extends React.Component<IAbooutProp> {
         <Row>
           <Col xs="3" md={{ offset: 1 }} className="bullets">
             <ul>
-              <li>Το έργο</li>
-              <li>Επιστημονική Ομάδα</li>
-              <li>Πηγές</li>
-              <li>Τεχνικοί Υπεύθυνοι</li>
+              <li>
+                <HashLink to="/about" replace={false} style={{ textDecorationColor: 'red', color: '#1e1e1e' }}>
+                  Το έργο
+                </HashLink>
+              </li>
+              <li>
+                <HashLink to="/about#team" replace={false} style={{ textDecorationColor: 'red', color: '#1e1e1e' }}>
+                  Επιστημονική Ομάδα
+                </HashLink>
+              </li>
+              <li>
+                <HashLink to="/about#sources" replace={false} style={{ textDecorationColor: 'red', color: '#1e1e1e' }}>
+                  Πηγές
+                </HashLink>
+              </li>
+              <li>
+                <HashLink to="/about#techTeam" replace={false} style={{ textDecorationColor: 'red', color: '#1e1e1e' }}>
+                  Τεχνικοί Υπεύθυνοι
+                </HashLink>
+              </li>
               <li>Developers</li>
             </ul>
           </Col>
@@ -55,7 +73,10 @@ export class About extends React.Component<IAbooutProp> {
             <br />
             <br />
             <br />
-            <h2>Επιστημονική ομάδα</h2>
+            <h2>
+              <a id="team" />
+              Επιστημονική ομάδα
+            </h2>
             <span style={{ fontFamily: 'ProximaNovaBold' }}>Θεώνη Σταθοπούλου</span> / Διευθύντρια Ερευνών, ΕΚΚΕ, theosta@ekke.gr
             <br />
             <br />
@@ -69,7 +90,10 @@ export class About extends React.Component<IAbooutProp> {
             <br />
             <br />
             <br />
-            <h2>Πηγές</h2>
+            <h2>
+              <a id="sources" />
+              Πηγές
+            </h2>
             <h3>Εκδόσεις:</h3>
             <br />
             <br />
@@ -110,7 +134,10 @@ export class About extends React.Component<IAbooutProp> {
             <br />
             <br />
             <br />
-            <h2>Τεχνικοί Υπεύθυνοι</h2>
+            <h2>
+              <a id="techTeam" />
+              Τεχνικοί Υπεύθυνοι
+            </h2>
             <h3>Ανάλυση & Σχεδιασμός</h3>
             <span style={{ fontFamily: 'ProximaNovaBold' }}>Γιώργος Παπαστεφανάτος</span> / Ερευνητικός Συνεργάτης, Ε.Κ. ΑΘΗΝΑ),
             gpapas@imis.athena-innovation.gr

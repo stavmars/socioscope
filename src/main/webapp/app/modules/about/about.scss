@@ -13,8 +13,9 @@ About page styles
   .bullets {
     color: #1e1e1e;
     font-family: BPnoScriptBold;
-    font-size: 35px;
+    font-size: 30px;
     ul {
+      position: fixed;
       list-style-type: none;
       li {
         margin: 2%;
