@@ -5,7 +5,7 @@ import { Row, Col, Card, CardText, CardBody, CardTitle, CardImg } from 'reactstr
 // tslint:disable max-line-length
 
 const Schools = () => (
-  <Card body style={{ backgroundColor: '#D8FFF6', borderColor: '#D8FFF6' }}>
+  <Card body style={{ backgroundColor: '#D8FFF6', borderColor: '#D8FFF6', width: '95%', left: '2.5%' }}>
     <CardBody className="schools-card-body">
       <img className="card-img" src="/content/images/Assets/Teenagers.svg" alt="Card image cap" />
       <CardTitle className="card-title">Στάσεις και αντιλήψεις μαθητών Γυμνασίου</CardTitle>

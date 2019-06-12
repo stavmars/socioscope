@@ -5,7 +5,7 @@ import { Row, Col, Card, CardText, CardBody, CardTitle, CardImg } from 'reactstr
 // tslint:disable max-line-length
 
 const Politicians = () => (
-  <Card body style={{ backgroundColor: '#FFEFD8', borderColor: '#FFEFD8' }}>
+  <Card body style={{ backgroundColor: '#FFEFD8', borderColor: '#FFEFD8', width: '95%', left: '2.5%' }}>
     <CardBody className="politicians-card-body">
       <CardImg className="card-img" src="/content/images/Assets/Politicians.svg" alt="Card image cap" />
       <Row>
