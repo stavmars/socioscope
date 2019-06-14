@@ -2,9 +2,10 @@ package gr.ekke.socioscope.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import gr.ekke.socioscope.domain.DataSet;
+import gr.ekke.socioscope.domain.Highlight;
 import gr.ekke.socioscope.domain.Observation;
 import gr.ekke.socioscope.service.dto.Series;
-import gr.ekke.socioscope.service.dto.SeriesOptions;
+import gr.ekke.socioscope.domain.SeriesOptions;
 import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.ObservationRepository;
 import gr.ekke.socioscope.security.SecurityUtils;
@@ -23,6 +24,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * REST controller for managing DataSet.
@@ -174,6 +176,33 @@ public class DataSetResource {
     public DataSet removeMeasure(@PathVariable String dataSetId, @PathVariable String measureId) throws URISyntaxException {
         log.debug("REST request to remove Measure : {} from DataSet : {}", dataSetId, measureId);
         return dataSetService.removeMeasure(dataSetId, measureId);
+    }
+
+    /**
+     * GET  /data-sets/:id/highlights : get highlights from dataSet with "id".
+     *
+     * @param dataSetId the id of the dataSet to retrieve the highlights
+     * @return the requested highlights
+     */
+    @GetMapping("/data-sets/{dataSetId}/highlights")
+    @Timed
+    public List<Highlight> getHighlights(@PathVariable String dataSetId) {
+        log.debug("REST request to get Highlights from DataSet : {}", dataSetId);
+        return dataSetService.getHighlights(dataSetId);
+    }
+
+    /**
+     * PUT  /data-sets/:id/highlights : add highlights to dataSet with "id".
+     *
+     * @param dataSetId the id of the dataSet to retrieve the highlights
+     * @param highlights to be added
+     * @return the updated dataSet
+     */
+    @PutMapping("/data-sets/{dataSetId}/highlights")
+    @Timed
+    public DataSet addHighlights(@PathVariable String dataSetId, @Valid @RequestBody List<Highlight> highlights) {
+        log.debug("REST request to add {} Highlights to DataSet : {} ", highlights.size(), dataSetId);
+        return dataSetService.addHighlights(dataSetId, highlights);
     }
 
     /**

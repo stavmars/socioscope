@@ -2,7 +2,7 @@ package gr.ekke.socioscope.service.mapper;
 
 import gr.ekke.socioscope.domain.Observation;
 import gr.ekke.socioscope.service.dto.Series;
-import gr.ekke.socioscope.service.dto.SeriesOptions;
+import gr.ekke.socioscope.domain.SeriesOptions;
 import gr.ekke.socioscope.service.dto.SeriesPoint;
 import org.springframework.stereotype.Service;
 
