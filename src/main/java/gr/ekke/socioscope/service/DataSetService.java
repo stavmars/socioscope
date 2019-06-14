@@ -186,6 +186,7 @@ public class DataSetService {
         log.debug("Request to add {} Highlights to DataSet {}", highlights.size(), dataSetId);
         DataSet dataSet = dataSetRepository.findById(dataSetId).get();
         dataSet.addHighlights(highlights);
+        dataSetRepository.save(dataSet);
         return dataSet;
     }
 
