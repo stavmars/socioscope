@@ -1,8 +1,6 @@
 package gr.ekke.socioscope.service;
 
-import gr.ekke.socioscope.domain.DataSet;
-import gr.ekke.socioscope.domain.Dimension;
-import gr.ekke.socioscope.domain.Measure;
+import gr.ekke.socioscope.domain.*;
 import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.DimensionRepository;
 import gr.ekke.socioscope.repository.MeasureRepository;
@@ -10,7 +8,6 @@ import gr.ekke.socioscope.repository.ObservationRepository;
 import gr.ekke.socioscope.repository.search.DataSetSearchRepository;
 import gr.ekke.socioscope.security.SecurityUtils;
 import gr.ekke.socioscope.service.dto.Series;
-import gr.ekke.socioscope.service.dto.SeriesOptions;
 import gr.ekke.socioscope.service.mapper.ObservationMapper;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
 import org.slf4j.Logger;
@@ -20,6 +17,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -164,6 +162,31 @@ public class DataSetService {
         }
         DataSet result = dataSetRepository.save(dataSet.get().removeDimension(dimension.get()));
         return result;
+    }
+
+    /**
+     * Get Highlights from a dataset.
+     *
+     * @param dataSetId
+     * @return the requested list
+     */
+    public List<Highlight> getHighlights(String dataSetId) {
+        log.debug("Request to get Highlights of DataSet : {}", dataSetId);
+        return dataSetRepository.findById(dataSetId).get().getHighlights();
+    }
+
+    /**
+     * Add highlights to a dataset.
+     *
+     * @param dataSetId
+     * @param highlights to be added
+     * @return the updated dataSet
+     */
+    public DataSet addHighlights(String dataSetId, List<Highlight> highlights) {
+        log.debug("Request to add {} Highlights to DataSet {}", highlights.size(), dataSetId);
+        DataSet dataSet = dataSetRepository.findById(dataSetId).get();
+        dataSet.addHighlights(highlights);
+        return dataSet;
     }
 
     /**

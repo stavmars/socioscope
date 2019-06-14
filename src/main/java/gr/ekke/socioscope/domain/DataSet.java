@@ -11,10 +11,7 @@ import javax.validation.constraints.*;
 
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * A DataSet.
@@ -50,6 +47,9 @@ public class DataSet implements Serializable {
     @DBRef
     @Field("measures")
     private Set<Measure> measures = new HashSet<>();
+
+    @Field("highlights")
+    private List<Highlight> highlights = new ArrayList<>();
 
     @DBRef
     @Field("creator")
@@ -151,6 +151,24 @@ public class DataSet implements Serializable {
 
     public void setMeasures(Set<Measure> measures) {
         this.measures = measures;
+    }
+
+    public List<Highlight> getHighlights() {
+        return highlights;
+    }
+
+    public DataSet addHighlights(List<Highlight> highlights) {
+        this.highlights.addAll(highlights);
+        return this;
+    }
+
+    public DataSet removeHighlight(Highlight highlight) {
+        this.highlights.remove(highlight);
+        return this;
+    }
+
+    public void setHighlights(List<Highlight> highlights) {
+        this.highlights = highlights;
     }
 
     public User getCreator() {

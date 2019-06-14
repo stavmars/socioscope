@@ -1,6 +1,4 @@
-package gr.ekke.socioscope.service.dto;
-
-import gr.ekke.socioscope.domain.DimensionValue;
+package gr.ekke.socioscope.domain;
 
 import javax.validation.constraints.NotBlank;
 import java.util.List;
