@@ -2,12 +2,15 @@ import './home.scss';
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { Translate } from 'react-jhipster';
 import { connect } from 'react-redux';
-import { Row, Col, Alert } from 'reactstrap';
+import { Row, Col, Card, CardText, CardBody, CardTitle } from 'reactstrap';
 
 import { IRootState } from 'app/shared/reducers';
 import { getSession } from 'app/shared/reducers/authentication';
+import Politicians from 'app/modules/highlights/politicians';
+import Schools from 'app/modules/highlights/schools';
 
 export interface IHomeProp extends StateProps, DispatchProps {}
 
@@ -19,50 +22,43 @@ export class Home extends React.Component<IHomeProp> {
   render() {
     const { account } = this.props;
     return (
-      <Row>
-        <Col md="9">
-          <h2>
-            <Translate contentKey="home.title">Welcome to Socioscope!</Translate>
-          </h2>
-          <p className="lead">
-            <Translate contentKey="home.subtitle">This is your homepage</Translate>
-          </p>
-          {account && account.login ? (
-            <div>
-              <Alert color="success">
-                <Translate contentKey="home.logged.message" interpolate={{ username: account.login }}>
-                  You are logged in as user {account.login}.
-                </Translate>
-              </Alert>
-            </div>
-          ) : (
-            <div>
-              <Alert color="warning">
-                <Translate contentKey="global.messages.info.authenticated.prefix">If you want to </Translate>
-                <Link to="/login" className="alert-link">
-                  <Translate contentKey="global.messages.info.authenticated.link"> sign in</Translate>
-                </Link>
-                <Translate contentKey="global.messages.info.authenticated.suffix">
-                  , you can try the default accounts:
-                  <br />- Administrator (login=&quot;admin&quot; and password=&quot;admin&quot;)
-                  <br />- User (login=&quot;user&quot; and password=&quot;user&quot;).
-                </Translate>
-              </Alert>
-
-              <Alert color="warning">
-                <Translate contentKey="global.messages.info.register.noaccount">You do not have an account yet?</Translate>
-                &nbsp;
-                <Link to="/register" className="alert-link">
-                  <Translate contentKey="global.messages.info.register.link">Register a new account</Translate>
-                </Link>
-              </Alert>
-            </div>
-          )}
-        </Col>
-        <Col md="3" className="pad">
-          {/*<span className="hipster rounded" />*/}
-        </Col>
-      </Row>
+      <div>
+        <Row>
+          <Col>
+            <Card className="home" style={{ height: '100vh', width: '100%' }}>
+              <CardBody>
+                <CardTitle className="title">Ανοικτά Κοινωνικά Δεδομένα</CardTitle>
+                <CardText className="text">
+                  Το socioscope είναι μια πλατφόρμα οπτικοποίησης κοινωνικών και πολιτικών δεδομένων. Εξερευνήστε τις θεματικές και
+                  διαμορφώστε τα δικά σας διαγράμματα, πίνακες και χάρτες.
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <span className="link">
+                    <HashLink to="#discover" replace={false}>
+                      ΕΞΕΡΕΥΝΗΣΤΕ
+                    </HashLink>
+                  </span>
+                </CardText>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+        {/* for the first highlight */}
+        <a id="discover" />
+        <Row style={{ marginTop: '-150px' }}>
+          <Col sm="12" md={{ size: 12, offset: 0 }}>
+            <Politicians />
+          </Col>
+        </Row>
+        {/* for the last highlight */}
+        <Row style={{ marginTop: '31px', marginBottom: '31px' }} className="schools">
+          <Col sm="12" md={{ size: 12, offset: 0 }}>
+            <Schools />
+          </Col>
+        </Row>
+      </div>
     );
   }
 }

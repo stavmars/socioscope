@@ -9,11 +9,13 @@ import PasswordResetInit from 'app/modules/account/password-reset/init/password-
 import PasswordResetFinish from 'app/modules/account/password-reset/finish/password-reset-finish';
 import Logout from 'app/modules/login/logout';
 import Home from 'app/modules/home/home';
+import About from 'app/modules/about/about';
 import Entities from 'app/entities';
 import DataSetPage from 'app/modules/dataset-page';
 import PrivateRoute from 'app/shared/auth/private-route';
 import ErrorBoundaryRoute from 'app/shared/error/error-boundary-route';
 import { AUTHORITIES } from 'app/config/constants';
+import Header from 'app/shared/layout/header/header';
 
 // tslint:disable:space-in-parens
 const Account = Loadable({
@@ -26,10 +28,43 @@ const Admin = Loadable({
   loading: () => <div>loading ...</div>
 });
 // tslint:enable
+// tslint:disable:jsx-no-lambda
 
-const Routes = () => (
+const Routes = props => (
   <div className="view-routes">
     <ErrorBoundaryRoute path="/login" component={Login} />
+    <ErrorBoundaryRoute
+      path="/"
+      exact
+      component={() => (
+        <Header
+          isAuthenticated={props.isAuthenticated}
+          isAdmin={props.isAdmin}
+          ribbonEnv={props.ribbonEnv}
+          isInProduction={props.isInProduction}
+          isSwaggerEnabled={props.isSwaggerEnabled}
+          currentLocale={props.currentLocale}
+          onLocaleChange={props.setLocale}
+          logo={'white'}
+        />
+      )}
+    />
+    <ErrorBoundaryRoute
+      path="/about"
+      exact
+      component={() => (
+        <Header
+          isAuthenticated={props.isAuthenticated}
+          isAdmin={props.isAdmin}
+          ribbonEnv={props.ribbonEnv}
+          isInProduction={props.isInProduction}
+          isSwaggerEnabled={props.isSwaggerEnabled}
+          currentLocale={props.currentLocale}
+          onLocaleChange={props.setLocale}
+          logo={'black'}
+        />
+      )}
+    />
     <Switch>
       <ErrorBoundaryRoute path="/logout" component={Logout} />
       <ErrorBoundaryRoute path="/register" component={Register} />
@@ -40,6 +75,7 @@ const Routes = () => (
       <PrivateRoute path="/account" component={Account} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
       <PrivateRoute path="/entity" component={Entities} hasAnyAuthorities={[AUTHORITIES.USER]} />
       <ErrorBoundaryRoute path="/dataset" component={DataSetPage} />
+      <ErrorBoundaryRoute path="/about" component={About} />
       <ErrorBoundaryRoute path="/" component={Home} />
     </Switch>
   </div>
