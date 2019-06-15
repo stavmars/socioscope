@@ -108,11 +108,6 @@ public class DataSetResource {
     public ResponseEntity<?> getDataSet(@PathVariable String id) {
         log.debug("REST request to get DataSet : {}", id);
         Optional<DataSet> dataSet = dataSetService.findOne(id);
-        if (dataSet.isPresent() && dataSet.get().getCreator() != null &&
-            !SecurityUtils.getCurrentUserLogin().get().equals("admin") &&
-            !dataSet.get().getCreator().getLogin().equals(SecurityUtils.getCurrentUserLogin().orElse(""))) {
-            return new ResponseEntity<>("error.http.403", HttpStatus.FORBIDDEN);
-        }
         return ResponseUtil.wrapOrNotFound(dataSet);
     }
 
