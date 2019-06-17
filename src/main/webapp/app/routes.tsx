@@ -33,38 +33,39 @@ const Admin = Loadable({
 const Routes = props => (
   <div className="view-routes">
     <ErrorBoundaryRoute path="/login" component={Login} />
-    <ErrorBoundaryRoute
-      path="/"
-      exact
-      component={() => (
-        <Header
-          isAuthenticated={props.isAuthenticated}
-          isAdmin={props.isAdmin}
-          ribbonEnv={props.ribbonEnv}
-          isInProduction={props.isInProduction}
-          isSwaggerEnabled={props.isSwaggerEnabled}
-          currentLocale={props.currentLocale}
-          onLocaleChange={props.setLocale}
-          logo={'white'}
-        />
-      )}
-    />
-    <ErrorBoundaryRoute
-      path="/about"
-      exact
-      component={() => (
-        <Header
-          isAuthenticated={props.isAuthenticated}
-          isAdmin={props.isAdmin}
-          ribbonEnv={props.ribbonEnv}
-          isInProduction={props.isInProduction}
-          isSwaggerEnabled={props.isSwaggerEnabled}
-          currentLocale={props.currentLocale}
-          onLocaleChange={props.setLocale}
-          logo={'black'}
-        />
-      )}
-    />
+    <Switch>
+      <ErrorBoundaryRoute
+        path="/about"
+        exact
+        component={() => (
+          <Header
+            isAuthenticated={props.isAuthenticated}
+            isAdmin={props.isAdmin}
+            ribbonEnv={props.ribbonEnv}
+            isInProduction={props.isInProduction}
+            isSwaggerEnabled={props.isSwaggerEnabled}
+            currentLocale={props.currentLocale}
+            onLocaleChange={props.setLocale}
+            logo={'black'}
+          />
+        )}
+      />
+      <ErrorBoundaryRoute
+        component={() => (
+          <Header
+            isAuthenticated={props.isAuthenticated}
+            isAdmin={props.isAdmin}
+            ribbonEnv={props.ribbonEnv}
+            isInProduction={props.isInProduction}
+            isSwaggerEnabled={props.isSwaggerEnabled}
+            currentLocale={props.currentLocale}
+            onLocaleChange={props.setLocale}
+            logo={'white'}
+          />
+        )}
+      />
+    </Switch>
+
     <Switch>
       <ErrorBoundaryRoute path="/logout" component={Logout} />
       <ErrorBoundaryRoute path="/register" component={Register} />
