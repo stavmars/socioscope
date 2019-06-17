@@ -2,6 +2,8 @@ package gr.ekke.socioscope.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import gr.ekke.socioscope.domain.Dimension;
+import gr.ekke.socioscope.domain.DimensionCode;
+import gr.ekke.socioscope.repository.DimensionCodeRepository;
 import gr.ekke.socioscope.service.DimensionService;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
 import gr.ekke.socioscope.web.rest.util.HeaderUtil;
@@ -27,6 +29,7 @@ public class DimensionResource {
     private static final String ENTITY_NAME = "dimension";
     private final Logger log = LoggerFactory.getLogger(DimensionResource.class);
     private final DimensionService dimensionService;
+
 
     public DimensionResource(DimensionService dimensionService) {
         this.dimensionService = dimensionService;
@@ -95,6 +98,19 @@ public class DimensionResource {
         log.debug("REST request to get Dimension : {}", id);
         Optional<Dimension> dimension = dimensionService.findOne(id);
         return ResponseUtil.wrapOrNotFound(dimension);
+    }
+
+    /**
+     * GET  /dimensions/:id/codelist : get the codelist for the "id" dimension.
+     *
+     * @param id the id of the dimension
+     * @return the ResponseEntity with status 200 (OK) and with body the dimension codelist, or with status 404 (Not Found)
+     */
+    @GetMapping("/dimensions/{id}/codelist")
+    @Timed
+    public ResponseEntity<List<DimensionCode>> getDimensionCodelist(@PathVariable String id) {
+        log.debug("REST request to get codelist for Dimension : {}", id);
+        return ResponseUtil.wrapOrNotFound(dimensionService.getDimensionCodelist(id));
     }
 
     /**

@@ -1,11 +1,14 @@
 package gr.ekke.socioscope.service;
 
 import gr.ekke.socioscope.domain.Dimension;
+import gr.ekke.socioscope.domain.DimensionCode;
 import gr.ekke.socioscope.repository.DataSetRepository;
+import gr.ekke.socioscope.repository.DimensionCodeRepository;
 import gr.ekke.socioscope.repository.DimensionRepository;
 import gr.ekke.socioscope.repository.search.DimensionSearchRepository;
 import gr.ekke.socioscope.security.SecurityUtils;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
+import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -33,12 +36,16 @@ public class DimensionService {
 
     private final DataSetRepository dataSetRepository;
 
+    private final DimensionCodeRepository dimensionCodeRepository;
+
     private final UserService userService;
 
-    public DimensionService(DimensionRepository dimensionRepository, DimensionSearchRepository dimensionSearchRepository, DataSetRepository dataSetRepository, UserService userService) {
+    public DimensionService(DimensionRepository dimensionRepository, DimensionSearchRepository dimensionSearchRepository,
+                            DataSetRepository dataSetRepository, DimensionCodeRepository dimensionCodeRepository, UserService userService) {
         this.dimensionRepository = dimensionRepository;
         this.dimensionSearchRepository = dimensionSearchRepository;
         this.dataSetRepository = dataSetRepository;
+        this.dimensionCodeRepository = dimensionCodeRepository;
         this.userService = userService;
     }
 
@@ -132,5 +139,16 @@ public class DimensionService {
         return StreamSupport
             .stream(dimensionSearchRepository.search(queryStringQuery(query)).spliterator(), false)
             .collect(Collectors.toList());
+    }
+
+    /**
+     * Get the codelist of a dimension
+     *
+     * @param id the id of the dimension
+     * @return the dimension codelist
+     */
+    public Optional<List<DimensionCode>> getDimensionCodelist(String id) {
+        log.debug("Request to get the codelist for Dimension : {}", id);
+        return dimensionRepository.findById(id).map(dimension -> dimensionCodeRepository.findAllByDimensionId(id));
     }
 }
