@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Row, Col, Alert } from 'reactstrap';
+import { Col, Container, Jumbotron, Row } from 'reactstrap';
 import { getDataset, getSeries } from 'app/modules/dataset-page/dataset-page-reducer';
 
 import { IRootState } from 'app/shared/reducers';
@@ -19,7 +19,16 @@ export class DatasetPage extends React.Component<IDatasetPageProp> {
 
   render() {
     const { dataset, loadingDataset } = this.props;
-    return loadingDataset ? <p>Loading...</p> : <p>Loaded</p>;
+
+    return (
+      <div>
+        <Jumbotron fluid>
+          <Container fluid>
+            <h1 className="display-3">{dataset.name.el}</h1>
+          </Container>
+        </Jumbotron>
+      </div>
+    );
   }
 }
 
