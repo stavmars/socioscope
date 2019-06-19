@@ -26,7 +26,7 @@ const Footer = props => (
           <img src="/content/images/Assets/Logo-white-footer.png" />
         </Col>
         <Col xs="6" sm="2" className="photos">
-          <img src="/content/images/Assets/ekke.png" />
+          <img src="/content/images/Assets/ekke.png" /> <img src="/content/images/Assets/athena.png" />
         </Col>
         <Col xs="6" sm="2" className="photos">
           <img src="/content/images/Assets/cc.png" />
