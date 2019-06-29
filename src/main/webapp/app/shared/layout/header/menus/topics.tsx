@@ -1,10 +1,9 @@
 import React from 'react';
 import { NavLink as Link } from 'react-router-dom';
 import { Translate, translate } from 'react-jhipster';
-import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
-export const TopicsMenu = () => (
-  <UncontrolledDropdown nav id="topics">
+export const TopicsMenu = () => ({
+  /*  <UncontrolledDropdown nav id="topics">
     <DropdownToggle nav caret className="mega-menu">
       <span>{translate('global.menu.topics')}</span>
     </DropdownToggle>
@@ -16,7 +15,7 @@ export const TopicsMenu = () => (
       <DropdownItem>Πολιτικό Προσωπικό</DropdownItem>
       <DropdownItem>Στάσεις και Ατνιλήψεις μαθητών Γυμνασίου</DropdownItem>
     </DropdownMenu>
-  </UncontrolledDropdown>
-);
+  </UncontrolledDropdown>*/
+});
 
 export default TopicsMenu;

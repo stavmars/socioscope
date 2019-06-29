@@ -6,9 +6,8 @@ TranslatorContext.setDefaultLocale('el');
 TranslatorContext.setRenderInnerTextForMissingKeys(false);
 
 export const languages: any = {
-  en: { name: 'English' },
-  el: { name: 'Ελληνικά' }
-  // jhipster-needle-i18n-language-key-pipe - JHipster will add/remove languages in this object
+  en: { name: 'English', shortName: 'EN' },
+  el: { name: 'Ελληνικά', shortName: 'ΕΛ' }
 };
 
 export const locales = Object.keys(languages).sort();
