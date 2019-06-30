@@ -1,12 +1,11 @@
+import 'semantic-ui-css/semantic.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import './app.scss';
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Card } from 'reactstrap';
 import { HashRouter as Router } from 'react-router-dom';
 import { ToastContainer, ToastPosition, toast } from 'react-toastify';
-
 import { IRootState } from 'app/shared/reducers';
 import { getSession } from 'app/shared/reducers/authentication';
 import { getProfile } from 'app/shared/reducers/application-profile';
@@ -17,6 +16,9 @@ import { hasAnyAuthority } from 'app/shared/auth/private-route';
 import ErrorBoundary from 'app/shared/error/error-boundary';
 import { AUTHORITIES } from 'app/config/constants';
 import AppRoutes from 'app/routes';
+import LoadingBar from 'react-redux-loading-bar';
+import { Translate } from 'react-jhipster';
+import { Transition } from 'semantic-ui-react';
 
 export interface IAppProps extends StateProps, DispatchProps {}
 
@@ -26,27 +28,26 @@ export class App extends React.Component<IAppProps> {
     this.props.getProfile();
   }
 
+  renderDevRibbon = () =>
+    this.props.isInProduction === false ? (
+      <div className="ribbon dev">
+        <a href="">
+          <Translate contentKey={`global.ribbon.${this.props.ribbonEnv}`} />
+        </a>
+      </div>
+    ) : null;
+
   render() {
-    const paddingTop = '85px';
     return (
       <Router>
-        <div className="app-container" style={{ paddingTop }}>
+        <div className="app-container">
+          {this.renderDevRibbon()}
+          <LoadingBar className="loading-bar" />
           <ToastContainer
             position={toast.POSITION.TOP_LEFT as ToastPosition}
             className="toastify-container"
             toastClassName="toastify-toast"
           />
-          {/*<ErrorBoundary>*/}
-          {/*  <Header*/}
-          {/*    isAuthenticated={this.props.isAuthenticated}*/}
-          {/*    isAdmin={this.props.isAdmin}*/}
-          {/*    currentLocale={this.props.currentLocale}*/}
-          {/*    onLocaleChange={this.props.setLocale}*/}
-          {/*    ribbonEnv={this.props.ribbonEnv}*/}
-          {/*    isInProduction={this.props.isInProduction}*/}
-          {/*    isSwaggerEnabled={this.props.isSwaggerEnabled}*/}
-          {/*  />*/}
-          {/*</ErrorBoundary>*/}
           <ErrorBoundary>
             <AppRoutes {...this.props} />
           </ErrorBoundary>
@@ -57,13 +58,13 @@ export class App extends React.Component<IAppProps> {
   }
 }
 
-const mapStateToProps = ({ authentication, applicationProfile, locale }: IRootState) => ({
+const mapStateToProps = ({ authentication, applicationProfile, locale, header }: IRootState) => ({
   currentLocale: locale.currentLocale,
   isAuthenticated: authentication.isAuthenticated,
   isAdmin: hasAnyAuthority(authentication.account.authorities, [AUTHORITIES.ADMIN]),
   ribbonEnv: applicationProfile.ribbonEnv,
   isInProduction: applicationProfile.inProduction,
-  isSwaggerEnabled: applicationProfile.isSwaggerEnabled
+  isHeaderVisible: header.isHeaderVisible
 });
 
 const mapDispatchToProps = { setLocale, getSession, getProfile };

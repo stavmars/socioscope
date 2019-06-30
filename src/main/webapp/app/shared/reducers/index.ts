@@ -12,29 +12,12 @@ import activate, { ActivateState } from 'app/modules/account/activate/activate.r
 import password, { PasswordState } from 'app/modules/account/password/password.reducer';
 import settings, { SettingsState } from 'app/modules/account/settings/settings.reducer';
 import passwordReset, { PasswordResetState } from 'app/modules/account/password-reset/password-reset.reducer';
-// prettier-ignore
-// prettier-ignore
-// prettier-ignore
-import dataSet, {
-  DataSetState
-} from 'app/entities/data-set/data-set.reducer';
-// prettier-ignore
-import dimension, {
-  DimensionState
-} from 'app/entities/dimension/dimension.reducer';
-// prettier-ignore
-import measure, {
-  MeasureState
-} from 'app/entities/measure/measure.reducer';
-// prettier-ignore
-import dimensionCode, {
-  DimensionCodeState
-} from 'app/entities/dimension-code/dimension-code.reducer';
-// prettier-ignore
-import datasetPage, {
-  DatasetPageState
-} from 'app/modules/dataset-page/dataset-page-reducer';
-
+import dataSet, { DataSetState } from 'app/entities/data-set/data-set.reducer';
+import dimension, { DimensionState } from 'app/entities/dimension/dimension.reducer';
+import measure, { MeasureState } from 'app/entities/measure/measure.reducer';
+import dimensionCode, { DimensionCodeState } from 'app/entities/dimension-code/dimension-code.reducer';
+import datasetPage, { DatasetPageState } from 'app/modules/dataset-page/dataset-page-reducer';
+import header, { HeaderState } from 'app/shared/reducers/header';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -53,6 +36,7 @@ export interface IRootState {
   readonly measure: MeasureState;
   readonly dimensionCode: DimensionCodeState;
   readonly datasetPage: DatasetPageState;
+  readonly header: HeaderState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -73,6 +57,7 @@ const rootReducer = combineReducers<IRootState>({
   measure,
   dimensionCode,
   datasetPage,
+  header,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

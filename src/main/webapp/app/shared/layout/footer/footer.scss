@@ -1,19 +1,21 @@
-.footer {
-  opacity: 1;
-  position: relative;
-  bottom: 0;
-  height: 15%;
-  width: 100%;
+#app-footer {
   background-color: #000000;
   align-items: center;
   alignment: center;
-  .row-1 {
-    font-family: ProximaNovaSemibold;
+  padding: 40px 120px;
+  font-family: ProximaNovaSemibold;
+  color: #ededed;
+}
+
+#app-footer-links {
+  height: 40px;
+  a {
+    color: #ededed;
     font-size: 12px;
-  }
-  .row-2 {
-    .photos {
-      margin-top: 2%;
+    margin-left: 20px;
+    &::before {
+      margin-left: -13px;
+      color: #ededed;
     }
   }
 }

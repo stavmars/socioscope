@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
 import Login from 'app/modules/login/login';
@@ -27,45 +27,20 @@ const Admin = Loadable({
   loader: () => import(/* webpackChunkName: "administration" */ 'app/modules/administration'),
   loading: () => <div>loading ...</div>
 });
+
 // tslint:enable
 // tslint:disable:jsx-no-lambda
 
 const Routes = props => (
   <div className="view-routes">
-    <ErrorBoundaryRoute path="/login" component={Login} />
-    <Switch>
-      <ErrorBoundaryRoute
-        path="/about"
-        exact
-        component={() => (
-          <Header
-            isAuthenticated={props.isAuthenticated}
-            isAdmin={props.isAdmin}
-            ribbonEnv={props.ribbonEnv}
-            isInProduction={props.isInProduction}
-            isSwaggerEnabled={props.isSwaggerEnabled}
-            currentLocale={props.currentLocale}
-            onLocaleChange={props.setLocale}
-            logo={'black'}
-          />
-        )}
-      />
-      <ErrorBoundaryRoute
-        component={() => (
-          <Header
-            isAuthenticated={props.isAuthenticated}
-            isAdmin={props.isAdmin}
-            ribbonEnv={props.ribbonEnv}
-            isInProduction={props.isInProduction}
-            isSwaggerEnabled={props.isSwaggerEnabled}
-            currentLocale={props.currentLocale}
-            onLocaleChange={props.setLocale}
-            logo={'white'}
-          />
-        )}
-      />
-    </Switch>
+    {props.isHeaderVisible && (
+      <Switch>
+        <Route path="/about" render={() => <Header isFixed className="about-page-header" />} />
+        <Route path="/" render={() => <Header isFixed />} />
+      </Switch>
+    )}
 
+    <ErrorBoundaryRoute path="/login" component={Login} />
     <Switch>
       <ErrorBoundaryRoute path="/logout" component={Logout} />
       <ErrorBoundaryRoute path="/register" component={Register} />

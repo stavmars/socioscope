@@ -1,0 +1,30 @@
+/* ==========================================================================
+Color schemes
+========================================================================== */
+
+$color-scheme-1-bg: #fffed7;
+$color-scheme-1-accent: #d146fc;
+
+$color-scheme-2-bg: #ffefd8;
+$color-scheme-2-accent: #2f7cff;
+
+$color-scheme-3-bg: #d8fff6;
+$color-scheme-3-accent: #ff5d39;
+
+.color-scheme-1 {
+  .text-accent {
+    color: $color-scheme-1-accent;
+  }
+}
+
+.color-scheme-2 {
+  .text-accent {
+    color: $color-scheme-2-accent;
+  }
+}
+
+.color-scheme-3 {
+  .text-accent {
+    color: $color-scheme-3-accent;
+  }
+}

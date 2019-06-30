@@ -1,45 +1,51 @@
 import React from 'react';
-import { DropdownItem } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink as Link } from 'react-router-dom';
-import { NavDropdown } from '../header-components';
 import { Translate, translate } from 'react-jhipster';
+import { Dropdown, Icon } from 'semantic-ui-react';
 
 const adminMenuItems = (
   <>
-    <DropdownItem tag={Link} to="/admin/user-management">
-      <FontAwesomeIcon icon="user" fixedWidth /> <Translate contentKey="global.menu.admin.userManagement">User management</Translate>
-    </DropdownItem>
-    <DropdownItem tag={Link} to="/admin/metrics">
-      <FontAwesomeIcon icon="tachometer-alt" fixedWidth /> <Translate contentKey="global.menu.admin.metrics">Metrics</Translate>
-    </DropdownItem>
-    <DropdownItem tag={Link} to="/admin/health">
-      <FontAwesomeIcon icon="heart" fixedWidth /> <Translate contentKey="global.menu.admin.health">Health</Translate>
-    </DropdownItem>
-    <DropdownItem tag={Link} to="/admin/configuration">
-      <FontAwesomeIcon icon="list" fixedWidth /> <Translate contentKey="global.menu.admin.configuration">Configuration</Translate>
-    </DropdownItem>
-    <DropdownItem tag={Link} to="/admin/audits">
-      <FontAwesomeIcon icon="bell" fixedWidth /> <Translate contentKey="global.menu.admin.audits">Audits</Translate>
-    </DropdownItem>
-    {/* jhipster-needle-add-element-to-admin-menu - JHipster will add entities to the admin menu here */}
-    <DropdownItem tag={Link} to="/admin/logs">
-      <FontAwesomeIcon icon="tasks" fixedWidth /> <Translate contentKey="global.menu.admin.logs">Logs</Translate>
-    </DropdownItem>
+    <Dropdown.Item as={Link} to="/admin/user-management">
+      <Icon name="user" />
+      <Translate contentKey="global.menu.account.settings">User management</Translate>
+    </Dropdown.Item>
+    <Dropdown.Item as={Link} to="/admin/metrics">
+      <Icon name="tachometer alternate" />
+      <Translate contentKey="global.menu.admin.metrics">Metrics</Translate>
+    </Dropdown.Item>
+    <Dropdown.Item as={Link} to="/admin/health">
+      <Icon name="heart" />
+      <Translate contentKey="global.menu.admin.health">Health</Translate>
+    </Dropdown.Item>
+    <Dropdown.Item as={Link} to="/admin/configuration">
+      <Icon name="list" />
+      <Translate contentKey="global.menu.admin.configuration">Configuration</Translate>
+    </Dropdown.Item>
+    <Dropdown.Item as={Link} to="/admin/audits">
+      <Icon name="bell" />
+      <Translate contentKey="global.menu.admin.audits">Audits</Translate>
+    </Dropdown.Item>
+    <Dropdown.Item as={Link} to="/admin/logs">
+      <Icon name="tasks" />
+      <Translate contentKey="global.menu.admin.logs">Logs</Translate>
+    </Dropdown.Item>
   </>
 );
 
 const swaggerItem = (
-  <DropdownItem tag={Link} to="/admin/docs">
-    <FontAwesomeIcon icon="book" fixedWidth /> <Translate contentKey="global.menu.admin.apidocs">API</Translate>
-  </DropdownItem>
+  <Dropdown.Item as={Link} to="/admin/docs">
+    <Icon name="book" />
+    <Translate contentKey="global.menu.admin.apidocs">API</Translate>
+  </Dropdown.Item>
 );
 
 export const AdminMenu = ({ showSwagger }) => (
-  <NavDropdown icon="user-plus" name={translate('global.menu.admin.main')} style={{ width: '140%' }} id="admin-menu">
-    {adminMenuItems}
-    {showSwagger && swaggerItem}
-  </NavDropdown>
+  <Dropdown item simple icon="user-plus" text={translate('global.menu.admin.main')} id="admin-menu">
+    <Dropdown.Menu>
+      {adminMenuItems}
+      {showSwagger && swaggerItem}
+    </Dropdown.Menu>
+  </Dropdown>
 );
 
 export default AdminMenu;

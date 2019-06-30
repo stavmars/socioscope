@@ -1,1 +1,0 @@
-import './poverty.scss';

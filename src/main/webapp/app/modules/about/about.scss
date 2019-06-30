@@ -1,32 +1,42 @@
 /* ==========================================================================
 About page styles
 ========================================================================== */
-.about {
-  margin: 0;
-  .title {
+.about-page-view {
+  padding-bottom: 160px;
+  .about-page-title {
     font-family: BPnoScriptBold;
-    font-size: 40px;
+    font-size: 40px !important;
     color: #401b00;
-    margin-bottom: 3%;
-    margin-top: 4%;
+    padding-top: 270px;
+    margin-bottom: 70px;
   }
-  .bullets {
-    color: #1e1e1e;
+  .about-page-menu {
+    li,
+    a {
+      color: #1e1e1e;
+    }
+    a.active {
+      border-bottom: 4px solid #ff5d39;
+    }
     font-family: BPnoScriptBold;
     font-size: 30px;
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
     ul {
+      margin-top: 0;
       position: fixed;
       list-style-type: none;
       li {
-        margin: 2%;
+        padding-bottom: 60px;
       }
     }
   }
-  .content {
+  .about-page-content {
     font-family: ProximaNovaRegular;
     font-size: 16px;
     color: #1e1e1e;
-    margin-bottom: 5%;
+    line-height: 35px;
   }
   h2 {
     font-family: ProximaNovaBold;

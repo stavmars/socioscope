@@ -1,40 +1,76 @@
+@import 'app/shared/common.scss';
+
 /* ==========================================================================
 Main page styles
 ========================================================================== */
-
-.home {
-  margin-top: -150px;
-  background-color: rgba(30, 30, 30, 0.6) !important;
-  background-image: url('/content/images/Assets/Homepage-bg.jpg');
+.home-page-view {
+  background: rgba(30, 30, 30, 0.6) url('/content/images/Assets/Homepage-bg.jpg') no-repeat fixed top;
   background-blend-mode: color;
-  .title {
-    margin-top: 171.18px;
-    font-family: 'BPnoScriptBold';
-    font-size: 80px;
-    color: #ffffff;
-    text-align: center;
-  }
+  background-size: cover;
+}
 
-  .link {
-    text-align: center;
-    a {
-      font-family: 'BPnoScriptBold';
-      font-size: 30px;
-      color: #ffffff;
-      text-decoration: underline;
-      text-decoration-color: red;
+.dataset-cards {
+  padding: 0 40px 60px 40px;
+}
+
+.dataset-card {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  &.color-scheme-1 {
+    background-color: $color-scheme-1-bg;
+  }
+  &.color-scheme-2 {
+    background-color: $color-scheme-2-bg;
+  }
+  &.color-scheme-3 {
+    background-color: $color-scheme-3-bg;
+  }
+}
+
+.dataset-card-header {
+  text-align: center;
+  padding-top: 57px;
+  h3 {
+    font-family: 'ProximaNovaSemibold';
+    font-size: 20px;
+  }
+}
+.grid {
+  height: 100%;
+}
+
+.dataset-card-content {
+  padding: 50px;
+  .dataset-card-desc {
+    font-family: 'BPnoScriptBold';
+    font-size: 40px;
+    line-height: 45px;
+  }
+  .dataset-card-link {
+    color: #1e1e1e;
+    font-family: 'BPnoScriptBold';
+    font-size: 20px;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    &.color-scheme-1 {
+      border-color: $color-scheme-1-accent;
+    }
+    &.color-scheme-2 {
+      border-color: $color-scheme-2-accent;
+    }
+    &.color-scheme-3 {
+      border-color: $color-scheme-3-accent;
     }
   }
+}
 
-  .text {
-    font-family: 'ProximaNovaSemibold';
-    font-weight: normal;
-    font-size: 20px;
-    color: #ffffff;
-    text-align: center;
-    height: 121px;
-    width: 672px;
-    margin: auto;
-    alignment: center;
+.error {
+  border: 1px #f00;
+  background-color: #fdd;
+
+  &--serious {
+    @extend .error;
+    border-width: 3px;
   }
 }
