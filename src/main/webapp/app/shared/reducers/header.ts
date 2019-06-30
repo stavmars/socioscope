@@ -1,10 +1,13 @@
 export const ACTION_TYPES = {
   SHOW_HEADER: 'header/SHOW_HEADER',
-  HIDE_HEADER: 'header/HIDE_HEADER'
+  HIDE_HEADER: 'header/HIDE_HEADER',
+  SHOW_TOPICS_MENU: 'header/SHOW_TOPICS_MENU',
+  HIDE_TOPICS_MENU: 'header/HIDE_TOPICS_MENU'
 };
 
 const initialState = {
-  isHeaderVisible: false
+  isHeaderVisible: false,
+  isTopicsMenuVisible: false
 };
 
 export type HeaderState = Readonly<typeof initialState>;
@@ -22,6 +25,16 @@ export default (state: HeaderState = initialState, action): HeaderState => {
         ...state,
         isHeaderVisible: false
       };
+    case ACTION_TYPES.SHOW_TOPICS_MENU:
+      return {
+        ...state,
+        isTopicsMenuVisible: true
+      };
+    case ACTION_TYPES.HIDE_TOPICS_MENU:
+      return {
+        ...state,
+        isTopicsMenuVisible: false
+      };
     default:
       return state;
   }
@@ -34,4 +47,12 @@ export const showHeader = () => ({
 
 export const hideHeader = () => ({
   type: ACTION_TYPES.HIDE_HEADER
+});
+
+export const showTopicsMenu = () => ({
+  type: ACTION_TYPES.SHOW_TOPICS_MENU
+});
+
+export const hideTopicsMenu = () => ({
+  type: ACTION_TYPES.HIDE_TOPICS_MENU
 });

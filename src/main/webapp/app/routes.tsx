@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
 import Login from 'app/modules/login/login';
@@ -15,7 +15,6 @@ import DataSetPage from 'app/modules/dataset-page';
 import PrivateRoute from 'app/shared/auth/private-route';
 import ErrorBoundaryRoute from 'app/shared/error/error-boundary-route';
 import { AUTHORITIES } from 'app/config/constants';
-import Header from 'app/shared/layout/header/header';
 
 // tslint:disable:space-in-parens
 const Account = Loadable({
@@ -33,13 +32,6 @@ const Admin = Loadable({
 
 const Routes = props => (
   <div className="view-routes">
-    {props.isHeaderVisible && (
-      <Switch>
-        <Route path="/about" render={() => <Header isFixed className="about-page-header" />} />
-        <Route path="/" render={() => <Header isFixed />} />
-      </Switch>
-    )}
-
     <ErrorBoundaryRoute path="/login" component={Login} />
     <Switch>
       <ErrorBoundaryRoute path="/logout" component={Logout} />
