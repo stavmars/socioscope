@@ -10,21 +10,14 @@ import { hasAnyAuthority } from 'app/shared/auth/private-route';
 import { AUTHORITIES } from 'app/config/constants';
 import { setLocale } from 'app/shared/reducers/locale';
 import { connect } from 'react-redux';
+import { showTopicsMenu } from 'app/shared/reducers/header';
 
 export interface IHeaderProps extends StateProps, DispatchProps {
   isFixed: boolean;
   className?: string;
 }
 
-export interface IHeaderState {
-  menuOpen: boolean;
-}
-
-export class Header extends React.Component<IHeaderProps, IHeaderState> {
-  state: IHeaderState = {
-    menuOpen: false
-  };
-
+export class Header extends React.Component<IHeaderProps, {}> {
   handleLocaleChange = () => {
     const langKey = this.props.currentLocale === 'el' ? 'en' : 'el';
     Storage.session.set('locale', langKey);
@@ -45,6 +38,9 @@ export class Header extends React.Component<IHeaderProps, IHeaderState> {
           </Menu.Item>
           <Menu.Item as={Link} to="/">
             <Translate contentKey="global.menu.home">Home</Translate>
+          </Menu.Item>
+          <Menu.Item onClick={this.props.showTopicsMenu} style={{ paddingLeft: '60px' }}>
+            <Translate contentKey="global.menu.topics">Topics</Translate>
           </Menu.Item>
           {/*<TopicsMenu/>*/}
           <Menu.Item as={Link} to="/about">
@@ -72,7 +68,7 @@ const mapStateToProps = ({ authentication, applicationProfile, locale, header }:
   isSwaggerEnabled: applicationProfile.isSwaggerEnabled
 });
 
-const mapDispatchToProps = { setLocale };
+const mapDispatchToProps = { setLocale, showTopicsMenu };
 
 type StateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;
