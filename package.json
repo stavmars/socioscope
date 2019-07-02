@@ -30,6 +30,7 @@
     "react-redux-loading-bar": "4.0.5",
     "react-router-dom": "4.3.1",
     "react-router-hash-link": "^1.2.1",
+    "react-slick": "^0.24.0",
     "react-toastify": "4.2.0",
     "react-transition-group": "2.4.0",
     "reactstrap": "^8.0.0",
@@ -42,6 +43,7 @@
     "redux-thunk": "2.3.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.87.2",
+    "slick-carousel": "^1.8.1",
     "tslib": "1.9.3",
     "uuid": "3.3.2"
   },

@@ -1,5 +1,12 @@
 @import 'app/shared/common.scss';
 
+.slick-dots {
+  margin-bottom: 40px;
+}
+
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
 /* ==========================================================================
 Main page styles
 ========================================================================== */
