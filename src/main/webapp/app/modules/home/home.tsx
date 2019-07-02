@@ -8,7 +8,7 @@ import { hideHeader, showHeader } from 'app/shared/reducers/header';
 
 import { Container, Header, Visibility } from 'semantic-ui-react';
 import AppHeader from 'app/shared/layout/header/header';
-import DatasetCard from 'app/modules/home/dataset-card';
+import CardCarousel from 'app/modules/home/cardCarousel';
 
 export interface IHomeProp extends StateProps, DispatchProps {}
 
@@ -67,7 +67,7 @@ export class Home extends React.Component<IHomeProp> {
         </Visibility>
         <div id="discover" style={{ height: 120 }} />
         <div className="dataset-cards">
-          <DatasetCard
+          <CardCarousel
             title="Εκλογικά Αποτελέσματα (1996 – 2015)"
             colorScheme="color-scheme-1"
             headerImg="/content/images/Assets/Elections.svg"
@@ -76,51 +76,46 @@ export class Home extends React.Component<IHomeProp> {
               2009-2015 » Το ΠΑΣΟΚ καταγράφει την μεγαλύτερη εκλογικά{' '}
               <span className="text-accent">ελεύθερη πτώση κόμματος της Μεταπολίτευσης</span>.
             </span>
-          </DatasetCard>
-          <DatasetCard title="Πολιτικό Προσωπικό" colorScheme="color-scheme-2" headerImg="/content/images/Assets/Politicians.svg">
+          </CardCarousel>
+          <CardCarousel title="Πολιτικό Προσωπικό" colorScheme="color-scheme-2" headerImg="/content/images/Assets/Politicians.svg">
             <span>
-              2009-2015 » Το ΠΑΣΟΚ καταγράφει την μεγαλύτερη εκλογικά{' '}
-              <span className="text-accent">ελεύθερη πτώση κόμματος της Μεταπολίτευσης</span>.
+              Στις 1211 περιπτώσεις εκλεγμένων Βουλευτών για το διάστημα 1993 – 2019{' '}
+              <span className="text-accent">το 83% είναι άνδρες και το 17% γυναίκες</span>.
             </span>
-          </DatasetCard>
-          <DatasetCard
+          </CardCarousel>
+          <CardCarousel
             title="Στάσεις και αντιλήψεις μαθητών Γυμνασίου"
             colorScheme="color-scheme-3"
             headerImg="/content/images/Assets/Teenagers.svg"
           >
             <span>
-              2009-2015 » Το ΠΑΣΟΚ καταγράφει την μεγαλύτερη εκλογικά{' '}
-              <span className="text-accent">ελεύθερη πτώση κόμματος της Μεταπολίτευσης</span>.
+              Για τους περισσότερους μαθητές ο «Πραγματικός Έλληνας» είναι εκείνος που{' '}
+              <span className="text-accent">«Επιθυμεί να είναι Έλληνας»</span>
+              και όχι αυτός που <span className="text-accent">«Σέβεται τους θεσμούς της χώρας»</span>
             </span>
-          </DatasetCard>
-          <DatasetCard
+          </CardCarousel>
+          <CardCarousel
             title="Κοινωνικές αντιπαραθέσεις και διαμαρτυρία"
             colorScheme="color-scheme-1"
             headerImg="/content/images/Assets/Protests.svg"
           >
-            <span>
-              2009-2015 » Το ΠΑΣΟΚ καταγράφει την μεγαλύτερη εκλογικά{' '}
-              <span className="text-accent">ελεύθερη πτώση κόμματος της Μεταπολίτευσης</span>.
-            </span>
-          </DatasetCard>
-          <DatasetCard
+            <span>Διαμαρτυρίες για εργατικά θέματα πανελλαδικώς.</span>
+          </CardCarousel>
+          <CardCarousel
             title="Φτώχεια και Κοινωνικός Αποκλεισμός"
             colorScheme="color-scheme-2"
             headerImg="/content/images/Assets/Poverty.svg"
           >
             <span>
-              2009-2015 » Το ΠΑΣΟΚ καταγράφει την μεγαλύτερη εκλογικά{' '}
-              <span className="text-accent">ελεύθερη πτώση κόμματος της Μεταπολίτευσης</span>.
+              2006-2011 » Χρονική εξέλιξη του <span className="text-accent">εισοδήματος</span> των ελληνικών νοικοκυριών.
             </span>
-          </DatasetCard>
-          <DatasetCard title="Το εγκληματικό φαινόμενο" colorScheme="color-scheme-3" headerImg="/content/images/Assets/Criminality.svg">
+          </CardCarousel>
+          <CardCarousel title="Το εγκληματικό φαινόμενο" colorScheme="color-scheme-3" headerImg="/content/images/Assets/Criminality.svg">
             <span>
-              2009-2015 » Το ΠΑΣΟΚ καταγράφει την μεγαλύτερη εκλογικά{' '}
-              <span className="text-accent">ελεύθερη πτώση κόμματος της Μεταπολίτευσης</span>.
+              Χρονική εξέλιξη του αριθμού των <span className="text-accent">ανθρωποκτονιών από πρόθεση</span> στην Ελλάδα.
             </span>
-          </DatasetCard>
+          </CardCarousel>
         </div>
-        ;
       </div>
     );
   }
