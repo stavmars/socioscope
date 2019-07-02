@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { RouteComponentProps, Switch, withRouter } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
 import Login from 'app/modules/login/login';
@@ -15,6 +15,10 @@ import DataSetPage from 'app/modules/dataset-page';
 import PrivateRoute from 'app/shared/auth/private-route';
 import ErrorBoundaryRoute from 'app/shared/error/error-boundary-route';
 import { AUTHORITIES } from 'app/config/constants';
+import { hideTopicsMenu, showTopicsMenu } from 'app/shared/reducers/header';
+import { setLocale } from 'app/shared/reducers/locale';
+import { connect } from 'react-redux';
+import { Header } from 'app/shared/layout/header/header';
 
 // tslint:disable:space-in-parens
 const Account = Loadable({
@@ -26,27 +30,46 @@ const Admin = Loadable({
   loader: () => import(/* webpackChunkName: "administration" */ 'app/modules/administration'),
   loading: () => <div>loading ...</div>
 });
-
 // tslint:enable
-// tslint:disable:jsx-no-lambda
 
-const Routes = props => (
-  <div className="view-routes">
-    <ErrorBoundaryRoute path="/login" component={Login} />
-    <Switch>
-      <ErrorBoundaryRoute path="/logout" component={Logout} />
-      <ErrorBoundaryRoute path="/register" component={Register} />
-      <ErrorBoundaryRoute path="/activate/:key?" component={Activate} />
-      <ErrorBoundaryRoute path="/reset/request" component={PasswordResetInit} />
-      <ErrorBoundaryRoute path="/reset/finish/:key?" component={PasswordResetFinish} />
-      <PrivateRoute path="/admin" component={Admin} hasAnyAuthorities={[AUTHORITIES.ADMIN]} />
-      <PrivateRoute path="/account" component={Account} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
-      <PrivateRoute path="/entity" component={Entities} hasAnyAuthorities={[AUTHORITIES.USER]} />
-      <ErrorBoundaryRoute path="/dataset" component={DataSetPage} />
-      <ErrorBoundaryRoute path="/about" component={About} />
-      <ErrorBoundaryRoute path="/" component={Home} />
-    </Switch>
-  </div>
+export interface IRoutesProps extends DispatchProps, RouteComponentProps<any> {}
+
+export class Routes extends React.Component<IRoutesProps> {
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      this.props.hideTopicsMenu();
+    }
+  }
+
+  render() {
+    return (
+      <div className="view-routes">
+        <ErrorBoundaryRoute path="/login" component={Login} />
+        <Switch>
+          <ErrorBoundaryRoute path="/logout" component={Logout} />
+          <ErrorBoundaryRoute path="/register" component={Register} />
+          <ErrorBoundaryRoute path="/activate/:key?" component={Activate} />
+          <ErrorBoundaryRoute path="/reset/request" component={PasswordResetInit} />
+          <ErrorBoundaryRoute path="/reset/finish/:key?" component={PasswordResetFinish} />
+          <PrivateRoute path="/admin" component={Admin} hasAnyAuthorities={[AUTHORITIES.ADMIN]} />
+          <PrivateRoute path="/account" component={Account} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
+          <PrivateRoute path="/entity" component={Entities} hasAnyAuthorities={[AUTHORITIES.USER]} />
+          <ErrorBoundaryRoute path="/dataset" component={DataSetPage} />
+          <ErrorBoundaryRoute path="/about" component={About} />
+          <ErrorBoundaryRoute path="/" component={Home} />
+        </Switch>
+      </div>
+    );
+  }
+}
+
+const mapDispatchToProps = { hideTopicsMenu };
+
+type DispatchProps = typeof mapDispatchToProps;
+
+export default withRouter(
+  connect(
+    null,
+    mapDispatchToProps
+  )(Routes)
 );
-
-export default Routes;

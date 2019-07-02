@@ -36,3 +36,37 @@ Header Menu styles
     }
   }
 }
+
+.topics-mega-menu {
+  background-color: white;
+  font-family: BPnoScriptBold;
+  font-size: 30px;
+  color: #1e1e1e;
+  .topics-mega-menu-list .list {
+    padding: 20px 100px 80px 100px;
+    .topics-mega-menu-list-item {
+      border-radius: 0;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.topics-mega-menu-list-item {
+  &.color-scheme-1 {
+  }
+  &.color-scheme-2 {
+  }
+  &.color-scheme-3 {
+  }
+}
+
+.topics-mega-menu-img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 120px;
+  img {
+    height: 40px;
+    width: auto;
+  }
+}
