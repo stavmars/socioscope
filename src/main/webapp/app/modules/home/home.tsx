@@ -105,7 +105,9 @@ export class Home extends React.Component<IHomeProp> {
             <DatasetCard title="Πολιτικό Προσωπικό" colorScheme="color-scheme-2" headerImg="/content/images/Assets/Politicians.svg">
               <span>
                 Στις 1211 περιπτώσεις εκλεγμένων Βουλευτών για το διάστημα 1993 – 2019{' '}
-                <span className="text-accent">το 83% είναι άνδρες και το 17% γυναίκες</span>.
+                <span className="text-accent">το 83% είναι άνδρες και το 17% γυναίκες</span>.<br />
+                <br />
+                <br />
               </span>
             </DatasetCard>
             <DatasetCard title="Πολιτικό Προσωπικό" colorScheme="color-scheme-2" headerImg="/content/images/Assets/Politicians.svg">
@@ -118,7 +120,10 @@ export class Home extends React.Component<IHomeProp> {
             <DatasetCard title="Πολιτικό Προσωπικό" colorScheme="color-scheme-2" headerImg="/content/images/Assets/Politicians.svg">
               <span>
                 Η τρέχουσα Βουλή είναι πιθανώς η πιο «μορφωμένη» της Μεταπολίτευσης καθώς έχει{' '}
-                <span className="text-accent">τους περισσότερους κατόχους διδακτορικού (16,3%)</span> της τελευταίας εικοσιπενταετίας.
+                <span className="text-accent">τους περισσότερους κατόχους διδακτορικού (16,3%)</span>
+                της τελευταίας εικοσιπενταετίας.
+                <br />
+                <br />
               </span>
             </DatasetCard>
           </CardCarousel>
