@@ -1,4 +1,3 @@
-// import { CarouselProvider, Slide, Slider, DotGroup } from 'pure-react-carousel';
 import React from 'react';
 import Slider from 'react-slick';
 import DatasetCard, { IDatasetCardProps } from 'app/modules/home/dataset-card';

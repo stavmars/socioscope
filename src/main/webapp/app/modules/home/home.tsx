@@ -8,7 +8,7 @@ import { hideHeader, showHeader } from 'app/shared/reducers/header';
 
 import { Container, Header, Visibility } from 'semantic-ui-react';
 import AppHeader from 'app/shared/layout/header/header';
-import CardCarousel from 'app/modules/home/cardCarousel';
+import CardCarousel from 'app/modules/home/card-carousel';
 
 export interface IHomeProp extends StateProps, DispatchProps {}
 
