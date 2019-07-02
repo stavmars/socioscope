@@ -1,10 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
-import DatasetCard, { IDatasetCardProps } from 'app/modules/home/dataset-card';
 
-export class CardCarousel extends React.Component<IDatasetCardProps> {
+export class CardCarousel extends React.Component {
   render() {
-    const { title, colorScheme, headerImg } = this.props;
     const settings = {
       dots: true,
       arrows: false,
@@ -16,23 +14,7 @@ export class CardCarousel extends React.Component<IDatasetCardProps> {
 
     return (
       <div>
-        <Slider {...settings}>
-          <div>
-            <DatasetCard title={title} colorScheme={colorScheme} headerImg={headerImg}>
-              {this.props.children}
-            </DatasetCard>
-          </div>
-          <div>
-            <DatasetCard title={title} colorScheme={colorScheme} headerImg={headerImg}>
-              {this.props.children}
-            </DatasetCard>
-          </div>
-          <div>
-            <DatasetCard title={title} colorScheme={colorScheme} headerImg={headerImg}>
-              {this.props.children}
-            </DatasetCard>
-          </div>
-        </Slider>
+        <Slider {...settings}>{this.props.children}</Slider>
         <br />
         <br />
       </div>
