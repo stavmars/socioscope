@@ -133,8 +133,8 @@
           mx = this.x;
           my = this.y;
         }
-        this.speedX = (mx - this.x) / 3000;
-        this.speedY = (my - this.y) / 3000;
+        this.speedX = (mx - this.x) / 2000;
+        this.speedY = (my - this.y) / 2000;
         this.x += this.speedX;
         this.y += this.speedY;
       };
