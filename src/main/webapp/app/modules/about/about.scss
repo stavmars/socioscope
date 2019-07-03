@@ -21,12 +21,13 @@ About page styles
     }
     font-family: BPnoScriptBold;
     font-size: 30px;
-    width: 240px;
+    line-height: 35px;
+    width: 260px;
     margin-left: auto;
     margin-right: auto;
     ul {
       margin: 0;
-      //position: fixed;
+      padding-left: 0;
       list-style-type: none;
       li {
         padding-bottom: 50px;
