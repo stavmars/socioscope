@@ -16,6 +16,7 @@ export const ACTION_TYPES = {
 const initialState = {
   loadingDataset: false,
   loadingSeries: false,
+  fetchedCodeLists: false,
   errorMessage: null,
   dataset: defaultValue,
   dimensionCodes: {},
@@ -41,6 +42,8 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
     case FAILURE(ACTION_TYPES.FETCH_SERIES):
       return {
         ...state,
+        loadingDataset: false,
+        loadingSeries: false,
         errorMessage: action.payload
       };
     case SUCCESS(ACTION_TYPES.FETCH_DATASET):
@@ -53,7 +56,7 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
       return {
         ...state,
         series: action.payload.data,
-        loadingSeries: true
+        loadingSeries: false
       };
     case SUCCESS(ACTION_TYPES.FETCH_DIMENSION_CODELIST):
       return {
@@ -62,6 +65,11 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
           ...state.dimensionCodes,
           [action.payload.dimensionId]: action.payload.codelist
         }
+      };
+    case SUCCESS(ACTION_TYPES.FETCH_DIMENSION_CODELISTS):
+      return {
+        ...state,
+        fetchedCodeLists: true
       };
     default:
       return {
@@ -100,12 +108,10 @@ export const getDimensionCodeLists = (dataset: IDataSet) => dispatch => {
   });
 };
 
-export const getSeries = (id, seriesOptions: ISeriesOptions[]) => {
+export const getSeries = (id, seriesOptions: ISeriesOptions) => {
   const requestUrl = `${datasetApiUrl}/${id}/series`;
   return {
     type: ACTION_TYPES.FETCH_SERIES,
-    payload: axios.get<ISeries>(requestUrl, {
-      params: seriesOptions
-    })
+    payload: axios.post<ISeries>(requestUrl, seriesOptions)
   };
 };
