@@ -1,4 +1,5 @@
 import React from 'react';
+import { translate } from 'react-jhipster';
 import { Grid, Image } from 'semantic-ui-react';
 import { NavLink as Link } from 'react-router-dom';
 
@@ -27,7 +28,7 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
               <Grid.Column>
                 <p className={`dataset-card-desc ${colorScheme}`}>{this.props.children}</p>
                 <Link className={`dataset-card-link ${colorScheme}`} to="/dataset/greek-election-results">
-                  ΕΞΕΡΕΥΝΗΣΤΕ ΤΑ ΔΕΔΟΜΕΝΑ
+                  {translate('home.dataset.explore')}
                 </Link>
               </Grid.Column>
             </Grid.Row>

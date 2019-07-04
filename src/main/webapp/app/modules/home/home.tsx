@@ -3,6 +3,7 @@ import './home.scss';
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { connect } from 'react-redux';
+import { translate } from 'react-jhipster';
 import { getSession } from 'app/shared/reducers/authentication';
 import { hideHeader, showHeader } from 'app/shared/reducers/header';
 
@@ -27,7 +28,7 @@ export class Home extends React.Component<IHomeProp> {
             <Container textAlign="center">
               <Header
                 as="h1"
-                content="Ανοικτά κοινωνικά Δεδομένα"
+                content={translate('home.title')}
                 style={{
                   fontFamily: 'BPnoScriptBold',
                   color: '#ffffff',
@@ -38,8 +39,7 @@ export class Home extends React.Component<IHomeProp> {
               />
               <Header
                 as="h2"
-                content="Το socioscope είναι μια πλατφόρμα οπτικοποίησης κοινωνικών και πολιτικών δεδομένων. Εξερευνήστε τις θεματικές και
-                    διαμορφώστε τα δικά σας διαγράμματα, πίνακες και χάρτες."
+                content={translate('home.subtitle')}
                 style={{
                   fontFamily: 'ProximaNovaSemibold',
                   fontSize: '20px',
@@ -61,7 +61,7 @@ export class Home extends React.Component<IHomeProp> {
                   borderBottom: '4px solid #FF5D39'
                 }}
               >
-                ΕΞΕΡΕΥΝΗΣΤΕ
+                {translate('home.explore')}
               </HashLink>
             </Container>
           </div>
@@ -70,7 +70,7 @@ export class Home extends React.Component<IHomeProp> {
         <div className="dataset-cards">
           <CardCarousel>
             <DatasetCard
-              title="Εκλογικά Αποτελέσματα (1996 – 2015)"
+              title={translate('home.dataset.categories.elections')}
               colorScheme="color-scheme-1"
               headerImg="/content/images/Assets/Elections.svg"
             >
@@ -80,7 +80,7 @@ export class Home extends React.Component<IHomeProp> {
               </span>
             </DatasetCard>
             <DatasetCard
-              title="Εκλογικά Αποτελέσματα (1996 – 2015)"
+              title={translate('home.dataset.categories.elections')}
               colorScheme="color-scheme-1"
               headerImg="/content/images/Assets/Elections.svg"
             >
@@ -90,7 +90,7 @@ export class Home extends React.Component<IHomeProp> {
               </span>
             </DatasetCard>
             <DatasetCard
-              title="Εκλογικά Αποτελέσματα (1996 – 2015)"
+              title={translate('home.dataset.categories.elections')}
               colorScheme="color-scheme-1"
               headerImg="/content/images/Assets/Elections.svg"
             >
@@ -102,7 +102,11 @@ export class Home extends React.Component<IHomeProp> {
             </DatasetCard>
           </CardCarousel>
           <CardCarousel>
-            <DatasetCard title="Πολιτικό Προσωπικό" colorScheme="color-scheme-2" headerImg="/content/images/Assets/Politicians.svg">
+            <DatasetCard
+              title={translate('home.dataset.categories.politics')}
+              colorScheme="color-scheme-2"
+              headerImg="/content/images/Assets/Politicians.svg"
+            >
               <span>
                 Στις 1211 περιπτώσεις εκλεγμένων Βουλευτών για το διάστημα 1993 – 2019{' '}
                 <span className="text-accent">το 83% είναι άνδρες και το 17% γυναίκες</span>.<br />
@@ -110,14 +114,22 @@ export class Home extends React.Component<IHomeProp> {
                 <br />
               </span>
             </DatasetCard>
-            <DatasetCard title="Πολιτικό Προσωπικό" colorScheme="color-scheme-2" headerImg="/content/images/Assets/Politicians.svg">
+            <DatasetCard
+              title={translate('home.dataset.categories.politics')}
+              colorScheme="color-scheme-2"
+              headerImg="/content/images/Assets/Politicians.svg"
+            >
               <span>
                 Όσο <span className="text-accent">μεγαλύτερη η εκλογική περιφέρεια</span>, τόσο οι βουλευτές της προέρχονται από «πολιτική»
                 οικογένεια. Στη <span className="text-accent">Β’ Αθήνας</span> σχεδον 1 στους 5 βουλευτές έχει{' '}
                 <span className="text-accent">συγγενή με προηγούμενη θητεία</span> στο Κοινοβούλιο.
               </span>
             </DatasetCard>
-            <DatasetCard title="Πολιτικό Προσωπικό" colorScheme="color-scheme-2" headerImg="/content/images/Assets/Politicians.svg">
+            <DatasetCard
+              title={translate('home.dataset.categories.politics')}
+              colorScheme="color-scheme-2"
+              headerImg="/content/images/Assets/Politicians.svg"
+            >
               <span>
                 Η τρέχουσα Βουλή είναι πιθανώς η πιο «μορφωμένη» της Μεταπολίτευσης καθώς έχει{' '}
                 <span className="text-accent">τους περισσότερους κατόχους διδακτορικού (16,3%)</span>
@@ -129,7 +141,7 @@ export class Home extends React.Component<IHomeProp> {
           </CardCarousel>
           <CardCarousel>
             <DatasetCard
-              title="Στάσεις και αντιλήψεις μαθητών Γυμνασίου"
+              title={translate('home.dataset.categories.schools')}
               colorScheme="color-scheme-3"
               headerImg="/content/images/Assets/Teenagers.svg"
             >
@@ -140,7 +152,7 @@ export class Home extends React.Component<IHomeProp> {
               </span>
             </DatasetCard>
             <DatasetCard
-              title="Στάσεις και αντιλήψεις μαθητών Γυμνασίου"
+              title={translate('home.dataset.categories.schools')}
               colorScheme="color-scheme-3"
               headerImg="/content/images/Assets/Teenagers.svg"
             >
@@ -150,7 +162,7 @@ export class Home extends React.Component<IHomeProp> {
               </span>
             </DatasetCard>
             <DatasetCard
-              title="Στάσεις και αντιλήψεις μαθητών Γυμνασίου"
+              title={translate('home.dataset.categories.schools')}
               colorScheme="color-scheme-3"
               headerImg="/content/images/Assets/Teenagers.svg"
             >
@@ -162,21 +174,21 @@ export class Home extends React.Component<IHomeProp> {
           </CardCarousel>
           <CardCarousel>
             <DatasetCard
-              title="Κοινωνικές αντιπαραθέσεις και διαμαρτυρία"
+              title={translate('home.dataset.categories.social')}
               colorScheme="color-scheme-1"
               headerImg="/content/images/Assets/Protests.svg"
             >
               <span>Διαμαρτυρίες για εργατικά θέματα πανελλαδικώς.</span>
             </DatasetCard>
             <DatasetCard
-              title="Κοινωνικές αντιπαραθέσεις και διαμαρτυρία"
+              title={translate('home.dataset.categories.social')}
               colorScheme="color-scheme-1"
               headerImg="/content/images/Assets/Protests.svg"
             >
               <span>Διαμαρτυρίες για εργατικά θέματα πανελλαδικώς.</span>
             </DatasetCard>
             <DatasetCard
-              title="Κοινωνικές αντιπαραθέσεις και διαμαρτυρία"
+              title={translate('home.dataset.categories.social')}
               colorScheme="color-scheme-1"
               headerImg="/content/images/Assets/Protests.svg"
             >
@@ -185,7 +197,7 @@ export class Home extends React.Component<IHomeProp> {
           </CardCarousel>
           <CardCarousel>
             <DatasetCard
-              title="Φτώχεια και Κοινωνικός Αποκλεισμός"
+              title={translate('home.dataset.categories.poverty')}
               colorScheme="color-scheme-2"
               headerImg="/content/images/Assets/Poverty.svg"
             >
@@ -194,7 +206,7 @@ export class Home extends React.Component<IHomeProp> {
               </span>
             </DatasetCard>
             <DatasetCard
-              title="Φτώχεια και Κοινωνικός Αποκλεισμός"
+              title={translate('home.dataset.categories.poverty')}
               colorScheme="color-scheme-2"
               headerImg="/content/images/Assets/Poverty.svg"
             >
@@ -203,7 +215,7 @@ export class Home extends React.Component<IHomeProp> {
               </span>
             </DatasetCard>
             <DatasetCard
-              title="Φτώχεια και Κοινωνικός Αποκλεισμός"
+              title={translate('home.dataset.categories.poverty')}
               colorScheme="color-scheme-2"
               headerImg="/content/images/Assets/Poverty.svg"
             >
@@ -213,17 +225,29 @@ export class Home extends React.Component<IHomeProp> {
             </DatasetCard>
           </CardCarousel>
           <CardCarousel>
-            <DatasetCard title="Το εγκληματικό φαινόμενο" colorScheme="color-scheme-3" headerImg="/content/images/Assets/Criminality.svg">
+            <DatasetCard
+              title={translate('home.dataset.categories.criminality')}
+              colorScheme="color-scheme-3"
+              headerImg="/content/images/Assets/Criminality.svg"
+            >
               <span>
                 Χρονική εξέλιξη του αριθμού των <span className="text-accent">ανθρωποκτονιών από πρόθεση</span> στην Ελλάδα.
               </span>
             </DatasetCard>
-            <DatasetCard title="Το εγκληματικό φαινόμενο" colorScheme="color-scheme-3" headerImg="/content/images/Assets/Criminality.svg">
+            <DatasetCard
+              title={translate('home.dataset.categories.criminality')}
+              colorScheme="color-scheme-3"
+              headerImg="/content/images/Assets/Criminality.svg"
+            >
               <span>
                 Χρονική εξέλιξη του αριθμού των <span className="text-accent">ανθρωποκτονιών από πρόθεση</span> στην Ελλάδα.
               </span>
             </DatasetCard>
-            <DatasetCard title="Το εγκληματικό φαινόμενο" colorScheme="color-scheme-3" headerImg="/content/images/Assets/Criminality.svg">
+            <DatasetCard
+              title={translate('home.dataset.categories.criminality')}
+              colorScheme="color-scheme-3"
+              headerImg="/content/images/Assets/Criminality.svg"
+            >
               <span>
                 Χρονική εξέλιξη του αριθμού των <span className="text-accent">ανθρωποκτονιών από πρόθεση</span> στην Ελλάδα.
               </span>
