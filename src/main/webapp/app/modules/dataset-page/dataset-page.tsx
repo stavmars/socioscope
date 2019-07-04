@@ -39,7 +39,6 @@ export class DatasetPage extends React.Component<IDatasetPageProp> {
   render() {
     const { dataset, loadingDataset, dimensionCodes, series, fetchedCodeLists } = this.props;
     const categories = ['Jan 15', 'Sep 96', 'Apr 00', 'Mar 04', 'Sep 07', 'Oct 09', 'May 12', 'Jun 12'];
-    console.log(dimensionCodes);
 
     return (
       <div>
@@ -59,7 +58,7 @@ export class DatasetPage extends React.Component<IDatasetPageProp> {
               <YAxis>
                 <YAxis.Title>Ποσοστό</YAxis.Title>
                 {series && dimensionCodes['elections']
-                  ? series[0].data.map((d, i) => <ColumnSeries data={[{ name: dimensionCodes['elections'][i].name.el, y: d.y }]} />)
+                  ? series[0].data.map((d, i) => <ColumnSeries key={i} data={[{ name: dimensionCodes['elections'][i].name.el, y: d.y }]} />)
                   : null}
               </YAxis>
             </HighchartsChart>

@@ -11,6 +11,7 @@ import { Container, Header, Visibility } from 'semantic-ui-react';
 import AppHeader from 'app/shared/layout/header/header';
 import CardCarousel from 'app/modules/home/card-carousel';
 import DatasetCard from 'app/modules/home/dataset-card';
+import { translateEntityField } from 'app/shared/util/entity-utils';
 
 export interface IHomeProp extends StateProps, DispatchProps {}
 
@@ -21,8 +22,6 @@ export class Home extends React.Component<IHomeProp> {
 
   render() {
     const { allDataSets } = this.props;
-
-    console.log(allDataSets);
 
     return (
       <div className="home-page-view">
