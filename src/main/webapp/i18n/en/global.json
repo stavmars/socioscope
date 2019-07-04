@@ -138,5 +138,11 @@
     "idexists": "A new {{ entityName }} cannot already have an ID",
     "idnull": "Invalid ID"
   },
-  "footer": "This is your footer"
+  "footer": {
+    "about": "ABOUT",
+    "terms": "TERMS OF USE",
+    "policy": "PRIVACY POLICY",
+    "developers": "DEVELOPERS",
+    "collaboration": "A collaboration of"
+  }
 }

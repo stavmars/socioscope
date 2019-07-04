@@ -1,3 +1,5 @@
+@import 'app/shared/common.scss';
+
 /* ==========================================================================
 Header Menu styles
 ========================================================================== */
@@ -48,16 +50,28 @@ Header Menu styles
       border-radius: 0;
       padding-top: 30px;
       padding-bottom: 30px;
+      &.color-scheme-1:hover {
+        background-color: $color-scheme-1-bg;
+        color: $color-scheme-1-accent;
+        border-color: $color-scheme-1-accent;
+      }
+      &.color-scheme-2:hover {
+        background-color: $color-scheme-2-bg;
+        color: $color-scheme-2-accent;
+        border-color: $color-scheme-2-accent;
+      }
+      &.color-scheme-3:hover {
+        background-color: $color-scheme-3-bg;
+        color: $color-scheme-3-accent;
+        border-color: $color-scheme-3-accent;
+      }
+      .topics-mega-menu-list-item-discover {
+        font-size: 20px;
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+        float: right;
+      }
     }
-  }
-}
-
-.topics-mega-menu-list-item {
-  &.color-scheme-1 {
-  }
-  &.color-scheme-2 {
-  }
-  &.color-scheme-3 {
   }
 }
 
