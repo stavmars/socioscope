@@ -13,6 +13,7 @@ export interface IDataSet {
   dimensions?: IDimension[];
   measures?: IMeasure[];
   creator?: IUser;
+  colorSceme?: string;
 }
 
 export const defaultValue: Readonly<IDataSet> = { name: {}, comment: {} };
