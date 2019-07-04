@@ -11,6 +11,7 @@ import { Container, Header, Visibility } from 'semantic-ui-react';
 import AppHeader from 'app/shared/layout/header/header';
 import CardCarousel from 'app/modules/home/card-carousel';
 import DatasetCard from 'app/modules/home/dataset-card';
+import { translateEntityField } from 'app/shared/util/entity-utils';
 
 export interface IHomeProp extends StateProps, DispatchProps {}
 
@@ -20,6 +21,8 @@ export class Home extends React.Component<IHomeProp> {
   }
 
   render() {
+    const { allDataSets } = this.props;
+
     return (
       <div className="home-page-view">
         <Visibility once={false} onOffScreen={this.props.showHeader} onOnScreen={this.props.hideHeader}>
@@ -261,7 +264,8 @@ export class Home extends React.Component<IHomeProp> {
 
 const mapStateToProps = storeState => ({
   account: storeState.authentication.account,
-  isAuthenticated: storeState.authentication.isAuthenticated
+  isAuthenticated: storeState.authentication.isAuthenticated,
+  allDataSets: storeState.dataSet.entities
 });
 
 const mapDispatchToProps = { getSession, showHeader, hideHeader };

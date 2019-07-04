@@ -94,18 +94,7 @@ public class DataSetService {
      */
     public List<DataSet> findAll() {
         log.debug("Request to get all DataSets");
-        List<DataSet> all = dataSetRepository.findAll();
-        if (SecurityUtils.isCurrentUserInRole(ADMIN)) {
-            return all;
-        } else {
-            List<DataSet> result = new ArrayList<>();
-            for (DataSet dataset : all) {
-                if (!dataset.getCreator().getLogin().equals("admin")) {
-                    result.add(dataset);
-                }
-            }
-            return result;
-        }
+        return dataSetRepository.findAll();
     }
 
 

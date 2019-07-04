@@ -20,6 +20,7 @@ import { Translate } from 'react-jhipster';
 import { Sidebar } from 'semantic-ui-react';
 import { hideHeader, hideTopicsMenu } from 'app/shared/reducers/header';
 import Header from 'app/shared/layout/header/header';
+import { getEntities } from 'app/entities/data-set/data-set.reducer';
 import { TopicsMegaMenu } from 'app/shared/layout/header/topics-mega-menu';
 
 export interface IAppProps extends StateProps, DispatchProps {}
@@ -28,6 +29,7 @@ export class App extends React.Component<IAppProps> {
   componentDidMount() {
     this.props.getSession();
     this.props.getProfile();
+    this.props.getEntities();
   }
 
   renderDevRibbon = () =>
@@ -87,7 +89,7 @@ const mapStateToProps = ({ authentication, applicationProfile, locale, header }:
   isTopicsMenuVisible: header.isTopicsMenuVisible
 });
 
-const mapDispatchToProps = { setLocale, getSession, getProfile, hideTopicsMenu, hideHeader };
+const mapDispatchToProps = { setLocale, getSession, getProfile, hideTopicsMenu, hideHeader, getEntities };
 
 type StateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;

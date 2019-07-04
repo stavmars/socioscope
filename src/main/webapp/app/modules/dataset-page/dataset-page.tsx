@@ -77,7 +77,6 @@ export class DatasetPage extends React.Component<IDatasetPageProp> {
                 <XAxis type="category">
                   <XAxis.Title>Αποχή</XAxis.Title>
                 </XAxis>
-
                 <YAxis>
                   <YAxis.Title>Ποσοστό</YAxis.Title>
                   {series && dimensionCodes['elections']
