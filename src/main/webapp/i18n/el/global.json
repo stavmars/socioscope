@@ -137,5 +137,11 @@
     "idexists": "Ένα καινούργιο {{ entityName }} δεν μπορεί να έχει είδη ένα ID.",
     "idnull": "Invalid ID"
   },
-  "footer": "Αυτό είναι το υποσέλιδο σας"
+  "footer": {
+    "about": "ΣΧΕΤΙΚΑ",
+    "terms": "ΟΡΟΙ ΧΡΗΣΗΣ",
+    "policy": "ΠΟΛΙΤΙΚΗ ΑΠΟΡΡΗΤΟΥ",
+    "developers": "DEVELOPERS",
+    "collaboration": "Μία συνεργασία των"
+  }
 }
