@@ -1,4 +1,6 @@
 import pick from 'lodash/pick';
+import { ILang } from 'app/shared/model/language.interface';
+import { TranslatorContext } from 'react-jhipster';
 
 /**
  * Removes fields with an 'id' field that equals ''.
@@ -22,3 +24,11 @@ export const cleanEntity = entity => {
  */
 export const mapIdList = (idList: ReadonlyArray<any>) =>
   idList.filter((entityId: any) => entityId !== '').map((entityId: any) => ({ id: entityId }));
+
+/**
+ * Gets the translation of the given localized entity field based on the current locale
+ */
+export const translateEntityField = (entityField: ILang) => {
+  const currentLocale = TranslatorContext.context.locale || TranslatorContext.context.defaultLocale;
+  return entityField[currentLocale];
+};
