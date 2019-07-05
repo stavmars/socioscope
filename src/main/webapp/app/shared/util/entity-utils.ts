@@ -32,3 +32,11 @@ export const translateEntityField = (entityField: ILang) => {
   const currentLocale = TranslatorContext.context.locale || TranslatorContext.context.defaultLocale;
   return entityField[currentLocale];
 };
+
+/**
+ * Return the proper image according to the currentLocale
+ */
+export const localeImage = () => {
+  const currentLocale = TranslatorContext.context.locale || TranslatorContext.context.defaultLocale;
+  return currentLocale === 'el' ? '/content/images/Assets/espa-el.png' : '/content/images/Assets/espa-en.png';
+};

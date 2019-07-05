@@ -2,10 +2,10 @@ import './footer.scss';
 
 import React from 'react';
 import { translate } from 'react-jhipster';
-import { Card, CardBody, Col, Row } from 'reactstrap';
 import { Grid, Image, List } from 'semantic-ui-react';
+import { localeImage } from 'app/shared/util/entity-utils';
 
-const Footer = props => (
+const Footer = () => (
   <div id="app-footer">
     <Grid stackable>
       <Grid.Row>
@@ -33,10 +33,8 @@ const Footer = props => (
           </Image.Group>
         </Grid.Column>
         <Grid.Column width={4}>
-          <Image.Group>
-            <Image src="/content/images/Assets/eu.png" style={{ margin: 0 }} />
-            <Image src="/content/images/Assets/nsrf.png" style={{ margin: 0 }} />
-          </Image.Group>
+          <div style={{ height: 25 }} />
+          <Image src={localeImage()} />
         </Grid.Column>
       </Grid.Row>
     </Grid>
