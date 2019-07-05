@@ -1,0 +1,74 @@
+[
+    {
+        "id": "refArea",
+        "name": {
+            "el": "Περιοχή αναφοράς",
+            "en": "Reference Area"
+        },
+        "type": "coded"
+    },
+    {
+        "id": "refPeriod",
+        "name": {
+            "el": "Περίοδος αναφοράς",
+            "en": "Reference Period"
+        },
+        "type": "time-interval"
+    },
+    {
+        "id": "nuts",
+        "name": {
+            "el": "Περιοχή Αναφοράς (NUTS)",
+            "en": "Reference Area (NUTS)"
+        },
+        "type": "coded"
+    },
+    {
+        "id": "sex",
+        "name": {
+            "el": "Φύλο",
+            "en": "Sex"
+        },
+        "type": "coded"
+    },
+    {
+        "id": "householdSize",
+        "name": {
+            "el": "Μέγεθος νοικοκυριού",
+            "en": "Household size"
+        },
+        "type": "coded"
+    },
+    {
+        "id": "age",
+        "name": {
+            "el": "Ηλικία",
+            "en": "Age"
+        },
+        "type": "coded"
+    },
+    {
+        "id": "party",
+        "name": {
+            "el": "Κόμμα",
+            "en": "Party"
+        },
+        "type": "coded"
+    },
+    {
+        "id": "constituency",
+        "name": {
+            "el": "Εκλογική Περιφέρεια",
+            "en": "Constituency"
+        },
+        "type": "coded"
+    },
+    {
+        "id": "elections",
+        "name": {
+            "el": "Εκλογές",
+            "en": "Elections"
+        },
+        "type": "coded"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "id": "obsValue",
+        "name": {
+            "el": "obsValue",
+            "en": "obsValue"
+        },
+        "unit": "NO_UNIT"
+    },
+    {
+        "id": "votes_perc",
+        "name": {
+            "el": "Ποσοστό",
+            "en": "Percentage"
+        },
+        "unit": "PC"
+    },
+    {
+        "id": "votes",
+        "name": {
+            "el": "Ψήφοι",
+            "en": "Votes"
+        },
+        "unit": "VTS"
+    }
+]
