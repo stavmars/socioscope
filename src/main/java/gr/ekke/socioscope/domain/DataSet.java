@@ -51,6 +51,9 @@ public class DataSet implements Serializable {
     @Field("highlights")
     private List<Highlight> highlights = new ArrayList<>();
 
+    @Field("colorScheme")
+    private String colorScheme;
+
     @DBRef
     @Field("creator")
     @JsonIgnoreProperties("")
@@ -89,6 +92,19 @@ public class DataSet implements Serializable {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getColorScheme() {
+        return colorScheme;
+    }
+
+    public DataSet colorScheme(String colorScheme) {
+        this.colorScheme = colorScheme;
+        return this;
+    }
+
+    public void setColorScheme(String colorScheme) {
+        this.colorScheme = colorScheme;
     }
 
     public Map<String, String> getComment() {
