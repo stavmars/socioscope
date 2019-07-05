@@ -17,10 +17,17 @@ export class About extends React.Component<DispatchProps> {
     this.props.showHeader();
   }
 
+  // only consider an event active if its event id is an odd number
+  isActive = hash => (match, location) => {
+    if (location.hash === hash) {
+      return true;
+    }
+  };
+
   render() {
     return (
       <div className="about-page-view">
-        <Header as="h1" className="about-page-title" content="Καλειδοσκόπιο κοινωνικών δεδομένων" textAlign="center" />
+        <Header id="project" as="h1" className="about-page-title" content="Καλειδοσκόπιο κοινωνικών δεδομένων" textAlign="center" />
         <Ref innerRef={this.contextRef}>
           <Grid>
             <Grid.Row>
@@ -29,22 +36,22 @@ export class About extends React.Component<DispatchProps> {
                   <div className="about-page-menu">
                     <ul>
                       <li>
-                        <NavHashLink smooth to="/about" replace={false}>
+                        <NavHashLink isActive={this.isActive('#project')} smooth to="#project" replace={false}>
                           Το έργο
                         </NavHashLink>
                       </li>
                       <li>
-                        <NavHashLink smooth to="/about#team" replace={false}>
+                        <NavHashLink isActive={this.isActive('#team')} smooth to="#team" replace={false}>
                           Επιστημονική Ομάδα
                         </NavHashLink>
                       </li>
                       <li>
-                        <NavHashLink smooth to="/about#sources" replace={false}>
+                        <NavHashLink isActive={this.isActive('#sources')} smooth to="#sources" replace={false}>
                           Πηγές
                         </NavHashLink>
                       </li>
                       <li>
-                        <NavHashLink smooth to="/about#techTeam" replace={false}>
+                        <NavHashLink isActive={this.isActive('#techTeam')} smooth to="#techTeam" replace={false}>
                           Τεχνικοί Υπεύθυνοι
                         </NavHashLink>
                       </li>
@@ -77,10 +84,7 @@ export class About extends React.Component<DispatchProps> {
                   <br />
                   <br />
                   <br />
-                  <h2>
-                    <a id="team" />
-                    Επιστημονική ομάδα
-                  </h2>
+                  <h2 id="team">Επιστημονική ομάδα</h2>
                   <span style={{ fontFamily: 'ProximaNovaBold' }}>Θεώνη Σταθοπούλου</span> / Διευθύντρια Ερευνών, ΕΚΚΕ, theosta@ekke.gr
                   <br />
                   <br />
@@ -94,10 +98,7 @@ export class About extends React.Component<DispatchProps> {
                   <br />
                   <br />
                   <br />
-                  <h2>
-                    <a id="sources" />
-                    Πηγές
-                  </h2>
+                  <h2 id="sources">Πηγές</h2>
                   <h3>Εκδόσεις:</h3>
                   <br />
                   <br />
@@ -139,10 +140,7 @@ export class About extends React.Component<DispatchProps> {
                   <br />
                   <br />
                   <br />
-                  <h2>
-                    <a id="techTeam" />
-                    Τεχνικοί Υπεύθυνοι
-                  </h2>
+                  <h2 id="techTeam">Τεχνικοί Υπεύθυνοι</h2>
                   <h3>Ανάλυση & Σχεδιασμός</h3>
                   <span style={{ fontFamily: 'ProximaNovaBold' }}>Γιώργος Παπαστεφανάτος</span> / Ερευνητικός Συνεργάτης, Ε.Κ. ΑΘΗΝΑ),
                   gpapas@imis.athena-innovation.gr

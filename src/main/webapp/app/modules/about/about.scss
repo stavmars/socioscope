@@ -53,3 +53,12 @@ About page styles
     color: #1e1e1e;
   }
 }
+
+h2::before {
+  display: block;
+  content: ' ';
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
+  pointer-events: none;
+}
