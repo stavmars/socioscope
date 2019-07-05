@@ -17,7 +17,7 @@ import { AUTHORITIES } from 'app/config/constants';
 import AppRoutes from 'app/routes';
 import LoadingBar from 'react-redux-loading-bar';
 import { Translate } from 'react-jhipster';
-import { Sidebar } from 'semantic-ui-react';
+import { Dimmer, Loader, Sidebar } from 'semantic-ui-react';
 import { hideHeader, hideTopicsMenu } from 'app/shared/reducers/header';
 import Header from 'app/shared/layout/header/header';
 import { getEntities } from 'app/entities/data-set/data-set.reducer';
@@ -43,50 +43,59 @@ export class App extends React.Component<IAppProps> {
 
   // tslint:disable:jsx-no-lambda
   render() {
-    return (
-      <Router>
-        <div>
-          {this.props.isHeaderVisible &&
-            !this.props.isTopicsMenuVisible && (
-              <Switch>
-                <Route path="/about" render={() => <Header isFixed className="about-page-header" />} />
-                <Route path="/" render={() => <Header isFixed />} />
-              </Switch>
-            )}
-          <Sidebar.Pushable>
-            <Sidebar animation="overlay" direction="top" onHide={this.props.hideTopicsMenu} visible={this.props.isTopicsMenuVisible}>
-              <TopicsMegaMenu />
-            </Sidebar>
-            <Sidebar.Pusher>
-              <div className="app-container">
-                {this.renderDevRibbon()}
-                <LoadingBar className="loading-bar" />
-                <ToastContainer
-                  position={toast.POSITION.TOP_LEFT as ToastPosition}
-                  className="toastify-container"
-                  toastClassName="toastify-toast"
-                />
-                <ErrorBoundary>
-                  <AppRoutes {...this.props} />
-                </ErrorBoundary>
-                <Footer />
-              </div>
-            </Sidebar.Pusher>
-          </Sidebar.Pushable>
-        </div>
-      </Router>
-    );
+    if (this.props.loadingDatasets) {
+      return (
+        <Dimmer active>
+          <Loader />
+        </Dimmer>
+      );
+    } else {
+      return (
+        <Router>
+          <div>
+            {this.props.isHeaderVisible &&
+              !this.props.isTopicsMenuVisible && (
+                <Switch>
+                  <Route path="/about" render={() => <Header isFixed className="about-page-header" />} />
+                  <Route path="/" render={() => <Header isFixed />} />
+                </Switch>
+              )}
+            <Sidebar.Pushable>
+              <Sidebar animation="overlay" direction="top" onHide={this.props.hideTopicsMenu} visible={this.props.isTopicsMenuVisible}>
+                <TopicsMegaMenu />
+              </Sidebar>
+              <Sidebar.Pusher>
+                <div className="app-container">
+                  {this.renderDevRibbon()}
+                  <LoadingBar className="loading-bar" />
+                  <ToastContainer
+                    position={toast.POSITION.TOP_LEFT as ToastPosition}
+                    className="toastify-container"
+                    toastClassName="toastify-toast"
+                  />
+                  <ErrorBoundary>
+                    <AppRoutes {...this.props} />
+                  </ErrorBoundary>
+                  <Footer />
+                </div>
+              </Sidebar.Pusher>
+            </Sidebar.Pushable>
+          </div>
+        </Router>
+      );
+    }
   }
 }
 
-const mapStateToProps = ({ authentication, applicationProfile, locale, header }: IRootState) => ({
+const mapStateToProps = ({ authentication, applicationProfile, locale, header, dataSet }: IRootState) => ({
   currentLocale: locale.currentLocale,
   isAuthenticated: authentication.isAuthenticated,
   isAdmin: hasAnyAuthority(authentication.account.authorities, [AUTHORITIES.ADMIN]),
   ribbonEnv: applicationProfile.ribbonEnv,
   isInProduction: applicationProfile.inProduction,
   isHeaderVisible: header.isHeaderVisible,
-  isTopicsMenuVisible: header.isTopicsMenuVisible
+  isTopicsMenuVisible: header.isTopicsMenuVisible,
+  loadingDatasets: dataSet.loading
 });
 
 const mapDispatchToProps = { setLocale, getSession, getProfile, hideTopicsMenu, hideHeader, getEntities };
