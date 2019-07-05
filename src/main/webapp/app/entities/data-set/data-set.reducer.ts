@@ -1,13 +1,11 @@
 import axios from 'axios';
-import { ICrudSearchAction, ICrudGetAction, ICrudGetAllAction, ICrudPutAction, ICrudDeleteAction } from 'react-jhipster';
+import { ICrudDeleteAction, ICrudGetAction, ICrudGetAllAction, ICrudPutAction, ICrudSearchAction } from 'react-jhipster';
 
 import { cleanEntity } from 'app/shared/util/entity-utils';
-import { REQUEST, SUCCESS, FAILURE } from 'app/shared/reducers/action-type.util';
+import { FAILURE, REQUEST, SUCCESS } from 'app/shared/reducers/action-type.util';
 
-import { IDataSet, defaultValue } from 'app/shared/model/data-set.model';
-import { IDimension } from 'app/shared/model/dimension.model';
-import { IMeasure } from 'app/shared/model/measure.model';
-import dimension from 'app/entities/dimension/dimension';
+import { defaultValue, IDataSet } from 'app/shared/model/data-set.model';
+import _ from 'lodash';
 
 export const ACTION_TYPES = {
   SEARCH_DATASETS: 'dataSet/SEARCH_DATASETS',
@@ -22,9 +20,10 @@ export const ACTION_TYPES = {
 };
 
 const initialState = {
-  loading: false,
+  loading: true,
   errorMessage: null,
   entities: [] as ReadonlyArray<IDataSet>,
+  entitiesById: {},
   entity: defaultValue,
   updating: false,
   updateSuccess: false
@@ -81,7 +80,8 @@ export default (state: DataSetState = initialState, action): DataSetState => {
       return {
         ...state,
         loading: false,
-        entities: action.payload.data
+        entities: action.payload.data,
+        entitiesById: _.keyBy(action.payload.data, 'id')
       };
     case SUCCESS(ACTION_TYPES.FETCH_DATASET):
       return {
