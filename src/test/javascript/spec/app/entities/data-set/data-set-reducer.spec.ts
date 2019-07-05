@@ -31,6 +31,7 @@ describe('Entities reducer tests', () => {
     loading: false,
     errorMessage: null,
     entities: [] as ReadonlyArray<IDataSet>,
+    entitiesById: {},
     entity: defaultValue,
     updating: false,
     updateSuccess: false
