@@ -54,8 +54,8 @@ public class DimensionCodeResource {
     @Timed
     public ResponseEntity<DimensionCode> createDimensionCode(@Valid @RequestBody DimensionCode dimensionCode) throws URISyntaxException {
         log.debug("REST request to save DimensionCode : {}", dimensionCode);
-        if (dimensionCode.getId() != null) {
-            throw new BadRequestAlertException("A new dimensionCode cannot already have an ID", ENTITY_NAME, "idexists");
+        if (dimensionCode.getId() != null && dimensionCodeRepository.existsById(dimensionCode.getId())) {
+            throw new BadRequestAlertException("Dimension code already exists", "dimension_code", "dimensioncodeexists");
         }
         DimensionCode result = dimensionCodeRepository.save(dimensionCode);
         dimensionCodeSearchRepository.save(result);

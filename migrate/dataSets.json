@@ -1,0 +1,1189 @@
+[
+    {
+        "id": "ageing-index-lau-1",
+        "name": {
+            "el": "Δείκτης γήρανσης πληθυσμού σε επίπεδο LAU I για τα έτη 1991-2001-2011",
+            "en": "Δείκτης γήρανσης πληθυσμού σε επίπεδο LAU I για τα έτη 1991-2001-2011"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "refArea"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "intentional-homicides",
+        "name": {
+            "el": "Ανθρωποκτονίες από πρόθεση",
+            "en": "Ανθρωποκτονίες από πρόθεση"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "crimes-against-life",
+        "name": {
+            "el": "Εγκλήματα κατά της ζωής",
+            "en": "Εγκλήματα κατά της ζωής"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "crimes-against-property",
+        "name": {
+            "el": "Εγκλήματα κατά της ιδιοκτησίας",
+            "en": "Εγκλήματα κατά της ιδιοκτησίας"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "suicides",
+        "name": {
+            "el": "Αυτοκτονίες",
+            "en": "Αυτοκτονίες"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "pc-change-of-severe-material-deprivation",
+        "name": {
+            "el": "Σοβαρή υλική αποστέρηση - Μεταβολή σε ποσοστιαίες μονάδες ως αποτέλεσμα της σύγκρισης με το έτος 2005",
+            "en": "Σοβαρή υλική αποστέρηση - Μεταβολή σε ποσοστιαίες μονάδες ως αποτέλεσμα της σύγκρισης με το έτος 2005"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "pc-of-college-graduates-to-master-phd",
+        "name": {
+            "el": "Ποσοστό αποφοίτων ΑΕΙ προς αποφοίτους Master/Phd",
+            "en": "Ποσοστό αποφοίτων ΑΕΙ προς αποφοίτους Master/Phd"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "refArea"
+            },
+            {
+                "id": "sex"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "aesfdrk",
+        "name": {
+            "el": "Αίσθημα ασφάλειας στη γειτονιά: \"Πολύ ανασφαλείς\" ή \"ανασφαλείς\", όταν περπατούν μόνοι/ες το βράδυ(% των ερωτηθέντων)",
+            "en": "Αίσθημα ασφάλειας στη γειτονιά: \"Πολύ ανασφαλείς\" ή \"ανασφαλείς\", όταν περπατούν μόνοι/ες το βράδυ(% των ερωτηθέντων)"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "dscrgrp",
+        "name": {
+            "el": "Διακρίσεις: Μέλη ομάδων που υφίστανται διακρίσεις στην Ελλάδα(% των ερωτηθέντων)",
+            "en": "Διακρίσεις: Μέλη ομάδων που υφίστανται διακρίσεις στην Ελλάδα(% των ερωτηθέντων)"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "health",
+        "name": {
+            "el": "Υποκειμενική αξιολόγηση κατάστασης υγείας: \"πολύ κακή\" ή \"κακή\"(% των ερωτηθέντων)",
+            "en": "Υποκειμενική αξιολόγηση κατάστασης υγείας: \"πολύ κακή\" ή \"κακή\"(% των ερωτηθέντων)"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "inmdisc",
+        "name": {
+            "el": "Απουσία προσώπου με το οποίο να μπορούν να συζητηθούν πολύ προσωπικά θέματα(% των ερωτηθέντων)",
+            "en": "Απουσία προσώπου με το οποίο να μπορούν να συζητηθούν πολύ προσωπικά θέματα(% των ερωτηθέντων)"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "sclact",
+        "name": {
+            "el": "Υποκειμενική συμμετοχή σε κοινωνικές δραστηριότητες",
+            "en": "Υποκειμενική συμμετοχή σε κοινωνικές δραστηριότητες"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "sclmeet",
+        "name": {
+            "el": "Συχνότητα κοινωνικών επαφών με φίλους, συγγενείς ή συναδέλφους: μία φορά το μήνα ή λιγότερο",
+            "en": "Συχνότητα κοινωνικών επαφών με φίλους, συγγενείς ή συναδέλφους: μία φορά το μήνα ή λιγότερο"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "yearly-unemployment-change-by-sex-nuts-2",
+        "name": {
+            "el": "Ετήσια μεταβολή του ποσοστού ανεργίας ατόμων ηλικίας 20 εως 64 ετών κατά φύλο Nuts 2 (%)",
+            "en": "Ετήσια μεταβολή του ποσοστού ανεργίας ατόμων ηλικίας 20 εως 64 ετών κατά φύλο Nuts 2 (%)"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "sex"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "dentists-per-hundred-thousand-inhabitants-nuts-2",
+        "name": {
+            "el": "Οδοντίατροι ανά 100.000 κατοίκους",
+            "en": "Οδοντίατροι ανά 100.000 κατοίκους"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "physiotherapists-per-hundred-thousand-inhabitants-nuts-2",
+        "name": {
+            "el": "Φυσιοθεραπευτές ανα 100.000 κατοίκους",
+            "en": "Φυσιοθεραπευτές ανα 100.000 κατοίκους"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "decade-infant-mortality-rate-change-nuts-2",
+        "name": {
+            "el": "Μεταβολή της βρεφικής θνησιμότητας (%) - Σύγκριση με προ δεκαετίας επίπεδα",
+            "en": "Μεταβολή της βρεφικής θνησιμότητας (%) - Σύγκριση με προ δεκαετίας επίπεδα"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "pc-change-of-gdp-per-capita-nuts-3",
+        "name": {
+            "el": "Ποσοστιαία μεταβολή του κατά κεφαλή ακαθάριστου εγχώριου προϊόντος σε επίπεδο NUTS 3",
+            "en": "Ποσοστιαία μεταβολή του κατά κεφαλή ακαθάριστου εγχώριου προϊόντος σε επίπεδο NUTS 3"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "private-households-by-size-nuts-3",
+        "name": {
+            "el": "Αριθμός ιδιωτικών νοικοκυριών κατά αριθμό μελών σε επίπεδο NUTS 3 - 1991-2001",
+            "en": "Αριθμός ιδιωτικών νοικοκυριών κατά αριθμό μελών σε επίπεδο NUTS 3 - 1991-2001"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "householdSize"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "pc-of-private-households-with-1-member-nuts-3",
+        "name": {
+            "el": "Ποσοστό ιδιωτικών νοικοκυριών με 1 μέλος επίπεδο NUTS 3 - 1991-2001",
+            "en": "Ποσοστό ιδιωτικών νοικοκυριών με 1 μέλος επίπεδο NUTS 3 - 1991-2001"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "pc-of-private-households-with-5-member-lau-1",
+        "name": {
+            "el": "Ποσοστό ατόμων που ζουν σε νοικοκυριά με 5+ μέλη - επίπεδο NUTS 3 - 1991-2001",
+            "en": "Ποσοστό ατόμων που ζουν σε νοικοκυριά με 5+ μέλη - επίπεδο NUTS 3 - 1991-2001"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "refArea"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "pc-of-graduates-up-to-primary-school",
+        "name": {
+            "el": "Ποσοστό αποφοίτων μέχρι και το Δημοτικό σχολείο",
+            "en": "Ποσοστό αποφοίτων μέχρι και το Δημοτικό σχολείο"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "refArea"
+            },
+            {
+                "id": "sex"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "pc-change-of-number-of-people-living-in-households-with-very-low-work-intensity",
+        "name": {
+            "el": "Ποσοστιαία μεταβολή των ατόμων που ζουν σε νοικοκυριά με πολύ χαμηλή ένταση εργασίας (Σύγκριση με το έτος 2005)",
+            "en": "Ποσοστιαία μεταβολή των ατόμων που ζουν σε νοικοκυριά με πολύ χαμηλή ένταση εργασίας (Σύγκριση με το έτος 2005)"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "people-at-risk-of-poverty-and-social-exclusion",
+        "name": {
+            "el": "Ποσοστό ατόμων που βρίσκονται σε κίνδυνο φτώχειας ή κοινωνικού αποκλεισμού",
+            "en": "Ποσοστό ατόμων που βρίσκονται σε κίνδυνο φτώχειας ή κοινωνικού αποκλεισμού"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "at-risk-of-poverty-rate",
+        "name": {
+            "el": "Ποσοστό ατόμων που βρίσκονται στο όριο της φτώχειας",
+            "en": "Ποσοστό ατόμων που βρίσκονται στο όριο της φτώχειας"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "population-density-nuts-3",
+        "name": {
+            "el": "Πληθυσμιακή πυκνότητα στο επίπεδο NUTS 3",
+            "en": "Πληθυσμιακή πυκνότητα στο επίπεδο NUTS 3"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "percentage-change-of-population-density-nuts-3",
+        "name": {
+            "el": "Ποσοστιαία μεταβολή της πληθυσμιακής πυκνότητας - Σύγκριση με προ δεκαετίας επίπεδα",
+            "en": "Ποσοστιαία μεταβολή της πληθυσμιακής πυκνότητας - Σύγκριση με προ δεκαετίας επίπεδα"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "percentage-change-of-population-density-nuts-3-base-year-2005",
+        "name": {
+            "el": "Ποσοστιαία μεταβολή πληθυσμιακής πυκνότητας με έτος βάσης το 2005 σε επίπεδο NUTS 3",
+            "en": "Ποσοστιαία μεταβολή πληθυσμιακής πυκνότητας με έτος βάσης το 2005 σε επίπεδο NUTS 3"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "total-dependency-ratio-lau-1",
+        "name": {
+            "el": "Δείκτης εξάρτησης πληθυσμού σε επίπεδο LAU I για τα έτη 1991-2001-2011",
+            "en": "Δείκτης εξάρτησης πληθυσμού σε επίπεδο LAU I για τα έτη 1991-2001-2011"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "refArea"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "pc-of-college-graduates-to-up-to-middle-school-graduates",
+        "name": {
+            "el": "Ποσοστό Αποφοίτων ΑΕΙ προς αποφοίτους έως και το Γυμνάσιο",
+            "en": "Ποσοστό Αποφοίτων ΑΕΙ προς αποφοίτους έως και το Γυμνάσιο"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "refArea"
+            },
+            {
+                "id": "sex"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "pc-of-foreigners-by-sex-lau-1",
+        "name": {
+            "el": "Ποσοστό αλλοδαπών κατά φύλο ως προς του σύνολο του πληθυσμού σε επίπεδο LAU I",
+            "en": "Ποσοστό αλλοδαπών κατά φύλο ως προς του σύνολο του πληθυσμού σε επίπεδο LAU I"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "refArea"
+            },
+            {
+                "id": "sex"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "men-to-women-ratio-among-foreigners-from-developing",
+        "name": {
+            "el": "Αναλογία αντρών γυναικών των αλλοδαπών με υπηκοότητα από αναπτυσσόμενες χώρες - LAU I",
+            "en": "Αναλογία αντρών γυναικών των αλλοδαπών με υπηκοότητα από αναπτυσσόμενες χώρες - LAU I"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "refArea"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "beds-in-hospitals",
+        "name": {
+            "el": "Διαθέσιμες Νοσοκομειακές κλίνες ανα 100.000 κατοίκους",
+            "en": "Διαθέσιμες Νοσοκομειακές κλίνες ανα 100.000 κατοίκους"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "births-percentage-of-the-total-population-nuts-3",
+        "name": {
+            "el": "Ποσοστό γεννήσεων ως προς το σύνολο του πληθυσμού - NUTS 3",
+            "en": "Ποσοστό γεννήσεων ως προς το σύνολο του πληθυσμού - NUTS 3"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "deaths-percentage-of-the-total-population-nuts-3",
+        "name": {
+            "el": "Ποσοστό θανάτων ως προς το σύνολο του πληθυσμού - NUTS 3",
+            "en": "Ποσοστό θανάτων ως προς το σύνολο του πληθυσμού - NUTS 3"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "natural-population-movement-nuts-3",
+        "name": {
+            "el": "Φυσική κίνηση πληθυσμού - NUTS 3",
+            "en": "Φυσική κίνηση πληθυσμού - NUTS 3"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "net-migration-plus-statistical-adjustment-nuts-3",
+        "name": {
+            "el": "Μετανάστευση με στατιστική διόρθωση σε επίπεδο NUTS 3",
+            "en": "Μετανάστευση με στατιστική διόρθωση σε επίπεδο NUTS 3"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "doctors-per-hundred-thousand-inhabitants-nuts-2",
+        "name": {
+            "el": "Ιατροί ανα 100.000 κατοίκους",
+            "en": "Ιατροί ανα 100.000 κατοίκους"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "nurses-and-midwives-per-hundred-thousand-inhabitants-nuts-2",
+        "name": {
+            "el": "Νοσηλευτές και Μαίες ανά 100.000 κατοίκους",
+            "en": "Νοσηλευτές και Μαίες ανά 100.000 κατοίκους"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "total-population-change-nuts-3",
+        "name": {
+            "el": "Συνολική πληθυσμιακή μεταβολή σε επίπεδο NUTS 3",
+            "en": "Συνολική πληθυσμιακή μεταβολή σε επίπεδο NUTS 3"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "per-capita-gdp-nuts-3",
+        "name": {
+            "el": "Κατά κεφαλή ακαθάριστο εγχώριο προϊόν σε επίπεδο NUTS 3",
+            "en": "Κατά κεφαλή ακαθάριστο εγχώριο προϊόν σε επίπεδο NUTS 3"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "household-income-nuts-2",
+        "name": {
+            "el": "Εισόδημα νοικοκυριών σε επίπεδο NUTS 2",
+            "en": "Εισόδημα νοικοκυριών σε επίπεδο NUTS 2"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "pc-change-of-households-income-base-year-2005-nuts-2",
+        "name": {
+            "el": "Ποσοστιαία μεταβολή του εισοδήματος των νοικοκυριών με έτος βάσης το 2006 σε επίπεδο NUTS 2",
+            "en": "Ποσοστιαία μεταβολή του εισοδήματος των νοικοκυριών με έτος βάσης το 2006 σε επίπεδο NUTS 2"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "gross-value-added-at-basic-prices-nuts-3",
+        "name": {
+            "el": "Ακαθάριστη Προστιθέμενη Αξία σε βασικές τιμές σε επίπεδο NUTS 3",
+            "en": "Ακαθάριστη Προστιθέμενη Αξία σε βασικές τιμές σε επίπεδο NUTS 3"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "pc-change-of-gross-value-added-at-basic-prices-nuts-3",
+        "name": {
+            "el": "Ποσοστιαία μεταβολή ακαθάριστης Προστιθέμενης Αξίας σε βασικές τιμές με έτος βάσης το 2005 - NUTS 3",
+            "en": "Ποσοστιαία μεταβολή ακαθάριστης Προστιθέμενης Αξίας σε βασικές τιμές με έτος βάσης το 2005 - NUTS 3"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "rd-expenditures-nuts-2",
+        "name": {
+            "el": "Δαπάνες στον τομέα έρευνας και ανάπτυξης σε επίπεδο NUTS 2",
+            "en": "Δαπάνες στον τομέα έρευνας και ανάπτυξης σε επίπεδο NUTS 2"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "pc-of-private-households-with-5-member-nuts-3",
+        "name": {
+            "el": "Ποσοστό ιδιωτικών νοικοκυριών με 5+ μέλος επίπεδο NUTS 3",
+            "en": "Ποσοστό ιδιωτικών νοικοκυριών με 5+ μέλος επίπεδο NUTS 3"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "yearly-youth-unemployment-change-by-sex-age",
+        "name": {
+            "el": "Ετήσια μεταβολή του ποσοστού των νέων ανέργων κατά φύλο και ηλικιακές ομάδες",
+            "en": "Ετήσια μεταβολή του ποσοστού των νέων ανέργων κατά φύλο και ηλικιακές ομάδες"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "age"
+            },
+            {
+                "id": "nuts"
+            },
+            {
+                "id": "sex"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "pc-of-foreigners-from-developing-lau-1",
+        "name": {
+            "el": "Ποσοστό αλλοδαπών με υπηκοότητα από τις αναπτυσσόμενες χώρες ως προς το σύνολο του πληθυσμού - LAU I",
+            "en": "Ποσοστό αλλοδαπών με υπηκοότητα από τις αναπτυσσόμενες χώρες ως προς το σύνολο του πληθυσμού - LAU I"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "refArea"
+            },
+            {
+                "id": "sex"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "pc-of-foreigners-from-developing-to-total-foreigners",
+        "name": {
+            "el": "Ποσοστό αλλοδαπων με υπηκοότητα από αναπτυσσόμενες χώρες ως προς το σύνολο των αλλοδαπών και σύνθεση κατά φύλο - LAU I",
+            "en": "Ποσοστό αλλοδαπων με υπηκοότητα από αναπτυσσόμενες χώρες ως προς το σύνολο των αλλοδαπών και σύνθεση κατά φύλο - LAU I"
+        },
+        "type": "qb",
+        "comment": {},
+        "dimensions": [
+            {
+                "id": "refArea"
+            },
+            {
+                "id": "sex"
+            },
+            {
+                "id": "refPeriod"
+            }
+        ],
+        "measures": [
+            {
+                "id": "obsValue"
+            }
+        ]
+    },
+    {
+        "id": "greek-election-results",
+        "name": {
+            "el": "Εκλογικά Αποτελέσματα",
+            "en": "Election Results"
+        },
+        "type": "qb",
+        "comment": {
+            "el": "Το σύνολο δεδομένων περιλαμβάνει όλα τα επίσημα εκλογικά αποτελέσματα των Εθνικών Εκλογών (Σεπτέμβριος 1996 - Ιανουάριος 2015). Δίνεται η δυνατότητα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης σε επίπεδο Εκλογικής Περιφέρειας και Καλλικρατικού Δήμου.",
+            "en": "The dataset includes all official election results of the Greek Parliamentary Elections (September 1996 - January 2015) at constituency and municipality level."
+        },
+        "dimensions": [
+            {
+                "id": "party"
+            },
+            {
+                "id": "constituency"
+            },
+            {
+                "id": "elections"
+            }
+        ],
+        "measures": [
+            {
+                "id": "votes_perc"
+            },
+            {
+                "id": "votes"
+            }
+        ],
+        "highlights": [
+            {
+                "id": "pasok",
+                "description": "2009-2015 » Το ΠΑΣΟΚ καταγράφει την μεγαλύτερη εκλογικά ελεύθερη πτώση κόμματος της Μεταπολίτευσης στις εθνικές εκλογές του 2009 συγκεντρώνει το 43,9% των ψήφων, στις εκλογές του Ιουνίου 2012 το ποσοστό του είναι 12,3% και εν τέλει τον Ιανουάριο του 2015 το ποσοστό του είναι 4,7%.",
+                "visType": "chart",
+                "seriesOptions": {}
+            },
+            {
+                "id": "apoxi",
+                "description": "Aπό το 2007 καταγράφεται μια σημαντική αύξηση της αποχής που κορυφώνεται στο 37% στις εκλογές του Ιουνίου του 2012.",
+                "visType": "chart",
+                "seriesOptions": {}
+            },
+            {
+                "id": "xrysi_augi",
+                "description": "Στις εκλογές του Ιανουαρίου 2015 στην εκλογική περιφέρεια Αττικής η Χρυσή Αυγή συγκεντρώνει τα υψηλότερα ποσοστά της στους Δήμους Ασπροπύργου (14,5%) και Αχαρνών (11,2%).",
+                "visType": "map",
+                "seriesOptions": {}
+            },
+            {
+                "id": "may_2012",
+                "description": "Στις εκλογές του Μαΐου του 2012 πάνω από 1.000.000 ψήφοι πήγαν σε κόμματα εκτός Κοινοβουλίου, έναντι μόλις 70.079 ψήφων το 2004.",
+                "visType": "chart",
+                "seriesOptions": {}
+            }
+        ]
+    }
+]
