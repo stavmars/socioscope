@@ -40,7 +40,7 @@ const migrateDataSets = async () => {
               try {
                 // Get the metadata of all DataSets.
                 const greekData = await axios.get(`http://www.socioscope.gr/api/datasets/${oldDataSets.data[key].id}?lang=el`);
-                const englishData = await axios.get(`http://www.socioscope.gr/api/datasets/${oldDataSets.data[key].id}?lang=en`)
+                const englishData = await axios.get(`http://www.socioscope.gr/api/datasets/${oldDataSets.data[key].id}?lang=en`);
                 for (const key in greekData.data.dimensions) {
                   // Add each new dimension to the database.
                   const dimension = {
@@ -127,7 +127,7 @@ const migrateDataSets = async () => {
               }
             }
           }
-          console.log(`DataSets amount = ${dataSets.length} | Dimensions amount = ${dimensions.length} | Measures amount = ${measures.length}`)
+          console.log(`DataSets amount = ${dataSets.length} | Dimensions amount = ${dimensions.length} | Measures amount = ${measures.length}`);
           dataSetStream.write(JSON.stringify(dataSets));
           dimensionStream.write(JSON.stringify(dimensions));
           measureStream.write(JSON.stringify(measures));
@@ -167,6 +167,7 @@ const migrateCodes = async () => {
               for (const key in oldCodeGreek.data) {
                 if (oldCodeGreek.data.hasOwnProperty(key) && oldCodeEnglish.data.hasOwnProperty(key)) {
                   const code = {
+                    'id': `${dimensions.data[ent].id}-${oldCodeGreek.data[key].id}`,
                     'dimensionId' : dimensions.data[ent].id,
                     'notation' : oldCodeGreek.data[key].id,
                     'name' : {
@@ -195,7 +196,7 @@ const migrateCodes = async () => {
             }
           }
         }
-        console.log(`Codes amount = ${codes.length}`)
+        console.log(`Codes amount = ${codes.length}`);
         stream.write(JSON.stringify(codes));
       }
     });
