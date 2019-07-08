@@ -185,7 +185,7 @@ const migrateCodes = async () => {
                   // Append each new Code to the corresponding file
                   codes.push(code);
                   try {
-                    await axios.post('http://localhost:8080/api/dimension-codes', codes, {
+                    await axios.post('http://localhost:8080/api/dimension-codes', code, {
                       headers: { 'Authorization': response.headers.authorization}
                     })
                   } catch (e) {
