@@ -7,5 +7,6 @@ public final class DimensionType {
 
     public static final String TIME = "TIME";
     public static final String CODED = "CODED";
+    public static final String STRING = "STRING";
 
 }

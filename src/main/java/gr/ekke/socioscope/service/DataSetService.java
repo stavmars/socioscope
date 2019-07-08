@@ -1,12 +1,8 @@
 package gr.ekke.socioscope.service;
 
 import gr.ekke.socioscope.domain.*;
-import gr.ekke.socioscope.repository.DataSetRepository;
-import gr.ekke.socioscope.repository.DimensionRepository;
-import gr.ekke.socioscope.repository.MeasureRepository;
-import gr.ekke.socioscope.repository.ObservationRepository;
+import gr.ekke.socioscope.repository.*;
 import gr.ekke.socioscope.repository.search.DataSetSearchRepository;
-import gr.ekke.socioscope.security.SecurityUtils;
 import gr.ekke.socioscope.service.dto.Series;
 import gr.ekke.socioscope.service.mapper.ObservationMapper;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
@@ -14,14 +10,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-import static gr.ekke.socioscope.security.AuthoritiesConstants.ADMIN;
 import static org.elasticsearch.index.query.QueryBuilders.queryStringQuery;
 
 /**
@@ -44,16 +37,20 @@ public class DataSetService {
 
     private final ObservationMapper observationMapper;
 
+    private final RawDataRepository rawDataRepository;
+
     private final UserService userService;
 
     public DataSetService(DataSetRepository dataSetRepository, DataSetSearchRepository dataSetSearchRepository, DimensionRepository dimensionRepository,
-                          MeasureRepository measureRepository, ObservationRepository observationRepository, ObservationMapper observationMapper, UserService userService) {
+                          MeasureRepository measureRepository, ObservationRepository observationRepository,
+                          ObservationMapper observationMapper, RawDataRepository rawDataRepository, UserService userService) {
         this.dataSetRepository = dataSetRepository;
         this.dataSetSearchRepository = dataSetSearchRepository;
         this.dimensionRepository = dimensionRepository;
         this.measureRepository = measureRepository;
         this.observationRepository = observationRepository;
         this.observationMapper = observationMapper;
+        this.rawDataRepository = rawDataRepository;
         this.userService = userService;
     }
 
@@ -209,19 +206,26 @@ public class DataSetService {
         log.debug("Request to get series for dataset {} with options {}", datasetId, seriesOptions);
         return dataSetRepository.findById(datasetId)
             .map(dataSet -> {
-                //if measure is not specified for the series, pick the first one
-                if (seriesOptions.getMeasure() == null) {
-                    seriesOptions.setMeasure(dataSet.getMeasures().stream().findFirst().get().getId());
+                // if the dataset contains pre-aggregated cube-like data, we fetch and map the observations to the corresponding series
+                if (dataSet.getType().equals(DatasetType.QB)) {
+                    //if measure is not specified for the series, pick the first one
+                    if (seriesOptions.getMeasure() == null) {
+                        seriesOptions.setMeasure(dataSet.getMeasures().stream().findFirst().get().getId());
+                    } else {
+                        dataSet.getMeasures().stream().filter(measure -> measure.getId().equals(seriesOptions.getMeasure()))
+                            .findFirst().orElseThrow(() ->
+                            new BadRequestAlertException("Dataset does not contain the specified measure", "dataSet", "invalid_measure"));
+
+                    }
+
+                    List<Observation> observations = observationRepository.findByDatasetAndDimensions(datasetId,
+                        seriesOptions.getDimensionValues());
+
+                    return observationMapper.observationsToMultipleSeries(observations, seriesOptions);
                 } else {
-                    dataSet.getMeasures().stream().filter(measure -> measure.getId().equals(seriesOptions.getMeasure()))
-                        .findFirst().orElseThrow(() ->
-                        new BadRequestAlertException("Dataset does not contain the specified measure", "dataSet", "invalid_measure"));
-
+                    // if the dataset contains raw, non-aggregated data, we aggregate it from the corresponding mongo collection
+                    return rawDataRepository.getSeries(dataSet, seriesOptions);
                 }
-
-                return observationRepository.findByDatasetAndDimensions(datasetId,
-                    seriesOptions.getDimensionValues());
-            })
-            .map(observations -> observationMapper.observationsToMultipleSeries(observations, seriesOptions));
+            });
     }
 }
