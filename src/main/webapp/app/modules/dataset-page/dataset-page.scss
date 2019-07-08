@@ -28,3 +28,48 @@
     color: #1e1e1e;
   }
 }
+
+.dataset-page-about {
+  margin-top: 14px;
+  &.color-scheme-1 {
+    background-color: $color-scheme-1-bg;
+  }
+  &.color-scheme-2 {
+    background-color: $color-scheme-2-bg;
+  }
+  &.color-scheme-3 {
+    background-color: $color-scheme-3-bg;
+  }
+  .dataset-page-about-content {
+    font-family: ProximaNovaRegular;
+    font-size: 20px;
+    line-height: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.dataset-page-highlights {
+  &.color-scheme-1 {
+    background-color: $color-scheme-1-bg;
+  }
+  &.color-scheme-2 {
+    background-color: $color-scheme-2-bg;
+  }
+  &.color-scheme-3 {
+    background-color: $color-scheme-3-bg;
+  }
+  .divider {
+    margin-left: 10%;
+    width: 80%;
+    &.color-scheme-1 {
+      border-bottom: 1px solid $color-scheme-1-accent;
+    }
+    &.color-scheme-2 {
+      border-bottom: 1px solid $color-scheme-2-accent;
+    }
+    &.color-scheme-3 {
+      border-bottom: 1px solid $color-scheme-3-accent;
+    }
+  }
+}
