@@ -27,7 +27,7 @@ export class DatasetPageHighlights extends React.Component<IDatasetPageHighlight
                   colorScheme={dataset.colorScheme}
                   headerImg="/content/images/Assets/Elections.svg"
                 >
-                  {value.description}
+                  <div dangerouslySetInnerHTML={{ __html: value.description }} />
                 </DatasetCard>
                 <div className={`divider ${dataset.colorScheme}`} />
               </div>
