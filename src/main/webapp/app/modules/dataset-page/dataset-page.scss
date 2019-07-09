@@ -30,6 +30,19 @@
 }
 
 .dataset-page-about {
+  .svg {
+    float: right;
+    margin: 23%;
+    &.color-scheme-1 {
+      fill: $color-scheme-1-accent;
+    }
+    &.color-scheme-2 {
+      fill: $color-scheme-2-accent;
+    }
+    &.color-scheme-3 {
+      fill: $color-scheme-3-accent;
+    }
+  }
   margin-top: 14px;
   &.color-scheme-1 {
     background-color: $color-scheme-1-bg;
