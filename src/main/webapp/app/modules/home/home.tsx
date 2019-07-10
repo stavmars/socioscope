@@ -26,7 +26,7 @@ export class Home extends React.Component<IHomeProp> {
     return (
       <div className="home-page-view">
         <div className="video">
-          <video src="/src/main/webapp/static/images/Assets/kaleidoscopeanimation.mp4" loop muted autoPlay playsInline />
+          <video src="/content/images/Assets/kaleidoscopeanimation.mp4" loop muted autoPlay playsInline />
         </div>
         <Visibility once={false} onOffScreen={this.props.showHeader} onOnScreen={this.props.hideHeader}>
           <div style={{ marginBottom: 40 }}>
