@@ -1,5 +1,17 @@
 @import 'app/shared/common.scss';
 
+.background {
+  &.color-scheme-1 {
+    background-color: $color-scheme-1-bg;
+  }
+  &.color-scheme-2 {
+    background-color: $color-scheme-2-bg;
+  }
+  &.color-scheme-3 {
+    background-color: $color-scheme-3-bg;
+  }
+}
+
 .dataset-page-tab-menu {
   margin: 80px 40px 0 40px;
 }
