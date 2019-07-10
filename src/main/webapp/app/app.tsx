@@ -4,7 +4,7 @@ import './app.scss';
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, NavLink as Link } from 'react-router-dom';
 import { toast, ToastContainer, ToastPosition } from 'react-toastify';
 import { IRootState } from 'app/shared/reducers';
 import { getSession } from 'app/shared/reducers/authentication';
@@ -16,12 +16,13 @@ import ErrorBoundary from 'app/shared/error/error-boundary';
 import { AUTHORITIES } from 'app/config/constants';
 import AppRoutes from 'app/routes';
 import LoadingBar from 'react-redux-loading-bar';
-import { Translate } from 'react-jhipster';
-import { Dimmer, Loader, Sidebar } from 'semantic-ui-react';
-import { hideHeader, hideTopicsMenu } from 'app/shared/reducers/header';
+import { Storage, Translate, translate } from 'react-jhipster';
+import { Dimmer, Loader, Sidebar, Responsive, Menu, Icon, Image } from 'semantic-ui-react';
+import { hideHeader, hideTopicsMenu, hideMobileMenu, toggleMobileMenu } from 'app/shared/reducers/header';
 import Header from 'app/shared/layout/header/header';
 import { getEntities } from 'app/entities/data-set/data-set.reducer';
 import { TopicsMegaMenu } from 'app/shared/layout/header/topics-mega-menu';
+import { MobileMenu } from './modules/mobile/mobile-menu';
 
 export interface IAppProps extends StateProps, DispatchProps {}
 
@@ -31,6 +32,12 @@ export class App extends React.Component<IAppProps> {
     this.props.getProfile();
     this.props.getEntities();
   }
+
+  handleLocaleChange = () => {
+    const langKey = this.props.currentLocale === 'el' ? 'en' : 'el';
+    Storage.session.set('locale', langKey);
+    this.props.setLocale(langKey);
+  };
 
   renderDevRibbon = () =>
     this.props.isInProduction === false ? (
@@ -50,6 +57,8 @@ export class App extends React.Component<IAppProps> {
         </Dimmer>
       );
     } else {
+      const localeIcon =
+        this.props.currentLocale === 'el' ? `/content/images/Assets/Lang-EN-white.svg` : `/content/images/Assets/Lang-EL-white.svg`;
       return (
         <Router>
           <div>
@@ -61,10 +70,42 @@ export class App extends React.Component<IAppProps> {
                 </Switch>
               )}
             <Sidebar.Pushable>
-              <Sidebar animation="overlay" direction="top" onHide={this.props.hideTopicsMenu} visible={this.props.isTopicsMenuVisible}>
-                <TopicsMegaMenu />
-              </Sidebar>
+              <Responsive {...Responsive.onlyComputer}>
+                <Sidebar animation="overlay" direction="top" onHide={this.props.hideTopicsMenu} visible={this.props.isTopicsMenuVisible}>
+                  <TopicsMegaMenu />
+                </Sidebar>
+              </Responsive>
+              <Responsive {...Responsive.onlyMobile}>
+                <Sidebar
+                  as={Menu}
+                  animation="overlay"
+                  onHide={this.props.hideMobileMenu}
+                  vertical
+                  visible={this.props.isMobileMenuVisible}
+                  width="wide"
+                  className="topics-mega-menu-list"
+                >
+                  <MobileMenu />
+                </Sidebar>
+              </Responsive>
               <Sidebar.Pusher>
+                <Responsive {...Responsive.onlyMobile}>
+                  <Menu inverted pointing secondary size="large">
+                    <Menu.Item position="left" header as="a" href="/" style={{ padding: '18px 0 0 15px' }}>
+                      <Image
+                        src={`/content/images/Assets/Logo-white.png`}
+                        alt="Socioscope Logo"
+                        style={{ height: '40px', width: '200px' }}
+                      />
+                    </Menu.Item>
+                    <Menu.Item onClick={this.handleLocaleChange} style={{ padding: '14px 0 0 60px' }}>
+                      <Image src={localeIcon} alt="language switcher" style={{ width: '40px', height: 'auto' }} />
+                    </Menu.Item>
+                    <Menu.Item onClick={this.props.toggleMobileMenu}>
+                      <Icon name="sidebar" />
+                    </Menu.Item>
+                  </Menu>
+                </Responsive>
                 <div className="app-container">
                   {this.renderDevRibbon()}
                   <LoadingBar className="loading-bar" />
@@ -95,10 +136,11 @@ const mapStateToProps = ({ authentication, applicationProfile, locale, header, d
   isInProduction: applicationProfile.inProduction,
   isHeaderVisible: header.isHeaderVisible,
   isTopicsMenuVisible: header.isTopicsMenuVisible,
+  isMobileMenuVisible: header.isMobileMenuVisible,
   loadingDatasets: dataSet.loading
 });
 
-const mapDispatchToProps = { setLocale, getSession, getProfile, hideTopicsMenu, hideHeader, getEntities };
+const mapDispatchToProps = { setLocale, getSession, getProfile, hideTopicsMenu, hideHeader, hideMobileMenu, toggleMobileMenu, getEntities };
 
 type StateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;
