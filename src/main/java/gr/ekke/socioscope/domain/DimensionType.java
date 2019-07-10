@@ -5,8 +5,7 @@ package gr.ekke.socioscope.domain;
  */
 public final class DimensionType {
 
-    public static final String TIME = "TIME";
-    public static final String CODED = "CODED";
-    public static final String STRING = "STRING";
+    public static final String TIME = "time";
+    public static final String CODED = "coded";
 
 }

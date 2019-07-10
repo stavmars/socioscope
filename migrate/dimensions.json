@@ -2,7 +2,7 @@
     {
         "id": "refArea",
         "name": {
-            "el": "Περιοχή αναφοράς",
+            "el": "Περιοχή αναφοράς",
             "en": "Reference Area"
         },
         "type": "coded"
@@ -13,7 +13,7 @@
             "el": "Περίοδος αναφοράς",
             "en": "Reference Period"
         },
-        "type": "time-interval"
+        "type": "time"
     },
     {
         "id": "nuts",

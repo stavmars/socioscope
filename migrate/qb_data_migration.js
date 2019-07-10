@@ -21,7 +21,7 @@ const transformQbData = async (dataset) => {
       );
       obsByDims[obsKey] = obsByDims[obsKey] || {
         dimensions: Object.keys(obs.dimensionValues).map(dimensionId => {
-          return {id: dimensionId, value: obs.dimensionValues[dimensionId]}
+          return {id: dimensionId, value: dimensionId == 'refPeriod' ? obs.dimensionValues[dimensionId].split(':')[1] : obs.dimensionValues[dimensionId]}
         }),
         measures: {}
       };
