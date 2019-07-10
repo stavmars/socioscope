@@ -42,7 +42,9 @@ public class RawDataRepository {
         }
 
         if (compareBy == null) {
-            aggregationOperations.add(group(xAxis).count().as("y"));
+            aggregationOperations.add(project("_id").and(xAxis).as("x"));
+            aggregationOperations.add(group("_id", "x"));
+            aggregationOperations.add(group("_id.x").count().as("y"));
             aggregationOperations.add(project("y").and("x").previousOperation());
             Aggregation agg = Aggregation.newAggregation(aggregationOperations);
             log.debug("Mongo agg query to get single series from raw dataset {}: {} ", dataSet.getId(), agg);
@@ -57,12 +59,11 @@ public class RawDataRepository {
             aggregationOperations.add(unwind(splitCompareBy[0]));
         }
 
-        aggregationOperations.add(project().and(xAxis).as("x").and(compareBy).as("compareBy"));
+        aggregationOperations.add(project("_id").and(xAxis).as("x").and(compareBy).as("compareBy"));
+        aggregationOperations.add(group("_id", "x", "compareBy"));
+        aggregationOperations.add(group("_id.x", "_id.compareBy").count().as("y"));
 
-
-        aggregationOperations.add(group("x", "compareBy").count().as("y"));
-
-        aggregationOperations.add(group("_id.compareBy").push(
+        aggregationOperations.add(group("compareBy").push(
             new BasicDBObject("y", "$y").append("x", "$_id.x")).as("data")
         );
 
