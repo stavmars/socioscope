@@ -7,18 +7,15 @@ import { IDimensionCode } from 'app/shared/model/dimension-code.model';
 import { IDimension } from 'app/shared/model/dimension.model';
 
 export const ACTION_TYPES = {
-  FETCH_DATASET: 'datasetPage/FETCH_DATASET',
   FETCH_SERIES: 'datasetPage/FETCH_SERIES',
   FETCH_DIMENSION_CODELIST: 'datasetPage/FETCH_DIMENSION_CODELIST',
   FETCH_DIMENSION_CODELISTS: 'datasetPage/FETCH_DIMENSION_CODELISTS'
 };
 
 const initialState = {
-  loadingDataset: false,
   loadingSeries: false,
   fetchedCodeLists: false,
   errorMessage: null,
-  dataset: defaultValue,
   dimensionCodes: {},
   series: seriesDefaultValue
 };
@@ -28,29 +25,16 @@ export type DatasetPageState = Readonly<typeof initialState>;
 // Reducer
 export default (state: DatasetPageState = initialState, action): DatasetPageState => {
   switch (action.type) {
-    case REQUEST(ACTION_TYPES.FETCH_DATASET):
-      return {
-        ...state,
-        loadingDataset: true
-      };
     case REQUEST(ACTION_TYPES.FETCH_SERIES):
       return {
         ...state,
         loadingSeries: true
       };
-    case FAILURE(ACTION_TYPES.FETCH_DATASET):
     case FAILURE(ACTION_TYPES.FETCH_SERIES):
       return {
         ...state,
-        loadingDataset: false,
         loadingSeries: false,
         errorMessage: action.payload
-      };
-    case SUCCESS(ACTION_TYPES.FETCH_DATASET):
-      return {
-        ...state,
-        dataset: action.payload.data,
-        loadingDataset: false
       };
     case SUCCESS(ACTION_TYPES.FETCH_SERIES):
       return {
@@ -83,7 +67,7 @@ const dimensionApiUrl = 'api/dimensions';
 
 // Actions
 
-export const getDataset = (id: string) => async dispatch => {
+/*export const getDataset = (id: string) => async dispatch => {
   const requestUrl = `${datasetApiUrl}/${id}`;
   const result = await dispatch({
     type: ACTION_TYPES.FETCH_DATASET,
@@ -91,7 +75,7 @@ export const getDataset = (id: string) => async dispatch => {
   });
   dispatch(getDimensionCodeLists(result.value.data));
   return result;
-};
+};*/
 
 export const getDimensionCodelist = (dimension: IDimension) => ({
   type: ACTION_TYPES.FETCH_DIMENSION_CODELIST,

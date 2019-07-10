@@ -3,19 +3,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router-dom';
 import { IRootState } from 'app/shared/reducers';
-import { getDataset } from 'app/modules/dataset-page/dataset-page-reducer';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import DatasetCard from '../home/dataset-card';
 
-export interface IDatasetPageHighlightsProp extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
+export interface IDatasetPageHighlightsProp extends StateProps, RouteComponentProps<{ id: string }> {}
 
 export class DatasetPageHighlights extends React.Component<IDatasetPageHighlightsProp> {
-  componentDidMount() {
-    this.props.getDataset(this.props.match.params.id);
-  }
-
   render() {
-    const { dataset } = this.props;
+    const { datasetsById } = this.props;
+    const dataset = datasetsById[this.props.match.params.id];
 
     return (
       <div className={`dataset-page-highlights ${dataset.colorScheme}`}>
@@ -39,17 +35,12 @@ export class DatasetPageHighlights extends React.Component<IDatasetPageHighlight
 }
 
 const mapStateToProps = (storeState: IRootState) => ({
-  dataset: storeState.datasetPage.dataset
+  datasetsById: storeState.dataSet.entitiesById
 });
 
-const mapDispatchToProps = {
-  getDataset
-};
-
 type StateProps = ReturnType<typeof mapStateToProps>;
-type DispatchProps = typeof mapDispatchToProps;
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(DatasetPageHighlights);

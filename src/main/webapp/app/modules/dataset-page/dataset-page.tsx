@@ -1,7 +1,7 @@
 import React from 'react';
-import { NavLink, RouteComponentProps } from 'react-router-dom';
+import { NavLink, Redirect, RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getDataset, getSeries } from 'app/modules/dataset-page/dataset-page-reducer';
+import { getSeries } from 'app/modules/dataset-page/dataset-page-reducer';
 
 import Highcharts from 'highcharts';
 import { Chart, ColumnSeries, HighchartsChart, Legend, Subtitle, Title, withHighcharts, XAxis, YAxis } from 'react-jsx-highcharts';
@@ -21,7 +21,6 @@ export class DatasetPage extends React.Component<IDatasetPageProp> {
 
   componentDidMount() {
     this.props.showHeader();
-    this.props.getDataset(this.props.match.params.id);
     const seriesOptions = {
       xAxis: 'elections',
       measure: 'votes_perc',
@@ -40,9 +39,14 @@ export class DatasetPage extends React.Component<IDatasetPageProp> {
   }
 
   render() {
-    const { dataset, loadingDataset, dimensionCodes, series, fetchedCodeLists } = this.props;
+    const { datasetsById, dimensionCodes, series, fetchedCodeLists } = this.props;
+
     const categories = ['Jan 15', 'Sep 96', 'Apr 00', 'Mar 04', 'Sep 07', 'Oct 09', 'May 12', 'Jun 12'];
 
+    const dataset = datasetsById[this.props.match.params.id];
+    if (!dataset) {
+      return <Redirect to="/" />;
+    }
     return (
       <div className="dataset-page-tab-menu" style={{ backgroundImage: `url(/content/images/Assets/${dataset.id}.jpg` }}>
         <Grid textAlign="center" style={{ margin: 0, padding: 0 }}>
@@ -90,15 +94,13 @@ export class DatasetPage extends React.Component<IDatasetPageProp> {
 }
 
 const mapStateToProps = (storeState: IRootState) => ({
-  dataset: storeState.datasetPage.dataset,
   dimensionCodes: storeState.datasetPage.dimensionCodes,
   series: storeState.datasetPage.series,
-  loadingDataset: storeState.datasetPage.loadingDataset,
+  datasetsById: storeState.dataSet.entitiesById,
   fetchedCodeLists: storeState.datasetPage.fetchedCodeLists
 });
 
 const mapDispatchToProps = {
-  getDataset,
   getSeries,
   showHeader,
   hideHeader
