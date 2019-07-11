@@ -77,7 +77,7 @@ export class App extends React.Component<IAppProps> {
                   onHide={this.props.hideMobileMenu}
                   vertical
                   visible={this.props.isMobileMenuVisible}
-                  width="wide"
+                  style={{ width: '100%' }}
                   className="topics-mega-menu-list"
                 >
                   <MobileMenu />
