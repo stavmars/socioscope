@@ -2,6 +2,7 @@ package gr.ekke.socioscope.repository;
 
 import com.mongodb.BasicDBObject;
 import gr.ekke.socioscope.domain.DataSet;
+import gr.ekke.socioscope.domain.DimensionValue;
 import gr.ekke.socioscope.domain.SeriesOptions;
 import gr.ekke.socioscope.service.dto.Series;
 import gr.ekke.socioscope.service.dto.SeriesPoint;
@@ -11,12 +12,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.Aggregation;
 import org.springframework.data.mongodb.core.aggregation.AggregationOperation;
+import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
+import static java.util.stream.Collectors.groupingBy;
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
 
 /**
@@ -34,7 +38,13 @@ public class RawDataRepository {
 
         String xAxis = seriesOptions.getxAxis();
         String compareBy = seriesOptions.getCompareBy();
+        List<DimensionValue> dimensionValues = seriesOptions.getDimensionValues();
         List<AggregationOperation> aggregationOperations = new ArrayList<>();
+
+
+        if (dimensionValues != null) {
+            aggregationOperations.add(match(this.getDimensionCriteria(dimensionValues)));
+        } ;
 
         String[] splitXAxis = xAxis.split("\\.");
         if (splitXAxis.length > 1) {
@@ -70,5 +80,27 @@ public class RawDataRepository {
         Aggregation agg = Aggregation.newAggregation(aggregationOperations);
         log.debug("Mongo agg query to get multiple series from raw dataset {}: {} ", dataSet.getId(), agg);
         return mongoTemplate.aggregate(agg, dataSet.getId(), Series.class).getMappedResults();
+    }
+
+    private Criteria getDimensionCriteria(List<DimensionValue> dimensionValues) {
+        Map<String, List<DimensionValue>> byParent = dimensionValues.stream().collect(groupingBy(dimensionValue -> {
+            String dimensionId = dimensionValue.getId();
+            String[] splitDimensionId = dimensionId.split("\\.");
+            return splitDimensionId.length > 1 ? splitDimensionId[0] : "";
+        }));
+
+        Criteria[] dimensionCriteria = byParent.entrySet().stream().map(entry -> {
+            String parent = entry.getKey();
+            if (parent.isEmpty()) {
+                return new Criteria().andOperator(entry.getValue().stream().map(
+                    dimensionValue -> Criteria.where(dimensionValue.getId()).is(dimensionValue.getValue())
+                ).toArray(Criteria[]::new));
+            }
+            return Criteria.where(parent).elemMatch(new Criteria().andOperator(entry.getValue().stream().map(
+                dimensionValue -> Criteria.where(dimensionValue.getId().split("\\.")[1]).is(dimensionValue.getValue())
+            ).toArray(Criteria[]::new)));
+        }).toArray(Criteria[]::new);
+
+        return new Criteria().andOperator(dimensionCriteria);
     }
 }
