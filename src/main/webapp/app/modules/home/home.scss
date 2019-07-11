@@ -11,18 +11,74 @@
 Main page styles
 ========================================================================== */
 .home-page-view {
-  //background: rgba(30, 30, 30, 0.6) url('/content/images/Assets/Homepage-bg.jpg') no-repeat fixed top;
   background-blend-mode: color;
   background-size: cover;
+  .home-page-view-title {
+    font-family: BPnoScriptBold;
+    color: #ffffff;
+    margin-bottom: 0;
+    margin-top: 3em;
+    @include mobile {
+      font-size: 30px;
+    }
+    @include computer {
+      font-size: 80px;
+    }
+  }
+  .home-page-view-subtitle {
+    font-family: ProximaNovaSemibold;
+    color: #ffffff;
+    max-width: 672px;
+    margin-left: auto;
+    margin-right: auto;
+    @include mobile {
+      font-size: 14px;
+      margin-bottom: 35px;
+    }
+    @include computer {
+      margin-top: 31px;
+      margin-bottom: 111px;
+      font-size: 20px;
+    }
+  }
+  .home-page-view-explore {
+    font-family: BPnoScriptBold;
+    color: #ffffff;
+    @include mobile {
+      font-size: 16px;
+      border-bottom: 2px solid #ff5d39;
+    }
+    @include computer {
+      font-size: 30px;
+      border-bottom: 4px solid #ff5d39;
+    }
+  }
 }
 
 .dataset-cards {
-  padding: 0 40px 60px 40px;
+  @include mobile {
+    margin-top: -75px;
+    padding: 0 0 60px 0;
+  }
+  @include computer {
+    padding: 0 40px 60px 40px;
+  }
 }
 
 .dataset-card {
+  @include mobile {
+    height: 512px;
+  }
+  @include computer {
+    height: 756px;
+  }
   &:not(:last-child) {
-    margin-bottom: 30px;
+    @include mobile {
+      margin-bottom: 10px;
+    }
+    @include computer {
+      margin-bottom: 30px;
+    }
   }
   &.color-scheme-1 {
     background-color: $color-scheme-1-bg;
@@ -37,10 +93,30 @@ Main page styles
 
 .dataset-card-header {
   text-align: center;
-  padding-top: 57px;
+  @include mobile {
+    padding-top: 15px;
+  }
+  @include computer {
+    padding-top: 57px;
+  }
+  .dataset-card-header-image {
+    @include mobile {
+      width: 31px;
+      height: 30px;
+    }
+    @include computer {
+      width: auto;
+      height: auto;
+    }
+  }
   h3 {
     font-family: 'ProximaNovaSemibold';
-    font-size: 20px;
+    @include mobile {
+      font-size: 14px;
+    }
+    @include computer {
+      font-size: 20px;
+    }
   }
 }
 .grid {
@@ -49,15 +125,37 @@ Main page styles
 
 .dataset-card-content {
   padding: 50px;
+  .dataset-card-content-image {
+    @include mobile {
+      height: 131px;
+      width: 280px;
+    }
+    @include computer {
+      height: 250px;
+      width: 480px;
+    }
+  }
   .dataset-card-desc {
     font-family: 'BPnoScriptBold';
-    font-size: 40px;
-    line-height: 45px;
+    @include mobile {
+      font-size: 20px;
+      line-height: 18px;
+    }
+    @include computer {
+      font-size: 40px;
+      line-height: 45px;
+    }
   }
   .dataset-card-link {
     color: #1e1e1e;
+    alignment: center;
     font-family: 'BPnoScriptBold';
-    font-size: 20px;
+    @include mobile {
+      font-size: 16px;
+    }
+    @include computer {
+      font-size: 20px;
+    }
     border-bottom-width: 3px;
     border-bottom-style: solid;
     &.color-scheme-1 {

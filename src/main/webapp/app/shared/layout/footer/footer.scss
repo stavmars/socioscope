@@ -1,10 +1,29 @@
+@import 'app/shared/common.scss';
+
 #app-footer {
   background-color: #000000;
-  align-items: center;
-  alignment: center;
+  @include mobile {
+    align-items: left;
+    alignment: letf;
+  }
+  @include computer {
+    align-items: center;
+    alignment: center;
+  }
   padding: 40px 120px;
   font-family: ProximaNovaSemibold;
   color: #ededed;
+}
+
+#app-footer-colab {
+  font-family: ProximaNovaSemibold;
+  font-size: 12px;
+}
+
+#app-footer-cc {
+  font-family: ProximaNovaSemibold;
+  font-size: 12px;
+  padding-left: -20px;
 }
 
 #app-footer-links {

@@ -70,11 +70,6 @@ export class App extends React.Component<IAppProps> {
                 </Switch>
               )}
             <Sidebar.Pushable>
-              <Responsive {...Responsive.onlyComputer}>
-                <Sidebar animation="overlay" direction="top" onHide={this.props.hideTopicsMenu} visible={this.props.isTopicsMenuVisible}>
-                  <TopicsMegaMenu />
-                </Sidebar>
-              </Responsive>
               <Responsive {...Responsive.onlyMobile}>
                 <Sidebar
                   as={Menu}
@@ -88,24 +83,12 @@ export class App extends React.Component<IAppProps> {
                   <MobileMenu />
                 </Sidebar>
               </Responsive>
+              <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+                <Sidebar animation="overlay" direction="top" onHide={this.props.hideTopicsMenu} visible={this.props.isTopicsMenuVisible}>
+                  <TopicsMegaMenu />
+                </Sidebar>
+              </Responsive>
               <Sidebar.Pusher>
-                <Responsive {...Responsive.onlyMobile}>
-                  <Menu inverted pointing secondary size="large">
-                    <Menu.Item position="left" header as="a" href="/" style={{ padding: '18px 0 0 15px' }}>
-                      <Image
-                        src={`/content/images/Assets/Logo-white.png`}
-                        alt="Socioscope Logo"
-                        style={{ height: '40px', width: '200px' }}
-                      />
-                    </Menu.Item>
-                    <Menu.Item onClick={this.handleLocaleChange} style={{ padding: '14px 0 0 60px' }}>
-                      <Image src={localeIcon} alt="language switcher" style={{ width: '40px', height: 'auto' }} />
-                    </Menu.Item>
-                    <Menu.Item onClick={this.props.toggleMobileMenu}>
-                      <Icon name="sidebar" />
-                    </Menu.Item>
-                  </Menu>
-                </Responsive>
                 <div className="app-container">
                   {this.renderDevRibbon()}
                   <LoadingBar className="loading-bar" />
