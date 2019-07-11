@@ -29,7 +29,7 @@ export class Header extends React.Component<IHeaderProps, {}> {
   render() {
     const { currentLocale, isAuthenticated, isAdmin, isSwaggerEnabled, isFixed, className } = this.props;
     const color = className === 'home-page-header' ? 'white' : 'black';
-    const mobileColor = className ? null : 'white';
+    const mobileAboutPage = className === 'about-page-header' ? 'top' : null;
     const localeIcon =
       currentLocale === 'el' ? `/content/images/Assets/Lang-EN-${color}.svg` : `/content/images/Assets/Lang-EL-${color}.svg`;
 
@@ -37,14 +37,14 @@ export class Header extends React.Component<IHeaderProps, {}> {
       <div>
         <Responsive {...Responsive.onlyMobile}>
           <div>
-            <Menu inverted pointing secondary style={{ backgroundColor: mobileColor }}>
-              <Menu.Item position="left" header as="a" href="/" style={{ padding: '18px 0 0 15px' }}>
+            <Menu inverted pointing secondary fixed={mobileAboutPage} style={{ backgroundColor: mobileAboutPage ? 'white' : null }}>
+              <Menu.Item position="left" header as="a" href="/" style={{ padding: '18px 0 17px 15px' }}>
                 <Image src={`/content/images/Assets/Logo-${color}.png`} alt="Socioscope Logo" style={{ height: '35', width: '144px' }} />
               </Menu.Item>
-              <Menu.Item onClick={this.handleLocaleChange} style={{ padding: '14px 0 0 60px' }}>
+              <Menu.Item onClick={this.handleLocaleChange} style={{ padding: '14px 0 13px 60px' }}>
                 <Image src={localeIcon} alt="language switcher" style={{ width: '27px', height: '27px' }} />
               </Menu.Item>
-              <Menu.Item onClick={this.props.toggleMobileMenu}>
+              <Menu.Item onClick={this.props.toggleMobileMenu} style={{ padding: '21px 20px 21px 18px' }}>
                 <Icon name="sidebar" />
               </Menu.Item>
             </Menu>
