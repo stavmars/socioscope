@@ -2,39 +2,42 @@ import './footer.scss';
 
 import React from 'react';
 import { translate } from 'react-jhipster';
-import { Grid, Image, List, Responsive } from 'semantic-ui-react';
+import { Grid, Image, List, Responsive, Menu, Container } from 'semantic-ui-react';
 import { localeImage } from 'app/shared/util/entity-utils';
 
 const Footer = () => (
   <div>
     <Responsive {...Responsive.onlyMobile}>
-      <div id="app-footer">
-        <Grid>
-          <Grid.Row>
-            <Image id="app-footer-logo" src="/content/images/Assets/Logo-white.png" />
+      <div className="app-footer">
+        <Grid rows={4}>
+          <Grid.Row centered className="app-footer-logo">
+            <Image src="/content/images/Assets/Logo-white.png" />
           </Grid.Row>
-          <Grid.Row>
-            <Grid.Column textAlign="justified">
-              <p id="app-footer-colab">{translate('footer.collaboration')}</p>
+          <Grid.Row className="app-footer-text" columns={2}>
+            <Grid.Column textAlign="center" style={{ padding: '28px 0 0 38px' }}>
+              <span>{translate('footer.collaboration')}</span>
             </Grid.Column>
-            <Grid.Column textAlign="justified">
-              <p id="app-footer-cc">CC BY 4.0</p>
+            <Grid.Column textAlign="center" style={{ padding: '28px 37px 0 0' }}>
+              <span>CC BY 4.0</span>
             </Grid.Column>
           </Grid.Row>
-          {/* <Grid.Row>
+          <Grid.Row centered columns={2}>
             <Grid.Column>
               <Image.Group>
-                <Image src="/content/images/Assets/ekke.png" />
-                <Image src="/content/images/Assets/athena.png" />
+                <Image src="/content/images/Assets/ekke.png" style={{ height: '36px', width: '36px', marginRight: 20, marginLeft: 30 }} />
+                <Image src="/content/images/Assets/athena.png" style={{ height: '36px', width: '36px', marginLeft: 20 }} />
               </Image.Group>
             </Grid.Column>
             <Grid.Column>
               <Image.Group>
-                <Image src="/content/images/Assets/cc.png" />
-                <Image src="/content/images/Assets/person.png" />
+                <Image src="/content/images/Assets/cc.png" style={{ height: '36px', width: '36px', marginRight: 20 }} />
+                <Image src="/content/images/Assets/person.png" style={{ height: '36px', width: '36px', marginLeft: 20 }} />
               </Image.Group>
             </Grid.Column>
-          </Grid.Row> */}
+          </Grid.Row>
+          <Grid.Row centered>
+            <Image className="app-footer-logo" src={localeImage()} />
+          </Grid.Row>
         </Grid>
       </div>
     </Responsive>

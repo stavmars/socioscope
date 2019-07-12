@@ -2,28 +2,27 @@
 
 #app-footer {
   background-color: #000000;
-  @include mobile {
-    align-items: left;
-    alignment: letf;
-  }
-  @include computer {
-    align-items: center;
-    alignment: center;
-  }
+  align-items: center;
+  alignment: center;
   padding: 40px 120px;
   font-family: ProximaNovaSemibold;
   color: #ededed;
 }
 
-#app-footer-colab {
-  font-family: ProximaNovaSemibold;
-  font-size: 12px;
-}
-
-#app-footer-cc {
-  font-family: ProximaNovaSemibold;
-  font-size: 12px;
-  padding-left: -20px;
+.app-footer {
+  background-color: #000000;
+  width: 100%;
+  height: 270px;
+  padding-top: 24px;
+  .app-footer-text {
+    color: #ededed;
+    font-family: ProximaNovaSemibold;
+    font-size: 12px;
+  }
+  .app-footer-logo {
+    width: 186px;
+    height: 31px;
+  }
 }
 
 #app-footer-links {
