@@ -37,7 +37,13 @@ export class Header extends React.Component<IHeaderProps, {}> {
       <div>
         <Responsive {...Responsive.onlyMobile}>
           <div>
-            <Menu inverted pointing secondary fixed={mobileAboutPage} style={{ backgroundColor: mobileAboutPage ? 'white' : null }}>
+            <Menu
+              inverted
+              pointing
+              secondary
+              fixed={mobileAboutPage}
+              style={{ backgroundColor: mobileAboutPage ? 'white' : null, borderStyle: 'none' }}
+            >
               <Menu.Item position="left" header as="a" href="/" style={{ padding: '18px 0 17px 15px' }}>
                 <Image src={`/content/images/Assets/Logo-${color}.png`} alt="Socioscope Logo" style={{ height: '35', width: '144px' }} />
               </Menu.Item>
