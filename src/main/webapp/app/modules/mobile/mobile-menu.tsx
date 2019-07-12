@@ -24,40 +24,58 @@ export class MobileMenu extends React.Component<DispatchProps> {
             <List.Content>
               <List.Header className="mobile-menu-item">ΘΕΜΑΤΙΚΕΣ</List.Header>
               <div className="mobile-menu-list">
-                <List.Item>
-                  <Container text className="mobile-menu-list-item color-scheme-1" as={Link} to="/dataset/greek-election-results">
-                    <Image className="mobile-menu-list-image" src="/content/images/Assets/Protests.svg" />
-                    {translate('home.dataset.categories.social')}
+                <List.Item className="mobile-menu-list-line color-scheme-1">
+                  <Container>
+                    <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Protests.svg" />
+                    <Container text className="mobile-menu-list-line-item color-scheme-1" as={Link} to="/dataset/greek-election-results">
+                      {translate('home.dataset.categories.social')}
+                      <i />
+                    </Container>
                   </Container>
                 </List.Item>
-                <List.Item>
-                  <Container text className="mobile-menu-list-item color-scheme-3" as={Link} to="/dataset/greek-election-results">
-                    <Image className="mobile-menu-list-image" src="/content/images/Assets/Criminality.svg" />
-                    {translate('home.dataset.categories.criminality')}
+                <List.Item className="mobile-menu-list-line color-scheme-3">
+                  <Container>
+                    <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Criminality.svg" />
+                    <Container text className="mobile-menu-list-line-item color-scheme-3" as={Link} to="/dataset/greek-election-results">
+                      {translate('home.dataset.categories.criminality')}
+                      <i />
+                    </Container>
                   </Container>
                 </List.Item>
-                <List.Item>
-                  <Container text className="mobile-menu-list-item color-scheme-2" as={Link} to="/dataset/greek-election-results">
-                    <Image className="mobile-menu-list-image" src="/content/images/Assets/Poverty.svg" />
-                    {translate('home.dataset.categories.poverty')}
+                <List.Item className="mobile-menu-list-line color-scheme-2">
+                  <Container>
+                    <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Poverty.svg" />
+                    <Container text className="mobile-menu-list-line-item color-scheme-2" as={Link} to="/dataset/greek-election-results">
+                      {translate('home.dataset.categories.poverty')}
+                      <i />
+                    </Container>
                   </Container>
                 </List.Item>
-                <List.Item>
-                  <Container text className="mobile-menu-list-item color-scheme-1" as={Link} to="/dataset/greek-election-results">
-                    <Image className="mobile-menu-list-image" src="/content/images/Assets/Elections.svg" />
-                    {translate('home.dataset.categories.elections')}
+                <List.Item className="mobile-menu-list-line color-scheme-1">
+                  <Container>
+                    <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Elections.svg" />
+                    <Container text className="mobile-menu-list-line-item color-scheme-1" as={Link} to="/dataset/greek-election-results">
+                      {translate('home.dataset.categories.elections')}
+                      <i />
+                    </Container>
                   </Container>
                 </List.Item>
-                <List.Item>
-                  <Container text className="mobile-menu-list-item color-scheme-2" as={Link} to="/dataset/greek-election-results">
-                    <Image className="mobile-menu-list-image" src="/content/images/Assets/Politicians.svg" />
-                    {translate('home.dataset.categories.politics')}
+                <List.Item className="mobile-menu-list-line color-scheme-2">
+                  <Container>
+                    <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Politicians.svg" />
+                    <Container text className="mobile-menu-list-line-item color-scheme-2" as={Link} to="/dataset/greek-election-results">
+                      {translate('home.dataset.categories.politics')}
+                      <i />
+                    </Container>
                   </Container>
                 </List.Item>
-                <List.Item>
-                  <Container text className="mobile-menu-list-item color-scheme-3" as={Link} to="/dataset/greek-election-results">
-                    <Image className="mobile-menu-list-image" src="/content/images/Assets/Teenagers.svg" />
-                    {translate('home.dataset.categories.schools')}
+                <List.Item className="mobile-menu-list-line color-scheme-3">
+                  <Container>
+                    <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Teenagers.svg" />
+                    <Container text className="mobile-menu-list-line-item color-scheme-3" as={Link} to="/dataset/greek-election-results">
+                      {translate('home.dataset.categories.schools')}
+                      <i />
+                    </Container>
                   </Container>
                 </List.Item>
               </div>
