@@ -63,7 +63,8 @@ export class App extends React.Component<IAppProps> {
         <Router>
           <div>
             {this.props.isHeaderVisible &&
-              !this.props.isTopicsMenuVisible && (
+              !this.props.isTopicsMenuVisible &&
+              !this.props.isMobileMenuVisible && (
                 <Switch>
                   <Route path="/about" render={() => <Header isFixed className="about-page-header" />} />
                   <Route path="/" render={() => <Header isFixed />} />
@@ -78,9 +79,8 @@ export class App extends React.Component<IAppProps> {
                   vertical
                   visible={this.props.isMobileMenuVisible}
                   style={{ width: '100%' }}
-                  className="topics-mega-menu-list"
                 >
-                  <MobileMenu />
+                  <MobileMenu toggleMobileMenu={this.props.toggleMobileMenu} />
                 </Sidebar>
               </Responsive>
               <Responsive minWidth={Responsive.onlyTablet.minWidth}>
