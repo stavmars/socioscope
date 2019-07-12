@@ -17,7 +17,7 @@ export class MobileMenu extends React.Component<DispatchProps> {
               src="/content/images/Assets/mobile-menu-icon.png"
               style={{ padding: '16px 0 0 14px' }}
             />
-            <Image src={`/content/images/Assets/Search-black.svg`} alt="search button" style={{ padding: '19px 0 0 160px' }} />
+            {/* <Image src={`/content/images/Assets/Search-black.svg`} alt="search button" style={{ padding: '19px 0 0 160px' }} /> */}
             <Icon onClick={this.props.toggleMobileMenu} name="cancel" size="big" style={{ padding: '19px 0 0 0' }} />
           </List.Item>
           <List.Item>
