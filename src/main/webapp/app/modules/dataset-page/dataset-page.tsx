@@ -7,6 +7,7 @@ import Highcharts from 'highcharts';
 import { Chart, ColumnSeries, HighchartsChart, Legend, Subtitle, Title, withHighcharts, XAxis, YAxis } from 'react-jsx-highcharts';
 
 import { IRootState } from 'app/shared/reducers';
+import Header from 'app/shared/layout/header/header';
 import { hideHeader, showHeader } from 'app/shared/reducers/header';
 import { Grid } from 'semantic-ui-react';
 import { translateEntityField } from 'app/shared/util/entity-utils';
@@ -48,27 +49,30 @@ export class DatasetPage extends React.Component<IDatasetPageProp> {
       return <Redirect to="/" />;
     }
     return (
-      <div className="dataset-page-tab-menu" style={{ backgroundImage: `url(/content/images/Assets/${dataset.id}.jpg` }}>
-        <Grid textAlign="center" style={{ margin: 0, padding: 0 }}>
-          <Grid.Row style={{ margin: 0, padding: 0 }}>
-            <Grid.Column>
-              <div className="dataset-page-title">
-                <h1>{translateEntityField(dataset.name)}</h1>
-              </div>
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row columns={3} style={{ margin: 0, padding: 0 }}>
-            <Grid.Column className="dataset-page-tab-menu-item" as={NavLink} exact to={`/dataset/${dataset.id}`}>
-              <div>Highlights</div>
-            </Grid.Column>
-            <Grid.Column className="dataset-page-tab-menu-item" as={NavLink} to={`/dataset/${dataset.id}/data`}>
-              <div>Δεδομένα</div>
-            </Grid.Column>
-            <Grid.Column className="dataset-page-tab-menu-item" as={NavLink} exact to={`/dataset/${dataset.id}/about`}>
-              <div>Ταυτότητα Έρευνας</div>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
+      <div className={`background ${dataset.colorScheme}`}>
+        <div className="dataset-page-tab-menu" style={{ backgroundImage: `url(/content/images/Assets/${dataset.id}.jpg` }}>
+          <Header isFixed className={dataset.colorScheme} />
+          <Grid textAlign="center" style={{ margin: 0, padding: 0 }}>
+            <Grid.Row style={{ margin: 0, padding: 0 }}>
+              <Grid.Column>
+                <div className="dataset-page-title">
+                  <h1>{translateEntityField(dataset.name)}</h1>
+                </div>
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row columns={3} style={{ margin: 0, padding: 0 }}>
+              <Grid.Column className="dataset-page-tab-menu-item" as={NavLink} exact to={`/dataset/${dataset.id}`}>
+                <div>Highlights</div>
+              </Grid.Column>
+              <Grid.Column className="dataset-page-tab-menu-item" as={NavLink} to={`/dataset/${dataset.id}/data`}>
+                <div>Δεδομένα</div>
+              </Grid.Column>
+              <Grid.Column className="dataset-page-tab-menu-item" as={NavLink} exact to={`/dataset/${dataset.id}/about`}>
+                <div>Ταυτότητα Έρευνας</div>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </div>
       </div>
       /*      {/!*<div>
               <HighchartsChart>
