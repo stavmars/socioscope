@@ -1,0 +1,23 @@
+@import 'app/shared/common.scss';
+
+$font-family: 'BPnoScriptBold';
+$background-color: transparent;
+$axis-labels-font-size: 20px;
+
+@import 'highcharts/css/highcharts.scss';
+
+.highcharts-axis-title {
+  font-size: 16px;
+  margin: 16px;
+  fill: #1e1e1e;
+}
+
+.highcharts-axis-labels {
+  fill: #1e1e1e;
+}
+
+.highcharts-root {
+}
+
+.highcharts-container {
+}

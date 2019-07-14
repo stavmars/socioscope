@@ -30,6 +30,7 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
       <div>
         {dataset.dimensions.map(dimension => (
           <Dropdown
+            className={`vis-options-dropdown ${dataset.colorScheme}`}
             key={dimension.id}
             onChange={this.handleFilterChange(dimension.id)}
             options={dimensionCodes[dimension.id].codes.map(code => ({

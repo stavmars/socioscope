@@ -42,7 +42,14 @@ export class RawDatasetFilters extends React.Component<IRawDatasetFiltersProp, I
 
     return (
       <div>
-        <Dropdown closeOnChange={false} multiple selection fluid placeholder="Επιλέξτε 1 ή παραπάνω φίλτρα">
+        <Dropdown
+          className={`vis-options-dropdown ${dataset.colorScheme}`}
+          closeOnChange={false}
+          multiple
+          selection
+          fluid
+          placeholder="Επιλέξτε 1 ή παραπάνω φίλτρα"
+        >
           <Dropdown.Menu as={Accordion} vertical>
             {dataset.dimensions.map(dimension => (
               <div>

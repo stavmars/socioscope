@@ -120,6 +120,13 @@
 
 .dataset-page-vis {
   padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+.vis-options-menu {
+}
+
+.vis-container {
 }
 
 .vis-options-menu-title {
@@ -127,6 +134,11 @@
   text-align: left;
   font-family: BPnoScriptBold;
   color: #1e1e1e;
+  margin-bottom: 35px;
+}
+
+.vis-options-menu-item {
+  margin-bottom: 30px;
 }
 
 .vis-options-menu-label {
@@ -134,4 +146,37 @@
   text-align: left;
   font-family: ProximaNovaBold;
   color: #1e1e1e;
+  padding-bottom: 12px;
+}
+
+.vis-options-dropdown.dropdown {
+  font-size: 16px;
+  font-family: ProximaNovaBold;
+  border-radius: 0 !important;
+  border: 3px solid !important;
+  &.ui.selection.active.dropdown .menu {
+    border-style: solid;
+    border-width: 0 3px 3px 3px;
+    margin: 0 -3px;
+    min-width: calc(100% + 6px);
+    width: calc(100% + 6px);
+  }
+  .menu.item {
+    font-size: 16px;
+  }
+}
+
+.vis-options-dropdown.dropdown {
+  &.color-scheme-1,
+  &.color-scheme-1 .menu {
+    border-color: $color-scheme-1-accent !important;
+  }
+  &.color-scheme-2,
+  &.color-scheme-1 .menu {
+    border-color: $color-scheme-1-accent !important;
+  }
+  &.color-scheme-3,
+  &.color-scheme-1 .menu {
+    border-color: $color-scheme-1-accent !important;
+  }
 }
