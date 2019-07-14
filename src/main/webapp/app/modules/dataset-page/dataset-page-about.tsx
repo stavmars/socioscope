@@ -1,18 +1,19 @@
 import './dataset-page.scss';
 import React from 'react';
-import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router-dom';
-import { Grid, Image } from 'semantic-ui-react';
-import { IRootState } from 'app/shared/reducers';
+import { Grid } from 'semantic-ui-react';
 import { translateEntityField } from 'app/shared/util/entity-utils';
+import { IDataSet } from 'app/shared/model/data-set.model';
+
 // tslint:disable: max-line-length
 
-export interface IDatasetPageAboutProp extends StateProps, RouteComponentProps<{ id: string }> {}
+export interface IDatasetPageAboutProp {
+  dataset: IDataSet;
+}
 
 export class DatasetPageAbout extends React.Component<IDatasetPageAboutProp> {
   render() {
-    const { datasetsById } = this.props;
-    const dataset = datasetsById[this.props.match.params.id];
+    const { dataset } = this.props;
 
     return (
       <div className={`dataset-page-about ${dataset.colorScheme}`}>
@@ -86,10 +87,4 @@ export class DatasetPageAbout extends React.Component<IDatasetPageAboutProp> {
   }
 }
 
-const mapStateToProps = (storeState: IRootState) => ({
-  datasetsById: storeState.dataSet.entitiesById
-});
-
-type StateProps = ReturnType<typeof mapStateToProps>;
-
-export default connect(mapStateToProps)(DatasetPageAbout);
+export default DatasetPageAbout;

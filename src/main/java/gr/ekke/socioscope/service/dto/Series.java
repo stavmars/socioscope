@@ -8,9 +8,7 @@ import java.util.List;
 public class Series {
 
     String id;
-    String label;
     String color;
-
     List<SeriesPoint> data;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -20,15 +18,6 @@ public class Series {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    public String getLabel() {
-        return label;
-    }
-
-    public void setLabel(String label) {
-        this.label = label;
     }
 
     public List<SeriesPoint> getData() {

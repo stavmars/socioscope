@@ -1,8 +1,12 @@
-import { IDimensionValue } from 'app/shared/model/dimension-value';
+export interface IDimensionFilters {
+  [dimensionId: string]: string;
+}
 
 export interface ISeriesOptions {
   xAxis?: string;
   compareBy?: string;
-  dimensionValues?: IDimensionValue[];
+  dimensionFilters?: IDimensionFilters;
   measure?: string;
 }
+
+export const defaultValue: Readonly<ISeriesOptions> = { dimensionFilters: {} };

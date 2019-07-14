@@ -38,13 +38,14 @@ public class RawDataRepository {
 
         String xAxis = seriesOptions.getxAxis();
         String compareBy = seriesOptions.getCompareBy();
-        List<DimensionValue> dimensionValues = seriesOptions.getDimensionValues();
+        Map<String, String> dimensionFilters = seriesOptions.getDimensionFilters();
         List<AggregationOperation> aggregationOperations = new ArrayList<>();
 
 
-        if (dimensionValues != null) {
-            aggregationOperations.add(match(this.getDimensionCriteria(dimensionValues)));
-        } ;
+        if (dimensionFilters != null) {
+            aggregationOperations.add(match(this.getDimensionCriteria(dimensionFilters)));
+        }
+        ;
 
         String[] splitXAxis = xAxis.split("\\.");
         if (splitXAxis.length > 1) {
@@ -82,12 +83,14 @@ public class RawDataRepository {
         return mongoTemplate.aggregate(agg, dataSet.getId(), Series.class).getMappedResults();
     }
 
-    private Criteria getDimensionCriteria(List<DimensionValue> dimensionValues) {
-        Map<String, List<DimensionValue>> byParent = dimensionValues.stream().collect(groupingBy(dimensionValue -> {
-            String dimensionId = dimensionValue.getId();
-            String[] splitDimensionId = dimensionId.split("\\.");
-            return splitDimensionId.length > 1 ? splitDimensionId[0] : "";
-        }));
+    private Criteria getDimensionCriteria(Map<String, String> dimensionFilters) {
+        Map<String, List<DimensionValue>> byParent = dimensionFilters.entrySet().stream()
+            .map(entry -> new DimensionValue(entry.getKey(), entry.getValue()))
+            .collect(groupingBy(dimensionValue -> {
+                String dimensionId = dimensionValue.getId();
+                String[] splitDimensionId = dimensionId.split("\\.");
+                return splitDimensionId.length > 1 ? splitDimensionId[0] : "";
+            }));
 
         Criteria[] dimensionCriteria = byParent.entrySet().stream().map(entry -> {
             String parent = entry.getKey();

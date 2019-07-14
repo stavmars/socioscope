@@ -1,7 +1,7 @@
 package gr.ekke.socioscope.domain;
 
 import javax.validation.constraints.NotBlank;
-import java.util.List;
+import java.util.Map;
 
 public class SeriesOptions {
 
@@ -10,7 +10,7 @@ public class SeriesOptions {
 
     private String compareBy;
 
-    private List<DimensionValue> dimensionValues;
+    private Map<String, String> dimensionFilters;
 
     private String measure;
 
@@ -30,12 +30,12 @@ public class SeriesOptions {
         this.compareBy = compareBy;
     }
 
-    public List<DimensionValue> getDimensionValues() {
-        return dimensionValues;
+    public Map<String, String> getDimensionFilters() {
+        return dimensionFilters;
     }
 
-    public void setDimensionValues(List<DimensionValue> dimensionValues) {
-        this.dimensionValues = dimensionValues;
+    public void setDimensionFilters(Map<String, String> dimensionFilters) {
+        this.dimensionFilters = dimensionFilters;
     }
 
     public String getMeasure() {
