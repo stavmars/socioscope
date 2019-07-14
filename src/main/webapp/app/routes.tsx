@@ -15,7 +15,7 @@ import DataSetPage from 'app/modules/dataset-page';
 import PrivateRoute from 'app/shared/auth/private-route';
 import ErrorBoundaryRoute from 'app/shared/error/error-boundary-route';
 import { AUTHORITIES } from 'app/config/constants';
-import { hideTopicsMenu, showTopicsMenu } from 'app/shared/reducers/header';
+import { hideTopicsMenu, showTopicsMenu, hideMobileMenu } from 'app/shared/reducers/header';
 import { setLocale } from 'app/shared/reducers/locale';
 import { connect } from 'react-redux';
 import { Header } from 'app/shared/layout/header/header';
@@ -38,6 +38,7 @@ export class Routes extends React.Component<IRoutesProps> {
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
       this.props.hideTopicsMenu();
+      this.props.hideMobileMenu();
     }
   }
 
@@ -63,7 +64,7 @@ export class Routes extends React.Component<IRoutesProps> {
   }
 }
 
-const mapDispatchToProps = { hideTopicsMenu };
+const mapDispatchToProps = { hideTopicsMenu, hideMobileMenu };
 
 type DispatchProps = typeof mapDispatchToProps;
 

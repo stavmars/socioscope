@@ -60,7 +60,7 @@ export class About extends React.Component<DispatchProps> {
                   </div>
                 </Sticky>
               </Grid.Column>
-              <Grid.Column width={8}>
+              <Grid.Column computer={8} mobile={14}>
                 <div className="about-page-content">
                   Το Καλειδοσκόπιο Κοινωνικών Δεδομένων αναπτύχθηκε στα πλαίσια του έργου «Δυναμική Διαχείριση Βάσεων Κοινωνικών Δεδομένων
                   και Χαρτογραφικών Αναπαραστάσεων» της πρόσκλησης «ΚΡΗΠΙΣ» της ΓΓΕΤ (2013-2015) μεταξύ του

@@ -1,0 +1,77 @@
+@import 'app/shared/common.scss';
+/* ==========================================================================
+Mobile Menu styles
+========================================================================== */
+.mobile-menu {
+  .mobile-menu-item {
+    width: 100%;
+    color: #1e1e1e;
+    text-transform: capitalize;
+    font-family: ProximaNovaBold;
+    font-size: 16px;
+    padding: 17px 0 0 13px;
+    &:hover {
+      color: #1e1e1e;
+    }
+  }
+  .mobile-menu-list {
+    background-color: #ededed;
+    .mobile-menu-list-line {
+      height: 55px;
+      &.color-scheme-1:hover {
+        background-color: $color-scheme-1-bg;
+        i {
+          float: right;
+          color: $color-scheme-1-accent;
+          border: solid;
+          border-width: 0 5px 5px 0;
+          padding: 5px;
+          transform: rotate(-45deg);
+        }
+      }
+      &.color-scheme-2:hover {
+        background-color: $color-scheme-2-bg;
+        i {
+          float: right;
+          color: $color-scheme-2-accent;
+          border: solid;
+          border-width: 0 5px 5px 0;
+          padding: 5px;
+          transform: rotate(-45deg);
+        }
+      }
+      &.color-scheme-3:hover {
+        background-color: $color-scheme-3-bg;
+        i {
+          float: right;
+          color: $color-scheme-3-accent;
+          border: solid;
+          border-width: 0 5px 5px 0;
+          padding: 5px;
+          transform: rotate(-45deg);
+        }
+      }
+      .mobile-menu-list-line-item {
+        color: #1e1e1e;
+        font-size: 15px;
+        line-height: 15px;
+        font-family: BPnoScriptBold;
+        padding: 0 0 0 29px;
+        &.color-scheme-1:hover {
+          color: $color-scheme-1-accent;
+        }
+        &.color-scheme-2:hover {
+          color: $color-scheme-2-accent;
+        }
+        &.color-scheme-3:hover {
+          color: $color-scheme-3-accent;
+        }
+      }
+      .mobile-menu-list-line-image {
+        width: 31px;
+        height: 30px;
+        margin-bottom: -30px;
+      }
+    }
+  }
+}

@@ -32,41 +32,9 @@ export class Home extends React.Component<IHomeProp> {
           <div style={{ marginBottom: 40 }}>
             <AppHeader className="home-page-header" isFixed={false} />
             <Container textAlign="center">
-              <Header
-                as="h1"
-                content={translate('home.title')}
-                style={{
-                  fontFamily: 'BPnoScriptBold',
-                  color: '#ffffff',
-                  fontSize: '80px',
-                  marginBottom: 0,
-                  marginTop: '3em'
-                }}
-              />
-              <Header
-                as="h2"
-                content={translate('home.subtitle')}
-                style={{
-                  fontFamily: 'ProximaNovaSemibold',
-                  fontSize: '20px',
-                  color: '#ffffff',
-                  marginTop: '31px',
-                  maxWidth: '672px',
-                  marginLeft: 'auto',
-                  marginRight: 'auto',
-                  marginBottom: '111px'
-                }}
-              />
-              <HashLink
-                to="#discover"
-                replace={false}
-                style={{
-                  fontFamily: 'BPnoScriptBold',
-                  fontSize: '30px',
-                  color: '#ffffff',
-                  borderBottom: '4px solid #FF5D39'
-                }}
-              >
+              <h1 className="home-page-view-title">{translate('home.title')}</h1>
+              <h2 className="home-page-view-subtitle">{translate('home.subtitle')}</h2>
+              <HashLink to="#discover" className="home-page-view-explore" replace={false}>
                 {translate('home.explore')}
               </HashLink>
             </Container>
@@ -115,9 +83,7 @@ export class Home extends React.Component<IHomeProp> {
             >
               <span>
                 Στις 1211 περιπτώσεις εκλεγμένων Βουλευτών για το διάστημα 1993 – 2019{' '}
-                <span className="text-accent">το 83% είναι άνδρες και το 17% γυναίκες</span>.<br />
-                <br />
-                <br />
+                <span className="text-accent">το 83% είναι άνδρες και το 17% γυναίκες</span>.
               </span>
             </DatasetCard>
             <DatasetCard
@@ -140,8 +106,6 @@ export class Home extends React.Component<IHomeProp> {
                 Η τρέχουσα Βουλή είναι πιθανώς η πιο «μορφωμένη» της Μεταπολίτευσης καθώς έχει{' '}
                 <span className="text-accent">τους περισσότερους κατόχους διδακτορικού (16,3%)</span>
                 της τελευταίας εικοσιπενταετίας.
-                <br />
-                <br />
               </span>
             </DatasetCard>
           </CardCarousel>
