@@ -9,6 +9,7 @@ import './dataset-page.scss';
 import DatasetPageVis from 'app/modules/dataset-page/dataset-page-vis';
 import DatasetPageHighlights from 'app/modules/dataset-page/dataset-page-highlights';
 import DatasetPageAbout from 'app/modules/dataset-page/dataset-page-about';
+import Header from 'app/shared/layout/header/header';
 
 // tslint:disable:jsx-no-lambda
 export interface IDatasetPageProp extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
@@ -30,7 +31,8 @@ export class DatasetPage extends React.Component<IDatasetPageProp> {
     }
 
     return (
-      <div className="dataset-page">
+      <div className={`dataset-page background ${dataset.colorScheme}`}>
+        <Header isFixed className={dataset.colorScheme} />
         <div className="dataset-page-tab-menu" style={{ backgroundImage: `url(/content/images/Assets/${dataset.id}.jpg` }}>
           <Grid textAlign="center" style={{ margin: 0, padding: 0 }}>
             <Grid.Row style={{ margin: 0, padding: 0 }}>
