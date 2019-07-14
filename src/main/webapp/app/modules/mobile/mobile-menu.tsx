@@ -22,7 +22,7 @@ export class MobileMenu extends React.Component<DispatchProps> {
           </List.Item>
           <List.Item>
             <List.Content>
-              <List.Header className="mobile-menu-item">ΘΕΜΑΤΙΚΕΣ</List.Header>
+              <List.Header className="mobile-menu-item">{translate('global.menu.topics')}</List.Header>
               <div className="mobile-menu-list">
                 <List.Item className="mobile-menu-list-line color-scheme-1">
                   <Container>
@@ -81,15 +81,18 @@ export class MobileMenu extends React.Component<DispatchProps> {
               </div>
             </List.Content>
             <List.Content>
-              <List.Header className="mobile-menu-item" as={Link} to="/about">
-                ΣΧΕΤΙΚΑ
+              <List.Header as={Link} className="mobile-menu-item" to="/about">
+                {translate('global.menu.about')}
               </List.Header>
             </List.Content>
             <List.Content>
-              <List.Header className="mobile-menu-item">DEVELOPERS</List.Header>
+              <List.Header className="mobile-menu-item">{translate('footer.developers')}</List.Header>
             </List.Content>
             <List.Content>
-              <List.Header className="mobile-menu-item">ΟΡΟΙ ΧΡΗΣΗΣ</List.Header>
+              <List.Header className="mobile-menu-item">{translate('footer.terms')}</List.Header>
+            </List.Content>
+            <List.Content>
+              <List.Header className="mobile-menu-item">{translate('footer.policy')}</List.Header>
             </List.Content>
           </List.Item>
         </List>
