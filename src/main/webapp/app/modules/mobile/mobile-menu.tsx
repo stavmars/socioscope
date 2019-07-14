@@ -2,7 +2,7 @@ import './mobile-menu.scss';
 import React from 'react';
 import { translate, Translate } from 'react-jhipster';
 import { Image, List, Icon, Header, Menu, Segment, Container, Button } from 'semantic-ui-react';
-import { NavLink as Link } from 'react-router-dom';
+import { NavLink as Link, NavLink } from 'react-router-dom';
 import { toggleMobileMenu } from 'app/shared/reducers/header';
 import { connect } from 'react-redux';
 
@@ -11,7 +11,7 @@ export class MobileMenu extends React.Component<DispatchProps> {
     return (
       <div className="mobile-menu">
         <List relaxed="very">
-          <List.Item>
+          <List.Item as="a" href="/">
             <Image
               onClick={this.props.toggleMobileMenu}
               src="/content/images/Assets/mobile-menu-icon.png"
@@ -80,20 +80,24 @@ export class MobileMenu extends React.Component<DispatchProps> {
                 </List.Item>
               </div>
             </List.Content>
-            <List.Content>
-              <List.Header as={Link} className="mobile-menu-item" to="/about">
-                {translate('global.menu.about')}
-              </List.Header>
-            </List.Content>
-            <List.Content>
-              <List.Header className="mobile-menu-item">{translate('footer.developers')}</List.Header>
-            </List.Content>
-            <List.Content>
-              <List.Header className="mobile-menu-item">{translate('footer.terms')}</List.Header>
-            </List.Content>
-            <List.Content>
-              <List.Header className="mobile-menu-item">{translate('footer.policy')}</List.Header>
-            </List.Content>
+            <div className="mobile-menu-items">
+              <List.Content>
+                <List.Header>
+                  <NavLink className="mobile-menu-item" to="/about">
+                    {translate('global.menu.about')}
+                  </NavLink>
+                </List.Header>
+              </List.Content>
+              <List.Content>
+                <List.Header className="mobile-menu-item">{translate('footer.developers')}</List.Header>
+              </List.Content>
+              <List.Content>
+                <List.Header className="mobile-menu-item">{translate('footer.terms')}</List.Header>
+              </List.Content>
+              <List.Content>
+                <List.Header className="mobile-menu-item">{translate('footer.policy')}</List.Header>
+              </List.Content>
+            </div>
           </List.Item>
         </List>
       </div>
