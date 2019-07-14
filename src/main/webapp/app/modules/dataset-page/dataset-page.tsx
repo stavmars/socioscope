@@ -1,15 +1,14 @@
 import React from 'react';
-import { NavLink, Redirect, Route, RouteComponentProps, Switch } from 'react-router-dom';
+import { Redirect, Route, RouteComponentProps, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { IRootState } from 'app/shared/reducers';
 import { hideHeader, showHeader } from 'app/shared/reducers/header';
-import { Grid } from 'semantic-ui-react';
-import { translateEntityField } from 'app/shared/util/entity-utils';
 import './dataset-page.scss';
 import DatasetPageVis from 'app/modules/dataset-page/dataset-page-vis';
 import DatasetPageHighlights from 'app/modules/dataset-page/dataset-page-highlights';
 import DatasetPageAbout from 'app/modules/dataset-page/dataset-page-about';
 import Header from 'app/shared/layout/header/header';
+import DatasetPageTabMenu from 'app/modules/dataset-page/dataset-page-tab-menu';
 
 // tslint:disable:jsx-no-lambda
 export interface IDatasetPageProp extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
@@ -31,36 +30,20 @@ export class DatasetPage extends React.Component<IDatasetPageProp> {
     }
 
     return (
-      <div className={`dataset-page background ${dataset.colorScheme}`}>
-        <Header isFixed className={dataset.colorScheme} />
-        <div className="dataset-page-tab-menu" style={{ backgroundImage: `url(/content/images/Assets/${dataset.id}.jpg` }}>
-          <Grid textAlign="center" style={{ margin: 0, padding: 0 }}>
-            <Grid.Row style={{ margin: 0, padding: 0 }}>
-              <Grid.Column>
-                <div className="dataset-page-title">
-                  <h1>{translateEntityField(dataset.name)}</h1>
-                </div>
-              </Grid.Column>
-            </Grid.Row>
-            <Grid.Row columns={3} style={{ margin: 0, padding: 0 }}>
-              <Grid.Column className="dataset-page-tab-menu-item" as={NavLink} exact to={`/dataset/${dataset.id}`}>
-                <div>Highlights</div>
-              </Grid.Column>
-              <Grid.Column className="dataset-page-tab-menu-item" as={NavLink} to={`/dataset/${dataset.id}/data`}>
-                <div>Δεδομένα</div>
-              </Grid.Column>
-              <Grid.Column className="dataset-page-tab-menu-item" as={NavLink} exact to={`/dataset/${dataset.id}/about`}>
-                <div>Ταυτότητα Έρευνας</div>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </div>
+      <div className={`background ${dataset.colorScheme}`}>
+        <Route exact path={`(${match.url}|${match.url}/about)`} render={() => <Header isFixed className={dataset.colorScheme} />} />
+        <div className="dataset-page">
+          <Switch>
+            <Route path={`${match.url}/data`} render={() => <DatasetPageTabMenu dataset={dataset} isMinimized />} />
+            <Route path={`${match.url}/`} render={() => <DatasetPageTabMenu dataset={dataset} />} />
+          </Switch>
 
-        <Switch>
-          <Route path={`${match.url}/data`} render={() => <DatasetPageVis dataset={dataset} />} />
-          <Route exact path={`${match.url}/`} render={() => <DatasetPageHighlights dataset={dataset} />} />
-          <Route exact path={`${match.url}/about`} render={() => <DatasetPageAbout dataset={dataset} />} />
-        </Switch>
+          <Switch>
+            <Route path={`${match.url}/data`} render={() => <DatasetPageVis dataset={dataset} />} />
+            <Route exact path={`${match.url}/`} render={() => <DatasetPageHighlights dataset={dataset} />} />
+            <Route exact path={`${match.url}/about`} render={() => <DatasetPageAbout dataset={dataset} />} />
+          </Switch>
+        </div>
       </div>
     );
   }

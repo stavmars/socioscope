@@ -1,6 +1,5 @@
 import './dataset-page.scss';
 import React from 'react';
-import { RouteComponentProps } from 'react-router-dom';
 import { Grid } from 'semantic-ui-react';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IDataSet } from 'app/shared/model/data-set.model';

@@ -127,41 +127,49 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp, IDatase
         ) : (
           <Grid columns={2}>
             <Grid.Column>
-              <div>
-                <Dropdown
-                  onChange={this.handleXAxisChange}
-                  options={xAxisOptions}
-                  selection
-                  fluid
-                  placeholder="Επιλέξτε μεταβλητή για τον άξονα x"
-                  value={seriesOptions.xAxis}
-                />
-              </div>
-              {dataset.type === 'qb' ? (
-                <QbDatasetFilters
-                  dimensionCodes={dimensionCodes}
-                  dataset={dataset}
-                  fetchedCodeLists={fetchedCodeLists}
-                  seriesOptions={seriesOptions}
-                  setFilterValue={this.props.setFilterValue}
-                />
-              ) : (
-                <RawDatasetFilters
-                  dimensionCodes={dimensionCodes}
-                  dataset={dataset}
-                  fetchedCodeLists={fetchedCodeLists}
-                  seriesOptions={seriesOptions}
-                />
-              )}
-              <div>
-                <Dropdown
-                  onChange={this.handleCompareByChange}
-                  options={compareByOptions}
-                  placeholder=""
-                  selection
-                  value={seriesOptions.compareBy}
-                  fluid
-                />
+              <div className="vis-options-menu">
+                <div className="vis-options-menu-title">Διαμορφώστε το γράφημα</div>
+                <div className="vis-xAxis">
+                  <div className="vis-options-menu-label">Θέλω να δω αποτελέσματα για:</div>
+                  <Dropdown
+                    onChange={this.handleXAxisChange}
+                    options={xAxisOptions}
+                    selection
+                    fluid
+                    placeholder="Επιλέξτε μεταβλητή για τον άξονα x"
+                    value={seriesOptions.xAxis}
+                  />
+                </div>
+                <div className="vis-filters">
+                  <div className="vis-options-menu-label">… σε σχέση με:</div>
+                  {dataset.type === 'qb' ? (
+                    <QbDatasetFilters
+                      dimensionCodes={dimensionCodes}
+                      dataset={dataset}
+                      fetchedCodeLists={fetchedCodeLists}
+                      seriesOptions={seriesOptions}
+                      setFilterValue={this.props.setFilterValue}
+                    />
+                  ) : (
+                    <RawDatasetFilters
+                      dimensionCodes={dimensionCodes}
+                      dataset={dataset}
+                      fetchedCodeLists={fetchedCodeLists}
+                      seriesOptions={seriesOptions}
+                    />
+                  )}
+                </div>
+                <div className="vis-xAxis">
+                  <div className="vis-options-menu-label">… και να συγκρίνω ως προς:</div>
+                  <Dropdown
+                    onChange={this.handleCompareByChange}
+                    options={compareByOptions}
+                    placeholder=""
+                    selection
+                    value={seriesOptions.compareBy}
+                    fluid
+                  />
+                </div>
               </div>
             </Grid.Column>
             <Grid.Column>
