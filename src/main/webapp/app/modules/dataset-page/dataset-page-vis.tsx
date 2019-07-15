@@ -6,7 +6,7 @@ import { changeCompareBy, changeXAxis, getSeries, initVis, setFilterValue } from
 import { IRootState } from 'app/shared/reducers';
 import './dataset-page.scss';
 import { hideHeader, showHeader } from 'app/shared/reducers/header';
-import { Dimmer, Dropdown, Grid, Loader } from 'semantic-ui-react';
+import { Dimmer, Dropdown, Grid, Loader, Menu } from 'semantic-ui-react';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
@@ -84,7 +84,120 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp, IDatase
           <Grid>
             <Grid.Column mobile={16} tablet={6} computer={4}>
               <div className="vis-options-menu">
-                <div className="vis-options-menu-title">Διαμορφώστε το γράφημα</div>
+                <Menu text>
+                  <Menu.Item className="vis-options-menu-tittle">
+                    <div className="vis-options-menu-title">Διαμορφώστε το γράφημα</div>
+                  </Menu.Item>
+                  <Menu.Item>
+                    <div id="data_switches_blue">
+                      <div id="Group_123">
+                        <div id="baseline_bar_chart_24px">
+                          <svg className="Path_835" viewBox="5 5 14 14">
+                            <path
+                              id="Path_835"
+                              d="M 5 9.199999809265137 L 8 9.199999809265137 L 8 19 L 5 19 L 5 9.199999809265137 Z M 10.60000038146973 5 L 13.40000057220459 5 L 13.40000057220459 19 L 10.60000038146973 19 L 10.60000038146973 5 Z M 16.20000076293945 13 L 19 13 L 19 19 L 16.20000076293945 19 L 16.20000076293945 13 Z"
+                            />
+                          </svg>
+                          <svg className="Path_836" viewBox="0 0 24 24">
+                            <path id="Path_836" d="M 0 0 L 24 0 L 24 24 L 0 24 L 0 0 Z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div id="Group_124">
+                        <div id="baseline_map_24px">
+                          <svg className="Path_837" viewBox="3 3 18 18">
+                            <path
+                              id="Path_837"
+                              d="M 20.5 3 L 20.34000015258789 3.029999971389771 L 15 5.099999904632568 L 9 3 L 3.359999895095825 4.900000095367432 C 3.149999856948853 4.970000267028809 3 5.150000095367432 3 5.380000114440918 L 3 20.5 C 3 20.78000068664551 3.220000028610229 21 3.5 21 L 3.660000085830688 20.96999931335449 L 9 18.89999961853027 L 15 21 L 20.63999938964844 19.10000038146973 C 20.84999847412109 19.03000068664551 21 18.85000038146973 21 18.6200008392334 L 21 3.5 C 21 3.220000028610229 20.78000068664551 3 20.5 3 Z M 15 19 L 9 16.88999938964844 L 9 5 L 15 7.109999656677246 L 15 19 Z"
+                            />
+                          </svg>
+                          <svg className="Path_838" viewBox="0 0 24 24">
+                            <path id="Path_838" d="M 0 0 L 24 0 L 24 24 L 0 24 L 0 0 Z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div id="_______">
+                        <span>Γράφημα</span>
+                      </div>
+                      <div id="______">
+                        <span>Χάρτης</span>
+                      </div>
+                      <div id="_____________________">
+                        <span>Αποτελέσματα σε λίστα</span>
+                      </div>
+                      <svg className="Line_71">
+                        <path id="Line_71" d="M 0 0 L 13 0" />
+                      </svg>
+                      <svg className="Line_72">
+                        <path id="Line_72" d="M 0 0 L 13 0" />
+                      </svg>
+                      <svg className="Line_73">
+                        <path id="Line_73" d="M 0 0 L 13 0" />
+                      </svg>
+                      <div id="Group_122">
+                        <svg className="Path_1157" viewBox="0 0 45 45">
+                          <path
+                            id="Path_1157"
+                            d="M 22.5 0 C 34.92640686035156 0 45 10.07359409332275 45 22.5 C 45 34.92640686035156 34.92640686035156 45 22.5 45 C 10.07359409332275 45 0 34.92640686035156 0 22.5 C 0 10.07359409332275 10.07359409332275 0 22.5 0 Z"
+                          />
+                        </svg>
+                        <div id="Group_121">
+                          <svg className="Path_831" viewBox="0 0 24 24">
+                            <path id="Path_831" d="M 0 0 L 24 0 L 24 24 L 0 24 L 0 0 Z" />
+                          </svg>
+                          <svg className="Path_832" viewBox="3 2 18 19.92">
+                            <path
+                              id="Path_832"
+                              d="M 18 16.07999992370605 C 17.23999977111816 16.07999992370605 16.55999946594238 16.3799991607666 16.04000091552734 16.85000038146973 L 8.909999847412109 12.69999980926514 C 8.960000038146973 12.47000026702881 9 12.23999977111816 9 12 C 9 11.76000022888184 8.960000038146973 11.52999973297119 8.909999847412109 11.30000019073486 L 15.96000003814697 7.190000057220459 C 16.5 7.690000057220459 17.20999908447266 8 18 8 C 19.65999984741211 8 21 6.659999847412109 21 5 C 21 3.339999914169312 19.65999984741211 2 18 2 C 16.34000015258789 2 15 3.339999914169312 15 5 C 15 5.239999771118164 15.03999996185303 5.46999979019165 15.09000015258789 5.699999809265137 L 8.039999961853027 9.810000419616699 C 7.5 9.310000419616699 6.789999961853027 9 6 9 C 4.340000152587891 9 3 10.34000015258789 3 12 C 3 13.65999984741211 4.340000152587891 15 6 15 C 6.789999961853027 15 7.5 14.6899995803833 8.039999961853027 14.1899995803833 L 15.15999984741211 18.35000038146973 C 15.10999965667725 18.55999946594238 15.07999992370605 18.78000068664551 15.07999992370605 19 C 15.07999992370605 20.61000061035156 16.38999938964844 21.92000007629395 18 21.92000007629395 C 19.61000061035156 21.92000007629395 20.92000007629395 20.61000061035156 20.92000007629395 19 C 20.92000007629395 17.38999938964844 19.61000061035156 16.07999992370605 18 16.07999992370605 Z"
+                            />
+                          </svg>
+                        </div>
+                        <svg className="Path_1158" viewBox="0 0 45 45">
+                          <path
+                            id="Path_1158"
+                            d="M 22.5 0 C 34.92640686035156 0 45 10.07359409332275 45 22.5 C 45 34.92640686035156 34.92640686035156 45 22.5 45 C 10.07359409332275 45 0 34.92640686035156 0 22.5 C 0 10.07359409332275 10.07359409332275 0 22.5 0 Z"
+                          />
+                        </svg>
+                        <svg className="Ellipse_37">
+                          <ellipse id="Ellipse_37" rx="22.5" ry="22.5" cx="22.5" cy="22.5" />
+                        </svg>
+                        <div id="baseline_save_alt_24px">
+                          <svg className="Path_833" viewBox="3 3 22.5 22.5">
+                            <path
+                              id="Path_833"
+                              d="M 23 14.25 L 23 23 L 5.5 23 L 5.5 14.25 L 3 14.25 L 3 23 C 3 24.375 4.125 25.5 5.5 25.5 L 23 25.5 C 24.375 25.5 25.5 24.375 25.5 23 L 25.5 14.25 L 23 14.25 Z M 15.5 15.08749961853027 L 18.73749923706055 11.86250019073486 L 20.5 13.625 L 14.25 19.875 L 8 13.625 L 9.762499809265137 11.86250019073486 L 13 15.08749961853027 L 13 3 L 15.5 3 L 15.5 15.08749961853027 Z"
+                            />
+                          </svg>
+                          <svg className="Path_834" viewBox="0 0 30 30">
+                            <path id="Path_834" d="M 0 0 L 30 0 L 30 30 L 0 30 L 0 0 Z" />
+                          </svg>
+                        </div>
+                        <div id="_">
+                          <span>?</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="Group_246">
+                      <div id="ID0">
+                        <span>0</span>
+                      </div>
+                      <div id="__A22_Text_34">
+                        <span>%</span>
+                      </div>
+                      <div id="Toggle___On">
+                        <svg className="Rectangle_657">
+                          <rect id="Rectangle_657" rx="15" ry="15" x="0" y="0" width="64.561" height="30" />
+                        </svg>
+                        <svg className="Rectangle_658">
+                          <rect id="Rectangle_658" rx="11.738274574279785" ry="11.738274574279785" x="0" y="0" width="23.477" height="24" />
+                        </svg>
+                      </div>
+                    </div>
+                    <svg className="Path_1182" viewBox="0 0 139 3">
+                      <path id="Path_1182" d="M 0 0 L 139 0" />
+                    </svg>
+                  </Menu.Item>
+                </Menu>
                 <div className="vis-xAxis vis-options-menu-item">
                   <div className="vis-options-menu-label">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 30 20" fill={colorsAccent[colorScheme]}>
