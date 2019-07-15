@@ -28,24 +28,25 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
     const { dataset, dimensionCodes, fetchedCodeLists, seriesOptions } = this.props;
     return (
       <div>
-        {dataset.dimensions.map(dimension => (
-          <Dropdown
-            className={`vis-options-dropdown ${dataset.colorScheme}`}
-            key={dimension.id}
-            onChange={this.handleFilterChange(dimension.id)}
-            options={dimensionCodes[dimension.id].codes.map(code => ({
-              id: code.notation,
-              text: translateEntityField(code.name),
-              value: code.notation
-            }))}
-            selection
-            search
-            fluid
-            disabled={dimension.id === seriesOptions.xAxis}
-            noResultsMessage="Δε βρέθηκαν αποτελέσματα"
-            value={seriesOptions.dimensionFilters[dimension.id]}
-          />
-        ))}
+        {dataset.dimensions
+          .filter(dimension => dimension.id !== seriesOptions.xAxis && dimension.id !== seriesOptions.compareBy)
+          .map(dimension => (
+            <Dropdown
+              className={`vis-options-dropdown ${dataset.colorScheme}`}
+              key={dimension.id}
+              onChange={this.handleFilterChange(dimension.id)}
+              options={dimensionCodes[dimension.id].codes.map(code => ({
+                id: code.notation,
+                text: translateEntityField(code.name),
+                value: code.notation
+              }))}
+              selection
+              search
+              fluid
+              noResultsMessage="Δε βρέθηκαν αποτελέσματα"
+              value={seriesOptions.dimensionFilters[dimension.id]}
+            />
+          ))}
       </div>
     );
   }
