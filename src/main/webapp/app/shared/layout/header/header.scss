@@ -129,6 +129,21 @@ Header Menu styles
   }
 }
 
+.topics-mega-menu-list .list > .topics-mega-menu-list-item.active {
+  &.color-scheme-1 {
+    background-color: $color-scheme-1-bg;
+    color: $color-scheme-1-accent;
+  }
+  &.color-scheme-2 {
+    background-color: $color-scheme-2-bg;
+    color: $color-scheme-2-accent;
+  }
+  &.color-scheme-3 {
+    background-color: $color-scheme-3-bg;
+    color: $color-scheme-3-accent;
+  }
+}
+
 .topics-mega-menu-img {
   display: inline-block;
   vertical-align: middle;
