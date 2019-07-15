@@ -111,7 +111,8 @@ export class ChartVis extends React.Component<IChartVisProp> {
         type: xAxisDimension.type === 'time' ? 'datetime' : 'category',
         title: {
           text: translateEntityField(xAxisDimension.name)
-        }
+        },
+        offset: 2
       },
       yAxis: {
         title: {

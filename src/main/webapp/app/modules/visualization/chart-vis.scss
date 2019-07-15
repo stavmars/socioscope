@@ -21,3 +21,13 @@ $axis-labels-font-size: 20px;
 
 .highcharts-container {
 }
+
+.highcharts-grid-line {
+  fill: none;
+  stroke: rgba(112, 112, 112, 0.5);
+}
+
+.highcharts-axis-line {
+  stroke: #1e1e1e;
+  stroke-width: 4px;
+}
