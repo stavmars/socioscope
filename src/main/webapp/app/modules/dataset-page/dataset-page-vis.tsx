@@ -2,14 +2,7 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
-import {
-  changeCompareBy,
-  changeXAxis,
-  getSeries,
-  initVis,
-  resetSeriesOptions,
-  setFilterValue
-} from 'app/modules/dataset-page/dataset-page-reducer';
+import { changeCompareBy, getSeries, initVis, resetSeriesOptions, setFilterValue } from 'app/modules/dataset-page/dataset-page-reducer';
 import { IRootState } from 'app/shared/reducers';
 import './dataset-page.scss';
 import { hideHeader, showHeader } from 'app/shared/reducers/header';

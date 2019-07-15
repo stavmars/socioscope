@@ -3,6 +3,7 @@ import './chart-vis.scss';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+// tslint:disable-next-line
 import drilldown from 'highcharts/modules/drilldown.js';
 import uuid from 'uuid';
 
@@ -92,6 +93,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
         styledMode: true,
         className: dataset.colorScheme,
         events: {
+          // tslint:disable-next-line
           drilldown: function(e) {
             this.addSingleSeriesAsDrilldown(e.point, {
               name: e.point.series.name,
@@ -137,9 +139,10 @@ export class ChartVis extends React.Component<IChartVisProp> {
     };
 
     // todo investigate another solution to handle problems after updates while drilled-down
+
     return (
       <div>
-        <HighchartsReact key={uuid()} highcharts={Highcharts} options={options} immutable />
+        <HighchartsReact key={uuid()} highcharts={Highcharts} options={options as any} immutable />
       </div>
     );
   }

@@ -38,7 +38,6 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
   };
 
   toggleCompareByOption = (e, data: object) => {
-    console.log(e, data);
     e.stopPropagation();
   };
 
