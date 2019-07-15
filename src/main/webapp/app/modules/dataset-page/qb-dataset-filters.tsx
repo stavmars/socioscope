@@ -16,36 +16,54 @@ export interface IQbDatasetFiltersProp {
 }
 
 export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
-  constructor(props) {
-    super(props);
-  }
-
   handleFilterChange = dimensionId => (e, { value }) => {
     this.props.setFilterValue(this.props.dataset, dimensionId, value);
   };
 
+  createDropdownOptions = (codes, arr, level) => {
+    const mapCodeToOption = code => ({
+      id: code.notation,
+      key: code.notation,
+      text: translateEntityField(code.name),
+      value: code.notation,
+      className: `filter-option-level-${level}`
+    });
+    codes.forEach(code => {
+      arr.push(mapCodeToOption(code));
+      code.children && this.createDropdownOptions(code.children, arr, level + 1);
+    });
+  };
+
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    const { dataset, dimensionCodes, fetchedCodeLists, seriesOptions } = this.props;
+    const { dataset, dimensionCodes, seriesOptions } = this.props;
     return (
       <div>
-        {dataset.dimensions.map(dimension => (
-          <Dropdown
-            className={`vis-options-dropdown ${dataset.colorScheme}`}
-            key={dimension.id}
-            onChange={this.handleFilterChange(dimension.id)}
-            options={dimensionCodes[dimension.id].codes.map(code => ({
-              id: code.notation,
-              text: translateEntityField(code.name),
-              value: code.notation
-            }))}
-            selection
-            search
-            fluid
-            disabled={dimension.id === seriesOptions.xAxis}
-            noResultsMessage="Δε βρέθηκαν αποτελέσματα"
-            value={seriesOptions.dimensionFilters[dimension.id]}
-          />
-        ))}
+        {dataset.dimensions
+          .filter(dimension => dimension.id !== seriesOptions.xAxis && dimension.id !== seriesOptions.compareBy)
+          .map(dimension => {
+            const dropdownOptions = [];
+            this.createDropdownOptions(dimensionCodes[dimension.id].codes, dropdownOptions, 0);
+            return (
+              <div key={dimension.id} className="vis-qb-filter">
+                <div className="vis-qb-filter-label">{`${translateEntityField(dimension.name)}:`}</div>
+                <Dropdown
+                  className={`vis-options-dropdown ${dataset.colorScheme}`}
+                  key={dimension.id}
+                  onChange={this.handleFilterChange(dimension.id)}
+                  options={dropdownOptions}
+                  selection
+                  search
+                  fluid
+                  noResultsMessage="Δε βρέθηκαν αποτελέσματα"
+                  value={seriesOptions.dimensionFilters[dimension.id]}
+                />
+              </div>
+            );
+          })}
       </div>
     );
   }

@@ -2,7 +2,14 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { changeCompareBy, changeXAxis, getSeries, initVis, setFilterValue } from 'app/modules/dataset-page/dataset-page-reducer';
+import {
+  changeCompareBy,
+  changeXAxis,
+  getSeries,
+  initVis,
+  resetSeriesOptions,
+  setFilterValue
+} from 'app/modules/dataset-page/dataset-page-reducer';
 import { IRootState } from 'app/shared/reducers';
 import './dataset-page.scss';
 import { hideHeader, showHeader } from 'app/shared/reducers/header';
@@ -37,7 +44,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp, IDatase
   }
 
   handleXAxisChange = (e, { value }) => {
-    this.props.changeXAxis(value);
+    this.props.resetSeriesOptions(this.props.dataset, value);
   };
 
   handleCompareByChange = (e, { value }) => this.props.changeCompareBy(value);
@@ -315,7 +322,7 @@ const mapDispatchToProps = {
   getSeries,
   showHeader,
   hideHeader,
-  changeXAxis,
+  resetSeriesOptions,
   changeCompareBy,
   setFilterValue,
   initVis
