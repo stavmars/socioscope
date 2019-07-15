@@ -28,6 +28,15 @@
   &.minimized {
     height: 120px;
   }
+  .dataset-page-tab-menu-top-topics {
+    float: right;
+    padding: 50px 99px 156px 0;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: BPnoScriptBold;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
 }
 
 .dataset-page-title {
@@ -41,6 +50,8 @@
     h1 {
       text-align: left;
       font-size: 30px;
+      padding-top: 52px;
+      margin-top: -156px;
     }
   }
 }
