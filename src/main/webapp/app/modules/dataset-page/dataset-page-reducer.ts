@@ -13,7 +13,6 @@ export const ACTION_TYPES = {
   FETCH_SERIES: 'datasetPage/FETCH_SERIES',
   FETCH_DIMENSION_CODELIST: 'datasetPage/FETCH_DIMENSION_CODELIST',
   FETCH_DIMENSION_CODELISTS: 'datasetPage/FETCH_DIMENSION_CODELISTS',
-  CHANGE_XAXIS: 'datasetPage/CHANGE_XAXIS',
   CHANGE_COMPARE_BY: 'datasetPage/CHANGE_COMPARE_BY',
   SET_FILTER_VALUE: 'datasetPage/SET_FILTER_VALUE',
   RESET_SERIES_OPTIONS: 'datasetPage/RESET_SERIES_OPTIONS'
@@ -65,15 +64,6 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
       return {
         ...state,
         fetchedCodeLists: true
-      };
-    case ACTION_TYPES.CHANGE_XAXIS:
-      return {
-        ...state,
-        seriesOptions: {
-          ...state.seriesOptions,
-          xAxis: action.payload,
-          compareBy: null
-        }
       };
     case ACTION_TYPES.CHANGE_COMPARE_BY:
       return {
@@ -144,15 +134,6 @@ export const getSeries = (id, seriesOptions: ISeriesOptions) => {
   };
 };
 
-export const changeXAxis = (xAxis: string) => (dispatch, getState) => {
-  dispatch({
-    type: ACTION_TYPES.CHANGE_XAXIS,
-    payload: xAxis
-  });
-  const { seriesOptions } = getState().datasetPage;
-  dispatch(getSeries('greek-election-results', seriesOptions));
-};
-
 export const setFilterValue = (dataset: IDataSet, dimensionId: string, filterValue: string) => (dispatch, getState) => {
   dispatch({
     type: ACTION_TYPES.SET_FILTER_VALUE,
@@ -167,17 +148,16 @@ export const changeCompareBy = (compareBy: string) => ({
   payload: compareBy
 });
 
-export const resetSeriesOptions = (dataset: IDataSet) => (dispatch, getState) => {
+export const resetSeriesOptions = (dataset: IDataSet, xAxis?: string) => (dispatch, getState) => {
   const { dimensionCodes } = getState().datasetPage;
   const { dimensions } = dataset;
-  const xAxis = dimensions[0].id;
+  xAxis = xAxis || dimensions[0].id;
   let seriesOptions;
   if (dataset.type === 'qb') {
-    const dimensionFilters = {};
-    for (let i = 1; i < dimensions.length; i++) {
-      const dimension = dimensions[i];
-      dimensionFilters[dimension.id] = dimensionCodes[dimension.id].codes[0].notation;
-    }
+    const dimensionFilters = dimensions.filter(dimension => dimension.id !== xAxis).reduce((acc, dimension) => {
+      acc[dimension.id] = dimensionCodes[dimension.id].codes[0].notation;
+      return acc;
+    }, {});
     seriesOptions = { xAxis, dimensionFilters };
   } else {
     seriesOptions = { xAxis };
