@@ -1,3 +1,4 @@
+/* tslint:disable:max-line-length */
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -56,6 +57,10 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp, IDatase
     if (!seriesOptions || !fetchedCodeLists) {
       return null;
     }
+    const colorsAccent = {};
+    colorsAccent['color-scheme-1'] = '#d146fc';
+    colorsAccent['color-scheme-2'] = '#2f7cff';
+    colorsAccent['color-scheme-3'] = '#ff5d39';
 
     const xAxisOptions = dimensions.map(dimension => ({
       id: dimension.id,
@@ -81,7 +86,22 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp, IDatase
               <div className="vis-options-menu">
                 <div className="vis-options-menu-title">Διαμορφώστε το γράφημα</div>
                 <div className="vis-xAxis vis-options-menu-item">
-                  <div className="vis-options-menu-label">Θέλω να δω αποτελέσματα για:</div>
+                  <div className="vis-options-menu-label">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 30 20" fill={colorsAccent[colorScheme]}>
+                      <defs />
+                      <path
+                        className="a"
+                        d="M1054.107-433.193l3.533,3.385h-8.112v-2.457h-1.15v2.457h-4.964v-2.457h-1.15v2.457h-4.731v-14.561h-1.15v15.746h21.258l-3.535,3.386.784.868,5.056-4.845-5.056-4.846Z"
+                        transform="translate(-1036.385 444.369)"
+                      />
+                      <path
+                        className="a"
+                        d="M1063.187-432.669l-.707-.707-1.709,1.709-1.709-1.709-.707.707,1.709,1.709-1.709,1.709.707.707,1.709-1.709,1.709,1.709.707-.707-1.709-1.709Z"
+                        transform="translate(-1033.187 446.105)"
+                      />
+                    </svg>{' '}
+                    Θέλω να δω αποτελέσματα για:
+                  </div>
                   <Dropdown
                     className={`vis-options-dropdown ${colorScheme}`}
                     onChange={this.handleXAxisChange}
@@ -93,7 +113,18 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp, IDatase
                   />
                 </div>
                 <div className="vis-filters vis-options-menu-item">
-                  <div className="vis-options-menu-label">… σε σχέση με:</div>
+                  <div className="vis-options-menu-label">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 30 20" fill={colorsAccent[colorScheme]}>
+                      <defs />
+                      <g transform="translate(-1036.885 400.711)">
+                        <rect className="a" width="6.283" height="20" transform="translate(1036.885 -400.711)" />
+                        <rect className="a" width="6.283" height="15.336" transform="translate(1044.79 -396.047)" />
+                        <rect className="a" width="6.283" height="10.769" transform="translate(1052.696 -391.48)" />
+                        <rect className="a" width="6.283" height="7.668" transform="translate(1060.602 -388.379)" />
+                      </g>
+                    </svg>{' '}
+                    … σε σχέση με:
+                  </div>
                   {dataset.type === 'qb' ? (
                     <QbDatasetFilters
                       dimensionCodes={dimensionCodes}
@@ -112,7 +143,24 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp, IDatase
                   )}
                 </div>
                 <div className="vis-compareBy vis-options-menu-item">
-                  <div className="vis-options-menu-label">… και να συγκρίνω ως προς:</div>
+                  <div className="vis-options-menu-label">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 30 20" fill={colorsAccent[colorScheme]}>
+                      <defs />
+                      <g transform="translate(-1036.885 363.024)">
+                        <rect className="a" width="6.283" height="6.45" transform="translate(1036.885 -363.024)" />
+                        <rect className="a" width="6.283" height="6.45" transform="translate(1036.885 -354.724)" />
+                        <rect className="a" width="6.283" height="3.225" transform="translate(1036.885 -346.424)" />
+                        <rect className="a" width="6.283" height="4.352" transform="translate(1044.79 -357.624)" />
+                        <rect className="a" width="6.283" height="4.352" transform="translate(1044.79 -351.499)" />
+                        <rect className="a" width="6.283" height="2.176" transform="translate(1044.79 -345.375)" />
+                        <rect className="a" width="6.283" height="4.006" transform="translate(1052.696 -353.874)" />
+                        <rect className="a" width="6.283" height="5.075" transform="translate(1052.696 -348.274)" />
+                        <rect className="a" width="6.283" height="2.526" transform="translate(1060.602 -350.8)" />
+                        <rect className="a" width="6.283" height="3.4" transform="translate(1060.602 -346.424)" />
+                      </g>
+                    </svg>{' '}
+                    … και να συγκρίνω ως προς:
+                  </div>
                   <Dropdown
                     className={`vis-options-dropdown ${colorScheme}`}
                     onChange={this.handleCompareByChange}
