@@ -9,6 +9,7 @@ export interface IDimensionCode {
   parentId?: string;
   order?: number;
   color?: string;
+  children?: IDimensionCode[];
 }
 
 export const defaultValue: Readonly<IDimensionCode> = { name: {}, description: {} };

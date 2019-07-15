@@ -1,6 +1,8 @@
 import pick from 'lodash/pick';
 import { ILang } from 'app/shared/model/language.interface';
 import { TranslatorContext } from 'react-jhipster';
+import { IDimensionCode } from 'app/shared/model/dimension-code.model';
+import _ from 'lodash';
 
 /**
  * Removes fields with an 'id' field that equals ''.
@@ -31,6 +33,17 @@ export const mapIdList = (idList: ReadonlyArray<any>) =>
 export const translateEntityField = (entityField: ILang) => {
   const currentLocale = TranslatorContext.context.locale || TranslatorContext.context.defaultLocale;
   return entityField[currentLocale];
+};
+
+/**
+ * Unflatten list of dimension codes based on parentId property. Used to create tree view of hierarchical codelists
+ */
+export const unflattenDimensionCodes = (codes: IDimensionCode[]) => {
+  const childrenByParent = _.groupBy(codes, 'parentId');
+  return _.filter(codes, code => {
+    code.children = childrenByParent[code.notation];
+    return !code.parentId;
+  });
 };
 
 /**

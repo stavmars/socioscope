@@ -6,6 +6,7 @@ import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { IDimensionCode } from 'app/shared/model/dimension-code.model';
 import { IDimension } from 'app/shared/model/dimension.model';
 import _ from 'lodash';
+import { unflattenDimensionCodes } from 'app/shared/util/entity-utils';
 
 export const ACTION_TYPES = {
   SET_DATASET: 'datasetPage/SET_DATASET',
@@ -55,7 +56,7 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
         dimensionCodes: {
           ...state.dimensionCodes,
           [action.payload.dimensionId]: {
-            codes: action.payload.codelist,
+            codes: unflattenDimensionCodes(action.payload.codelist),
             codesByNotation: _.keyBy(action.payload.codelist, 'notation')
           }
         }
