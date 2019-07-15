@@ -34,13 +34,20 @@ const prepareSeriesByParent = (codesByNotation, seriesList: ISeries[]) =>
 
 const prepareTimeSeriesData = (dataPoints: ISeriesPoint[]) => dataPoints.map(dataPoint => [new Date(dataPoint.x).getTime(), dataPoint.y]);
 
-const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[], seriesByParent) =>
-  seriesPoints.map(seriesPoint => ({
-    name: translateEntityField(codesByNotation[seriesPoint.x].name),
-    y: seriesPoint.y,
-    drilldown: seriesByParent[seriesPoint.x] ? seriesPoint.x : undefined,
-    seriesByParent
-  }));
+const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[], seriesByParent) => {
+  const chartPoints = seriesPoints.map(seriesPoint => {
+    const code = codesByNotation[seriesPoint.x];
+    return {
+      name: translateEntityField(code.name),
+      codeOrder: code.order,
+      y: seriesPoint.y,
+      drilldown: seriesByParent[seriesPoint.x] ? seriesPoint.x : undefined,
+      seriesByParent,
+      codesByNotation
+    };
+  });
+  return _.sortBy(chartPoints, 'codeOrder', 'name');
+};
 
 export class ChartVis extends React.Component<IChartVisProp> {
   constructor(props) {
@@ -88,7 +95,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
             this.addSingleSeriesAsDrilldown(e.point, {
               name: e.point.series.name,
               data: prepareCategorySeriesData(
-                xAxisCodes.codesByNotation,
+                e.point.codesByNotation,
                 e.point.seriesByParent[e.point.drilldown][e.point.series.id],
                 e.point.seriesByParent
               )
@@ -126,7 +133,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
 
     return (
       <div>
-        <HighchartsReact highcharts={Highcharts} options={options} />
+        <HighchartsReact highcharts={Highcharts} options={options} immutable />
       </div>
     );
   }
