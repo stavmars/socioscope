@@ -17,11 +17,7 @@ export class DatasetPageHighlights extends React.Component<IDatasetPageHighlight
         {dataset.highlights
           ? dataset.highlights.map(value => (
               <div>
-                <DatasetCard
-                  title={translateEntityField(dataset.name)}
-                  colorScheme={dataset.colorScheme}
-                  headerImg="/content/images/Assets/Elections.svg"
-                >
+                <DatasetCard title="" colorScheme={dataset.colorScheme} headerImg="">
                   <div dangerouslySetInnerHTML={{ __html: value.description }} />
                 </DatasetCard>
                 <div className={`divider ${dataset.colorScheme}`} />
