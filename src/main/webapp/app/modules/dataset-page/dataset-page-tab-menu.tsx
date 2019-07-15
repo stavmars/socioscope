@@ -30,7 +30,7 @@ export class DatasetPageTabMenu extends React.Component<IDatasetPageTabMenuProp>
         <div className={`dataset-page-tab-menu-top` + (isMinimized ? ' minimized' : '')}>
           <div className={`dataset-page-title` + (isMinimized ? ' minimized' : '')}>
             {isMinimized ? (
-              <Menu text>
+              <Menu text style={{ margin: 0 }}>
                 <Menu.Item style={{ padding: '0 32px 58px 34px', marginTop: '-56px' }}>
                   {/*<Image src={`/content/images/Assets/${dataset.id}-${dataset.colorScheme}.svg`} style={{ padding: '0 32px 58px 34px', marginTop: '-56px', color: 'red' }} />*/}
                   <svg

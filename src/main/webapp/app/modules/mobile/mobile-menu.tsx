@@ -27,7 +27,7 @@ export class MobileMenu extends React.Component<DispatchProps> {
                 <List.Item className="mobile-menu-list-line color-scheme-1">
                   <Container>
                     <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Protests.svg" />
-                    <Container text className="mobile-menu-list-line-item color-scheme-1" as={Link} to="/dataset/greek-election-results">
+                    <Container text className="mobile-menu-list-line-item color-scheme-1" as={Link} to="/dataset/social">
                       {translate('home.dataset.categories.social')}
                       <i />
                     </Container>
@@ -36,7 +36,7 @@ export class MobileMenu extends React.Component<DispatchProps> {
                 <List.Item className="mobile-menu-list-line color-scheme-3">
                   <Container>
                     <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Criminality.svg" />
-                    <Container text className="mobile-menu-list-line-item color-scheme-3" as={Link} to="/dataset/greek-election-results">
+                    <Container text className="mobile-menu-list-line-item color-scheme-3" as={Link} to="/dataset/criminaltiy">
                       {translate('home.dataset.categories.criminality')}
                       <i />
                     </Container>
@@ -45,7 +45,7 @@ export class MobileMenu extends React.Component<DispatchProps> {
                 <List.Item className="mobile-menu-list-line color-scheme-2">
                   <Container>
                     <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Poverty.svg" />
-                    <Container text className="mobile-menu-list-line-item color-scheme-2" as={Link} to="/dataset/greek-election-results">
+                    <Container text className="mobile-menu-list-line-item color-scheme-2" as={Link} to="/dataset/poverty">
                       {translate('home.dataset.categories.poverty')}
                       <i />
                     </Container>
@@ -63,7 +63,7 @@ export class MobileMenu extends React.Component<DispatchProps> {
                 <List.Item className="mobile-menu-list-line color-scheme-2">
                   <Container>
                     <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Politicians.svg" />
-                    <Container text className="mobile-menu-list-line-item color-scheme-2" as={Link} to="/dataset/greek-election-results">
+                    <Container text className="mobile-menu-list-line-item color-scheme-2" as={Link} to="/dataset/politics">
                       {translate('home.dataset.categories.politics')}
                       <i />
                     </Container>
@@ -72,7 +72,7 @@ export class MobileMenu extends React.Component<DispatchProps> {
                 <List.Item className="mobile-menu-list-line color-scheme-3">
                   <Container>
                     <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Teenagers.svg" />
-                    <Container text className="mobile-menu-list-line-item color-scheme-3" as={Link} to="/dataset/greek-election-results">
+                    <Container text className="mobile-menu-list-line-item color-scheme-3" as={Link} to="/dataset/schools">
                       {translate('home.dataset.categories.schools')}
                       <i />
                     </Container>
