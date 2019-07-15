@@ -4,6 +4,7 @@ import { translateEntityField } from 'app/shared/util/entity-utils';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import drilldown from 'highcharts/modules/drilldown.js';
+import uuid from 'uuid';
 
 import _ from 'lodash';
 import { IDimension } from 'app/shared/model/dimension.model';
@@ -133,7 +134,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
 
     return (
       <div>
-        <HighchartsReact highcharts={Highcharts} options={options} immutable />
+        <HighchartsReact key={uuid()} highcharts={Highcharts} options={options} immutable />
       </div>
     );
   }
