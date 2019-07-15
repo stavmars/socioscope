@@ -3,16 +3,16 @@
 Mobile Menu styles
 ========================================================================== */
 .mobile-menu {
+  .mobile-menu-items {
+    padding-top: 10px;
+  }
   .mobile-menu-item {
     width: 100%;
     color: #1e1e1e;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-family: ProximaNovaBold;
     font-size: 16px;
     padding: 17px 0 0 13px;
-    &:hover {
-      color: #1e1e1e;
-    }
   }
   .mobile-menu-list {
     background-color: #ededed;
