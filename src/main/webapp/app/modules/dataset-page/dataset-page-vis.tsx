@@ -274,22 +274,6 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp, IDatase
                     </div>
                   </div>
                 </div>
-                <div id="Group_246">
-                  <div id="ID0">
-                    <span>0</span>
-                  </div>
-                  <div id="__A22_Text_34">
-                    <span>%</span>
-                  </div>
-                  <div id="Toggle___On">
-                    <svg className="Rectangle_657">
-                      <rect id="Rectangle_657" rx="15" ry="15" x="0" y="0" width="64.561" height="30" />
-                    </svg>
-                    <svg className="Rectangle_658">
-                      <rect id="Rectangle_658" rx="11.738274574279785" ry="11.738274574279785" x="0" y="0" width="23.477" height="24" />
-                    </svg>
-                  </div>
-                </div>
                 <svg className="Path_1182" viewBox="0 0 139 3">
                   <path id="Path_1182" d="M 0 0 L 139 0" />
                 </svg>

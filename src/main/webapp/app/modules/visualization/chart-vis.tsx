@@ -127,11 +127,15 @@ export class ChartVis extends React.Component<IChartVisProp> {
       credits: {
         enabled: false
       },
+      legend: {
+        enabled: false
+      },
       drilldown: {
         allowPointDrilldown: false
       }
     };
 
+    // todo investigate another solution to handle problems after updates while drilled-down
     return (
       <div>
         <HighchartsReact key={uuid()} highcharts={Highcharts} options={options} immutable />
