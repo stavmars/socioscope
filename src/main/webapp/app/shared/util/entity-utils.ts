@@ -39,6 +39,7 @@ export const translateEntityField = (entityField: ILang) => {
  * Unflatten list of dimension codes based on parentId property. Used to create tree view of hierarchical codelists
  */
 export const unflattenDimensionCodes = (codes: IDimensionCode[]) => {
+  codes = _.sortBy(codes, 'order', code => translateEntityField(code.name)) as IDimensionCode[];
   const childrenByParent = _.groupBy(codes, 'parentId');
   return _.filter(codes, code => {
     code.children = childrenByParent[code.notation];
