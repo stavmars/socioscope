@@ -3,12 +3,16 @@ import './chart-vis.scss';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import drilldown from 'highcharts/modules/drilldown.js';
+
 import _ from 'lodash';
 import { IDimension } from 'app/shared/model/dimension.model';
 import { ISeriesPoint } from 'app/shared/model/series-point.model';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeries } from 'app/shared/model/series.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
+
+drilldown(Highcharts);
 
 export interface IChartVisProp {
   dataset: IDataSet;
@@ -18,18 +22,30 @@ export interface IChartVisProp {
   loadingSeries: boolean;
 }
 
+const prepareSeriesByParent = (codesByNotation, seriesList: ISeries[]) =>
+  seriesList.reduce((acc, series) => {
+    const pointsByParent = _.groupBy(series.data, seriesPoint => codesByNotation[seriesPoint.x].parentId);
+    _.forEach(pointsByParent, (points, parent) => {
+      acc[parent] = acc[parent] || {};
+      acc[parent][series.id] = points;
+    });
+    return acc;
+  }, {});
+
+const prepareTimeSeriesData = (dataPoints: ISeriesPoint[]) => dataPoints.map(dataPoint => [new Date(dataPoint.x).getTime(), dataPoint.y]);
+
+const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[], seriesByParent) =>
+  seriesPoints.map(seriesPoint => ({
+    name: translateEntityField(codesByNotation[seriesPoint.x].name),
+    y: seriesPoint.y,
+    drilldown: seriesByParent[seriesPoint.x] ? seriesPoint.x : undefined,
+    seriesByParent
+  }));
+
 export class ChartVis extends React.Component<IChartVisProp> {
   constructor(props) {
     super(props);
   }
-
-  prepareTimeSeriesData = (dataPoints: ISeriesPoint[]) => dataPoints.map(dataPoint => [new Date(dataPoint.x).getTime(), dataPoint.y]);
-
-  prepareCategorySeriesData = (codesByNotation, dataPoints: ISeriesPoint[]) =>
-    dataPoints.filter(dataPoint => !codesByNotation[dataPoint.x].parentId).map(dataPoint => ({
-      name: translateEntityField(codesByNotation[dataPoint.x].name),
-      y: dataPoint.y
-    }));
 
   render() {
     const { dataset, seriesOptions, seriesList, xAxisCodes, loadingSeries } = this.props;
@@ -37,16 +53,26 @@ export class ChartVis extends React.Component<IChartVisProp> {
 
     const xAxisDimension = _.find(dimensions, { id: seriesOptions.xAxis }) as IDimension;
 
-    const chartSeries = loadingSeries
-      ? [{ data: [] }]
-      : seriesList.map(series => ({
+    let chartSeries = [{ data: [] }];
+
+    let seriesByParent;
+
+    if (!loadingSeries) {
+      if (xAxisDimension.type === 'time') {
+        chartSeries = seriesList.map(series => ({
           id: series.id,
           color: series.color,
-          data:
-            xAxisDimension.type === 'time'
-              ? this.prepareTimeSeriesData(series.data)
-              : this.prepareCategorySeriesData(xAxisCodes.codesByNotation, series.data)
+          data: prepareTimeSeriesData(series.data)
         }));
+      } else {
+        seriesByParent = prepareSeriesByParent(xAxisCodes.codesByNotation, seriesList);
+        chartSeries = seriesList.map(series => ({
+          id: series.id,
+          color: series.color,
+          data: prepareCategorySeriesData(xAxisCodes.codesByNotation, seriesByParent[''][series.id], seriesByParent)
+        }));
+      }
+    }
 
     const measure = seriesOptions.measure ? _.find(dataset.measures, { id: seriesOptions.measure }) : dataset.measures[0];
 
@@ -54,8 +80,21 @@ export class ChartVis extends React.Component<IChartVisProp> {
       chart: {
         type: xAxisDimension.type === 'time' ? 'spline' : 'column',
         height: '640px',
+        zoomType: 'x',
         styledMode: true,
-        className: dataset.colorScheme
+        className: dataset.colorScheme,
+        events: {
+          drilldown: function(e) {
+            this.addSingleSeriesAsDrilldown(e.point, {
+              name: e.point.series.name,
+              data: prepareCategorySeriesData(
+                xAxisCodes.codesByNotation,
+                e.point.seriesByParent[e.point.drilldown][e.point.series.id],
+                e.point.seriesByParent
+              )
+            });
+          }
+        }
       },
       title: {
         text: undefined
@@ -79,6 +118,9 @@ export class ChartVis extends React.Component<IChartVisProp> {
       series: chartSeries,
       credits: {
         enabled: false
+      },
+      drilldown: {
+        allowPointDrilldown: false
       }
     };
 
