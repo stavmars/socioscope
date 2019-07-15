@@ -48,17 +48,20 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
             const dropdownOptions = [];
             this.createDropdownOptions(dimensionCodes[dimension.id].codes, dropdownOptions, 0);
             return (
-              <Dropdown
-                className={`vis-options-dropdown ${dataset.colorScheme}`}
-                key={dimension.id}
-                onChange={this.handleFilterChange(dimension.id)}
-                options={dropdownOptions}
-                selection
-                search
-                fluid
-                noResultsMessage="Δε βρέθηκαν αποτελέσματα"
-                value={seriesOptions.dimensionFilters[dimension.id]}
-              />
+              <div key={dimension.id} className="vis-qb-filter">
+                <div className="vis-qb-filter-label">{`${translateEntityField(dimension.name)}:`}</div>
+                <Dropdown
+                  className={`vis-options-dropdown ${dataset.colorScheme}`}
+                  key={dimension.id}
+                  onChange={this.handleFilterChange(dimension.id)}
+                  options={dropdownOptions}
+                  selection
+                  search
+                  fluid
+                  noResultsMessage="Δε βρέθηκαν αποτελέσματα"
+                  value={seriesOptions.dimensionFilters[dimension.id]}
+                />
+              </div>
             );
           })}
       </div>

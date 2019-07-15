@@ -181,6 +181,19 @@
   }
 }
 
+.vis-qb-filter {
+  margin-bottom: 20px;
+}
+
+.vis-qb-filter-label {
+  font-size: 16px;
+  text-align: left;
+  font-family: ProximaNovaBold;
+  color: #1e1e1e;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
 @for $level from 1 through 10 {
   .filter-option-level-#{$level} {
     .text {
