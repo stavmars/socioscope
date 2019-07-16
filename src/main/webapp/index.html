@@ -11,6 +11,27 @@
     <link rel="shortcut icon" href="favicon.ico"/>
     <link rel="manifest" href="manifest.webapp"/>
     <link rel="stylesheet" href="static/css/loading.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+    "palette": {
+        "popup": {
+        "background": "#000"
+        },
+        "button": {
+        "background": "#f1d600"
+        }
+    },
+    "content": {
+        "message": "Το Socioscope χρησιμοποιεί cookies για να λειτουργεί σωστά.\nΤα cookies είναι μικρά κομμάτια δεδομένων που αποθηκεύουν οι ιστοσελίδες στον περιηγητή σας για να μας επιτρέψουν να σας προσφέρουμε την καλύτερη δυνατή εμπειρία περιήγησης. Χρησιμοποιώντας τo Socioscope αποδέχεστε τη χρήση των cookies.",
+        "dismiss": "Εντάξει",
+        "link": "Δείτε περισσότερα",
+        "href": "http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm"
+    }
+    })});
+    </script>
     <!-- jhipster-needle-add-resources-to-root - JHipster will add new resources here -->
 </head>
 <body>
