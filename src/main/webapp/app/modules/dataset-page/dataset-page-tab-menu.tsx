@@ -83,12 +83,7 @@ export class DatasetPageTabMenu extends React.Component<IDatasetPageTabMenuProp>
             <Grid.Column className={`dataset-page-tab-menu-item ${dataset.colorScheme}`} as={NavLink} exact to={`/dataset/${dataset.id}`}>
               <div>Highlights</div>
             </Grid.Column>
-            <Grid.Column
-              className={`dataset-page-tab-menu-item ${dataset.colorScheme}`}
-              as={NavLink}
-              exact
-              to={`/dataset/${dataset.id}/data`}
-            >
+            <Grid.Column className={`dataset-page-tab-menu-item ${dataset.colorScheme}`} as={NavLink} to={`/dataset/${dataset.id}/data`}>
               <div>Δεδομένα</div>
             </Grid.Column>
             <Grid.Column
