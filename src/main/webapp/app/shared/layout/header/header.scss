@@ -39,55 +39,25 @@ Header Menu styles
   }
 }
 
-.app-header.color-scheme-1 {
-  .app-header-menu.ui.menu {
+.app-header-menu.ui.menu {
+  &.color-scheme-1 {
     background-color: $color-scheme-1-bg;
-    .item {
-      padding: 0 0 0 79px;
-      text-transform: uppercase;
-      font-family: 'BPnoScriptBold';
-      font-size: 20px;
-      color: #1e1e1e;
-      &.active {
-        span {
-          border-bottom: 3px solid #ff5d39;
-        }
-      }
-    }
   }
-}
-
-.app-header.color-scheme-2 {
-  .app-header-menu.ui.menu {
+  &.color-scheme-2 {
     background-color: $color-scheme-2-bg;
-    .item {
-      padding: 0 0 0 79px;
-      text-transform: uppercase;
-      font-family: 'BPnoScriptBold';
-      font-size: 20px;
-      color: #1e1e1e;
-      &.active {
-        span {
-          border-bottom: 3px solid #ff5d39;
-        }
-      }
-    }
   }
-}
-
-.app-header.color-scheme-3 {
-  .app-header-menu.ui.menu {
+  &.color-scheme-3 {
     background-color: $color-scheme-3-bg;
-    .item {
-      padding: 0 0 0 79px;
-      text-transform: uppercase;
-      font-family: 'BPnoScriptBold';
-      font-size: 20px;
-      color: #1e1e1e;
-      &.active {
-        span {
-          border-bottom: 3px solid #ff5d39;
-        }
+  }
+  .item {
+    padding: 0 0 0 79px;
+    text-transform: uppercase;
+    font-family: 'BPnoScriptBold';
+    font-size: 20px;
+    color: #1e1e1e;
+    &.active {
+      span {
+        border-bottom: 3px solid #ff5d39;
       }
     }
   }
