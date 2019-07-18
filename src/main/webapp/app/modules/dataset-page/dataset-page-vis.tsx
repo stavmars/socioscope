@@ -34,6 +34,59 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
     this.props.resetSeriesOptions(this.props.dataset, value);
   };
 
+  diagramConfigurationMenu = (colorScheme, colorsAccent, xAxisOptions, seriesOptions, dataset, dimensionCodes, fetchedCodeLists) => (
+    <div className="vis-options-menu">
+      <Menu text>
+        <Menu.Item className="vis-options-menu-tittle">
+          <div className="vis-options-menu-title">Διαμορφώστε το γράφημα</div>
+        </Menu.Item>
+      </Menu>
+      <div className="vis-xAxis vis-options-menu-item">
+        <div className="vis-options-menu-label">
+          <Image inline src={`/content/images/Assets/x-axis-${colorScheme}.svg`} style={{ paddingRight: '23px' }} />
+          Θέλω να δω αποτελέσματα για:
+        </div>
+        <Dropdown
+          className={`vis-options-dropdown ${colorScheme}`}
+          onChange={this.handleXAxisChange}
+          options={xAxisOptions}
+          selection
+          fluid
+          placeholder="Επιλέξτε μεταβλητή για τον άξονα x"
+          value={seriesOptions.xAxis}
+        />
+      </div>
+      <div className="vis-filters vis-options-menu-item">
+        <div className="vis-options-menu-label">
+          <Image inline src={`/content/images/Assets/indicator-${colorScheme}.svg`} style={{ paddingRight: '23px' }} />… σε σχέση με:
+        </div>
+        {dataset.type === 'qb' ? (
+          <QbDatasetFilters
+            dimensionCodes={dimensionCodes}
+            dataset={dataset}
+            fetchedCodeLists={fetchedCodeLists}
+            seriesOptions={seriesOptions}
+            setFilterValue={this.props.setFilterValue}
+          />
+        ) : (
+          <RawDatasetFilters
+            dimensionCodes={dimensionCodes}
+            dataset={dataset}
+            fetchedCodeLists={fetchedCodeLists}
+            seriesOptions={seriesOptions}
+          />
+        )}
+      </div>
+      <CompareByControl
+        dimensionCodes={dimensionCodes}
+        dataset={dataset}
+        seriesOptions={seriesOptions}
+        colorsAccent={colorsAccent}
+        changeCompareBy={this.props.changeCompareBy}
+      />
+    </div>
+  );
+
   render() {
     const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, fetchedCodeLists } = this.props;
     const { dimensions, colorScheme } = dataset;
@@ -60,57 +113,15 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
         ) : (
           <Grid>
             <Grid.Column only="computer tablet" tablet={6} computer={4}>
-              <div className="vis-options-menu">
-                <Menu text>
-                  <Menu.Item className="vis-options-menu-tittle">
-                    <div className="vis-options-menu-title">Διαμορφώστε το γράφημα</div>
-                  </Menu.Item>
-                </Menu>
-                <div className="vis-xAxis vis-options-menu-item">
-                  <div className="vis-options-menu-label">
-                    <Image inline src={`/content/images/Assets/x-axis-${dataset.colorScheme}.svg`} style={{ paddingRight: '23px' }} />
-                    Θέλω να δω αποτελέσματα για:
-                  </div>
-                  <Dropdown
-                    className={`vis-options-dropdown ${colorScheme}`}
-                    onChange={this.handleXAxisChange}
-                    options={xAxisOptions}
-                    selection
-                    fluid
-                    placeholder="Επιλέξτε μεταβλητή για τον άξονα x"
-                    value={seriesOptions.xAxis}
-                  />
-                </div>
-                <div className="vis-filters vis-options-menu-item">
-                  <div className="vis-options-menu-label">
-                    <Image inline src={`/content/images/Assets/indicator-${dataset.colorScheme}.svg`} style={{ paddingRight: '23px' }} />…
-                    σε σχέση με:
-                  </div>
-                  {dataset.type === 'qb' ? (
-                    <QbDatasetFilters
-                      dimensionCodes={dimensionCodes}
-                      dataset={dataset}
-                      fetchedCodeLists={fetchedCodeLists}
-                      seriesOptions={seriesOptions}
-                      setFilterValue={this.props.setFilterValue}
-                    />
-                  ) : (
-                    <RawDatasetFilters
-                      dimensionCodes={dimensionCodes}
-                      dataset={dataset}
-                      fetchedCodeLists={fetchedCodeLists}
-                      seriesOptions={seriesOptions}
-                    />
-                  )}
-                </div>
-                <CompareByControl
-                  dimensionCodes={dimensionCodes}
-                  dataset={dataset}
-                  seriesOptions={seriesOptions}
-                  colorsAccent={colorsAccent}
-                  changeCompareBy={this.props.changeCompareBy}
-                />
-              </div>
+              {this.diagramConfigurationMenu(
+                colorScheme,
+                colorsAccent,
+                xAxisOptions,
+                seriesOptions,
+                dataset,
+                dimensionCodes,
+                fetchedCodeLists
+              )}
             </Grid.Column>
             <Grid.Column className="vis-container" mobile={16} tablet={10} computer={12}>
               <ChartVis
