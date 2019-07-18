@@ -240,8 +240,12 @@
 }
 
 .dataset-page-vis {
-  padding-top: 40px;
-  padding-bottom: 70px;
+  @include mobile {
+  }
+  @include computer {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
 }
 
 .vis-options-menu {
