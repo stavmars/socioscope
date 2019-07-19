@@ -16,7 +16,7 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
     return (
       <div className={`dataset-card ${colorScheme}`}>
         <div className="dataset-card-header">
-          <Image className="dataset-card-header-image" centered src={headerImg} />
+          {headerImg === '' ? null : <Image className="dataset-card-header-image" centered src={headerImg} />}
           <h3>{title}</h3>
         </div>
         <div className="dataset-card-content">

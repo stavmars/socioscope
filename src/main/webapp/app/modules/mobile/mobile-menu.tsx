@@ -11,14 +11,10 @@ export class MobileMenu extends React.Component<DispatchProps> {
     return (
       <div className="mobile-menu">
         <List relaxed="very">
-          <List.Item as="a" href="/">
-            <Image
-              onClick={this.props.toggleMobileMenu}
-              src="/content/images/Assets/mobile-menu-icon.png"
-              style={{ padding: '16px 0 0 14px' }}
-            />
+          <List.Item>
+            <Image as="a" href="/" src="/content/images/Assets/mobile-menu-icon.png" style={{ padding: '16px 0 0 14px' }} />
             {/* <Image src={`/content/images/Assets/Search-black.svg`} alt="search button" style={{ padding: '19px 0 0 160px' }} /> */}
-            <Icon onClick={this.props.toggleMobileMenu} name="cancel" size="big" style={{ padding: '19px 0 0 0' }} />
+            <List.Icon onClick={this.props.toggleMobileMenu} name="cancel" size="big" style={{ marginTop: '-8%' }} />
           </List.Item>
           <List.Item>
             <List.Content>

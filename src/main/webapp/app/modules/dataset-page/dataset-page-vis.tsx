@@ -6,7 +6,7 @@ import { changeCompareBy, getSeries, initVis, resetSeriesOptions, setFilterValue
 import { IRootState } from 'app/shared/reducers';
 import './dataset-page.scss';
 import { hideHeader, showHeader } from 'app/shared/reducers/header';
-import { Dimmer, Dropdown, Grid, Loader, Menu } from 'semantic-ui-react';
+import { Dimmer, Dropdown, Grid, Loader, Menu, Image, Responsive } from 'semantic-ui-react';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
@@ -34,6 +34,59 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
     this.props.resetSeriesOptions(this.props.dataset, value);
   };
 
+  diagramConfigurationMenu = (colorScheme, colorsAccent, xAxisOptions, seriesOptions, dataset, dimensionCodes, fetchedCodeLists) => (
+    <div className="vis-options-menu">
+      <Menu text>
+        <Menu.Item className="vis-options-menu-tittle">
+          <div className="vis-options-menu-title">Διαμορφώστε το γράφημα</div>
+        </Menu.Item>
+      </Menu>
+      <div className="vis-xAxis vis-options-menu-item">
+        <div className="vis-options-menu-label">
+          <Image inline src={`/content/images/Assets/x-axis-${colorScheme}.svg`} style={{ paddingRight: '23px' }} />
+          Θέλω να δω αποτελέσματα για:
+        </div>
+        <Dropdown
+          className={`vis-options-dropdown ${colorScheme}`}
+          onChange={this.handleXAxisChange}
+          options={xAxisOptions}
+          selection
+          fluid
+          placeholder="Επιλέξτε μεταβλητή για τον άξονα x"
+          value={seriesOptions.xAxis}
+        />
+      </div>
+      <div className="vis-filters vis-options-menu-item">
+        <div className="vis-options-menu-label">
+          <Image inline src={`/content/images/Assets/indicator-${colorScheme}.svg`} style={{ paddingRight: '23px' }} />… σε σχέση με:
+        </div>
+        {dataset.type === 'qb' ? (
+          <QbDatasetFilters
+            dimensionCodes={dimensionCodes}
+            dataset={dataset}
+            fetchedCodeLists={fetchedCodeLists}
+            seriesOptions={seriesOptions}
+            setFilterValue={this.props.setFilterValue}
+          />
+        ) : (
+          <RawDatasetFilters
+            dimensionCodes={dimensionCodes}
+            dataset={dataset}
+            fetchedCodeLists={fetchedCodeLists}
+            seriesOptions={seriesOptions}
+          />
+        )}
+      </div>
+      <CompareByControl
+        dimensionCodes={dimensionCodes}
+        dataset={dataset}
+        seriesOptions={seriesOptions}
+        colorsAccent={colorsAccent}
+        changeCompareBy={this.props.changeCompareBy}
+      />
+    </div>
+  );
+
   render() {
     const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, fetchedCodeLists } = this.props;
     const { dimensions, colorScheme } = dataset;
@@ -58,90 +111,69 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
             <Loader />
           </Dimmer>
         ) : (
-          <Grid>
-            <Grid.Column mobile={16} tablet={6} computer={4}>
-              <div className="vis-options-menu">
-                <Menu text>
-                  <Menu.Item className="vis-options-menu-tittle">
-                    <div className="vis-options-menu-title">Διαμορφώστε το γράφημα</div>
-                  </Menu.Item>
-                </Menu>
-                <div className="vis-xAxis vis-options-menu-item">
-                  <div className="vis-options-menu-label">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 30 20" fill={colorsAccent[colorScheme]}>
-                      <defs />
-                      <path
-                        className="a"
-                        d="M1054.107-433.193l3.533,3.385h-8.112v-2.457h-1.15v2.457h-4.964v-2.457h-1.15v2.457h-4.731v-14.561h-1.15v15.746h21.258l-3.535,3.386.784.868,5.056-4.845-5.056-4.846Z"
-                        transform="translate(-1036.385 444.369)"
-                      />
-                      <path
-                        className="a"
-                        d="M1063.187-432.669l-.707-.707-1.709,1.709-1.709-1.709-.707.707,1.709,1.709-1.709,1.709.707.707,1.709-1.709,1.709,1.709.707-.707-1.709-1.709Z"
-                        transform="translate(-1033.187 446.105)"
-                      />
-                    </svg>{' '}
-                    Θέλω να δω αποτελέσματα για:
-                  </div>
-                  <Dropdown
-                    className={`vis-options-dropdown ${colorScheme}`}
-                    onChange={this.handleXAxisChange}
-                    options={xAxisOptions}
-                    selection
-                    fluid
-                    placeholder="Επιλέξτε μεταβλητή για τον άξονα x"
-                    value={seriesOptions.xAxis}
+          <div>
+            <Responsive {...Responsive.onlyMobile}>
+              <Grid centered>
+                <Grid.Row>
+                  <Menu fluid text>
+                    <Menu.Item style={{ left: '5%' }}>
+                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                    </Menu.Item>
+                    <Menu.Item style={{ left: '5%' }}>
+                      <h1
+                        style={{
+                          fontFamily: 'ProximaNovaSemibold',
+                          color: '#1E1E1E',
+                          fontSize: '12px'
+                        }}
+                      >
+                        Διαμορφώστε το γράφημα
+                      </h1>
+                    </Menu.Item>
+                    <Menu.Item position="right">
+                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                    </Menu.Item>
+                    <Menu.Item style={{ marginRight: '5%' }}>
+                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                    </Menu.Item>
+                  </Menu>
+                </Grid.Row>
+                <Grid.Row centered className="vis-container">
+                  <ChartVis
+                    dataset={dataset}
+                    seriesList={seriesList}
+                    seriesOptions={seriesOptions}
+                    xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
+                    loadingSeries={loadingSeries}
                   />
-                </div>
-                <div className="vis-filters vis-options-menu-item">
-                  <div className="vis-options-menu-label">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 30 20" fill={colorsAccent[colorScheme]}>
-                      <defs />
-                      <g transform="translate(-1036.885 400.711)">
-                        <rect className="a" width="6.283" height="20" transform="translate(1036.885 -400.711)" />
-                        <rect className="a" width="6.283" height="15.336" transform="translate(1044.79 -396.047)" />
-                        <rect className="a" width="6.283" height="10.769" transform="translate(1052.696 -391.48)" />
-                        <rect className="a" width="6.283" height="7.668" transform="translate(1060.602 -388.379)" />
-                      </g>
-                    </svg>{' '}
-                    … σε σχέση με:
-                  </div>
-                  {dataset.type === 'qb' ? (
-                    <QbDatasetFilters
-                      dimensionCodes={dimensionCodes}
-                      dataset={dataset}
-                      fetchedCodeLists={fetchedCodeLists}
-                      seriesOptions={seriesOptions}
-                      setFilterValue={this.props.setFilterValue}
-                    />
-                  ) : (
-                    <RawDatasetFilters
-                      dimensionCodes={dimensionCodes}
-                      dataset={dataset}
-                      fetchedCodeLists={fetchedCodeLists}
-                      seriesOptions={seriesOptions}
-                    />
+                </Grid.Row>
+              </Grid>
+            </Responsive>
+            <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+              <Grid>
+                <Grid.Column only="computer tablet" tablet={6} computer={4}>
+                  {this.diagramConfigurationMenu(
+                    colorScheme,
+                    colorsAccent,
+                    xAxisOptions,
+                    seriesOptions,
+                    dataset,
+                    dimensionCodes,
+                    fetchedCodeLists
                   )}
-                </div>
-                <CompareByControl
-                  dimensionCodes={dimensionCodes}
-                  dataset={dataset}
-                  seriesOptions={seriesOptions}
-                  colorsAccent={colorsAccent}
-                  changeCompareBy={this.props.changeCompareBy}
-                />
-              </div>
-            </Grid.Column>
-            <Grid.Column className="vis-container" mobile={16} tablet={10} computer={12}>
-              <ChartVis
-                dataset={dataset}
-                seriesList={seriesList}
-                seriesOptions={seriesOptions}
-                xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
-                loadingSeries={loadingSeries}
-              />
-            </Grid.Column>
-          </Grid>
+                </Grid.Column>
+                <Grid.Column className="vis-container" mobile={16} tablet={10} computer={12}>
+                  <ChartVis
+                    dataset={dataset}
+                    seriesList={seriesList}
+                    seriesOptions={seriesOptions}
+                    xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
+                    loadingSeries={loadingSeries}
+                  />
+                </Grid.Column>
+              </Grid>
+            </Responsive>
+          </div>
         )}
       </div>
     );

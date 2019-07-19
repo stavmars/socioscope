@@ -13,71 +13,171 @@
 }
 
 .dataset-page {
-  margin: 0px 40px;
-  padding-top: 80px;
+  @include mobile {
+    padding-top: 19%;
+  }
+  @include computer {
+    margin: 0px 40px;
+    padding-top: 80px;
+  }
 }
 
 .dataset-page-tab-menu {
+  @include mobile {
+    margin-top: -37.2%;
+  }
+  @include computer {
+    margin-top: 0;
+  }
   &.minimized {
     margin-top: -80px;
   }
 }
 
 .dataset-page-tab-menu-top {
-  height: 600px;
+  @include mobile {
+    height: 217px;
+  }
+  @include computer {
+    height: 600px;
+  }
   &.minimized {
-    height: 120px;
+    @include mobile {
+      height: 89px;
+    }
+    @include computer {
+      height: 120px;
+    }
   }
   .dataset-page-tab-menu-top-topics {
-    float: right;
     padding: 50px 99px 156px 0;
     color: #ffffff;
     font-size: 20px;
     font-family: BPnoScriptBold;
     text-transform: uppercase;
-    text-decoration: underline;
+    span {
+      border-bottom: 3px solid #ffffff;
+    }
   }
 }
 
 .dataset-page-title {
+  @include mobile {
+    margin: 0;
+    padding: 10% 0 5% 0;
+  }
+  @include computer {
+    padding: 10% 0 0 0;
+  }
   .datasetIcon {
-    padding: 10% 45% 0 45%;
+    @include mobile {
+      height: 39px;
+      width: 41px;
+    }
+    @include computer {
+      height: 96px;
+      width: 100px;
+    }
   }
   h1 {
     text-align: center;
     font-family: BPnoScriptBold;
-    font-size: 100px;
     color: $color-scheme-1-bg;
+    @include mobile {
+      font-size: 27px;
+    }
+    @include computer {
+      font-size: 100px;
+    }
   }
   &.minimized {
-    h1 {
-      text-align: left;
-      font-size: 30px;
-      padding-top: 52px;
-      margin-top: -156px;
+    padding: 0;
+    .minimized-menu {
+      margin: 0;
+      .datasetIcon-position {
+        @include mobile {
+          padding: 20px 15px 140px 15px;
+        }
+        @include computer {
+          padding: 39px 32px 158px 34px;
+        }
+        .datasetIcon {
+          @include mobile {
+            width: 27px;
+            height: 26px;
+          }
+          @include computer {
+            height: 51px;
+            width: 52px;
+          }
+        }
+      }
+      h1 {
+        text-align: left;
+        @include mobile {
+          font-size: 15px;
+          margin-top: -110px;
+        }
+        @include computer {
+          font-size: 30px;
+          padding-top: 52px;
+          margin-top: -156px;
+        }
+      }
     }
   }
 }
 
 .dataset-page-tab-menu-item {
   background-color: transparent;
-  font-size: 30px;
-  line-height: 18px;
   font-family: BPnoScriptBold;
-  padding: 16px 0;
-  color: $color-scheme-1-bg;
-  border: 1px solid $color-scheme-1-bg;
+  &.color-scheme-1 {
+    color: $color-scheme-1-bg;
+    border: 1px solid $color-scheme-1-bg;
+  }
+  &.color-scheme-2 {
+    color: $color-scheme-2-bg;
+    border: 1px solid $color-scheme-2-bg;
+  }
+  &.color-scheme-3 {
+    color: $color-scheme-3-bg;
+    border: 1px solid $color-scheme-3-bg;
+  }
   text-transform: uppercase;
+  @include mobile {
+    font-size: 15px;
+    line-height: 12px;
+    padding: 12px 0;
+  }
+  @include computer {
+    font-size: 30px;
+    line-height: 18px;
+    padding: 16px 0;
+  }
   &.active {
-    background-color: $color-scheme-1-bg;
+    &.color-scheme-1 {
+      background-color: $color-scheme-1-bg;
+    }
+    &.color-scheme-2 {
+      background-color: $color-scheme-2-bg;
+    }
+    &.color-scheme-3 {
+      background-color: $color-scheme-3-bg;
+    }
     color: #1e1e1e;
   }
 }
 
 .dataset-page-about {
   .svg {
-    float: right;
-    margin: 23%;
+    @include mobile {
+      margin: 0;
+      padding: 31px 0 31px 0;
+    }
+    @include computer {
+      float: right;
+      padding-top: 20%;
+    }
     &.color-scheme-1 {
       fill: $color-scheme-1-accent;
     }
@@ -100,10 +200,17 @@
   }
   .dataset-page-about-content {
     font-family: ProximaNovaRegular;
-    font-size: 20px;
-    line-height: 25px;
-    margin-left: auto;
-    margin-right: auto;
+    @include mobile {
+      font-size: 15px;
+      line-height: 20px;
+      margin: 0 5% 10% 5%;
+    }
+    @include computer {
+      font-size: 20px;
+      line-height: 25px;
+      margin: 0;
+      margin: 10% 5% 10% 5%;
+    }
   }
 }
 
@@ -133,8 +240,12 @@
 }
 
 .dataset-page-vis {
-  padding-top: 40px;
-  padding-bottom: 70px;
+  @include mobile {
+  }
+  @include computer {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
 }
 
 .vis-options-menu {
@@ -218,472 +329,4 @@
       padding-left: #{$level * 20}px !important;
     }
   }
-}
-// COPIED FROM LEONIDAS' html
-#data_switches_blue {
-  opacity: 1;
-  position: absolute;
-  width: 1775.166px;
-  height: 47px;
-  left: 0px;
-  top: -35px;
-  overflow: visible;
-}
-#Group_123 {
-  opacity: 1;
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 600.166px;
-  top: 11px;
-  overflow: visible;
-}
-#baseline_bar_chart_24px {
-  opacity: 1;
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 0px;
-  top: 0px;
-  overflow: visible;
-}
-#Path_835 {
-  opacity: 1;
-  fill: rgba(209, 70, 252, 1);
-}
-.Path_835 {
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  overflow: visible;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 14px;
-  height: 14px;
-}
-#Path_836 {
-  opacity: 1;
-  fill: transparent;
-}
-.Path_836 {
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  overflow: visible;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 24px;
-  height: 24px;
-}
-#Group_124 {
-  opacity: 1;
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 795.166px;
-  top: 10px;
-  overflow: visible;
-}
-#baseline_map_24px {
-  opacity: 0.5;
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 0px;
-  top: 0px;
-  overflow: visible;
-}
-#Path_837 {
-  opacity: 1;
-  fill: rgba(0, 0, 0, 1);
-}
-.Path_837 {
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  overflow: visible;
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 18px;
-  height: 18px;
-}
-#Path_838 {
-  opacity: 1;
-  fill: rgba(0, 0, 0, 0);
-}
-.Path_838 {
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  overflow: visible;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 24px;
-  height: 24px;
-}
-#_______ {
-  opacity: 1;
-  position: absolute;
-  left: 653.832px;
-  top: 11.585px;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  overflow: visible;
-  width: 84px;
-  white-space: nowrap;
-  line-height: 27px;
-  margin-top: -3.5px;
-  text-align: left;
-  font-family: ProximaNovaBold;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  color: rgba(209, 70, 252, 1);
-  letter-spacing: -0.2px;
-}
-#______ {
-  opacity: 0.5;
-  position: absolute;
-  left: 848.832px;
-  top: 9.585px;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  overflow: visible;
-  width: 66px;
-  white-space: nowrap;
-  line-height: 27px;
-  margin-top: -3.5px;
-  text-align: left;
-  font-family: ProximaNovaBold;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  color: rgba(30, 30, 30, 1);
-  letter-spacing: -0.2px;
-}
-#_____________________ {
-  opacity: 1;
-  position: absolute;
-  left: 1025.832px;
-  top: 9.585px;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  overflow: visible;
-  width: 206px;
-  white-space: nowrap;
-  line-height: 27px;
-  margin-top: -3.5px;
-  text-align: left;
-  font-family: ProximaNovaBold;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  color: rgba(133, 133, 133, 1);
-  letter-spacing: -0.2px;
-}
-#Line_71 {
-  opacity: 1;
-  fill: transparent;
-  stroke: rgb(133, 133, 133);
-  stroke-width: 2px;
-  stroke-linejoin: miter;
-  stroke-linecap: round;
-  stroke-miterlimit: 4;
-  shape-rendering: auto;
-}
-.Line_71 {
-  overflow: visible;
-  position: absolute;
-  top: 15.5px;
-  left: 987.666px;
-  width: 15px;
-  height: 2px;
-}
-#Line_72 {
-  opacity: 1;
-  fill: transparent;
-  stroke: rgb(133, 133, 133);
-  stroke-width: 2px;
-  stroke-linejoin: miter;
-  stroke-linecap: round;
-  stroke-miterlimit: 4;
-  shape-rendering: auto;
-}
-.Line_72 {
-  overflow: visible;
-  position: absolute;
-  top: 21.5px;
-  left: 987.666px;
-  width: 15px;
-  height: 2px;
-}
-#Line_73 {
-  opacity: 1;
-  fill: transparent;
-  stroke: rgb(133, 133, 133);
-  stroke-width: 2px;
-  stroke-linejoin: miter;
-  stroke-linecap: round;
-  stroke-miterlimit: 4;
-  shape-rendering: auto;
-}
-.Line_73 {
-  overflow: visible;
-  position: absolute;
-  top: 27.5px;
-  left: 987.666px;
-  width: 15px;
-  height: 2px;
-}
-#Group_122 {
-  opacity: 1;
-  position: absolute;
-  width: 164px;
-  height: 45px;
-  left: 1611.166px;
-  top: 0px;
-  overflow: visible;
-}
-#Path_1157 {
-  opacity: 1;
-  fill: transparent;
-  stroke: rgb(30, 30, 30);
-  stroke-width: 3px;
-  stroke-linejoin: miter;
-  stroke-linecap: butt;
-  stroke-miterlimit: 4;
-  shape-rendering: auto;
-}
-.Path_1157 {
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  overflow: visible;
-  position: absolute;
-  top: 0px;
-  left: 62px;
-  width: 45px;
-  height: 45px;
-}
-#Group_121 {
-  opacity: 1;
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  left: 71px;
-  top: 10px;
-  overflow: visible;
-}
-#Path_831 {
-  opacity: 1;
-  fill: transparent;
-}
-.Path_831 {
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  overflow: visible;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 24px;
-  height: 24px;
-}
-#Path_832 {
-  opacity: 1;
-  fill: rgba(30, 30, 30, 1);
-}
-.Path_832 {
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  overflow: visible;
-  position: absolute;
-  top: 2px;
-  left: 3px;
-  width: 18px;
-  height: 19.92px;
-}
-#Path_1158 {
-  opacity: 1;
-  fill: transparent;
-  stroke: rgb(30, 30, 30);
-  stroke-width: 3px;
-  stroke-linejoin: miter;
-  stroke-linecap: butt;
-  stroke-miterlimit: 4;
-  shape-rendering: auto;
-}
-.Path_1158 {
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  overflow: visible;
-  position: absolute;
-  top: 0px;
-  left: 119px;
-  width: 45px;
-  height: 45px;
-}
-#Ellipse_37 {
-  opacity: 1;
-  fill: transparent;
-  stroke: rgb(30, 30, 30);
-  stroke-width: 3px;
-  stroke-linejoin: miter;
-  stroke-linecap: butt;
-  stroke-miterlimit: 4;
-  shape-rendering: auto;
-}
-.Ellipse_37 {
-  position: absolute;
-  overflow: visible;
-  width: 45px;
-  height: 45px;
-  left: 0px;
-  top: 0px;
-}
-#baseline_save_alt_24px {
-  opacity: 1;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 8px;
-  top: 6px;
-  overflow: visible;
-}
-#Path_833 {
-  opacity: 1;
-  fill: rgba(0, 0, 0, 1);
-}
-.Path_833 {
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  overflow: visible;
-  position: absolute;
-  top: 3.75px;
-  left: 3.75px;
-  width: 22.5px;
-  height: 22.5px;
-}
-#Path_834 {
-  opacity: 1;
-  fill: rgba(0, 0, 0, 0);
-}
-.Path_834 {
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  overflow: visible;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 30px;
-  height: 30px;
-}
-#_ {
-  opacity: 1;
-  position: absolute;
-  left: 135.834px;
-  top: 9.351px;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  overflow: visible;
-  width: 14px;
-  white-space: nowrap;
-  text-align: left;
-  font-family: BPnoScriptBold;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 30px;
-  color: rgba(30, 30, 30, 1);
-  letter-spacing: -0.2px;
-}
-#Group_246 {
-  opacity: 1;
-  position: absolute;
-  width: 118.641px;
-  height: 33.334px;
-  left: 452.834px;
-  top: -30px;
-  overflow: visible;
-}
-#ID0 {
-  opacity: 1;
-  position: absolute;
-  left: 0px;
-  top: 8.334px;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  overflow: visible;
-  width: 22px;
-  white-space: nowrap;
-  text-align: left;
-  font-family: BPnoScriptBold;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 30px;
-  color: rgba(133, 133, 133, 1);
-  letter-spacing: -0.2px;
-}
-#__A22_Text_34 {
-  opacity: 1;
-  position: absolute;
-  left: 101.641px;
-  top: 8.334px;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  overflow: visible;
-  width: 18px;
-  white-space: nowrap;
-  text-align: left;
-  font-family: BPnoScriptBold;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 30px;
-  color: rgba(133, 133, 133, 1);
-  letter-spacing: -0.2px;
-}
-#Toggle___On {
-  opacity: 1;
-  position: absolute;
-  width: 64.561px;
-  height: 30px;
-  left: 28.773px;
-  top: 0px;
-  overflow: visible;
-}
-#Rectangle_657 {
-  opacity: 1;
-  fill: rgba(133, 133, 133, 1);
-}
-.Rectangle_657 {
-  position: absolute;
-  overflow: visible;
-  width: 64.561px;
-  height: 30px;
-  left: 0px;
-  top: 0px;
-}
-#Rectangle_658 {
-  opacity: 1;
-  fill: rgba(255, 255, 255, 1);
-}
-.Rectangle_658 {
-  position: absolute;
-  overflow: visible;
-  width: 23.477px;
-  height: 24px;
-  left: 38.149px;
-  top: 3px;
-}
-#Path_1182 {
-  opacity: 1;
-  fill: rgba(0, 0, 0, 0);
-  stroke: rgb(209, 70, 252);
-  stroke-width: 3px;
-  stroke-linejoin: miter;
-  stroke-linecap: butt;
-  stroke-miterlimit: 4;
-  shape-rendering: auto;
-}
-.Path_1182 {
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  overflow: visible;
-  position: absolute;
-  top: 0px;
-  left: 601px;
-  width: 139px;
-  height: 3px;
 }

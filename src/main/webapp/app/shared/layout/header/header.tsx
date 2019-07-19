@@ -36,7 +36,22 @@ export class Header extends React.Component<IHeaderProps, {}> {
     return (
       <div>
         <Responsive {...Responsive.onlyMobile}>
-          <div>
+          {className && className.includes('color-scheme') ? (
+            <Menu
+              inverted
+              pointing
+              secondary
+              fixed={mobileAboutPage}
+              style={{ backgroundColor: mobileAboutPage ? 'white' : null, borderStyle: 'none' }}
+            >
+              <Menu.Item position="left" header as="a" href="/" style={{ padding: '18px 0 17px 15px' }}>
+                <Image src="/content/images/Assets/mobile-menu-icon.png" />
+              </Menu.Item>
+              <Menu.Item onClick={this.props.toggleMobileMenu} style={{ padding: '21px 20px 21px 18px' }}>
+                <Icon name="sidebar" />
+              </Menu.Item>
+            </Menu>
+          ) : (
             <Menu
               inverted
               pointing
@@ -54,11 +69,11 @@ export class Header extends React.Component<IHeaderProps, {}> {
                 <Icon name="sidebar" />
               </Menu.Item>
             </Menu>
-          </div>
+          )}
         </Responsive>
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
           <div className={`app-header ${className || ''}`}>
-            <Menu className="app-header-menu" text fixed={isFixed ? 'top' : null}>
+            <Menu className={`app-header-menu ${className || ''}`} text fixed={isFixed ? 'top' : null}>
               <Menu.Item position="left" header as="a" href="/" style={{ padding: '20px 0 20px 0' }}>
                 <Image src={`/content/images/Assets/Logo-${color}.png`} alt="Socioscope Logo" style={{ height: '40px', width: 'auto' }} />
               </Menu.Item>
