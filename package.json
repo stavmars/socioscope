@@ -23,6 +23,7 @@
     "react": "^16.4.2",
     "react-addons-css-transition-group": "16.0.0-alpha.3",
     "react-addons-transition-group": "16.0.0-alpha.3",
+    "react-cookie-consent": "^2.3.2",
     "react-dom": "^16.4.2",
     "react-hot-loader": "3.1.1",
     "react-jhipster": "0.5.9",
