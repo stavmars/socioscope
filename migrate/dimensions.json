@@ -5,7 +5,7 @@
             "el": "Περιοχή αναφοράς",
             "en": "Reference Area"
         },
-        "type": "coded"
+        "type": "geographic-area"
     },
     {
         "id": "refPeriod",
@@ -21,7 +21,7 @@
             "el": "Περιοχή Αναφοράς (NUTS)",
             "en": "Reference Area (NUTS)"
         },
-        "type": "coded"
+        "type": "geographic-area"
     },
     {
         "id": "sex",
@@ -61,7 +61,7 @@
             "el": "Εκλογική Περιφέρεια",
             "en": "Constituency"
         },
-        "type": "coded"
+        "type": "geographic-area"
     },
     {
         "id": "elections",
