@@ -1,17 +1,26 @@
 /* tslint:disable:max-line-length */
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { changeCompareBy, getSeries, initVis, resetSeriesOptions, setFilterValue } from 'app/modules/dataset-page/dataset-page-reducer';
-import { IRootState } from 'app/shared/reducers';
+import qs from 'qs';
+import {
+  changeCompareBy,
+  getSeries,
+  initVis,
+  setFilterValue,
+  setSeriesOptions,
+  setVisType
+} from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
-import { hideHeader, showHeader } from 'app/shared/reducers/header';
-import { Dimmer, Dropdown, Grid, Loader, Menu, Image, Responsive } from 'semantic-ui-react';
-import { translateEntityField } from 'app/shared/util/entity-utils';
+import { Dimmer, Dropdown, Grid, Image, Loader, Menu, Responsive } from 'semantic-ui-react';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
 import ChartVis from 'app/modules/visualization/chart-vis';
 import { CompareByControl } from 'app/modules/dataset-page/compareBy-control';
+import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
+import { translateEntityField } from 'app/shared/util/entity-utils';
+import { IRootState } from 'app/shared/reducers';
+import { hideHeader, showHeader } from 'app/shared/reducers/header';
+import { connect } from 'react-redux';
 
 export interface IDatasetPageVisProp extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
@@ -21,6 +30,8 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   }
 
   componentDidMount() {
+    const { type } = qs.parse(this.props.location.search, { ignoreQueryPrefix: true });
+    this.props.setVisType(type);
     this.props.initVis(this.props.dataset);
   }
 
@@ -31,31 +42,33 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   }
 
   handleXAxisChange = (e, { value }) => {
-    this.props.resetSeriesOptions(this.props.dataset, value);
+    this.props.setSeriesOptions(this.props.dataset, { xAxis: value });
   };
 
-  diagramConfigurationMenu = (colorScheme, colorsAccent, xAxisOptions, seriesOptions, dataset, dimensionCodes, fetchedCodeLists) => (
+  diagramConfigurationMenu = (visType, colorScheme, xAxisOptions, seriesOptions, dataset, dimensionCodes, fetchedCodeLists) => (
     <div className="vis-options-menu">
       <Menu text>
         <Menu.Item className="vis-options-menu-tittle">
           <div className="vis-options-menu-title">Διαμορφώστε το γράφημα</div>
         </Menu.Item>
       </Menu>
-      <div className="vis-xAxis vis-options-menu-item">
-        <div className="vis-options-menu-label">
-          <Image inline src={`/content/images/Assets/x-axis-${colorScheme}.svg`} style={{ paddingRight: '23px' }} />
-          Θέλω να δω αποτελέσματα για:
+      {visType === 'chart' && (
+        <div className="vis-xAxis vis-options-menu-item">
+          <div className="vis-options-menu-label">
+            <Image inline src={`/content/images/Assets/x-axis-${colorScheme}.svg`} style={{ paddingRight: '23px' }} />
+            Θέλω να δω αποτελέσματα για:
+          </div>
+          <Dropdown
+            className={`vis-options-dropdown ${colorScheme}`}
+            onChange={this.handleXAxisChange}
+            options={xAxisOptions}
+            selection
+            fluid
+            placeholder="Επιλέξτε μεταβλητή για τον άξονα x"
+            value={seriesOptions.xAxis}
+          />
         </div>
-        <Dropdown
-          className={`vis-options-dropdown ${colorScheme}`}
-          onChange={this.handleXAxisChange}
-          options={xAxisOptions}
-          selection
-          fluid
-          placeholder="Επιλέξτε μεταβλητή για τον άξονα x"
-          value={seriesOptions.xAxis}
-        />
-      </div>
+      )}
       <div className="vis-filters vis-options-menu-item">
         <div className="vis-options-menu-label">
           <Image inline src={`/content/images/Assets/indicator-${colorScheme}.svg`} style={{ paddingRight: '23px' }} />… σε σχέση με:
@@ -77,26 +90,23 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
           />
         )}
       </div>
-      <CompareByControl
-        dimensionCodes={dimensionCodes}
-        dataset={dataset}
-        seriesOptions={seriesOptions}
-        colorsAccent={colorsAccent}
-        changeCompareBy={this.props.changeCompareBy}
-      />
+      {visType === 'chart' && (
+        <CompareByControl
+          dimensionCodes={dimensionCodes}
+          dataset={dataset}
+          seriesOptions={seriesOptions}
+          changeCompareBy={this.props.changeCompareBy}
+        />
+      )}
     </div>
   );
 
   render() {
-    const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, fetchedCodeLists } = this.props;
+    const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, fetchedCodeLists, visType } = this.props;
     const { dimensions, colorScheme } = dataset;
     if (!seriesOptions || !fetchedCodeLists) {
       return null;
     }
-    const colorsAccent = {};
-    colorsAccent['color-scheme-1'] = '#d146fc';
-    colorsAccent['color-scheme-2'] = '#2f7cff';
-    colorsAccent['color-scheme-3'] = '#ff5d39';
 
     const xAxisOptions = dimensions.map(dimension => ({
       id: dimension.id,
@@ -153,8 +163,8 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
               <Grid>
                 <Grid.Column only="computer tablet" tablet={6} computer={4}>
                   {this.diagramConfigurationMenu(
+                    visType,
                     colorScheme,
-                    colorsAccent,
                     xAxisOptions,
                     seriesOptions,
                     dataset,
@@ -163,13 +173,23 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   )}
                 </Grid.Column>
                 <Grid.Column className="vis-container" mobile={16} tablet={10} computer={12}>
-                  <ChartVis
-                    dataset={dataset}
-                    seriesList={seriesList}
-                    seriesOptions={seriesOptions}
-                    xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
-                    loadingSeries={loadingSeries}
-                  />
+                  {visType === 'map' ? (
+                    <ChoroplethMapVis
+                      dataset={dataset}
+                      series={seriesList[0]}
+                      seriesOptions={seriesOptions}
+                      xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
+                      loadingSeries={loadingSeries}
+                    />
+                  ) : (
+                    <ChartVis
+                      dataset={dataset}
+                      seriesList={seriesList}
+                      seriesOptions={seriesOptions}
+                      xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
+                      loadingSeries={loadingSeries}
+                    />
+                  )}
                 </Grid.Column>
               </Grid>
             </Responsive>
@@ -186,16 +206,18 @@ const mapStateToProps = (storeState: IRootState, ownProps) => ({
   seriesList: storeState.datasetPage.seriesList,
   fetchedCodeLists: storeState.datasetPage.fetchedCodeLists,
   seriesOptions: storeState.datasetPage.seriesOptions,
-  loadingSeries: storeState.datasetPage.loadingSeries
+  loadingSeries: storeState.datasetPage.loadingSeries,
+  visType: storeState.datasetPage.visType
 });
 
 const mapDispatchToProps = {
   getSeries,
   showHeader,
   hideHeader,
-  resetSeriesOptions,
+  setSeriesOptions,
   changeCompareBy,
   setFilterValue,
+  setVisType,
   initVis
 };
 

@@ -6,6 +6,13 @@ export interface IDimension {
   name?: ILang;
   type?: string;
   creator?: IUser;
+  geoMaps?: IGeoMap[];
+}
+
+export interface IGeoMap {
+  name: ILang;
+  url: string;
+  level: number;
 }
 
 export const defaultValue: Readonly<IDimension> = { name: {} };
