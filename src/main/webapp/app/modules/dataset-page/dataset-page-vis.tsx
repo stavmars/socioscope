@@ -1,6 +1,6 @@
 /* tslint:disable:max-line-length */
 import React from 'react';
-import { RouteComponentProps } from 'react-router-dom';
+import { NavLink, RouteComponentProps } from 'react-router-dom';
 import qs from 'qs';
 import {
   changeCompareBy,
@@ -11,11 +11,10 @@ import {
   setVisType
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
-import { Dimmer, Dropdown, Grid, Image, Loader, Menu, Responsive } from 'semantic-ui-react';
+import { Dimmer, Dropdown, Grid, Image, Loader, Menu } from 'semantic-ui-react';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
 import ChartVis from 'app/modules/visualization/chart-vis';
-import { CompareByControl } from 'app/modules/dataset-page/compareBy-control';
 import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IRootState } from 'app/shared/reducers';
@@ -30,7 +29,8 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   }
 
   componentDidMount() {
-    const { type } = qs.parse(this.props.location.search, { ignoreQueryPrefix: true });
+    let { type } = qs.parse(this.props.location.search, { ignoreQueryPrefix: true });
+    type = type || 'chart';
     this.props.setVisType(type);
     this.props.initVis(this.props.dataset);
   }
@@ -38,6 +38,11 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   componentDidUpdate(prevProps: IDatasetPageVisProp) {
     if (this.props.dataset !== prevProps.dataset) {
       this.props.initVis(this.props.dataset);
+    }
+    let { type } = qs.parse(this.props.location.search, { ignoreQueryPrefix: true });
+    type = type || 'chart';
+    if (type !== prevProps.visType) {
+      this.props.setVisType(type);
     }
   }
 
@@ -90,14 +95,14 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
           />
         )}
       </div>
-      {visType === 'chart' && (
+      {/* {visType === 'chart' && (
         <CompareByControl
           dimensionCodes={dimensionCodes}
           dataset={dataset}
           seriesOptions={seriesOptions}
           changeCompareBy={this.props.changeCompareBy}
         />
-      )}
+      )}*/}
     </div>
   );
 
@@ -122,57 +127,30 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
           </Dimmer>
         ) : (
           <div>
-            <Responsive {...Responsive.onlyMobile}>
-              <Grid centered>
-                <Grid.Row>
-                  <Menu fluid text>
-                    <Menu.Item style={{ left: '5%' }}>
-                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+            <Grid verticalAlign="top">
+              <Grid.Column only="computer tablet" tablet={6} computer={4}>
+                {this.diagramConfigurationMenu(
+                  visType,
+                  colorScheme,
+                  xAxisOptions,
+                  seriesOptions,
+                  dataset,
+                  dimensionCodes,
+                  fetchedCodeLists
+                )}
+              </Grid.Column>
+              <Grid.Column mobile={16} tablet={10} computer={12}>
+                <div className={`vis-toolbar ${colorScheme}`}>
+                  <Menu text className={colorScheme}>
+                    <Menu.Item as={NavLink} to="?type=chart" active={visType === 'chart'}>
+                      Γράφημα
                     </Menu.Item>
-                    <Menu.Item style={{ left: '5%' }}>
-                      <h1
-                        style={{
-                          fontFamily: 'ProximaNovaSemibold',
-                          color: '#1E1E1E',
-                          fontSize: '12px'
-                        }}
-                      >
-                        Διαμορφώστε το γράφημα
-                      </h1>
-                    </Menu.Item>
-                    <Menu.Item position="right">
-                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
-                    </Menu.Item>
-                    <Menu.Item style={{ marginRight: '5%' }}>
-                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                    <Menu.Item as={NavLink} to="?type=map" active={visType === 'map'}>
+                      Χάρτης
                     </Menu.Item>
                   </Menu>
-                </Grid.Row>
-                <Grid.Row centered className="vis-container">
-                  <ChartVis
-                    dataset={dataset}
-                    seriesList={seriesList}
-                    seriesOptions={seriesOptions}
-                    xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
-                    loadingSeries={loadingSeries}
-                  />
-                </Grid.Row>
-              </Grid>
-            </Responsive>
-            <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-              <Grid>
-                <Grid.Column only="computer tablet" tablet={6} computer={4}>
-                  {this.diagramConfigurationMenu(
-                    visType,
-                    colorScheme,
-                    xAxisOptions,
-                    seriesOptions,
-                    dataset,
-                    dimensionCodes,
-                    fetchedCodeLists
-                  )}
-                </Grid.Column>
-                <Grid.Column className="vis-container" mobile={16} tablet={10} computer={12}>
+                </div>
+                <div className="vis-container">
                   {visType === 'map' ? (
                     <ChoroplethMapVis
                       dataset={dataset}
@@ -190,9 +168,9 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       loadingSeries={loadingSeries}
                     />
                   )}
-                </Grid.Column>
-              </Grid>
-            </Responsive>
+                </div>
+              </Grid.Column>
+            </Grid>
           </div>
         )}
       </div>
