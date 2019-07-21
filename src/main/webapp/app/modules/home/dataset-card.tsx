@@ -1,18 +1,32 @@
 import React from 'react';
 import { translate } from 'react-jhipster';
-import { Grid, Image, Container } from 'semantic-ui-react';
+import { Container, Grid, Image } from 'semantic-ui-react';
 import { NavLink as Link } from 'react-router-dom';
+import { IDataSet } from 'app/shared/model/data-set.model';
+import { IHighlight } from 'app/shared/model/highlight.model';
+import { connect } from 'react-redux';
+import { loadHighlight } from 'app/modules/highlights/highlights-reducer';
+import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
+import ChartVis from 'app/modules/visualization/chart-vis';
 
-export interface IDatasetCardProps {
+export interface IDatasetCardProps extends StateProps, DispatchProps {
   title: string;
-  colorScheme: string;
+  dataset: IDataSet;
   headerImg: string;
+  highlight: IHighlight;
 }
 
 export class DatasetCard extends React.Component<IDatasetCardProps> {
-  render() {
-    const { title, colorScheme, headerImg } = this.props;
+  componentDidMount() {
+    const { dataset, highlight } = this.props;
+    console.log('Sdfgsdgsfhfdhfdh');
+    this.props.loadHighlight(dataset, highlight);
+  }
 
+  render() {
+    const { title, dataset, headerImg, highlight, highlightSeries, dimensionCodes } = this.props;
+    const { colorScheme } = dataset;
+    const { seriesOptions } = highlight;
     return (
       <div className={`dataset-card ${colorScheme}`}>
         <div className="dataset-card-header">
@@ -23,10 +37,30 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
           <Grid centered doubling verticalAlign="middle" columns="2">
             <Grid.Row>
               <Grid.Column>
-                <Image className="dataset-card-content-image" centered src="/content/images/Assets/placeholder.png" />
+                <div className="highlight-vis">
+                  {highlightSeries[highlight.id] &&
+                    !highlightSeries[highlight.id].loading &&
+                    (highlight.visType === 'map' ? (
+                      <ChoroplethMapVis
+                        dataset={dataset}
+                        series={highlightSeries[highlight.id].series[0]}
+                        seriesOptions={seriesOptions}
+                        xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
+                        loadingSeries={false}
+                      />
+                    ) : (
+                      <ChartVis
+                        dataset={dataset}
+                        seriesList={highlightSeries[highlight.id].series}
+                        seriesOptions={seriesOptions}
+                        xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
+                        loadingSeries={false}
+                      />
+                    ))}
+                </div>
               </Grid.Column>
               <Grid.Column>
-                <p className={`dataset-card-desc ${colorScheme}`}>{this.props.children}</p>
+                <div className={`dataset-card-desc ${colorScheme}`}>{this.props.children}</div>
                 <Container textAlign="center">
                   <Link className={`dataset-card-link ${colorScheme}`} to="/dataset/greek-election-results">
                     {translate('home.dataset.explore')}
@@ -41,4 +75,20 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
   }
 }
 
-export default DatasetCard;
+const mapStateToProps = storeState => ({
+  dimensionCodes: storeState.highlights.dimensionCodes,
+  highlightSeries: storeState.highlights.highlightSeries
+});
+
+type StateProps = ReturnType<typeof mapStateToProps>;
+
+const mapDispatchToProps = {
+  loadHighlight
+};
+
+type DispatchProps = typeof mapDispatchToProps;
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(DatasetCard);

@@ -9,7 +9,6 @@ import _ from 'lodash';
 import { unflattenDimensionCodes } from 'app/shared/util/entity-utils';
 
 export const ACTION_TYPES = {
-  SET_DATASET: 'datasetPage/SET_DATASET',
   FETCH_SERIES: 'datasetPage/FETCH_SERIES',
   FETCH_DIMENSION_CODELIST: 'datasetPage/FETCH_DIMENSION_CODELIST',
   FETCH_DIMENSION_CODELISTS: 'datasetPage/FETCH_DIMENSION_CODELISTS',

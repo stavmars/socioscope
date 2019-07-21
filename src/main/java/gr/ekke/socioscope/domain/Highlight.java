@@ -16,6 +16,8 @@ public class Highlight {
 
     private String visType;
 
+    private Integer level;
+
     public String getId() {
         return id;
     }
@@ -46,5 +48,13 @@ public class Highlight {
 
     public void setVisType(String visType) {
         this.visType = visType;
+    }
+
+    public Integer getLevel() {
+        return level;
+    }
+
+    public void setLevel(Integer level) {
+        this.level = level;
     }
 }
