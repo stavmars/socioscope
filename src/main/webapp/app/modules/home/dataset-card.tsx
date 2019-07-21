@@ -19,7 +19,6 @@ export interface IDatasetCardProps extends StateProps, DispatchProps {
 export class DatasetCard extends React.Component<IDatasetCardProps> {
   componentDidMount() {
     const { dataset, highlight } = this.props;
-    console.log('Sdfgsdgsfhfdhfdh');
     this.props.loadHighlight(dataset, highlight);
   }
 
