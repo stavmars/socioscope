@@ -4,22 +4,21 @@ import './app.scss';
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { HashRouter as Router, Route, Switch, NavLink as Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { toast, ToastContainer, ToastPosition } from 'react-toastify';
 import { IRootState } from 'app/shared/reducers';
 import { getSession } from 'app/shared/reducers/authentication';
 import { getProfile } from 'app/shared/reducers/application-profile';
 import { setLocale } from 'app/shared/reducers/locale';
 import Footer from 'app/shared/layout/footer/footer';
-import CookieConsent from 'react-cookie-consent';
 import { hasAnyAuthority } from 'app/shared/auth/private-route';
 import ErrorBoundary from 'app/shared/error/error-boundary';
 import { AUTHORITIES } from 'app/config/constants';
 import AppRoutes from 'app/routes';
 import LoadingBar from 'react-redux-loading-bar';
-import { Storage, Translate, translate } from 'react-jhipster';
-import { Dimmer, Loader, Sidebar, Responsive, Menu, Icon, Image } from 'semantic-ui-react';
-import { hideHeader, hideTopicsMenu, hideMobileMenu, toggleMobileMenu } from 'app/shared/reducers/header';
+import { Storage, Translate } from 'react-jhipster';
+import { Dimmer, Loader, Menu, Responsive, Sidebar } from 'semantic-ui-react';
+import { hideHeader, hideMobileMenu, hideTopicsMenu, toggleMobileMenu } from 'app/shared/reducers/header';
 import Header from 'app/shared/layout/header/header';
 import { getEntities } from 'app/entities/data-set/data-set.reducer';
 import { TopicsMegaMenu } from 'app/shared/layout/header/topics-mega-menu';
@@ -106,7 +105,7 @@ export class App extends React.Component<IAppProps> {
                 </div>
               </Sidebar.Pusher>
             </Sidebar.Pushable>
-            <CookieConsent
+            {/*            <CookieConsent
               location="bottom"
               buttonText={translate('cookie.dismiss')}
               cookieName="myAwesomeCookieName2"
@@ -116,7 +115,7 @@ export class App extends React.Component<IAppProps> {
             >
               {translate('cookie.message')}{' '}
               <a href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm">{translate('cookie.link')}</a>
-            </CookieConsent>
+            </CookieConsent>*/}
           </div>
         </Router>
       );
