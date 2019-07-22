@@ -2,13 +2,16 @@
 
 $font-family: 'BPnoScriptBold';
 $background-color: transparent;
-$axis-labels-font-size: 20px;
+@include mobile {
+  $axis-labels-font-size: 10px;
+}
+@include computer {
+  $axis-labels-font-size: 20px;
+}
 
 @import 'highcharts/css/highcharts.scss';
 
 .highcharts-axis-title {
-  font-size: 16px;
-  margin: 16px;
   fill: #1e1e1e;
 }
 
@@ -17,9 +20,27 @@ $axis-labels-font-size: 20px;
 }
 
 .highcharts-root {
+  @include mobile {
+    margin-left: 4%;
+    margin-bottom: 5%;
+    width: 93%;
+    height: 80%;
+  }
+  @include computer {
+    width: auto;
+    height: auto;
+  }
 }
 
 .highcharts-container {
+  @include mobile {
+    width: 93%;
+    height: 80%;
+  }
+  @include computer {
+    width: auto;
+    height: auto;
+  }
 }
 
 .highcharts-grid-line {

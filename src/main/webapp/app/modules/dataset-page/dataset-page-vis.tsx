@@ -113,7 +113,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
         ) : (
           <div>
             <Responsive {...Responsive.onlyMobile}>
-              <Grid centered>
+              <Grid>
                 <Grid.Row>
                   <Menu fluid text>
                     <Menu.Item style={{ left: '5%' }}>
@@ -138,7 +138,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                     </Menu.Item>
                   </Menu>
                 </Grid.Row>
-                <Grid.Row centered className="vis-container">
+                <Grid.Row className="vis-container">
                   <ChartVis
                     dataset={dataset}
                     seriesList={seriesList}
@@ -146,6 +146,22 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                     xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
                     loadingSeries={loadingSeries}
                   />
+                </Grid.Row>
+                <Grid.Row>
+                  <Menu fluid text>
+                    <Menu.Item style={{ left: '5%' }}>
+                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                    </Menu.Item>
+                    <Menu.Item position="right">
+                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                    </Menu.Item>
+                    <Menu.Item>
+                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                    </Menu.Item>
+                    <Menu.Item style={{ marginRight: '5%' }}>
+                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                    </Menu.Item>
+                  </Menu>
                 </Grid.Row>
               </Grid>
             </Responsive>
