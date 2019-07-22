@@ -21,3 +21,9 @@ export const APP_LOCAL_DATE_FORMAT = 'DD/MM/YYYY';
 export const APP_LOCAL_DATETIME_FORMAT = 'YYYY-MM-DDThh:mm';
 export const APP_WHOLE_NUMBER_FORMAT = '0,0';
 export const APP_TWO_DIGITS_AFTER_POINT_NUMBER_FORMAT = '0,0.[00]';
+
+export const accentColors = {
+  'color-scheme-1': '#d146fc',
+  'color-scheme-2': '#2f7cff',
+  'color-scheme-3': '#ff5d39'
+};

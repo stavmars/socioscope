@@ -2,6 +2,7 @@ package gr.ekke.socioscope.domain;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -19,6 +20,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -30,18 +32,16 @@ import java.util.Objects;
 public class Dimension implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    List<GeoMap> geoMaps;
     @Id
     private String id;
-
     @Size(min = 1)
     @Field("name")
     private Map<String, @NotBlank String> name;
-
     @NotNull
     @Field("type")
     private String type;
-
     @DBRef
     @Field("creator")
     @JsonIgnoreProperties("")
@@ -116,6 +116,15 @@ public class Dimension implements Serializable {
         this.creator = user;
         return this;
     }
+
+    public List<GeoMap> getGeoMaps() {
+        return geoMaps;
+    }
+
+    public void setGeoMaps(List<GeoMap> geoMaps) {
+        this.geoMaps = geoMaps;
+    }
+
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -138,12 +147,5 @@ public class Dimension implements Serializable {
         return Objects.hashCode(getId());
     }
 
-    @Override
-    public String toString() {
-        return "Dimension{" +
-            "id=" + getId() +
-            ", name='" + getName() + "'" +
-            ", type='" + getType() + "'" +
-            "}";
-    }
+
 }

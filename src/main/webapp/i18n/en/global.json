@@ -144,5 +144,10 @@
     "policy": "PRIVACY POLICY",
     "developers": "DEVELOPERS",
     "collaboration": "A collaboration of"
+  },
+  "cookie": {
+    "message": "Socioscope uses cookies in order to function properly. Cookies are small pieces of data that websites store in your browser to allow us to give you the best browsing experience possible. By using the Socioscope portal you accept our use of cookies.",
+    "dismiss": "Alright",
+    "link": "Learn More"
   }
 }

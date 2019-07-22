@@ -11,7 +11,6 @@ export interface ICompareByControlProp {
   dimensionCodes: Map<string, IDimensionCode[]>;
   dataset: IDataSet;
   seriesOptions: ISeriesOptions;
-  colorsAccent: any;
   changeCompareBy: typeof changeCompareBy;
 }
 
@@ -42,7 +41,7 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
   };
 
   render() {
-    const { dataset, dimensionCodes, seriesOptions, colorsAccent } = this.props;
+    const { dataset, dimensionCodes, seriesOptions } = this.props;
     const { dimensions, colorScheme } = dataset;
     const { activeIndex } = this.state;
 

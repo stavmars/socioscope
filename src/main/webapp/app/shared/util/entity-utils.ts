@@ -36,15 +36,21 @@ export const translateEntityField = (entityField: ILang) => {
 };
 
 /**
- * Unflatten list of dimension codes based on parentId property. Used to create tree view of hierarchical codelists
+ * Unflatten list of dimension codes based on parentId property and fill level field. Used to create tree view of hierarchical codelists
  */
 export const unflattenDimensionCodes = (codes: IDimensionCode[]) => {
   codes = _.sortBy(codes, 'order', code => translateEntityField(code.name)) as IDimensionCode[];
   const childrenByParent = _.groupBy(codes, 'parentId');
-  return _.filter(codes, code => {
+  const unflattenedCodes = _.filter(codes, code => {
     code.children = childrenByParent[code.notation];
     return !code.parentId;
   });
+  const fillLevel = (code, level) => {
+    code.level = level;
+    code.children && code.children.forEach(child => fillLevel(child, level + 1));
+  };
+  unflattenedCodes.forEach(code => fillLevel(code, 0));
+  return unflattenedCodes;
 };
 
 /**

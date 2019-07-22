@@ -39,9 +39,9 @@ export class DatasetPage extends React.Component<IDatasetPageProp> {
           </Switch>
 
           <Switch>
-            <Route path={`${match.url}/data`} render={() => <DatasetPageVis dataset={dataset} />} />
-            <Route exact path={`${match.url}/`} render={() => <DatasetPageHighlights dataset={dataset} />} />
-            <Route exact path={`${match.url}/about`} render={() => <DatasetPageAbout dataset={dataset} />} />
+            <Route path={`${match.url}/data`} render={props => <DatasetPageVis {...props} dataset={dataset} />} />
+            <Route exact path={`${match.url}/`} render={props => <DatasetPageHighlights {...props} dataset={dataset} />} />
+            <Route exact path={`${match.url}/about`} render={props => <DatasetPageAbout {...props} dataset={dataset} />} />
           </Switch>
         </div>
       </div>

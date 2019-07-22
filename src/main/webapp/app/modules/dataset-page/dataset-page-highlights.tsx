@@ -1,6 +1,5 @@
 import './dataset-page.scss';
 import React from 'react';
-import { translateEntityField } from 'app/shared/util/entity-utils';
 import DatasetCard from '../home/dataset-card';
 import { IDataSet } from 'app/shared/model/data-set.model';
 
@@ -15,10 +14,10 @@ export class DatasetPageHighlights extends React.Component<IDatasetPageHighlight
     return (
       <div className={`dataset-page-highlights ${dataset.colorScheme}`}>
         {dataset.highlights
-          ? dataset.highlights.map(value => (
-              <div>
-                <DatasetCard title="" colorScheme={dataset.colorScheme} headerImg="">
-                  <div dangerouslySetInnerHTML={{ __html: value.description }} />
+          ? dataset.highlights.map(highlight => (
+              <div key={highlight.id}>
+                <DatasetCard key={highlight.id} title="" dataset={dataset} headerImg="" highlight={highlight}>
+                  <div dangerouslySetInnerHTML={{ __html: highlight.description }} />
                 </DatasetCard>
                 <div className={`divider ${dataset.colorScheme}`} />
               </div>

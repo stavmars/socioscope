@@ -1,74 +1,86 @@
 [
-    {
-        "id": "refArea",
-        "name": {
-            "el": "Περιοχή αναφοράς",
-            "en": "Reference Area"
-        },
-        "type": "coded"
+  {
+    "id": "refArea",
+    "name": {
+      "el": "Περιοχή αναφοράς",
+      "en": "Reference Area"
     },
-    {
-        "id": "refPeriod",
-        "name": {
-            "el": "Περίοδος αναφοράς",
-            "en": "Reference Period"
-        },
-        "type": "time"
+    "type": "geographic-area"
+  },
+  {
+    "id": "refPeriod",
+    "name": {
+      "el": "Περίοδος αναφοράς",
+      "en": "Reference Period"
     },
-    {
-        "id": "nuts",
-        "name": {
-            "el": "Περιοχή Αναφοράς (NUTS)",
-            "en": "Reference Area (NUTS)"
-        },
-        "type": "coded"
+    "type": "time"
+  },
+  {
+    "id": "nuts",
+    "name": {
+      "el": "Περιοχή Αναφοράς (NUTS)",
+      "en": "Reference Area (NUTS)"
     },
-    {
-        "id": "sex",
-        "name": {
-            "el": "Φύλο",
-            "en": "Sex"
-        },
-        "type": "coded"
+    "type": "geographic-area"
+  },
+  {
+    "id": "sex",
+    "name": {
+      "el": "Φύλο",
+      "en": "Sex"
     },
-    {
-        "id": "householdSize",
-        "name": {
-            "el": "Μέγεθος νοικοκυριού",
-            "en": "Household size"
-        },
-        "type": "coded"
+    "type": "coded"
+  },
+  {
+    "id": "householdSize",
+    "name": {
+      "el": "Μέγεθος νοικοκυριού",
+      "en": "Household size"
     },
-    {
-        "id": "age",
-        "name": {
-            "el": "Ηλικία",
-            "en": "Age"
-        },
-        "type": "coded"
+    "type": "coded"
+  },
+  {
+    "id": "age",
+    "name": {
+      "el": "Ηλικία",
+      "en": "Age"
     },
-    {
-        "id": "party",
-        "name": {
-            "el": "Κόμμα",
-            "en": "Party"
-        },
-        "type": "coded"
+    "type": "coded"
+  },
+  {
+    "id": "party",
+    "name": {
+      "el": "Κόμμα",
+      "en": "Party"
     },
-    {
-        "id": "constituency",
-        "name": {
-            "el": "Εκλογική Περιφέρεια",
-            "en": "Constituency"
-        },
-        "type": "coded"
+    "type": "coded"
+  },
+  {
+    "id": "constituency",
+    "name": {
+      "el": "Εκλογική Περιφέρεια",
+      "en": "Constituency"
     },
-    {
-        "id": "elections",
-        "name": {
-            "el": "Εκλογές",
-            "en": "Elections"
-        },
-        "type": "coded"
-    }
+    "type": "geographic-area",
+    "geoMaps": [
+      {
+        "level": 1,
+        "name": {"el": "Εκλογικές Περιφέρειες", "en": "Constituencies"},
+        "url": "content/geo/constituencies.json"
+      },
+      {
+        "level": 2,
+        "name": {"el": "Δήμοι", "en": "Municipalities"},
+        "url": "content/geo/municipalities.json"
+      }
+    ]
+  },
+  {
+    "id": "elections",
+    "name": {
+      "el": "Εκλογές",
+      "en": "Elections"
+    },
+    "type": "coded"
+  }
 ]

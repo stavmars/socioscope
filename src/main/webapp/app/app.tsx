@@ -11,6 +11,7 @@ import { getSession } from 'app/shared/reducers/authentication';
 import { getProfile } from 'app/shared/reducers/application-profile';
 import { setLocale } from 'app/shared/reducers/locale';
 import Footer from 'app/shared/layout/footer/footer';
+import CookieConsent from 'react-cookie-consent';
 import { hasAnyAuthority } from 'app/shared/auth/private-route';
 import ErrorBoundary from 'app/shared/error/error-boundary';
 import { AUTHORITIES } from 'app/config/constants';
@@ -105,6 +106,17 @@ export class App extends React.Component<IAppProps> {
                 </div>
               </Sidebar.Pusher>
             </Sidebar.Pushable>
+            <CookieConsent
+              location="bottom"
+              buttonText={translate('cookie.dismiss')}
+              cookieName="myAwesomeCookieName2"
+              style={{ background: '#2B373B' }}
+              buttonStyle={{ color: '#4e503b', fontSize: '13px' }}
+              expires={150}
+            >
+              {translate('cookie.message')}{' '}
+              <a href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm">{translate('cookie.link')}</a>
+            </CookieConsent>
           </div>
         </Router>
       );

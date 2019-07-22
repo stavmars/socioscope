@@ -251,7 +251,7 @@
 .vis-options-menu {
 }
 
-.vis-container {
+<<<<<<< head .vis-container {
   @include mobile {
     top: 10px;
   }
@@ -260,7 +260,7 @@
   }
 }
 
-.vis-options-menu-title {
+=======>>>>>>>91d49a020329e86c2722729707c143f0b9bcb3e4 .vis-options-menu-title {
   font-size: 30px;
   text-align: left;
   font-family: BPnoScriptBold;
@@ -332,6 +332,38 @@
     .text {
       display: block;
       padding-left: #{$level * 20}px !important;
+    }
+  }
+}
+.vis-container {
+  position: relative;
+}
+
+.vis-toolbar .menu {
+  min-height: 0;
+  font-family: ProximaNovaSemibold;
+  font-size: 20px;
+  color: rgba(30, 30, 30, 0.5);
+  .item.active {
+    border-bottom-width: 3px !important;
+    border-bottom-style: solid !important;
+  }
+  &.color-scheme-1 {
+    .item.active {
+      color: $color-scheme-1-accent;
+      border-color: $color-scheme-1-accent;
+    }
+  }
+  &.color-scheme-2 {
+    .item.active {
+      color: $color-scheme-2-accent;
+      border-color: $color-scheme-2-accent;
+    }
+  }
+  &.color-scheme-3 {
+    .item.active {
+      color: $color-scheme-3-accent;
+      border-color: $color-scheme-3-accent;
     }
   }
 }
