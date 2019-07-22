@@ -6,9 +6,9 @@ import {
   changeCompareBy,
   getSeries,
   initVis,
+  IVisOptions,
   setFilterValue,
-  setSeriesOptions,
-  setVisType
+  updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
 import { Dimmer, Dropdown, Grid, Image, Loader, Menu, Checkbox } from 'semantic-ui-react';
@@ -20,6 +20,7 @@ import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IRootState } from 'app/shared/reducers';
 import { hideHeader, showHeader } from 'app/shared/reducers/header';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 
 export interface IDatasetPageVisProp extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
@@ -29,26 +30,24 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   }
 
   componentDidMount() {
-    let { type } = qs.parse(this.props.location.search, { ignoreQueryPrefix: true });
-    type = type || 'chart';
-    this.props.setVisType(type);
-    this.props.initVis(this.props.dataset);
+    this.props.initVis(this.props.dataset, this.props.routeVisOptions);
   }
 
   componentDidUpdate(prevProps: IDatasetPageVisProp) {
     if (this.props.dataset !== prevProps.dataset) {
-      this.props.initVis(this.props.dataset);
+      this.props.initVis(this.props.dataset, this.props.routeVisOptions);
+      return;
     }
-    let { type } = qs.parse(this.props.location.search, { ignoreQueryPrefix: true });
-    type = type || 'chart';
-    if (type !== prevProps.visType) {
-      this.props.setVisType(type);
+    if (!_.isEqual(prevProps.routeVisOptions, this.props.routeVisOptions)) {
+      this.props.updateVisOptions(this.props.dataset, this.props.routeVisOptions);
     }
   }
 
-  handleXAxisChange = (e, { value }) => {
-    this.props.setSeriesOptions(this.props.dataset, { xAxis: value });
-  };
+  handleXAxisChange = (e, { value }) =>
+    this.props.updateVisOptions(this.props.dataset, {
+      visType: this.props.visType,
+      seriesOptions: { xAxis: value }
+    });
 
   diagramConfigurationMenu = (visType, colorScheme, xAxisOptions, seriesOptions, dataset, dimensionCodes, fetchedCodeLists) => (
     <div className="vis-options-menu">
@@ -232,7 +231,14 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   }
 }
 
+const parseRouteVisOptions = (query: string): IVisOptions => {
+  const { type: visType, xAxis, compareBy, filters: dimensionFilters } = qs.parse(query, { ignoreQueryPrefix: true });
+  const seriesOptions = { xAxis, compareBy, dimensionFilters };
+  return { visType, seriesOptions };
+};
+
 const mapStateToProps = (storeState: IRootState, ownProps) => ({
+  routeVisOptions: parseRouteVisOptions(ownProps.location.search),
   dataset: ownProps.dataset,
   dimensionCodes: storeState.datasetPage.dimensionCodes,
   seriesList: storeState.datasetPage.seriesList,
@@ -246,10 +252,9 @@ const mapDispatchToProps = {
   getSeries,
   showHeader,
   hideHeader,
-  setSeriesOptions,
+  updateVisOptions,
   changeCompareBy,
   setFilterValue,
-  setVisType,
   initVis
 };
 
