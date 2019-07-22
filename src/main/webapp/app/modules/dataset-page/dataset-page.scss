@@ -50,7 +50,7 @@
     }
   }
   .dataset-page-tab-menu-top-topics {
-    padding: 50px 99px 156px 0;
+    padding: 50px 23px 156px 0;
     color: #ffffff;
     font-size: 20px;
     font-family: BPnoScriptBold;
@@ -337,21 +337,31 @@
 }
 .vis-container {
   position: relative;
+  margin-top: 5%;
 }
 
 .vis-toolbar .menu {
+  @include mobile {
+    display: none;
+  }
+  @include computer {
+    display: flex;
+  }
   min-height: 0;
   font-family: ProximaNovaSemibold;
   font-size: 20px;
   color: rgba(30, 30, 30, 0.5);
   .item.active {
-    border-bottom-width: 3px !important;
-    border-bottom-style: solid !important;
+    @include computer {
+      border-bottom-width: 3px !important;
+      border-bottom-style: solid !important;
+    }
   }
   &.color-scheme-1 {
     .item.active {
       color: $color-scheme-1-accent;
       border-color: $color-scheme-1-accent;
+      fill: $color-scheme-1-accent;
     }
   }
   &.color-scheme-2 {
@@ -365,5 +375,22 @@
       color: $color-scheme-3-accent;
       border-color: $color-scheme-3-accent;
     }
+  }
+}
+
+.mob-vis-upper-toolbar .menu {
+  @include mobile {
+    display: flex;
+  }
+  @include computer {
+    display: none;
+  }
+}
+.mob-vis-lower-toolbar .menu {
+  @include mobile {
+    display: flex;
+  }
+  @include computer {
+    display: none;
   }
 }

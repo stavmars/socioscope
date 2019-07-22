@@ -11,7 +11,7 @@ import {
   setVisType
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
-import { Dimmer, Dropdown, Grid, Image, Loader, Menu, Responsive } from 'semantic-ui-react';
+import { Dimmer, Dropdown, Grid, Image, Loader, Menu } from 'semantic-ui-react';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
 import ChartVis from 'app/modules/visualization/chart-vis';
@@ -127,14 +127,35 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
           </Dimmer>
         ) : (
           <div>
-            <Responsive {...Responsive.onlyMobile}>
-              <Grid>
-                <Grid.Row>
+            <Grid verticalAlign="top">
+              <Grid.Column only="computer tablet" tablet={6} computer={4}>
+                {this.diagramConfigurationMenu(
+                  visType,
+                  colorScheme,
+                  xAxisOptions,
+                  seriesOptions,
+                  dataset,
+                  dimensionCodes,
+                  fetchedCodeLists
+                )}
+              </Grid.Column>
+              <Grid.Column mobile={16} tablet={10} computer={12}>
+                <div className={`vis-toolbar ${colorScheme}`}>
+                  <Menu text className={colorScheme}>
+                    <Menu.Item as={NavLink} to="?type=chart" active={visType === 'chart'}>
+                      Γράφημα
+                    </Menu.Item>
+                    <Menu.Item as={NavLink} to="?type=map" active={visType === 'map'}>
+                      Χάρτης
+                    </Menu.Item>
+                  </Menu>
+                </div>
+                <div className="mob-vis-upper-toolbar">
                   <Menu fluid text>
-                    <Menu.Item style={{ left: '5%' }}>
+                    <Menu.Item>
                       <Image src="/content/images/Assets/mobile-menu-icon.png" />
                     </Menu.Item>
-                    <Menu.Item style={{ left: '5%' }}>
+                    <Menu.Item>
                       <h1
                         style={{
                           fontFamily: 'ProximaNovaSemibold',
@@ -145,42 +166,51 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                         Διαμορφώστε το γράφημα
                       </h1>
                     </Menu.Item>
-                    <Menu.Item position="right" as={NavLink} to="?type=chart" active={visType === 'chart'}>
-                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                    <Menu.Item position="right">
+                      <Image src="/content/images/Assets/Reset.svg" />
                     </Menu.Item>
-                    <Menu.Item style={{ marginRight: '5%' }} as={NavLink} to="?type=map" active={visType === 'map'}>
-                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                    <Menu.Item as={NavLink} to="?type=chart">
+                      {visType === 'chart' ? (
+                        <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} />
+                      ) : (
+                        <Image src={`/content/images/Assets/Chart.svg`} />
+                      )}
+                    </Menu.Item>
+                    <Menu.Item style={{ marginRight: '5%' }} as={NavLink} to="?type=map">
+                      {visType === 'map' ? (
+                        <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} />
+                      ) : (
+                        <Image src={`/content/images/Assets/Map.svg`} />
+                      )}
                     </Menu.Item>
                   </Menu>
-                </Grid.Row>
-                <Grid.Row>
-                  <div className="vis-container">
-                    {visType === 'map' ? (
-                      <ChoroplethMapVis
-                        dataset={dataset}
-                        series={seriesList[0]}
-                        seriesOptions={seriesOptions}
-                        xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
-                        loadingSeries={loadingSeries}
-                      />
-                    ) : (
-                      <ChartVis
-                        dataset={dataset}
-                        seriesList={seriesList}
-                        seriesOptions={seriesOptions}
-                        xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
-                        loadingSeries={loadingSeries}
-                      />
-                    )}
-                  </div>
-                </Grid.Row>
-                <Grid.Row>
+                </div>
+                <div className="vis-container">
+                  {visType === 'map' ? (
+                    <ChoroplethMapVis
+                      dataset={dataset}
+                      series={seriesList[0]}
+                      seriesOptions={seriesOptions}
+                      xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
+                      loadingSeries={loadingSeries}
+                    />
+                  ) : (
+                    <ChartVis
+                      dataset={dataset}
+                      seriesList={seriesList}
+                      seriesOptions={seriesOptions}
+                      xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
+                      loadingSeries={loadingSeries}
+                    />
+                  )}
+                </div>
+                <div className="mob-vis-lower-toolbar">
                   <Menu fluid text>
                     <Menu.Item style={{ left: '5%' }}>
                       <Image src="/content/images/Assets/mobile-menu-icon.png" />
                     </Menu.Item>
                     <Menu.Item position="right">
-                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                      <Image src="/content/images/Assets/Download-icon.svg" style={{ width: '34.86px', height: '34.86px' }} />
                     </Menu.Item>
                     <Menu.Item>
                       <Image src="/content/images/Assets/mobile-menu-icon.png" />
@@ -189,55 +219,9 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       <Image src="/content/images/Assets/mobile-menu-icon.png" />
                     </Menu.Item>
                   </Menu>
-                </Grid.Row>
-              </Grid>
-            </Responsive>
-            <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-              <Grid verticalAlign="top">
-                <Grid.Column only="computer tablet" tablet={6} computer={4}>
-                  {this.diagramConfigurationMenu(
-                    visType,
-                    colorScheme,
-                    xAxisOptions,
-                    seriesOptions,
-                    dataset,
-                    dimensionCodes,
-                    fetchedCodeLists
-                  )}
-                </Grid.Column>
-                <Grid.Column tablet={10} computer={12}>
-                  <div className={`vis-toolbar ${colorScheme}`}>
-                    <Menu text className={colorScheme}>
-                      <Menu.Item as={NavLink} to="?type=chart" active={visType === 'chart'}>
-                        Γράφημα
-                      </Menu.Item>
-                      <Menu.Item as={NavLink} to="?type=map" active={visType === 'map'}>
-                        Χάρτης
-                      </Menu.Item>
-                    </Menu>
-                  </div>
-                  <div className="vis-container">
-                    {visType === 'map' ? (
-                      <ChoroplethMapVis
-                        dataset={dataset}
-                        series={seriesList[0]}
-                        seriesOptions={seriesOptions}
-                        xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
-                        loadingSeries={loadingSeries}
-                      />
-                    ) : (
-                      <ChartVis
-                        dataset={dataset}
-                        seriesList={seriesList}
-                        seriesOptions={seriesOptions}
-                        xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
-                        loadingSeries={loadingSeries}
-                      />
-                    )}
-                  </div>
-                </Grid.Column>
-              </Grid>
-            </Responsive>
+                </div>
+              </Grid.Column>
+            </Grid>
           </div>
         )}
       </div>
