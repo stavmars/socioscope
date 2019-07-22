@@ -42,6 +42,14 @@ $axis-labels-font-size: 20px;
   stroke: #2f7cff;
 }
 
+.highcharts-map-series .highcharts-point {
+  stroke-width: 0.5px;
+}
+
+.highcharts-map-series.highcharts-series-hover .highcharts-point.highcharts-point-hover {
+  stroke-width: 1px;
+}
+
 .map-level-button-group.buttons.ui {
   position: absolute;
   right: 15px;
