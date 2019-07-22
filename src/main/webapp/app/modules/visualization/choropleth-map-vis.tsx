@@ -132,6 +132,12 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
           return translateEntityField(codesByNotation[this.point.key].name) + ': ' + this.point.value;
         }
       },
+      xAxis: {
+        minRange: 0.1
+      },
+      yAxis: {
+        minRange: 0.1
+      },
       colorAxis: {
         dataClasses
       },
