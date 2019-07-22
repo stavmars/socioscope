@@ -251,16 +251,16 @@
 .vis-options-menu {
 }
 
-<<<<<<< head .vis-container {
-  @include mobile {
-    top: 10px;
-  }
-  @include computer {
-    top: 60px;
-  }
-}
+// .vis-container {
+//   @include mobile {
+//     top: 10px;
+//   }
+//   @include computer {
+//     top: 60px;
+//   }
+// }
 
-=======>>>>>>>91d49a020329e86c2722729707c143f0b9bcb3e4 .vis-options-menu-title {
+.vis-options-menu-title {
   font-size: 30px;
   text-align: left;
   font-family: BPnoScriptBold;
