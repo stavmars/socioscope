@@ -8,14 +8,18 @@ import { IDimension } from 'app/shared/model/dimension.model';
 import _ from 'lodash';
 import { unflattenDimensionCodes } from 'app/shared/util/entity-utils';
 
+export interface IVisOptions {
+  visType: string;
+  seriesOptions: ISeriesOptions;
+}
+
 export const ACTION_TYPES = {
   FETCH_SERIES: 'datasetPage/FETCH_SERIES',
   FETCH_DIMENSION_CODELIST: 'datasetPage/FETCH_DIMENSION_CODELIST',
   FETCH_DIMENSION_CODELISTS: 'datasetPage/FETCH_DIMENSION_CODELISTS',
   CHANGE_COMPARE_BY: 'datasetPage/CHANGE_COMPARE_BY',
   SET_FILTER_VALUE: 'datasetPage/SET_FILTER_VALUE',
-  SET_SERIES_OPTIONS: 'datasetPage/SET_SERIES_OPTIONS',
-  SET_VIS_TYPE: 'datasetPage/SET_VIS_TYPE'
+  UPDATE_VIS_OPTIONS: 'datasetPage/UPDATE_VIS_OPTIONS'
 };
 
 const initialState = {
@@ -85,15 +89,11 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
           }
         }
       };
-    case ACTION_TYPES.SET_SERIES_OPTIONS:
+    case ACTION_TYPES.UPDATE_VIS_OPTIONS:
       return {
         ...state,
-        seriesOptions: action.payload
-      };
-    case ACTION_TYPES.SET_VIS_TYPE:
-      return {
-        ...state,
-        visType: action.payload
+        visType: action.payload.visType,
+        seriesOptions: action.payload.seriesOptions
       };
     default:
       return {
@@ -154,14 +154,9 @@ export const changeCompareBy = (compareBy: string) => ({
   payload: compareBy
 });
 
-export const setVisType = (visType: string) => ({
-  type: ACTION_TYPES.SET_VIS_TYPE,
-  payload: visType
-});
-
-export const setSeriesOptions = (dataset: IDataSet, seriesOptions: ISeriesOptions) => (dispatch, getState) => {
+export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => (dispatch, getState) => {
   const { dimensionCodes } = getState().datasetPage;
-  const { visType } = getState().datasetPage;
+  const { visType = 'chart', seriesOptions } = visOptions;
   const { dimensions } = dataset;
   let { xAxis, compareBy } = seriesOptions;
   const filters = seriesOptions.dimensionFilters || {};
@@ -171,23 +166,24 @@ export const setSeriesOptions = (dataset: IDataSet, seriesOptions: ISeriesOption
   } else {
     xAxis = xAxis || dimensions[0].id;
   }
+  let newSeriesOptions = {};
   if (dataset.type === 'qb') {
     const dimensionFilters = dimensions.filter(dimension => dimension.id !== xAxis).reduce((acc, dimension) => {
       acc[dimension.id] = filters[dimension.id] || dimensionCodes[dimension.id].codes[0].notation;
       return acc;
     }, {}) as IDimensionFilters;
-    seriesOptions = { xAxis, compareBy, dimensionFilters };
+    newSeriesOptions = { xAxis, compareBy, dimensionFilters };
   } else {
-    seriesOptions = { xAxis, compareBy };
+    newSeriesOptions = { xAxis, compareBy };
   }
   dispatch({
-    type: ACTION_TYPES.SET_SERIES_OPTIONS,
-    payload: seriesOptions
+    type: ACTION_TYPES.UPDATE_VIS_OPTIONS,
+    payload: { visType, seriesOptions: newSeriesOptions }
   });
-  dispatch(getSeries(dataset.id, seriesOptions));
+  dispatch(getSeries(dataset.id, newSeriesOptions));
 };
 
-export const initVis = (dataset: IDataSet) => async dispatch => {
+export const initVis = (dataset: IDataSet, visOptions: IVisOptions) => async dispatch => {
   await dispatch(getDimensionCodeLists(dataset));
-  dispatch(setSeriesOptions(dataset, {}));
+  dispatch(updateVisOptions(dataset, visOptions));
 };
