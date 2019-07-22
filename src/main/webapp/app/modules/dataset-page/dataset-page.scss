@@ -394,3 +394,38 @@
     display: none;
   }
 }
+
+.ui.toggle.checkbox.color-scheme-1 input:focus:checked ~ .box:before,
+.ui.toggle.checkbox.color-scheme-1 input:focus:checked ~ label:before {
+  background-color: $color-scheme-1-accent !important;
+}
+
+.ui.toggle.checkbox.color-scheme-1 input:checked ~ .box:before,
+.ui.toggle.checkbox.color-scheme-1 input:checked ~ label:before {
+  background-color: $color-scheme-1-accent !important;
+}
+
+.ui.toggle.checkbox.color-scheme-2 input:focus:checked ~ .box:before,
+.ui.toggle.checkbox.color-scheme-2 input:focus:checked ~ label:before {
+  background-color: $color-scheme-2-accent !important;
+}
+
+.ui.toggle.checkbox.color-scheme-2 input:checked ~ .box:before,
+.ui.toggle.checkbox.color-scheme-2 input:checked ~ label:before {
+  background-color: $color-scheme-2-accent !important;
+}
+
+.ui.toggle.checkbox.color-scheme-3 input:focus:checked ~ .box:before,
+.ui.toggle.checkbox.color-scheme-3 input:focus:checked ~ label:before {
+  background-color: $color-scheme-3-accent !important;
+}
+
+.ui.toggle.checkbox.color-scheme-3 input:checked ~ .box:before,
+.ui.toggle.checkbox.color-scheme-3 input:checked ~ label:before {
+  background-color: $color-scheme-3-accent !important;
+}
+
+.ui.toggle.checkbox .box:before,
+.ui.toggle.checkbox label:before {
+  background-color: grey;
+}

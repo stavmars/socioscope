@@ -11,7 +11,7 @@ import {
   setVisType
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
-import { Dimmer, Dropdown, Grid, Image, Loader, Menu } from 'semantic-ui-react';
+import { Dimmer, Dropdown, Grid, Image, Loader, Menu, Checkbox } from 'semantic-ui-react';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
 import ChartVis from 'app/modules/visualization/chart-vis';
@@ -142,6 +142,9 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
               <Grid.Column mobile={16} tablet={10} computer={12}>
                 <div className={`vis-toolbar ${colorScheme}`}>
                   <Menu text className={colorScheme}>
+                    <Menu.Item>
+                      <Checkbox className={colorScheme} toggle />
+                    </Menu.Item>
                     <Menu.Item as={NavLink} to="?type=chart" active={visType === 'chart'}>
                       Γράφημα
                     </Menu.Item>
@@ -207,7 +210,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                 <div className="mob-vis-lower-toolbar">
                   <Menu fluid text>
                     <Menu.Item style={{ left: '5%' }}>
-                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                      <Checkbox className={colorScheme} toggle />
                     </Menu.Item>
                     <Menu.Item position="right">
                       <Image src="/content/images/Assets/Download-icon.svg" style={{ width: '34.86px', height: '34.86px' }} />
