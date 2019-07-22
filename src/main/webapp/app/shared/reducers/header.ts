@@ -6,13 +6,17 @@ export const ACTION_TYPES = {
   TOGGLE_TOPICS_MENU: 'header/TOGGLE_TOPICS_MENU',
   SHOW_MOBILE_MENU: 'header/SHOW_MOBILE_MENU',
   HIDE_MOBILE_MENU: 'header/HIDE_MOBILE_MENU',
-  TOGGLE_MOBILE_MENU: 'header/TOGGLE_MOBILE_MENU'
+  TOGGLE_MOBILE_MENU: 'header/TOGGLE_MOBILE_MENU',
+  SHOW_MOBILE_VIS_MENU: 'header/SHOW_MOBILE_VIS_MENU',
+  HIDE_MOBILE_VIS_MENU: 'header/HIDE_MOBILE_VIS_MENU',
+  TOGGLE_MOBILE_VIS_MENU: 'header/TOGGLE_MOBILE_VIS_MENU'
 };
 
 const initialState = {
   isHeaderVisible: false,
   isTopicsMenuVisible: false,
-  isMobileMenuVisible: false
+  isMobileMenuVisible: false,
+  isMobileVisMenuVisible: false
 };
 
 export type HeaderState = Readonly<typeof initialState>;
@@ -60,6 +64,21 @@ export default (state: HeaderState = initialState, action): HeaderState => {
         ...state,
         isMobileMenuVisible: !state.isMobileMenuVisible
       };
+    case ACTION_TYPES.SHOW_MOBILE_VIS_MENU:
+      return {
+        ...state,
+        isMobileVisMenuVisible: true
+      };
+    case ACTION_TYPES.HIDE_MOBILE_VIS_MENU:
+      return {
+        ...state,
+        isMobileVisMenuVisible: false
+      };
+    case ACTION_TYPES.TOGGLE_MOBILE_VIS_MENU:
+      return {
+        ...state,
+        isMobileVisMenuVisible: !state.isMobileVisMenuVisible
+      };
     default:
       return state;
   }
@@ -96,4 +115,16 @@ export const hideMobileMenu = () => ({
 
 export const toggleMobileMenu = () => ({
   type: ACTION_TYPES.TOGGLE_MOBILE_MENU
+});
+
+export const showMobileVisMenu = () => ({
+  type: ACTION_TYPES.SHOW_MOBILE_VIS_MENU
+});
+
+export const hideMobileVisMenu = () => ({
+  type: ACTION_TYPES.HIDE_MOBILE_VIS_MENU
+});
+
+export const toggleMobileVisMenu = () => ({
+  type: ACTION_TYPES.TOGGLE_MOBILE_VIS_MENU
 });

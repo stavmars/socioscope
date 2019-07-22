@@ -11,14 +11,14 @@ import {
   updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
-import { Dimmer, Dropdown, Grid, Image, Loader, Menu, Checkbox } from 'semantic-ui-react';
+import { Dimmer, Dropdown, Grid, Image, Loader, Menu, Checkbox, Button } from 'semantic-ui-react';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
 import ChartVis from 'app/modules/visualization/chart-vis';
 import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IRootState } from 'app/shared/reducers';
-import { hideHeader, showHeader } from 'app/shared/reducers/header';
+import { hideHeader, showHeader, toggleMobileVisMenu } from 'app/shared/reducers/header';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
@@ -155,7 +155,12 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                 <div className="mob-vis-upper-toolbar">
                   <Menu fluid text>
                     <Menu.Item>
-                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                      <Image
+                        as={Button}
+                        onClick={this.props.toggleMobileVisMenu}
+                        style={{ padding: 0, margin: 0 }}
+                        src="/content/images/Assets/mobile-menu-icon.png"
+                      />
                     </Menu.Item>
                     <Menu.Item>
                       <h1
@@ -255,7 +260,8 @@ const mapDispatchToProps = {
   updateVisOptions,
   changeCompareBy,
   setFilterValue,
-  initVis
+  initVis,
+  toggleMobileVisMenu
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;
