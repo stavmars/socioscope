@@ -249,6 +249,7 @@
 }
 
 .vis-options-menu {
+  margin-top: 8%;
 }
 
 // .vis-container {
@@ -429,4 +430,31 @@
 .ui.toggle.checkbox .box:before,
 .ui.toggle.checkbox label:before {
   background-color: grey;
+}
+
+.share-dropdown {
+  &.ui.active.dropdown .menu {
+    border-style: solid;
+    border-width: 3px 3px 3px 3px;
+    margin: 15px -78px;
+    width: 164px;
+  }
+  .menu.item {
+    font-size: 16px;
+  }
+}
+
+.share-dropdown.dropdown {
+  &.color-scheme-1,
+  &.color-scheme-1 .menu {
+    border-color: $color-scheme-1-accent !important;
+  }
+  &.color-scheme-2,
+  &.color-scheme-1 .menu {
+    border-color: $color-scheme-1-accent !important;
+  }
+  &.color-scheme-3,
+  &.color-scheme-1 .menu {
+    border-color: $color-scheme-1-accent !important;
+  }
 }
