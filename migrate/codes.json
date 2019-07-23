@@ -17358,8 +17358,8 @@
         "dimensionId": "elections",
         "notation": "8",
         "name": {
-            "el": "Ελληνικές βουλευτικές Ιανουαρίου 2015",
-            "en": "Greek Parliamentary Elections January 2015"
+            "el": "Ιανουάριος 2015",
+            "en": "January 2015"
         },
         "description": {
             "el": "",
@@ -17373,8 +17373,8 @@
         "dimensionId": "elections",
         "notation": "1",
         "name": {
-            "el": "Ελληνικές βουλευτικές εκλογές Σεπτεμβρίου 1996",
-            "en": "Greek Parliamentary Elections September 1996"
+            "el": "Σεπτέμβριος 1996",
+            "en": "September 1996"
         },
         "description": {
             "el": "",
@@ -17388,8 +17388,8 @@
         "dimensionId": "elections",
         "notation": "2",
         "name": {
-            "el": "Ελληνικές βουλευτικές εκλογές Απριλίου 2000",
-            "en": "Greek Parliamentary Elections April 2000"
+            "el": "Απρίλιος 2000",
+            "en": "April 2000"
         },
         "description": {
             "el": "",
@@ -17403,8 +17403,8 @@
         "dimensionId": "elections",
         "notation": "3",
         "name": {
-            "el": "Ελληνικές βουλευτικές εκλογές Μαρτίου 2004",
-            "en": "Greek Parliamentary Elections March 2004"
+            "el": "Μάρτιος 2004",
+            "en": "March 2004"
         },
         "description": {
             "el": "",
@@ -17418,8 +17418,8 @@
         "dimensionId": "elections",
         "notation": "4",
         "name": {
-            "el": "Ελληνικές βουλευτικές εκλογές Σεπτεμβρίου 2007",
-            "en": "Greek Parliamentary Elections September 2007"
+            "el": "Σεπτέμβριος 2007",
+            "en": "September 2007"
         },
         "description": {
             "el": "",
@@ -17433,8 +17433,8 @@
         "dimensionId": "elections",
         "notation": "5",
         "name": {
-            "el": "Ελληνικές βουλευτικές εκλογές Οκτωβρίου 2009",
-            "en": "Greek Parliamentary Elections October 2009"
+            "el": "Οκτώβριος 2009",
+            "en": "October 2009"
         },
         "description": {
             "el": "",
@@ -17448,8 +17448,8 @@
         "dimensionId": "elections",
         "notation": "6",
         "name": {
-            "el": "Ελληνικές βουλευτικές εκλογές Μαΐου 2012",
-            "en": "Greek Parliamentary Elections May 2012"
+            "el": "Μάιος 2012",
+            "en": "May 2012"
         },
         "description": {
             "el": "",
@@ -17463,8 +17463,8 @@
         "dimensionId": "elections",
         "notation": "7",
         "name": {
-            "el": "Ελληνικές βουλευτικές εκλογές Ιουνίου 2012",
-            "en": "Greek Parliamentary Elections June 2012"
+            "el": "Ιούνιος 2012",
+            "en": "June 2012"
         },
         "description": {
             "el": "",
