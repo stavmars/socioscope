@@ -58,7 +58,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
       {visType === 'chart' && (
         <div className="vis-xAxis vis-options-menu-item">
           <div className="vis-options-menu-label">
-            <Image inline src={`/content/images/Assets/x-axis-${colorScheme}.svg`} style={{ paddingLeft: '10px', margingRight: 0 }} />
+            <Image inline src={`/content/images/Assets/x-axis-${colorScheme}.svg`} style={{ paddingLeft: '5px', paddingRight: '10px' }} />
             Θέλω να δω αποτελέσματα για:
           </div>
           <Dropdown
@@ -74,7 +74,8 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
       )}
       <div className="vis-filters vis-options-menu-item">
         <div className="vis-options-menu-label">
-          <Image inline src={`/content/images/Assets/indicator-${colorScheme}.svg`} style={{ paddingRight: '23px' }} />… σε σχέση με:
+          <Image inline src={`/content/images/Assets/indicator-${colorScheme}.svg`} style={{ paddingLeft: '5px', paddingRight: '10px' }} />…
+          σε σχέση με:
         </div>
         {dataset.type === 'qb' ? (
           <QbDatasetFilters
@@ -166,14 +167,14 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       )}
                       Χάρτης
                     </Menu.Item>
-                    <Menu.Item as={NavLink} to="?type=list" active={visType === 'list'}>
+                    {/*<Menu.Item as={NavLink} to="?type=list" active={visType === 'list'}>
                       {visType === 'list' ? (
                         <Image src={`/content/images/Assets/List-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
                       ) : (
                         <Image src={`/content/images/Assets/List.svg`} style={{ marginRight: '20px' }} />
                       )}
                       Αποτελέσματα σε λίστα
-                    </Menu.Item>
+                    </Menu.Item>*/}
                   </Menu>
                 </div>
                 <div className="mob-vis-upper-toolbar">

@@ -344,6 +344,14 @@
 .vis-container {
   position: relative;
   margin-top: 5%;
+  @include computer {
+    padding-left: 50px;
+  }
+}
+.vis-toolbar {
+  @include computer {
+    padding-left: 50px;
+  }
 }
 
 .vis-toolbar .menu {

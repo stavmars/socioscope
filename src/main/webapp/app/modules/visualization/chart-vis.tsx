@@ -88,7 +88,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
     const options = {
       chart: {
         type: xAxisDimension.type === 'time' ? 'spline' : 'column',
-        /*height: '640px',*/
+        height: (9 / 16) * 100 + '%', // 16:9 ratio
         zoomType: 'x',
         styledMode: true,
         className: dataset.colorScheme,

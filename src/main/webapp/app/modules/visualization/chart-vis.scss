@@ -15,7 +15,7 @@ $axis-labels-font-size: 15px;
   font-size: 16px;
 }
 
-.highcharts-root {
+/*.highcharts-root {
   @include mobile {
     margin-left: 4%;
     margin-bottom: 5%;
@@ -37,7 +37,7 @@ $axis-labels-font-size: 15px;
     width: auto;
     height: auto;
   }
-}
+}*/
 
 .highcharts-grid-line {
   fill: none;
