@@ -11,7 +11,7 @@ import {
   updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
-import { Dimmer, Dropdown, Grid, Image, Loader, Menu, Checkbox, Button } from 'semantic-ui-react';
+import { Button, Checkbox, Dimmer, Dropdown, Grid, Image, Loader, Menu } from 'semantic-ui-react';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
 import ChartVis from 'app/modules/visualization/chart-vis';
@@ -51,11 +51,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
 
   diagramConfigurationMenu = (visType, colorScheme, xAxisOptions, seriesOptions, dataset, dimensionCodes, fetchedCodeLists) => (
     <div className="vis-options-menu">
-      <Menu text>
-        <Menu.Item className="vis-options-menu-tittle">
-          <div className="vis-options-menu-title">Διαμορφώστε το γράφημα</div>
-        </Menu.Item>
-      </Menu>
+      <div className="vis-options-menu-title">Διαμορφώστε το γράφημα</div>
       {visType === 'chart' && (
         <div className="vis-xAxis vis-options-menu-item">
           <div className="vis-options-menu-label">
@@ -140,7 +136,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
               </Grid.Column>
               <Grid.Column mobile={16} tablet={10} computer={12}>
                 <div className={`vis-toolbar ${colorScheme}`}>
-                  <Menu text className={colorScheme}>
+                  <Menu fluid text className={colorScheme}>
                     <Menu.Item>
                       <Checkbox className={colorScheme} toggle />
                     </Menu.Item>
