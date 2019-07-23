@@ -5,7 +5,7 @@ package gr.ekke.socioscope.domain;
  */
 public final class MeasureType {
 
-    public static final String COUNT = "COUNT";
-    public static final String PERCENTAGE = "PERCENTAGE";
+    public static final String COUNT = "count";
+    public static final String PERCENTAGE = "percentage";
 
 }

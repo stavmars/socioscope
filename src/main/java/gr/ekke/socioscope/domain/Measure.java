@@ -1,18 +1,19 @@
 package gr.ekke.socioscope.domain;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Field;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DBRef;
-import javax.validation.constraints.*;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Map;
@@ -39,6 +40,9 @@ public class Measure implements Serializable {
     @Field("unit")
     private String unit;
 
+    @Field("type")
+    private String type;
+
     @DBRef
     @Field("creator")
     @JsonIgnoreProperties("")
@@ -46,13 +50,6 @@ public class Measure implements Serializable {
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Measure() {
-    }
-
-    public Measure(String id, @Size(min = 1) Map<String, @NotBlank String> name, @NotNull @Size(min = 2) String unit, User creator) {
-        this.id = id;
-        this.name = name;
-        this.unit = unit;
-        this.creator = creator;
     }
 
     @JsonCreator
@@ -76,17 +73,21 @@ public class Measure implements Serializable {
         return name;
     }
 
+    public void setName(Map<String, String> name) {
+        this.name = name;
+    }
+
     public Measure name(Map<String, String> name) {
         this.name = name;
         return this;
     }
 
-    public void setName(Map<String, String> name) {
-        this.name = name;
-    }
-
     public String getUnit() {
         return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 
     public Measure unit(String unit) {
@@ -94,12 +95,12 @@ public class Measure implements Serializable {
         return this;
     }
 
-    public void setUnit(String unit) {
-        this.unit = unit;
-    }
-
     public User getCreator() {
         return creator;
+    }
+
+    public void setCreator(User user) {
+        this.creator = user;
     }
 
     public Measure creator(User user) {
@@ -107,9 +108,19 @@ public class Measure implements Serializable {
         return this;
     }
 
-    public void setCreator(User user) {
-        this.creator = user;
+    public String getType() {
+        return type;
     }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Measure type(String type) {
+        this.type = type;
+        return this;
+    }
+
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -135,9 +146,11 @@ public class Measure implements Serializable {
     @Override
     public String toString() {
         return "Measure{" +
-            "id=" + getId() +
-            ", name='" + getName() + "'" +
-            ", unit='" + getUnit() + "'" +
-            "}";
+            "id='" + id + '\'' +
+            ", name=" + name +
+            ", unit='" + unit + '\'' +
+            ", type='" + type + '\'' +
+            ", creator=" + creator +
+            '}';
     }
 }

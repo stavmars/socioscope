@@ -4,6 +4,7 @@ import { ILang } from 'app/shared/model/language.interface';
 export interface IMeasure {
   id?: string;
   name?: ILang;
+  type?: string;
   unit?: string;
   creator?: IUser;
 }
