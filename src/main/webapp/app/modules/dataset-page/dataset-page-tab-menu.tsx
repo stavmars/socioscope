@@ -48,7 +48,7 @@ export class DatasetPageTabMenu extends React.Component<IDatasetPageTabMenuProp>
                       <h1>{translateEntityField(dataset.name)}</h1>
                     </Menu.Item>
                     <Menu.Item position="right" onClick={this.props.toggleMobileMenu} style={{ float: 'right', paddingBottom: '35%' }}>
-                      <Icon name="sidebar" />
+                      <Image src="/content/images/Assets/Mobile-Sidebar.svg" />
                     </Menu.Item>
                   </Menu>
                 </Responsive>

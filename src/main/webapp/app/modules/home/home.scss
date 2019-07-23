@@ -67,7 +67,7 @@ Main page styles
 
 .dataset-card {
   @include mobile {
-    height: 512px;
+    height: 700px;
   }
   @include computer {
     height: 756px;
