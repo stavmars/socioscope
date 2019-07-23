@@ -268,6 +268,11 @@
   color: #1e1e1e;
   margin-bottom: 35px;
   line-height: 30px;
+  img {
+    padding: 5px 0;
+    margin-left: 0;
+    float: right;
+  }
 }
 
 .vis-options-menu-item {
@@ -350,6 +355,8 @@
     display: flex;
   }
   min-height: 0;
+  margin: 0 !important;
+  height: 30px;
   font-family: ProximaNovaSemibold;
   font-size: 20px;
   color: rgba(30, 30, 30, 0.5);
