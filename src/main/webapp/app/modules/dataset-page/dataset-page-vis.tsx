@@ -51,11 +51,14 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
 
   diagramConfigurationMenu = (visType, colorScheme, xAxisOptions, seriesOptions, dataset, dimensionCodes, fetchedCodeLists) => (
     <div className="vis-options-menu">
-      <div className="vis-options-menu-title">Διαμορφώστε το γράφημα</div>
+      <div className="vis-options-menu-title">
+        <span>Διαμορφώστε το γράφημα</span>
+        <Image src="/content/images/Assets/Reset.svg" />
+      </div>
       {visType === 'chart' && (
         <div className="vis-xAxis vis-options-menu-item">
           <div className="vis-options-menu-label">
-            <Image inline src={`/content/images/Assets/x-axis-${colorScheme}.svg`} style={{ paddingRight: '23px' }} />
+            <Image inline src={`/content/images/Assets/x-axis-${colorScheme}.svg`} style={{ paddingLeft: '10px', margingRight: 0 }} />
             Θέλω να δω αποτελέσματα για:
           </div>
           <Dropdown
@@ -137,9 +140,6 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
               <Grid.Column mobile={16} tablet={10} computer={12}>
                 <div className={`vis-toolbar ${colorScheme}`}>
                   <Menu fluid text className={colorScheme}>
-                    <Menu.Item>
-                      <Image src="/content/images/Assets/Reset.svg" />
-                    </Menu.Item>
                     <Menu.Item>
                       <Image src="/content/images/Assets/Metric.svg" />
                       <Checkbox className={colorScheme} toggle style={{ margin: '0 6px' }} />
