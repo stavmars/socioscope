@@ -118,7 +118,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
       },
       yAxis: {
         title: {
-          text: measure.unit
+          text: translateEntityField(measure.name)
         }
       },
       plotOptions: {

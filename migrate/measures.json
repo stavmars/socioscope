@@ -10,8 +10,8 @@
     {
         "id": "votes_perc",
         "name": {
-            "el": "Ποσοστό",
-            "en": "Percentage"
+            "el": "%",
+            "en": "%"
         },
         "unit": "PC"
     },
