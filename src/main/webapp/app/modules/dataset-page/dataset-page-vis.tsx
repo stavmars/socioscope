@@ -175,6 +175,22 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       )}
                       Αποτελέσματα σε λίστα
                     </Menu.Item>*/}
+                    <Menu.Item position="right">
+                      <Image src="/content/images/Assets/Download-icon.svg" />
+                    </Menu.Item>
+                    <Menu.Item>
+                      <Dropdown icon="share alternate" className={`share-dropdown ${colorScheme}`}>
+                        <Dropdown.Menu>
+                          <Dropdown.Item icon="linkify" text="Σύνδεσμος" />
+                          <Dropdown.Item icon="twitter" text="Twitter" disabled />
+                          <Dropdown.Item icon="facebook f" text="Facebook" disabled />
+                          <Dropdown.Item icon="mail outline" text="Email" disabled />
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </Menu.Item>
+                    <Menu.Item style={{ marginRight: '5%' }}>
+                      <Image src="/content/images/Assets/Download-icon.svg" />
+                    </Menu.Item>
                   </Menu>
                 </div>
                 <div className="mob-vis-upper-toolbar">
