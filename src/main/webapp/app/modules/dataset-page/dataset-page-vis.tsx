@@ -11,14 +11,14 @@ import {
   updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
-import { Dimmer, Dropdown, Grid, Image, Loader, Menu } from 'semantic-ui-react';
+import { Dimmer, Dropdown, Grid, Image, Loader, Menu, Checkbox, Button } from 'semantic-ui-react';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
 import ChartVis from 'app/modules/visualization/chart-vis';
 import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IRootState } from 'app/shared/reducers';
-import { hideHeader, showHeader } from 'app/shared/reducers/header';
+import { hideHeader, showHeader, toggleMobileVisMenu } from 'app/shared/reducers/header';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
@@ -141,11 +141,54 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
               <Grid.Column mobile={16} tablet={10} computer={12}>
                 <div className={`vis-toolbar ${colorScheme}`}>
                   <Menu text className={colorScheme}>
+                    <Menu.Item>
+                      <Checkbox className={colorScheme} toggle />
+                    </Menu.Item>
                     <Menu.Item as={NavLink} to="?type=chart" active={visType === 'chart'}>
                       Γράφημα
                     </Menu.Item>
                     <Menu.Item as={NavLink} to="?type=map" active={visType === 'map'}>
                       Χάρτης
+                    </Menu.Item>
+                  </Menu>
+                </div>
+                <div className="mob-vis-upper-toolbar">
+                  <Menu fluid text>
+                    <Menu.Item>
+                      <Image
+                        as={Button}
+                        onClick={this.props.toggleMobileVisMenu}
+                        style={{ padding: 0, margin: 0 }}
+                        src="/content/images/Assets/mobile-menu-icon.png"
+                      />
+                    </Menu.Item>
+                    <Menu.Item>
+                      <h1
+                        style={{
+                          fontFamily: 'ProximaNovaSemibold',
+                          color: '#1E1E1E',
+                          fontSize: '12px'
+                        }}
+                      >
+                        Διαμορφώστε το γράφημα
+                      </h1>
+                    </Menu.Item>
+                    <Menu.Item position="right">
+                      <Image src="/content/images/Assets/Reset.svg" />
+                    </Menu.Item>
+                    <Menu.Item as={NavLink} to="?type=chart">
+                      {visType === 'chart' ? (
+                        <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} />
+                      ) : (
+                        <Image src={`/content/images/Assets/Chart.svg`} />
+                      )}
+                    </Menu.Item>
+                    <Menu.Item style={{ marginRight: '5%' }} as={NavLink} to="?type=map">
+                      {visType === 'map' ? (
+                        <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} />
+                      ) : (
+                        <Image src={`/content/images/Assets/Map.svg`} />
+                      )}
                     </Menu.Item>
                   </Menu>
                 </div>
@@ -167,6 +210,22 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       loadingSeries={loadingSeries}
                     />
                   )}
+                </div>
+                <div className="mob-vis-lower-toolbar">
+                  <Menu fluid text>
+                    <Menu.Item style={{ left: '5%' }}>
+                      <Checkbox className={colorScheme} toggle />
+                    </Menu.Item>
+                    <Menu.Item position="right">
+                      <Image src="/content/images/Assets/Download-icon.svg" style={{ width: '34.86px', height: '34.86px' }} />
+                    </Menu.Item>
+                    <Menu.Item>
+                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                    </Menu.Item>
+                    <Menu.Item style={{ marginRight: '5%' }}>
+                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                    </Menu.Item>
+                  </Menu>
                 </div>
               </Grid.Column>
             </Grid>
@@ -214,7 +273,8 @@ const mapDispatchToProps = {
   updateVisOptions,
   changeCompareBy,
   setFilterValue,
-  initVis
+  initVis,
+  toggleMobileVisMenu
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;

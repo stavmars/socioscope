@@ -50,7 +50,7 @@
     }
   }
   .dataset-page-tab-menu-top-topics {
-    padding: 50px 99px 156px 0;
+    padding: 50px 23px 156px 0;
     color: #ffffff;
     font-size: 20px;
     font-family: BPnoScriptBold;
@@ -251,6 +251,15 @@
 .vis-options-menu {
 }
 
+// .vis-container {
+//   @include mobile {
+//     top: 10px;
+//   }
+//   @include computer {
+//     top: 60px;
+//   }
+// }
+
 .vis-options-menu-title {
   font-size: 30px;
   text-align: left;
@@ -328,21 +337,31 @@
 }
 .vis-container {
   position: relative;
+  margin-top: 5%;
 }
 
 .vis-toolbar .menu {
+  @include mobile {
+    display: none;
+  }
+  @include computer {
+    display: flex;
+  }
   min-height: 0;
   font-family: ProximaNovaSemibold;
   font-size: 20px;
   color: rgba(30, 30, 30, 0.5);
   .item.active {
-    border-bottom-width: 3px !important;
-    border-bottom-style: solid !important;
+    @include computer {
+      border-bottom-width: 3px !important;
+      border-bottom-style: solid !important;
+    }
   }
   &.color-scheme-1 {
     .item.active {
       color: $color-scheme-1-accent;
       border-color: $color-scheme-1-accent;
+      fill: $color-scheme-1-accent;
     }
   }
   &.color-scheme-2 {
@@ -357,4 +376,56 @@
       border-color: $color-scheme-3-accent;
     }
   }
+}
+
+.mob-vis-upper-toolbar .menu {
+  @include mobile {
+    display: flex;
+  }
+  @include computer {
+    display: none;
+  }
+}
+.mob-vis-lower-toolbar .menu {
+  @include mobile {
+    display: flex;
+  }
+  @include computer {
+    display: none;
+  }
+}
+
+.ui.toggle.checkbox.color-scheme-1 input:focus:checked ~ .box:before,
+.ui.toggle.checkbox.color-scheme-1 input:focus:checked ~ label:before {
+  background-color: $color-scheme-1-accent !important;
+}
+
+.ui.toggle.checkbox.color-scheme-1 input:checked ~ .box:before,
+.ui.toggle.checkbox.color-scheme-1 input:checked ~ label:before {
+  background-color: $color-scheme-1-accent !important;
+}
+
+.ui.toggle.checkbox.color-scheme-2 input:focus:checked ~ .box:before,
+.ui.toggle.checkbox.color-scheme-2 input:focus:checked ~ label:before {
+  background-color: $color-scheme-2-accent !important;
+}
+
+.ui.toggle.checkbox.color-scheme-2 input:checked ~ .box:before,
+.ui.toggle.checkbox.color-scheme-2 input:checked ~ label:before {
+  background-color: $color-scheme-2-accent !important;
+}
+
+.ui.toggle.checkbox.color-scheme-3 input:focus:checked ~ .box:before,
+.ui.toggle.checkbox.color-scheme-3 input:focus:checked ~ label:before {
+  background-color: $color-scheme-3-accent !important;
+}
+
+.ui.toggle.checkbox.color-scheme-3 input:checked ~ .box:before,
+.ui.toggle.checkbox.color-scheme-3 input:checked ~ label:before {
+  background-color: $color-scheme-3-accent !important;
+}
+
+.ui.toggle.checkbox .box:before,
+.ui.toggle.checkbox label:before {
+  background-color: grey;
 }
