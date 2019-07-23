@@ -48,7 +48,7 @@ export class Header extends React.Component<IHeaderProps, {}> {
                 <Image src="/content/images/Assets/mobile-menu-icon.png" />
               </Menu.Item>
               <Menu.Item onClick={this.props.toggleMobileMenu} style={{ padding: '21px 20px 21px 18px' }}>
-                <Icon name="sidebar" />
+                <Image src="/content/images/Assets/Mobile-Sidebar.svg" />
               </Menu.Item>
             </Menu>
           ) : (
@@ -66,7 +66,7 @@ export class Header extends React.Component<IHeaderProps, {}> {
                 <Image src={localeIcon} alt="language switcher" style={{ width: '27px', height: '27px' }} />
               </Menu.Item>
               <Menu.Item onClick={this.props.toggleMobileMenu} style={{ padding: '21px 20px 21px 18px' }}>
-                <Icon name="sidebar" />
+                <Image src="/content/images/Assets/Mobile-Sidebar.svg" />
               </Menu.Item>
             </Menu>
           )}
