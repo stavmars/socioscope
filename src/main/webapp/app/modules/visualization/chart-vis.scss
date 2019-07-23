@@ -2,12 +2,7 @@
 
 $font-family: 'BPnoScriptBold';
 $background-color: transparent;
-@include mobile {
-  $axis-labels-font-size: 10px;
-}
-@include computer {
-  $axis-labels-font-size: 20px;
-}
+$axis-labels-font-size: 15px;
 
 @import 'highcharts/css/highcharts.scss';
 

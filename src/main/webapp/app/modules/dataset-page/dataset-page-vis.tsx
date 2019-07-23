@@ -142,13 +142,41 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                 <div className={`vis-toolbar ${colorScheme}`}>
                   <Menu text className={colorScheme}>
                     <Menu.Item>
-                      <Checkbox className={colorScheme} toggle />
+                      <Image src="/content/images/Assets/Reset.svg" />
                     </Menu.Item>
-                    <Menu.Item as={NavLink} to="?type=chart" active={visType === 'chart'}>
+                    <Menu.Item>
+                      <Image src="/content/images/Assets/Metric.svg" />
+                      <Checkbox className={colorScheme} toggle style={{ margin: '0 6px' }} />
+                      <Image src="/content/images/Assets/Percentage.svg" />
+                    </Menu.Item>
+                    <Menu.Item
+                      as={NavLink}
+                      to="?type=chart"
+                      active={visType === 'chart'}
+                      style={{ marginLeft: '20%', marginRight: '50px' }}
+                    >
+                      {visType === 'chart' ? (
+                        <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
+                      ) : (
+                        <Image src={`/content/images/Assets/Chart.svg`} style={{ marginRight: '20px' }} />
+                      )}
                       Γράφημα
                     </Menu.Item>
-                    <Menu.Item as={NavLink} to="?type=map" active={visType === 'map'}>
+                    <Menu.Item as={NavLink} to="?type=map" active={visType === 'map'} style={{ marginRight: '50px' }}>
+                      {visType === 'map' ? (
+                        <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
+                      ) : (
+                        <Image src={`/content/images/Assets/Map.svg`} style={{ marginRight: '20px' }} />
+                      )}
                       Χάρτης
+                    </Menu.Item>
+                    <Menu.Item as={NavLink} to="?type=list" active={visType === 'list'}>
+                      {visType === 'list' ? (
+                        <Image src={`/content/images/Assets/List-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
+                      ) : (
+                        <Image src={`/content/images/Assets/List.svg`} style={{ marginRight: '20px' }} />
+                      )}
+                      Αποτελέσματα σε λίστα
                     </Menu.Item>
                   </Menu>
                 </div>
@@ -214,7 +242,9 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                 <div className="mob-vis-lower-toolbar">
                   <Menu fluid text>
                     <Menu.Item style={{ left: '5%' }}>
-                      <Checkbox className={colorScheme} toggle />
+                      <Image src="/content/images/Assets/Metric.svg" />
+                      <Checkbox className={colorScheme} toggle style={{ margin: '0 6px' }} />
+                      <Image src="/content/images/Assets/Percentage.svg" />
                     </Menu.Item>
                     <Menu.Item position="right">
                       <Image src="/content/images/Assets/Download-icon.svg" style={{ width: '34.86px', height: '34.86px' }} />
