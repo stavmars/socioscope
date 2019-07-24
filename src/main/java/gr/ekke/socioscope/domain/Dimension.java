@@ -42,6 +42,9 @@ public class Dimension implements Serializable {
     @NotNull
     @Field("type")
     private String type;
+    @Field("dependencies")
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    private List<String> dependencies;
     @DBRef
     @Field("creator")
     @JsonIgnoreProperties("")
@@ -51,10 +54,11 @@ public class Dimension implements Serializable {
     public Dimension() {
     }
 
-    public Dimension(String id, @Size(min = 1) Map<String, @NotBlank String> name, @NotNull @Size(min = 2) String type, User creator) {
+    public Dimension(String id, @Size(min = 1) Map<String, @NotBlank String> name, @NotNull @Size(min = 2) String type, List<String> dependencies, User creator) {
         this.id = id;
         this.name = name;
         this.type = type;
+        this.dependencies = dependencies;
         this.creator = creator;
     }
 
@@ -114,6 +118,19 @@ public class Dimension implements Serializable {
 
     public Dimension creator(User user) {
         this.creator = user;
+        return this;
+    }
+
+    public List<String> getDependencies() {
+        return dependencies;
+    }
+
+    public void setDependencies(List<String> dependencies) {
+        this.dependencies = dependencies;
+    }
+
+    public Dimension dependencies(List<String> dependencies) {
+        this.dependencies = dependencies;
         return this;
     }
 
