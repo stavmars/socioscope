@@ -33,7 +33,19 @@ const importCollection = async (dataType, importFile) => {
               });
             }
             catch (e) {
-              console.error(`Dataset error : ${e}`);
+              if ( e.response.status === 400 ) {
+                try {
+                  await axios.put('http://localhost:8080/api/data-sets', row,
+                  {
+                    headers: { 'Authorization': response.headers.authorization}
+                  });
+                }
+                catch (e) {
+                  console.error(`Update Dataset error : ${e}`);
+                }
+              } else {
+                console.error(`Dataset error : ${e}`);
+              }
             }
           });
         } else if (dataType === 'dimension') {
@@ -46,7 +58,19 @@ const importCollection = async (dataType, importFile) => {
               });
             }
             catch (e) {
-              console.error(`Dimension error : ${e}`);
+              if ( e.response.status === 400 ) {
+                try {
+                  await axios.put('http://localhost:8080/api/dimensions', row,
+                  {
+                    headers: { 'Authorization': response.headers.authorization}
+                  });
+                }
+                catch (e) {
+                  console.error(`Update Dimension error : ${e}`);
+                }
+              } else {
+                console.error(`Dimension error : ${e}`);
+              }
             }
           });
         } else {
@@ -59,7 +83,19 @@ const importCollection = async (dataType, importFile) => {
               });
             }
             catch (e) {
-              console.error(`Measure error : ${e}`);
+              if ( e.response.status === 400 ) {
+                try {
+                  await axios.put('http://localhost:8080/api/measures', row,
+                  {
+                    headers: { 'Authorization': response.headers.authorization}
+                  });
+                }
+                catch (e) {
+                  console.error(`Update Measure error : ${e}`);
+                }
+              } else {
+                console.error(`Measure error : ${e}`);
+              }
             }
           });
         }
