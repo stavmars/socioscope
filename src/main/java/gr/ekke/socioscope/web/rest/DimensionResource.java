@@ -3,7 +3,6 @@ package gr.ekke.socioscope.web.rest;
 import com.codahale.metrics.annotation.Timed;
 import gr.ekke.socioscope.domain.Dimension;
 import gr.ekke.socioscope.domain.DimensionCode;
-import gr.ekke.socioscope.repository.DimensionCodeRepository;
 import gr.ekke.socioscope.service.DimensionService;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
 import gr.ekke.socioscope.web.rest.util.HeaderUtil;
