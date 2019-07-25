@@ -1,5 +1,7 @@
 package gr.ekke.socioscope.domain;
 
+import java.util.Map;
+
 import javax.validation.constraints.NotBlank;
 
 /**
@@ -10,7 +12,7 @@ public class Highlight {
     @NotBlank
     private String id;
 
-    private String description;
+    private Map<String, String> description;
 
     private SeriesOptions seriesOptions;
 
@@ -26,11 +28,11 @@ public class Highlight {
         this.id = id;
     }
 
-    public String getDescription() {
+    public Map<String, String> getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(Map<String, String> description) {
         this.description = description;
     }
 

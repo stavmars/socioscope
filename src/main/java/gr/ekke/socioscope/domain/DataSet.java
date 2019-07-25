@@ -36,6 +36,9 @@ public class DataSet implements Serializable {
     @Field("comment")
     private Map<String, String> comment;
 
+    @Field("sources")
+    private Map<String, String> sources;
+
     @CreatedDate
     private Instant createdDate;
 
@@ -117,6 +120,19 @@ public class DataSet implements Serializable {
 
     public void setComment(Map<String, String> comment) {
         this.comment = comment;
+    }
+
+    public Map<String, String> getSources() {
+        return sources;
+    }
+
+    public DataSet sources(Map<String, String> sources) {
+        this.sources = sources;
+        return this;
+    }
+    
+    public void setSources(Map<String, String> sources) {
+        this.sources = sources;
     }
 
     public Instant getCreatedDate() {

@@ -52,7 +52,7 @@ export class Home extends React.Component<IHomeProp> {
                     headerImg="/content/images/Assets/Elections.svg"
                     highlight={highlight}
                   >
-                    <div dangerouslySetInnerHTML={{ __html: highlight.description }} />
+                    <div dangerouslySetInnerHTML={{ __html: translateEntityField(highlight.description) }} />
                   </DatasetCard>
                 ))
               : null}

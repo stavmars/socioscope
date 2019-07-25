@@ -10,6 +10,7 @@ export interface IDataSet {
   name?: ILang;
   type?: string;
   comment?: ILang;
+  sources?: ILang;
   createdDate?: Moment;
   dimensions?: IDimension[];
   measures?: IMeasure[];
@@ -18,4 +19,4 @@ export interface IDataSet {
   colorScheme?: string;
 }
 
-export const defaultValue: Readonly<IDataSet> = { name: {}, comment: {} };
+export const defaultValue: Readonly<IDataSet> = { name: {}, comment: {}, sources: {} };

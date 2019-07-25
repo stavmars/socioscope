@@ -8,6 +8,7 @@ import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters'
 import { changeCompareBy, setFilterValue, updateVisOptions } from 'app/modules/dataset-page/dataset-page-reducer';
 import { IRootState } from 'app/shared/reducers';
 import { translateEntityField } from 'app/shared/util/entity-utils';
+import { translate } from 'react-jhipster';
 
 export interface IVisSeriesOptionMenuProp extends DispatchProps, StateProps {
   dataset: IDataSet;
@@ -38,14 +39,14 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
     return (
       <div className="vis-options-menu">
         <div className="vis-options-menu-title">
-          <span>Διαμορφώστε το γράφημα</span>
+          <span>{translate('socioscopeApp.dataSet.visualization.configure.menuTitle')}</span>
           <Image src="/content/images/Assets/Reset.svg" />
         </div>
         {visType === 'chart' && (
           <div className="vis-xAxis vis-options-menu-item">
             <div className="vis-options-menu-label">
               <Image inline src={`/content/images/Assets/x-axis-${colorScheme}.svg`} style={{ paddingLeft: '5px', paddingRight: '10px' }} />
-              Θέλω να δω αποτελέσματα για:
+              {translate('socioscopeApp.dataSet.visualization.configure.xAxis')}
             </div>
             <Dropdown
               className={`vis-options-dropdown ${colorScheme}`}
@@ -65,7 +66,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
               src={`/content/images/Assets/indicator-${colorScheme}.svg`}
               style={{ paddingLeft: '5px', paddingRight: '10px' }}
             />
-            … σε σχέση με:
+            {translate('socioscopeApp.dataSet.visualization.configure.filter')}
           </div>
           {dataset.type === 'qb' ? (
             <QbDatasetFilters

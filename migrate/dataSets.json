@@ -1139,7 +1139,11 @@
     "colorScheme": "color-scheme-1",
     "comment": {
       "el": "Το σύνολο δεδομένων περιλαμβάνει όλα τα επίσημα εκλογικά αποτελέσματα των Εθνικών Εκλογών (Σεπτέμβριος 1996 - Ιανουάριος 2015). Δίνεται η δυνατότητα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης σε επίπεδο Εκλογικής Περιφέρειας και Καλλικρατικού Δήμου.",
-      "en": "The dataset includes all official election results of the Greek Parliamentary Elections (September 1996 - January 2015) at constituency and municipality level."
+      "en": "The data set includes all the official election results of the National Elections (September 1996 - January 2015). Users have the option to produce graphs and maps at the level of the electoral district and Municipality."
+    },
+    "sources": {
+      "el": "Singular Logic, Υπουργείο Εσωτερικών – Διεύθυνση Εκλογών.",
+      "en": "Singular Logic, Ministry of Interior – Department of Elections."
     },
     "dimensions": [
       {
@@ -1163,7 +1167,10 @@
     "highlights": [
       {
         "id": "apoxi",
-        "description": "<span>Aπό το 2007 καταγράφεται μια <span class=\"text-accent\">σημαντική αύξηση της αποχής</span> που κορυφώνεται στο 37% στις εκλογές του Ιουνίου του 2012.</span>",
+        "description": {
+          "el": "<span>Η αποχή από τις εθνικές εκλογές αυξήθηκε σημαντικά την τελευταία δεκαετία. Ενώ στις βουλευτικές εκλογές του 1996, του 2000 και του 2004 η αποχή κυμαίνεται στο 24%, από  το 2007 καταγράφεται μια <span class=\"text-accent\">σημαντική αύξηση της αποχής</span> που κορυφώνεται στο 37% στις εκλογές του Ιουνίου του 2012.</span>",
+          "en": "<span>Abstaining from national elections has increased significantly over the last decade. While in the 1996, 2000 and 2004 parliamentary elections the abstention fluctuates around 24%, since 2007 there is a <span class=\"text-accent\">significant increase</span>, culminating in 37% in the June 2012 elections.</span>"
+        },
         "visType": "chart",
         "seriesOptions": {
           "xAxis": "elections",
@@ -1176,7 +1183,10 @@
       },
       {
         "id": "may_2012",
-        "description": "<span>Στις εκλογές του Μαΐου του <span class=\"text-accent\">2012</span> πάνω από <span class=\"text-accent\">1.000.000</span> ψήφοι πήγαν σε κόμματα εκτός Κοινοβουλίου, έναντι μόλις <span class=\"text-accent\">70.079</span> ψήφων το <span class=\"text-accent\">2004</span>.</span>",
+        "description": {
+          "el": "<span>Στις εκλογές του Μαΐου του <span class=\"text-accent\">2012</span> πάνω από <span class=\"text-accent\">1.000.000</span> ψήφοι πήγαν σε κόμματα εκτός Κοινοβουλίου, έναντι μόλις <span class=\"text-accent\">70.079</span> ψήφων το <span class=\"text-accent\">2004</span>.</span>",
+          "en": "<span>In the May <span class=\"text-accent\">2012</span> more than <span class=\"text-accent\">1.000.000</span> votes were shared to parties outside Parliament, while in the <span class=\"text-accent\">2004</span> elections the votes to parties without parliamentary representation were only <span class=\"text-accent\">70.079</span>.</span>"
+        },
         "visType": "chart",
         "seriesOptions": {
           "xAxis": "elections",
@@ -1186,23 +1196,67 @@
             "party": "without_seats"
           }
         }
+      },
+      {
+        "id": "xrysi_augi",
+        "description": {
+          "el": "<span>Στις εκλογές του Ιανουαρίου 2015 στην εκλογική περιφέρεια Αττικής η <span class=\"text-accent\">Χρυσή Αυγή</span> συγκεντρώνει τα υψηλότερα ποσοστά της στους <span class=\"text-accent\">Δήμους Ασπροπύργου (14,5%)</span> και <span class=\"text-accent\">Αχαρνών (11,2%)</span>.</span>",
+          "en": "<span>In the elections of January 2015, <span class=\"text-accent\">the Golden Dawn</span>, in the Attika electoral periphery,  gathers its highest percentage in the municipalities of Athens <span class=\"text-accent\">Aspropirgos (14,5%)</span> and <span class=\"text-accent\">Acharnon (11,2%)</span>.</span>"
+        },
+        "visType": "map",
+        "seriesOptions": {
+            "xAxis": "constituency",
+            "measure": "votes_perc",
+            "dimensionFilters": {
+              "elections": 8,
+              "party": "golden_dawn"
+            }
+        }
       }
     ]
   },
   {
     "id": "deputies",
     "name": {
-      "el": "Πολιτικό Προσωπικό",
-      "en": "Πολιτικό Προσωπικό"
+      "el": "Βουλευτές Ελληνικού Κοινοβουλίου (1989-2019)",
+      "en": "Members of the Greek Parliament (1989-2019)"
     },
     "type": "raw",
-    "colorScheme": "color-scheme-1",
+    "colorScheme": "color-scheme-2",
     "comment": {
-      "el": "Το σύνολο δεδομένων περιλαμβάνει όλα τα επίσημα εκλογικά αποτελέσματα των Εθνικών Εκλογών (Σεπτέμβριος 1996 - Ιανουάριος 2015). Δίνεται η δυνατότητα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης σε επίπεδο Εκλογικής Περιφέρειας και Καλλικρατικού Δήμου.",
-      "en": "The dataset includes all official election results of the Greek Parliamentary Elections (September 1996 - January 2015) at constituency and municipality level."
+      "el": "Το σύνολο δεδομένων «Πολιτικό Προσωπικό» περιλαμβάνει στοιχεία για κοινωνικό-δημογραφικά χαρακτηριστικά και την πολιτική προϋπηρεσία 1060 μελών του Ελληνικού Κοινοβουλίου που εκλέχθηκαν στις Κοινοβουλευτικές περιόδους από Θ’ (1996-2000) έως και ΙΣΤ' (Ιανουάριος-Αύγουστος 2015). Κάθε κοινοβουλευτική σύνθεση περιλαμβάνει το σύνολο όσων εκλέχθηκαν αρχικά ή, μετέπειτα, κατόπιν αντικατάστασης. Οι σχετικές πληροφορίες αντλήθηκαν από τον ιστότοπο του Ελληνικού Κοινοβουλίου και τα επίσημα βιογραφικά των βουλευτών/τριών, ενώ η επιλογή των μεταβλητών έγινε από ερευνητική ομάδα. Η εφαρμογή δίνει την δυνατότητα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης ορισμένων μεταβλητών. Τα πλήρη στοιχεία για κάθε βουλευτή/τρια εμφανίζονται κάτω από την επιλογή «Αποτελέσματα Αναζήτησης».",
+      "en": "The data set «Members of the Greek Parliament (1989-2019)» includes data on socio-demographic characteristics and the political experience of all members of the Greek Parliament elected in the Parliamentary Periods from 1989 to 2019. Each parliamentary composition includes all MPs originally elected or subsequently replaced. Data were obtained from the website of the Greek Parliament (http://www.hellenicparliament.gr) and the official biographies of the deputies, while the selection of the variables was done by a research team. The application enables the visual analysis and mapping of select variables. The full details for each MP appear under the 'Search Results' option."
     },
     "dimensions": [],
     "measures": [],
-    "highlights": []
+    "highlights": [
+      {
+        "id": "gender",
+        "description": {
+          "el": "<span>Στις 1211 περιπτώσεις εκλεγμένων Βουλευτών για το διάστημα 1993 – 2019 το 83% είναι άνδρες και το 17% γυναίκες. Οι κοινοβουλευτικές συνθέσεις με τον χαμηλότερο αριθμό γυναικών είναι η Η’ περίοδος (1993-1996) με μόλις 6,7% γυναίκες και Θ’ περίοδος (1996-2000) με μόλις 6,2% γυναίκες. Αντίθετα, στην ΙΕ’ περίοδο (2012-2014) και στην ΙΣΤ’ (2015) το ποσοστό των γυναικών ανέρχεται σε 22,2% και 23% αντίστοιχα.</span>",
+          "en": "<span>In 1211 cases of elected MPs between 1993 and 2019, 83% are men and 17% are women. The parliamentary compositions with the lowest number of women are the period (1993-1996) with only 6.7% women and the 3rd period (1996-2000) with only 6.2% women. By contrast, in the 2012-2014 and 2015-2015 periods, the percentage of women is 22.2% and 23%, respectively.</span>"
+        },
+        "visType": "chart",
+        "seriesOptions": {}
+      },
+      {
+        "id": "family_networks",
+        "description": {
+          "el": "<span>Οσο πιο μεγάλη είναι μια εκλογική περιφέρεια, τόσο πιθανότερο είναι οι βουλευτές που εκλέγονται σε αυτή να προέρχονται από «πολιτική» οικογένεια. ‘Ετσι, στην Β Αθήνας σχεδον 1 στους 5 βουλευτές έχει συγγενή με προηγούμενη θητεία στο Κοινοβούλιο.</span>",
+          "en": "<span>The bigger an electoral region, the more likely is for the elected members to derive from a \"political\" family. Thus, in Athens, almost 1 in 5 Members have an affinitive with a previous term in Parliament.</span>"
+        },
+        "visType": "chart",
+        "seriesOptions": {}
+      },
+      {
+        "id": "education",
+        "description": {
+          "el": "<span>To 57% των εκλεγμένων Βουλευτών/τριων από το 1993 έως το 2019 κατέχουν δίπλωμα ΑΕΙ. Το 23% είναι κάτοχοι μεταπτυχιακού τίτλου σπουδών και τέλος το 14% έχει διδακτορικό. Η Βουλή IZ (2015-2019) είναι πιθανώς η πιο «μορφωμένη» της Μεταπολίτευσης καθώς έχει τους περισσότερους κατόχους διδακτορικού (16,3%) της τελευταίας εικοσιπενταετίας.</span>",
+          "en": "<span>Six out of ten (57%) of elected Members from 1993 to 2019 hold a university degree. Two out of ten (23%) hold a postgraduate degree and the 14% hold a PhD. The parliament term 2015-2019 is probably the most  \"educated\" of the ‘Metapolitefsis’ as it includes the most doctorate holders (16.3%) of the last twenty-five years.</span>"
+        },
+        "visType": "chart",
+        "seriesOptions": {}
+      }
+    ]
   }
 ]

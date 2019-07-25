@@ -8,6 +8,7 @@ import { getSession } from 'app/shared/reducers/authentication';
 import { showHeader } from 'app/shared/reducers/header';
 import { Grid, Header, Ref, Sticky } from 'semantic-ui-react';
 import { NavHashLink } from 'react-router-hash-link';
+import { translate } from 'react-jhipster';
 
 export class About extends React.Component<DispatchProps> {
   contextRef = createRef();
@@ -27,7 +28,7 @@ export class About extends React.Component<DispatchProps> {
   render() {
     return (
       <div className="about-page-view">
-        <Header id="project" as="h1" className="about-page-title" content="Καλειδοσκόπιο κοινωνικών δεδομένων" textAlign="center" />
+        <Header id="project" as="h1" className="about-page-title" content={translate('about.title')} textAlign="center" />
         <Ref innerRef={this.contextRef}>
           <Grid>
             <Grid.Row>
@@ -37,22 +38,22 @@ export class About extends React.Component<DispatchProps> {
                     <ul>
                       <li>
                         <NavHashLink isActive={this.isActive('#project')} smooth to="#project" replace={false}>
-                          Το έργο
+                          {translate('about.project')}
                         </NavHashLink>
                       </li>
                       <li>
                         <NavHashLink isActive={this.isActive('#team')} smooth to="#team" replace={false}>
-                          Επιστημονική Ομάδα
+                          {translate('about.team')}
                         </NavHashLink>
                       </li>
                       <li>
                         <NavHashLink isActive={this.isActive('#sources')} smooth to="#sources" replace={false}>
-                          Πηγές
+                          {translate('about.sources')}
                         </NavHashLink>
                       </li>
                       <li>
                         <NavHashLink isActive={this.isActive('#techTeam')} smooth to="#techTeam" replace={false}>
-                          Τεχνικοί Υπεύθυνοι
+                          {translate('about.techTeam')}
                         </NavHashLink>
                       </li>
                       <li>Developers</li>
@@ -84,7 +85,7 @@ export class About extends React.Component<DispatchProps> {
                   <br />
                   <br />
                   <br />
-                  <h2 id="team">Επιστημονική ομάδα</h2>
+                  <h2 id="team">{translate('about.team')}</h2>
                   <span style={{ fontFamily: 'ProximaNovaBold' }}>Θεώνη Σταθοπούλου</span> / Διευθύντρια Ερευνών, ΕΚΚΕ, theosta@ekke.gr
                   <br />
                   <br />
@@ -98,7 +99,7 @@ export class About extends React.Component<DispatchProps> {
                   <br />
                   <br />
                   <br />
-                  <h2 id="sources">Πηγές</h2>
+                  <h2 id="sources">{translate('about.sources')}</h2>
                   <h3>Εκδόσεις:</h3>
                   <br />
                   <br />
@@ -125,22 +126,29 @@ export class About extends React.Component<DispatchProps> {
                   <br />
                   <br />
                   Patrikios, S. and M. Chatzikonstantinou (2014) Dynastic Politics: Family Ties in the Greek Parliament, 2000–12, South
-                  European Society and Politics , Volume 20, Issue 1, pp. 93-111 [online appendix:
-                  <span>{'http://dx.doi.org/10.1080/13608746.2014.942989]'}</span>
+                  European Society and Politics , Volume 20, Issue 1, pp. 93-111
+                  <a href="http://dx.doi.org/10.1080/13608746.2014.942989" target="_blank">
+                    {' '}
+                    [online appendix]
+                  </a>
                   <br />
                   <br />
                   <h3>Ιστότοποι:</h3>
                   <br />
                   <br />
                   <br />
-                  <span>{'http://www.ypes.gr/el/Elections/NationalElections/Results/'}</span>
+                  <a href="http://www.ypes.gr/el/Elections/NationalElections/Results/" target="_blank">
+                    www.ypes.gr/el/Elections/NationalElections/Results/
+                  </a>
                   <br />
-                  <span>{'http://www.hellenicparliament.gr'}</span>
+                  <a href="http://www.hellenicparliament.gr" target="_blank">
+                    www.hellenicparliament.gr
+                  </a>
                   <br />
                   <br />
                   <br />
                   <br />
-                  <h2 id="techTeam">Τεχνικοί Υπεύθυνοι</h2>
+                  <h2 id="techTeam">{translate('about.techTeam')}</h2>
                   <h3>Ανάλυση & Σχεδιασμός</h3>
                   <span style={{ fontFamily: 'ProximaNovaBold' }}>Γιώργος Παπαστεφανάτος</span> / Ερευνητικός Συνεργάτης, Ε.Κ. ΑΘΗΝΑ),
                   gpapas@imis.athena-innovation.gr

@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "Open Social Data",
-    "subtitle": "Socioscope is a platform for visualizing social and political data. Explore themes and shape your own charts, tables and maps.",
+    "subtitle": "Socioscope is a platform for the visualization and mapping of social and political data. The data is categorized into distinctive subjects and users have the ability to configure their own diagrams, tables and maps.",
     "explore": "EXPLORE",
     "logged": {
       "message": "You are logged in as user \"{{username}}\"."
@@ -18,12 +18,12 @@
     "github": "GitHub",
     "dataset": {
       "categories": {
-        "elections": "Election Results (1996 – 2015)",
-        "politics": "Political Personnel",
-        "schools": "Στάσεις και Αντιλήψεις μαθητών Γυμνασίου",
+        "elections": "National Election Results (1996 - 2015)",
+        "politics": "Members of the Greek Parliament (1989-2019)",
+        "schools": "Profile and Values of Teenagers",
         "social": "Social Conflicts and Protest",
         "poverty": "Poverty and Social Exclusion",
-        "criminality": "The Criminal Phenomenon"
+        "criminality": "Criminality"
       },
       "explore": "DATA"
     }

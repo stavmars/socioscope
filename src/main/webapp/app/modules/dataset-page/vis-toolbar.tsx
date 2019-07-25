@@ -6,6 +6,7 @@ import _ from 'lodash';
 import { IMeasure } from 'app/shared/model/measure.model';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
+import { translate } from 'react-jhipster';
 
 export interface IVisToolBarProp {
   dataset: IDataSet;
@@ -50,7 +51,7 @@ export class VisToolbar extends React.Component<IVisToolBarProp> {
                   ) : (
                     <Image src={`/content/images/Assets/Chart.svg`} style={{ marginRight: '20px' }} />
                   )}
-                  Γράφημα
+                  {translate('socioscopeApp.dataSet.visualization.graph')}
                 </Menu.Item>
                 <Menu.Item as={NavLink} to="?type=map" active={visType === 'map'} style={{ marginRight: '50px' }}>
                   {visType === 'map' ? (
@@ -58,7 +59,7 @@ export class VisToolbar extends React.Component<IVisToolBarProp> {
                   ) : (
                     <Image src={`/content/images/Assets/Map.svg`} style={{ marginRight: '20px' }} />
                   )}
-                  Χάρτης
+                  {translate('socioscopeApp.dataSet.visualization.map')}
                 </Menu.Item>
                 {/*<Menu.Item as={NavLink} to="?type=list" active={visType === 'list'}>
                       {visType === 'list' ? (
@@ -81,7 +82,7 @@ export class VisToolbar extends React.Component<IVisToolBarProp> {
                       <Popup
                         on="click"
                         content="Copied link!"
-                        trigger={<Dropdown.Item icon="linkify" text="Σύνδεσμος" onClick={this.props.copyCurrentURL} />}
+                        trigger={<Dropdown.Item icon="linkify" text="Link" onClick={this.props.copyCurrentURL} />}
                         basic
                       />
                       <Dropdown.Item icon="twitter" text="Twitter" disabled />
