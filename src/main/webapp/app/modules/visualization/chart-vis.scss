@@ -15,30 +15,6 @@ $axis-labels-font-size: 15px;
   font-size: 16px;
 }
 
-/*.highcharts-root {
-  @include mobile {
-    margin-left: 4%;
-    margin-bottom: 5%;
-    width: 93%;
-    height: 80%;
-  }
-  @include computer {
-    width: auto;
-    height: auto;
-  }
-}
-
-.highcharts-container {
-  @include mobile {
-    width: 93%;
-    height: 80%;
-  }
-  @include computer {
-    width: auto;
-    height: auto;
-  }
-}*/
-
 .highcharts-grid-line {
   fill: none;
   stroke: rgba(112, 112, 112, 0.5);
