@@ -1,6 +1,6 @@
 /* tslint:disable:max-line-length */
 import React from 'react';
-import { NavLink, RouteComponentProps } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router-dom';
 import qs from 'qs';
 import {
   changeCompareBy,
@@ -11,17 +11,17 @@ import {
   updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
-import { Button, Checkbox, Dimmer, Dropdown, Grid, Image, Loader, Menu, Popup } from 'semantic-ui-react';
-import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
-import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
+import { Dimmer, Grid, Loader, Responsive } from 'semantic-ui-react';
 import ChartVis from 'app/modules/visualization/chart-vis';
 import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
-import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IRootState } from 'app/shared/reducers';
-import { hideHeader, showHeader, toggleMobileVisMenu } from 'app/shared/reducers/header';
+import { hideHeader, showHeader } from 'app/shared/reducers/header';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-import { IMeasure } from 'app/shared/model/measure.model';
+import VisMobileUpperToolbar from 'app/modules/dataset-page/vis-mobile-upper-toolbar';
+import VisToolbar from 'app/modules/dataset-page/vis-toolbar';
+import VisMobileLowerToolbar from 'app/modules/dataset-page/vis-mobile-lower-toolbar';
+import VisSeriesOptionMenu from 'app/modules/dataset-page/vis-series-option-menu';
 
 // tslint:disable:jsx-no-lambda
 
@@ -46,76 +46,14 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
     }
   }
 
-  togglePercentage = (e, { checked }) => {
+  togglePercentage = () => {
     const { dataset, visType, seriesOptions } = this.props;
-    const measure = _.find(this.props.dataset.measures as IMeasure[], m => (checked ? m.type === 'percentage' : m.type !== 'percentage'));
+    const measure = dataset.measures.find(m => m.id !== seriesOptions.measure);
     this.props.updateVisOptions(dataset, { visType, seriesOptions: { ...seriesOptions, measure: measure.id } });
   };
 
-  handleXAxisChange = (e, { value }) =>
-    this.props.updateVisOptions(this.props.dataset, {
-      visType: this.props.visType,
-      seriesOptions: { xAxis: value }
-    });
-
-  diagramConfigurationMenu = (visType, colorScheme, xAxisOptions, seriesOptions, dataset, dimensionCodes, fetchedCodeLists) => (
-    <div className="vis-options-menu">
-      <div className="vis-options-menu-title">
-        <span>Διαμορφώστε το γράφημα</span>
-        <Image src="/content/images/Assets/Reset.svg" />
-      </div>
-      {visType === 'chart' && (
-        <div className="vis-xAxis vis-options-menu-item">
-          <div className="vis-options-menu-label">
-            <Image inline src={`/content/images/Assets/x-axis-${colorScheme}.svg`} style={{ paddingLeft: '5px', paddingRight: '10px' }} />
-            Θέλω να δω αποτελέσματα για:
-          </div>
-          <Dropdown
-            className={`vis-options-dropdown ${colorScheme}`}
-            onChange={this.handleXAxisChange}
-            options={xAxisOptions}
-            selection
-            fluid
-            placeholder="Επιλέξτε μεταβλητή για τον άξονα x"
-            value={seriesOptions.xAxis}
-          />
-        </div>
-      )}
-      <div className="vis-filters vis-options-menu-item">
-        <div className="vis-options-menu-label">
-          <Image inline src={`/content/images/Assets/indicator-${colorScheme}.svg`} style={{ paddingLeft: '5px', paddingRight: '10px' }} />…
-          σε σχέση με:
-        </div>
-        {dataset.type === 'qb' ? (
-          <QbDatasetFilters
-            dimensionCodes={dimensionCodes}
-            dataset={dataset}
-            fetchedCodeLists={fetchedCodeLists}
-            seriesOptions={seriesOptions}
-            setFilterValue={this.props.setFilterValue}
-          />
-        ) : (
-          <RawDatasetFilters
-            dimensionCodes={dimensionCodes}
-            dataset={dataset}
-            fetchedCodeLists={fetchedCodeLists}
-            seriesOptions={seriesOptions}
-          />
-        )}
-      </div>
-      {/* {visType === 'chart' && (
-        <CompareByControl
-          dimensionCodes={dimensionCodes}
-          dataset={dataset}
-          seriesOptions={seriesOptions}
-          changeCompareBy={this.props.changeCompareBy}
-        />
-      )}*/}
-    </div>
-  );
-
-  copyCurrentURL = (visOptions: IVisOptions) => {
-    const encodedVisOptions = urlEncodeVisOptions(visOptions);
+  copyCurrentURL = () => {
+    const encodedVisOptions = urlEncodeVisOptions({ visType: this.props.visType, seriesOptions: this.props.seriesOptions });
     const url =
       window.location.protocol + '/' + window.location.host + '/#/dataset/' + this.props.dataset.id + '/data?' + encodedVisOptions;
     const textArea = document.createElement('textarea');
@@ -134,16 +72,9 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
 
   render() {
     const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, fetchedCodeLists, visType } = this.props;
-    const { dimensions, colorScheme } = dataset;
     if (!seriesOptions || !fetchedCodeLists) {
       return null;
     }
-
-    const xAxisOptions = dimensions.map(dimension => ({
-      id: dimension.id,
-      text: translateEntityField(dimension.name),
-      value: dimension.id
-    }));
 
     return (
       <div className="dataset-page-vis">
@@ -155,132 +86,21 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
           <div>
             <Grid verticalAlign="top">
               <Grid.Column only="computer tablet" tablet={6} computer={4}>
-                {this.diagramConfigurationMenu(
-                  visType,
-                  colorScheme,
-                  xAxisOptions,
-                  seriesOptions,
-                  dataset,
-                  dimensionCodes,
-                  fetchedCodeLists
-                )}
+                <VisSeriesOptionMenu dataset={dataset} />
               </Grid.Column>
               <Grid.Column mobile={16} tablet={10} computer={12}>
-                <div className={`vis-toolbar ${colorScheme}`}>
-                  <Menu fluid text className={colorScheme}>
-                    {dataset.measures.length === 2 && (
-                      <Menu.Item>
-                        <Image src="/content/images/Assets/Metric.svg" />
-                        <Checkbox
-                          className={colorScheme}
-                          toggle
-                          style={{ margin: '0 6px' }}
-                          onChange={this.togglePercentage}
-                          checked={_.find(dataset.measures as IMeasure[], { id: seriesOptions.measure }).type === 'percentage'}
-                        />
-                        <Image src="/content/images/Assets/Percentage.svg" />
-                      </Menu.Item>
-                    )}
-                    <Menu.Item
-                      as={NavLink}
-                      to="?type=chart"
-                      active={visType === 'chart'}
-                      style={{ marginLeft: '20%', marginRight: '50px' }}
-                    >
-                      {visType === 'chart' ? (
-                        <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
-                      ) : (
-                        <Image src={`/content/images/Assets/Chart.svg`} style={{ marginRight: '20px' }} />
-                      )}
-                      Γράφημα
-                    </Menu.Item>
-                    <Menu.Item as={NavLink} to="?type=map" active={visType === 'map'} style={{ marginRight: '50px' }}>
-                      {visType === 'map' ? (
-                        <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
-                      ) : (
-                        <Image src={`/content/images/Assets/Map.svg`} style={{ marginRight: '20px' }} />
-                      )}
-                      Χάρτης
-                    </Menu.Item>
-                    {/*<Menu.Item as={NavLink} to="?type=list" active={visType === 'list'}>
-                      {visType === 'list' ? (
-                        <Image src={`/content/images/Assets/List-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
-                      ) : (
-                        <Image src={`/content/images/Assets/List.svg`} style={{ marginRight: '20px' }} />
-                      )}
-                      Αποτελέσματα σε λίστα
-                    </Menu.Item>*/}
-                    <Menu.Item position="right">
-                      <Image src="/content/images/Assets/Download-icon.svg" />
-                    </Menu.Item>
-                    <Menu.Item>
-                      <Dropdown icon="share alternate" className={`share-dropdown ${colorScheme}`} pointing="top right">
-                        <Dropdown.Menu>
-                          <Popup
-                            on="click"
-                            content="Copied link!"
-                            trigger={
-                              <Dropdown.Item
-                                icon="linkify"
-                                text="Σύνδεσμος"
-                                onClick={() => {
-                                  this.copyCurrentURL({ visType, seriesOptions });
-                                }}
-                              />
-                            }
-                            basic
-                          />
-                          <Dropdown.Item icon="twitter" text="Twitter" disabled />
-                          <Dropdown.Item icon="facebook f" text="Facebook" disabled />
-                          <Dropdown.Item icon="mail outline" text="Email" disabled />
-                        </Dropdown.Menu>
-                      </Dropdown>
-                    </Menu.Item>
-                    <Menu.Item style={{ marginRight: '5%' }}>
-                      <Image src="/content/images/Assets/Download-icon.svg" />
-                    </Menu.Item>
-                  </Menu>
-                </div>
-                <div className="mob-vis-upper-toolbar">
-                  <Menu fluid text>
-                    <Menu.Item>
-                      <Image
-                        as={Button}
-                        onClick={this.props.toggleMobileVisMenu}
-                        style={{ padding: 0, margin: 0 }}
-                        src="/content/images/Assets/mobile-menu-icon.png"
-                      />
-                    </Menu.Item>
-                    <Menu.Item>
-                      <h1
-                        style={{
-                          fontFamily: 'ProximaNovaSemibold',
-                          color: '#1E1E1E',
-                          fontSize: '12px'
-                        }}
-                      >
-                        Διαμορφώστε το γράφημα
-                      </h1>
-                    </Menu.Item>
-                    <Menu.Item position="right">
-                      <Image src="/content/images/Assets/Reset.svg" />
-                    </Menu.Item>
-                    <Menu.Item as={NavLink} to="?type=chart">
-                      {visType === 'chart' ? (
-                        <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} />
-                      ) : (
-                        <Image src={`/content/images/Assets/Chart.svg`} />
-                      )}
-                    </Menu.Item>
-                    <Menu.Item style={{ marginRight: '5%' }} as={NavLink} to="?type=map">
-                      {visType === 'map' ? (
-                        <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} />
-                      ) : (
-                        <Image src={`/content/images/Assets/Map.svg`} />
-                      )}
-                    </Menu.Item>
-                  </Menu>
-                </div>
+                <Responsive {...Responsive.onlyMobile}>
+                  <VisMobileUpperToolbar dataset={dataset} seriesOptions={seriesOptions} visType={visType} />
+                </Responsive>
+                <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+                  <VisToolbar
+                    dataset={dataset}
+                    seriesOptions={seriesOptions}
+                    visType={visType}
+                    copyCurrentURL={this.copyCurrentURL}
+                    togglePercentage={this.togglePercentage}
+                  />
+                </Responsive>
                 <div className="vis-container">
                   {visType === 'map' ? (
                     <ChoroplethMapVis
@@ -300,44 +120,9 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                     />
                   )}
                 </div>
-                <div className="mob-vis-lower-toolbar">
-                  <Menu fluid text>
-                    <Menu.Item style={{ left: '5%' }}>
-                      <Image src="/content/images/Assets/Metric.svg" />
-                      <Checkbox className={colorScheme} toggle style={{ margin: '0 6px' }} />
-                      <Image src="/content/images/Assets/Percentage.svg" />
-                    </Menu.Item>
-                    <Menu.Item position="right">
-                      <Image src="/content/images/Assets/Download-icon.svg" style={{ width: '34.86px', height: '34.86px' }} />
-                    </Menu.Item>
-                    <Menu.Item>
-                      <Dropdown icon="share alternate" className={`share-dropdown ${colorScheme}`} pointing="top right">
-                        <Dropdown.Menu>
-                          <Popup
-                            on="click"
-                            content="Copied link!"
-                            trigger={
-                              <Dropdown.Item
-                                icon="linkify"
-                                text="Σύνδεσμος"
-                                onClick={() => {
-                                  this.copyCurrentURL({ visType, seriesOptions });
-                                }}
-                              />
-                            }
-                            basic
-                          />
-                          <Dropdown.Item icon="twitter" text="Twitter" disabled />
-                          <Dropdown.Item icon="facebook f" text="Facebook" disabled />
-                          <Dropdown.Item icon="mail outline" text="Email" disabled />
-                        </Dropdown.Menu>
-                      </Dropdown>
-                    </Menu.Item>
-                    <Menu.Item style={{ marginRight: '5%' }}>
-                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
-                    </Menu.Item>
-                  </Menu>
-                </div>
+                <Responsive {...Responsive.onlyMobile}>
+                  <VisMobileLowerToolbar dataset={dataset} copyCurrentURL={this.copyCurrentURL} />
+                </Responsive>
               </Grid.Column>
             </Grid>
           </div>
@@ -384,8 +169,7 @@ const mapDispatchToProps = {
   updateVisOptions,
   changeCompareBy,
   setFilterValue,
-  initVis,
-  toggleMobileVisMenu
+  initVis
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;
