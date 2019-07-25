@@ -56,6 +56,10 @@ export class ChartVis extends React.Component<IChartVisProp> {
     super(props);
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props.seriesList !== nextProps.seriesList;
+  }
+
   render() {
     const { dataset, seriesOptions, seriesList, xAxisCodes, loadingSeries } = this.props;
     const { dimensions, colorScheme } = dataset;
