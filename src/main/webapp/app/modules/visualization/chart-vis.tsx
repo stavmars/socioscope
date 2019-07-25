@@ -70,7 +70,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
 
     let seriesByParent;
 
-    if (!loadingSeries) {
+    if (!loadingSeries && seriesList && seriesList.length > 0) {
       if (xAxisDimension.type === 'time') {
         chartSeries = seriesList.map(series => ({
           id: series.id,
@@ -79,11 +79,14 @@ export class ChartVis extends React.Component<IChartVisProp> {
         }));
       } else {
         seriesByParent = prepareSeriesByParent(xAxisCodes.codesByNotation, seriesList);
-        chartSeries = seriesList.map(series => ({
-          id: series.id,
-          color: series.color,
-          data: prepareCategorySeriesData(xAxisCodes.codesByNotation, seriesByParent[''][series.id], seriesByParent)
-        }));
+
+        if (seriesByParent['']) {
+          chartSeries = seriesList.map(series => ({
+            id: series.id,
+            color: series.color,
+            data: prepareCategorySeriesData(xAxisCodes.codesByNotation, seriesByParent[''][series.id], seriesByParent)
+          }));
+        }
       }
     }
 
