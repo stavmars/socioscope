@@ -116,13 +116,10 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
 
   copyCurrentURL = (visOptions: IVisOptions) => {
     const encodedVisOptions = urlEncodeVisOptions(visOptions);
-    const currentURL = window.location.href;
-    const noParamsURL = currentURL.substring(0, currentURL.indexOf('?') + 1);
-    const completeURL = noParamsURL + encodedVisOptions;
-
+    const url =
+      window.location.protocol + '/' + window.location.host + '/#/dataset/' + this.props.dataset.id + '/data?' + encodedVisOptions;
     const textArea = document.createElement('textarea');
-
-    textArea.value = completeURL;
+    textArea.value = url;
     document.body.appendChild(textArea);
     textArea.select();
     try {
