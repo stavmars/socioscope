@@ -1139,7 +1139,7 @@
     "colorScheme": "color-scheme-1",
     "comment": {
       "el": "Το σύνολο δεδομένων περιλαμβάνει όλα τα επίσημα εκλογικά αποτελέσματα των Εθνικών Εκλογών (Σεπτέμβριος 1996 - Ιανουάριος 2015). Δίνεται η δυνατότητα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης σε επίπεδο Εκλογικής Περιφέρειας και Καλλικρατικού Δήμου.",
-      "en": "The dataset includes all official election results of the Greek Parliamentary Elections (September 1996 - January 2015) at constituency and municipality level."
+      "en": "The data set includes all the official election results of the National Elections (September 1996 - January 2015). Users have the option to produce graphs and maps at the level of the electoral district and Municipality."
     },
     "dimensions": [
       {
@@ -1163,7 +1163,10 @@
     "highlights": [
       {
         "id": "apoxi",
-        "description": "<span>Aπό το 2007 καταγράφεται μια <span class=\"text-accent\">σημαντική αύξηση της αποχής</span> που κορυφώνεται στο 37% στις εκλογές του Ιουνίου του 2012.</span>",
+        "description": {
+          "el": "<span>Η αποχή από τις εθνικές εκλογές αυξήθηκε σημαντικά την τελευταία δεκαετία. Ενώ στις βουλευτικές εκλογές του 1996, του 2000 και του 2004 η αποχή κυμαίνεται στο 24%, από  το 2007 καταγράφεται μια <span class=\"text-accent\">σημαντική αύξηση της αποχής</span> που κορυφώνεται στο 37% στις εκλογές του Ιουνίου του 2012.</span>",
+          "en": "<span>Abstaining from national elections has increased significantly over the last decade. While in the 1996, 2000 and 2004 parliamentary elections the abstention fluctuates around 24%, since 2007 there is a <span class=\"text-accent\">significant increase</span>, culminating in 37% in the June 2012 elections.</span>"
+        },
         "visType": "chart",
         "seriesOptions": {
           "xAxis": "elections",
@@ -1176,7 +1179,10 @@
       },
       {
         "id": "may_2012",
-        "description": "<span>Στις εκλογές του Μαΐου του <span class=\"text-accent\">2012</span> πάνω από <span class=\"text-accent\">1.000.000</span> ψήφοι πήγαν σε κόμματα εκτός Κοινοβουλίου, έναντι μόλις <span class=\"text-accent\">70.079</span> ψήφων το <span class=\"text-accent\">2004</span>.</span>",
+        "description": {
+          "el": "<span>Στις εκλογές του Μαΐου του <span class=\"text-accent\">2012</span> πάνω από <span class=\"text-accent\">1.000.000</span> ψήφοι πήγαν σε κόμματα εκτός Κοινοβουλίου, έναντι μόλις <span class=\"text-accent\">70.079</span> ψήφων το <span class=\"text-accent\">2004</span>.</span>",
+          "en": "<span>In the May <span class=\"text-accent\">2012</span> more than <span class=\"text-accent\">1.000.000</span> votes were shared to parties outside Parliament, while in the <span class=\"text-accent\">2004</span> elections the votes to parties without parliamentary representation were only <span class=\"text-accent\">70.079</span>.</span>"
+        },
         "visType": "chart",
         "seriesOptions": {
           "xAxis": "elections",
@@ -1185,6 +1191,22 @@
             "constituency": 0,
             "party": "without_seats"
           }
+        }
+      },
+      {
+        "id": "xrysi_augi",
+        "description": {
+          "el": "<span>Στις εκλογές του Ιανουαρίου 2015 στην εκλογική περιφέρεια Αττικής η <span class=\"text-accent\">Χρυσή Αυγή</span> συγκεντρώνει τα υψηλότερα ποσοστά της στους <span class=\"text-accent\">Δήμους Ασπροπύργου (14,5%)</span> και <span class=\"text-accent\">Αχαρνών (11,2%)</span>.</span>",
+          "en": "<span>In the elections of January 2015, <span class=\"text-accent\">the Golden Dawn</span>, in the Attika electoral periphery,  gathers its highest percentage in the municipalities of Athens <span class=\"text-accent\">Aspropirgos (14,5%)</span> and <span class=\"text-accent\">Acharnon (11,2%)</span>.</span>"
+        },
+        "visType": "map",
+        "seriesOptions": {
+            "xAxis": "constituency",
+            "measure": "votes_perc",
+            "dimensionFilters": {
+              "elections": 8,
+              "party": "golden_dawn"
+            }
         }
       }
     ]
