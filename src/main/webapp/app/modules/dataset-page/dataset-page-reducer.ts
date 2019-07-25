@@ -158,7 +158,7 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
   const { dimensionCodes } = getState().datasetPage;
   const { visType = 'chart', seriesOptions } = visOptions;
   const { dimensions } = dataset;
-  let { xAxis, compareBy } = seriesOptions;
+  let { xAxis, compareBy, measure } = seriesOptions;
   const filters = seriesOptions.dimensionFilters || {};
   if (visType === 'map') {
     xAxis = dimensions.find(dim => dim.type === 'geographic-area').id;
@@ -166,15 +166,18 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
   } else {
     xAxis = xAxis || dimensions[0].id;
   }
+
+  measure = measure || dataset.measures[0].id;
+
   let newSeriesOptions = {};
   if (dataset.type === 'qb') {
     const dimensionFilters = dimensions.filter(dimension => dimension.id !== xAxis).reduce((acc, dimension) => {
       acc[dimension.id] = filters[dimension.id] || dimensionCodes[dimension.id].codes[0].notation;
       return acc;
     }, {}) as IDimensionFilters;
-    newSeriesOptions = { xAxis, compareBy, dimensionFilters };
+    newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters };
   } else {
-    newSeriesOptions = { xAxis, compareBy };
+    newSeriesOptions = { xAxis, compareBy, measure };
   }
   dispatch({
     type: ACTION_TYPES.UPDATE_VIS_OPTIONS,

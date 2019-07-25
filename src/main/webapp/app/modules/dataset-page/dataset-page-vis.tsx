@@ -21,6 +21,8 @@ import { IRootState } from 'app/shared/reducers';
 import { hideHeader, showHeader, toggleMobileVisMenu } from 'app/shared/reducers/header';
 import { connect } from 'react-redux';
 import _ from 'lodash';
+import { IMeasure } from 'app/shared/model/measure.model';
+
 // tslint:disable:jsx-no-lambda
 
 export interface IDatasetPageVisProp extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
@@ -43,6 +45,12 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
       this.props.updateVisOptions(this.props.dataset, this.props.routeVisOptions);
     }
   }
+
+  togglePercentage = (e, { checked }) => {
+    const { dataset, visType, seriesOptions } = this.props;
+    const measure = _.find(this.props.dataset.measures as IMeasure[], m => (checked ? m.type === 'percentage' : m.type !== 'percentage'));
+    this.props.updateVisOptions(dataset, { visType, seriesOptions: { ...seriesOptions, measure: measure.id } });
+  };
 
   handleXAxisChange = (e, { value }) =>
     this.props.updateVisOptions(this.props.dataset, {
@@ -163,11 +171,19 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
               <Grid.Column mobile={16} tablet={10} computer={12}>
                 <div className={`vis-toolbar ${colorScheme}`}>
                   <Menu fluid text className={colorScheme}>
-                    <Menu.Item>
-                      <Image src="/content/images/Assets/Metric.svg" />
-                      <Checkbox className={colorScheme} toggle style={{ margin: '0 6px' }} />
-                      <Image src="/content/images/Assets/Percentage.svg" />
-                    </Menu.Item>
+                    {dataset.measures.length === 2 && (
+                      <Menu.Item>
+                        <Image src="/content/images/Assets/Metric.svg" />
+                        <Checkbox
+                          className={colorScheme}
+                          toggle
+                          style={{ margin: '0 6px' }}
+                          onChange={this.togglePercentage}
+                          checked={_.find(dataset.measures as IMeasure[], { id: seriesOptions.measure }).type === 'percentage'}
+                        />
+                        <Image src="/content/images/Assets/Percentage.svg" />
+                      </Menu.Item>
+                    )}
                     <Menu.Item
                       as={NavLink}
                       to="?type=chart"

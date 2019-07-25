@@ -220,7 +220,7 @@ public class DataSetService {
                     List<DimensionValue> dimensionValues = seriesOptions.getDimensionFilters().entrySet().stream().filter(entry -> entry.getValue() != null)
                         .map(entry -> new DimensionValue(entry.getKey(), entry.getValue())).collect(Collectors.toList());
 
-                    List<Observation> observations = observationRepository.findByDatasetAndDimensions(datasetId, dimensionValues);
+                    List<Observation> observations = observationRepository.findObservations(datasetId, dimensionValues, seriesOptions.getMeasure());
 
                     return observationMapper.observationsToMultipleSeries(observations, seriesOptions);
                 } else {
