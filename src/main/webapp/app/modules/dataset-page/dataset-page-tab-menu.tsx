@@ -4,7 +4,7 @@ import { Grid, Menu, Image, Responsive, Icon } from 'semantic-ui-react';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { NavLink } from 'react-router-dom';
-import { Translate } from 'react-jhipster';
+import { Translate, translate } from 'react-jhipster';
 import { toggleTopicsMenu, toggleMobileMenu } from 'app/shared/reducers/header';
 import { connect } from 'react-redux';
 // tslint:disable max-line-length
@@ -84,7 +84,7 @@ export class DatasetPageTabMenu extends React.Component<IDatasetPageTabMenuProp>
               <div>Highlights</div>
             </Grid.Column>
             <Grid.Column className={`dataset-page-tab-menu-item ${dataset.colorScheme}`} as={NavLink} to={`/dataset/${dataset.id}/data`}>
-              <div>Δεδομένα</div>
+              <div>{translate('socioscopeApp.dataSet.tabMenu.data')}</div>
             </Grid.Column>
             <Grid.Column
               className={`dataset-page-tab-menu-item ${dataset.colorScheme}`}
@@ -92,7 +92,7 @@ export class DatasetPageTabMenu extends React.Component<IDatasetPageTabMenuProp>
               exact
               to={`/dataset/${dataset.id}/about`}
             >
-              <div>Ταυτότητα Έρευνας</div>
+              <div>{translate('socioscopeApp.dataSet.tabMenu.id')}</div>
             </Grid.Column>
           </Grid.Row>
         </Grid>
