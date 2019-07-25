@@ -342,6 +342,14 @@
   }
 }
 
+@for $level from 1 through 10 {
+  .compare-by-option-level-#{$level} {
+    .checkbox {
+      padding-left: #{$level * 20}px !important;
+    }
+  }
+}
+
 .vis-container {
   position: relative;
   margin-top: 5%;

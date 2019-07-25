@@ -62,15 +62,15 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
               </List.Item>)}
           </List>;*/
 
-    const createCodeOptions = (codes: IDimensionCode[]) => (
-      <Form>
-        {codes.map(code => (
-          <Form.Field key={code.notation}>
+    const createCompareByOptions = (codes: IDimensionCode[], level = 0) =>
+      codes.map(code => (
+        <>
+          <Form.Field className={`compare-by-option-level-${level}`} key={code.notation}>
             <Checkbox label={translateEntityField(code.name)} onClick={this.toggleCompareByOption} />
           </Form.Field>
-        ))}
-      </Form>
-    );
+          {code.children && createCompareByOptions(code.children, level + 1)}
+        </>
+      ));
 
     return (
       <div className="vis-compareBy vis-options-menu-item">
@@ -96,7 +96,7 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
                 <Accordion>
                   <Accordion.Title active={activeIndex === dimension.id} content={translateEntityField(dimension.name)} />
                   <Accordion.Content active={activeIndex === dimension.id}>
-                    {createCodeOptions(dimensionCodes[dimension.id].codes)}
+                    <Form>{createCompareByOptions(dimensionCodes[dimension.id].codes)}</Form>
                   </Accordion.Content>
                 </Accordion>
               </Dropdown.Item>
