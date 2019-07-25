@@ -11,7 +11,7 @@ import {
   updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
-import { Button, Checkbox, Dimmer, Dropdown, Grid, Image, List, Loader, Menu, Popup } from 'semantic-ui-react';
+import { Button, Checkbox, Dimmer, Dropdown, Grid, Image, Loader, Menu, Popup } from 'semantic-ui-react';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
 import ChartVis from 'app/modules/visualization/chart-vis';
@@ -168,40 +168,42 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
               </Grid.Column>
               <Grid.Column mobile={16} tablet={10} computer={12}>
                 <div className={`vis-toolbar ${colorScheme}`}>
-                  <div className={colorScheme}>
-                    <Grid columns="equal">
-                      <Grid.Column>
-                        <Menu text>
-                          {dataset.measures.length === 2 && (
-                            <Menu.Item style={{ marginRight: '25px' }}>
-                              <Image src="/content/images/Assets/Metric.svg" />
-                              <Checkbox
-                                className={colorScheme}
-                                toggle
-                                style={{ margin: '0 6px' }}
-                                onChange={this.togglePercentage}
-                                checked={_.find(dataset.measures as IMeasure[], { id: seriesOptions.measure }).type === 'percentage'}
-                              />
-                              <Image src="/content/images/Assets/Percentage.svg" />
-                            </Menu.Item>
-                          )}
-                          <Menu.Item as={NavLink} to="?type=chart" active={visType === 'chart'} style={{ marginRight: '50px' }}>
-                            {visType === 'chart' ? (
-                              <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
-                            ) : (
-                              <Image src={`/content/images/Assets/Chart.svg`} style={{ marginRight: '20px' }} />
-                            )}
-                            Γράφημα
-                          </Menu.Item>
-                          <Menu.Item as={NavLink} to="?type=map" active={visType === 'map'} style={{ marginRight: '50px' }}>
-                            {visType === 'map' ? (
-                              <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
-                            ) : (
-                              <Image src={`/content/images/Assets/Map.svg`} style={{ marginRight: '20px' }} />
-                            )}
-                            Χάρτης
-                          </Menu.Item>
-                          {/*<Menu.Item as={NavLink} to="?type=list" active={visType === 'list'}>
+                  <Menu fluid text className={colorScheme}>
+                    {dataset.measures.length === 2 && (
+                      <Menu.Item>
+                        <Image src="/content/images/Assets/Metric.svg" />
+                        <Checkbox
+                          className={colorScheme}
+                          toggle
+                          style={{ margin: '0 6px' }}
+                          onChange={this.togglePercentage}
+                          checked={_.find(dataset.measures as IMeasure[], { id: seriesOptions.measure }).type === 'percentage'}
+                        />
+                        <Image src="/content/images/Assets/Percentage.svg" />
+                      </Menu.Item>
+                    )}
+                    <Menu.Item
+                      as={NavLink}
+                      to="?type=chart"
+                      active={visType === 'chart'}
+                      style={{ marginLeft: '20%', marginRight: '50px' }}
+                    >
+                      {visType === 'chart' ? (
+                        <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
+                      ) : (
+                        <Image src={`/content/images/Assets/Chart.svg`} style={{ marginRight: '20px' }} />
+                      )}
+                      {translate('socioscopeApp.dataSet.visualization.graph')}
+                    </Menu.Item>
+                    <Menu.Item as={NavLink} to="?type=map" active={visType === 'map'} style={{ marginRight: '50px' }}>
+                      {visType === 'map' ? (
+                        <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
+                      ) : (
+                        <Image src={`/content/images/Assets/Map.svg`} style={{ marginRight: '20px' }} />
+                      )}
+                      {translate('socioscopeApp.dataSet.visualization.map')}
+                    </Menu.Item>
+                    {/*<Menu.Item as={NavLink} to="?type=list" active={visType === 'list'}>
                       {visType === 'list' ? (
                         <Image src={`/content/images/Assets/List-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
                       ) : (
@@ -209,43 +211,36 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       )}
                       Αποτελέσματα σε λίστα
                     </Menu.Item>*/}
-                        </Menu>
-                      </Grid.Column>
-                      <Grid.Column width={4}>
-                        <List floated="right" horizontal>
-                          <List.Item>
-                            <Image src="/content/images/Assets/Download-icon.svg" />
-                          </List.Item>
-                          <List.Item>
-                            <Dropdown icon="share alternate" className={`share-dropdown ${colorScheme}`} pointing="top right">
-                              <Dropdown.Menu>
-                                <Popup
-                                  on="click"
-                                  content="Copied link!"
-                                  trigger={
-                                    <Dropdown.Item
-                                      icon="linkify"
-                                      text="Σύνδεσμος"
-                                      onClick={() => {
-                                        this.copyCurrentURL({ visType, seriesOptions });
-                                      }}
-                                    />
-                                  }
-                                  basic
-                                />
-                                <Dropdown.Item icon="twitter" text="Twitter" disabled />
-                                <Dropdown.Item icon="facebook f" text="Facebook" disabled />
-                                <Dropdown.Item icon="mail outline" text="Email" disabled />
-                              </Dropdown.Menu>
-                            </Dropdown>
-                          </List.Item>
-                          <List.Item>
-                            <Image src="/content/images/Assets/Download-icon.svg" />
-                          </List.Item>
-                        </List>
-                      </Grid.Column>
-                    </Grid>
-                  </div>
+                    <Menu.Item position="right">
+                      <Image src="/content/images/Assets/Download-icon.svg" />
+                    </Menu.Item>
+                    <Menu.Item>
+                      <Dropdown icon="share alternate" className={`share-dropdown ${colorScheme}`} pointing="top right">
+                        <Dropdown.Menu>
+                          <Popup
+                            on="click"
+                            content="Copied link!"
+                            trigger={
+                              <Dropdown.Item
+                                icon="linkify"
+                                text="Σύνδεσμος"
+                                onClick={() => {
+                                  this.copyCurrentURL({ visType, seriesOptions });
+                                }}
+                              />
+                            }
+                            basic
+                          />
+                          <Dropdown.Item icon="twitter" text="Twitter" disabled />
+                          <Dropdown.Item icon="facebook f" text="Facebook" disabled />
+                          <Dropdown.Item icon="mail outline" text="Email" disabled />
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </Menu.Item>
+                    <Menu.Item style={{ marginRight: '5%' }}>
+                      <Image src="/content/images/Assets/Download-icon.svg" />
+                    </Menu.Item>
+                  </Menu>
                 </div>
                 <div className="mob-vis-upper-toolbar">
                   <Menu fluid text>
