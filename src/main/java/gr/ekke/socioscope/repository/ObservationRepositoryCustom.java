@@ -12,6 +12,6 @@ import java.util.List;
 @SuppressWarnings("unused")
 public interface ObservationRepositoryCustom {
 
-    List<Observation> findByDatasetAndDimensions(String datasetId, List<DimensionValue> dimensionValues);
+    List<Observation> findObservations(String datasetId, List<DimensionValue> dimensionValues, String measureId);
 
 }
