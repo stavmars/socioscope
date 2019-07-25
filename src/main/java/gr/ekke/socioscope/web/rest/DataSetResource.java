@@ -8,7 +8,6 @@ import gr.ekke.socioscope.service.dto.Series;
 import gr.ekke.socioscope.domain.SeriesOptions;
 import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.ObservationRepository;
-import gr.ekke.socioscope.security.SecurityUtils;
 import gr.ekke.socioscope.service.DataSetService;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
 import gr.ekke.socioscope.web.rest.util.HeaderUtil;
@@ -24,7 +23,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 /**
  * REST controller for managing DataSet.

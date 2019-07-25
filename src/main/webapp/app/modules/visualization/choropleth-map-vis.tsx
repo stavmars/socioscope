@@ -11,7 +11,7 @@ import axios from 'axios';
 import chroma from 'chroma-js';
 import { accentColors } from 'app/config/constants';
 import { translateEntityField } from 'app/shared/util/entity-utils';
-import { Button, Header } from 'semantic-ui-react';
+import { Button, Header, Icon } from 'semantic-ui-react';
 
 export interface IChoroplethVisProp {
   dataset: IDataSet;
@@ -87,10 +87,12 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
     if (levelSeriesPoints.length === 0) {
       return (
         <div>
-          {levelButtons}
-          <Header style={{ marginTop: '100px' }} textAlign="center">
+          <Header as="h2" icon textAlign="center" style={{ marginTop: '165px', fontFamily: 'ProximaNovaBold' }}>
+            <Icon name="database" />
             No data found
+            <Header.Subheader>Please choose a different input</Header.Subheader>
           </Header>
+          {levelButtons}
         </div>
       );
     }

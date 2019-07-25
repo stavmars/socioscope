@@ -7,6 +7,7 @@ export interface IDimension {
   type?: string;
   creator?: IUser;
   geoMaps?: IGeoMap[];
+  dependencies?: string[];
 }
 
 export interface IGeoMap {

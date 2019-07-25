@@ -49,7 +49,8 @@ const migrateDataSets = async () => {
                       'el' : greekData.data.dimensions[key].label,
                       'en' : englishData.data.dimensions[key].label
                     },
-                    'type' : greekData.data.dimensions[key].type
+                    'type' : greekData.data.dimensions[key].type,
+                    'dependencies': greekData.data.dimensions[key].dependencies ? greekData.data.dimensions[key].dependencies : []
                   };
                   // Append each new Dimension to the corresponding file
                   if (!dimensions.some(el => el.id === dimension.id)) {

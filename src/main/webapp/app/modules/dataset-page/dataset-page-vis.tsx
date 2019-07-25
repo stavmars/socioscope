@@ -11,7 +11,7 @@ import {
   updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
-import { Button, Checkbox, Dimmer, Dropdown, Grid, Image, Loader, Menu } from 'semantic-ui-react';
+import { Button, Checkbox, Dimmer, Dropdown, Grid, Image, Loader, Menu, Popup } from 'semantic-ui-react';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
 import ChartVis from 'app/modules/visualization/chart-vis';
@@ -21,6 +21,7 @@ import { IRootState } from 'app/shared/reducers';
 import { hideHeader, showHeader, toggleMobileVisMenu } from 'app/shared/reducers/header';
 import { connect } from 'react-redux';
 import _ from 'lodash';
+// tslint:disable:jsx-no-lambda
 
 export interface IDatasetPageVisProp extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
@@ -105,6 +106,27 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
     </div>
   );
 
+  copyCurrentURL = (visOptions: IVisOptions) => {
+    const encodedVisOptions = urlEncodeVisOptions(visOptions);
+    const currentURL = window.location.href;
+    const noParamsURL = currentURL.substring(0, currentURL.indexOf('?') + 1);
+    const completeURL = noParamsURL + encodedVisOptions;
+
+    const textArea = document.createElement('textarea');
+
+    textArea.value = completeURL;
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+      const successful = document.execCommand('copy');
+      // const msg = successful ? 'Copied text!' : 'Copied Failed!';
+      // console.log('Copying text command was ' + msg);
+    } catch (err) {
+      // console.log('Oops, unable to copy');
+    }
+    document.body.removeChild(textArea);
+  };
+
   render() {
     const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, fetchedCodeLists, visType } = this.props;
     const { dimensions, colorScheme } = dataset;
@@ -179,9 +201,22 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       <Image src="/content/images/Assets/Download-icon.svg" />
                     </Menu.Item>
                     <Menu.Item>
-                      <Dropdown icon="share alternate" className={`share-dropdown ${colorScheme}`}>
+                      <Dropdown icon="share alternate" className={`share-dropdown ${colorScheme}`} pointing="top right">
                         <Dropdown.Menu>
-                          <Dropdown.Item icon="linkify" text="Σύνδεσμος" />
+                          <Popup
+                            on="click"
+                            content="Copied link!"
+                            trigger={
+                              <Dropdown.Item
+                                icon="linkify"
+                                text="Σύνδεσμος"
+                                onClick={() => {
+                                  this.copyCurrentURL({ visType, seriesOptions });
+                                }}
+                              />
+                            }
+                            basic
+                          />
                           <Dropdown.Item icon="twitter" text="Twitter" disabled />
                           <Dropdown.Item icon="facebook f" text="Facebook" disabled />
                           <Dropdown.Item icon="mail outline" text="Email" disabled />
@@ -263,7 +298,27 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       <Image src="/content/images/Assets/Download-icon.svg" style={{ width: '34.86px', height: '34.86px' }} />
                     </Menu.Item>
                     <Menu.Item>
-                      <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                      <Dropdown icon="share alternate" className={`share-dropdown ${colorScheme}`} pointing="top right">
+                        <Dropdown.Menu>
+                          <Popup
+                            on="click"
+                            content="Copied link!"
+                            trigger={
+                              <Dropdown.Item
+                                icon="linkify"
+                                text="Σύνδεσμος"
+                                onClick={() => {
+                                  this.copyCurrentURL({ visType, seriesOptions });
+                                }}
+                              />
+                            }
+                            basic
+                          />
+                          <Dropdown.Item icon="twitter" text="Twitter" disabled />
+                          <Dropdown.Item icon="facebook f" text="Facebook" disabled />
+                          <Dropdown.Item icon="mail outline" text="Email" disabled />
+                        </Dropdown.Menu>
+                      </Dropdown>
                     </Menu.Item>
                     <Menu.Item style={{ marginRight: '5%' }}>
                       <Image src="/content/images/Assets/mobile-menu-icon.png" />
@@ -287,7 +342,7 @@ const parseRouteVisOptions = (query: string): IVisOptions => {
 
 const urlEncodeVisOptions = (visOptions: IVisOptions) => {
   const { visType, seriesOptions = {} } = visOptions;
-  qs.stringify(
+  return qs.stringify(
     {
       type: visType,
       x: seriesOptions.xAxis,

@@ -8,7 +8,6 @@ import gr.ekke.socioscope.repository.DimensionRepository;
 import gr.ekke.socioscope.repository.search.DimensionSearchRepository;
 import gr.ekke.socioscope.security.SecurityUtils;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
-import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
