@@ -1218,17 +1218,45 @@
   {
     "id": "deputies",
     "name": {
-      "el": "Πολιτικό Προσωπικό",
-      "en": "Πολιτικό Προσωπικό"
+      "el": "Βουλευτές Ελληνικού Κοινοβουλίου (1989-2019)",
+      "en": "Members of the Greek Parliament (1989-2019)"
     },
     "type": "raw",
-    "colorScheme": "color-scheme-1",
+    "colorScheme": "color-scheme-2",
     "comment": {
-      "el": "Το σύνολο δεδομένων περιλαμβάνει όλα τα επίσημα εκλογικά αποτελέσματα των Εθνικών Εκλογών (Σεπτέμβριος 1996 - Ιανουάριος 2015). Δίνεται η δυνατότητα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης σε επίπεδο Εκλογικής Περιφέρειας και Καλλικρατικού Δήμου.",
-      "en": "The dataset includes all official election results of the Greek Parliamentary Elections (September 1996 - January 2015) at constituency and municipality level."
+      "el": "Το σύνολο δεδομένων «Πολιτικό Προσωπικό» περιλαμβάνει στοιχεία για κοινωνικό-δημογραφικά χαρακτηριστικά και την πολιτική προϋπηρεσία 1060 μελών του Ελληνικού Κοινοβουλίου που εκλέχθηκαν στις Κοινοβουλευτικές περιόδους από Θ’ (1996-2000) έως και ΙΣΤ' (Ιανουάριος-Αύγουστος 2015). Κάθε κοινοβουλευτική σύνθεση περιλαμβάνει το σύνολο όσων εκλέχθηκαν αρχικά ή, μετέπειτα, κατόπιν αντικατάστασης. Οι σχετικές πληροφορίες αντλήθηκαν από τον ιστότοπο του Ελληνικού Κοινοβουλίου και τα επίσημα βιογραφικά των βουλευτών/τριών, ενώ η επιλογή των μεταβλητών έγινε από ερευνητική ομάδα. Η εφαρμογή δίνει την δυνατότητα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης ορισμένων μεταβλητών. Τα πλήρη στοιχεία για κάθε βουλευτή/τρια εμφανίζονται κάτω από την επιλογή «Αποτελέσματα Αναζήτησης».",
+      "en": "The data set «Members of the Greek Parliament (1989-2019)» includes data on socio-demographic characteristics and the political experience of all members of the Greek Parliament elected in the Parliamentary Periods from 1989 to 2019. Each parliamentary composition includes all MPs originally elected or subsequently replaced. Data were obtained from the website of the Greek Parliament (http://www.hellenicparliament.gr) and the official biographies of the deputies, while the selection of the variables was done by a research team. The application enables the visual analysis and mapping of select variables. The full details for each MP appear under the 'Search Results' option."
     },
     "dimensions": [],
     "measures": [],
-    "highlights": []
+    "highlights": [
+      {
+        "id": "gender",
+        "description": {
+          "el": "<span>Στις 1211 περιπτώσεις εκλεγμένων Βουλευτών για το διάστημα 1993 – 2019 το 83% είναι άνδρες και το 17% γυναίκες. Οι κοινοβουλευτικές συνθέσεις με τον χαμηλότερο αριθμό γυναικών είναι η Η’ περίοδος (1993-1996) με μόλις 6,7% γυναίκες και Θ’ περίοδος (1996-2000) με μόλις 6,2% γυναίκες. Αντίθετα, στην ΙΕ’ περίοδο (2012-2014) και στην ΙΣΤ’ (2015) το ποσοστό των γυναικών ανέρχεται σε 22,2% και 23% αντίστοιχα.</span>",
+          "en": "<span>In 1211 cases of elected MPs between 1993 and 2019, 83% are men and 17% are women. The parliamentary compositions with the lowest number of women are the period (1993-1996) with only 6.7% women and the 3rd period (1996-2000) with only 6.2% women. By contrast, in the 2012-2014 and 2015-2015 periods, the percentage of women is 22.2% and 23%, respectively.</span>"
+        },
+        "visType": "chart",
+        "seriesOptions": {}
+      },
+      {
+        "id": "family_networks",
+        "description": {
+          "el": "<span>Οσο πιο μεγάλη είναι μια εκλογική περιφέρεια, τόσο πιθανότερο είναι οι βουλευτές που εκλέγονται σε αυτή να προέρχονται από «πολιτική» οικογένεια. ‘Ετσι, στην Β Αθήνας σχεδον 1 στους 5 βουλευτές έχει συγγενή με προηγούμενη θητεία στο Κοινοβούλιο.</span>",
+          "en": "<span>The bigger an electoral region, the more likely is for the elected members to derive from a \"political\" family. Thus, in Athens, almost 1 in 5 Members have an affinitive with a previous term in Parliament.</span>"
+        },
+        "visType": "chart",
+        "seriesOptions": {}
+      },
+      {
+        "id": "education",
+        "description": {
+          "el": "<span>To 57% των εκλεγμένων Βουλευτών/τριων από το 1993 έως το 2019 κατέχουν δίπλωμα ΑΕΙ. Το 23% είναι κάτοχοι μεταπτυχιακού τίτλου σπουδών και τέλος το 14% έχει διδακτορικό. Η Βουλή IZ (2015-2019) είναι πιθανώς η πιο «μορφωμένη» της Μεταπολίτευσης καθώς έχει τους περισσότερους κατόχους διδακτορικού (16,3%) της τελευταίας εικοσιπενταετίας.</span>",
+          "en": "<span>Six out of ten (57%) of elected Members from 1993 to 2019 hold a university degree. Two out of ten (23%) hold a postgraduate degree and the 14% hold a PhD. The parliament term 2015-2019 is probably the most  \"educated\" of the ‘Metapolitefsis’ as it includes the most doctorate holders (16.3%) of the last twenty-five years.</span>"
+        },
+        "visType": "chart",
+        "seriesOptions": {}
+      }
+    ]
   }
 ]
