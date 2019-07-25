@@ -23,7 +23,6 @@ import VisToolbar from 'app/modules/dataset-page/vis-toolbar';
 import VisMobileLowerToolbar from 'app/modules/dataset-page/vis-mobile-lower-toolbar';
 import VisSeriesOptionMenu from 'app/modules/dataset-page/vis-series-option-menu';
 
-import { translate } from 'react-jhipster';
 // tslint:disable:jsx-no-lambda
 
 export interface IDatasetPageVisProp extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
@@ -87,7 +86,16 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
           <div>
             <Grid verticalAlign="top">
               <Grid.Column only="computer tablet" tablet={6} computer={4}>
-                <VisSeriesOptionMenu dataset={dataset} />
+                <VisSeriesOptionMenu
+                  seriesOptions={seriesOptions}
+                  visType={visType}
+                  fetchedCodeLists={fetchedCodeLists}
+                  dimensionCodes={dimensionCodes}
+                  dataset={dataset}
+                  changeCompareBy={this.props.changeCompareBy}
+                  setFilterValue={this.props.setFilterValue}
+                  updateVisOptions={this.props.updateVisOptions}
+                />
               </Grid.Column>
               <Grid.Column mobile={16} tablet={10} computer={12}>
                 <Responsive {...Responsive.onlyMobile}>
@@ -168,9 +176,9 @@ const mapDispatchToProps = {
   showHeader,
   hideHeader,
   updateVisOptions,
-  changeCompareBy,
   setFilterValue,
-  initVis
+  initVis,
+  changeCompareBy
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;

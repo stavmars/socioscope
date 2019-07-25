@@ -34,14 +34,14 @@ export class DatasetPage extends React.Component<IDatasetPageProp> {
         <Route exact path={`(${match.url}|${match.url}/about)`} render={() => <Header isFixed className={dataset.colorScheme} />} />
         <div className="dataset-page">
           <Switch>
-            <Route path={`${match.url}/data`} render={() => <DatasetPageTabMenu dataset={dataset} isMinimized />} />
-            <Route path={`${match.url}/`} render={() => <DatasetPageTabMenu dataset={dataset} />} />
+            <Route path={`${match.url}/data`} render={() => <DatasetPageTabMenu dataset={dataset} {...this.props} isMinimized />} />
+            <Route path={`${match.url}/`} render={() => <DatasetPageTabMenu dataset={dataset} {...this.props} />} />
           </Switch>
 
           <Switch>
-            <Route path={`${match.url}/data`} render={props => <DatasetPageVis {...props} dataset={dataset} />} />
-            <Route exact path={`${match.url}/`} render={props => <DatasetPageHighlights {...props} dataset={dataset} />} />
-            <Route exact path={`${match.url}/about`} render={props => <DatasetPageAbout {...props} dataset={dataset} />} />
+            <Route path={`${match.url}/data`} render={() => <DatasetPageVis dataset={dataset} {...this.props} />} />
+            <Route exact path={`${match.url}/`} render={() => <DatasetPageHighlights dataset={dataset} {...this.props} />} />
+            <Route exact path={`${match.url}/about`} render={() => <DatasetPageAbout dataset={dataset} {...this.props} />} />
           </Switch>
         </div>
       </div>

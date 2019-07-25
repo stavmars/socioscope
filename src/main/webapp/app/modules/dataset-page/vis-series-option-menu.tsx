@@ -2,17 +2,26 @@ import React from 'react';
 import './dataset-page.scss';
 import { Dropdown, Image } from 'semantic-ui-react';
 import { IDataSet } from 'app/shared/model/data-set.model';
-import { connect } from 'react-redux';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
-import { changeCompareBy, setFilterValue, updateVisOptions } from 'app/modules/dataset-page/dataset-page-reducer';
-import { IRootState } from 'app/shared/reducers';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { translate } from 'react-jhipster';
+import CompareByControl from 'app/modules/dataset-page/compareBy-control';
+import { ISeriesOptions } from 'app/shared/model/series-options.model';
+import { changeCompareBy, setFilterValue, updateVisOptions } from 'app/modules/dataset-page/dataset-page-reducer';
 
-export interface IVisSeriesOptionMenuProp extends DispatchProps, StateProps {
+export interface IVisSeriesOptionMenuProp {
   dataset: IDataSet;
+  dimensionCodes: any;
+  fetchedCodeLists: boolean;
+  seriesOptions: ISeriesOptions;
   visType: string;
+
+  changeCompareBy: typeof changeCompareBy;
+
+  setFilterValue: typeof setFilterValue;
+
+  updateVisOptions: typeof updateVisOptions;
 }
 
 export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuProp> {
@@ -85,36 +94,17 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
             />
           )}
         </div>
-        {/* {visType === 'chart' && (
-        <CompareByControl
-          dimensionCodes={dimensionCodes}
-          dataset={dataset}
-          seriesOptions={seriesOptions}
-          changeCompareBy={this.props.changeCompareBy}
-        />
-      )}*/}
+        {visType === 'chart' && (
+          <CompareByControl
+            dimensionCodes={dimensionCodes}
+            dataset={dataset}
+            seriesOptions={seriesOptions}
+            changeCompareBy={this.props.changeCompareBy}
+          />
+        )}
       </div>
     );
   }
 }
 
-const mapStateToProps = (storeState: IRootState) => ({
-  dimensionCodes: storeState.datasetPage.dimensionCodes,
-  fetchedCodeLists: storeState.datasetPage.fetchedCodeLists,
-  seriesOptions: storeState.datasetPage.seriesOptions,
-  visType: storeState.datasetPage.visType
-});
-
-const mapDispatchToProps = {
-  changeCompareBy,
-  setFilterValue,
-  updateVisOptions
-};
-
-type StateProps = ReturnType<typeof mapStateToProps>;
-type DispatchProps = typeof mapDispatchToProps;
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(VisSeriesOptionMenu);
+export default VisSeriesOptionMenu;
