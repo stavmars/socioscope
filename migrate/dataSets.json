@@ -1141,6 +1141,10 @@
       "el": "Το σύνολο δεδομένων περιλαμβάνει όλα τα επίσημα εκλογικά αποτελέσματα των Εθνικών Εκλογών (Σεπτέμβριος 1996 - Ιανουάριος 2015). Δίνεται η δυνατότητα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης σε επίπεδο Εκλογικής Περιφέρειας και Καλλικρατικού Δήμου.",
       "en": "The data set includes all the official election results of the National Elections (September 1996 - January 2015). Users have the option to produce graphs and maps at the level of the electoral district and Municipality."
     },
+    "sources": {
+      "el": "Singular Logic, Υπουργείο Εσωτερικών – Διεύθυνση Εκλογών.",
+      "en": "Singular Logic, Ministry of Interior – Department of Elections."
+    },
     "dimensions": [
       {
         "id": "party"

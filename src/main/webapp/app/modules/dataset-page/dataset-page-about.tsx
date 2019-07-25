@@ -3,6 +3,7 @@ import React from 'react';
 import { Grid, Image, Responsive } from 'semantic-ui-react';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IDataSet } from 'app/shared/model/data-set.model';
+import { translate } from 'react-jhipster';
 
 // tslint:disable: max-line-length
 
@@ -19,11 +20,7 @@ export class DatasetPageAbout extends React.Component<IDatasetPageAboutProp> {
         {translateEntityField(dataset.comment)}
         <br />
         <br />
-        <span style={{ fontFamily: 'ProximaNovaBold' }}>Ερευνήτρια:</span> Μανίνα Κακεπάκη (ΕΚΚΕ) /{' '}
-        <span style={{ fontFamily: 'ProximaNovaBold' }}>mkakepaki@ekke.gr</span>
-        <br />
-        <br />
-        <span style={{ fontFamily: 'ProximaNovaBold' }}>Πηγές:</span> Singular Logic, Υπουργείο Εσωτερικών – Διεύθυνση Εκλογών.
+        <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.sources')}:</span> {translateEntityField(dataset.sources)}
       </div>
     );
 
