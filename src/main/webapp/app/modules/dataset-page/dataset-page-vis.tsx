@@ -23,6 +23,7 @@ import { connect } from 'react-redux';
 import _ from 'lodash';
 import { IMeasure } from 'app/shared/model/measure.model';
 
+import { translate } from 'react-jhipster';
 // tslint:disable:jsx-no-lambda
 
 export interface IDatasetPageVisProp extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
@@ -61,14 +62,14 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   diagramConfigurationMenu = (visType, colorScheme, xAxisOptions, seriesOptions, dataset, dimensionCodes, fetchedCodeLists) => (
     <div className="vis-options-menu">
       <div className="vis-options-menu-title">
-        <span>Διαμορφώστε το γράφημα</span>
+        <span>{translate('socioscopeApp.dataSet.visualization.configure.menuTitle')}</span>
         <Image src="/content/images/Assets/Reset.svg" />
       </div>
       {visType === 'chart' && (
         <div className="vis-xAxis vis-options-menu-item">
           <div className="vis-options-menu-label">
             <Image inline src={`/content/images/Assets/x-axis-${colorScheme}.svg`} style={{ paddingLeft: '5px', paddingRight: '10px' }} />
-            Θέλω να δω αποτελέσματα για:
+            {translate('socioscopeApp.dataSet.visualization.configure.xAxis')}
           </div>
           <Dropdown
             className={`vis-options-dropdown ${colorScheme}`}
@@ -84,7 +85,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
       <div className="vis-filters vis-options-menu-item">
         <div className="vis-options-menu-label">
           <Image inline src={`/content/images/Assets/indicator-${colorScheme}.svg`} style={{ paddingLeft: '5px', paddingRight: '10px' }} />…
-          σε σχέση με:
+          {translate('socioscopeApp.dataSet.visualization.configure.filter')}
         </div>
         {dataset.type === 'qb' ? (
           <QbDatasetFilters
@@ -192,7 +193,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       ) : (
                         <Image src={`/content/images/Assets/Chart.svg`} style={{ marginRight: '20px' }} />
                       )}
-                      Γράφημα
+                      {translate('socioscopeApp.dataSet.visualization.graph')}
                     </Menu.Item>
                     <Menu.Item as={NavLink} to="?type=map" active={visType === 'map'} style={{ marginRight: '50px' }}>
                       {visType === 'map' ? (
@@ -200,7 +201,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       ) : (
                         <Image src={`/content/images/Assets/Map.svg`} style={{ marginRight: '20px' }} />
                       )}
-                      Χάρτης
+                      {translate('socioscopeApp.dataSet.visualization.map')}
                     </Menu.Item>
                     {/*<Menu.Item as={NavLink} to="?type=list" active={visType === 'list'}>
                       {visType === 'list' ? (
@@ -259,7 +260,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                           fontSize: '12px'
                         }}
                       >
-                        Διαμορφώστε το γράφημα
+                        {translate('socioscopeApp.dataSet.visualization.configure.menuTitle')}
                       </h1>
                     </Menu.Item>
                     <Menu.Item position="right">

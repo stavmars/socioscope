@@ -22,7 +22,21 @@
       "createdDate": "Created Date",
       "dimensions": "Dimensions",
       "measures": "Measures",
-      "creator": "Creator"
+      "creator": "Creator",
+      "tabMenu": {
+        "data": "Δεδομένα",
+        "id": "Ταυτότητα Έρευνας"
+      },
+      "visualization": {
+        "graph": "Γράφημα",
+        "map": "Χάρτης",
+        "configure": {
+          "menuTitle": "Διαμορφώστε το γράφημα",
+          "xAxis": "Θέλω να δω αποτελέσματα για:",
+          "filter": "σε σχέση με:",
+          "compare": "συγκρίνω ως προς:"
+        }
+      }
     }
   }
 }

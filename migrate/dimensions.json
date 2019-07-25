@@ -5,7 +5,7 @@
             "el": "Περιοχή αναφοράς",
             "en": "Reference Area"
         },
-        "type": "coded",
+        "type": "geographic-area",
         "dependencies": []
     },
     {
@@ -14,7 +14,7 @@
             "el": "Περίοδος αναφοράς",
             "en": "Reference Period"
         },
-        "type": "time-interval",
+        "type": "time",
         "dependencies": []
     },
     {
@@ -23,7 +23,7 @@
             "el": "Περιοχή Αναφοράς (NUTS)",
             "en": "Reference Area (NUTS)"
         },
-        "type": "coded",
+        "type": "geographic-area",
         "dependencies": []
     },
     {
@@ -70,7 +70,19 @@
             "el": "Εκλογική Περιφέρεια",
             "en": "Constituency"
         },
-        "type": "coded",
+        "type": "geographic-area",
+        "geoMaps": [
+            {
+                "level": 1,
+                "name": {"el": "Εκλογικές Περιφέρειες", "en": "Constituencies"},
+                "url": "content/geo/constituencies.json"
+            },
+            {
+                "level": 2,
+                "name": {"el": "Δήμοι", "en": "Municipalities"},
+                "url": "content/geo/municipalities.json"
+            }
+        ],
         "dependencies": []
     },
     {

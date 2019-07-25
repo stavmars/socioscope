@@ -22,7 +22,21 @@
       "createdDate": "Created Date",
       "dimensions": "Dimensions",
       "measures": "Measures",
-      "creator": "Creator"
+      "creator": "Creator",
+      "tabMenu": {
+        "data": "Data",
+        "id": "Research ID"
+      },
+      "visualization": {
+        "graph": "Graph",
+        "map": "Map",
+        "configure": {
+          "menuTitle": "Configure graph",
+          "xAxis": "Results for:",
+          "filter": "related with:",
+          "compare": "compare to:"
+        }
+      }
     }
   }
 }

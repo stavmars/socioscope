@@ -6,6 +6,7 @@ import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { IDimensionCode } from 'app/shared/model/dimension-code.model';
 import { Accordion, Checkbox, Dropdown, Form, Image } from 'semantic-ui-react';
 import { changeCompareBy } from 'app/modules/dataset-page/dataset-page-reducer';
+import { translate } from 'react-jhipster';
 
 export interface ICompareByControlProp {
   dimensionCodes: Map<string, IDimensionCode[]>;
@@ -75,7 +76,7 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
       <div className="vis-compareBy vis-options-menu-item">
         <div className="vis-options-menu-label">
           <Image inline src={`/content/images/Assets/compare-${dataset.colorScheme}.svg`} style={{ paddingRight: '23px' }} />… και να
-          συγκρίνω ως προς:
+          {translate('socioscopeApp.dataSet.visualization.configure.compare')}
         </div>
         <Dropdown
           className={`vis-options-dropdown ${colorScheme}`}
