@@ -19,6 +19,7 @@ export interface IChoroplethVisProp {
   seriesOptions: ISeriesOptions;
   xAxisCodes: any;
   loadingSeries: boolean;
+  showButtons: boolean;
 }
 
 export interface IChoroplethVisState {
@@ -56,7 +57,7 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
   }
 
   render() {
-    const { dataset, seriesOptions, series, xAxisCodes, loadingSeries } = this.props;
+    const { dataset, seriesOptions, series, xAxisCodes, loadingSeries, showButtons } = this.props;
     const { dimensions, colorScheme } = dataset;
     const { geoJsonLoading, geoJson, geoMap } = this.state;
     const { codesByNotation } = xAxisCodes;
@@ -92,7 +93,6 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
             No data found
             <Header.Subheader>Please choose a different input</Header.Subheader>
           </Header>
-          {levelButtons}
         </div>
       );
     }
@@ -156,7 +156,7 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
 
     return (
       <div>
-        {levelButtons}
+        {showButtons ? levelButtons : null}
         <HighchartsReact highcharts={Highmaps} constructorType="mapChart" options={mapOptions as any} />
       </div>
     );
