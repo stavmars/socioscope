@@ -6,6 +6,7 @@ import { IDataSet } from 'app/shared/model/data-set.model';
 import { IHighlight } from 'app/shared/model/highlight.model';
 import { connect } from 'react-redux';
 import { loadHighlight } from 'app/modules/highlights/highlights-reducer';
+import { urlEncodeVisOptions } from 'app/modules/dataset-page/dataset-page-vis';
 import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
 import ChartVis from 'app/modules/visualization/chart-vis';
 
@@ -25,7 +26,8 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
   render() {
     const { title, dataset, headerImg, highlight, highlightSeries, dimensionCodes } = this.props;
     const { colorScheme } = dataset;
-    const { seriesOptions } = highlight;
+    const { visType, seriesOptions } = highlight;
+
     return (
       <div className={`dataset-card ${colorScheme}`}>
         <div className="dataset-card-header">
@@ -61,7 +63,10 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
               <Grid.Column>
                 <div className={`dataset-card-desc ${colorScheme}`}>{this.props.children}</div>
                 <Container textAlign="center">
-                  <Link className={`dataset-card-link ${colorScheme}`} to="/dataset/greek-election-results">
+                  <Link
+                    className={`dataset-card-link ${colorScheme}`}
+                    to={`/dataset/${dataset.id}/data?${urlEncodeVisOptions({ visType, seriesOptions })}`}
+                  >
                     {translate('home.dataset.explore')}
                   </Link>
                 </Container>
