@@ -19,7 +19,8 @@ export const ACTION_TYPES = {
   FETCH_DIMENSION_CODELISTS: 'datasetPage/FETCH_DIMENSION_CODELISTS',
   CHANGE_COMPARE_BY: 'datasetPage/CHANGE_COMPARE_BY',
   SET_FILTER_VALUE: 'datasetPage/SET_FILTER_VALUE',
-  UPDATE_VIS_OPTIONS: 'datasetPage/UPDATE_VIS_OPTIONS'
+  UPDATE_VIS_OPTIONS: 'datasetPage/UPDATE_VIS_OPTIONS',
+  TOGGLE_COMPARE_VALUE: 'datasetPage/TOGGLE_COMPARE_VALUE'
 };
 
 const initialState = {
@@ -89,6 +90,17 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
           }
         }
       };
+    case ACTION_TYPES.TOGGLE_COMPARE_VALUE:
+      const { compareCode } = action.payload;
+      const compareCodes = state.seriesOptions.compareCodes || {};
+      const compareCodeStatus = compareCodes[compareCode];
+      return {
+        ...state,
+        seriesOptions: {
+          ...state.seriesOptions,
+          compareCodes: { ...compareCodes, [compareCode]: !compareCodeStatus }
+        }
+      };
     case ACTION_TYPES.UPDATE_VIS_OPTIONS:
       return {
         ...state,
@@ -144,6 +156,15 @@ export const setFilterValue = (dataset: IDataSet, dimensionId: string, filterVal
   dispatch({
     type: ACTION_TYPES.SET_FILTER_VALUE,
     payload: { dimensionId, filterValue }
+  });
+  const { seriesOptions } = getState().datasetPage;
+  dispatch(getSeries(dataset.id, seriesOptions));
+};
+
+export const toggleCompareValue = (dataset: IDataSet, dimensionId: string, compareCode: string) => (dispatch, getState) => {
+  dispatch({
+    type: ACTION_TYPES.TOGGLE_COMPARE_VALUE,
+    payload: { compareCode }
   });
   const { seriesOptions } = getState().datasetPage;
   dispatch(getSeries(dataset.id, seriesOptions));

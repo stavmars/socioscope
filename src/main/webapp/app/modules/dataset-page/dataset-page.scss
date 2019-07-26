@@ -288,7 +288,7 @@
 
 .vis-options-dropdown.dropdown {
   font-size: 16px;
-  font-family: ProximaNovaBold;
+  font-family: ProximaNovaSemiBold !important;
   border-radius: 0 !important;
   border: 3px solid !important;
   background: #fff;
@@ -342,14 +342,6 @@
   }
 }
 
-@for $level from 1 through 10 {
-  .compare-by-option-level-#{$level} {
-    .checkbox {
-      padding-left: #{$level * 20}px !important;
-    }
-  }
-}
-
 .vis-container {
   position: relative;
   margin-top: 5%;
@@ -396,6 +388,11 @@
       border-color: $color-scheme-3-accent;
     }
   }
+}
+
+.compare-by-accordion-title {
+  font-family: ProximaNovaBold !important;
+  font-size: 16px !important;
 }
 
 .ui.toggle.checkbox.color-scheme-1 input:focus:checked ~ .box:before,

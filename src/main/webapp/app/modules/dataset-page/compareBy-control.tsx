@@ -4,26 +4,29 @@ import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { IDimensionCode } from 'app/shared/model/dimension-code.model';
-import { Accordion, Checkbox, Dropdown, Form, Image } from 'semantic-ui-react';
-import { changeCompareBy } from 'app/modules/dataset-page/dataset-page-reducer';
+import { Accordion, Dropdown, Image, List } from 'semantic-ui-react';
+import { changeCompareBy, toggleCompareValue } from 'app/modules/dataset-page/dataset-page-reducer';
 import { translate } from 'react-jhipster';
+import { IDimension } from 'app/shared/model/dimension.model';
+import CompareOptionList from 'app/modules/dataset-page/compare-option-list';
 
 export interface ICompareByControlProp {
   dimensionCodes: Map<string, IDimensionCode[]>;
   dataset: IDataSet;
   seriesOptions: ISeriesOptions;
   changeCompareBy: typeof changeCompareBy;
+  toggleCompareValue: typeof toggleCompareValue;
 }
 
 export interface ICompareByControlState {
-  activeIndex: string;
+  expandedId: string;
 }
 
 export class CompareByControl extends React.Component<ICompareByControlProp, ICompareByControlState> {
   constructor(props) {
     super(props);
     this.state = {
-      activeIndex: null
+      expandedId: null
     };
   }
 
@@ -32,19 +35,21 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
   handleAccordionClick = (e, props) => {
     e.stopPropagation();
     const { index } = props;
-    const { activeIndex } = this.state;
-    const newIndex = activeIndex === index ? null : index;
-    this.setState({ activeIndex: newIndex });
+    const { expandedId } = this.state;
+    const newIndex = expandedId === index ? null : index;
+    this.setState({ expandedId: newIndex });
   };
 
-  toggleCompareByOption = (e, data: object) => {
+  toggleCompareByOption = (e, { dimension, code }) => {
+    this.props.toggleCompareValue(this.props.dataset, dimension, code);
     e.stopPropagation();
   };
 
   render() {
     const { dataset, dimensionCodes, seriesOptions } = this.props;
     const { dimensions, colorScheme } = dataset;
-    const { activeIndex } = this.state;
+    const { expandedId } = this.state;
+    const { compareCodes } = seriesOptions;
 
     const compareByOptions = dimensions.map(dimension => ({
       id: dimension.id,
@@ -53,23 +58,20 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
       disabled: dimension.id === seriesOptions.xAxis
     }));
 
-    /*    const createCodeOptions = (codes: IDimensionCode[]) =>
-          <List relaxed>
-            {codes.map(code =>
-              <List.Item key={code.notation}>
-                <Checkbox label={translateEntityField(code.name)} onClick={this.toggleCompareByOption} checked/>
-                {code.children && createCodeOptions(code.children)}
-              </List.Item>)}
-          </List>;*/
-
-    const createCompareByOptions = (codes: IDimensionCode[], level = 0) =>
+    const createCompareByOptions = (dimension: IDimension, codes: IDimensionCode[]) =>
       codes.map(code => (
-        <>
-          <Form.Field className={`compare-by-option-level-${level}`} key={code.notation}>
-            <Checkbox label={translateEntityField(code.name)} onClick={this.toggleCompareByOption} />
-          </Form.Field>
-          {code.children && createCompareByOptions(code.children, level + 1)}
-        </>
+        <List.Item onClick={this.toggleCompareByOption} code={code.notation} key={code.notation}>
+          <List.Icon name={compareCodes && compareCodes[code.notation] ? 'check square outline' : 'square outline'} />
+          <List.Content>
+            {/*<List.Header>{translateEntityField(code.name)}</List.Header>*/}
+            <List.Description>{translateEntityField(code.name)}</List.Description>
+            {code.children && (
+              <List.List relaxed verticalAlign="middle">
+                {createCompareByOptions(dimension, code.children)}
+              </List.List>
+            )}
+          </List.Content>
+        </List.Item>
       ));
 
     return (
@@ -78,25 +80,31 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
           <Image inline src={`/content/images/Assets/compare-${dataset.colorScheme}.svg`} style={{ paddingRight: '23px' }} />
           {translate('socioscopeApp.dataSet.visualization.configure.compare')}
         </div>
-        <Dropdown
-          className={`vis-options-dropdown ${colorScheme}`}
-          onChange={this.handleCompareByChange}
-          placeholder="Επιλέξτε 2 ή παραπάνω μεταβλητές"
-          fluid
-          scrolling
-        >
+        <Dropdown className={`vis-options-dropdown ${colorScheme}`} placeholder="Επιλέξτε 2 ή παραπάνω μεταβλητές" fluid scrolling>
           <Dropdown.Menu>
             {dimensions.map(dimension => (
               <Dropdown.Item
                 key={dimension.id}
                 disabled={dimension.id === seriesOptions.xAxis}
-                index={dimension.id}
                 onClick={this.handleAccordionClick}
+                index={dimension.id}
               >
                 <Accordion>
-                  <Accordion.Title active={activeIndex === dimension.id} content={translateEntityField(dimension.name)} />
-                  <Accordion.Content active={activeIndex === dimension.id}>
-                    <Form>{createCompareByOptions(dimensionCodes[dimension.id].codes)}</Form>
+                  <Accordion.Title
+                    onClick={this.handleAccordionClick}
+                    index={dimension.id}
+                    className="compare-by-accordion-title"
+                    active={expandedId === dimension.id}
+                    content={translateEntityField(dimension.name)}
+                  />
+                  <Accordion.Content active={expandedId === dimension.id}>
+                    <CompareOptionList
+                      codes={dimensionCodes[dimension.id].codes}
+                      dataset={dataset}
+                      compareCodes={compareCodes}
+                      dimension={dimension}
+                      toggleCompareValue={this.props.toggleCompareValue}
+                    />
                   </Accordion.Content>
                 </Accordion>
               </Dropdown.Item>

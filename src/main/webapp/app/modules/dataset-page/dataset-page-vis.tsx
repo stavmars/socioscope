@@ -8,6 +8,7 @@ import {
   initVis,
   IVisOptions,
   setFilterValue,
+  toggleCompareValue,
   updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
@@ -95,6 +96,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   changeCompareBy={this.props.changeCompareBy}
                   setFilterValue={this.props.setFilterValue}
                   updateVisOptions={this.props.updateVisOptions}
+                  toggleCompareValue={this.props.toggleCompareValue}
                 />
               </Grid.Column>
               <Grid.Column mobile={16} tablet={10} computer={12}>
@@ -178,7 +180,8 @@ const mapDispatchToProps = {
   updateVisOptions,
   setFilterValue,
   initVis,
-  changeCompareBy
+  changeCompareBy,
+  toggleCompareValue
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;
