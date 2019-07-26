@@ -1,97 +1,276 @@
 [
-    {
-        "id": "refArea",
-        "name": {
-            "el": "Περιοχή αναφοράς",
-            "en": "Reference Area"
-        },
-        "type": "geographic-area",
-        "dependencies": []
+  {
+    "id": "refArea",
+    "name": {
+      "el": "Περιοχή αναφοράς",
+      "en": "Reference Area"
     },
-    {
-        "id": "refPeriod",
-        "name": {
-            "el": "Περίοδος αναφοράς",
-            "en": "Reference Period"
-        },
-        "type": "time",
-        "dependencies": []
+    "type": "geographic-area",
+    "dependencies": []
+  },
+  {
+    "id": "refPeriod",
+    "name": {
+      "el": "Περίοδος αναφοράς",
+      "en": "Reference Period"
     },
-    {
-        "id": "nuts",
-        "name": {
-            "el": "Περιοχή Αναφοράς (NUTS)",
-            "en": "Reference Area (NUTS)"
-        },
-        "type": "geographic-area",
-        "dependencies": []
+    "type": "time",
+    "dependencies": []
+  },
+  {
+    "id": "nuts",
+    "name": {
+      "el": "Περιοχή Αναφοράς (NUTS)",
+      "en": "Reference Area (NUTS)"
     },
-    {
-        "id": "sex",
-        "name": {
-            "el": "Φύλο",
-            "en": "Sex"
-        },
-        "type": "coded",
-        "dependencies": []
+    "type": "geographic-area",
+    "dependencies": []
+  },
+  {
+    "id": "sex",
+    "name": {
+      "el": "Φύλο",
+      "en": "Sex"
     },
-    {
-        "id": "householdSize",
-        "name": {
-            "el": "Μέγεθος νοικοκυριού",
-            "en": "Household size"
-        },
-        "type": "coded",
-        "dependencies": []
+    "type": "coded",
+    "dependencies": []
+  },
+  {
+    "id": "householdSize",
+    "name": {
+      "el": "Μέγεθος νοικοκυριού",
+      "en": "Household size"
     },
-    {
-        "id": "age",
-        "name": {
-            "el": "Ηλικία",
-            "en": "Age"
-        },
-        "type": "coded",
-        "dependencies": []
+    "type": "coded",
+    "dependencies": []
+  },
+  {
+    "id": "age",
+    "name": {
+      "el": "Ηλικία",
+      "en": "Age"
     },
-    {
-        "id": "party",
-        "name": {
-            "el": "Κόμμα",
-            "en": "Party"
-        },
-        "type": "coded",
-        "dependencies": [
-            "elections"
-        ]
+    "type": "coded",
+    "dependencies": []
+  },
+  {
+    "id": "party",
+    "name": {
+      "el": "Κόμμα",
+      "en": "Party"
     },
-    {
-        "id": "constituency",
-        "name": {
-            "el": "Εκλογική Περιφέρεια",
-            "en": "Constituency"
-        },
-        "type": "geographic-area",
-        "geoMaps": [
-            {
-                "level": 1,
-                "name": {"el": "Εκλογικές Περιφέρειες", "en": "Constituencies"},
-                "url": "content/geo/constituencies.json"
-            },
-            {
-                "level": 2,
-                "name": {"el": "Δήμοι", "en": "Municipalities"},
-                "url": "content/geo/municipalities.json"
-            }
-        ],
-        "dependencies": []
+    "type": "coded",
+    "dependencies": [
+      "elections"
+    ]
+  },
+  {
+    "id": "constituency",
+    "name": {
+      "el": "Εκλογική Περιφέρεια",
+      "en": "Constituency"
     },
-    {
-        "id": "elections",
+    "type": "geographic-area",
+    "geoMaps": [
+      {
+        "level": 1,
         "name": {
-            "el": "Εκλογές",
-            "en": "Elections"
+          "el": "Εκλογικές Περιφέρειες",
+          "en": "Constituencies"
         },
-        "type": "coded",
-        "dependencies": []
+        "url": "content/geo/constituencies.json"
+      },
+      {
+        "level": 2,
+        "name": {
+          "el": "Δήμοι",
+          "en": "Municipalities"
+        },
+        "url": "content/geo/municipalities.json"
+      }
+    ],
+    "dependencies": []
+  },
+  {
+    "id": "elections",
+    "name": {
+      "el": "Εκλογές",
+      "en": "Elections"
+    },
+    "type": "coded",
+    "dependencies": []
+  },
+  {
+    "id": "elections.assembly",
+    "type": "coded",
+    "name": {
+      "en": "Parliamentary Term",
+      "el": "Κοινοβουλευτική περίοδος αναφοράς"
     }
+  },
+  {
+    "id": "dep-sex",
+    "type": "coded",
+    "name": {
+      "en": "Sex",
+      "el": "Φύλο"
+    }
+  },
+  {
+    "id": "birthYearGrouped",
+    "type": "coded",
+    "name": {
+      "en": "Year of Birth",
+      "el": "Έτος Γέννησης"
+    }
+  },
+  {
+    "id": "dep-profession",
+    "type": "coded",
+    "name": {
+      "en": "Occupation",
+      "el": "Επάγγελμα"
+    }
+  },
+  {
+    "id": "educationField",
+    "type": "coded",
+    "name": {
+      "en": "Field of Education",
+      "el": "Πεδίο Σπουδών"
+    }
+  },
+  {
+    "id": "educationTitle",
+    "type": "coded",
+    "name": {
+      "en": "Highest level of educational attainment",
+      "el": "Επίπεδο εκπαίδευσης"
+    }
+  },
+  {
+    "id": "firstElectionAgeGroup",
+    "type": "coded",
+    "name": {
+      "en": "Age of first Election",
+      "el": "Ηλικία Πρώτης Εκλογής"
+    }
+  },
+  {
+    "id": "elections.party",
+    "type": "coded",
+    "name": {
+      "en": "Party of Election",
+      "el": "Κόμμα εκλογής"
+    }
+  },
+  {
+    "id": "elections.constituency",
+    "type": "coded",
+    "name": {
+      "en": "Electoral District",
+      "el": "Εκλογική Περιφέρεια"
+    }
+  },
+  {
+    "id": "elections.constitRec",
+    "type": "coded",
+    "name": {
+      "en": "Magnitude of Electoral District",
+      "el": "Μέγεθος εκλογικής περιφέρειας"
+    }
+  },
+  {
+    "id": "elections.geography",
+    "type": "coded",
+    "name": {
+      "en": "Relation with constituency of election",
+      "el": "Σχέση με τόπο εκλογής"
+    }
+  },
+  {
+    "id": "elections.depExperience",
+    "type": "coded",
+    "name": {
+      "en": "Parliamentary Experience",
+      "el": "Κοινοβουλευτική εμπειρία"
+    }
+  },
+  {
+    "id": "elections.electionNetwork",
+    "type": "coded",
+    "name": {
+      "en": "Relation with other MP",
+      "el": "Συγγένεια με άλλο βουλευτή"
+    }
+  },
+  {
+    "id": "elections.constituencyId",
+    "geoMaps": [
+      {
+        "level": 0,
+        "name": {
+          "el": "Εκλογικές Περιφέρειες",
+          "en": "Constituencies"
+        },
+        "url": "content/geo/constituencies.json"
+      }
+    ]
+  },
+  {
+    "id": "elections.europeanPost",
+    "type": "coded",
+    "name": {
+      "en": "Service in the EU Parliament",
+      "el": "Θητεία σε Ευρωπαϊκό όργανο"
+    }
+  },
+  {
+    "id": "elections.governmentalPost",
+    "type": "coded",
+    "name": {
+      "en": "Position in Current Government",
+      "el": "Θέση στην Κυβέρνηση"
+    }
+  },
+  {
+    "id": "elections.localPost",
+    "type": "coded",
+    "name": {
+      "en": "Participation in local government",
+      "el": "Θητεία στην Αυτοδιοίκηση"
+    }
+  },
+  {
+    "id": "elections.partyPost",
+    "type": "coded",
+    "name": {
+      "en": "Party Role",
+      "el": "Θέση στο κόμμα"
+    }
+  },
+  {
+    "id": "elections.pastGovernmentalPost",
+    "type": "coded",
+    "name": {
+      "en": "Past Governmental Position",
+      "el": "Θέση στην Κυβέρνηση στο παρελθόν"
+    }
+  },
+  {
+    "id": "elections.tradeUnionRecord",
+    "type": "coded",
+    "name": {
+      "en": "Participation in Trade Unions",
+      "el": "Θητεία σε συνδικαλιστική οργάνωση"
+    }
+  },
+  {
+    "id": "elections.changes",
+    "type": "coded",
+    "name": {
+      "en": "Changes during Parliamentary Term",
+      "el": "Μεταβολές κατά τη διάρκεια της Θητείας"
+    }
+  }
 ]

@@ -1205,12 +1205,12 @@
         },
         "visType": "map",
         "seriesOptions": {
-            "xAxis": "constituency",
-            "measure": "votes_perc",
-            "dimensionFilters": {
-              "elections": 8,
-              "party": "golden_dawn"
-            }
+          "xAxis": "constituency",
+          "measure": "votes_perc",
+          "dimensionFilters": {
+            "elections": 8,
+            "party": "golden_dawn"
+          }
         }
       }
     ]
@@ -1218,17 +1218,88 @@
   {
     "id": "deputies",
     "name": {
-      "el": "Βουλευτές Ελληνικού Κοινοβουλίου (1989-2019)",
-      "en": "Members of the Greek Parliament (1989-2019)"
+      "el": "Πολιτικό Προσωπικό",
+      "en": "Members of Parliament"
     },
     "type": "raw",
-    "colorScheme": "color-scheme-2",
+    "colorScheme": "color-scheme-1",
     "comment": {
-      "el": "Το σύνολο δεδομένων «Πολιτικό Προσωπικό» περιλαμβάνει στοιχεία για κοινωνικό-δημογραφικά χαρακτηριστικά και την πολιτική προϋπηρεσία 1060 μελών του Ελληνικού Κοινοβουλίου που εκλέχθηκαν στις Κοινοβουλευτικές περιόδους από Θ’ (1996-2000) έως και ΙΣΤ' (Ιανουάριος-Αύγουστος 2015). Κάθε κοινοβουλευτική σύνθεση περιλαμβάνει το σύνολο όσων εκλέχθηκαν αρχικά ή, μετέπειτα, κατόπιν αντικατάστασης. Οι σχετικές πληροφορίες αντλήθηκαν από τον ιστότοπο του Ελληνικού Κοινοβουλίου και τα επίσημα βιογραφικά των βουλευτών/τριών, ενώ η επιλογή των μεταβλητών έγινε από ερευνητική ομάδα. Η εφαρμογή δίνει την δυνατότητα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης ορισμένων μεταβλητών. Τα πλήρη στοιχεία για κάθε βουλευτή/τρια εμφανίζονται κάτω από την επιλογή «Αποτελέσματα Αναζήτησης».",
-      "en": "The data set «Members of the Greek Parliament (1989-2019)» includes data on socio-demographic characteristics and the political experience of all members of the Greek Parliament elected in the Parliamentary Periods from 1989 to 2019. Each parliamentary composition includes all MPs originally elected or subsequently replaced. Data were obtained from the website of the Greek Parliament (http://www.hellenicparliament.gr) and the official biographies of the deputies, while the selection of the variables was done by a research team. The application enables the visual analysis and mapping of select variables. The full details for each MP appear under the 'Search Results' option."
+      "el": "Το σύνολο δεδομένων περιλαμβάνει όλα τα επίσημα εκλογικά αποτελέσματα των Εθνικών Εκλογών (Σεπτέμβριος 1996 - Ιανουάριος 2015). Δίνεται η δυνατότητα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης σε επίπεδο Εκλογικής Περιφέρειας και Καλλικρατικού Δήμου.",
+      "en": "The dataset includes all official election results of the Greek Parliamentary Elections (September 1996 - January 2015) at constituency and municipality level."
     },
-    "dimensions": [],
-    "measures": [],
+    "dimensions": [
+      {
+        "id": "elections.assembly"
+      },
+      {
+        "id": "dep-sex"
+      },
+      {
+        "id": "birthYearGrouped"
+      },
+      {
+        "id": "dep-profession"
+      },
+      {
+        "id": "educationField"
+      },
+      {
+        "id": "educationTitle"
+      },
+      {
+        "id": "firstElectionAgeGroup"
+      },
+      {
+        "id": "elections.party"
+      },
+      {
+        "id": "elections.constituency"
+      },
+      {
+        "id": "elections.constitRec"
+      },
+      {
+        "id": "elections.geography"
+      },
+      {
+        "id": "elections.depExperience"
+      },
+      {
+        "id": "elections.electionNetwork"
+      },
+      {
+        "id": "elections.constituencyId"
+      },
+      {
+        "id": "elections.europeanPost"
+      },
+      {
+        "id": "elections.governmentalPost"
+      },
+      {
+        "id": "elections.localPost"
+      },
+      {
+        "id": "elections.partyPost"
+      },
+      {
+        "id": "elections.pastGovernmentalPost"
+      },
+      {
+        "id": "elections.tradeUnionRecord"
+      },
+      {
+        "id": "elections.changes"
+      }
+    ],
+    "measures": [
+      {
+        "id": "deputies_perc"
+      },
+      {
+        "id": "deputies"
+      }
+    ],
     "highlights": [
       {
         "id": "gender",

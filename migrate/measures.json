@@ -24,5 +24,23 @@
     },
     "type": "count",
     "unit": "VTS"
+  },
+  {
+    "id": "deputies_perc",
+    "name": {
+      "el": "%",
+      "en": "%"
+    },
+    "type": "percentage",
+    "unit": "%"
+  },
+  {
+    "id": "deputies",
+    "name": {
+      "el": "Βουλευτές",
+      "en": "MPs"
+    },
+    "type": "count",
+    "unit": "MPs"
   }
 ]
