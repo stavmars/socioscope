@@ -20,7 +20,7 @@ export interface IChartVisProp {
   dataset: IDataSet;
   seriesList: ISeries[];
   seriesOptions: ISeriesOptions;
-  xAxisCodes: any;
+  dimensionCodes: any;
   loadingSeries: boolean;
 }
 
@@ -61,11 +61,11 @@ export class ChartVis extends React.Component<IChartVisProp> {
   }
 
   render() {
-    const { dataset, seriesOptions, seriesList, xAxisCodes, loadingSeries } = this.props;
+    const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries } = this.props;
     const { dimensions, colorScheme } = dataset;
-
+    const { compareBy } = seriesOptions;
     const xAxisDimension = _.find(dimensions, { id: seriesOptions.xAxis }) as IDimension;
-
+    const xAxisCodes = dimensionCodes[seriesOptions.xAxis];
     let chartSeries = [{ data: [] }];
 
     let seriesByParent;
@@ -74,6 +74,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
       if (xAxisDimension.type === 'time') {
         chartSeries = seriesList.map(series => ({
           id: series.id,
+          name: compareBy && translateEntityField(dimensionCodes[compareBy].codesByNotation[series.id].name),
           color: series.color,
           data: prepareTimeSeriesData(series.data)
         }));
@@ -83,6 +84,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
         if (seriesByParent['']) {
           chartSeries = seriesList.map(series => ({
             id: series.id,
+            name: compareBy && translateEntityField(dimensionCodes[compareBy].codesByNotation[series.id].name),
             color: series.color,
             data: prepareCategorySeriesData(xAxisCodes.codesByNotation, seriesByParent[''][series.id], seriesByParent)
           }));
