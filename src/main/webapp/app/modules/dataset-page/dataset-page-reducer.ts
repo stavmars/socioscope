@@ -137,7 +137,13 @@ export const getSeries = (id, seriesOptions: ISeriesOptions) => {
   const requestUrl = `${datasetApiUrl}/${id}/series`;
   return {
     type: ACTION_TYPES.FETCH_SERIES,
-    payload: axios.post(requestUrl, seriesOptions)
+    payload: axios.post(requestUrl, {
+      ...seriesOptions,
+      compareCodes: _(seriesOptions.compareCodes)
+        .pickBy()
+        .keys()
+        .value()
+    })
   };
 };
 
@@ -157,7 +163,9 @@ export const toggleCompareValue = (dataset: IDataSet, dimensionId: string, compa
       type: ACTION_TYPES.TOGGLE_COMPARE_VALUE,
       payload: { compareCode }
     });
-    dispatch(getSeries(dataset.id, seriesOptions));
+    const { seriesOptions: updatedSeriesOptions } = getState().datasetPage;
+
+    dispatch(getSeries(dataset.id, updatedSeriesOptions));
   } else {
     dispatch(
       updateVisOptions(dataset, {

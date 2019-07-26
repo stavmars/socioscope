@@ -1,6 +1,7 @@
 package gr.ekke.socioscope.domain;
 
 import javax.validation.constraints.NotBlank;
+import java.util.List;
 import java.util.Map;
 
 public class SeriesOptions {
@@ -11,6 +12,8 @@ public class SeriesOptions {
     private String compareBy;
 
     private Map<String, String> dimensionFilters;
+
+    private List<String> compareCodes;
 
     private String measure;
 
@@ -36,6 +39,14 @@ public class SeriesOptions {
 
     public void setDimensionFilters(Map<String, String> dimensionFilters) {
         this.dimensionFilters = dimensionFilters;
+    }
+
+    public List<String> getCompareCodes() {
+        return compareCodes;
+    }
+
+    public void setCompareCodes(List<String> compareCodes) {
+        this.compareCodes = compareCodes;
     }
 
     public String getMeasure() {

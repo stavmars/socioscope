@@ -2,6 +2,7 @@ package gr.ekke.socioscope.repository;
 
 import gr.ekke.socioscope.domain.DimensionValue;
 import gr.ekke.socioscope.domain.Observation;
+import gr.ekke.socioscope.domain.SeriesOptions;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,6 +13,6 @@ import java.util.List;
 @SuppressWarnings("unused")
 public interface ObservationRepositoryCustom {
 
-    List<Observation> findObservations(String datasetId, List<DimensionValue> dimensionValues, String measureId);
+    List<Observation> findObservations(String datasetId, SeriesOptions seriesOptions);
 
 }

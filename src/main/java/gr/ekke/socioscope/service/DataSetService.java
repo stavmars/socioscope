@@ -217,10 +217,9 @@ public class DataSetService {
                             new BadRequestAlertException("Dataset does not contain the specified measure", "dataSet", "invalid_measure"));
 
                     }
-                    List<DimensionValue> dimensionValues = seriesOptions.getDimensionFilters().entrySet().stream().filter(entry -> entry.getValue() != null)
-                        .map(entry -> new DimensionValue(entry.getKey(), entry.getValue())).collect(Collectors.toList());
 
-                    List<Observation> observations = observationRepository.findObservations(datasetId, dimensionValues, seriesOptions.getMeasure());
+
+                    List<Observation> observations = observationRepository.findObservations(datasetId, seriesOptions);
 
                     return observationMapper.observationsToMultipleSeries(observations, seriesOptions);
                 } else {
