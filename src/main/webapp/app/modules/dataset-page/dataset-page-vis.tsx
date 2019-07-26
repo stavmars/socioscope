@@ -147,7 +147,7 @@ const parseRouteVisOptions = (query: string): IVisOptions => {
   return { visType, seriesOptions };
 };
 
-const urlEncodeVisOptions = (visOptions: IVisOptions) => {
+export const urlEncodeVisOptions = (visOptions: IVisOptions) => {
   const { visType, seriesOptions = {} } = visOptions;
   return qs.stringify(
     {
