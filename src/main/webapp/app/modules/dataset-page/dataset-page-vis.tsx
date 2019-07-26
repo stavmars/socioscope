@@ -118,6 +118,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       seriesOptions={seriesOptions}
                       xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
                       loadingSeries={loadingSeries}
+                      showButtons
                     />
                   ) : (
                     <ChartVis
