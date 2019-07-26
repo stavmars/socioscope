@@ -52,7 +52,7 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
                         dataset={dataset}
                         seriesList={highlightSeries[highlight.id].series}
                         seriesOptions={seriesOptions}
-                        xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
+                        dimensionCodes={dimensionCodes}
                         loadingSeries={false}
                       />
                     ))}
