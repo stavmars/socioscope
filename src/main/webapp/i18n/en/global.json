@@ -148,9 +148,43 @@
   "about": {
     "title": "Kaleidoscope of Social Data",
     "project": "Project",
-    "team": "Scientific Team",
-    "sources": "Sources",
-    "techTeam": "Tech Team"
+    "team": {
+      "title": "Scientific Team",
+      "theoni": {
+        "name": "Theoni Stathopoulou",
+        "role": "Research Director, ΕΚΚΕ, theosta@ekke.gr"
+      },
+      "tsig": {
+        "name": "Ioanna Tsiganou",
+        "role": "Research Director, ΕΚΚΕ, jtsiganou@ekke.gr"
+      },
+      "kand": {
+        "name": "Giorgos Kandylis",
+        "role": "Researcher, gkandyli@ekke.gr"
+      },
+      "manina": {
+        "name": "Manina Kapekaki",
+        "role": "Researcher, ΕΚΚΕ, mkakepaki@ekke.gr"
+      }
+    },
+    "sources": {
+      "title": "Sources",
+      "publish": "Publications",
+      "web": "Web Pages"
+    },
+    "techTeam": {
+      "title": "Tech Team",
+      "analysis": "Analysis & Design",
+      "develop": "Kaleidoscope Development",
+      "gpapas": {
+        "name": "Giorgos Papastefanatos",
+        "role": "Research Associate, (ATHENA R.C.), gpapas@imis.athena-innovation.gr"
+      },
+      "stav": {
+        "name": "Stavros Maroulis",
+        "role": "Research Associate, (ATHENA R.C.), stavmars@imis.athena-innovation.gr"
+      }
+    }
   },
   "cookie": {
     "message": "Socioscope uses cookies in order to function properly. Cookies are small pieces of data that websites store in your browser to allow us to give you the best browsing experience possible. By using the Socioscope portal you accept our use of cookies.",
