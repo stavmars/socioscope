@@ -32,16 +32,16 @@ export class CompareOptionList extends React.Component<ICompareOptionListProp> {
           <List.Icon name={this.props.compareCodes && this.props.compareCodes[code.notation] ? 'check square outline' : 'square outline'} />
           <List.Content>
             <List.Description>{translateEntityField(code.name)}</List.Description>
-            {code.children && (
-              <List.List relaxed verticalAlign="middle">
-                {createCompareByOptions(code.children)}
-              </List.List>
-            )}
+            {code.children && <List.List>{createCompareByOptions(code.children)}</List.List>}
           </List.Content>
         </List.Item>
       ));
 
-    return <List relaxed>{createCompareByOptions(this.props.codes)}</List>;
+    return (
+      <List relaxed verticalAlign="middle">
+        {createCompareByOptions(this.props.codes)}
+      </List>
+    );
   }
 }
 

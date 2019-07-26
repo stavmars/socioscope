@@ -118,17 +118,6 @@ const datasetApiUrl = 'api/data-sets';
 const dimensionApiUrl = 'api/dimensions';
 
 // Actions
-
-/*export const getDataset = (id: string) => async dispatch => {
-  const requestUrl = `${datasetApiUrl}/${id}`;
-  const result = await dispatch({
-    type: ACTION_TYPES.FETCH_DATASET,
-    payload: axios.get<IDataSet>(requestUrl)
-  });
-  dispatch(getDimensionCodeLists(result.value.data));
-  return result;
-};*/
-
 export const getDimensionCodelist = (dimension: IDimension) => ({
   type: ACTION_TYPES.FETCH_DIMENSION_CODELIST,
   payload: axios
@@ -162,23 +151,28 @@ export const setFilterValue = (dataset: IDataSet, dimensionId: string, filterVal
 };
 
 export const toggleCompareValue = (dataset: IDataSet, dimensionId: string, compareCode: string) => (dispatch, getState) => {
-  dispatch({
-    type: ACTION_TYPES.TOGGLE_COMPARE_VALUE,
-    payload: { compareCode }
-  });
-  const { seriesOptions } = getState().datasetPage;
-  dispatch(getSeries(dataset.id, seriesOptions));
+  const { seriesOptions, visType } = getState().datasetPage;
+  if (seriesOptions.compareBy === dimensionId) {
+    dispatch({
+      type: ACTION_TYPES.TOGGLE_COMPARE_VALUE,
+      payload: { compareCode }
+    });
+    dispatch(getSeries(dataset.id, seriesOptions));
+  } else {
+    dispatch(
+      updateVisOptions(dataset, {
+        visType,
+        seriesOptions: { ...seriesOptions, compareBy: dimensionId, compareCodes: { [compareCode]: true } }
+      })
+    );
+  }
 };
-
-export const changeCompareBy = (compareBy: string) => ({
-  type: ACTION_TYPES.CHANGE_COMPARE_BY,
-  payload: compareBy
-});
 
 export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => (dispatch, getState) => {
   const { dimensionCodes } = getState().datasetPage;
   const { visType = 'chart', seriesOptions } = visOptions;
   const { dimensions } = dataset;
+  const { compareCodes } = seriesOptions;
   let { xAxis, compareBy, measure } = seriesOptions;
   const filters = seriesOptions.dimensionFilters || {};
   if (visType === 'map') {
@@ -192,13 +186,13 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
 
   let newSeriesOptions = {};
   if (dataset.type === 'qb') {
-    const dimensionFilters = dimensions.filter(dimension => dimension.id !== xAxis).reduce((acc, dimension) => {
+    const dimensionFilters = dimensions.filter(dimension => ![xAxis, compareBy].includes(dimension.id)).reduce((acc, dimension) => {
       acc[dimension.id] = filters[dimension.id] || dimensionCodes[dimension.id].codes[0].notation;
       return acc;
     }, {}) as IDimensionFilters;
-    newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters };
+    newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters, compareCodes };
   } else {
-    newSeriesOptions = { xAxis, compareBy, measure };
+    newSeriesOptions = { xAxis, compareBy, measure, compareCodes };
   }
   dispatch({
     type: ACTION_TYPES.UPDATE_VIS_OPTIONS,

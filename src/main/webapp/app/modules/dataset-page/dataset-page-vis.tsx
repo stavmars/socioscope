@@ -3,7 +3,6 @@ import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import qs from 'qs';
 import {
-  changeCompareBy,
   getSeries,
   initVis,
   IVisOptions,
@@ -93,7 +92,6 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   fetchedCodeLists={fetchedCodeLists}
                   dimensionCodes={dimensionCodes}
                   dataset={dataset}
-                  changeCompareBy={this.props.changeCompareBy}
                   setFilterValue={this.props.setFilterValue}
                   updateVisOptions={this.props.updateVisOptions}
                   toggleCompareValue={this.props.toggleCompareValue}
@@ -180,7 +178,6 @@ const mapDispatchToProps = {
   updateVisOptions,
   setFilterValue,
   initVis,
-  changeCompareBy,
   toggleCompareValue
 };
 

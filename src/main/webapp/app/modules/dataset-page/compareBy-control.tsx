@@ -5,7 +5,7 @@ import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { IDimensionCode } from 'app/shared/model/dimension-code.model';
 import { Accordion, Dropdown, Image, List } from 'semantic-ui-react';
-import { changeCompareBy, toggleCompareValue } from 'app/modules/dataset-page/dataset-page-reducer';
+import { toggleCompareValue } from 'app/modules/dataset-page/dataset-page-reducer';
 import { translate } from 'react-jhipster';
 import { IDimension } from 'app/shared/model/dimension.model';
 import CompareOptionList from 'app/modules/dataset-page/compare-option-list';
@@ -14,7 +14,6 @@ export interface ICompareByControlProp {
   dimensionCodes: Map<string, IDimensionCode[]>;
   dataset: IDataSet;
   seriesOptions: ISeriesOptions;
-  changeCompareBy: typeof changeCompareBy;
   toggleCompareValue: typeof toggleCompareValue;
 }
 
@@ -29,8 +28,6 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
       expandedId: null
     };
   }
-
-  handleCompareByChange = (e, { value }) => this.props.changeCompareBy(value);
 
   handleAccordionClick = (e, props) => {
     e.stopPropagation();
