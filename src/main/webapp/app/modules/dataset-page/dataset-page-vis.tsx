@@ -55,7 +55,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   copyCurrentURL = () => {
     const encodedVisOptions = urlEncodeVisOptions({ visType: this.props.visType, seriesOptions: this.props.seriesOptions });
     const url =
-      window.location.protocol + '/' + window.location.host + '/#/dataset/' + this.props.dataset.id + '/data?' + encodedVisOptions;
+      window.location.protocol + '//' + window.location.host + '/#/dataset/' + this.props.dataset.id + '/data?' + encodedVisOptions;
     const textArea = document.createElement('textarea');
     textArea.value = url;
     document.body.appendChild(textArea);
