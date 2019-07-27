@@ -33,6 +33,7 @@ public class CacheConfiguration {
         return cm -> {
             cm.createCache(gr.ekke.socioscope.repository.UserRepository.USERS_BY_LOGIN_CACHE, jcacheConfiguration);
             cm.createCache(gr.ekke.socioscope.repository.UserRepository.USERS_BY_EMAIL_CACHE, jcacheConfiguration);
+            cm.createCache(gr.ekke.socioscope.service.DimensionService.CODELISTS_BY_DIMENSION_ID, jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
