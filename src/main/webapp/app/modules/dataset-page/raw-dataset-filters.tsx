@@ -10,7 +10,7 @@ import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { IDimensionCode } from 'app/shared/model/dimension-code.model';
 
 export interface IRawDatasetFiltersProp {
-  dimensionCodes: Map<string, IDimensionCode[]>;
+  dimensionCodes: any;
   dataset: IDataSet;
   fetchedCodeLists: boolean;
   seriesOptions: ISeriesOptions;
@@ -62,7 +62,7 @@ export class RawDatasetFilters extends React.Component<IRawDatasetFiltersProp, I
                 <Accordion.Content active={this.state.activeAccordionIndex === dimension.id}>
                   <Form>
                     {fetchedCodeLists &&
-                      dimensionCodes[dimension.id].map(code => (
+                      dimensionCodes[dimension.id].codes.map(code => (
                         <Form.Field>
                           <Radio label={translateEntityField(code.name)} name={`${dimension.id}-radio-group`} value={code.id} />
                         </Form.Field>
