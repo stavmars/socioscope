@@ -71,10 +71,23 @@ export class VisToolbar extends React.Component<IVisToolBarProp> {
                     </Menu.Item>*/}
               </Menu>
             </Grid.Column>
-            <Grid.Column width={4}>
-              <List floated="right" horizontal>
+            <Grid.Column>
+              <List horizontal floated="right">
                 <List.Item>
-                  <Image src="/content/images/Assets/Download-icon.svg" />
+                  <Dropdown
+                    icon={null}
+                    trigger={<Image src="/content/images/Assets/Download-icon.svg" />}
+                    className={`download-dropdown ${colorScheme}`}
+                  >
+                    <Dropdown.Menu>
+                      <Dropdown.Item text="Εκτύπωση" disabled />
+                      <Dropdown.Item text="Λήψη ως :" disabled />
+                      <Dropdown.Item text="PNG" disabled />
+                      <Dropdown.Item text="JPEG" disabled />
+                      <Dropdown.Item text="SVG" disabled />
+                      <Dropdown.Item text="PDF" disabled />
+                    </Dropdown.Menu>
+                  </Dropdown>
                 </List.Item>
                 <List.Item>
                   <Dropdown icon="share alternate" className={`share-dropdown ${colorScheme}`} pointing="top right">
