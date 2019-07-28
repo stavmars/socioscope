@@ -91,6 +91,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
               dataset={dataset}
               fetchedCodeLists={fetchedCodeLists}
               seriesOptions={seriesOptions}
+              setFilterValue={this.props.setFilterValue}
             />
           )}
         </div>
