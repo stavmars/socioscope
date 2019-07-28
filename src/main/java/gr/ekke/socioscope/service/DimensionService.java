@@ -10,6 +10,7 @@ import gr.ekke.socioscope.security.SecurityUtils;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -38,6 +39,8 @@ public class DimensionService {
     private final DimensionCodeRepository dimensionCodeRepository;
 
     private final UserService userService;
+
+    public static final String CODELISTS_BY_DIMENSION_ID = "codelistsByDimensionId";
 
     public DimensionService(DimensionRepository dimensionRepository, DimensionSearchRepository dimensionSearchRepository,
                             DataSetRepository dataSetRepository, DimensionCodeRepository dimensionCodeRepository, UserService userService) {
@@ -146,6 +149,7 @@ public class DimensionService {
      * @param id the id of the dimension
      * @return the dimension codelist
      */
+    @Cacheable(cacheNames = CODELISTS_BY_DIMENSION_ID)
     public Optional<List<DimensionCode>> getDimensionCodelist(String id) {
         log.debug("Request to get the codelist for Dimension : {}", id);
         return dimensionRepository.findById(id).map(dimension -> dimensionCodeRepository.findAllByDimensionId(id));

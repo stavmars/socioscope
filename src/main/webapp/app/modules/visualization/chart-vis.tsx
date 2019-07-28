@@ -26,7 +26,7 @@ export interface IChartVisProp {
 
 const prepareSeriesByParent = (codesByNotation, seriesList: ISeries[]) =>
   seriesList.reduce((acc, series) => {
-    const pointsByParent = _.groupBy(series.data, seriesPoint => codesByNotation[seriesPoint.x].parentId);
+    const pointsByParent = _.groupBy(series.data, seriesPoint => codesByNotation[seriesPoint.x].parentId || '');
     _.forEach(pointsByParent, (points, parent) => {
       acc[parent] = acc[parent] || {};
       acc[parent][series.id] = points;
@@ -80,7 +80,6 @@ export class ChartVis extends React.Component<IChartVisProp> {
         }));
       } else {
         seriesByParent = prepareSeriesByParent(xAxisCodes.codesByNotation, seriesList);
-
         if (seriesByParent['']) {
           chartSeries = seriesList.map(series => ({
             id: series.id,

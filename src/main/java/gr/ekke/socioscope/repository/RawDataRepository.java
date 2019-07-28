@@ -42,10 +42,9 @@ public class RawDataRepository {
         List<AggregationOperation> aggregationOperations = new ArrayList<>();
 
 
-        if (dimensionFilters != null) {
+        if (dimensionFilters != null && dimensionFilters.size() > 0) {
             aggregationOperations.add(match(this.getDimensionCriteria(dimensionFilters)));
         }
-        ;
 
         String[] splitXAxis = xAxis.split("\\.");
         if (splitXAxis.length > 1) {

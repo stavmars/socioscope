@@ -8,7 +8,7 @@ import { Dropdown } from 'semantic-ui-react';
 import { setFilterValue } from 'app/modules/dataset-page/dataset-page-reducer';
 
 export interface IQbDatasetFiltersProp {
-  dimensionCodes: Map<string, IDimensionCode[]>;
+  dimensionCodes: any;
   dataset: IDataSet;
   fetchedCodeLists: boolean;
   seriesOptions: ISeriesOptions;
