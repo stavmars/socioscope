@@ -2,7 +2,6 @@ package gr.ekke.socioscope.repository;
 
 import com.mongodb.BasicDBObject;
 import gr.ekke.socioscope.domain.DataSet;
-import gr.ekke.socioscope.domain.DimensionValue;
 import gr.ekke.socioscope.domain.SeriesOptions;
 import gr.ekke.socioscope.service.dto.Series;
 import gr.ekke.socioscope.service.dto.SeriesPoint;
@@ -15,10 +14,7 @@ import org.springframework.data.mongodb.core.aggregation.AggregationOperation;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static java.util.stream.Collectors.groupingBy;
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
@@ -38,12 +34,21 @@ public class RawDataRepository {
 
         String xAxis = seriesOptions.getxAxis();
         String compareBy = seriesOptions.getCompareBy();
+        List<String> compareCodes = seriesOptions.getCompareCodes();
+
         Map<String, String> dimensionFilters = seriesOptions.getDimensionFilters();
         List<AggregationOperation> aggregationOperations = new ArrayList<>();
 
+        Map<String, Object> filters = new HashMap<>();
+        if (dimensionFilters != null) {
+            filters.putAll(dimensionFilters);
+        }
+        if (compareBy != null && compareCodes != null && compareCodes.size() > 0) {
+            filters.put(compareBy, compareCodes);
+        }
 
-        if (dimensionFilters != null && dimensionFilters.size() > 0) {
-            aggregationOperations.add(match(this.getDimensionCriteria(dimensionFilters)));
+        if (filters.size() > 0) {
+            aggregationOperations.add(match(this.getDimensionCriteria(filters)));
         }
 
         String[] splitXAxis = xAxis.split("\\.");
@@ -82,24 +87,36 @@ public class RawDataRepository {
         return mongoTemplate.aggregate(agg, dataSet.getId(), Series.class).getMappedResults();
     }
 
-    private Criteria getDimensionCriteria(Map<String, String> dimensionFilters) {
-        Map<String, List<DimensionValue>> byParent = dimensionFilters.entrySet().stream()
-            .map(entry -> new DimensionValue(entry.getKey(), entry.getValue()))
-            .collect(groupingBy(dimensionValue -> {
-                String dimensionId = dimensionValue.getId();
+    private Criteria getDimensionCriteria(Map<String, Object> dimensionFilters) {
+        Map<String, List<Map.Entry<String, Object>>> filtersByParent = dimensionFilters.entrySet().stream()
+            .collect(groupingBy(entry -> {
+                String dimensionId = entry.getKey();
                 String[] splitDimensionId = dimensionId.split("\\.");
                 return splitDimensionId.length > 1 ? splitDimensionId[0] : "";
             }));
 
-        Criteria[] dimensionCriteria = byParent.entrySet().stream().map(entry -> {
-            String parent = entry.getKey();
+        Criteria[] dimensionCriteria = filtersByParent.entrySet().stream().map(filterListEntry -> {
+            String parent = filterListEntry.getKey();
             if (parent.isEmpty()) {
-                return new Criteria().andOperator(entry.getValue().stream().map(
-                    dimensionValue -> Criteria.where(dimensionValue.getId()).is(dimensionValue.getValue())
+                return new Criteria().andOperator(filterListEntry.getValue().stream().map(
+                    filterEntry -> {
+                        if (filterEntry.getValue() instanceof List) {
+                            return Criteria.where(filterEntry.getKey()).in(((List) filterEntry.getValue()).toArray());
+                        } else {
+                            return Criteria.where(filterEntry.getKey()).is(filterEntry.getValue());
+                        }
+                    }
                 ).toArray(Criteria[]::new));
             }
-            return Criteria.where(parent).elemMatch(new Criteria().andOperator(entry.getValue().stream().map(
-                dimensionValue -> Criteria.where(dimensionValue.getId().split("\\.")[1]).is(dimensionValue.getValue())
+            return Criteria.where(parent).elemMatch(new Criteria().andOperator(filterListEntry.getValue().stream().map(
+                filterEntry -> {
+                    String fieldName = filterEntry.getKey().split("\\.")[1];
+                    if (filterEntry.getValue() instanceof List) {
+                        return Criteria.where(fieldName).in(((List) filterEntry.getValue()).toArray());
+                    } else {
+                        return Criteria.where(fieldName).is(filterEntry.getValue());
+                    }
+                }
             ).toArray(Criteria[]::new)));
         }).toArray(Criteria[]::new);
 
