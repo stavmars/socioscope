@@ -3,11 +3,12 @@ import { connect } from 'react-redux';
 
 import { IRootState } from 'app/shared/reducers';
 import './dataset-page.scss';
-import { Accordion, Dropdown, List } from 'semantic-ui-react';
+import { Accordion, Dropdown, List, Image, Button } from 'semantic-ui-react';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
-import { setFilterValue } from 'app/modules/dataset-page/dataset-page-reducer';
+import { removeFilter, setFilterValue } from 'app/modules/dataset-page/dataset-page-reducer';
+import _ from 'lodash';
 
 export interface IRawDatasetFiltersProp {
   dimensionCodes: any;
@@ -15,6 +16,7 @@ export interface IRawDatasetFiltersProp {
   fetchedCodeLists: boolean;
   seriesOptions: ISeriesOptions;
   setFilterValue: typeof setFilterValue;
+  removeFilter: typeof removeFilter;
 }
 
 export interface IRawDatasetFiltersState {
@@ -34,6 +36,10 @@ export class RawDatasetFilters extends React.Component<IRawDatasetFiltersProp, I
     this.props.setFilterValue(this.props.dataset, dimensionId, code);
   };
 
+  handleRemoveFilter = dimensionId => {
+    this.props.removeFilter(this.props.dataset, dimensionId);
+  };
+
   handleAccordionClick = (e, props) => {
     e.stopPropagation();
     const { index } = props;
@@ -45,6 +51,7 @@ export class RawDatasetFilters extends React.Component<IRawDatasetFiltersProp, I
   render() {
     const { dataset, dimensionCodes, fetchedCodeLists, seriesOptions } = this.props;
     const { expandedId } = this.state;
+    const { colorScheme } = dataset;
 
     return (
       <div>
@@ -82,6 +89,27 @@ export class RawDatasetFilters extends React.Component<IRawDatasetFiltersProp, I
             ))}
           </Accordion>
         </Dropdown>
+        {
+          <div className="remove-filters">
+            {_.map(seriesOptions.dimensionFilters, (value, dimensionId) => {
+              const dimension = dataset.dimensions.find(dim => dim.id === dimensionId);
+              return (
+                <div className="remove-filter" key={dimensionId}>
+                  <Image
+                    inline
+                    src={`/content/images/Assets/remove-filter-${colorScheme}.svg`}
+                    dimension={dimensionId}
+                    onClick={() => this.handleRemoveFilter(dimensionId)}
+                  />
+                  <span className="remove-filter-dim-label">{translateEntityField(dimension.name)} / </span>
+                  <span className="remove-filter-value">
+                    {translateEntityField(dimensionCodes[dimension.id].codesByNotation[value].name)}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        }
       </div>
     );
   }

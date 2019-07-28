@@ -131,7 +131,8 @@ export class ChartVis extends React.Component<IChartVisProp> {
       },
       plotOptions: {
         series: {
-          maxPointWidth: 80
+          maxPointWidth: 80,
+          stacking: true
         }
       },
       series: chartSeries,
