@@ -39,6 +39,28 @@ public class RawDataRepository {
         Map<String, String> dimensionFilters = seriesOptions.getDimensionFilters();
         List<AggregationOperation> aggregationOperations = new ArrayList<>();
 
+        Set<String> unwindFields = new HashSet<>();
+
+        String[] splitXAxis = xAxis.split("\\.");
+        if (splitXAxis.length > 1) {
+            unwindFields.add(splitXAxis[0]);
+        }
+        if (compareBy != null) {
+            String[] splitCompareBy = compareBy.split("\\.");
+            if (splitCompareBy.length > 1) {
+                unwindFields.add(splitCompareBy[0]);
+            }
+        }
+        for (String dimensionField : dimensionFilters.keySet()){
+            String[] splitField = dimensionField.split("\\.");
+            if (splitField.length > 1) {
+                unwindFields.add(splitField[0]);
+            }
+        }
+        for (String field : unwindFields){
+            aggregationOperations.add(unwind(field));
+        }
+
         Map<String, Object> filters = new HashMap<>();
         if (dimensionFilters != null) {
             filters.putAll(dimensionFilters);
@@ -51,10 +73,6 @@ public class RawDataRepository {
             aggregationOperations.add(match(this.getDimensionCriteria(filters)));
         }
 
-        String[] splitXAxis = xAxis.split("\\.");
-        if (splitXAxis.length > 1) {
-            aggregationOperations.add(unwind(splitXAxis[0]));
-        }
 
         if (compareBy == null) {
             aggregationOperations.add(project("_id").and(xAxis).as("x"));
@@ -66,12 +84,6 @@ public class RawDataRepository {
             Series series = new Series();
             series.setData(mongoTemplate.aggregate(agg, dataSet.getId(), SeriesPoint.class).getMappedResults());
             return Arrays.asList(series);
-        }
-
-
-        String[] splitCompareBy = compareBy.split("\\.");
-        if (splitCompareBy.length > 1) {
-            aggregationOperations.add(unwind(splitCompareBy[0]));
         }
 
         aggregationOperations.add(project("_id").and(xAxis).as("x").and(compareBy).as("compareBy"));
@@ -88,14 +100,22 @@ public class RawDataRepository {
     }
 
     private Criteria getDimensionCriteria(Map<String, Object> dimensionFilters) {
-        Map<String, List<Map.Entry<String, Object>>> filtersByParent = dimensionFilters.entrySet().stream()
+        /*Map<String, List<Map.Entry<String, Object>>> filtersByParent = dimensionFilters.entrySet().stream()
             .collect(groupingBy(entry -> {
                 String dimensionId = entry.getKey();
                 String[] splitDimensionId = dimensionId.split("\\.");
                 return splitDimensionId.length > 1 ? splitDimensionId[0] : "";
             }));
+*/
+        Criteria[] dimensionCriteria = dimensionFilters.entrySet().stream().map(filterEntry -> {
+            if (filterEntry.getValue() instanceof List) {
+                return Criteria.where(filterEntry.getKey()).in(((List) filterEntry.getValue()).toArray());
+            } else {
+                return Criteria.where(filterEntry.getKey()).is(filterEntry.getValue());
+            }
+        }).toArray(Criteria[]::new);
 
-        Criteria[] dimensionCriteria = filtersByParent.entrySet().stream().map(filterListEntry -> {
+        /*Criteria[] dimensionCriteria = filtersByParent.entrySet().stream().map(filterListEntry -> {
             String parent = filterListEntry.getKey();
             if (parent.isEmpty()) {
                 return new Criteria().andOperator(filterListEntry.getValue().stream().map(
@@ -118,7 +138,7 @@ public class RawDataRepository {
                     }
                 }
             ).toArray(Criteria[]::new)));
-        }).toArray(Criteria[]::new);
+        }).toArray(Criteria[]::new);*/
 
         return new Criteria().andOperator(dimensionCriteria);
     }
