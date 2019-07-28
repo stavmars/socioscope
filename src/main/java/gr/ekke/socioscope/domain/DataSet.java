@@ -44,11 +44,11 @@ public class DataSet implements Serializable {
 
     @DBRef
     @Field("dimensions")
-    private Set<Dimension> dimensions = new HashSet<>();
+    private List<Dimension> dimensions = new ArrayList<>();
 
     @DBRef
     @Field("measures")
-    private Set<Measure> measures = new HashSet<>();
+    private List<Measure> measures = new ArrayList<>();
 
     @Field("highlights")
     private List<Highlight> highlights = new ArrayList<>();
@@ -148,11 +148,11 @@ public class DataSet implements Serializable {
         this.createdDate = createdDate;
     }
 
-    public Set<Dimension> getDimensions() {
+    public List<Dimension> getDimensions() {
         return dimensions;
     }
 
-    public DataSet dimensions(Set<Dimension> dimensions) {
+    public DataSet dimensions(List<Dimension> dimensions) {
         this.dimensions = dimensions;
         return this;
     }
@@ -162,15 +162,15 @@ public class DataSet implements Serializable {
         return this;
     }
 
-    public void setDimensions(Set<Dimension> dimensions) {
+    public void setDimensions(List<Dimension> dimensions) {
         this.dimensions = dimensions;
     }
 
-    public Set<Measure> getMeasures() {
+    public List<Measure> getMeasures() {
         return measures;
     }
 
-    public DataSet measures(Set<Measure> measures) {
+    public DataSet measures(List<Measure> measures) {
         this.measures = measures;
         return this;
     }
@@ -180,7 +180,7 @@ public class DataSet implements Serializable {
         return this;
     }
 
-    public void setMeasures(Set<Measure> measures) {
+    public void setMeasures(List<Measure> measures) {
         this.measures = measures;
     }
 
