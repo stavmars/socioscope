@@ -28,7 +28,7 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
               as={Button}
               onClick={this.props.toggleMobileVisMenu}
               style={{ padding: 0, margin: 0 }}
-              src="/content/images/Assets/mobile-menu-icon.png"
+              src={`/content/images/Assets/Mobile-filters-${colorScheme}.svg`}
             />
           </Menu.Item>
           <Menu.Item>

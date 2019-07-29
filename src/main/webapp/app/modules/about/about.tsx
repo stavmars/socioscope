@@ -43,17 +43,17 @@ export class About extends React.Component<DispatchProps> {
                       </li>
                       <li>
                         <NavHashLink isActive={this.isActive('#team')} smooth to="#team" replace={false}>
-                          {translate('about.team')}
+                          {translate('about.team.title')}
                         </NavHashLink>
                       </li>
                       <li>
                         <NavHashLink isActive={this.isActive('#sources')} smooth to="#sources" replace={false}>
-                          {translate('about.sources')}
+                          {translate('about.sources.title')}
                         </NavHashLink>
                       </li>
                       <li>
                         <NavHashLink isActive={this.isActive('#techTeam')} smooth to="#techTeam" replace={false}>
-                          {translate('about.techTeam')}
+                          {translate('about.techTeam.title')}
                         </NavHashLink>
                       </li>
                       <li>Developers</li>
@@ -77,30 +77,38 @@ export class About extends React.Component<DispatchProps> {
                   Αποτελεί πλατφόρμα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης κοινωνικών και πολιτικών δεδομένων με στόχο την
                   υποστήριξη και ενίσχυση της κοινωνικής έρευνας και τη διάθεση ανοιχτών κοινωνικών δεδομένων στο ευρύ κοινό. Τα στοιχεία
                   είναι κατηγοριοποιημένα γύρω από θεματικές περιοχές και διατίθενται ανοιχτά προς χρήση με άδεια
-                  <span style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }}>
+                  <a
+                    href="http://creativecommons.org/licenses/by/4.0"
+                    style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }}
+                    target="_blank"
+                  >
                     {' '}
                     {'http://creativecommons.org/licenses/by/4.0/'}.
-                  </span>
+                  </a>
                   <br />
                   <br />
                   <br />
                   <br />
-                  <h2 id="team">{translate('about.team')}</h2>
-                  <span style={{ fontFamily: 'ProximaNovaBold' }}>Θεώνη Σταθοπούλου</span> / Διευθύντρια Ερευνών, ΕΚΚΕ, theosta@ekke.gr
+                  <h2 id="team">{translate('about.team.title')}</h2>
+                  <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.theoni.name')}</span> /{' '}
+                  {translate('about.team.theoni.role')}
                   <br />
                   <br />
-                  <span style={{ fontFamily: 'ProximaNovaBold' }}>Ιωάννα Τσίγγανου</span> / Διευθύντρια Ερευνών, ΕΚΚΕ, jtsiganou@ekke.gr
+                  <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.tsig.name')}</span> /{' '}
+                  {translate('about.team.tsig.role')}
                   <br />
                   <br />
-                  <span style={{ fontFamily: 'ProximaNovaBold' }}>Γιώργος Κανδύλης</span> / Ερευνητής, gkandyli@ekke.gr
+                  <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.kand.name')}</span> /{' '}
+                  {translate('about.team.kand.role')}
                   <br />
                   <br />
-                  <span style={{ fontFamily: 'ProximaNovaBold' }}>Μανίνα Κακεπάκη</span> / Ερευνήτρια, ΕΚΚΕ, mkakepaki@ekke.gr
+                  <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.manina.name')}</span> /{' '}
+                  {translate('about.team.manina.role')}
                   <br />
                   <br />
                   <br />
-                  <h2 id="sources">{translate('about.sources')}</h2>
-                  <h3>Εκδόσεις:</h3>
+                  <h2 id="sources">{translate('about.sources.title')}</h2>
+                  <h3>{translate('about.sources.publish')}:</h3>
                   <br />
                   <br />
                   <br />
@@ -133,7 +141,7 @@ export class About extends React.Component<DispatchProps> {
                   </a>
                   <br />
                   <br />
-                  <h3>Ιστότοποι:</h3>
+                  <h3>{translate('about.sources.web')}:</h3>
                   <br />
                   <br />
                   <br />
@@ -148,16 +156,16 @@ export class About extends React.Component<DispatchProps> {
                   <br />
                   <br />
                   <br />
-                  <h2 id="techTeam">{translate('about.techTeam')}</h2>
-                  <h3>Ανάλυση & Σχεδιασμός</h3>
-                  <span style={{ fontFamily: 'ProximaNovaBold' }}>Γιώργος Παπαστεφανάτος</span> / Ερευνητικός Συνεργάτης, Ε.Κ. ΑΘΗΝΑ),
-                  gpapas@imis.athena-innovation.gr
+                  <h2 id="techTeam">{translate('about.techTeam.title')}</h2>
+                  <h3>{translate('about.techTeam.analysis')}</h3>
+                  <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.techTeam.gpapas.name')}</span> /{' '}
+                  {translate('about.techTeam.gpapas.role')}
                   <br />
                   <br />
                   <br />
-                  <h3>Ανάπτυξη Καλειδοσκοπίου</h3>
-                  <span style={{ fontFamily: 'ProximaNovaBold' }}>Σταύρος Μαρούλης</span> / Ερευνητικός Συνεργάτης, Ε.Κ. ΑΘΗΝΑ),
-                  stavmars@imis.athena-innovation.gr
+                  <h3>{translate('about.techTeam.develop')}</h3>
+                  <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.techTeam.stav.name')}</span> /{' '}
+                  {translate('about.techTeam.stav.role')}
                 </div>
               </Grid.Column>
             </Grid.Row>

@@ -439,7 +439,16 @@
   }
 }
 
-.share-dropdown.dropdown {
+.download-dropdown {
+  &.ui.active.dropdown .menu {
+    border-style: solid;
+    border-width: 3px 3px 3px 3px;
+    height: auto;
+  }
+}
+
+.share-dropdown.dropdown,
+.download-dropdown.dropdown {
   .menu .item {
     font-size: 16px;
   }
@@ -448,14 +457,15 @@
     border-color: $color-scheme-1-accent !important;
   }
   &.color-scheme-2,
-  &.color-scheme-1 .menu {
-    border-color: $color-scheme-1-accent !important;
+  &.color-scheme-2 .menu {
+    border-color: $color-scheme-2-accent !important;
   }
   &.color-scheme-3,
-  &.color-scheme-1 .menu {
-    border-color: $color-scheme-1-accent !important;
+  &.color-scheme-3 .menu {
+    border-color: $color-scheme-3-accent !important;
   }
 }
+
 .vis-options-dropdown.ui.dropdown > .dropdown.icon {
   position: absolute;
   line-height: 1.21428571em;

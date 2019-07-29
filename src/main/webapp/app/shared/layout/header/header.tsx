@@ -45,7 +45,7 @@ export class Header extends React.Component<IHeaderProps, {}> {
               style={{ backgroundColor: mobileAboutPage ? 'white' : null, borderStyle: 'none' }}
             >
               <Menu.Item position="left" header as="a" href="/" style={{ padding: '18px 0 17px 15px' }}>
-                <Image src="/content/images/Assets/mobile-menu-icon.png" />
+                <Image src="/content/images/Assets/icon-white.svg" />
               </Menu.Item>
               <Menu.Item onClick={this.props.toggleMobileMenu} style={{ padding: '21px 20px 21px 18px' }}>
                 <Image src="/content/images/Assets/Mobile-Sidebar.svg" />

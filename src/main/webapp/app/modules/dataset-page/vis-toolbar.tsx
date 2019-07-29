@@ -17,10 +17,33 @@ export interface IVisToolBarProp {
   togglePercentage(): void;
 }
 
-export class VisToolbar extends React.Component<IVisToolBarProp> {
+export interface IVisToolBarState {
+  downloadActive: boolean;
+  shareActive: boolean;
+  tooltipActive: boolean;
+}
+
+export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarState> {
   constructor(props) {
     super(props);
+    this.state = {
+      downloadActive: false,
+      shareActive: false,
+      tooltipActive: false
+    };
   }
+
+  toggleDownload = () => {
+    this.setState({ ...this.state, downloadActive: !this.state.downloadActive });
+  };
+
+  toggleShare = () => {
+    this.setState({ ...this.state, shareActive: !this.state.shareActive });
+  };
+
+  toggleTooltip = () => {
+    this.setState({ ...this.state, tooltipActive: !this.state.tooltipActive });
+  };
 
   render() {
     const { dataset, seriesOptions, visType } = this.props;
@@ -71,13 +94,47 @@ export class VisToolbar extends React.Component<IVisToolBarProp> {
                     </Menu.Item>*/}
               </Menu>
             </Grid.Column>
-            <Grid.Column width={4}>
-              <List floated="right" horizontal>
+            <Grid.Column>
+              <List horizontal floated="right">
                 <List.Item>
-                  <Image src="/content/images/Assets/Download-icon.svg" />
+                  <Dropdown
+                    icon={null}
+                    trigger={
+                      !this.state.downloadActive ? (
+                        <Image src="/content/images/Assets/Download-icon.svg" />
+                      ) : (
+                        <Image src={`/content/images/Assets/Download-icon-${colorScheme}.svg`} />
+                      )
+                    }
+                    className={`download-dropdown ${colorScheme}`}
+                    onClick={this.toggleDownload}
+                    onClose={this.toggleDownload}
+                  >
+                    <Dropdown.Menu>
+                      <Dropdown.Item text="Εκτύπωση" disabled />
+                      <Dropdown.Item text="Λήψη ως :" disabled />
+                      <Dropdown.Item text="PNG" disabled />
+                      <Dropdown.Item text="JPEG" disabled />
+                      <Dropdown.Item text="SVG" disabled />
+                      <Dropdown.Item text="PDF" disabled />
+                    </Dropdown.Menu>
+                  </Dropdown>
                 </List.Item>
                 <List.Item>
-                  <Dropdown icon="share alternate" className={`share-dropdown ${colorScheme}`} pointing="top right">
+                  <Dropdown
+                    icon={null}
+                    trigger={
+                      !this.state.shareActive ? (
+                        <Image src="/content/images/Assets/share.svg" />
+                      ) : (
+                        <Image src={`/content/images/Assets/share-${colorScheme}.svg`} />
+                      )
+                    }
+                    className={`download-dropdown ${colorScheme}`}
+                    onClick={this.toggleShare}
+                    onClose={this.toggleShare}
+                    pointing="top right"
+                  >
                     <Dropdown.Menu>
                       <Popup
                         on="click"
@@ -92,7 +149,7 @@ export class VisToolbar extends React.Component<IVisToolBarProp> {
                   </Dropdown>
                 </List.Item>
                 <List.Item>
-                  <Image src="/content/images/Assets/Download-icon.svg" />
+                  <Image src="/content/images/Assets/Tooltip.svg" style={{ marginTop: '-37px' }} />
                 </List.Item>
               </List>
             </Grid.Column>
