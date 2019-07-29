@@ -1158,10 +1158,10 @@
     ],
     "measures": [
       {
-        "id": "votes_perc"
+        "id": "votes"
       },
       {
-        "id": "votes"
+        "id": "votes_perc"
       }
     ],
     "highlights": [
