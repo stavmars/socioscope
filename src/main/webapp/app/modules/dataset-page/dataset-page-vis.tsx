@@ -145,8 +145,22 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
 }
 
 const parseRouteVisOptions = (query: string): IVisOptions => {
-  const { type: visType, x: xAxis, c: compareBy, f: dimensionFilters, m: measure } = qs.parse(query, { ignoreQueryPrefix: true });
-  const seriesOptions = { xAxis, compareBy, dimensionFilters, measure };
+  const { type: visType, x: xAxis, compare: compareBy, filters: dimensionFilters, measure: measure, codes: compareCodes } = qs.parse(
+    query,
+    { ignoreQueryPrefix: true }
+  );
+  const seriesOptions = {
+    xAxis,
+    compareBy,
+    dimensionFilters,
+    measure,
+    compareCodes:
+      compareCodes &&
+      compareCodes.reduce((acc, code) => {
+        acc[code] = true;
+        return acc;
+      }, {})
+  };
   return { visType, seriesOptions };
 };
 
@@ -156,9 +170,13 @@ export const urlEncodeVisOptions = (visOptions: IVisOptions) => {
     {
       type: visType,
       x: seriesOptions.xAxis,
-      c: seriesOptions.compareBy,
-      f: seriesOptions.dimensionFilters,
-      m: seriesOptions.measure
+      compare: seriesOptions.compareBy,
+      filters: seriesOptions.dimensionFilters,
+      measure: seriesOptions.measure,
+      codes: _(seriesOptions.compareCodes)
+        .pickBy()
+        .keys()
+        .value()
     },
     { skipNulls: true }
   );
