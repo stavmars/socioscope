@@ -1222,7 +1222,7 @@
       "en": "Members of Parliament"
     },
     "type": "raw",
-    "colorScheme": "color-scheme-1",
+    "colorScheme": "color-scheme-2",
     "comment": {
       "el": "Το σύνολο δεδομένων περιλαμβάνει όλα τα επίσημα εκλογικά αποτελέσματα των Εθνικών Εκλογών (Σεπτέμβριος 1996 - Ιανουάριος 2015). Δίνεται η δυνατότητα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης σε επίπεδο Εκλογικής Περιφέρειας και Καλλικρατικού Δήμου.",
       "en": "The dataset includes all official election results of the Greek Parliamentary Elections (September 1996 - January 2015) at constituency and municipality level."
