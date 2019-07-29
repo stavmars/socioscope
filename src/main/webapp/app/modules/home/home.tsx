@@ -23,6 +23,7 @@ export class Home extends React.Component<IHomeProp> {
   render() {
     const { datasetsById } = this.props;
     const elections = datasetsById['greek-election-results'];
+    const deputies = datasetsById['deputies'];
     return (
       <div className="home-page-view">
         <div className="video">
@@ -57,6 +58,21 @@ export class Home extends React.Component<IHomeProp> {
                 ))
               : null}
           </CardCarousel>
+          {/* <CardCarousel>
+            {deputies.highlights
+              ? deputies.highlights.map(highlight => (
+                  <DatasetCard
+                    key={highlight.id}
+                    title={translateEntityField(deputies.name)}
+                    dataset={deputies}
+                    headerImg="/content/images/Assets/Politicians.svg"
+                    highlight={highlight}
+                  >
+                    <div dangerouslySetInnerHTML={{ __html: translateEntityField(highlight.description) }} />
+                  </DatasetCard>
+                ))
+              : null}
+          </CardCarousel> */}
         </div>
       </div>
     );
