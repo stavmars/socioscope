@@ -218,7 +218,7 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
     }, {}) as IDimensionFilters;
     newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters, compareCodes };
   } else {
-    newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters: {}, compareCodes };
+    newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters: filters || {}, compareCodes };
   }
   dispatch({
     type: ACTION_TYPES.UPDATE_VIS_OPTIONS,
