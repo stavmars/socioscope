@@ -25,12 +25,22 @@ public class SeriesOptions {
         this.xAxis = xAxis;
     }
 
+    public SeriesOptions xAxis(String xAxis) {
+        this.xAxis = xAxis;
+        return this;
+    }
+
     public String getCompareBy() {
         return compareBy;
     }
 
     public void setCompareBy(String compareBy) {
         this.compareBy = compareBy;
+    }
+
+    public SeriesOptions compareBy(String compareBy) {
+        this.compareBy = compareBy;
+        return this;
     }
 
     public Map<String, String> getDimensionFilters() {
@@ -41,6 +51,11 @@ public class SeriesOptions {
         this.dimensionFilters = dimensionFilters;
     }
 
+    public SeriesOptions dimensionFilters(Map<String, String> dimensionFilters) {
+        this.dimensionFilters = dimensionFilters;
+        return this;
+    }
+
     public List<String> getCompareCodes() {
         return compareCodes;
     }
@@ -49,11 +64,21 @@ public class SeriesOptions {
         this.compareCodes = compareCodes;
     }
 
+    public SeriesOptions compareCodes(List<String> compareCodes) {
+        this.compareCodes = compareCodes;
+        return this;
+    }
+
     public String getMeasure() {
         return measure;
     }
 
     public void setMeasure(String measure) {
         this.measure = measure;
+    }
+
+    public SeriesOptions measure(String measure) {
+        this.measure = measure;
+        return this;
     }
 }

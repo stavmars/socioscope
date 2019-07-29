@@ -4,6 +4,7 @@ import gr.ekke.socioscope.domain.*;
 import gr.ekke.socioscope.repository.*;
 import gr.ekke.socioscope.repository.search.DataSetSearchRepository;
 import gr.ekke.socioscope.service.dto.Series;
+import gr.ekke.socioscope.service.dto.SeriesPoint;
 import gr.ekke.socioscope.service.mapper.ObservationMapper;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
 import org.slf4j.Logger;
@@ -11,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -206,25 +208,48 @@ public class DataSetService {
         log.debug("Request to get series for dataset {} with options {}", datasetId, seriesOptions);
         return dataSetRepository.findById(datasetId)
             .map(dataSet -> {
+                Measure measure;
+                //if measure is not specified for the series, pick the first one
+                if (seriesOptions.getMeasure() == null) {
+                    measure = dataSet.getMeasures().get(0);
+                    seriesOptions.setMeasure(measure.getId());
+                } else {
+                    measure = dataSet.getMeasures().stream().filter(m -> m.getId().equals(seriesOptions.getMeasure()))
+                        .findFirst().orElseThrow(() ->
+                            new BadRequestAlertException("Dataset does not contain the specified measure", "dataSet", "invalid_measure"));
+                }
+
                 // if the dataset contains pre-aggregated cube-like data, we fetch and map the observations to the corresponding series
                 if (dataSet.getType().equals(DatasetType.QB)) {
-                    //if measure is not specified for the series, pick the first one
-                    if (seriesOptions.getMeasure() == null) {
-                        seriesOptions.setMeasure(dataSet.getMeasures().stream().findFirst().get().getId());
-                    } else {
-                        dataSet.getMeasures().stream().filter(measure -> measure.getId().equals(seriesOptions.getMeasure()))
-                            .findFirst().orElseThrow(() ->
-                            new BadRequestAlertException("Dataset does not contain the specified measure", "dataSet", "invalid_measure"));
-
-                    }
-
-
                     List<Observation> observations = observationRepository.findObservations(datasetId, seriesOptions);
-
                     return observationMapper.observationsToMultipleSeries(observations, seriesOptions);
                 } else {
                     // if the dataset contains raw, non-aggregated data, we aggregate it from the corresponding mongo collection
-                    return rawDataRepository.getSeries(dataSet, seriesOptions);
+                    List<Series> seriesList = rawDataRepository.getSeries(dataSet, seriesOptions);
+
+                    if (measure.getType().equals(MeasureType.PERCENTAGE)) {
+                        if (seriesOptions.getCompareBy() == null) {
+                            Double totalCount = seriesList.get(0).getData().stream().collect(Collectors.summingDouble(SeriesPoint::getY));
+                            List<SeriesPoint> seriesPoints = seriesList.get(0).getData().stream().map(seriesPoint -> new SeriesPoint(seriesPoint.getX(), (seriesPoint.getY() / totalCount) * 100d)).collect(Collectors.toList());
+                            seriesList.get(0).setData(seriesPoints);
+                        } else {
+                            SeriesOptions totalSeriesOptions = new SeriesOptions().xAxis(seriesOptions.getxAxis())
+                                .measure(seriesOptions.getMeasure()).dimensionFilters(seriesOptions.getDimensionFilters());
+                            Series totalSeries = rawDataRepository.getSeries(dataSet, totalSeriesOptions).get(0);
+
+                            Map<String, Double> denominatorsByX = totalSeries.getData().stream().collect(Collectors.toMap(SeriesPoint::getX, SeriesPoint::getY));
+                            seriesList = seriesList.stream().map(series -> {
+                                List<SeriesPoint> percentPoints = series.getData().stream().map(seriesPoint -> {
+                                    String x = seriesPoint.getX();
+                                    Double y = seriesPoint.getY();
+                                    return new SeriesPoint(x, (y / denominatorsByX.get(x)) * 100d);
+                                }).collect(Collectors.toList());
+                                series.setData(percentPoints);
+                                return series;
+                            }).collect(Collectors.toList());
+                        }
+                    }
+                    return seriesList;
                 }
             });
     }

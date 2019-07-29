@@ -35,8 +35,6 @@ public class Measure implements Serializable {
     @Field("name")
     private Map<String, @NotBlank String> name;
 
-    @NotNull
-    @Size(min = 2)
     @Field("unit")
     private String unit;
 
