@@ -1305,8 +1305,8 @@
       {
         "id": "gender",
         "description": {
-          "el": "<span>Στις 1211 περιπτώσεις εκλεγμένων Βουλευτών για το διάστημα 1993 – 2019 το 83% είναι άνδρες και το 17% γυναίκες. Οι κοινοβουλευτικές συνθέσεις με τον χαμηλότερο αριθμό γυναικών είναι η Η’ περίοδος (1993-1996) με μόλις 6,7% γυναίκες και Θ’ περίοδος (1996-2000) με μόλις 6,2% γυναίκες. Αντίθετα, στην ΙΕ’ περίοδο (2012-2014) και στην ΙΣΤ’ (2015) το ποσοστό των γυναικών ανέρχεται σε 22,2% και 23% αντίστοιχα.</span>",
-          "en": "<span>In 1211 cases of elected MPs between 1993 and 2019, 83% are men and 17% are women. The parliamentary compositions with the lowest number of women are the period (1993-1996) with only 6.7% women and the 3rd period (1996-2000) with only 6.2% women. By contrast, in the 2012-2014 and 2015-2015 periods, the percentage of women is 22.2% and 23%, respectively.</span>"
+          "el": "<span>Στις 1211 περιπτώσεις εκλεγμένων Βουλευτών για το διάστημα 1993 – 2019 το 83% είναι <span class=\"text-accent\">άνδρες</span> και το 17% <span class=\"text-accent\">γυναίκες</span>.</span>",
+          "en": "<span>In 1211 cases of elected MPs between 1993 and 2019, 83% are <span class=\"text-accent\">men</span> and 17% are <span class=\"text-accent\">women</span>.</span>"
         },
         "visType": "chart",
         "seriesOptions": {
@@ -1320,8 +1320,8 @@
       {
         "id": "family_networks",
         "description": {
-          "el": "<span>Οσο πιο μεγάλη είναι μια εκλογική περιφέρεια, τόσο πιθανότερο είναι οι βουλευτές που εκλέγονται σε αυτή να προέρχονται από «πολιτική» οικογένεια. ‘Ετσι, στην Β Αθήνας σχεδον 1 στους 5 βουλευτές έχει συγγενή με προηγούμενη θητεία στο Κοινοβούλιο.</span>",
-          "en": "<span>The bigger an electoral region, the more likely is for the elected members to derive from a \"political\" family. Thus, in Athens, almost 1 in 5 Members have an affinitive with a previous term in Parliament.</span>"
+          "el": "<span>Οσο <span class=\"text-accent\">πιο μεγάλη είναι μια εκλογική περιφέρεια</span>, τόσο πιθανότερο είναι οι βουλευτές που εκλέγονται σε αυτή να προέρχονται από «πολιτική» οικογένεια. ‘Ετσι, στην <span class=\"text-accent\">Β Αθήνας</span> σχεδον 1 στους 5 βουλευτές έχει <span class=\"text-accent\">συγγενή με προηγούμενη θητεία</span>> στο Κοινοβούλιο.</span>",
+          "en": "<span><span class=\"text-accent\">The bigger an electoral region</span>, the more likely is for the elected members to derive from a \"political\" family. Thus, <span class=\"text-accent\">in Athens</span>, almost 1 in 5 Members <span class=\"text-accent\">have an affinitive with a previous term</span> in Parliament.</span>"
         },
         "visType": "chart",
         "seriesOptions": {
@@ -1335,8 +1335,8 @@
       {
         "id": "education",
         "description": {
-          "el": "<span>To 57% των εκλεγμένων Βουλευτών/τριων από το 1993 έως το 2019 κατέχουν δίπλωμα ΑΕΙ. Το 23% είναι κάτοχοι μεταπτυχιακού τίτλου σπουδών και τέλος το 14% έχει διδακτορικό. Η Βουλή IZ (2015-2019) είναι πιθανώς η πιο «μορφωμένη» της Μεταπολίτευσης καθώς έχει τους περισσότερους κατόχους διδακτορικού (16,3%) της τελευταίας εικοσιπενταετίας.</span>",
-          "en": "<span>Six out of ten (57%) of elected Members from 1993 to 2019 hold a university degree. Two out of ten (23%) hold a postgraduate degree and the 14% hold a PhD. The parliament term 2015-2019 is probably the most  \"educated\" of the ‘Metapolitefsis’ as it includes the most doctorate holders (16.3%) of the last twenty-five years.</span>"
+          "el": "<span>To 57% των εκλεγμένων Βουλευτών/τριων από το 1993 έως το 2019 κατέχουν δίπλωμα ΑΕΙ. Το 23% είναι κάτοχοι μεταπτυχιακού τίτλου σπουδών και τέλος το 14% έχει διδακτορικό. Η Βουλή IZ (2015-2019) είναι πιθανώς η πιο «μορφωμένη» της Μεταπολίτευσης καθώς <span class=\"text-accent\">έχει τους περισσότερους κατόχους διδακτορικού (16,3%)</span> της τελευταίας εικοσιπενταετίας.</span>",
+          "en": "<span>Six out of ten (57%) of elected Members from 1993 to 2019 hold a university degree. Two out of ten (23%) hold a postgraduate degree and the 14% hold a PhD. The parliament term 2015-2019 is probably the most  \"educated\" of the ‘Metapolitefsis’ <span class=\"text-accent\">as it includes the most doctorate holders (16.3%)</span> of the last twenty-five years.</span>"
         },
         "visType": "chart",
         "seriesOptions": {
@@ -1344,7 +1344,7 @@
           "dimensionFilters": {},
           "measure": "deputies",
           "compareBy": "educationTitle",
-          "compareCodes": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13" ]
+          "compareCodes": [ "1", "2", "3", "4", "5", "6", "7", "8", "10", "11", "12", "13" ]
         }
       }
     ]

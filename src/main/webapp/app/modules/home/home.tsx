@@ -58,7 +58,7 @@ export class Home extends React.Component<IHomeProp> {
                 ))
               : null}
           </CardCarousel>
-          {/* <CardCarousel>
+          <CardCarousel>
             {deputies.highlights
               ? deputies.highlights.map(highlight => (
                   <DatasetCard
@@ -72,7 +72,7 @@ export class Home extends React.Component<IHomeProp> {
                   </DatasetCard>
                 ))
               : null}
-          </CardCarousel> */}
+          </CardCarousel>
         </div>
       </div>
     );
