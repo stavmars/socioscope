@@ -432,8 +432,14 @@
 }
 
 .ui.bottom.left.basic.popup.transition.visible {
-  top: 26% !important;
-  left: 91% !important;
+  @include mobile {
+    top: 70% !important;
+    left: 50% !important;
+  }
+  @include computer {
+    top: 26% !important;
+    left: 91% !important;
+  }
 }
 > .share-dropdown {
   &.ui.active.dropdown .menu {
