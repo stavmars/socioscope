@@ -431,7 +431,11 @@
   background-color: grey;
 }
 
-.share-dropdown {
+.ui.bottom.left.basic.popup.transition.visible {
+  top: 26% !important;
+  left: 91% !important;
+}
+> .share-dropdown {
   &.ui.active.dropdown .menu {
     border-style: solid;
     border-width: 3px 3px 3px 3px;
