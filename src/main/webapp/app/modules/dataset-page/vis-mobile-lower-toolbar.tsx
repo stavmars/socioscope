@@ -2,17 +2,44 @@ import React from 'react';
 import './dataset-page.scss';
 import { Checkbox, Dropdown, Image, Menu, Popup } from 'semantic-ui-react';
 import { IDataSet } from 'app/shared/model/data-set.model';
+import { IMeasure } from 'app/shared/model/measure.model';
+import _ from 'lodash';
+import { ISeriesOptions } from 'app/shared/model/series-options.model';
 
 export interface IVisMobileLowerToolbarProp {
   dataset: IDataSet;
 
   copyCurrentURL(): void;
+  togglePercentage(): void;
 }
 
-export class VisMobileLowerToolbar extends React.Component<IVisMobileLowerToolbarProp> {
+export interface IVisToolBarState {
+  downloadActive: boolean;
+  shareActive: boolean;
+  tooltipActive: boolean;
+}
+
+export class VisMobileLowerToolbar extends React.Component<IVisMobileLowerToolbarProp, IVisToolBarState> {
   constructor(props) {
     super(props);
+    this.state = {
+      downloadActive: false,
+      shareActive: false,
+      tooltipActive: false
+    };
   }
+
+  toggleDownload = () => {
+    this.setState({ ...this.state, downloadActive: !this.state.downloadActive });
+  };
+
+  toggleShare = () => {
+    this.setState({ ...this.state, shareActive: !this.state.shareActive });
+  };
+
+  toggleTooltip = () => {
+    this.setState({ ...this.state, tooltipActive: !this.state.tooltipActive });
+  };
 
   render() {
     const { dataset } = this.props;
@@ -23,19 +50,59 @@ export class VisMobileLowerToolbar extends React.Component<IVisMobileLowerToolba
         <Menu fluid text className={colorScheme}>
           <Menu.Item style={{ left: '5%' }}>
             <Image src="/content/images/Assets/Metric.svg" />
-            <Checkbox className={colorScheme} toggle style={{ margin: '0 6px' }} />
+            <Checkbox
+              className={colorScheme}
+              toggle
+              style={{ margin: '0 6px' }}
+              // onChange={this.props.togglePercentage}
+              // checked={_.find(dataset.measures as IMeasure[], { id: seriesOptions.measure }).type === 'percentage'}
+            />
             <Image src="/content/images/Assets/Percentage.svg" />
           </Menu.Item>
           <Menu.Item position="right">
-            <Image src="/content/images/Assets/Download-icon.svg" style={{ width: '34.86px', height: '34.86px' }} />
+            <Dropdown
+              icon={null}
+              trigger={
+                !this.state.downloadActive ? (
+                  <Image src="/content/images/Assets/Download-icon.svg" style={{ width: '34.86px', height: '34.86px' }} />
+                ) : (
+                  <Image src={`/content/images/Assets/Download-icon-${colorScheme}.svg`} style={{ width: '34.86px', height: '34.86px' }} />
+                )
+              }
+              className={`download-dropdown ${colorScheme}`}
+              onClick={this.toggleDownload}
+              onClose={this.toggleDownload}
+            >
+              <Dropdown.Menu>
+                <Dropdown.Item text="Εκτύπωση" disabled />
+                <Dropdown.Item text="Λήψη ως :" disabled />
+                <Dropdown.Item text="PNG" disabled />
+                <Dropdown.Item text="JPEG" disabled />
+                <Dropdown.Item text="SVG" disabled />
+                <Dropdown.Item text="PDF" disabled />
+              </Dropdown.Menu>
+            </Dropdown>
           </Menu.Item>
           <Menu.Item>
-            <Dropdown icon="share alternate" className={`share-dropdown ${colorScheme}`} pointing="top right">
+            <Dropdown
+              icon={null}
+              trigger={
+                !this.state.shareActive ? (
+                  <Image src="/content/images/Assets/share.svg" style={{ width: '34.86px', height: '34.86px' }} />
+                ) : (
+                  <Image src={`/content/images/Assets/share-${colorScheme}.svg`} style={{ width: '34.86px', height: '34.86px' }} />
+                )
+              }
+              className={`download-dropdown ${colorScheme}`}
+              onClick={this.toggleShare}
+              onClose={this.toggleShare}
+              pointing="top right"
+            >
               <Dropdown.Menu>
                 <Popup
                   on="click"
                   content="Copied link!"
-                  trigger={<Dropdown.Item icon="linkify" text="Σύνδεσμος" onClick={this.props.copyCurrentURL} />}
+                  trigger={<Dropdown.Item icon="linkify" text="Link" onClick={this.props.copyCurrentURL} />}
                   basic
                 />
                 <Dropdown.Item icon="twitter" text="Twitter" disabled />
@@ -45,7 +112,7 @@ export class VisMobileLowerToolbar extends React.Component<IVisMobileLowerToolba
             </Dropdown>
           </Menu.Item>
           <Menu.Item style={{ marginRight: '5%' }}>
-            <Image src="/content/images/Assets/mobile-menu-icon.png" />
+            <Image src="/content/images/Assets/Tooltip.svg" style={{ width: '34.86px', height: '34.86px' }} />
           </Menu.Item>
         </Menu>
       </div>
