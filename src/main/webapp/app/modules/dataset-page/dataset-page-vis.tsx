@@ -6,6 +6,7 @@ import {
   getSeries,
   initVis,
   IVisOptions,
+  removeFilter,
   setFilterValue,
   toggleCompareValue,
   updateVisOptions
@@ -95,6 +96,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   setFilterValue={this.props.setFilterValue}
                   updateVisOptions={this.props.updateVisOptions}
                   toggleCompareValue={this.props.toggleCompareValue}
+                  removeFilter={this.props.removeFilter}
                 />
               </Grid.Column>
               <Grid.Column mobile={16} tablet={10} computer={12}>
@@ -180,7 +182,8 @@ const mapDispatchToProps = {
   updateVisOptions,
   setFilterValue,
   initVis,
-  toggleCompareValue
+  toggleCompareValue,
+  removeFilter
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;

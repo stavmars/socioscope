@@ -1294,9 +1294,6 @@
     ],
     "measures": [
       {
-        "id": "deputies_perc"
-      },
-      {
         "id": "deputies"
       }
     ],

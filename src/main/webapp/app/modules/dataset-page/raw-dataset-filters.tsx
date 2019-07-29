@@ -3,76 +3,114 @@ import { connect } from 'react-redux';
 
 import { IRootState } from 'app/shared/reducers';
 import './dataset-page.scss';
-import { Accordion, Dropdown, Form, Radio } from 'semantic-ui-react';
+import { Accordion, Dropdown, List, Image, Button } from 'semantic-ui-react';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
-import { IDimensionCode } from 'app/shared/model/dimension-code.model';
+import { removeFilter, setFilterValue } from 'app/modules/dataset-page/dataset-page-reducer';
+import _ from 'lodash';
 
 export interface IRawDatasetFiltersProp {
   dimensionCodes: any;
   dataset: IDataSet;
   fetchedCodeLists: boolean;
   seriesOptions: ISeriesOptions;
+  setFilterValue: typeof setFilterValue;
+  removeFilter: typeof removeFilter;
 }
 
 export interface IRawDatasetFiltersState {
-  activeAccordionIndex: string;
+  expandedId: string;
 }
 
 export class RawDatasetFilters extends React.Component<IRawDatasetFiltersProp, IRawDatasetFiltersState> {
   constructor(props) {
     super(props);
     this.state = {
-      activeAccordionIndex: null
+      expandedId: null
     };
   }
 
-  handleAccordionClick = (e, titleProps) => {
+  handleFilterChange = dimensionId => (e, { code }) => {
     e.stopPropagation();
-    const { index } = titleProps;
-    const { activeAccordionIndex } = this.state;
-    const newIndex = activeAccordionIndex === index ? -1 : index;
+    this.props.setFilterValue(this.props.dataset, dimensionId, code);
+  };
 
-    this.setState({ activeAccordionIndex: newIndex });
+  handleRemoveFilter = dimensionId => {
+    this.props.removeFilter(this.props.dataset, dimensionId);
+  };
+
+  handleAccordionClick = (e, props) => {
+    e.stopPropagation();
+    const { index } = props;
+    const { expandedId } = this.state;
+    const newIndex = expandedId === index ? null : index;
+    this.setState({ expandedId: newIndex });
   };
 
   render() {
     const { dataset, dimensionCodes, fetchedCodeLists, seriesOptions } = this.props;
+    const { expandedId } = this.state;
+    const { colorScheme } = dataset;
 
+    // tslint:disable:jsx-no-lambda
     return (
       <div>
-        <Dropdown
-          className={`vis-options-dropdown ${dataset.colorScheme}`}
-          closeOnChange={false}
-          multiple
-          selection
-          fluid
-          placeholder="Επιλέξτε 1 ή παραπάνω φίλτρα"
-        >
-          <Dropdown.Menu as={Accordion} vertical>
+        <Dropdown className={`vis-options-dropdown ${dataset.colorScheme}`} fluid scrolling placeholder="Επιλέξτε 1 ή παραπάνω φίλτρα">
+          <Accordion as={Dropdown.Menu}>
             {dataset.dimensions.map(dimension => (
-              <div>
+              <Dropdown.Item
+                key={dimension.id}
+                disabled={dimension.id === seriesOptions.xAxis || dimension.id === seriesOptions.compareBy}
+                onClick={this.handleAccordionClick}
+                index={dimension.id}
+              >
                 <Accordion.Title
-                  content={translateEntityField(dimension.name)}
-                  index={dimension.id}
-                  active={this.state.activeAccordionIndex === dimension.id}
                   onClick={this.handleAccordionClick}
+                  index={dimension.id}
+                  className="filter-accordion-title"
+                  active={expandedId === dimension.id}
+                  content={translateEntityField(dimension.name)}
                 />
-                <Accordion.Content active={this.state.activeAccordionIndex === dimension.id}>
-                  <Form>
-                    {fetchedCodeLists &&
-                      dimensionCodes[dimension.id].codes.map(code => (
-                        <Form.Field>
-                          <Radio label={translateEntityField(code.name)} name={`${dimension.id}-radio-group`} value={code.id} />
-                        </Form.Field>
-                      ))}
-                  </Form>
+                <Accordion.Content active={expandedId === dimension.id}>
+                  <List relaxed verticalAlign="middle">
+                    {dimensionCodes[dimension.id].codes.map(code => (
+                      <List.Item onClick={this.handleFilterChange(dimension.id)} code={code.notation} key={code.notation}>
+                        <List.Icon
+                          name={code.notation === seriesOptions.dimensionFilters[dimension.id] ? 'dot circle outline' : 'circle outline'}
+                        />
+                        <List.Content>
+                          <List.Description>{translateEntityField(code.name)}</List.Description>
+                        </List.Content>
+                      </List.Item>
+                    ))}
+                  </List>
                 </Accordion.Content>
-              </div>
+              </Dropdown.Item>
             ))}
-          </Dropdown.Menu>
+          </Accordion>
         </Dropdown>
+        {
+          <div className="remove-filters">
+            {_.map(seriesOptions.dimensionFilters, (value, dimensionId) => {
+              const dimension = dataset.dimensions.find(dim => dim.id === dimensionId);
+              return (
+                <div className="remove-filter" key={dimensionId}>
+                  <Image
+                    inline
+                    src={`/content/images/Assets/remove-filter-${colorScheme}.svg`}
+                    dimension={dimensionId}
+                    onClick={() => this.handleRemoveFilter(dimensionId)}
+                  />
+                  <span className="remove-filter-dim-label">{translateEntityField(dimension.name)} / </span>
+                  <span className="remove-filter-value">
+                    {translateEntityField(dimensionCodes[dimension.id].codesByNotation[value].name)}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        }
       </div>
     );
   }

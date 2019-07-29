@@ -20,7 +20,8 @@ export const ACTION_TYPES = {
   CHANGE_COMPARE_BY: 'datasetPage/CHANGE_COMPARE_BY',
   SET_FILTER_VALUE: 'datasetPage/SET_FILTER_VALUE',
   UPDATE_VIS_OPTIONS: 'datasetPage/UPDATE_VIS_OPTIONS',
-  TOGGLE_COMPARE_VALUE: 'datasetPage/TOGGLE_COMPARE_VALUE'
+  TOGGLE_COMPARE_VALUE: 'datasetPage/TOGGLE_COMPARE_VALUE',
+  REMOVE_FILTER: 'datasetPage/REMOVE_FILTER'
 };
 
 const initialState = {
@@ -90,6 +91,14 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
           }
         }
       };
+    case ACTION_TYPES.REMOVE_FILTER:
+      return {
+        ...state,
+        seriesOptions: {
+          ...state.seriesOptions,
+          dimensionFilters: _.omit(state.seriesOptions.dimensionFilters, action.payload.dimensionId)
+        }
+      };
     case ACTION_TYPES.TOGGLE_COMPARE_VALUE:
       const { compareCode } = action.payload;
       const compareCodes = state.seriesOptions.compareCodes || {};
@@ -156,6 +165,15 @@ export const setFilterValue = (dataset: IDataSet, dimensionId: string, filterVal
   dispatch(getSeries(dataset.id, seriesOptions));
 };
 
+export const removeFilter = (dataset: IDataSet, dimensionId: string) => (dispatch, getState) => {
+  dispatch({
+    type: ACTION_TYPES.REMOVE_FILTER,
+    payload: { dimensionId }
+  });
+  const { seriesOptions } = getState().datasetPage;
+  dispatch(getSeries(dataset.id, seriesOptions));
+};
+
 export const toggleCompareValue = (dataset: IDataSet, dimensionId: string, compareCode: string) => (dispatch, getState) => {
   const { seriesOptions, visType } = getState().datasetPage;
   if (seriesOptions.compareBy === dimensionId) {
@@ -200,7 +218,7 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
     }, {}) as IDimensionFilters;
     newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters, compareCodes };
   } else {
-    newSeriesOptions = { xAxis, compareBy, measure, compareCodes };
+    newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters: {}, compareCodes };
   }
   dispatch({
     type: ACTION_TYPES.UPDATE_VIS_OPTIONS,

@@ -37,7 +37,7 @@ export const TopicsMegaMenu = () => (
           {translate('home.dataset.categories.elections')}
           <span className="topics-mega-menu-list-item-discover color-scheme-1">{translate('home.dataset.explore')}</span>
         </List.Item>
-        <List.Item className="topics-mega-menu-list-item color-scheme-2" as={Link} to="/dataset/politics">
+        <List.Item className="topics-mega-menu-list-item color-scheme-2" as={Link} to="/dataset/deputies">
           <div className="topics-mega-menu-img">
             <Image centered src="/content/images/Assets/Politicians.svg" />
           </div>

@@ -78,7 +78,7 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
           {translate('socioscopeApp.dataSet.visualization.configure.compare')}
         </div>
         <Dropdown className={`vis-options-dropdown ${colorScheme}`} placeholder="Επιλέξτε 2 ή παραπάνω μεταβλητές" fluid scrolling>
-          <Dropdown.Menu>
+          <Accordion as={Dropdown.Menu}>
             {dimensions.map(dimension => (
               <Dropdown.Item
                 key={dimension.id}
@@ -86,27 +86,25 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
                 onClick={this.handleAccordionClick}
                 index={dimension.id}
               >
-                <Accordion>
-                  <Accordion.Title
-                    onClick={this.handleAccordionClick}
-                    index={dimension.id}
-                    className="compare-by-accordion-title"
-                    active={expandedId === dimension.id}
-                    content={translateEntityField(dimension.name)}
+                <Accordion.Title
+                  onClick={this.handleAccordionClick}
+                  index={dimension.id}
+                  className="compare-by-accordion-title"
+                  active={expandedId === dimension.id}
+                  content={translateEntityField(dimension.name)}
+                />
+                <Accordion.Content active={expandedId === dimension.id}>
+                  <CompareOptionList
+                    codes={dimensionCodes[dimension.id].codes}
+                    dataset={dataset}
+                    compareCodes={compareCodes}
+                    dimension={dimension}
+                    toggleCompareValue={this.props.toggleCompareValue}
                   />
-                  <Accordion.Content active={expandedId === dimension.id}>
-                    <CompareOptionList
-                      codes={dimensionCodes[dimension.id].codes}
-                      dataset={dataset}
-                      compareCodes={compareCodes}
-                      dimension={dimension}
-                      toggleCompareValue={this.props.toggleCompareValue}
-                    />
-                  </Accordion.Content>
-                </Accordion>
+                </Accordion.Content>
               </Dropdown.Item>
             ))}
-          </Dropdown.Menu>
+          </Accordion>
         </Dropdown>
       </div>
     );
