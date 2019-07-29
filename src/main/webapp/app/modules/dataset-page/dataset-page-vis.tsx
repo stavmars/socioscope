@@ -131,7 +131,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   )}
                 </div>
                 <Responsive {...Responsive.onlyMobile}>
-                  <VisMobileLowerToolbar dataset={dataset} copyCurrentURL={this.copyCurrentURL} />
+                  <VisMobileLowerToolbar dataset={dataset} copyCurrentURL={this.copyCurrentURL} togglePercentage={this.togglePercentage} />
                 </Responsive>
               </Grid.Column>
             </Grid>
