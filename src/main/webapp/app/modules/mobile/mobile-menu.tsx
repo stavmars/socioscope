@@ -59,7 +59,7 @@ export class MobileMenu extends React.Component<DispatchProps> {
                 <List.Item className="mobile-menu-list-line color-scheme-2">
                   <Container>
                     <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Politicians.svg" />
-                    <Container text className="mobile-menu-list-line-item color-scheme-2" as={Link} to="/dataset/politics">
+                    <Container text className="mobile-menu-list-line-item color-scheme-2" as={Link} to="/dataset/deputies">
                       {translate('home.dataset.categories.politics')}
                       <i />
                     </Container>

@@ -53,6 +53,7 @@ export class RawDatasetFilters extends React.Component<IRawDatasetFiltersProp, I
     const { expandedId } = this.state;
     const { colorScheme } = dataset;
 
+    // tslint:disable:jsx-no-lambda
     return (
       <div>
         <Dropdown className={`vis-options-dropdown ${dataset.colorScheme}`} fluid scrolling placeholder="Επιλέξτε 1 ή παραπάνω φίλτρα">
