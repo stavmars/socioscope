@@ -1323,7 +1323,7 @@
       {
         "id": "family_networks",
         "description": {
-          "el": "<span>Οσο <span class=\"text-accent\">πιο μεγάλη είναι μια εκλογική περιφέρεια</span>, τόσο πιθανότερο είναι οι βουλευτές που εκλέγονται σε αυτή να προέρχονται από «πολιτική» οικογένεια. ‘Ετσι, στην <span class=\"text-accent\">Β Αθήνας</span> σχεδον 1 στους 5 βουλευτές έχει <span class=\"text-accent\">συγγενή με προηγούμενη θητεία</span>> στο Κοινοβούλιο.</span>",
+          "el": "<span>Οσο <span class=\"text-accent\">πιο μεγάλη είναι μια εκλογική περιφέρεια</span>, τόσο πιθανότερο είναι οι βουλευτές που εκλέγονται σε αυτή να προέρχονται από «πολιτική» οικογένεια. ‘Ετσι, στην <span class=\"text-accent\">Β Αθήνας</span> σχεδον 1 στους 5 βουλευτές έχει <span class=\"text-accent\">συγγενή με προηγούμενη θητεία</span> στο Κοινοβούλιο.</span>",
           "en": "<span><span class=\"text-accent\">The bigger an electoral region</span>, the more likely is for the elected members to derive from a \"political\" family. Thus, <span class=\"text-accent\">in Athens</span>, almost 1 in 5 Members <span class=\"text-accent\">have an affinitive with a previous term</span> in Parliament.</span>"
         },
         "visType": "chart",
