@@ -4,17 +4,22 @@ import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { IDimensionCode } from 'app/shared/model/dimension-code.model';
-import { Accordion, Dropdown, Image, List } from 'semantic-ui-react';
-import { toggleCompareValue } from 'app/modules/dataset-page/dataset-page-reducer';
+import { Accordion, Dropdown, Image, List, Icon, Checkbox } from 'semantic-ui-react';
+import { toggleCompareValue, addCode, removeCode, removeCompare } from 'app/modules/dataset-page/dataset-page-reducer';
 import { translate } from 'react-jhipster';
 import { IDimension } from 'app/shared/model/dimension.model';
 import CompareOptionList from 'app/modules/dataset-page/compare-option-list';
+import _ from 'lodash';
+// tslint:disable: jsx-no-lambda
 
 export interface ICompareByControlProp {
   dimensionCodes: Map<string, IDimensionCode[]>;
   dataset: IDataSet;
   seriesOptions: ISeriesOptions;
   toggleCompareValue: typeof toggleCompareValue;
+  addCode: typeof addCode;
+  removeCode: typeof removeCode;
+  removeCompare: typeof removeCompare;
 }
 
 export interface ICompareByControlState {
@@ -42,11 +47,24 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
     e.stopPropagation();
   };
 
+  handleCodeCheckbox = (code: string, checked: boolean) => {
+    if (checked) {
+      this.props.removeCode(this.props.dataset, code);
+    } else {
+      this.props.addCode(this.props.dataset, code);
+    }
+  };
+
+  handleRemoveCompareBy = () => {
+    this.props.removeCompare(this.props.dataset);
+  };
+
   render() {
     const { dataset, dimensionCodes, seriesOptions } = this.props;
     const { dimensions, colorScheme } = dataset;
     const { expandedId } = this.state;
     const { compareCodes } = seriesOptions;
+    const compareDimension = dataset.dimensions.find(dim => dim.id === seriesOptions.compareBy);
 
     return (
       <div className="vis-compareBy vis-options-menu-item">
@@ -83,6 +101,31 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
             ))}
           </Accordion>
         </Dropdown>
+        {seriesOptions.compareBy && (
+          <div className="remove-filters">
+            <Image
+              inline
+              src={`/content/images/Assets/remove-filter-${colorScheme}.svg`}
+              onClick={() => this.handleRemoveCompareBy()}
+              style={{ paddingBottom: '2px' }}
+            />
+            <span className="remove-filter-dim-label" style={{ paddingBottom: '15px' }}>
+              {translateEntityField(compareDimension.name)}{' '}
+            </span>
+            {_.map(dimensionCodes[compareDimension.id].codesByNotation, value => (
+              <div className="remove-filter" key={value.id} style={{ paddingBottom: '22px' }}>
+                <svg height="13" width="13" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="6.5" cy="6.5" r="6.5" fill={value.color} />
+                </svg>{' '}
+                <Checkbox
+                  checked={_.includes(compareCodes, value.notation)}
+                  onChange={() => this.handleCodeCheckbox(value.notation, _.includes(compareCodes, value.notation))}
+                />
+                <span className="remove-filter-value">{translateEntityField(value.name)}</span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     );
   }
