@@ -27,7 +27,6 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
     const { title, dataset, headerImg, highlight, highlightSeries, dimensionCodes } = this.props;
     const { colorScheme } = dataset;
     const { visType, seriesOptions } = highlight;
-
     return (
       <div className={`dataset-card ${colorScheme}`}>
         <div className="dataset-card-header">

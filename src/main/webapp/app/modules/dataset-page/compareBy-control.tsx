@@ -48,29 +48,6 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
     const { expandedId } = this.state;
     const { compareCodes } = seriesOptions;
 
-    const compareByOptions = dimensions.map(dimension => ({
-      id: dimension.id,
-      text: translateEntityField(dimension.name),
-      value: dimension.id,
-      disabled: dimension.id === seriesOptions.xAxis
-    }));
-
-    const createCompareByOptions = (dimension: IDimension, codes: IDimensionCode[]) =>
-      codes.map(code => (
-        <List.Item onClick={this.toggleCompareByOption} code={code.notation} key={code.notation}>
-          <List.Icon name={compareCodes && compareCodes[code.notation] ? 'check square outline' : 'square outline'} />
-          <List.Content>
-            {/*<List.Header>{translateEntityField(code.name)}</List.Header>*/}
-            <List.Description>{translateEntityField(code.name)}</List.Description>
-            {code.children && (
-              <List.List relaxed verticalAlign="middle">
-                {createCompareByOptions(dimension, code.children)}
-              </List.List>
-            )}
-          </List.Content>
-        </List.Item>
-      ));
-
     return (
       <div className="vis-compareBy vis-options-menu-item">
         <div className="vis-options-menu-label">

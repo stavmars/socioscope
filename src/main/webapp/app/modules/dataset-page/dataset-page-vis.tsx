@@ -154,12 +154,7 @@ const parseRouteVisOptions = (query: string): IVisOptions => {
     compareBy,
     dimensionFilters,
     measure,
-    compareCodes:
-      compareCodes &&
-      compareCodes.reduce((acc, code) => {
-        acc[code] = true;
-        return acc;
-      }, {})
+    compareCodes
   };
   return { visType, seriesOptions };
 };
@@ -173,10 +168,7 @@ export const urlEncodeVisOptions = (visOptions: IVisOptions) => {
       compare: seriesOptions.compareBy,
       filters: seriesOptions.dimensionFilters,
       measure: seriesOptions.measure,
-      codes: _(seriesOptions.compareCodes)
-        .pickBy()
-        .keys()
-        .value()
+      codes: seriesOptions.compareCodes
     },
     { skipNulls: true }
   );

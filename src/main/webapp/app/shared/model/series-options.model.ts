@@ -5,9 +5,9 @@ export interface IDimensionFilters {
 export interface ISeriesOptions {
   xAxis?: string;
   compareBy?: string;
-  compareCodes?: any;
+  compareCodes?: string[];
   dimensionFilters?: IDimensionFilters;
   measure?: string;
 }
 
-export const defaultValue: Readonly<ISeriesOptions> = { dimensionFilters: {}, compareCodes: {} };
+export const defaultValue: Readonly<ISeriesOptions> = { dimensionFilters: {}, compareCodes: [] };

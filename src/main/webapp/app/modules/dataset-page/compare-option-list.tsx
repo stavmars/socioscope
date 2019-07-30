@@ -6,6 +6,7 @@ import { IDimensionCode } from 'app/shared/model/dimension-code.model';
 import { List } from 'semantic-ui-react';
 import { toggleCompareValue } from 'app/modules/dataset-page/dataset-page-reducer';
 import { IDimension } from 'app/shared/model/dimension.model';
+import _ from 'lodash';
 
 export interface ICompareOptionListProp {
   codes: IDimensionCode[];
@@ -26,10 +27,11 @@ export class CompareOptionList extends React.Component<ICompareOptionListProp> {
   };
 
   render() {
+    const { compareCodes } = this.props;
     const createCompareByOptions = (codes: IDimensionCode[]) =>
       codes.map(code => (
         <List.Item onClick={this.toggleCompareByOption} code={code.notation} key={code.notation}>
-          <List.Icon name={this.props.compareCodes && this.props.compareCodes[code.notation] ? 'check square outline' : 'square outline'} />
+          <List.Icon name={_.includes(compareCodes, code.notation) ? 'check square outline' : 'square outline'} />
           <List.Content>
             <List.Description>{translateEntityField(code.name)}</List.Description>
             {code.children && <List.List>{createCompareByOptions(code.children)}</List.List>}

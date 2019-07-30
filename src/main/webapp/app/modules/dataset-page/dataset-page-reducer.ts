@@ -101,13 +101,12 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
       };
     case ACTION_TYPES.TOGGLE_COMPARE_VALUE:
       const { compareCode } = action.payload;
-      const compareCodes = state.seriesOptions.compareCodes || {};
-      const compareCodeStatus = compareCodes[compareCode];
+      const compareCodes = state.seriesOptions.compareCodes || [];
       return {
         ...state,
         seriesOptions: {
           ...state.seriesOptions,
-          compareCodes: { ...compareCodes, [compareCode]: !compareCodeStatus }
+          compareCodes: _.xor(compareCodes, [compareCode])
         }
       };
     case ACTION_TYPES.UPDATE_VIS_OPTIONS:
@@ -146,13 +145,7 @@ export const getSeries = (id, seriesOptions: ISeriesOptions) => {
   const requestUrl = `${datasetApiUrl}/${id}/series`;
   return {
     type: ACTION_TYPES.FETCH_SERIES,
-    payload: axios.post(requestUrl, {
-      ...seriesOptions,
-      compareCodes: _(seriesOptions.compareCodes)
-        .pickBy()
-        .keys()
-        .value()
-    })
+    payload: axios.post(requestUrl, seriesOptions)
   };
 };
 
@@ -188,7 +181,7 @@ export const toggleCompareValue = (dataset: IDataSet, dimensionId: string, compa
     dispatch(
       updateVisOptions(dataset, {
         visType,
-        seriesOptions: { ...seriesOptions, compareBy: dimensionId, compareCodes: { [compareCode]: true } }
+        seriesOptions: { ...seriesOptions, compareBy: dimensionId, compareCodes: [compareCode] }
       })
     );
   }
