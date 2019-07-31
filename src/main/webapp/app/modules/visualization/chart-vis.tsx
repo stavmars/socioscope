@@ -13,6 +13,8 @@ import { ISeriesPoint } from 'app/shared/model/series-point.model';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeries } from 'app/shared/model/series.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
+import { any } from 'prop-types';
+import { chartColors, accentColors } from 'app/config/constants';
 
 drilldown(Highcharts);
 
@@ -72,19 +74,19 @@ export class ChartVis extends React.Component<IChartVisProp> {
 
     if (!loadingSeries && seriesList && seriesList.length > 0) {
       if (xAxisDimension.type === 'time') {
-        chartSeries = seriesList.map(series => ({
+        chartSeries = seriesList.map((series, index) => ({
           id: series.id,
           name: compareBy && translateEntityField(dimensionCodes[compareBy].codesByNotation[series.id].name),
-          color: series.color,
+          color: index ? chartColors[index - 1] : accentColors[colorScheme],
           data: prepareTimeSeriesData(series.data)
         }));
       } else {
         seriesByParent = prepareSeriesByParent(xAxisCodes.codesByNotation, seriesList);
         if (seriesByParent['']) {
-          chartSeries = seriesList.map(series => ({
+          chartSeries = seriesList.map((series, index) => ({
             id: series.id,
             name: compareBy && translateEntityField(dimensionCodes[compareBy].codesByNotation[series.id].name),
-            color: series.color,
+            color: index ? chartColors[index - 1] : accentColors[colorScheme],
             data: prepareCategorySeriesData(xAxisCodes.codesByNotation, seriesByParent[''][series.id], seriesByParent)
           }));
         }
@@ -98,7 +100,6 @@ export class ChartVis extends React.Component<IChartVisProp> {
         type: xAxisDimension.type === 'time' ? 'spline' : 'column',
         height: '50%',
         zoomType: 'x',
-        styledMode: true,
         className: dataset.colorScheme,
         events: {
           // tslint:disable-next-line
@@ -120,13 +121,21 @@ export class ChartVis extends React.Component<IChartVisProp> {
       xAxis: {
         type: xAxisDimension.type === 'time' ? 'datetime' : 'category',
         title: {
-          text: translateEntityField(xAxisDimension.name)
+          text: translateEntityField(xAxisDimension.name),
+          style: { fontFamily: 'BPnoScriptBold', fontSize: '12px' }
+        },
+        labels: {
+          style: { fontFamily: 'BPnoScriptBold', fontSize: '16px' }
         },
         offset: 2
       },
       yAxis: {
         title: {
-          text: translateEntityField(measure.name)
+          text: translateEntityField(measure.name),
+          style: { fontFamily: 'BPnoScriptBold', fontSize: '12px' }
+        },
+        labels: {
+          style: { fontFamily: 'BPnoScriptBold', fontSize: '16px' }
         }
       },
       plotOptions: {
@@ -151,7 +160,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
 
     return (
       <div>
-        <HighchartsReact key={uuid()} highcharts={Highcharts} options={options as any} immutable />
+        <HighchartsReact className={colorScheme} key={uuid()} highcharts={Highcharts} options={options as any} immutable />
       </div>
     );
   }
