@@ -49,7 +49,11 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
 
   handleCodeCheckbox = (code: string, checked: boolean) => {
     if (checked) {
-      this.props.removeCode(this.props.dataset, code);
+      if (this.props.seriesOptions.compareCodes.length === 1) {
+        this.handleRemoveCompareBy();
+      } else {
+        this.props.removeCode(this.props.dataset, code);
+      }
     } else {
       this.props.addCode(this.props.dataset, code);
     }
@@ -103,27 +107,25 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
         </Dropdown>
         {seriesOptions.compareBy && (
           <div className="remove-filters">
-            <Image
-              inline
-              src={`/content/images/Assets/remove-filter-${colorScheme}.svg`}
-              onClick={() => this.handleRemoveCompareBy()}
-              style={{ paddingBottom: '2px' }}
-            />
             <span className="remove-filter-dim-label" style={{ paddingBottom: '15px' }}>
               {translateEntityField(compareDimension.name)}{' '}
             </span>
-            {_.map(dimensionCodes[compareDimension.id].codesByNotation, value => (
-              <div className="remove-filter" key={value.id} style={{ paddingBottom: '22px' }}>
-                <svg height="13" width="13" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="6.5" cy="6.5" r="6.5" fill={value.color} />
-                </svg>{' '}
-                <Checkbox
-                  checked={_.includes(compareCodes, value.notation)}
-                  onChange={() => this.handleCodeCheckbox(value.notation, _.includes(compareCodes, value.notation))}
-                />
-                <span className="remove-filter-value">{translateEntityField(value.name)}</span>
-              </div>
-            ))}
+            {_.map(
+              dimensionCodes[compareDimension.id].codesByNotation,
+              value =>
+                _.includes(compareCodes, value.notation) && (
+                  <div className="remove-filter" key={value.id} style={{ paddingBottom: '22px' }}>
+                    <Image
+                      inline
+                      src={`/content/images/Assets/remove-filter-${colorScheme}.svg`}
+                      onClick={() => this.handleCodeCheckbox(value.notation, _.includes(compareCodes, value.notation))}
+                      style={{ paddingBottom: '3px' }}
+                    />
+                    <Icon name="circle" style={{ color: value.color, marginRight: '15px' }} />
+                    <span className="remove-filter-value">{translateEntityField(value.name)}</span>
+                  </div>
+                )
+            )}
           </div>
         )}
       </div>
