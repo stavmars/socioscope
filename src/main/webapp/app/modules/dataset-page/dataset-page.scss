@@ -249,6 +249,12 @@
 }
 
 .vis-options-menu {
+  @include mobile {
+    padding: 0 9px 0 9px;
+  }
+  @include computer {
+    padding: 0;
+  }
 }
 
 // .vis-container {
@@ -265,7 +271,7 @@
     display: none;
   }
   @include computer {
-    display: flex;
+    display: inherit;
     font-size: 30px;
     text-align: left;
     font-family: BPnoScriptBold;
