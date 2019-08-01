@@ -28,6 +28,12 @@ export const accentColors = {
   'color-scheme-3': '#ff5d39'
 };
 
+export const backgroundColors = {
+  'color-scheme-1': '#fffed7',
+  'color-scheme-2': '#ffefd8',
+  'color-scheme-3': '#d8fff6'
+};
+
 export const chartColors = [
   '#e6194B',
   '#3cb44b',

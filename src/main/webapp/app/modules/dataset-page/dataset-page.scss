@@ -261,16 +261,22 @@
 // }
 
 .vis-options-menu-title {
-  font-size: 30px;
-  text-align: left;
-  font-family: BPnoScriptBold;
-  color: #1e1e1e;
-  margin-bottom: 35px;
-  line-height: 30px;
-  img {
-    padding: 5px 0;
-    margin-left: 0;
-    float: right;
+  @include mobile {
+    display: none;
+  }
+  @include computer {
+    display: flex;
+    font-size: 30px;
+    text-align: left;
+    font-family: BPnoScriptBold;
+    color: #1e1e1e;
+    margin-bottom: 35px;
+    line-height: 30px;
+    img {
+      padding: 5px 0;
+      margin-left: 0;
+      float: right;
+    }
   }
 }
 

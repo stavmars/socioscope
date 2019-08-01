@@ -82,7 +82,17 @@ Mobile Menu styles
     font-size: 16px;
     font-family: BPnoScriptBold;
     text-transform: uppercase;
-    color: #ff5d39;
-    border-bottom: 3px solid #ff5d39;
+    &.color-scheme-1 {
+      color: $color-scheme-1-accent;
+      border-bottom: 3px solid $color-scheme-1-accent;
+    }
+    &.color-scheme-2 {
+      color: $color-scheme-2-accent;
+      border-bottom: 3px solid $color-scheme-2-accent;
+    }
+    &.color-scheme-3 {
+      color: $color-scheme-3-accent;
+      border-bottom: 3px solid $color-scheme-3-accent;
+    }
   }
 }

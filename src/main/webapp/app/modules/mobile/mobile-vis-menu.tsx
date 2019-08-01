@@ -14,6 +14,8 @@ import { List } from 'semantic-ui-react';
 import { toggleMobileVisMenu } from 'app/shared/reducers/header';
 import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router-dom';
+import VisSeriesOptionMenu from '../dataset-page/vis-series-option-menu';
+import { accentColors, backgroundColors } from 'app/config/constants';
 
 export interface IMobileVisMenuProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
@@ -23,7 +25,11 @@ export class MobileVisMenu extends React.Component<IMobileVisMenuProps> {
   }
 
   render() {
-    const { dataset, seriesOptions, dimensionCodes, fetchedCodeLists, visType } = this.props;
+    const { datasetsById, seriesOptions, dimensionCodes, fetchedCodeLists, visType } = this.props;
+    const dataset = datasetsById[this.props.match.params.id];
+    if (!seriesOptions || !fetchedCodeLists) {
+      return null;
+    }
 
     return (
       <div className="mobile-vis-menu">
@@ -36,25 +42,40 @@ export class MobileVisMenu extends React.Component<IMobileVisMenuProps> {
                 paddingTop: '15px',
                 paddingLeft: '13px',
                 height: '52px',
-                backgroundColor: '#D8FFF6',
-                borderBottom: '3px solid #ff5d39'
+                backgroundColor: `${backgroundColors[dataset.colorScheme]}`,
+                borderBottom: `3px solid ${accentColors[dataset.colorScheme]}`
               }}
             >
               {translate('socioscopeApp.dataSet.visualization.configure.menuTitle')}
-              <span className="close" onClick={this.props.toggleMobileVisMenu}>
+              <span className={`close ${dataset.colorScheme}`} onClick={this.props.toggleMobileVisMenu}>
                 Κλείσιμο
               </span>
             </List.Header>
           </List.Item>
-          <List.Item>{dataset && dataset.id}</List.Item>
+          <List.Item>
+            <VisSeriesOptionMenu
+              seriesOptions={seriesOptions}
+              visType={visType}
+              fetchedCodeLists={fetchedCodeLists}
+              dimensionCodes={dimensionCodes}
+              dataset={dataset}
+              setFilterValue={this.props.setFilterValue}
+              updateVisOptions={this.props.updateVisOptions}
+              toggleCompareValue={this.props.toggleCompareValue}
+              removeFilter={this.props.removeFilter}
+              addCode={this.props.addCode}
+              removeCode={this.props.removeCode}
+              removeCompare={this.props.removeCompare}
+            />
+          </List.Item>
         </List>
       </div>
     );
   }
 }
 
-const mapStateToProps = (storeState: IRootState, ownProps) => ({
-  dataset: storeState.dataSet.entitiesById[ownProps.match.params.id],
+const mapStateToProps = (storeState: IRootState) => ({
+  datasetsById: storeState.dataSet.entitiesById,
   dimensionCodes: storeState.datasetPage.dimensionCodes,
   fetchedCodeLists: storeState.datasetPage.fetchedCodeLists,
   seriesOptions: storeState.datasetPage.seriesOptions,
