@@ -11,9 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -219,12 +217,21 @@ public class DataSetService {
                             new BadRequestAlertException("Dataset does not contain the specified measure", "dataSet", "invalid_measure"));
                 }
 
+                Dimension xAxisDimension = dataSet.getDimensions().stream().filter(dim -> dim.getId().equals(seriesOptions.getxAxis()))
+                    .findFirst().orElseThrow(() ->
+                        new BadRequestAlertException("Dataset does not contain the specified xAxis dimension", "dataSet", "invalid_xAxis"));
+
                 // if the dataset contains pre-aggregated cube-like data, we fetch and map the observations to the corresponding series
                 if (dataSet.getType().equals(DatasetType.QB)) {
                     List<Observation> observations = observationRepository.findObservations(datasetId, seriesOptions);
                     return observationMapper.observationsToMultipleSeries(observations, seriesOptions);
                 } else {
                     // if the dataset contains raw, non-aggregated data, we aggregate it from the corresponding mongo collection
+
+                    if (xAxisDimension.getType().equals(DimensionType.COMPOSITE)) {
+                        return this.getCompositeDimensionSeries(dataSet, xAxisDimension, seriesOptions);
+                    }
+
                     List<Series> seriesList = rawDataRepository.getSeries(dataSet, seriesOptions);
 
                     if (measure.getType().equals(MeasureType.PERCENTAGE)) {
@@ -252,5 +259,30 @@ public class DataSetService {
                     return seriesList;
                 }
             });
+    }
+
+
+    public List<Series> getCompositeDimensionSeries(DataSet dataset, Dimension xAxisDimension, SeriesOptions seriesOptions) {
+        List<String> composedOf = xAxisDimension.getComposedOf();
+        Map<String, Series> seriesMap = new HashMap<>();
+
+        composedOf.stream().forEach(dim -> {
+            SeriesOptions compSeriesOptions = new SeriesOptions();
+            compSeriesOptions.setMeasure(seriesOptions.getMeasure());
+            compSeriesOptions.setxAxis(dim);
+            compSeriesOptions.setDimensionFilters(seriesOptions.getDimensionFilters());
+            Series series = rawDataRepository.getSeries(dataset, compSeriesOptions).get(0);
+            series.getData().stream().forEach(seriesPoint -> {
+                Series newSeries = seriesMap.get(seriesPoint.getX());
+                if (newSeries == null) {
+                    newSeries = new Series();
+                    newSeries.setId(seriesPoint.getX());
+                    newSeries.setData(new ArrayList<>());
+                    seriesMap.put(seriesPoint.getX(), newSeries);
+                }
+                newSeries.getData().add(new SeriesPoint(dim, seriesPoint.getY()));
+            });
+        });
+        return new ArrayList<Series>(seriesMap.values());
     }
 }

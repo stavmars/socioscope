@@ -50,17 +50,13 @@ public class Dimension implements Serializable {
     @JsonIgnoreProperties("")
     private User creator;
 
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    private List<String> composedOf;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Dimension() {
     }
 
-    public Dimension(String id, @Size(min = 1) Map<String, @NotBlank String> name, @NotNull @Size(min = 2) String type, List<String> dependencies, User creator) {
-        this.id = id;
-        this.name = name;
-        this.type = type;
-        this.dependencies = dependencies;
-        this.creator = creator;
-    }
 
     @JsonCreator
     public static Dimension create(String jsonString) throws JsonParseException, JsonMappingException, IOException {
@@ -140,6 +136,14 @@ public class Dimension implements Serializable {
 
     public void setGeoMaps(List<GeoMap> geoMaps) {
         this.geoMaps = geoMaps;
+    }
+
+    public List<String> getComposedOf() {
+        return composedOf;
+    }
+
+    public void setComposedOf(List<String> composedOf) {
+        this.composedOf = composedOf;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
