@@ -11,6 +11,7 @@ export interface IDimension {
   dependencies?: string[];
   disableFilter?: boolean;
   disableAxis?: boolean;
+  composedOf?: string[];
 }
 
 export interface IGeoMap {
