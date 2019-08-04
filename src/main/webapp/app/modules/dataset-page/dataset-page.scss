@@ -82,7 +82,15 @@
   h1 {
     text-align: center;
     font-family: BPnoScriptBold;
-    color: $color-scheme-1-bg;
+    &.color-scheme-1 {
+      color: $color-scheme-1-bg;
+    }
+    &.color-scheme-2 {
+      color: $color-scheme-2-bg;
+    }
+    &.color-scheme-3 {
+      color: $color-scheme-3-bg;
+    }
     @include mobile {
       font-size: 27px;
     }
@@ -441,6 +449,7 @@
     left: 91% !important;
   }
 }
+
 > .share-dropdown {
   &.ui.active.dropdown .menu {
     border-style: solid;
