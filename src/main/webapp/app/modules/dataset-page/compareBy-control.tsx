@@ -56,7 +56,7 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
         </div>
         <Dropdown className={`vis-options-dropdown ${colorScheme}`} placeholder="Επιλέξτε 2 ή παραπάνω μεταβλητές" fluid scrolling>
           <Accordion as={Dropdown.Menu}>
-            {dimensions.map(dimension => (
+            {dimensions.filter(dimension => !dimension.disableFilter).map(dimension => (
               <Dropdown.Item
                 key={dimension.id}
                 disabled={dimension.id === seriesOptions.xAxis}
