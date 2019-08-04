@@ -424,6 +424,14 @@
       "en": "Family habits"
     },
     "type": "composite",
+    "composedOf": [
+      "q8a",
+      "q8b",
+      "q8c",
+      "q8d",
+      "q8e",
+      "q8f"
+    ],
     "disableFilter": true
   },
   {
@@ -453,6 +461,10 @@
       "en": "Parent's political beliefs"
     },
     "type": "composite",
+    "composedOf": [
+      "q20a",
+      "q20b"
+    ],
     "disableFilter": true
   },
   {
@@ -546,6 +558,14 @@
       "en": "Discussions about political and social issues"
     },
     "type": "composite",
+    "composedOf": [
+      "q16a",
+      "q16b",
+      "q16c",
+      "q16d",
+      "q16e",
+      "q16f"
+    ],
     "disableFilter": true
   },
   {
@@ -707,6 +727,16 @@
       "en": "Citizenship"
     },
     "type": "composite",
+    "composedOf": [
+      "q12a",
+      "q12b",
+      "q12c",
+      "q12d",
+      "q12e",
+      "q12f",
+      "q12g",
+      "q12h"
+    ],
     "disableFilter": true
   },
   {
@@ -806,6 +836,17 @@
       "en": "Patriotism"
     },
     "type": "composite",
+    "composedOf": [
+      "q13a",
+      "q13b",
+      "q13c",
+      "q13d",
+      "q13e",
+      "q13f",
+      "q13g",
+      "q13h",
+      "q13i"
+    ],
     "disableFilter": true
   },
   {
@@ -895,6 +936,16 @@
       "en": "The \"true Greek\""
     },
     "type": "composite",
+    "composedOf": [
+      "q33a",
+      "q33b",
+      "q33c",
+      "q33d",
+      "q33e",
+      "q33f",
+      "q33g",
+      "q33h"
+    ],
     "disableFilter": true
   },
   {
@@ -954,6 +1005,13 @@
       "en": "National Pride"
     },
     "type": "composite",
+    "composedOf": [
+      "q35a",
+      "q35b",
+      "q35c",
+      "q35d",
+      "q35e"
+    ],
     "disableFilter": true
   },
   {
@@ -1033,6 +1091,15 @@
       "en": "Personal satisfaction"
     },
     "type": "composite",
+    "composedOf": [
+      "q36a",
+      "q36b",
+      "q36c",
+      "q36d",
+      "q36e",
+      "q36f",
+      "q36g"
+    ],
     "disableFilter": true
   },
   {
@@ -1152,6 +1219,19 @@
       "en": "Life values"
     },
     "type": "composite",
+    "composedOf": [
+      "q39aNew",
+      "q39bNew",
+      "q39cNew",
+      "q39dNew",
+      "q39eNew",
+      "q39fNew",
+      "q39gNew",
+      "q39hNew",
+      "q39iNew",
+      "q39jNew",
+      "q39kNew"
+    ],
     "disableFilter": true
   }
 ]
