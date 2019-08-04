@@ -41,7 +41,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
     const { dataset, seriesOptions, dimensionCodes, fetchedCodeLists, visType } = this.props;
     const { dimensions, colorScheme } = dataset;
 
-    const xAxisOptions = dimensions.map(dimension => ({
+    const xAxisOptions = dimensions.filter(dimension => !dimension.disableAxis).map(dimension => ({
       id: dimension.id,
       text: translateEntityField(dimension.name),
       value: dimension.id
