@@ -4,11 +4,11 @@ import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { IDimensionCode } from 'app/shared/model/dimension-code.model';
-import { Accordion, Dropdown, Image, List } from 'semantic-ui-react';
+import { Accordion, Dropdown, Image } from 'semantic-ui-react';
 import { toggleCompareValue } from 'app/modules/dataset-page/dataset-page-reducer';
 import { translate } from 'react-jhipster';
-import { IDimension } from 'app/shared/model/dimension.model';
 import CompareOptionList from 'app/modules/dataset-page/compare-option-list';
+import _ from 'lodash';
 
 export interface ICompareByControlProp {
   dimensionCodes: Map<string, IDimensionCode[]>;
@@ -47,6 +47,7 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
     const { dimensions, colorScheme } = dataset;
     const { expandedId } = this.state;
     const { compareCodes } = seriesOptions;
+    const xAxisDimension = _.find(dataset.dimensions, { id: seriesOptions.xAxis });
 
     return (
       <div className="vis-compareBy vis-options-menu-item">
@@ -54,7 +55,13 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
           <Image inline src={`/content/images/Assets/compare-${dataset.colorScheme}.svg`} style={{ paddingRight: '23px' }} />
           {translate('socioscopeApp.dataSet.visualization.configure.compare')}
         </div>
-        <Dropdown className={`vis-options-dropdown ${colorScheme}`} placeholder="Επιλέξτε 2 ή παραπάνω μεταβλητές" fluid scrolling>
+        <Dropdown
+          className={`vis-options-dropdown ${colorScheme}`}
+          placeholder="Επιλέξτε 2 ή παραπάνω μεταβλητές"
+          fluid
+          scrolling
+          disabled={xAxisDimension.type === 'composite'}
+        >
           <Accordion as={Dropdown.Menu}>
             {dimensions.filter(dimension => !dimension.disableFilter).map(dimension => (
               <Dropdown.Item
