@@ -65,7 +65,6 @@ export class ChartVis extends React.Component<IChartVisProp> {
     const { dimensions, colorScheme } = dataset;
     const { compareBy } = seriesOptions;
     const xAxisDimension = _.find(dimensions, { id: seriesOptions.xAxis }) as IDimension;
-    const xAxisCodes = dimensionCodes[seriesOptions.xAxis];
     let chartSeries = [{ data: [] }];
 
     let seriesByParent;
@@ -79,13 +78,25 @@ export class ChartVis extends React.Component<IChartVisProp> {
           data: prepareTimeSeriesData(series.data)
         }));
       } else {
-        seriesByParent = prepareSeriesByParent(xAxisCodes.codesByNotation, seriesList);
+        const codesByNotation =
+          xAxisDimension.type === 'composite'
+            ? xAxisDimension.composedOf.reduce((acc, dimId) => {
+                const dim = _.find(dimensions, { id: dimId });
+                acc[dimId] = dim;
+                return acc;
+              }, {})
+            : dimensionCodes[seriesOptions.xAxis].codesByNotation;
+
+        seriesByParent = prepareSeriesByParent(codesByNotation, seriesList);
         if (seriesByParent['']) {
           chartSeries = seriesList.map(series => ({
             id: series.id,
-            name: compareBy && translateEntityField(dimensionCodes[compareBy].codesByNotation[series.id].name),
+            name:
+              (compareBy && translateEntityField(dimensionCodes[compareBy].codesByNotation[series.id].name)) ||
+              (xAxisDimension.type === 'composite' &&
+                translateEntityField(dimensionCodes[xAxisDimension.id].codesByNotation[series.id].name)),
             color: series.color,
-            data: prepareCategorySeriesData(xAxisCodes.codesByNotation, seriesByParent[''][series.id], seriesByParent)
+            data: prepareCategorySeriesData(codesByNotation, seriesByParent[''][series.id], seriesByParent)
           }));
         }
       }
