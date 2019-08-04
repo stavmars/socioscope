@@ -9,6 +9,8 @@ export interface IDimension {
   creator?: IUser;
   geoMaps?: IGeoMap[];
   dependencies?: string[];
+  disableFilter?: boolean;
+  disableAxis?: boolean;
 }
 
 export interface IGeoMap {

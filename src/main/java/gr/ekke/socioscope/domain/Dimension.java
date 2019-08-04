@@ -57,6 +57,11 @@ public class Dimension implements Serializable {
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private List<String> composedOf;
 
+    private Boolean disableAxis;
+
+    private Boolean disableFilter;
+
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Dimension() {
     }
@@ -161,6 +166,22 @@ public class Dimension implements Serializable {
 
     public void setComposedOf(List<String> composedOf) {
         this.composedOf = composedOf;
+    }
+
+    public Boolean getDisableAxis() {
+        return disableAxis;
+    }
+
+    public void setDisableAxis(Boolean disableAxis) {
+        this.disableAxis = disableAxis;
+    }
+
+    public Boolean getDisableFilter() {
+        return disableFilter;
+    }
+
+    public void setDisableFilter(Boolean disableFilter) {
+        this.disableFilter = disableFilter;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
