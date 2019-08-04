@@ -272,5 +272,886 @@
       "en": "Changes during Parliamentary Term",
       "el": "Μεταβολές κατά τη διάρκεια της Θητείας"
     }
+  },
+  {
+    "id": "q1",
+    "name": {
+      "el": "Φύλο",
+      "en": "Gender"
+    },
+    "description": {
+      "el": "Φύλο",
+      "en": "Gender"
+    },
+    "type": "coded"
+  },
+  {
+    "id": "q2",
+    "name": {
+      "el": "Τάξη φοίτησης",
+      "en": "Class year"
+    },
+    "description": {
+      "el": "Τάξη φοίτησης",
+      "en": "Class year"
+    },
+    "type": "coded"
+  },
+  {
+    "id": "INDEX",
+    "name": {
+      "el": "Δείκτης Κοινωνικής Προέλευσης",
+      "en": "Social Class Index"
+    },
+    "description": {
+      "el": "Δείκτης Κοινωνικής Προέλευσης",
+      "en": "Social Class Index"
+    },
+    "type": "coded"
+  },
+  {
+    "id": "q10a",
+    "name": {
+      "el": "Συμμόρφωση στα καθήκοντα",
+      "en": "Compliance with duties"
+    },
+    "description": {
+      "el": "Μερικοί άνθρωποι  υποστηρίζουν ότι οι μαθητές/τριες πρέπει να κοιτούν τα μαθήματά τους και να αφήνουν τις άλλες ασχολίες για αργότερα",
+      "en": "Some people argue that students need to look at their lessons and leave aside other activities for later"
+    },
+    "type": "coded"
+  },
+  {
+    "id": "q10b",
+    "name": {
+      "el": "Συμμόρφωση στο σχολείο",
+      "en": "Compliance in school"
+    },
+    "description": {
+      "el": "Οι μαθητές/τριες πρέπει να ακολουθούν τις οδηγίες των καθηγητών ακόμα και όταν διαφωνούν με αυτές",
+      "en": "Students must follow the instructions of their teachers even when they disagree with them"
+    },
+    "type": "coded"
+  },
+  {
+    "id": "q10d",
+    "name": {
+      "el": "Συμμετοχή στις σχολικές αποφάσεις",
+      "en": "Participation in school decisions"
+    },
+    "description": {
+      "el": "Όταν οι μαθητές/τριες συμμετέχουν στις αποφάσεις που παίρνονται στο σχολείο, τα πράγματα λειτουργούν καλύτερα",
+      "en": "When students participate in decisions taken at school, things work better"
+    },
+    "type": "coded"
+  },
+  {
+    "id": "q10e",
+    "name": {
+      "el": "Συλλογική δράση στο σχολείο",
+      "en": "Collective action in school"
+    },
+    "description": {
+      "el": "Οι μαθητές/τριες μπορούν να επηρεάσουν ότι συμβαίνει στο σχολείο τους όταν δρουν όλοι /ες μαζί, παρά ο καθένας μόνος του",
+      "en": "Students can influence what happens in their school when they work all together, rather than on their own"
+    },
+    "type": "coded"
+  },
+  {
+    "id": "q8a",
+    "name": {
+      "el": "Η μητέρα διαβάζει βιβλία",
+      "en": "My mother reads books"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q8b",
+    "name": {
+      "el": "Συζητούν πολιτικά ζητήματα με τη μητέρα ",
+      "en": "I discuss politics with my mother"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q8c",
+    "name": {
+      "el": "Η μητέρα παρακολουθεί ειδήσεις",
+      "en": "My mother watches the news (TV)"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q8d",
+    "name": {
+      "el": "Ο πατέρας διαβάζει βιβλία",
+      "en": "My father reads books"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q8e",
+    "name": {
+      "el": "Συζητούν πολιτικά ζητήματα με τον πατέρα",
+      "en": "I discuss politics with my father"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q8f",
+    "name": {
+      "el": "Ο πατέρας παρακολουθεί ειδήσεις",
+      "en": "My father watches the news (TV)"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q8",
+    "name": {
+      "el": "Οικογενειακές συνήθειες",
+      "en": "Family habits"
+    },
+    "type": "composite",
+    "disableFilter": true
+  },
+  {
+    "id": "q20a",
+    "name": {
+      "el": "Γνωρίζουν τις πολιτικές πεποιθήσεις της μητέρας τους",
+      "en": "Knows mother's political beliefs"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q20b",
+    "name": {
+      "el": "Γνωρίζουν τις πολιτικές πεποιθήσεις του πατέρα τους",
+      "en": "Knows father's political beliefs"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q20",
+    "name": {
+      "el": "Πολιτικές απόψεις γονέων",
+      "en": "Parent's political beliefs"
+    },
+    "type": "composite",
+    "disableFilter": true
+  },
+  {
+    "id": "q11",
+    "name": {
+      "el": "Αντίδραση πολιτών σε κυβερνητικές αποφάσεις",
+      "en": "Citizen reaction to government decisions"
+    },
+    "description": {
+      "el": "Τι πρέπει να κάνουν οι πολίτες σε περίπτωση που διαφωνούν με μια κυβερνητική απόφαση",
+      "en": "What should citizens do in case they disagree with government's decision"
+    },
+    "type": "coded"
+  },
+  {
+    "id": "q15New",
+    "name": {
+      "el": "Ενδιαφέρον για την πολιτική",
+      "en": "Interest in politics"
+    },
+    "description": {
+      "el": "Θα μπορούσες να πεις ότι η πολιτική σε ενδιαφέρει",
+      "en": "Would you say that you are interested in politics?"
+    },
+    "type": "coded"
+  },
+  {
+    "id": "q16a",
+    "name": {
+      "el": "Έχουν συζητήσει για το δημοψήφισμα του Ιουλίου 2015",
+      "en": "Have you ever discussed about the July 2015 referendum?"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q16b",
+    "name": {
+      "el": "Έχουν συζητήσει για τις βουλευτικές εκλογές του 2015",
+      "en": "Have you ever discussed about the 2015 national elections?"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q16c",
+    "name": {
+      "el": "Έχουν συζητήσει για τα capital control",
+      "en": "Have you ever discussed about the capital controls?"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q16d",
+    "name": {
+      "el": "Έχουν συζητήσει για τους πρόσφυγες που έχουν έρθει στην Ελλάδα",
+      "en": "Have you ever discussed about the refugees that came to Greece?"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q16e",
+    "name": {
+      "el": "Έχουν συζητήσει για τους νέους Έλληνες που φεύγουν στο εξωτερικό",
+      "en": "Have you ever discussed about the Greeks that left in order to work and live abroad?"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q16f",
+    "name": {
+      "el": "Έχουν συζητήσει για το μνημόνιο",
+      "en": "Have you ever discussed about the Memorandum programme?"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q16",
+    "name": {
+      "el": "Συζητήσεις για πολιτικά και κοινωνικά θέματα",
+      "en": "Discussions about political and social issues"
+    },
+    "type": "composite",
+    "disableFilter": true
+  },
+  {
+    "id": "q28",
+    "name": {
+      "el": "Γνώμη για τους πολιτικούς",
+      "en": "Opinion on politicians"
+    },
+    "description": {
+      "el": "Άτομα που ασχολούνται με την πολιτική, όπως βουλευτές, υπουργοί κ.λπ., γιατί νομίζεις ότι το κάνουν στην πλειοψηφία τους",
+      "en": "People involved in politics, such as deputies, ministers, etc., they do so for\u2026"
+    },
+    "type": "coded"
+  },
+  {
+    "id": "q37",
+    "name": {
+      "el": "Άποψη για την ελληνική κοινωνία",
+      "en": "Opinion on the Greek society"
+    },
+    "description": {
+      "el": "Ποια είναι η γενική άποψή σου για την ελληνική κοινωνία",
+      "en": "What is your general view of Greek society?"
+    },
+    "type": "coded"
+  },
+  {
+    "id": "q17a",
+    "name": {
+      "el": "Γνώσεις για την πολιτική ",
+      "en": "Κnowledge of politics"
+    },
+    "description": {
+      "el": "Νομίζω ότι γνωρίζω περισσότερα πράγματα για την πολιτική σε σχέση με τους συνομήλικούς μου",
+      "en": "I think I know more about politics than my peers"
+    },
+    "type": "coded"
+  },
+  {
+    "id": "q17b",
+    "name": {
+      "el": "Συμμετοχή σε πολιτικές συζητήσεις",
+      "en": "Participation in political discussions"
+    },
+    "description": {
+      "el": "Σε συζητήσεις για πολιτικά θέματα, συνήθως έχω κάτι να πω",
+      "en": "In discussions on political issues, I usually have something to say"
+    },
+    "type": "coded"
+  },
+  {
+    "id": "q23a",
+    "name": {
+      "el": "Συμβουλεύονται για πολιτικά θέματα",
+      "en": "Consulting on political issues"
+    },
+    "description": {
+      "el": "Αν ήθελες να συμβουλευτείς κάποιον/α για ένα πολιτικό θέμα, ποιον ή ποια θα προτιμούσες  να ρωτήσεις",
+      "en": "If you wanted to consult someone on a political issue, whom would you prefer to ask?"
+    },
+    "type": "coded"
+  },
+  {
+    "id": "q26",
+    "name": {
+      "el": "Γνώμη για την ψήφο στα 17",
+      "en": "Opinion on the vote at 17"
+    },
+    "description": {
+      "el": "Σύμφωνα με νόμο που ψηφίστηκε, οι νέοι και οι νέες θα μπορούν πλέον να ψηφίζουν από τα 17. Εσύ θεωρείς αυτήν την αλλαγή",
+      "en": "According to a recent voted law, young people of 17 years of age will now be able to vote. You consider this change"
+    },
+    "type": "coded"
+  },
+  {
+    "id": "q12a",
+    "name": {
+      "el": "Ψηφίζει πάντα στις εκλογές",
+      "en": "Always votes on elections"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q12b",
+    "name": {
+      "el": "Είναι έτοιμος /η να δώσει τη ζωή του /της  για την Ελλάδα, αν χρειαστεί",
+      "en": "Is willing to sacrifice his/her life for Greece, if needed"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q12c",
+    "name": {
+      "el": "Συμφωνεί με την κυβέρνηση",
+      "en": "Agrees with the government"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q12d",
+    "name": {
+      "el": "Πληρώνει κανονικά φόρους",
+      "en": "Pays taxes"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q12e",
+    "name": {
+      "el": "Είναι χριστιανός/ή",
+      "en": "Is Christian Orthodox"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q12f",
+    "name": {
+      "el": "Ενδιαφέρεται για τα κοινωνικά και πολιτικά θέματα",
+      "en": "Is interested in social and political issues"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q12g",
+    "name": {
+      "el": "Υποστηρίζει πάντα τη δημοκρατία",
+      "en": "Always supports Democracy"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q12h",
+    "name": {
+      "el": "Υποστηρίζει την Ευρωπαϊκή Ένωση",
+      "en": "Always supports the European Union"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q12",
+    "name": {
+      "el": "Ιδιότητες του πολίτη",
+      "en": "Citizenship"
+    },
+    "type": "composite",
+    "disableFilter": true
+  },
+  {
+    "id": "q13a",
+    "name": {
+      "el": "Ακόμα και αν διαφωνώ με κάτι που γίνεται στην Ελλάδα, υποστηρίζω παρόλα αυτά τη χώρα μου",
+      "en": "Even if I disagree with something that happens in Greece, I still support my country"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q13b",
+    "name": {
+      "el": "Στους Ολυμπιακούς αγώνες υποστηρίζω τους Έλληνες αθλητές ακριβώς επειδή είναι Έλληνες",
+      "en": "In the Olympic Games I support the Greek athletes precisely because they are Greeks"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q13c",
+    "name": {
+      "el": "Σε διεθνείς ποδοσφαιρικούς αγώνες θα υποστήριζα την Ελλάδα ακόμα και αν δεν υπήρχε κανένας Έλληνας στην ενδεκάδα",
+      "en": "In international football matches I would support Greece even if there were no Greeks in the starting eleven line-up"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q13d",
+    "name": {
+      "el": "Δεν είναι σωστό να ασκώ κριτική στη χώρα μου",
+      "en": "It is not right to criticize my country"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q13e",
+    "name": {
+      "el": "Πρέπει να υποστηρίζω τη χώρα μου είτε έχει δίκιο, είτε όχι",
+      "en": "I must support my country whether it is right or not"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q13f",
+    "name": {
+      "el": "Εάν αγαπώ την Ελλάδα, πρέπει να δίνω προσοχή στα προβλήματά της και να προσπαθώ να τα λύσω",
+      "en": "If I love Greece, I have to pay attention to its problems and try to solve them"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q13g",
+    "name": {
+      "el": "Θα διαφωνούσα με τη συμμετοχή της Ελλάδας σε ένα μουσικό διαγωνισμό (όπως η Eurovision), επειδή ξοδεύονται χρήματα της χώρας μου",
+      "en": "I would disagree with Greece's participation in a musical competition (like Eurovision) because my country's money is spent"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q13h",
+    "name": {
+      "el": "Είναι σωστό να αφαιρούνται τα ολυμπιακά μετάλλια από Έλληνες αθλητές που βρίσκονται ντοπαρισμένοι για να μην αποκτά κακή φήμη η χώρα μου",
+      "en": "It is right to remove Olympic medals from Greek athletes with a positive dope test in order to avoid a bad reputation for my country"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q13i",
+    "name": {
+      "el": "Ασκώ κριτική στην Ελλάδα, από αγάπη για τη χώρα μου",
+      "en": "I criticize Greece, out of love for my country"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q13",
+    "name": {
+      "el": "Πατριωτισμός",
+      "en": "Patriotism"
+    },
+    "type": "composite",
+    "disableFilter": true
+  },
+  {
+    "id": "q33a",
+    "name": {
+      "el": "Μοιράζεται τις ελληνικές παραδόσεις και τρόπο ζωής",
+      "en": "Shares Greek traditions and lifestyle"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q33b",
+    "name": {
+      "el": "Έχει γεννηθεί στην Ελλάδα",
+      "en": "Was born in Greece"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q33c",
+    "name": {
+      "el": "Έχει Έλληνες γονείς",
+      "en": "Has Greek parents"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q33d",
+    "name": {
+      "el": "Είναι χριστιανός",
+      "en": "Is Christian Orthodox"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q33e",
+    "name": {
+      "el": "Σέβεται τους θεσμούς της χώρας",
+      "en": "Respects the institutions"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q33f",
+    "name": {
+      "el": "Επιθυμεί να είναι Έλληνας",
+      "en": "Desires to be Greek"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q33g",
+    "name": {
+      "el": "Μιλάει τέλεια ελληνικά ",
+      "en": "Speaks fluent Greek"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q33h",
+    "name": {
+      "el": "Έχει πάει/πηγαίνει σχολείο στην Ελλάδα",
+      "en": "Attended/attends Greek School"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q33",
+    "name": {
+      "el": "Ο \"πραγματικός Έλληνας\" ",
+      "en": "The \"true Greek\""
+    },
+    "type": "composite",
+    "disableFilter": true
+  },
+  {
+    "id": "q35a",
+    "name": {
+      "el": "Για τον τρόπο που λειτουργεί εδώ η δημοκρατία",
+      "en": "For the way democracy works here"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q35b",
+    "name": {
+      "el": "Για όσα έχουμε καταφέρει στην οικονομία",
+      "en": "For all our economy has achieved"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q35c",
+    "name": {
+      "el": "Για τις κατακτήσεις στην επιστήμη και την τεχνολογία",
+      "en": "For achievements in science and technology"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q35d",
+    "name": {
+      "el": "Για την ιστορία του τόπου",
+      "en": "For the historical legacy of our land"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q35e",
+    "name": {
+      "el": "Για τις επιτυχίες στην τέχνη και τη λογοτεχνία",
+      "en": "For successes in art and literature"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q35",
+    "name": {
+      "el": "Εθνική περηφάνεια",
+      "en": "National Pride"
+    },
+    "type": "composite",
+    "disableFilter": true
+  },
+  {
+    "id": "q36a",
+    "name": {
+      "el": "Ικανοποίηση από τη ζωή",
+      "en": "Life satisfaction"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q36b",
+    "name": {
+      "el": "Ικανοποίηση από το σπίτι",
+      "en": "Home satisfaction"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q36c",
+    "name": {
+      "el": "Ικανοποίηση από την οικονομική κατάσταση της οικογένειας",
+      "en": "Satisfaction with the family's financial situation"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q36d",
+    "name": {
+      "el": "Ικανοποίηση από τις σχέσεις με τους άλλους ανθρώπους",
+      "en": "Satisfaction with relationships with other people"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q36e",
+    "name": {
+      "el": "Ικανοποίηση από το σχολείο και τη μόρφωση που δίνει",
+      "en": "Satisfaction with the school and the education it provides"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q36f",
+    "name": {
+      "el": "Ικανοποίηση από το περιβάλλον της γειτονιάς",
+      "en": "Neighborhood satisfaction"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q36g",
+    "name": {
+      "el": "Ικανοποίηση από τις προοπτικές για το μέλλον",
+      "en": "Satisfaction from future prospects "
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q36",
+    "name": {
+      "el": "Προσωπική ικανοποίηση",
+      "en": "Personal satisfaction"
+    },
+    "type": "composite",
+    "disableFilter": true
+  },
+  {
+    "id": "q39aNew",
+    "name": {
+      "el": "Φιλία",
+      "en": "Friendship"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q39bNew",
+    "name": {
+      "el": "Οικονομική άνεση της οικογένειας",
+      "en": "Financial comfort of the family"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q39cNew",
+    "name": {
+      "el": "Αρμονικές οικογενειακές σχέσεις",
+      "en": "Harmonious family relationships"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q39dNew",
+    "name": {
+      "el": "Επάγγελμα με κύρος και χρήματα",
+      "en": "Profession with prestige and money"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q39eNew",
+    "name": {
+      "el": "Κοινωνική δικαιοσύνη",
+      "en": "Social Justice"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q39fNew",
+    "name": {
+      "el": "Επάγγελμα που ικανοποιεί τα ενδιαφέροντα",
+      "en": "Profession that meets my interests"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q39gNew",
+    "name": {
+      "el": "Πραγματική δημοκρατία",
+      "en": "True democracy"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q39hNew",
+    "name": {
+      "el": "Μόρφωση",
+      "en": "Education"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q39iNew",
+    "name": {
+      "el": "Ισότητα μεταξύ γυναικών & ανδρών",
+      "en": "Equality between women and men"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q39jNew",
+    "name": {
+      "el": "Σεβασμός στο περιβάλλον",
+      "en": "Respect for the environment"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q39kNew",
+    "name": {
+      "el": "Υλικά αγαθά",
+      "en": "Material goods"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableAxis": true
+  },
+  {
+    "id": "q39",
+    "name": {
+      "el": "Αξίες για τη ζωή",
+      "en": "Life values"
+    },
+    "type": "composite",
+    "disableFilter": true
   }
 ]

@@ -1317,7 +1317,10 @@
           "dimensionFilters": {},
           "measure": "deputies",
           "compareBy": "dep-sex",
-          "compareCodes": [ "1", "2" ]
+          "compareCodes": [
+            "1",
+            "2"
+          ]
         }
       },
       {
@@ -1332,7 +1335,10 @@
           "dimensionFilters": {},
           "measure": "deputies",
           "compareBy": "elections.electionNetwork",
-          "compareCodes": [ "1", "2" ]
+          "compareCodes": [
+            "1",
+            "2"
+          ]
         }
       },
       {
@@ -1347,8 +1353,328 @@
           "dimensionFilters": {},
           "measure": "deputies",
           "compareBy": "educationTitle",
-          "compareCodes": [ "1", "2", "3", "4", "5", "6", "7", "8", "10", "11", "12", "13" ]
+          "compareCodes": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "10",
+            "11",
+            "12",
+            "13"
+          ]
         }
+      }
+    ]
+  },
+  {
+    "id": "adolescents",
+    "name": {
+      "el": "Προφίλ και Αξίες Εφήβων",
+      "en": "Profile and Values of Teenagers"
+    },
+    "type": "raw",
+    "colorScheme": "color-scheme-3",
+    "comment": {
+      "el": "Τα δεδομένα προέρχονται από έρευνα πεδίου σε 4 σχολικές μονάδες της Αθήνας, σε περιοχές διαφορετικού κοινωνικο-οικονομικού status. 792 μαθητές των τριών τάξεων Γυμνασίου συμπλήρωσαν έντυπο ανώνυμο ερωτηματολόγιο. Η συλλογή των δεδομένων έγινε στο διάστημα Φεβρουαρίου-Μαρτίου 2018.",
+      "en": "The data comes from field research in 4 schools in Athens, in areas of different socio-economic status. 792 students of the three Gymnasium classes completed an anonymous questionnaire. Data collection took place between February and March 2018."
+    },
+    "dimensions": [
+      {
+        "id": "a2"
+      },
+      {
+        "id": "q1"
+      },
+      {
+        "id": "q2"
+      },
+      {
+        "id": "q4_ISCO_1"
+      },
+      {
+        "id": "q5b_ISCO_1"
+      },
+      {
+        "id": "q7F"
+      },
+      {
+        "id": "q7M"
+      },
+      {
+        "id": "INDEX"
+      },
+      {
+        "id": "q10a"
+      },
+      {
+        "id": "q10b"
+      },
+      {
+        "id": "q10d"
+      },
+      {
+        "id": "q10e"
+      },
+      {
+        "id": "q8a"
+      },
+      {
+        "id": "q8b"
+      },
+      {
+        "id": "q8c"
+      },
+      {
+        "id": "q8d"
+      },
+      {
+        "id": "q8e"
+      },
+      {
+        "id": "q8f"
+      },
+      {
+        "id": "q20a"
+      },
+      {
+        "id": "q20b"
+      },
+      {
+        "id": "q11"
+      },
+      {
+        "id": "q15New"
+      },
+      {
+        "id": "q16a"
+      },
+      {
+        "id": "q16b"
+      },
+      {
+        "id": "q16c"
+      },
+      {
+        "id": "q16d"
+      },
+      {
+        "id": "q16e"
+      },
+      {
+        "id": "q16f"
+      },
+      {
+        "id": "q28"
+      },
+      {
+        "id": "q37"
+      },
+      {
+        "id": "q17a"
+      },
+      {
+        "id": "q17b"
+      },
+      {
+        "id": "q23a"
+      },
+      {
+        "id": "q26"
+      },
+      {
+        "id": "q12a"
+      },
+      {
+        "id": "q12b"
+      },
+      {
+        "id": "q12c"
+      },
+      {
+        "id": "q12d"
+      },
+      {
+        "id": "q12e"
+      },
+      {
+        "id": "q12f"
+      },
+      {
+        "id": "q12g"
+      },
+      {
+        "id": "q12h"
+      },
+      {
+        "id": "q13a"
+      },
+      {
+        "id": "q13b"
+      },
+      {
+        "id": "q13c"
+      },
+      {
+        "id": "q13d"
+      },
+      {
+        "id": "q13e"
+      },
+      {
+        "id": "q13f"
+      },
+      {
+        "id": "q13g"
+      },
+      {
+        "id": "q13h"
+      },
+      {
+        "id": "q13i"
+      },
+      {
+        "id": "q33a"
+      },
+      {
+        "id": "q33b"
+      },
+      {
+        "id": "q33c"
+      },
+      {
+        "id": "q33d"
+      },
+      {
+        "id": "q33e"
+      },
+      {
+        "id": "q33f"
+      },
+      {
+        "id": "q33g"
+      },
+      {
+        "id": "q33h"
+      },
+      {
+        "id": "q35a"
+      },
+      {
+        "id": "q35b"
+      },
+      {
+        "id": "q35c"
+      },
+      {
+        "id": "q35d"
+      },
+      {
+        "id": "q35e"
+      },
+      {
+        "id": "q36a"
+      },
+      {
+        "id": "q36b"
+      },
+      {
+        "id": "q36c"
+      },
+      {
+        "id": "q36d"
+      },
+      {
+        "id": "q36e"
+      },
+      {
+        "id": "q36f"
+      },
+      {
+        "id": "q36g"
+      },
+      {
+        "id": "q39aNew"
+      },
+      {
+        "id": "q39bNew"
+      },
+      {
+        "id": "q39cNew"
+      },
+      {
+        "id": "q39dNew"
+      },
+      {
+        "id": "q39eNew"
+      },
+      {
+        "id": "q39fNew"
+      },
+      {
+        "id": "q39gNew"
+      },
+      {
+        "id": "q39hNew"
+      },
+      {
+        "id": "q39iNew"
+      },
+      {
+        "id": "q39jNew"
+      },
+      {
+        "id": "q39kNew"
+      }
+    ],
+    "measures": [
+      {
+        "id": "adolescents_count"
+      },
+      {
+        "id": "adolescents_perc"
+      }
+    ],
+    "highlights": [
+      {
+        "id": "comply",
+        "description": {
+          "el": "<span>Σχεδόν <span class=\"text-accent\">έξι στους δέκα μαθητές (59,1%)</span> συμφωνούν ότι <span class=\"text-accent\">«πρέπει να συμμορφώνονται με τις υποδείξεις των καθηγητών τους, ακόμα και όταν διαφωνούν»</span>. Τα κορίτσια και οι μικρότερες ηλικίες τείνουν να συμμορφώνονται περισσότερο. Ενώ, <span class=\"text-accent\">τα υψηλότερα ποσοστά διαφωνίας (54,6%)</span> προέρχονται από <span class=\"text-accent\">μαθητές με γονείς υψηλής κοινωνικής θέσης</span>.</span>",
+          "en": "<span>Almost <span class=\"text-accent\">six out of ten students (59.1%)</span> agree that they <span class=\"text-accent\">\"must comply with the instructions given by their teachers, even when they disagree\"</span>. Girls and younger students tend to comply more, while the <span class=\"text-accent\">highest disagreement rates (54.6%)</span> come from <span class=\"text-accent\">students with high family social status</span>.</span>"
+        },
+        "visType": "chart",
+        "seriesOptions": {}
+      },
+      {
+        "id": "socialTopics",
+        "description": {
+          "el": "<span><span class=\"text-accent\">Περίπου 1 στους 3 μαθητές</span> έχει συζητήσει για το δημοψήφισμα και τις εκλογές του 2015. <span class=\"text-accent\">Οι 9 στους 10</span> έχουν συζητήσει για τους πρόσφυγες που έχουν έρθει στην Ελλάδα, ενώ <span class=\"text-accent\">πάνω από 8 στους 10</span> έχουν συζητήσει για το ότι πολλοί νέοι δεν βρίσκουν δουλειά στην Ελλάδα και φεύγουν στον εξωτερικό.</span>",
+          "en": "<span><span class=\"text-accent\">About one out of three students</span> had a conversion on the referendum and the 2015 national elections. <span class=\"text-accent\">Nine out of ten</span> have discussed about the refugees who came to Greece, and <span class=\"text-accent\">over eight out of ten</span> have discussed that many young people due to the high rates of unemployment have left the country.</span>"
+        },
+        "visType": "chart",
+        "seriesOptions": {}
+      },
+      {
+        "id": "proud",
+        "description": {
+          "el": "<span>Η <span class=\"text-accent\">πλειοψηφία</span> των μαθητών <span class=\"text-accent\">δηλώνει υπερήφανη «Για την ιστορία του τόπου» μας (81,6%)</span> και περίπου <span class=\"text-accent\">οι μισοί «Για τις επιτυχίες στην Τέχνη και τη λογοτεχνία» (56,2%)</span>. Όσα έχουμε <span class=\"text-accent\">«καταφέρει στην οικονομία»</span> κάνει <span class=\"text-accent\">λιγότερο υπερήφανους</span> τους μαθητές.</span>",
+          "en": "<span>The <span class=\"text-accent\">majority</span> of students <span class=\"text-accent\">feel proud \"for the history of our country\" (81.6%)</span> and about <span class=\"text-accent\">half of them \"for successes in Art and Literature\" (56.2%)</span>. <span class=\"text-accent\">\"The achievements of our economy\" make students less proud</span>.</span>"
+        },
+        "visType": "chart",
+        "seriesOptions": {}
+      },
+      {
+        "id": "trueGreek",
+        "description": {
+          "el": "<span><span class=\"text-accent\">Για τους περισσότερους μαθητές «Πραγματικός Έλληνας»</span> είναι εκείνος που <span class=\"text-accent\">«Επιθυμεί να είναι Έλληνας» (60,9%)</span>, και <span class=\"text-accent\">«Σέβεται τους θεσμούς της χώρας» (54,5%)</span>. Οι <span class=\"text-accent\">μαθητές μεγαλύτερης ηλικίας</span> αναγνωρίζουν περισσότερο την <span class=\"text-accent\">αξία του αυτο-προσδιορισμού</span> («Επιθυμεί να είναι Έλληνας»).</span>",
+          "en": "<span><span class=\"text-accent\">For most students a \"True Greek\"</span> is someone who <span class=\"text-accent\">\"wishes to be Greek\" (60,9%)</span>, and <span class=\"text-accent\">\"respects the institutions of the country\" (54,5%)</span>. <span class=\"text-accent\">Older students</span> recognize more the <span class=\"text-accent\">value of self-determination</span> (\"Wishes to be a Greek\").</span>"
+        },
+        "visType": "chart",
+        "seriesOptions": {}
       }
     ]
   }

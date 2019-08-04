@@ -42,5 +42,23 @@
     },
     "type": "count",
     "unit": "MPs"
+  },
+  {
+    "id": "adolescents_perc",
+    "name": {
+      "el": "%",
+      "en": "%"
+    },
+    "type": "percentage",
+    "unit": "PC"
+  },
+  {
+    "id": "adolescents_count",
+    "name": {
+      "el": "Πλήθος απαντήσεων",
+      "en": "Response count"
+    },
+    "type": "count",
+    "unit": "Response Count"
   }
 ]
