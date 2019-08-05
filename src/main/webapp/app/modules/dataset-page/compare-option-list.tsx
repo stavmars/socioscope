@@ -33,7 +33,7 @@ export class CompareOptionList extends React.Component<ICompareOptionListProp> {
         <List.Item onClick={this.toggleCompareByOption} code={code.notation} key={code.notation}>
           <List.Icon name={_.includes(compareCodes, code.notation) ? 'check square outline' : 'square outline'} />
           <List.Content>
-            <List.Description>{translateEntityField(code.name)}</List.Description>
+            <List.Description className="dropdown-description">{translateEntityField(code.name)}</List.Description>
             {code.children && <List.List>{createCompareByOptions(code.children)}</List.List>}
           </List.Content>
         </List.Item>

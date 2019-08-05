@@ -80,7 +80,7 @@ export class RawDatasetFilters extends React.Component<IRawDatasetFiltersProp, I
                           name={code.notation === seriesOptions.dimensionFilters[dimension.id] ? 'dot circle outline' : 'circle outline'}
                         />
                         <List.Content>
-                          <List.Description>{translateEntityField(code.name)}</List.Description>
+                          <List.Description className="dropdown-description">{translateEntityField(code.name)}</List.Description>
                         </List.Content>
                       </List.Item>
                     ))}

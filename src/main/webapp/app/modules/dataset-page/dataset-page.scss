@@ -317,6 +317,16 @@
   }
 }
 
+.dropdown-description {
+  @include mobile {
+    margin-left: 20px;
+    margin-top: -15px;
+  }
+  @include computer {
+    margin: auto;
+  }
+}
+
 .vis-options-dropdown.dropdown {
   &.color-scheme-1,
   &.color-scheme-1 .menu {
