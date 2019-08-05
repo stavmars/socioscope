@@ -100,7 +100,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   removeFilter={this.props.removeFilter}
                 />
               </Grid.Column>
-              <Grid.Column mobile={16} tablet={6} computer={10}>
+              <Grid.Column mobile={16} tablet={6} computer={9}>
                 <Responsive {...Responsive.onlyMobile}>
                   <VisMobileUpperToolbar dataset={dataset} seriesOptions={seriesOptions} visType={visType} />
                 </Responsive>
@@ -138,7 +138,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   <VisMobileLowerToolbar dataset={dataset} copyCurrentURL={this.copyCurrentURL} togglePercentage={this.togglePercentage} />
                 </Responsive>
               </Grid.Column>
-              <Grid.Column only="computer tablet" tablet={4} computer={2} verticalAlign="middle">
+              <Grid.Column only="computer tablet" tablet={4} computer={3} verticalAlign="middle">
                 <VisColumnButtons dataset={dataset} seriesOptions={seriesOptions} />
               </Grid.Column>
             </Grid>
