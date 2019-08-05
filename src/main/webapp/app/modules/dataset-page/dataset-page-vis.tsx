@@ -23,6 +23,7 @@ import VisMobileUpperToolbar from 'app/modules/dataset-page/vis-mobile-upper-too
 import VisToolbar from 'app/modules/dataset-page/vis-toolbar';
 import VisMobileLowerToolbar from 'app/modules/dataset-page/vis-mobile-lower-toolbar';
 import VisSeriesOptionMenu from 'app/modules/dataset-page/vis-series-option-menu';
+import VisColumnButtons from './vis-column-buttons';
 
 // tslint:disable:jsx-no-lambda
 
@@ -99,7 +100,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   removeFilter={this.props.removeFilter}
                 />
               </Grid.Column>
-              <Grid.Column mobile={16} tablet={10} computer={12}>
+              <Grid.Column mobile={16} tablet={6} computer={10}>
                 <Responsive {...Responsive.onlyMobile}>
                   <VisMobileUpperToolbar dataset={dataset} seriesOptions={seriesOptions} visType={visType} />
                 </Responsive>
@@ -133,8 +134,12 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   )}
                 </div>
                 <Responsive {...Responsive.onlyMobile}>
+                  <VisColumnButtons dataset={dataset} seriesOptions={seriesOptions} />
                   <VisMobileLowerToolbar dataset={dataset} copyCurrentURL={this.copyCurrentURL} togglePercentage={this.togglePercentage} />
                 </Responsive>
+              </Grid.Column>
+              <Grid.Column only="computer tablet" tablet={4} computer={2} verticalAlign="middle">
+                <VisColumnButtons dataset={dataset} seriesOptions={seriesOptions} />
               </Grid.Column>
             </Grid>
           </div>

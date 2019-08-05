@@ -505,3 +505,24 @@
   font-size: 16px;
   color: #1e1e1e;
 }
+
+.ui.label {
+  &.color-scheme-1 {
+    &.active {
+      background-color: $color-scheme-1-accent !important;
+    }
+    background-color: rgba(209, 70, 252, 0.3);
+  }
+  &.color-scheme-2 {
+    &.active {
+      background-color: $color-scheme-2-accent !important;
+    }
+    background-clip: rgba(47, 124, 255, 0.3);
+  }
+  &.color-scheme-3 {
+    &.active {
+      background-color: $color-scheme-3-accent !important;
+    }
+    background-color: rgba(255, 93, 57, 0.3);
+  }
+}
