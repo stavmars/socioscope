@@ -35,6 +35,11 @@
           "xAxis": "Results for:",
           "filter": "related with:",
           "compare": "compare to:"
+        },
+        "rightColumn": {
+          "sex": "Sex",
+          "class": "High-School Class",
+          "status": "Social Status"
         }
       }
     }
