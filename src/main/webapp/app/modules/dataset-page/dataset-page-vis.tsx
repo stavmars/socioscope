@@ -134,9 +134,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   )}
                 </div>
                 <Responsive {...Responsive.onlyMobile}>
-                  {dataset.id === 'teenagers' && (
-                    <VisColumnButtons dataset={dataset} seriesOptions={seriesOptions} dimensionCodes={dimensionCodes} />
-                  )}
+                  <VisColumnButtons dataset={dataset} seriesOptions={seriesOptions} dimensionCodes={dimensionCodes} />
                   <VisMobileLowerToolbar dataset={dataset} copyCurrentURL={this.copyCurrentURL} togglePercentage={this.togglePercentage} />
                 </Responsive>
               </Grid.Column>
