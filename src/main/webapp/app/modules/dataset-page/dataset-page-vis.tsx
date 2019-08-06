@@ -100,7 +100,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   removeFilter={this.props.removeFilter}
                 />
               </Grid.Column>
-              <Grid.Column mobile={16} tablet={6} computer={9}>
+              <Grid.Column mobile={16} tablet={dataset.id === 'teenagers' ? 6 : 10} computer={dataset.id === 'teenagers' ? 9 : 12}>
                 <Responsive {...Responsive.onlyMobile}>
                   <VisMobileUpperToolbar dataset={dataset} seriesOptions={seriesOptions} visType={visType} />
                 </Responsive>
@@ -134,13 +134,17 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   )}
                 </div>
                 <Responsive {...Responsive.onlyMobile}>
-                  <VisColumnButtons dataset={dataset} seriesOptions={seriesOptions} dimensionCodes={dimensionCodes} />
+                  {dataset.id === 'teenagers' && (
+                    <VisColumnButtons dataset={dataset} seriesOptions={seriesOptions} dimensionCodes={dimensionCodes} />
+                  )}
                   <VisMobileLowerToolbar dataset={dataset} copyCurrentURL={this.copyCurrentURL} togglePercentage={this.togglePercentage} />
                 </Responsive>
               </Grid.Column>
-              <Grid.Column only="computer tablet" tablet={4} computer={3} verticalAlign="middle">
-                <VisColumnButtons dataset={dataset} seriesOptions={seriesOptions} dimensionCodes={dimensionCodes} />
-              </Grid.Column>
+              {dataset.id === 'teenagers' && (
+                <Grid.Column only="computer tablet" tablet={4} computer={3} verticalAlign="middle">
+                  <VisColumnButtons dataset={dataset} seriesOptions={seriesOptions} dimensionCodes={dimensionCodes} />
+                </Grid.Column>
+              )}
             </Grid>
           </div>
         )}
