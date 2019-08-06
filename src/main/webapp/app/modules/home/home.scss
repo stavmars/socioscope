@@ -145,6 +145,10 @@ Main page styles
       font-size: 40px;
       line-height: 45px;
     }
+    @include tablet {
+      font-size: 30px;
+      line-height: 35px;
+    }
   }
   .dataset-card-link {
     color: #1e1e1e;

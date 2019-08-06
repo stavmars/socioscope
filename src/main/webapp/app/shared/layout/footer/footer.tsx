@@ -45,7 +45,7 @@ const Footer = () => (
       <div id="app-footer">
         <Grid stackable>
           <Grid.Row>
-            <Grid.Column width={6}>
+            <Grid.Column compiter={6} tablet={6}>
               <List id="app-footer-links" horizontal bulleted>
                 <List.Item as="a">{translate('footer.about')}</List.Item>
                 <List.Item as="a">{translate('footer.terms')}</List.Item>
@@ -54,21 +54,21 @@ const Footer = () => (
               </List>
               <Image id="app-footer-logo" src="/content/images/Assets/Logo-white.png" />
             </Grid.Column>
-            <Grid.Column width={4}>
+            <Grid.Column compiter={4} tablet={4}>
               <div style={{ height: 40 }}>{translate('footer.collaboration')}</div>
               <Image.Group>
                 <Image src="/content/images/Assets/ekke.png" style={{ marginRight: 20 }} />
-                <Image src="/content/images/Assets/athena.png" style={{ marginLeft: 20 }} />
+                <Image src="/content/images/Assets/athena.png" />
               </Image.Group>
             </Grid.Column>
-            <Grid.Column width={2}>
+            <Grid.Column compiter={2} tablet={3}>
               <div style={{ height: 40 }}>CC BY 4.0</div>
               <Image.Group>
                 <Image src="/content/images/Assets/cc.png" />
                 <Image src="/content/images/Assets/person.png" />
               </Image.Group>
             </Grid.Column>
-            <Grid.Column width={4}>
+            <Grid.Column compiter={4} tablet={3}>
               <div style={{ height: 25 }} />
               <Image src={localeImage()} />
             </Grid.Column>
