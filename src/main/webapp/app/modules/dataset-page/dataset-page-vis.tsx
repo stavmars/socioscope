@@ -89,7 +89,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
         ) : (
           <div>
             <Grid verticalAlign="top">
-              <Grid.Column only="computer tablet" tablet={6} computer={4}>
+              <Grid.Column only="computer tablet" tablet={15} computer={4}>
                 <VisSeriesOptionMenu
                   seriesOptions={seriesOptions}
                   visType={visType}
@@ -105,7 +105,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   removeCompare={this.props.removeCompare}
                 />
               </Grid.Column>
-              <Grid.Column mobile={16} tablet={10} computer={12}>
+              <Grid.Column mobile={16} tablet={15} computer={12}>
                 <Responsive {...Responsive.onlyMobile}>
                   <VisMobileUpperToolbar dataset={dataset} seriesOptions={seriesOptions} visType={visType} />
                 </Responsive>

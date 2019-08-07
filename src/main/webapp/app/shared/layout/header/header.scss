@@ -6,14 +6,25 @@ Header Menu styles
 .app-header {
   .app-header-menu.ui.menu {
     background-color: white;
-    padding: 0 48.91px 0 44px;
     margin: 0;
+    @include tablet {
+      padding: 0 25px 0 22px;
+    }
+    @include computer {
+      padding: 0 48.91px 0 44px;
+    }
     .item {
-      padding: 0 0 0 79px;
       text-transform: uppercase;
       font-family: 'BPnoScriptBold';
-      font-size: 20px;
       color: rgba(30, 30, 30, 0.6);
+      @include tablet {
+        font-size: 16px;
+        padding: 0 0 0 40px;
+      }
+      @include computer {
+        font-size: 20px;
+        padding: 0 0 0 60px;
+      }
       &.active {
         color: #1e1e1e;
         span {
@@ -66,10 +77,20 @@ Header Menu styles
 .topics-mega-menu {
   background-color: white;
   font-family: BPnoScriptBold;
-  font-size: 30px;
   color: #1e1e1e;
+  @include tablet {
+    font-size: 25px;
+  }
+  @include computer {
+    font-size: 30px;
+  }
   .topics-mega-menu-list .list {
-    padding: 20px 100px 80px 100px;
+    @include tablet {
+      padding: 20px 10px 50px 10px;
+    }
+    @include computer {
+      padding: 20px 100px 80px 100px;
+    }
     .topics-mega-menu-list-item {
       border-radius: 0;
       padding-top: 30px;
