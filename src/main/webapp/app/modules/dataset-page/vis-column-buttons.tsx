@@ -1,6 +1,6 @@
 import React from 'react';
 import './dataset-page.scss';
-import { Image, GridRow, ImageGroup, Label, Responsive, GridColumn, Header } from 'semantic-ui-react';
+import { Image, GridRow, ImageGroup, Label, Responsive, GridColumn, Header, Menu } from 'semantic-ui-react';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { IMeasure } from 'app/shared/model/measure.model';
 import _ from 'lodash';
@@ -79,28 +79,30 @@ export class VisColumnButtons extends React.Component<IVisColumnButtonsProp> {
         </Responsive>
         <Responsive {...Responsive.onlyMobile}>
           <GridRow centered>
-            <div style={{ display: 'inline', marginLeft: '25%' }}>
-              <Label size="mini" className={dataset.colorScheme}>
+            <Menu style={{ backgroundColor: 'transparent', borderStyle: 'none', width: 'auto' }}>
+              <Label className={dataset.colorScheme}>
                 <Image rounded src="/content/images/Assets/Boy.svg" />
               </Label>
-              <Label size="mini" className={dataset.colorScheme}>
+              <Label className={dataset.colorScheme}>
                 <Image rounded src="/content/images/Assets/Girl.svg" />
               </Label>
-              <Label size="mini" className={dataset.colorScheme} style={{ marginLeft: '3%' }}>
+              <Label
+                className={dataset.colorScheme}
+                style={{ marginLeft: '3%', fontSize: '16px', color: '#ffff', padding: '11px 11px' }}
+                content="Α΄"
+              />
+              <Label className={dataset.colorScheme} style={{ fontSize: '16px', color: '#ffff', padding: '11px 11px' }} content="Β΄" />
+              <Label className={dataset.colorScheme} style={{ fontSize: '16px', color: '#ffff', padding: '11px 11px' }} content="Γ΄" />
+              <Label className={dataset.colorScheme} style={{ marginLeft: '3%' }}>
                 <Image rounded src="/content/images/Assets/Social-1.svg" />
               </Label>
-              <Label size="mini" className={dataset.colorScheme}>
+              <Label className={dataset.colorScheme}>
                 <Image rounded src="/content/images/Assets/Social-2.svg" />
               </Label>
-              <Label size="mini" className={dataset.colorScheme}>
+              <Label className={dataset.colorScheme}>
                 <Image rounded src="/content/images/Assets/Social-3.svg" />
               </Label>
-            </div>
-            <Label.Group style={{ marginLeft: '35%' }}>
-              <Label size="mini" className={dataset.colorScheme} style={{ fontSize: '14px', color: '#ffff' }} content="Α΄" />
-              <Label size="mini" className={dataset.colorScheme} style={{ fontSize: '14px', color: '#ffff' }} content="Β΄" />
-              <Label size="mini" className={dataset.colorScheme} style={{ fontSize: '14px', color: '#ffff' }} content="Γ΄" />
-            </Label.Group>
+            </Menu>
           </GridRow>
         </Responsive>
       </div>
