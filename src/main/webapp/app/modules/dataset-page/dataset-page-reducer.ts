@@ -144,12 +144,17 @@ export const getDimensionCodelist = (dimension: IDimension) => ({
 export const getDimensionCodeLists = (dataSet: IDataSet) => ({
   type: ACTION_TYPES.FETCH_DIMENSION_CODELISTS,
   payload: axios.get(`${datasetApiUrl}/${dataSet.id}/codelists`).then(res => {
-    dataSet.dimensions.map(dimension => ({
-      [dimension.id]: {
-        codes: unflattenDimensionCodes(res.data[dimension.id]),
-        codeByNotation: _.keyBy(res.data[dimension.id], 'notation')
-      }
-    }));
+    let codesRequested = {};
+    dataSet.dimensions.forEach(dimension => {
+      codesRequested = {
+        ...codesRequested,
+        [dimension.id]: {
+          codes: unflattenDimensionCodes(res.data[dimension.id]),
+          codeByNotation: _.keyBy(res.data[dimension.id], 'notation')
+        }
+      };
+    });
+    return codesRequested;
   })
 });
 
