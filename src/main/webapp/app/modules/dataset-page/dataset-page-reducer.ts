@@ -70,6 +70,7 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
     case SUCCESS(ACTION_TYPES.FETCH_DIMENSION_CODELISTS):
       return {
         ...state,
+        dimensionCodes: action.payload,
         fetchedCodeLists: true
       };
     case ACTION_TYPES.CHANGE_COMPARE_BY:
@@ -133,13 +134,24 @@ export const getDimensionCodelist = (dimension: IDimension) => ({
     .then(res => ({ dimensionId: dimension.id, codelist: res.data }))
 });
 
-export const getDimensionCodeLists = (dataset: IDataSet) => dispatch => {
-  const promises = Promise.all(dataset.dimensions.map(dimension => dispatch(getDimensionCodelist(dimension))));
-  return dispatch({
-    type: ACTION_TYPES.FETCH_DIMENSION_CODELISTS,
-    payload: promises
-  });
-};
+// export const getDimensionCodeLists = (dataset: IDataSet) => dispatch => {
+//   const promises = Promise.all(dataset.dimensions.map(dimension => dispatch(getDimensionCodelist(dimension))));
+//   return dispatch({
+//     type: ACTION_TYPES.FETCH_DIMENSION_CODELISTS,
+//     payload: promises
+//   });
+// };
+export const getDimensionCodeLists = (dataSet: IDataSet) => ({
+  type: ACTION_TYPES.FETCH_DIMENSION_CODELISTS,
+  payload: axios.get(`${datasetApiUrl}/${dataSet.id}/codelists`).then(res => {
+    dataSet.dimensions.map(dimension => ({
+      [dimension.id]: {
+        codes: unflattenDimensionCodes(res.data[dimension.id]),
+        codeByNotation: _.keyBy(res.data[dimension.id], 'notation')
+      }
+    }));
+  })
+});
 
 export const getSeries = (id, seriesOptions: ISeriesOptions) => {
   const requestUrl = `${datasetApiUrl}/${id}/series`;
