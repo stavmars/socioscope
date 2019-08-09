@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -33,6 +34,8 @@ public class DataSetService {
 
     private final DimensionRepository dimensionRepository;
 
+    private final DimensionCodeRepository dimensionCodeRepository;
+
     private final MeasureRepository measureRepository;
 
     private final ObservationRepository observationRepository;
@@ -44,11 +47,12 @@ public class DataSetService {
     private final UserService userService;
 
     public DataSetService(DataSetRepository dataSetRepository, DataSetSearchRepository dataSetSearchRepository, DimensionRepository dimensionRepository,
-                          MeasureRepository measureRepository, ObservationRepository observationRepository,
+                          DimensionCodeRepository dimensionCodeRepository, MeasureRepository measureRepository, ObservationRepository observationRepository,
                           ObservationMapper observationMapper, RawDataRepository rawDataRepository, UserService userService) {
         this.dataSetRepository = dataSetRepository;
         this.dataSetSearchRepository = dataSetSearchRepository;
         this.dimensionRepository = dimensionRepository;
+        this.dimensionCodeRepository = dimensionCodeRepository;
         this.measureRepository = measureRepository;
         this.observationRepository = observationRepository;
         this.observationMapper = observationMapper;
@@ -253,4 +257,22 @@ public class DataSetService {
                 }
             });
     }
+
+    /**
+     * Get codelists data from a dataset.
+     *
+     * @param datasetId
+     * @return the requested codelists
+     */
+	public Optional<Map<String, List<DimensionCode>>> getCodelists(String dataSetId) {
+        log.debug("Request to get codelists for dataset {}", dataSetId);
+        return dataSetRepository.findById(dataSetId)
+            .map(dataSet -> {
+                Map<String, List<DimensionCode>> codelistMap = new HashMap<String, List<DimensionCode>>();
+                dataSet.getDimensions().forEach(dimension -> {
+                   codelistMap.put(dimension.getId(), dimensionCodeRepository.findAllByDimensionId(dimension.getId())); 
+                });
+                return codelistMap;
+            });
+	}
 }
