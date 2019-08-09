@@ -8,6 +8,9 @@ import {
   IVisOptions,
   removeFilter,
   setFilterValue,
+  addCode,
+  removeCode,
+  removeCompare,
   toggleCompareValue,
   updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
@@ -86,7 +89,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
         ) : (
           <div>
             <Grid verticalAlign="top">
-              <Grid.Column only="computer tablet" tablet={6} computer={4}>
+              <Grid.Column only="computer tablet" tablet={15} computer={4}>
                 <VisSeriesOptionMenu
                   seriesOptions={seriesOptions}
                   visType={visType}
@@ -97,9 +100,12 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   updateVisOptions={this.props.updateVisOptions}
                   toggleCompareValue={this.props.toggleCompareValue}
                   removeFilter={this.props.removeFilter}
+                  addCode={this.props.addCode}
+                  removeCode={this.props.removeCode}
+                  removeCompare={this.props.removeCompare}
                 />
               </Grid.Column>
-              <Grid.Column mobile={16} tablet={10} computer={12}>
+              <Grid.Column mobile={16} tablet={15} computer={12}>
                 <Responsive {...Responsive.onlyMobile}>
                   <VisMobileUpperToolbar dataset={dataset} seriesOptions={seriesOptions} visType={visType} />
                 </Responsive>
@@ -133,7 +139,12 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   )}
                 </div>
                 <Responsive {...Responsive.onlyMobile}>
-                  <VisMobileLowerToolbar dataset={dataset} copyCurrentURL={this.copyCurrentURL} togglePercentage={this.togglePercentage} />
+                  <VisMobileLowerToolbar
+                    dataset={dataset}
+                    seriesOptions={seriesOptions}
+                    copyCurrentURL={this.copyCurrentURL}
+                    togglePercentage={this.togglePercentage}
+                  />
                 </Responsive>
               </Grid.Column>
             </Grid>
@@ -193,7 +204,10 @@ const mapDispatchToProps = {
   setFilterValue,
   initVis,
   toggleCompareValue,
-  removeFilter
+  removeFilter,
+  addCode,
+  removeCode,
+  removeCompare
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;

@@ -17,8 +17,14 @@ Mixins
   }
 }
 
+@mixin tablet {
+  @media (min-width: #{$tabletBreakpoint}) and (max-width: 1024px) {
+    @content;
+  }
+}
+
 @mixin computer {
-  @media (min-width: #{$computerBreakpoint}) {
+  @media (max-width: #{$widescreenMonitorBreakpoint}) and (min-width: #{$computerBreakpoint}) {
     @content;
   }
 }

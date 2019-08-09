@@ -4,10 +4,14 @@ import { ILang } from 'app/shared/model/language.interface';
 export interface IDimension {
   id?: string;
   name?: ILang;
+  description?: ILang;
   type?: string;
   creator?: IUser;
   geoMaps?: IGeoMap[];
   dependencies?: string[];
+  disableFilter?: boolean;
+  disableAxis?: boolean;
+  composedOf?: string[];
 }
 
 export interface IGeoMap {

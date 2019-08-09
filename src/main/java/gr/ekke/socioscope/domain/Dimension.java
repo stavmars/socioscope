@@ -39,6 +39,10 @@ public class Dimension implements Serializable {
     @Size(min = 1)
     @Field("name")
     private Map<String, @NotBlank String> name;
+
+    @Field("description")
+    private Map<String, @NotBlank String> description;
+
     @NotNull
     @Field("type")
     private String type;
@@ -50,17 +54,18 @@ public class Dimension implements Serializable {
     @JsonIgnoreProperties("")
     private User creator;
 
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    private List<String> composedOf;
+
+    private Boolean disableAxis;
+
+    private Boolean disableFilter;
+
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Dimension() {
     }
 
-    public Dimension(String id, @Size(min = 1) Map<String, @NotBlank String> name, @NotNull @Size(min = 2) String type, List<String> dependencies, User creator) {
-        this.id = id;
-        this.name = name;
-        this.type = type;
-        this.dependencies = dependencies;
-        this.creator = creator;
-    }
 
     @JsonCreator
     public static Dimension create(String jsonString) throws JsonParseException, JsonMappingException, IOException {
@@ -92,6 +97,19 @@ public class Dimension implements Serializable {
 
     public Dimension name(Map<String, String> name) {
         this.name = name;
+        return this;
+    }
+
+    public Map<String, String> getDescription() {
+        return description;
+    }
+
+    public void setDescription(Map<String, String> description) {
+        this.description = description;
+    }
+
+    public Dimension description(Map<String, String> description) {
+        this.description = description;
         return this;
     }
 
@@ -140,6 +158,30 @@ public class Dimension implements Serializable {
 
     public void setGeoMaps(List<GeoMap> geoMaps) {
         this.geoMaps = geoMaps;
+    }
+
+    public List<String> getComposedOf() {
+        return composedOf;
+    }
+
+    public void setComposedOf(List<String> composedOf) {
+        this.composedOf = composedOf;
+    }
+
+    public Boolean getDisableAxis() {
+        return disableAxis;
+    }
+
+    public void setDisableAxis(Boolean disableAxis) {
+        this.disableAxis = disableAxis;
+    }
+
+    public Boolean getDisableFilter() {
+        return disableFilter;
+    }
+
+    public void setDisableFilter(Boolean disableFilter) {
+        this.disableFilter = disableFilter;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove

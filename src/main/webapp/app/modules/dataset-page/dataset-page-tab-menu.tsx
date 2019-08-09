@@ -45,7 +45,7 @@ export class DatasetPageTabMenu extends React.Component<IDatasetPageTabMenuProp>
                       </div>
                     </Menu.Item>
                     <Menu.Item>
-                      <h1>{translateEntityField(dataset.name)}</h1>
+                      <h1 className={dataset.colorScheme}>{translateEntityField(dataset.name)}</h1>
                     </Menu.Item>
                     <Menu.Item position="right" onClick={this.props.toggleMobileMenu} style={{ float: 'right', paddingBottom: '35%' }}>
                       <Image src="/content/images/Assets/Mobile-Sidebar.svg" />
@@ -60,7 +60,7 @@ export class DatasetPageTabMenu extends React.Component<IDatasetPageTabMenuProp>
                       </div>
                     </Menu.Item>
                     <Menu.Item>
-                      <h1>{translateEntityField(dataset.name)}</h1>
+                      <h1 className={dataset.colorScheme}>{translateEntityField(dataset.name)}</h1>
                     </Menu.Item>
                     <Menu.Item position="right" onClick={this.props.toggleTopicsMenu} style={{ float: 'right' }}>
                       <span className="dataset-page-tab-menu-top-topics">
@@ -73,7 +73,7 @@ export class DatasetPageTabMenu extends React.Component<IDatasetPageTabMenuProp>
             ) : (
               <div>
                 <Image className="datasetIcon" centered src={`/content/images/Assets/${dataset.id}-${dataset.colorScheme}.svg`} />
-                <h1>{translateEntityField(dataset.name)}</h1>
+                <h1 className={dataset.colorScheme}>{translateEntityField(dataset.name)}</h1>
               </div>
             )}
           </div>

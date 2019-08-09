@@ -7,6 +7,7 @@ import { IDimensionCode } from 'app/shared/model/dimension-code.model';
 import { IDimension } from 'app/shared/model/dimension.model';
 import _ from 'lodash';
 import { unflattenDimensionCodes } from 'app/shared/util/entity-utils';
+import dataSet from 'app/entities/data-set/data-set';
 
 export interface IVisOptions {
   visType: string;
@@ -21,7 +22,10 @@ export const ACTION_TYPES = {
   SET_FILTER_VALUE: 'datasetPage/SET_FILTER_VALUE',
   UPDATE_VIS_OPTIONS: 'datasetPage/UPDATE_VIS_OPTIONS',
   TOGGLE_COMPARE_VALUE: 'datasetPage/TOGGLE_COMPARE_VALUE',
-  REMOVE_FILTER: 'datasetPage/REMOVE_FILTER'
+  REMOVE_FILTER: 'datasetPage/REMOVE_FILTER',
+  ADD_CODE: 'datasetPage/ADD_CODE',
+  REMOVE_CODE: 'datasetPage/REMOVE_CODE',
+  REMOVE_COMPARE: 'datasetPage/REMOCE_COMPARE'
 };
 
 const initialState = {
@@ -99,6 +103,31 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
           dimensionFilters: _.omit(state.seriesOptions.dimensionFilters, action.payload.dimensionId)
         }
       };
+    case ACTION_TYPES.ADD_CODE:
+      return {
+        ...state,
+        seriesOptions: {
+          ...state.seriesOptions,
+          compareCodes: state.seriesOptions.compareCodes.concat([action.payload.code])
+        }
+      };
+    case ACTION_TYPES.REMOVE_CODE:
+      return {
+        ...state,
+        seriesOptions: {
+          ...state.seriesOptions,
+          compareCodes: _.filter(state.seriesOptions.compareCodes, el => el !== action.payload.code)
+        }
+      };
+    case ACTION_TYPES.REMOVE_COMPARE:
+      return {
+        ...state,
+        seriesOptions: {
+          ...state.seriesOptions,
+          compareBy: null as string,
+          compareCodes: []
+        }
+      };
     case ACTION_TYPES.TOGGLE_COMPARE_VALUE:
       const { compareCode } = action.payload;
       const compareCodes = state.seriesOptions.compareCodes || [];
@@ -162,6 +191,32 @@ export const removeFilter = (dataset: IDataSet, dimensionId: string) => (dispatc
   dispatch({
     type: ACTION_TYPES.REMOVE_FILTER,
     payload: { dimensionId }
+  });
+  const { seriesOptions } = getState().datasetPage;
+  dispatch(getSeries(dataset.id, seriesOptions));
+};
+
+export const addCode = (dataset: IDataSet, code: string) => (dispatch, getState) => {
+  dispatch({
+    type: ACTION_TYPES.ADD_CODE,
+    payload: { code }
+  });
+  const { seriesOptions } = getState().datasetPage;
+  dispatch(getSeries(dataset.id, seriesOptions));
+};
+
+export const removeCode = (dataset: IDataSet, code: string) => (dispatch, getState) => {
+  dispatch({
+    type: ACTION_TYPES.REMOVE_CODE,
+    payload: { code }
+  });
+  const { seriesOptions } = getState().datasetPage;
+  dispatch(getSeries(dataset.id, seriesOptions));
+};
+
+export const removeCompare = (dataset: IDataSet) => (dispatch, getState) => {
+  dispatch({
+    type: ACTION_TYPES.REMOVE_COMPARE
   });
   const { seriesOptions } = getState().datasetPage;
   dispatch(getSeries(dataset.id, seriesOptions));

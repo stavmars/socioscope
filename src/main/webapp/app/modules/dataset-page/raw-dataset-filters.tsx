@@ -58,7 +58,7 @@ export class RawDatasetFilters extends React.Component<IRawDatasetFiltersProp, I
       <div>
         <Dropdown className={`vis-options-dropdown ${dataset.colorScheme}`} fluid scrolling placeholder="Επιλέξτε 1 ή παραπάνω φίλτρα">
           <Accordion as={Dropdown.Menu}>
-            {dataset.dimensions.map(dimension => (
+            {dataset.dimensions.filter(dimension => !dimension.disableFilter).map(dimension => (
               <Dropdown.Item
                 key={dimension.id}
                 disabled={dimension.id === seriesOptions.xAxis || dimension.id === seriesOptions.compareBy}
@@ -80,7 +80,7 @@ export class RawDatasetFilters extends React.Component<IRawDatasetFiltersProp, I
                           name={code.notation === seriesOptions.dimensionFilters[dimension.id] ? 'dot circle outline' : 'circle outline'}
                         />
                         <List.Content>
-                          <List.Description>{translateEntityField(code.name)}</List.Description>
+                          <List.Description className="dropdown-description">{translateEntityField(code.name)}</List.Description>
                         </List.Content>
                       </List.Item>
                     ))}
