@@ -1,0 +1,40 @@
+{
+    "highlights": [
+        {
+            "id": "1996-2014",
+            "description": {
+                "el": "<span>Την περίοδο 1996-2014 τα <span class=\"text-accent\">κυρίαρχα αιτήματα διαμαρτυρίας</span> αφορούν την <span class=\"text-accent\">εργασία</span> και την <span class=\"text-accent\">εκπαίδευση</span>.</span>",
+                "en": "<span>During the period 1996-2014 the <span class=\"text-accent\">main protest requests</span> concern <span class=\"text-accent\">work</span> and <span class=\"text-accent\">education</span>.</span>"
+            },
+            "visType": "chart",
+            "seriesOptions": {}
+        },
+        {
+            "id": "strikes",
+            "description": {
+                "el": "<span>Ως κύρια μορφή δράσης για τα <span class=\"text-accent\">εργασιακά αιτήματα</span> αναδεικνύονται οι <span class=\"text-accent\">απεργίες (62,71%)</span> (απεργίες, στάσεις εργασίας, επισχέσεις εργασίας, λευκές απεργίες) οι οποίες εμφανίζουν τη <span class=\"text-accent\">μεγαλύτερη διακύμανση στο χρόνο</span> και <span class=\"text-accent\">κλιμακώνονται την περίοδο των Μνημονίων</span>.</span>",
+                "en": "<span><span class=\"text-accent\">Strikes (62.71%)</span> (stopovers, labor shortages, white strikes) are the <span class=\"text-accent\">main form of action for job demands</span>. These strikes show <span class=\"text-accent\">the greatest variance over time</span> and <span class=\"text-accent\">are staggered over the period of the Memorandum programmes</span>.</span>"
+            },
+            "visType": "chart",
+            "seriesOptions": {}
+        },
+        {
+            "id": "violence",
+            "description": {
+                "el": "<span><span class=\"text-accent\">Ορισμένες μορφές δράσης</span> όπως η <span class=\"text-accent\">συμβολική βία</span> εντοπίζονται σχεδόν <span class=\"text-accent\">αποκλειστικά στην Αθήνα</span>.</span>",
+                "en": "<span><span class=\"text-accent\">Some forms of action</span> such as <span class=\"text-accent\">symbolic violence</span> are found almost <span class=\"text-accent\">exclusively in Athens</span>.</span>"
+            },
+            "visType": "chart",
+            "seriesOptions": {}
+        },
+        {
+            "id": "protest-fall",
+            "description": {
+                "el": "<span>Διαχρονικά παρατηρείται <span class=\"text-accent\">κάθετη πτώση της διαμαρτυρίας λίγο πριν τις εθνικές εκλογές</span> ενώ όταν αυτές συνοδεύονται από <span class=\"text-accent\">αλλαγή της κυβέρνησης</span> παρατηρείται <span class=\"text-accent\">σημαντική αύξηση</span>.</span>",
+                "en": "<span>Over time, there has been a <span class=\"text-accent\">vertical fall in the protests</span> as a form of action shortly <span class=\"text-accent\">before the national elections</span>, while when accompanied by <span class=\"text-accent\">a change of government</span> there is a <span class=\"text-accent\">significant increase</span>.</span>"
+            },
+            "visType": "chart",
+            "seriesOptions": {}
+        }
+    ]
+}
