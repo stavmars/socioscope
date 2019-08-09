@@ -5,9 +5,19 @@ import { Image, List, Icon, Header, Menu, Segment, Container, Button } from 'sem
 import { NavLink as Link, NavLink } from 'react-router-dom';
 import { toggleMobileMenu } from 'app/shared/reducers/header';
 import { connect } from 'react-redux';
+import { IRootState } from 'app/shared/reducers';
+import { translateEntityField } from 'app/shared/util/entity-utils';
 
-export class MobileMenu extends React.Component<DispatchProps> {
+export interface IMobileMenuProps extends StateProps, DispatchProps {}
+
+export class MobileMenu extends React.Component<IMobileMenuProps> {
   render() {
+    const { dataSetsById } = this.props;
+    const elections = dataSetsById['greek-election-results'];
+    const deputies = dataSetsById['deputies'];
+    const adolescents = dataSetsById['adolescents'];
+    const claims = dataSetsById['claims'];
+
     return (
       <div className="mobile-menu">
         <List relaxed="very">
@@ -20,16 +30,16 @@ export class MobileMenu extends React.Component<DispatchProps> {
             <List.Content>
               <List.Header className="mobile-menu-item">{translate('global.menu.topics')}</List.Header>
               <div className="mobile-menu-list">
-                <List.Item className="mobile-menu-list-line color-scheme-1">
+                <List.Item className={`mobile-menu-list-line ${claims.colorScheme}`}>
                   <Container>
                     <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Protests.svg" />
-                    <Container text className="mobile-menu-list-line-item color-scheme-1" as={Link} to="/dataset/social">
-                      {translate('home.dataset.categories.social')}
+                    <Container text className={`mobile-menu-list-line-item ${claims.colorScheme}`} as={Link} to="/dataset/claims">
+                      {translateEntityField(claims.name)}
                       <i />
                     </Container>
                   </Container>
                 </List.Item>
-                <List.Item className="mobile-menu-list-line color-scheme-3">
+                {/* <List.Item className="mobile-menu-list-line color-scheme-3">
                   <Container>
                     <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Criminality.svg" />
                     <Container text className="mobile-menu-list-line-item color-scheme-3" as={Link} to="/dataset/criminaltiy">
@@ -46,30 +56,35 @@ export class MobileMenu extends React.Component<DispatchProps> {
                       <i />
                     </Container>
                   </Container>
-                </List.Item>
-                <List.Item className="mobile-menu-list-line color-scheme-1">
+                </List.Item> */}
+                <List.Item className={`mobile-menu-list-line ${elections.colorScheme}`}>
                   <Container>
                     <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Elections.svg" />
-                    <Container text className="mobile-menu-list-line-item color-scheme-1" as={Link} to="/dataset/greek-election-results">
-                      {translate('home.dataset.categories.elections')}
+                    <Container
+                      text
+                      className={`mobile-menu-list-line-item ${elections.colorScheme}`}
+                      as={Link}
+                      to="/dataset/greek-election-results"
+                    >
+                      {translateEntityField(elections.name)}
                       <i />
                     </Container>
                   </Container>
                 </List.Item>
-                <List.Item className="mobile-menu-list-line color-scheme-2">
+                <List.Item className={`mobile-menu-list-line ${deputies.colorScheme}`}>
                   <Container>
                     <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Politicians.svg" />
-                    <Container text className="mobile-menu-list-line-item color-scheme-2" as={Link} to="/dataset/deputies">
-                      {translate('home.dataset.categories.politics')}
+                    <Container text className={`mobile-menu-list-line-item ${deputies.colorScheme}`} as={Link} to="/dataset/deputies">
+                      {translateEntityField(deputies.name)}
                       <i />
                     </Container>
                   </Container>
                 </List.Item>
-                <List.Item className="mobile-menu-list-line color-scheme-3">
+                <List.Item className={`mobile-menu-list-line ${adolescents.colorScheme}`}>
                   <Container>
                     <Image className="mobile-menu-list-line-image" src="/content/images/Assets/Teenagers.svg" />
-                    <Container text className="mobile-menu-list-line-item color-scheme-3" as={Link} to="/dataset/schools">
-                      {translate('home.dataset.categories.schools')}
+                    <Container text className={`mobile-menu-list-line-item ${adolescents.colorScheme}`} as={Link} to="/dataset/adolescents">
+                      {translateEntityField(adolescents.name)}
                       <i />
                     </Container>
                   </Container>
@@ -101,11 +116,16 @@ export class MobileMenu extends React.Component<DispatchProps> {
   }
 }
 
+const mapStateToProps = ({ dataSet }: IRootState) => ({
+  dataSetsById: dataSet.entitiesById
+});
+
 const mapDispatchToProps = { toggleMobileMenu };
 
+type StateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(MobileMenu);

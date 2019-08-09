@@ -29,9 +29,10 @@ import {
 
 import Header from 'app/shared/layout/header/header';
 import { getEntities } from 'app/entities/data-set/data-set.reducer';
-import { TopicsMegaMenu } from 'app/shared/layout/header/topics-mega-menu';
-import { MobileMenu } from './modules/mobile/mobile-menu';
-import MobileVisMenu from './modules/mobile/mobile-vis-menu';
+import TopicsMegaMenu from 'app/shared/layout/header/topics-mega-menu';
+import MobileMenu from './modules/mobile/mobile-menu';
+import { MobileVisMenu } from './modules/mobile/mobile-vis-menu';
+
 
 export interface IAppProps extends StateProps, DispatchProps {}
 
@@ -90,7 +91,7 @@ export class App extends React.Component<IAppProps> {
                   visible={this.props.isMobileMenuVisible}
                   style={{ width: '100%' }}
                 >
-                  <MobileMenu toggleMobileMenu={this.props.toggleMobileMenu} />
+                  <MobileMenu />
                 </Sidebar>
                 <Sidebar
                   as={Menu}
