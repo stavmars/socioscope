@@ -8,7 +8,15 @@ import { translateEntityField } from 'app/shared/util/entity-utils';
 import { translate } from 'react-jhipster';
 import CompareByControl from 'app/modules/dataset-page/compareBy-control';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
-import { removeFilter, setFilterValue, toggleCompareValue, updateVisOptions } from 'app/modules/dataset-page/dataset-page-reducer';
+import {
+  removeFilter,
+  setFilterValue,
+  addCode,
+  removeCode,
+  removeCompare,
+  toggleCompareValue,
+  updateVisOptions
+} from 'app/modules/dataset-page/dataset-page-reducer';
 
 export interface IVisSeriesOptionMenuProp {
   dataset: IDataSet;
@@ -24,6 +32,12 @@ export interface IVisSeriesOptionMenuProp {
   updateVisOptions: typeof updateVisOptions;
 
   toggleCompareValue: typeof toggleCompareValue;
+
+  removeCode: typeof removeCode;
+
+  addCode: typeof addCode;
+
+  removeCompare: typeof removeCompare;
 }
 
 export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuProp> {
@@ -105,6 +119,9 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
             dataset={dataset}
             seriesOptions={seriesOptions}
             toggleCompareValue={this.props.toggleCompareValue}
+            addCode={this.props.addCode}
+            removeCode={this.props.removeCode}
+            removeCompare={this.props.removeCompare}
           />
         )}
       </div>

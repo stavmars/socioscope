@@ -21,6 +21,9 @@ Main page styles
     @include mobile {
       font-size: 30px;
     }
+    @include tablet {
+      font-size: 60px;
+    }
     @include computer {
       font-size: 80px;
     }
@@ -35,6 +38,10 @@ Main page styles
       font-size: 14px;
       margin-bottom: 35px;
     }
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 100px;
+    }
     @include computer {
       margin-top: 31px;
       margin-bottom: 111px;
@@ -48,6 +55,10 @@ Main page styles
       font-size: 16px;
       border-bottom: 2px solid #ff5d39;
     }
+    @include tablet {
+      font-size: 20px;
+      border-bottom: 3px solid #ff5d39;
+    }
     @include computer {
       font-size: 30px;
       border-bottom: 4px solid #ff5d39;
@@ -60,6 +71,9 @@ Main page styles
     margin-top: -75px;
     padding: 0 0 60px 0;
   }
+  @include tablet {
+    padding: 40px 20px 60px 20px;
+  }
   @include computer {
     padding: 0 40px 60px 40px;
   }
@@ -69,8 +83,11 @@ Main page styles
   @include mobile {
     height: 700px;
   }
+  @include tablet {
+    height: 800px;
+  }
   @include computer {
-    height: 756px;
+    height: 800px;
   }
   &:not(:last-child) {
     @include mobile {
@@ -104,6 +121,10 @@ Main page styles
       width: 31px;
       height: 30px;
     }
+    @include tablet {
+      width: 41px;
+      height: 40px;
+    }
     @include computer {
       width: auto;
       height: auto;
@@ -113,6 +134,9 @@ Main page styles
     font-family: 'ProximaNovaSemibold';
     @include mobile {
       font-size: 14px;
+    }
+    @include tablet {
+      font-size: 16px;
     }
     @include computer {
       font-size: 20px;
@@ -144,6 +168,10 @@ Main page styles
     @include computer {
       font-size: 40px;
       line-height: 45px;
+    }
+    @include tablet {
+      font-size: 25px;
+      line-height: 30px;
     }
   }
   .dataset-card-link {

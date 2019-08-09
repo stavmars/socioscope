@@ -27,11 +27,11 @@ import {
   toggleMobileVisMenu
 } from 'app/shared/reducers/header';
 
-        import Header from 'app/shared/layout/header/header';
+import Header from 'app/shared/layout/header/header';
 import { getEntities } from 'app/entities/data-set/data-set.reducer';
 import { TopicsMegaMenu } from 'app/shared/layout/header/topics-mega-menu';
 import { MobileMenu } from './modules/mobile/mobile-menu';
-import { MobileVisMenu } from './modules/mobile/mobile-vis-menu';
+import MobileVisMenu from './modules/mobile/mobile-vis-menu';
 
 export interface IAppProps extends StateProps, DispatchProps {}
 
@@ -100,7 +100,7 @@ export class App extends React.Component<IAppProps> {
                   visible={this.props.isMobieleVisMenuVisible}
                   style={{ width: '100%' }}
                 >
-                  <MobileVisMenu toggleMobileVisMenu={this.props.toggleMobileVisMenu} />
+                  <Route path="/dataset/:id/data" render={props => <MobileVisMenu {...props} />} />
                 </Sidebar>
               </Responsive>
               <Responsive minWidth={Responsive.onlyTablet.minWidth}>
