@@ -85,7 +85,7 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
           disabled={xAxisDimension.type === 'composite'}
         >
           <Accordion as={Dropdown.Menu}>
-            {dimensions.filter(dimension => !dimension.disableFilter).map(dimension => (
+            {dimensions.filter(dimension => dimension.type !== 'time' && !dimension.disableFilter).map(dimension => (
               <Dropdown.Item
                 key={dimension.id}
                 disabled={dimension.id === seriesOptions.xAxis}
