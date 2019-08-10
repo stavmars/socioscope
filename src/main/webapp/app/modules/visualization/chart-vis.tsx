@@ -35,7 +35,10 @@ const prepareSeriesByParent = (codesByNotation, seriesList: ISeries[]) =>
     return acc;
   }, {});
 
-const prepareTimeSeriesData = (dataPoints: ISeriesPoint[]) => dataPoints.map(dataPoint => [new Date(dataPoint.x).getTime(), dataPoint.y]);
+const prepareTimeSeriesData = (dataPoints: ISeriesPoint[]) => {
+  const chartPoints = dataPoints.map(dataPoint => [new Date(dataPoint.x).getTime(), dataPoint.y]);
+  return _.sortBy(chartPoints, 0);
+};
 
 const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[], seriesByParent) => {
   const chartPoints = seriesPoints.map(seriesPoint => {
