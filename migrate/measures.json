@@ -60,5 +60,14 @@
     },
     "type": "count",
     "unit": "Response Count"
+  },
+  {
+    "id": "claims_count",
+    "name": {
+      "el": "Claims",
+      "en": "Claims"
+    },
+    "type": "count",
+    "unit": "Claims"
   }
 ]
