@@ -1751,7 +1751,7 @@
     ],
     "measures": [
       {
-        "id": "claims"
+        "id": "claims_count"
       }
     ],
     "highlights": []
