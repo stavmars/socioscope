@@ -2,6 +2,8 @@ package gr.ekke.socioscope.repository;
 
 import com.mongodb.BasicDBObject;
 import gr.ekke.socioscope.domain.DataSet;
+import gr.ekke.socioscope.domain.Dimension;
+import gr.ekke.socioscope.domain.DimensionType;
 import gr.ekke.socioscope.domain.SeriesOptions;
 import gr.ekke.socioscope.service.dto.Series;
 import gr.ekke.socioscope.service.dto.SeriesPoint;
@@ -11,12 +13,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.aggregation.Aggregation;
 import org.springframework.data.mongodb.core.aggregation.AggregationOperation;
+import org.springframework.data.mongodb.core.aggregation.ProjectionOperation;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-import static java.util.stream.Collectors.groupingBy;
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
 
 /**
@@ -33,33 +35,18 @@ public class RawDataRepository {
     public List<Series> getSeries(DataSet dataSet, SeriesOptions seriesOptions) {
 
         String xAxis = seriesOptions.getxAxis();
+        Dimension xAxisDimension = dataSet.getDimensions().stream().filter(dim -> dim.getId().equals(seriesOptions.getxAxis()))
+            .findFirst().get();
         String compareBy = seriesOptions.getCompareBy();
         List<String> compareCodes = seriesOptions.getCompareCodes();
 
         Map<String, String> dimensionFilters = seriesOptions.getDimensionFilters();
-        List<AggregationOperation> aggregationOperations = new ArrayList<>();
 
-        Set<String> unwindFields = new HashSet<>();
+        List<String> fields = new ArrayList<>(dimensionFilters.keySet());
+        fields.add(xAxis);
+        fields.add(compareBy);
 
-        String[] splitXAxis = xAxis.split("\\.");
-        if (splitXAxis.length > 1) {
-            unwindFields.add(splitXAxis[0]);
-        }
-        if (compareBy != null) {
-            String[] splitCompareBy = compareBy.split("\\.");
-            if (splitCompareBy.length > 1) {
-                unwindFields.add(splitCompareBy[0]);
-            }
-        }
-        for (String dimensionField : dimensionFilters.keySet()){
-            String[] splitField = dimensionField.split("\\.");
-            if (splitField.length > 1) {
-                unwindFields.add(splitField[0]);
-            }
-        }
-        for (String field : unwindFields){
-            aggregationOperations.add(unwind(field));
-        }
+        List<AggregationOperation> aggregationOperations = addUnwindSteps(new ArrayList<>(), fields);
 
         Map<String, Object> filters = new HashMap<>();
         if (dimensionFilters != null) {
@@ -73,9 +60,11 @@ public class RawDataRepository {
             aggregationOperations.add(match(this.getDimensionCriteria(filters)));
         }
 
+        ProjectionOperation xProjectionOperation = xAxisDimension.getType().equals(DimensionType.TIME) ? project("_id").and(xAxis).dateAsFormattedString("%Y-%m").as("x") :
+            project("_id").and(xAxis).as("x");
 
         if (compareBy == null) {
-            aggregationOperations.add(project("_id").and(xAxis).as("x"));
+            aggregationOperations.add(xProjectionOperation);
             aggregationOperations.add(group("_id", "x"));
             aggregationOperations.add(group("_id.x").count().as("y"));
             aggregationOperations.add(project("y").and("x").previousOperation());
@@ -86,7 +75,7 @@ public class RawDataRepository {
             return Arrays.asList(series);
         }
 
-        aggregationOperations.add(project("_id").and(xAxis).as("x").and(compareBy).as("compareBy"));
+        aggregationOperations.add(xProjectionOperation.and(compareBy).as("compareBy"));
         aggregationOperations.add(group("_id", "x", "compareBy"));
         aggregationOperations.add(group("_id.x", "_id.compareBy").count().as("y"));
 
@@ -98,6 +87,7 @@ public class RawDataRepository {
         log.debug("Mongo agg query to get multiple series from raw dataset {}: {} ", dataSet.getId(), agg);
         return mongoTemplate.aggregate(agg, dataSet.getId(), Series.class).getMappedResults();
     }
+
 
     private Criteria getDimensionCriteria(Map<String, Object> dimensionFilters) {
         /*Map<String, List<Map.Entry<String, Object>>> filtersByParent = dimensionFilters.entrySet().stream()
@@ -141,5 +131,22 @@ public class RawDataRepository {
         }).toArray(Criteria[]::new);*/
 
         return new Criteria().andOperator(dimensionCriteria);
+    }
+
+    private List<AggregationOperation> addUnwindSteps(List<AggregationOperation> aggregationOperations, List<String> fields) {
+        Set<String> unwindFields = new HashSet<>();
+        for (String field : fields) {
+            if (field == null)
+                continue;
+            String[] splitField = field.split("\\.");
+            if (splitField.length > 1) {
+                unwindFields.add(splitField[0]);
+            }
+        }
+        for (String field : unwindFields) {
+            aggregationOperations.add(unwind(field));
+        }
+        return aggregationOperations;
+
     }
 }
