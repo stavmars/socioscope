@@ -19,6 +19,7 @@ else
     node ./migrate/import.js $1 all
     node ./migrate/qb_data_migration.js
     mongoimport --db socioscope --collection deputies --type json --file migrate/deputies.json --jsonArray
+    mongoimport --db socioscope --collection adolescents --type json --file migrate/adolescents.json --jsonArray
     echo "Finished deployment"
 fi
 
