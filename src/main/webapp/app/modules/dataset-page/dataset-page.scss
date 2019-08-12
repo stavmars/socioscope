@@ -16,6 +16,10 @@
   @include mobile {
     padding-top: 19%;
   }
+  @include tablet {
+    margin: 0px 40px;
+    padding-top: 150px;
+  }
   @include computer {
     margin: 0px 40px;
     padding-top: 80px;
@@ -25,6 +29,9 @@
 .dataset-page-tab-menu {
   @include mobile {
     margin-top: -37.2%;
+  }
+  @include tablet {
+    margin-top: -15%;
   }
   @include computer {
     margin-top: 0;
@@ -38,12 +45,19 @@
   @include mobile {
     height: 217px;
   }
+  @include tablet {
+    height: 350px;
+  }
   @include computer {
     height: 600px;
   }
   &.minimized {
     @include mobile {
       height: 89px;
+    }
+    @include tablet {
+      margin-top: -150px;
+      height: 100px;
     }
     @include computer {
       height: 120px;
@@ -66,6 +80,10 @@
     margin: 0;
     padding: 10% 0 5% 0;
   }
+  @include tablet {
+    margin: 0;
+    padding-top: 20%;
+  }
   @include computer {
     padding: 10% 0 0 0;
   }
@@ -73,6 +91,10 @@
     @include mobile {
       height: 39px;
       width: 41px;
+    }
+    @include tablet {
+      height: 60px;
+      width: 61px;
     }
     @include computer {
       height: 96px;
@@ -82,9 +104,20 @@
   h1 {
     text-align: center;
     font-family: BPnoScriptBold;
-    color: $color-scheme-1-bg;
+    &.color-scheme-1 {
+      color: $color-scheme-1-bg;
+    }
+    &.color-scheme-2 {
+      color: $color-scheme-2-bg;
+    }
+    &.color-scheme-3 {
+      color: $color-scheme-3-bg;
+    }
     @include mobile {
       font-size: 27px;
+    }
+    @include tablet {
+      font-size: 50px;
     }
     @include computer {
       font-size: 100px;
@@ -106,6 +139,10 @@
             width: 27px;
             height: 26px;
           }
+          @include tablet {
+            width: 41px;
+            height: 40px;
+          }
           @include computer {
             height: 51px;
             width: 52px;
@@ -117,6 +154,9 @@
         @include mobile {
           font-size: 15px;
           margin-top: -110px;
+        }
+        @include tablet {
+          font-size: 20px;
         }
         @include computer {
           font-size: 30px;
@@ -174,6 +214,10 @@
       margin: 0;
       padding: 31px 0 31px 0;
     }
+    @include tablet {
+      float: right;
+      padding-top: 20%;
+    }
     @include computer {
       float: right;
       padding-top: 20%;
@@ -204,6 +248,12 @@
       font-size: 15px;
       line-height: 20px;
       margin: 0 5% 10% 5%;
+    }
+    @include tablet {
+      font-size: 20px;
+      line-height: 25px;
+      margin: 0;
+      margin: 10% 5% 10% 5%;
     }
     @include computer {
       font-size: 20px;
@@ -249,6 +299,15 @@
 }
 
 .vis-options-menu {
+  @include mobile {
+    padding: 0 9px 0 9px;
+  }
+  @include tablet {
+    padding: 10px 40px 0 40px;
+  }
+  @include computer {
+    padding: 0;
+  }
 }
 
 // .vis-container {
@@ -261,16 +320,36 @@
 // }
 
 .vis-options-menu-title {
-  font-size: 30px;
-  text-align: left;
-  font-family: BPnoScriptBold;
-  color: #1e1e1e;
-  margin-bottom: 35px;
-  line-height: 30px;
-  img {
-    padding: 5px 0;
-    margin-left: 0;
-    float: right;
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: inherit;
+    font-size: 30px;
+    text-align: left;
+    font-family: BPnoScriptBold;
+    color: #1e1e1e;
+    margin-bottom: 35px;
+    line-height: 30px;
+    img {
+      padding: 5px 0;
+      margin-left: 0;
+      float: right;
+    }
+  }
+  @include computer {
+    display: inherit;
+    font-size: 30px;
+    text-align: left;
+    font-family: BPnoScriptBold;
+    color: #1e1e1e;
+    margin-bottom: 35px;
+    line-height: 30px;
+    img {
+      padding: 5px 0;
+      margin-left: 0;
+      float: right;
+    }
   }
 }
 
@@ -302,6 +381,19 @@
   }
   .menu.item {
     font-size: 16px;
+  }
+}
+
+.dropdown-description {
+  @include mobile {
+    margin-left: 20px;
+    margin-top: -15px;
+  }
+  @include tablet {
+    margin: auto;
+  }
+  @include computer {
+    margin: auto;
   }
 }
 
@@ -441,6 +533,7 @@
     left: 91% !important;
   }
 }
+
 > .share-dropdown {
   &.ui.active.dropdown .menu {
     border-style: solid;

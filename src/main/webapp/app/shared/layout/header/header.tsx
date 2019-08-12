@@ -80,7 +80,7 @@ export class Header extends React.Component<IHeaderProps, {}> {
               <Menu.Item as={NavLink} to="/" exact isActive={this.isMenuItemActive}>
                 <Translate contentKey="global.menu.home">Home</Translate>
               </Menu.Item>
-              <Menu.Item onClick={this.props.toggleTopicsMenu} style={{ paddingLeft: '60px' }} active={this.props.isTopicsMenuVisible}>
+              <Menu.Item onClick={this.props.toggleTopicsMenu} active={this.props.isTopicsMenuVisible}>
                 <Translate contentKey="global.menu.topics">Topics</Translate>
               </Menu.Item>
               <Menu.Item as={NavLink} to="/about" exact isActive={this.isMenuItemActive}>
@@ -89,10 +89,10 @@ export class Header extends React.Component<IHeaderProps, {}> {
               {isAuthenticated && <EntitiesMenu />}
               {isAuthenticated && isAdmin && <AdminMenu showSwagger={isSwaggerEnabled} />}
               {isAuthenticated && <AccountMenu />}
-              <Menu.Item style={{ paddingLeft: '60px' }}>
+              <Menu.Item>
                 <Image src={`/content/images/Assets/Search-${color}.svg`} alt="search button" style={{ width: '32.5px', height: 'auto' }} />
               </Menu.Item>
-              <Menu.Item onClick={this.handleLocaleChange} style={{ paddingLeft: '60px' }}>
+              <Menu.Item onClick={this.handleLocaleChange}>
                 <Image src={localeIcon} alt="language switcher" style={{ width: '40px', height: 'auto' }} />
               </Menu.Item>
             </Menu>

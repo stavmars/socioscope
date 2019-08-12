@@ -16,22 +16,22 @@ import ErrorBoundary from 'app/shared/error/error-boundary';
 import { AUTHORITIES } from 'app/config/constants';
 import AppRoutes from 'app/routes';
 import LoadingBar from 'react-redux-loading-bar';
-import { Storage, Translate, translate } from 'react-jhipster';
-import { Dimmer, Loader, Sidebar, Responsive, Menu, Icon, Image } from 'semantic-ui-react';
+import { Storage, Translate } from 'react-jhipster';
+import { Dimmer, Loader, Menu, Responsive, Sidebar } from 'semantic-ui-react';
 import {
   hideHeader,
-  hideTopicsMenu,
   hideMobileMenu,
-  toggleMobileMenu,
   hideMobileVisMenu,
+  hideTopicsMenu,
+  toggleMobileMenu,
   toggleMobileVisMenu
 } from 'app/shared/reducers/header';
 
-        import Header from 'app/shared/layout/header/header';
+import Header from 'app/shared/layout/header/header';
 import { getEntities } from 'app/entities/data-set/data-set.reducer';
-import { TopicsMegaMenu } from 'app/shared/layout/header/topics-mega-menu';
-import { MobileMenu } from './modules/mobile/mobile-menu';
-import { MobileVisMenu } from './modules/mobile/mobile-vis-menu';
+import TopicsMegaMenu from 'app/shared/layout/header/topics-mega-menu';
+import MobileMenu from './modules/mobile/mobile-menu';
+import MobileVisMenu from './modules/mobile/mobile-vis-menu';
 
 export interface IAppProps extends StateProps, DispatchProps {}
 
@@ -90,7 +90,7 @@ export class App extends React.Component<IAppProps> {
                   visible={this.props.isMobileMenuVisible}
                   style={{ width: '100%' }}
                 >
-                  <MobileMenu toggleMobileMenu={this.props.toggleMobileMenu} />
+                  <MobileMenu />
                 </Sidebar>
                 <Sidebar
                   as={Menu}
@@ -100,7 +100,7 @@ export class App extends React.Component<IAppProps> {
                   visible={this.props.isMobieleVisMenuVisible}
                   style={{ width: '100%' }}
                 >
-                  <MobileVisMenu toggleMobileVisMenu={this.props.toggleMobileVisMenu} />
+                  <Route path="/dataset/:id/data" render={props => <MobileVisMenu {...props} />} />
                 </Sidebar>
               </Responsive>
               <Responsive minWidth={Responsive.onlyTablet.minWidth}>

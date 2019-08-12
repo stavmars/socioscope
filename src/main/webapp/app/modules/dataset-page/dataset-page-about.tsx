@@ -20,8 +20,13 @@ export class DatasetPageAbout extends React.Component<IDatasetPageAboutProp> {
         {translateEntityField(dataset.comment)}
         <br />
         <br />
-        <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.sources.title')}:</span>
-        {translateEntityField(dataset.sources)}
+        {dataset.sources && (
+          <div>
+            <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.sources.title')}:</span>
+            &nbsp;
+            {translateEntityField(dataset.sources)}
+          </div>
+        )}
       </div>
     );
 

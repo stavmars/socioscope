@@ -8,6 +8,7 @@ import { ISeriesOptions } from 'app/shared/model/series-options.model';
 
 export interface IVisMobileLowerToolbarProp {
   dataset: IDataSet;
+  seriesOptions: ISeriesOptions;
 
   copyCurrentURL(): void;
   togglePercentage(): void;
@@ -42,7 +43,7 @@ export class VisMobileLowerToolbar extends React.Component<IVisMobileLowerToolba
   };
 
   render() {
-    const { dataset } = this.props;
+    const { dataset, seriesOptions } = this.props;
     const { colorScheme } = dataset;
 
     return (
@@ -54,8 +55,8 @@ export class VisMobileLowerToolbar extends React.Component<IVisMobileLowerToolba
               className={colorScheme}
               toggle
               style={{ margin: '0 6px' }}
-              // onChange={this.props.togglePercentage}
-              // checked={_.find(dataset.measures as IMeasure[], { id: seriesOptions.measure }).type === 'percentage'}
+              onChange={this.props.togglePercentage}
+              checked={_.find(dataset.measures as IMeasure[], { id: seriesOptions.measure }).type === 'percentage'}
             />
             <Image src="/content/images/Assets/Percentage.svg" />
           </Menu.Item>

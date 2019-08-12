@@ -1,18 +1,72 @@
 import React from 'react';
 import { translate, Translate } from 'react-jhipster';
-import { Image, List, Icon, Header, Menu, Segment, Container, Button } from 'semantic-ui-react';
-import { NavLink as Link, NavLink } from 'react-router-dom';
+import { IRootState } from 'app/shared/reducers';
+import {
+  removeFilter,
+  setFilterValue,
+  addCode,
+  removeCode,
+  removeCompare,
+  toggleCompareValue,
+  updateVisOptions
+} from 'app/modules/dataset-page/dataset-page-reducer';
+import { List } from 'semantic-ui-react';
 import { toggleMobileVisMenu } from 'app/shared/reducers/header';
 import { connect } from 'react-redux';
+import { RouteComponentProps } from 'react-router-dom';
+import VisSeriesOptionMenu from '../dataset-page/vis-series-option-menu';
+import { accentColors, backgroundColors } from 'app/config/constants';
 
-export class MobileVisMenu extends React.Component<DispatchProps> {
+export interface IMobileVisMenuProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
+
+export class MobileVisMenu extends React.Component<IMobileVisMenuProps> {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
+    const { datasetsById, seriesOptions, dimensionCodes, fetchedCodeLists, visType } = this.props;
+    const dataset = datasetsById[this.props.match.params.id];
+    if (!seriesOptions || !fetchedCodeLists) {
+      return null;
+    }
+
     return (
       <div className="mobile-vis-menu">
-        <List relaxed="very">
+        <List>
           <List.Item>
-            <List.Header>Διαμορφώστε το γράφημα</List.Header>
-            <List.Icon onClick={this.props.toggleMobileVisMenu} name="cancel" size="big" style={{ marginTop: '-8%' }} />
+            <List.Header
+              style={{
+                fontSize: '20px',
+                fontFamily: 'BPnoScriptBold',
+                paddingTop: '15px',
+                paddingLeft: '13px',
+                height: '52px',
+                backgroundColor: `${backgroundColors[dataset.colorScheme]}`,
+                borderBottom: `3px solid ${accentColors[dataset.colorScheme]}`
+              }}
+            >
+              {translate('socioscopeApp.dataSet.visualization.configure.menuTitle')}
+              <span className={`close ${dataset.colorScheme}`} onClick={this.props.toggleMobileVisMenu}>
+                Κλείσιμο
+              </span>
+            </List.Header>
+          </List.Item>
+          <List.Item>
+            <VisSeriesOptionMenu
+              seriesOptions={seriesOptions}
+              visType={visType}
+              fetchedCodeLists={fetchedCodeLists}
+              dimensionCodes={dimensionCodes}
+              dataset={dataset}
+              setFilterValue={this.props.setFilterValue}
+              updateVisOptions={this.props.updateVisOptions}
+              toggleCompareValue={this.props.toggleCompareValue}
+              removeFilter={this.props.removeFilter}
+              addCode={this.props.addCode}
+              removeCode={this.props.removeCode}
+              removeCompare={this.props.removeCompare}
+            />
           </List.Item>
         </List>
       </div>
@@ -20,11 +74,29 @@ export class MobileVisMenu extends React.Component<DispatchProps> {
   }
 }
 
-const mapDispatchToProps = { toggleMobileVisMenu };
+const mapStateToProps = (storeState: IRootState) => ({
+  datasetsById: storeState.dataSet.entitiesById,
+  dimensionCodes: storeState.datasetPage.dimensionCodes,
+  fetchedCodeLists: storeState.datasetPage.fetchedCodeLists,
+  seriesOptions: storeState.datasetPage.seriesOptions,
+  visType: storeState.datasetPage.visType
+});
 
+const mapDispatchToProps = {
+  toggleMobileVisMenu,
+  updateVisOptions,
+  setFilterValue,
+  toggleCompareValue,
+  removeFilter,
+  addCode,
+  removeCode,
+  removeCompare
+};
+
+type StateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(MobileVisMenu);
