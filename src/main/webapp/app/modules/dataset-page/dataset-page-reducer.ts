@@ -150,7 +150,7 @@ export const getDimensionCodeLists = (dataSet: IDataSet) => ({
         ...codesRequested,
         [dimension.id]: {
           codes: unflattenDimensionCodes(res.data[dimension.id]),
-          codeByNotation: _.keyBy(res.data[dimension.id], 'notation')
+          codesByNotation: _.keyBy(res.data[dimension.id], 'notation')
         }
       };
     });
