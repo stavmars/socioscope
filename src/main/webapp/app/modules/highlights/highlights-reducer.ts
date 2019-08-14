@@ -73,14 +73,6 @@ export const getDimensionCodeList = (dimension: IDimension) => (dispatch, getSta
   }
 };
 
-export const getDimensionCodeLists = (dataset: IDataSet) => dispatch => {
-  const promise = Promise.all(dataset.dimensions.map(dimension => dispatch(getDimensionCodeList(dimension))));
-  return dispatch({
-    type: ACTION_TYPES.FETCH_DIMENSION_CODELISTS,
-    payload: promise
-  });
-};
-
 export const loadHighlight = (dataset: IDataSet, highlight: IHighlight) => (dispatch, getState) => {
   const requestUrl = `${datasetApiUrl}/${dataset.id}/series`;
   const { highlightSeries } = getState().highlights;
