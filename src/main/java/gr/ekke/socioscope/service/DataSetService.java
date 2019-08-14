@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -232,7 +233,7 @@ public class DataSetService {
                     // if the dataset contains raw, non-aggregated data, we aggregate it from the corresponding mongo collection
 
                     if (xAxisDimension.getType().equals(DimensionType.COMPOSITE)) {
-                        return this.getCompositeDimensionSeries(dataSet, xAxisDimension, seriesOptions);
+                        return this.getCompositeDimensionSeries(dataSet, xAxisDimension, measure, seriesOptions);
                     }
 
                     List<Series> seriesList = rawDataRepository.getSeries(dataSet, seriesOptions);
@@ -264,9 +265,10 @@ public class DataSetService {
             });
     }
 
-    public List<Series> getCompositeDimensionSeries(DataSet dataset, Dimension xAxisDimension, SeriesOptions seriesOptions) {
+    public List<Series> getCompositeDimensionSeries(DataSet dataset, Dimension xAxisDimension, Measure measure, SeriesOptions seriesOptions) {
         List<String> composedOf = xAxisDimension.getComposedOf();
         Map<String, Series> seriesMap = new HashMap<>();
+        DecimalFormat df = new DecimalFormat("#.0");
 
         composedOf.stream().forEach(dim -> {
             SeriesOptions compSeriesOptions = new SeriesOptions();
@@ -274,6 +276,11 @@ public class DataSetService {
             compSeriesOptions.setxAxis(dim);
             compSeriesOptions.setDimensionFilters(seriesOptions.getDimensionFilters());
             Series series = rawDataRepository.getSeries(dataset, compSeriesOptions).get(0);
+
+            boolean computePercentages = measure.getType().equals(MeasureType.PERCENTAGE);
+            Double total = computePercentages ? series.getData().stream().mapToDouble(SeriesPoint::getY).sum() : 1;
+
+
             series.getData().stream().forEach(seriesPoint -> {
                 Series newSeries = seriesMap.get(seriesPoint.getX());
                 if (newSeries == null) {
@@ -282,8 +289,9 @@ public class DataSetService {
                     newSeries.setData(new ArrayList<>());
                     seriesMap.put(seriesPoint.getX(), newSeries);
                 }
-                newSeries.getData().add(new SeriesPoint(dim, seriesPoint.getY()));
+                newSeries.getData().add(new SeriesPoint(dim, computePercentages ? Double.parseDouble(df.format(seriesPoint.getY() * 100 / total)) : seriesPoint.getY()));
             });
+
         });
         return new ArrayList<Series>(seriesMap.values());
     }
