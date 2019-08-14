@@ -7,7 +7,6 @@ import { IDimensionCode } from 'app/shared/model/dimension-code.model';
 import { IDimension } from 'app/shared/model/dimension.model';
 import _ from 'lodash';
 import { unflattenDimensionCodes } from 'app/shared/util/entity-utils';
-import dataSet from 'app/entities/data-set/data-set';
 
 export interface IVisOptions {
   visType: string;
