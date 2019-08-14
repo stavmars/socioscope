@@ -31,6 +31,8 @@ public class DataSetService {
 
     private final DimensionRepository dimensionRepository;
 
+    private final DimensionCodeRepository dimensionCodeRepository;
+
     private final MeasureRepository measureRepository;
 
     private final ObservationRepository observationRepository;
@@ -42,11 +44,12 @@ public class DataSetService {
     private final UserService userService;
 
     public DataSetService(DataSetRepository dataSetRepository, DataSetSearchRepository dataSetSearchRepository, DimensionRepository dimensionRepository,
-                          MeasureRepository measureRepository, ObservationRepository observationRepository,
+                          DimensionCodeRepository dimensionCodeRepository, MeasureRepository measureRepository, ObservationRepository observationRepository,
                           ObservationMapper observationMapper, RawDataRepository rawDataRepository, UserService userService) {
         this.dataSetRepository = dataSetRepository;
         this.dataSetSearchRepository = dataSetSearchRepository;
         this.dimensionRepository = dimensionRepository;
+        this.dimensionCodeRepository = dimensionCodeRepository;
         this.measureRepository = measureRepository;
         this.observationRepository = observationRepository;
         this.observationMapper = observationMapper;
@@ -261,7 +264,6 @@ public class DataSetService {
             });
     }
 
-
     public List<Series> getCompositeDimensionSeries(DataSet dataset, Dimension xAxisDimension, SeriesOptions seriesOptions) {
         List<String> composedOf = xAxisDimension.getComposedOf();
         Map<String, Series> seriesMap = new HashMap<>();
@@ -284,5 +286,23 @@ public class DataSetService {
             });
         });
         return new ArrayList<Series>(seriesMap.values());
+    }
+
+    /**
+     * Get codelists data from a dataset.
+     *
+     * @param datasetId
+     * @return the requested codelists
+     */
+    public Optional<Map<String, List<DimensionCode>>> getCodelists(String datasetId) {
+        log.debug("Request to get codelists for dataset {}", datasetId);
+        return dataSetRepository.findById(datasetId)
+            .map(dataSet -> {
+                Map<String, List<DimensionCode>> codelistMap = new HashMap<String, List<DimensionCode>>();
+                dataSet.getDimensions().forEach(dimension -> {
+                    codelistMap.put(dimension.getId(), dimensionCodeRepository.findAllByDimensionId(dimension.getId()));
+                });
+                return codelistMap;
+            });
     }
 }

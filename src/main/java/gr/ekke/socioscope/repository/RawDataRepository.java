@@ -16,7 +16,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-import static java.util.stream.Collectors.groupingBy;
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
 
 /**
