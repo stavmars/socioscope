@@ -1668,22 +1668,17 @@
     ],
     "highlights": [
       {
-        "id": "comply",
-        "description": {
-          "el": "<span>Σχεδόν <span class=\"text-accent\">έξι στους δέκα μαθητές (59,1%)</span> συμφωνούν ότι <span class=\"text-accent\">«πρέπει να συμμορφώνονται με τις υποδείξεις των καθηγητών τους, ακόμα και όταν διαφωνούν»</span>. Τα κορίτσια και οι μικρότερες ηλικίες τείνουν να συμμορφώνονται περισσότερο. Ενώ, <span class=\"text-accent\">τα υψηλότερα ποσοστά διαφωνίας (54,6%)</span> προέρχονται από <span class=\"text-accent\">μαθητές με γονείς υψηλής κοινωνικής θέσης</span>.</span>",
-          "en": "<span>Almost <span class=\"text-accent\">six out of ten students (59.1%)</span> agree that they <span class=\"text-accent\">\"must comply with the instructions given by their teachers, even when they disagree\"</span>. Girls and younger students tend to comply more, while the <span class=\"text-accent\">highest disagreement rates (54.6%)</span> come from <span class=\"text-accent\">students with high family social status</span>.</span>"
-        },
-        "visType": "chart",
-        "seriesOptions": {}
-      },
-      {
         "id": "socialTopics",
         "description": {
           "el": "<span><span class=\"text-accent\">Περίπου 1 στους 3 μαθητές</span> έχει συζητήσει για το δημοψήφισμα και τις εκλογές του 2015. <span class=\"text-accent\">Οι 9 στους 10</span> έχουν συζητήσει για τους πρόσφυγες που έχουν έρθει στην Ελλάδα, ενώ <span class=\"text-accent\">πάνω από 8 στους 10</span> έχουν συζητήσει για το ότι πολλοί νέοι δεν βρίσκουν δουλειά στην Ελλάδα και φεύγουν στον εξωτερικό.</span>",
           "en": "<span><span class=\"text-accent\">About one out of three students</span> had a conversion on the referendum and the 2015 national elections. <span class=\"text-accent\">Nine out of ten</span> have discussed about the refugees who came to Greece, and <span class=\"text-accent\">over eight out of ten</span> have discussed that many young people due to the high rates of unemployment have left the country.</span>"
         },
         "visType": "chart",
-        "seriesOptions": {}
+        "seriesOptions": {
+          "dimensionFilters": {},
+          "measure": "adolescents_perc",
+          "xAxis": "q16"
+        }
       },
       {
         "id": "proud",
@@ -1692,7 +1687,11 @@
           "en": "<span>The <span class=\"text-accent\">majority</span> of students <span class=\"text-accent\">feel proud \"for the history of our country\" (81.6%)</span> and about <span class=\"text-accent\">half of them \"for successes in Art and Literature\" (56.2%)</span>. <span class=\"text-accent\">\"The achievements of our economy\" make students less proud</span>.</span>"
         },
         "visType": "chart",
-        "seriesOptions": {}
+        "seriesOptions": {
+          "xAxis": "q35",
+          "measure": "adolescents_perc",
+          "dimensionFilters": {}
+        }
       },
       {
         "id": "trueGreek",
@@ -1701,7 +1700,11 @@
           "en": "<span><span class=\"text-accent\">For most students a \"True Greek\"</span> is someone who <span class=\"text-accent\">\"wishes to be Greek\" (60,9%)</span>, and <span class=\"text-accent\">\"respects the institutions of the country\" (54,5%)</span>. <span class=\"text-accent\">Older students</span> recognize more the <span class=\"text-accent\">value of self-determination</span> (\"Wishes to be a Greek\").</span>"
         },
         "visType": "chart",
-        "seriesOptions": {}
+        "seriesOptions": {
+          "xAxis": "q33",
+          "measure": "adolescents_perc",
+          "dimensionFilters": {}
+        }
       }
     ]
   }
