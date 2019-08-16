@@ -56,9 +56,11 @@ public class RawDataRepository {
             filters.put(compareBy, compareCodes);
         }
 
+        Criteria matchCriteria = Criteria.where(xAxis).ne(null);
         if (filters.size() > 0) {
-            aggregationOperations.add(match(this.getDimensionCriteria(filters)));
+            matchCriteria.andOperator(this.getDimensionCriteria(filters));
         }
+        aggregationOperations.add(match(matchCriteria));
 
         ProjectionOperation xProjectionOperation = xAxisDimension.getType().equals(DimensionType.TIME) ? project("_id").and(xAxis).dateAsFormattedString("%Y-%m").as("x") :
             project("_id").and(xAxis).as("x");
