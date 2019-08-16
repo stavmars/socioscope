@@ -12,6 +12,8 @@ import AppHeader from 'app/shared/layout/header/header';
 import CardCarousel from 'app/modules/home/card-carousel';
 import DatasetCard from 'app/modules/home/dataset-card';
 import { translateEntityField } from 'app/shared/util/entity-utils';
+import _ from 'lodash';
+import { IDataSet } from 'app/shared/model/data-set.model';
 
 export interface IHomeProp extends StateProps, DispatchProps {}
 
@@ -43,36 +45,17 @@ export class Home extends React.Component<IHomeProp> {
         </Visibility>
         <div id="discover" style={{ height: 120 }} />
         <div className="dataset-cards">
-          <CardCarousel>
-            {elections.highlights
-              ? elections.highlights.map(highlight => (
-                  <DatasetCard
-                    key={highlight.id}
-                    title={translateEntityField(elections.name)}
-                    dataset={elections}
-                    headerImg="/content/images/Assets/Elections.svg"
-                    highlight={highlight}
-                  >
-                    <div dangerouslySetInnerHTML={{ __html: translateEntityField(highlight.description) }} />
-                  </DatasetCard>
-                ))
-              : null}
-          </CardCarousel>
-          <CardCarousel>
-            {deputies.highlights
-              ? deputies.highlights.map(highlight => (
-                  <DatasetCard
-                    key={highlight.id}
-                    title={translateEntityField(deputies.name)}
-                    dataset={deputies}
-                    headerImg="/content/images/Assets/Politicians.svg"
-                    highlight={highlight}
-                  >
-                    <div dangerouslySetInnerHTML={{ __html: translateEntityField(highlight.description) }} />
-                  </DatasetCard>
-                ))
-              : null}
-          </CardCarousel>
+          {_.at(datasetsById, ['greek-election-results', 'deputies', 'adolescents', 'claims']).map((dataset: IDataSet) => (
+            <CardCarousel>
+              {dataset.highlights
+                ? dataset.highlights.map(highlight => (
+                    <DatasetCard key={highlight.id} dataset={dataset} highlight={highlight}>
+                      <div dangerouslySetInnerHTML={{ __html: translateEntityField(highlight.description) }} />
+                    </DatasetCard>
+                  ))
+                : null}
+            </CardCarousel>
+          ))}
         </div>
       </div>
     );
