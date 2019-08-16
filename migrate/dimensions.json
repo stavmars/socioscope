@@ -1233,5 +1233,85 @@
       "q39kNew"
     ],
     "disableFilter": true
+  },
+  {
+    "id": "PAPER",
+    "type": "coded",
+    "name": {
+      "en": "Newspaper",
+      "el": "Newspaper"
+    }
+  },
+  {
+    "id": "ADATE",
+    "type": "time",
+    "name": {
+      "en": "Newspaper Issue Date",
+      "el": "Newspaper Issue Date"
+    }
+  },
+  {
+    "id": "CDATE",
+    "type": "time",
+    "name": {
+      "en": "Claim Datee",
+      "el": "Claim Date"
+    }
+  },
+  {
+    "id": "CITY",
+    "type": "coded",
+    "name": {
+      "en": "City",
+      "el": "City"
+    }
+  },
+  {
+    "id": "ACTORS.ACTS",
+    "type": "coded",
+    "name": {
+      "en": "Αctor/Claimant Summary",
+      "el": "Αctor/Claimant Summary"
+    }
+  },
+  {
+    "id": "ADRS",
+    "type": "coded",
+    "name": {
+      "en": "Addressee Summary",
+      "el": "Addressee Summary"
+    }
+  },
+  {
+    "id": "ADRCOUN",
+    "type": "coded",
+    "name": {
+      "en": "Addressee Country",
+      "el": "Addressee Country"
+    }
+  },
+  {
+    "id": "FORMS",
+    "type": "coded",
+    "name": {
+      "en": "Form of action (Summary)",
+      "el": "Form of action (Summary)"
+    }
+  },
+  {
+    "id": "FORM",
+    "type": "coded",
+    "name": {
+      "en": "Form of action",
+      "el": "Form of action"
+    }
+  },
+  {
+    "id": "ISSUES.ISFIELD",
+    "type": "coded",
+    "name": {
+      "en": "Issue field",
+      "el": "Issue field"
+    }
   }
 ]
