@@ -69,5 +69,14 @@
     },
     "type": "count",
     "unit": "Claims"
+  },
+  {
+    "id": "claims_perc",
+    "name": {
+      "el": "%",
+      "en": "%"
+    },
+    "type": "percentage",
+    "unit": "PC"
   }
 ]
