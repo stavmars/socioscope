@@ -112,7 +112,7 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
             ))}
           </Accordion>
         </Dropdown>
-        {seriesOptions.compareBy && (
+        {/*{seriesOptions.compareBy && (
           <div className="remove-filters">
             <span className="remove-filter-dim-label" style={{ paddingBottom: '15px' }}>
               {translateEntityField(compareDimension.name)}{' '}
@@ -134,7 +134,7 @@ export class CompareByControl extends React.Component<ICompareByControlProp, ICo
                 )
             )}
           </div>
-        )}
+        )}*/}
       </div>
     );
   }
