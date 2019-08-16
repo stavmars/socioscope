@@ -14,8 +14,11 @@ import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeries } from 'app/shared/model/series.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { accentColors, chartColors } from 'app/config/constants';
+// tslint:disable:no-submodule-imports
+import HC_exporting from 'highcharts/modules/exporting';
 
 drilldown(Highcharts);
+HC_exporting(Highcharts);
 
 export interface IChartVisProp {
   dataset: IDataSet;
@@ -53,8 +56,30 @@ const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[]
 };
 
 export class ChartVis extends React.Component<IChartVisProp> {
+  innerChart = React.createRef<HighchartsReact>();
+
   constructor(props) {
     super(props);
+  }
+
+  printChart() {
+    this.innerChart.current.chart.print();
+  }
+
+  exportSVG() {
+    this.innerChart.current.chart.exportChart({ type: 'image/svg+xml' }, {});
+  }
+
+  exportPNG() {
+    this.innerChart.current.chart.exportChart({ type: 'image/png' }, {});
+  }
+
+  exportPDF() {
+    this.innerChart.current.chart.exportChart({ type: 'application/pdf' }, {});
+  }
+
+  exportJPEG() {
+    this.innerChart.current.chart.exportChart({ type: 'image/jpeg' }, {});
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -163,6 +188,9 @@ export class ChartVis extends React.Component<IChartVisProp> {
       },
       drilldown: {
         allowPointDrilldown: false
+      },
+      exporting: {
+        buttons: false
       }
     };
 
@@ -170,7 +198,14 @@ export class ChartVis extends React.Component<IChartVisProp> {
 
     return (
       <div>
-        <HighchartsReact className={colorScheme} key={uuid()} highcharts={Highcharts} options={options as any} immutable />
+        <HighchartsReact
+          className={colorScheme}
+          key={uuid()}
+          highcharts={Highcharts}
+          options={options as any}
+          immutable
+          ref={this.innerChart}
+        />
       </div>
     );
   }

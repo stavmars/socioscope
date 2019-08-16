@@ -15,7 +15,7 @@ import {
   updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
-import { Dimmer, Grid, Loader, Responsive } from 'semantic-ui-react';
+import { Dimmer, Grid, Loader, Ref, Responsive } from 'semantic-ui-react';
 import ChartVis from 'app/modules/visualization/chart-vis';
 import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
 import { IRootState } from 'app/shared/reducers';
@@ -32,6 +32,9 @@ import VisSeriesOptionMenu from 'app/modules/dataset-page/vis-series-option-menu
 export interface IDatasetPageVisProp extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
 export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
+  chartRef = React.createRef<ChartVis>();
+  mapRef = React.createRef<ChoroplethMapVis>();
+
   constructor(props) {
     super(props);
   }
@@ -72,6 +75,28 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
       // console.log('Oops, unable to copy');
     }
     document.body.removeChild(textArea);
+  };
+
+  exportChartOrMap = action => {
+    switch (action) {
+      case 'png':
+        this.props.visType === 'map' ? this.mapRef.current.exportPNG() : this.chartRef.current.exportPNG();
+        break;
+      case 'pdf':
+        this.props.visType === 'map' ? this.mapRef.current.exportPDF() : this.chartRef.current.exportPDF();
+        break;
+      case 'svg':
+        this.props.visType === 'map' ? this.mapRef.current.exportSVG() : this.chartRef.current.exportSVG();
+        break;
+      case 'jpeg':
+        this.props.visType === 'map' ? this.mapRef.current.exportJPEG() : this.chartRef.current.exportJPEG();
+        break;
+      case 'print':
+        this.props.visType === 'map' ? this.mapRef.current.printChart() : this.chartRef.current.printChart();
+        break;
+      default:
+        break;
+    }
   };
 
   render() {
@@ -116,6 +141,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                     visType={visType}
                     copyCurrentURL={this.copyCurrentURL}
                     togglePercentage={this.togglePercentage}
+                    exportChartOrMap={this.exportChartOrMap}
                   />
                 </Responsive>
                 <div className="vis-container">
@@ -127,6 +153,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
                       loadingSeries={loadingSeries}
                       showButtons
+                      ref={this.mapRef}
                     />
                   ) : (
                     <ChartVis
@@ -135,6 +162,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       seriesOptions={seriesOptions}
                       dimensionCodes={dimensionCodes}
                       loadingSeries={loadingSeries}
+                      ref={this.chartRef}
                     />
                   )}
                 </div>
@@ -144,6 +172,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                     seriesOptions={seriesOptions}
                     copyCurrentURL={this.copyCurrentURL}
                     togglePercentage={this.togglePercentage}
+                    exportChartOrMap={this.exportChartOrMap}
                   />
                 </Responsive>
               </Grid.Column>

@@ -12,6 +12,10 @@ import chroma from 'chroma-js';
 import { accentColors } from 'app/config/constants';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { Button, Header, Icon } from 'semantic-ui-react';
+// tslint:disable:no-submodule-imports
+import HC_exporting from 'highcharts/modules/exporting';
+
+HC_exporting(Highmaps);
 
 export interface IChoroplethVisProp {
   dataset: IDataSet;
@@ -29,6 +33,8 @@ export interface IChoroplethVisState {
 }
 
 export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoroplethVisState> {
+  innerChart = React.createRef<HighchartsReact>();
+
   constructor(props) {
     super(props);
     this.state = {
@@ -36,6 +42,26 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
       geoJsonLoading: true,
       geoMap: null
     };
+  }
+
+  printChart() {
+    this.innerChart.current.chart.print();
+  }
+
+  exportSVG() {
+    this.innerChart.current.chart.exportChart({ type: 'image/svg+xml' }, {});
+  }
+
+  exportPNG() {
+    this.innerChart.current.chart.exportChart({ type: 'image/png' }, {});
+  }
+
+  exportPDF() {
+    this.innerChart.current.chart.exportChart({ type: 'application/pdf' }, {});
+  }
+
+  exportJPEG() {
+    this.innerChart.current.chart.exportChart({ type: 'image/jpeg' }, {});
   }
 
   fetchGeoJson(geoMap: IGeoMap) {
@@ -151,13 +177,16 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
           keys: ['id'],
           data: levelSeriesPoints.map(seriesPoint => ({ key: seriesPoint.x, value: seriesPoint.y }))
         }
-      ]
+      ],
+      exporting: {
+        buttons: false
+      }
     };
 
     return (
       <div>
         {showButtons ? levelButtons : null}
-        <HighchartsReact highcharts={Highmaps} constructorType="mapChart" options={mapOptions as any} />
+        <HighchartsReact highcharts={Highmaps} constructorType="mapChart" options={mapOptions as any} ref={this.innerChart} />
       </div>
     );
   }
