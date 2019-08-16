@@ -71,7 +71,7 @@ public class DataSetService {
         }
         dataSet.setCreator(userService.getUserWithAuthorities().orElse(null));
         DataSet result = dataSetRepository.save(dataSet);
-        dataSetSearchRepository.save(result);
+        //dataSetSearchRepository.save(result);
         return result;
     }
 
@@ -84,7 +84,7 @@ public class DataSetService {
     public DataSet update(DataSet dataSet) {
         log.debug("Request to update DataSet : {}", dataSet);
         DataSet result = dataSetRepository.save(dataSet);
-        dataSetSearchRepository.save(result);
+        //dataSetSearchRepository.save(result);
         return result;
     }
 
