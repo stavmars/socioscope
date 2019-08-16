@@ -5,6 +5,7 @@ import { IDataSet } from 'app/shared/model/data-set.model';
 import { IMeasure } from 'app/shared/model/measure.model';
 import _ from 'lodash';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
+import { translate } from 'react-jhipster';
 // tslint:disable:jsx-no-lambda
 
 export interface IVisMobileLowerToolbarProp {
@@ -77,8 +78,11 @@ export class VisMobileLowerToolbar extends React.Component<IVisMobileLowerToolba
               onClose={this.toggleDownload}
             >
               <Dropdown.Menu>
-                <Dropdown.Item text="Εκτύπωση" onClick={() => this.props.exportChartOrMap('print')} />
-                <Dropdown.Item text="Λήψη ως :" disabled />
+                <Dropdown.Item
+                  text={translate('socioscopeApp.dataSet.visualization.print')}
+                  onClick={() => this.props.exportChartOrMap('print')}
+                />
+                <Dropdown.Header content={translate('socioscopeApp.dataSet.visualization.download')} />
                 <Dropdown.Item text="PNG" onClick={() => this.props.exportChartOrMap('png')} />
                 <Dropdown.Item text="JPEG" onClick={() => this.props.exportChartOrMap('jpeg')} />
                 <Dropdown.Item text="SVG" onClick={() => this.props.exportChartOrMap('svg')} />

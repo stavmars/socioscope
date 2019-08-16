@@ -35,7 +35,9 @@
           "xAxis": "Results for:",
           "filter": "related with:",
           "compare": "compare to:"
-        }
+        },
+        "print": "Print",
+        "download": "Download as:"
       }
     }
   }
