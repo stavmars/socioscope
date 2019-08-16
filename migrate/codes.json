@@ -22595,7 +22595,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "101",
     "name": {
       "el": "Whole countries/polities",
@@ -22603,7 +22603,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "102",
     "name": {
       "el": "Government",
@@ -22611,7 +22611,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "103",
     "name": {
       "el": "State executive agencies and supranational institutions",
@@ -22619,7 +22619,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "104",
     "name": {
       "el": "State owned enterprises",
@@ -22627,7 +22627,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "105",
     "name": {
       "el": "Municipal and regional authorities",
@@ -22635,7 +22635,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "106",
     "name": {
       "el": "Legislative/parliament",
@@ -22643,7 +22643,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "107",
     "name": {
       "el": "Political parties and organizations",
@@ -22651,7 +22651,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "108",
     "name": {
       "el": "Politicians",
@@ -22659,7 +22659,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "111",
     "name": {
       "el": "Police, military, and security forces",
@@ -22667,7 +22667,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "112",
     "name": {
       "el": "Judiciary, magistrates, and court clerks",
@@ -22675,7 +22675,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "200",
     "name": {
       "el": "Churches and religious organizations",
@@ -22683,7 +22683,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "211",
     "name": {
       "el": "Ethnic minorities",
@@ -22691,7 +22691,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "212",
     "name": {
       "el": "Migrant organizations and asylum seekers",
@@ -22699,7 +22699,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "301",
     "name": {
       "el": "Employer organizations",
@@ -22707,7 +22707,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "302",
     "name": {
       "el": "Enterprises",
@@ -22715,7 +22715,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "400",
     "name": {
       "el": "Tertiary trade unions",
@@ -22723,7 +22723,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "410",
     "name": {
       "el": "Higher education and research institutions",
@@ -22731,7 +22731,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "411",
     "name": {
       "el": "Tertiary education and research employees",
@@ -22739,7 +22739,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "412",
     "name": {
       "el": "Primary and secondary education employees",
@@ -22747,7 +22747,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "413",
     "name": {
       "el": "Students",
@@ -22755,7 +22755,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "414",
     "name": {
       "el": "Pupils and their parents",
@@ -22763,7 +22763,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "415",
     "name": {
       "el": "Primary and secondary education institutions",
@@ -22771,7 +22771,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "421",
     "name": {
       "el": "Health sector employees",
@@ -22779,7 +22779,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "422",
     "name": {
       "el": "Mass transport employees",
@@ -22787,7 +22787,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "423",
     "name": {
       "el": "Public utility employees",
@@ -22795,7 +22795,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "424",
     "name": {
       "el": "Employees in municipalities and regions",
@@ -22803,7 +22803,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "425",
     "name": {
       "el": "Other public sector employees",
@@ -22811,7 +22811,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "430",
     "name": {
       "el": "Media and journalists",
@@ -22819,7 +22819,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "431",
     "name": {
       "el": "Bank clerks",
@@ -22827,7 +22827,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "432",
     "name": {
       "el": "Other private sector employees",
@@ -22835,7 +22835,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "440",
     "name": {
       "el": "SMEs",
@@ -22843,7 +22843,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "441",
     "name": {
       "el": "Freelancers (excluding transport professions)",
@@ -22851,7 +22851,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "442",
     "name": {
       "el": "Freelancers working on transport",
@@ -22859,7 +22859,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "450",
     "name": {
       "el": "Farmers",
@@ -22867,7 +22867,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "460",
     "name": {
       "el": "Professional associations and groups",
@@ -22875,7 +22875,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "470",
     "name": {
       "el": "Pensioners and organizations and groups of the elderly",
@@ -22883,7 +22883,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "480",
     "name": {
       "el": "Unemployed",
@@ -22891,7 +22891,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "501",
     "name": {
       "el": "Consumer organizations and groups",
@@ -22899,7 +22899,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "502",
     "name": {
       "el": "Solidarity, human rights, and welfare organizations",
@@ -22907,7 +22907,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "503",
     "name": {
       "el": "Peace movement organizations and groups",
@@ -22915,7 +22915,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "504",
     "name": {
       "el": "Environmental organizations and groups",
@@ -22923,7 +22923,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "505",
     "name": {
       "el": "Womens' organizations and groups",
@@ -22931,7 +22931,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "506",
     "name": {
       "el": "LGBT organizations and groups",
@@ -22939,7 +22939,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "507",
     "name": {
       "el": "Other civil society organizations and groups",
@@ -22947,7 +22947,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "510",
     "name": {
       "el": "Citizens\u2019 initiative",
@@ -22955,7 +22955,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "521",
     "name": {
       "el": "Racist and extreme right organizations and groups",
@@ -22963,7 +22963,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "522",
     "name": {
       "el": "Anarchists and leftist organizations and groups",
@@ -22971,7 +22971,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "530",
     "name": {
       "el": "Terrorist groups and rebel forces",
@@ -22979,7 +22979,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "900",
     "name": {
       "el": "The general public",
@@ -22987,7 +22987,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "540",
     "name": {
       "el": "Prisoners",
@@ -22995,7 +22995,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "990",
     "name": {
       "el": "Other",
@@ -23003,7 +23003,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "998",
     "name": {
       "el": "Unspecified",
@@ -23011,7 +23011,7 @@
     }
   },
   {
-    "dimensionId": "ACTS",
+    "dimensionId": "ACTORS.ACTS",
     "notation": "999",
     "name": {
       "el": "Unknown",
