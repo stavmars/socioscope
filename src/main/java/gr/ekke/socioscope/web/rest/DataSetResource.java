@@ -2,6 +2,7 @@ package gr.ekke.socioscope.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import gr.ekke.socioscope.domain.DataSet;
+import gr.ekke.socioscope.domain.DimensionCode;
 import gr.ekke.socioscope.domain.Highlight;
 import gr.ekke.socioscope.domain.Observation;
 import gr.ekke.socioscope.service.dto.Series;
@@ -22,6 +23,7 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -238,5 +240,20 @@ public class DataSetResource {
     public ResponseEntity<List<Series>> getSeries(@PathVariable String dataSetId, @Valid @RequestBody SeriesOptions seriesOptions) throws URISyntaxException {
         log.debug("REST request to get series for dataset {} with options {}", dataSetId, seriesOptions);
         return ResponseUtil.wrapOrNotFound(dataSetService.getSeries(dataSetId, seriesOptions));
+    }
+
+    /**
+     * GET  /data-sets/:id/codelists: get codelists of all dimensions from dataSet with "id".
+     *
+     * @param dataSetId the id of the dataSet to retrieve the codelists.
+     * @return the ResponseEntity with status 201 (Created) and with body the requested codelists, or with status 400 (Bad Request)
+     * if the dataset does not exist
+     * @throws URISyntaxException if the Location URI syntax is incorrect
+     */
+    @GetMapping("/data-sets/{dataSetId}/codelists")
+    @Timed
+    public ResponseEntity<Map<String, List<DimensionCode>>>  getCodelists(@PathVariable String dataSetId) throws URISyntaxException {
+        log.debug("REST request to get Highlights from DataSet : {}", dataSetId);
+        return ResponseUtil.wrapOrNotFound(dataSetService.getCodelists(dataSetId));
     }
 }

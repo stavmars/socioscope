@@ -73,23 +73,23 @@ export const getDimensionCodeList = (dimension: IDimension) => (dispatch, getSta
   }
 };
 
-export const getDimensionCodeLists = (dataset: IDataSet) => dispatch => {
-  const promise = Promise.all(dataset.dimensions.map(dimension => dispatch(getDimensionCodeList(dimension))));
-  return dispatch({
-    type: ACTION_TYPES.FETCH_DIMENSION_CODELISTS,
-    payload: promise
-  });
-};
-
 export const loadHighlight = (dataset: IDataSet, highlight: IHighlight) => (dispatch, getState) => {
   const requestUrl = `${datasetApiUrl}/${dataset.id}/series`;
   const { highlightSeries } = getState().highlights;
   if (highlightSeries[highlight.id]) {
     return;
   }
-  const promise = Promise.all([dispatch(getDimensionCodeLists(dataset)), axios.post(requestUrl, highlight.seriesOptions)]).then(
-    responses => ({ series: responses[1].data })
-  );
+  const promise = Promise.all([
+    ...dataset.dimensions.map(dimension => {
+      if (
+        dimension.id === highlight.seriesOptions.xAxis ||
+        (highlight.seriesOptions.compareBy && dimension.id === highlight.seriesOptions.compareBy)
+      ) {
+        return dispatch(getDimensionCodeList(dimension));
+      }
+    }),
+    axios.post(requestUrl, highlight.seriesOptions)
+  ]).then(responses => ({ series: responses[responses.length - 1].data }));
   dispatch({
     type: ACTION_TYPES.LOAD_HIGHLIGHT,
     payload: promise,

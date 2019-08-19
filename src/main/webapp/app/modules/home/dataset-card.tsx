@@ -9,11 +9,10 @@ import { loadHighlight } from 'app/modules/highlights/highlights-reducer';
 import { urlEncodeVisOptions } from 'app/modules/dataset-page/dataset-page-vis';
 import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
 import ChartVis from 'app/modules/visualization/chart-vis';
+import { translateEntityField } from 'app/shared/util/entity-utils';
 
 export interface IDatasetCardProps extends StateProps, DispatchProps {
-  title: string;
   dataset: IDataSet;
-  headerImg: string;
   highlight: IHighlight;
 }
 
@@ -24,14 +23,14 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
   }
 
   render() {
-    const { title, dataset, headerImg, highlight, highlightSeries, dimensionCodes } = this.props;
+    const { dataset, highlight, highlightSeries, dimensionCodes } = this.props;
     const { colorScheme } = dataset;
     const { visType, seriesOptions } = highlight;
     return (
       <div className={`dataset-card ${colorScheme}`}>
         <div className="dataset-card-header">
-          {headerImg === '' ? null : <Image className="dataset-card-header-image" centered src={headerImg} />}
-          <h3>{title}</h3>
+          <Image className="dataset-card-header-image" centered src={`/content/images/Assets/${dataset.id}.svg`} />
+          <h3>{translateEntityField(dataset.name)}</h3>
         </div>
         <div className="dataset-card-content">
           <Grid centered doubling verticalAlign="middle" columns="2">

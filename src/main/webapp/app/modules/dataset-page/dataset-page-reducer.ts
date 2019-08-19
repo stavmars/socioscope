@@ -7,7 +7,6 @@ import { IDimensionCode } from 'app/shared/model/dimension-code.model';
 import { IDimension } from 'app/shared/model/dimension.model';
 import _ from 'lodash';
 import { unflattenDimensionCodes } from 'app/shared/util/entity-utils';
-import dataSet from 'app/entities/data-set/data-set';
 
 export interface IVisOptions {
   visType: string;
@@ -74,6 +73,7 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
     case SUCCESS(ACTION_TYPES.FETCH_DIMENSION_CODELISTS):
       return {
         ...state,
+        dimensionCodes: action.payload,
         fetchedCodeLists: true
       };
     case ACTION_TYPES.CHANGE_COMPARE_BY:
@@ -162,13 +162,22 @@ export const getDimensionCodelist = (dimension: IDimension) => ({
     .then(res => ({ dimensionId: dimension.id, codelist: res.data }))
 });
 
-export const getDimensionCodeLists = (dataset: IDataSet) => dispatch => {
-  const promises = Promise.all(dataset.dimensions.map(dimension => dispatch(getDimensionCodelist(dimension))));
-  return dispatch({
-    type: ACTION_TYPES.FETCH_DIMENSION_CODELISTS,
-    payload: promises
-  });
-};
+export const getDimensionCodeLists = (dataSet: IDataSet) => ({
+  type: ACTION_TYPES.FETCH_DIMENSION_CODELISTS,
+  payload: axios.get(`${datasetApiUrl}/${dataSet.id}/codelists`).then(res => {
+    let codesRequested = {};
+    dataSet.dimensions.forEach(dimension => {
+      codesRequested = {
+        ...codesRequested,
+        [dimension.id]: {
+          codes: unflattenDimensionCodes(res.data[dimension.id]),
+          codesByNotation: _.keyBy(res.data[dimension.id], 'notation')
+        }
+      };
+    });
+    return codesRequested;
+  })
+});
 
 export const getSeries = (id, seriesOptions: ISeriesOptions) => {
   const requestUrl = `${datasetApiUrl}/${id}/series`;

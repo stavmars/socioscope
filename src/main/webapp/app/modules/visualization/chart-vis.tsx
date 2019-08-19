@@ -16,6 +16,7 @@ import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { accentColors, chartColors } from 'app/config/constants';
 // tslint:disable:no-submodule-imports
 import HC_exporting from 'highcharts/modules/exporting';
+import moment from 'moment';
 
 drilldown(Highcharts);
 HC_exporting(Highcharts);
@@ -38,7 +39,38 @@ const prepareSeriesByParent = (codesByNotation, seriesList: ISeries[]) =>
     return acc;
   }, {});
 
-const prepareTimeSeriesData = (dataPoints: ISeriesPoint[]) => dataPoints.map(dataPoint => [new Date(dataPoint.x).getTime(), dataPoint.y]);
+const prepareTimeSeriesData = (dataPoints: ISeriesPoint[]) => {
+  let chartPoints = dataPoints.map(dataPoint => [new Date(dataPoint.x).getTime(), dataPoint.y]);
+  chartPoints = _.sortBy(chartPoints, 0);
+  const startDate = moment(chartPoints[0][0]);
+  const endDate = moment(chartPoints[chartPoints.length - 1][0]);
+
+  const resultPoints = [];
+
+  return chartPoints.reduce(
+    (newArray, currentPoint, index) => {
+      const nextPoint = chartPoints[index + 1];
+      if (nextPoint) {
+        const currentDate = moment(currentPoint[0]);
+        const monthsBetween = moment(nextPoint[0]).diff(currentDate, 'months');
+
+        const fillerPoints = Array.from({ length: monthsBetween - 1 }, (value, monthIndex) => {
+          return [
+            moment(currentDate)
+              .add(monthIndex + 1, 'months')
+              .valueOf(),
+            0
+          ];
+        });
+        newArray.push(currentPoint, ...fillerPoints);
+      } else {
+        newArray.push(currentPoint);
+      }
+      return newArray;
+    },
+    [] as number[][]
+  );
+};
 
 const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[], seriesByParent) => {
   const chartPoints = seriesPoints.map(seriesPoint => {
