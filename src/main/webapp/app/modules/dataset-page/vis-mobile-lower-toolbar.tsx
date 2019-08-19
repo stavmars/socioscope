@@ -115,7 +115,7 @@ export class VisMobileLowerToolbar extends React.Component<IVisMobileLowerToolba
                 />
                 <Dropdown.Item icon="twitter" text="Twitter" onClick={() => this.props.shareChartOrMap('twitter')} />
                 <Dropdown.Item icon="facebook f" text="Facebook" onClick={() => this.props.shareChartOrMap('facebook')} />
-                <Dropdown.Item icon="mail outline" text="Email" disabled />
+                <Dropdown.Item icon="mail outline" text="Email" onClick={() => this.props.shareChartOrMap('email')} />
               </Dropdown.Menu>
             </Dropdown>
           </Menu.Item>

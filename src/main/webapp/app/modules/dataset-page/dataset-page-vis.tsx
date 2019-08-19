@@ -102,18 +102,23 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   };
 
   shareChartOrMap = action => {
-    const link = encodeURIComponent(this.getCurrentURL());
+    const link = this.getCurrentURL();
+    const sharable = encodeURIComponent(link);
     const left = (screen.width - 570) / 2;
     const top = (screen.height - 570) / 2;
     const params = 'menubar=no,toolbar=no,status=no,width=570,height=570,top=' + top + ',left=' + left;
     let url;
     switch (action) {
       case 'facebook':
-        url = 'https://www.facebook.com/sharer.php?u=' + link;
+        url = 'https://www.facebook.com/sharer.php?u=' + sharable;
         window.open(url, 'NewWindow', params);
         break;
       case 'twitter':
-        url = 'https://twitter.com/intent/tweet?url=' + link;
+        url = 'https://twitter.com/intent/tweet?url=' + sharable;
+        window.open(url, 'NewWindow', params);
+        break;
+      case 'email':
+        url = 'mailto:?to=&body=' + link;
         window.open(url, 'NewWindow', params);
         break;
       default:
