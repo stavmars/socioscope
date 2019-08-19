@@ -7,6 +7,7 @@ import { IMeasure } from 'app/shared/model/measure.model';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { translate } from 'react-jhipster';
+import { IDimension } from 'app/shared/model/dimension.model';
 
 export interface IVisToolBarProp {
   dataset: IDataSet;
@@ -76,14 +77,16 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                   )}
                   {translate('socioscopeApp.dataSet.visualization.graph')}
                 </Menu.Item>
-                <Menu.Item as={NavLink} to="?type=map" active={visType === 'map'} style={{ marginRight: '50px' }}>
-                  {visType === 'map' ? (
-                    <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
-                  ) : (
-                    <Image src={`/content/images/Assets/Map.svg`} style={{ marginRight: '20px' }} />
-                  )}
-                  {translate('socioscopeApp.dataSet.visualization.map')}
-                </Menu.Item>
+                {_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area') && (
+                  <Menu.Item as={NavLink} to="?type=map" active={visType === 'map'} style={{ marginRight: '50px' }}>
+                    {visType === 'map' ? (
+                      <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
+                    ) : (
+                      <Image src={`/content/images/Assets/Map.svg`} style={{ marginRight: '20px' }} />
+                    )}
+                    {translate('socioscopeApp.dataSet.visualization.map')}
+                  </Menu.Item>
+                )}
                 {/*<Menu.Item as={NavLink} to="?type=list" active={visType === 'list'}>
                       {visType === 'list' ? (
                         <Image src={`/content/images/Assets/List-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
