@@ -15,6 +15,7 @@ export interface IVisMobileLowerToolbarProp {
   copyCurrentURL(): void;
   togglePercentage(): void;
   exportChartOrMap(action): void;
+  shareChartOrMap(action): void;
 }
 
 export interface IVisToolBarState {
@@ -112,8 +113,8 @@ export class VisMobileLowerToolbar extends React.Component<IVisMobileLowerToolba
                   trigger={<Dropdown.Item icon="linkify" text="Link" onClick={this.props.copyCurrentURL} />}
                   basic
                 />
-                <Dropdown.Item icon="twitter" text="Twitter" disabled />
-                <Dropdown.Item icon="facebook f" text="Facebook" disabled />
+                <Dropdown.Item icon="twitter" text="Twitter" onClick={() => this.props.shareChartOrMap('twitter')} />
+                <Dropdown.Item icon="facebook f" text="Facebook" onClick={() => this.props.shareChartOrMap('facebook')} />
                 <Dropdown.Item icon="mail outline" text="Email" disabled />
               </Dropdown.Menu>
             </Dropdown>

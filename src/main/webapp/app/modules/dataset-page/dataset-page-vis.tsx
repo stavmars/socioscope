@@ -59,12 +59,14 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
     this.props.updateVisOptions(dataset, { visType, seriesOptions: { ...seriesOptions, measure: measure.id } });
   };
 
-  copyCurrentURL = () => {
+  getCurrentURL = () => {
     const encodedVisOptions = urlEncodeVisOptions({ visType: this.props.visType, seriesOptions: this.props.seriesOptions });
-    const url =
-      window.location.protocol + '//' + window.location.host + '/#/dataset/' + this.props.dataset.id + '/data?' + encodedVisOptions;
+    return window.location.protocol + '//' + window.location.host + '/#/dataset/' + this.props.dataset.id + '/data?' + encodedVisOptions;
+  };
+
+  copyCurrentURL = () => {
     const textArea = document.createElement('textarea');
-    textArea.value = url;
+    textArea.value = this.getCurrentURL();
     document.body.appendChild(textArea);
     textArea.select();
     try {
@@ -96,6 +98,26 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
         break;
       default:
         break;
+    }
+  };
+
+  shareChartOrMap = action => {
+    const link = encodeURIComponent(this.getCurrentURL());
+    const left = (screen.width - 570) / 2;
+    const top = (screen.height - 570) / 2;
+    const params = 'menubar=no,toolbar=no,status=no,width=570,height=570,top=' + top + ',left=' + left;
+    let url;
+    switch (action) {
+      case 'facebook':
+        url = 'https://www.facebook.com/sharer.php?u=' + link;
+        window.open(url, 'NewWindow', params);
+        break;
+      case 'twitter':
+        url = 'https://twitter.com/intent/tweet?url=' + link;
+        window.open(url, 'NewWindow', params);
+        break;
+      default:
+        window.open(link, 'NewWindow', params);
     }
   };
 
@@ -142,6 +164,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                     copyCurrentURL={this.copyCurrentURL}
                     togglePercentage={this.togglePercentage}
                     exportChartOrMap={this.exportChartOrMap}
+                    shareChartOrMap={this.shareChartOrMap}
                   />
                 </Responsive>
                 <div className="vis-container">
@@ -173,6 +196,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                     copyCurrentURL={this.copyCurrentURL}
                     togglePercentage={this.togglePercentage}
                     exportChartOrMap={this.exportChartOrMap}
+                    shareChartOrMap={this.shareChartOrMap}
                   />
                 </Responsive>
               </Grid.Column>
