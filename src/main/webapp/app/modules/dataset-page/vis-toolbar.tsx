@@ -77,16 +77,20 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                   )}
                   {translate('socioscopeApp.dataSet.visualization.graph')}
                 </Menu.Item>
-                {_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area') && (
-                  <Menu.Item as={NavLink} to="?type=map" active={visType === 'map'} style={{ marginRight: '50px' }}>
-                    {visType === 'map' ? (
-                      <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
-                    ) : (
-                      <Image src={`/content/images/Assets/Map.svg`} style={{ marginRight: '20px' }} />
-                    )}
-                    {translate('socioscopeApp.dataSet.visualization.map')}
-                  </Menu.Item>
-                )}
+                <Menu.Item
+                  as={NavLink}
+                  to="?type=map"
+                  active={visType === 'map'}
+                  style={{ marginRight: '50px', a: { pointerEvents: 'none' } }}
+                  disabled={!_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area')}
+                >
+                  {visType === 'map' ? (
+                    <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
+                  ) : (
+                    <Image src={`/content/images/Assets/Map.svg`} style={{ marginRight: '20px' }} />
+                  )}
+                  {translate('socioscopeApp.dataSet.visualization.map')}
+                </Menu.Item>
                 {/*<Menu.Item as={NavLink} to="?type=list" active={visType === 'list'}>
                       {visType === 'list' ? (
                         <Image src={`/content/images/Assets/List-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
