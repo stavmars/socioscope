@@ -5,6 +5,8 @@ import { Button, Image, Menu } from 'semantic-ui-react';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { toggleMobileVisMenu } from 'app/shared/reducers/header';
 import { connect } from 'react-redux';
+import _ from 'lodash';
+import { IDimension } from 'app/shared/model/dimension.model';
 
 export interface IVisMobileUpperToolbarProp extends DispatchProps {
   dataset: IDataSet;
@@ -52,7 +54,12 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
               <Image src={`/content/images/Assets/Chart.svg`} />
             )}
           </Menu.Item>
-          <Menu.Item style={{ marginRight: '5%' }} as={NavLink} to="?type=map">
+          <Menu.Item
+            as={NavLink}
+            to="?type=map"
+            style={{ marginRight: '5%' }}
+            disabled={!_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area')}
+          >
             {visType === 'map' ? (
               <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} />
             ) : (

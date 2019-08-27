@@ -7,6 +7,7 @@ import { IMeasure } from 'app/shared/model/measure.model';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { translate } from 'react-jhipster';
+import { IDimension } from 'app/shared/model/dimension.model';
 
 export interface IVisToolBarProp {
   dataset: IDataSet;
@@ -76,7 +77,13 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                   )}
                   {translate('socioscopeApp.dataSet.visualization.graph')}
                 </Menu.Item>
-                <Menu.Item as={NavLink} to="?type=map" active={visType === 'map'} style={{ marginRight: '50px' }}>
+                <Menu.Item
+                  as={NavLink}
+                  to="?type=map"
+                  active={visType === 'map'}
+                  style={{ marginRight: '50px', a: { pointerEvents: 'none' } }}
+                  disabled={!_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area')}
+                >
                   {visType === 'map' ? (
                     <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
                   ) : (
