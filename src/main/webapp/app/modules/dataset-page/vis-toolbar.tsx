@@ -9,6 +9,8 @@ import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { translate } from 'react-jhipster';
 import { IDimension } from 'app/shared/model/dimension.model';
 
+// tslint:disable:jsx-no-lambda
+
 export interface IVisToolBarProp {
   dataset: IDataSet;
   seriesOptions: ISeriesOptions;
@@ -16,6 +18,8 @@ export interface IVisToolBarProp {
 
   copyCurrentURL(): void;
   togglePercentage(): void;
+  exportChartOrMap(action): void;
+  shareChartOrMap(action): void;
 }
 
 export interface IVisToolBarState {
@@ -118,12 +122,15 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                     onClose={this.toggleDownload}
                   >
                     <Dropdown.Menu>
-                      <Dropdown.Item text="Εκτύπωση" disabled />
-                      <Dropdown.Item text="Λήψη ως :" disabled />
-                      <Dropdown.Item text="PNG" disabled />
-                      <Dropdown.Item text="JPEG" disabled />
-                      <Dropdown.Item text="SVG" disabled />
-                      <Dropdown.Item text="PDF" disabled />
+                      <Dropdown.Item
+                        text={translate('socioscopeApp.dataSet.visualization.print')}
+                        onClick={() => this.props.exportChartOrMap('print')}
+                      />
+                      <Dropdown.Header content={translate('socioscopeApp.dataSet.visualization.download')} />
+                      <Dropdown.Item text="PNG" onClick={() => this.props.exportChartOrMap('png')} />
+                      <Dropdown.Item text="JPEG" onClick={() => this.props.exportChartOrMap('jpeg')} />
+                      <Dropdown.Item text="SVG" onClick={() => this.props.exportChartOrMap('svg')} />
+                      <Dropdown.Item text="PDF" onClick={() => this.props.exportChartOrMap('pdf')} />
                     </Dropdown.Menu>
                   </Dropdown>
                 </List.Item>
@@ -149,9 +156,9 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                         trigger={<Dropdown.Item icon="linkify" text="Link" onClick={this.props.copyCurrentURL} />}
                         basic
                       />
-                      <Dropdown.Item icon="twitter" text="Twitter" disabled />
-                      <Dropdown.Item icon="facebook f" text="Facebook" disabled />
-                      <Dropdown.Item icon="mail outline" text="Email" disabled />
+                      <Dropdown.Item icon="twitter" text="Twitter" onClick={() => this.props.shareChartOrMap('twitter')} />
+                      <Dropdown.Item icon="facebook f" text="Facebook" onClick={() => this.props.shareChartOrMap('facebook')} />
+                      <Dropdown.Item icon="mail outline" text="Email" onClick={() => this.props.shareChartOrMap('email')} />
                     </Dropdown.Menu>
                   </Dropdown>
                 </List.Item>

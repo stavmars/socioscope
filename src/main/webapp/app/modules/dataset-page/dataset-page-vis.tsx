@@ -15,7 +15,7 @@ import {
   updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
-import { Dimmer, Grid, Loader, Responsive } from 'semantic-ui-react';
+import { Dimmer, Grid, Loader, Ref, Responsive } from 'semantic-ui-react';
 import ChartVis from 'app/modules/visualization/chart-vis';
 import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
 import { IRootState } from 'app/shared/reducers';
@@ -32,6 +32,9 @@ import VisSeriesOptionMenu from 'app/modules/dataset-page/vis-series-option-menu
 export interface IDatasetPageVisProp extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
 export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
+  chartRef = React.createRef<ChartVis>();
+  mapRef = React.createRef<ChoroplethMapVis>();
+
   constructor(props) {
     super(props);
   }
@@ -56,12 +59,14 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
     this.props.updateVisOptions(dataset, { visType, seriesOptions: { ...seriesOptions, measure: measure.id } });
   };
 
-  copyCurrentURL = () => {
+  getCurrentURL = () => {
     const encodedVisOptions = urlEncodeVisOptions({ visType: this.props.visType, seriesOptions: this.props.seriesOptions });
-    const url =
-      window.location.protocol + '//' + window.location.host + '/#/dataset/' + this.props.dataset.id + '/data?' + encodedVisOptions;
+    return window.location.protocol + '//' + window.location.host + '/#/dataset/' + this.props.dataset.id + '/data?' + encodedVisOptions;
+  };
+
+  copyCurrentURL = () => {
     const textArea = document.createElement('textarea');
-    textArea.value = url;
+    textArea.value = this.getCurrentURL();
     document.body.appendChild(textArea);
     textArea.select();
     try {
@@ -72,6 +77,53 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
       // console.log('Oops, unable to copy');
     }
     document.body.removeChild(textArea);
+  };
+
+  exportChartOrMap = action => {
+    switch (action) {
+      case 'png':
+        this.props.visType === 'map' ? this.mapRef.current.exportPNG() : this.chartRef.current.exportPNG();
+        break;
+      case 'pdf':
+        this.props.visType === 'map' ? this.mapRef.current.exportPDF() : this.chartRef.current.exportPDF();
+        break;
+      case 'svg':
+        this.props.visType === 'map' ? this.mapRef.current.exportSVG() : this.chartRef.current.exportSVG();
+        break;
+      case 'jpeg':
+        this.props.visType === 'map' ? this.mapRef.current.exportJPEG() : this.chartRef.current.exportJPEG();
+        break;
+      case 'print':
+        this.props.visType === 'map' ? this.mapRef.current.printChart() : this.chartRef.current.printChart();
+        break;
+      default:
+        break;
+    }
+  };
+
+  shareChartOrMap = action => {
+    const link = this.getCurrentURL();
+    const sharable = encodeURIComponent(link);
+    const left = (screen.width - 570) / 2;
+    const top = (screen.height - 570) / 2;
+    const params = 'menubar=no,toolbar=no,status=no,width=570,height=570,top=' + top + ',left=' + left;
+    let url;
+    switch (action) {
+      case 'facebook':
+        url = 'https://www.facebook.com/sharer.php?u=' + sharable;
+        window.open(url, 'NewWindow', params);
+        break;
+      case 'twitter':
+        url = 'https://twitter.com/intent/tweet?url=' + sharable;
+        window.open(url, 'NewWindow', params);
+        break;
+      case 'email':
+        url = 'mailto:?to=&body=' + link;
+        window.open(url, 'NewWindow', params);
+        break;
+      default:
+        window.open(link, 'NewWindow', params);
+    }
   };
 
   render() {
@@ -116,6 +168,8 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                     visType={visType}
                     copyCurrentURL={this.copyCurrentURL}
                     togglePercentage={this.togglePercentage}
+                    exportChartOrMap={this.exportChartOrMap}
+                    shareChartOrMap={this.shareChartOrMap}
                   />
                 </Responsive>
                 <div className="vis-container">
@@ -127,6 +181,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
                       loadingSeries={loadingSeries}
                       showButtons
+                      ref={this.mapRef}
                     />
                   ) : (
                     <ChartVis
@@ -135,6 +190,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       seriesOptions={seriesOptions}
                       dimensionCodes={dimensionCodes}
                       loadingSeries={loadingSeries}
+                      ref={this.chartRef}
                     />
                   )}
                 </div>
@@ -144,6 +200,8 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                     seriesOptions={seriesOptions}
                     copyCurrentURL={this.copyCurrentURL}
                     togglePercentage={this.togglePercentage}
+                    exportChartOrMap={this.exportChartOrMap}
+                    shareChartOrMap={this.shareChartOrMap}
                   />
                 </Responsive>
               </Grid.Column>

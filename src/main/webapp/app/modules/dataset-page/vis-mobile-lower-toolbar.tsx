@@ -5,6 +5,8 @@ import { IDataSet } from 'app/shared/model/data-set.model';
 import { IMeasure } from 'app/shared/model/measure.model';
 import _ from 'lodash';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
+import { translate } from 'react-jhipster';
+// tslint:disable:jsx-no-lambda
 
 export interface IVisMobileLowerToolbarProp {
   dataset: IDataSet;
@@ -12,6 +14,8 @@ export interface IVisMobileLowerToolbarProp {
 
   copyCurrentURL(): void;
   togglePercentage(): void;
+  exportChartOrMap(action): void;
+  shareChartOrMap(action): void;
 }
 
 export interface IVisToolBarState {
@@ -75,12 +79,15 @@ export class VisMobileLowerToolbar extends React.Component<IVisMobileLowerToolba
               onClose={this.toggleDownload}
             >
               <Dropdown.Menu>
-                <Dropdown.Item text="Εκτύπωση" disabled />
-                <Dropdown.Item text="Λήψη ως :" disabled />
-                <Dropdown.Item text="PNG" disabled />
-                <Dropdown.Item text="JPEG" disabled />
-                <Dropdown.Item text="SVG" disabled />
-                <Dropdown.Item text="PDF" disabled />
+                <Dropdown.Item
+                  text={translate('socioscopeApp.dataSet.visualization.print')}
+                  onClick={() => this.props.exportChartOrMap('print')}
+                />
+                <Dropdown.Header content={translate('socioscopeApp.dataSet.visualization.download')} />
+                <Dropdown.Item text="PNG" onClick={() => this.props.exportChartOrMap('png')} />
+                <Dropdown.Item text="JPEG" onClick={() => this.props.exportChartOrMap('jpeg')} />
+                <Dropdown.Item text="SVG" onClick={() => this.props.exportChartOrMap('svg')} />
+                <Dropdown.Item text="PDF" onClick={() => this.props.exportChartOrMap('pdf')} />
               </Dropdown.Menu>
             </Dropdown>
           </Menu.Item>
@@ -106,9 +113,9 @@ export class VisMobileLowerToolbar extends React.Component<IVisMobileLowerToolba
                   trigger={<Dropdown.Item icon="linkify" text="Link" onClick={this.props.copyCurrentURL} />}
                   basic
                 />
-                <Dropdown.Item icon="twitter" text="Twitter" disabled />
-                <Dropdown.Item icon="facebook f" text="Facebook" disabled />
-                <Dropdown.Item icon="mail outline" text="Email" disabled />
+                <Dropdown.Item icon="twitter" text="Twitter" onClick={() => this.props.shareChartOrMap('twitter')} />
+                <Dropdown.Item icon="facebook f" text="Facebook" onClick={() => this.props.shareChartOrMap('facebook')} />
+                <Dropdown.Item icon="mail outline" text="Email" onClick={() => this.props.shareChartOrMap('email')} />
               </Dropdown.Menu>
             </Dropdown>
           </Menu.Item>
