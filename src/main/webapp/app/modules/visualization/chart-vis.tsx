@@ -131,7 +131,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
       if (xAxisDimension.type === 'time') {
         chartSeries = seriesList.map((series, index) => ({
           id: series.id,
-          name: compareBy && translateEntityField(dimensionCodes[compareBy].codesByNotation[series.id].name),
+          name: compareBy ? translateEntityField(dimensionCodes[compareBy].codesByNotation[series.id].name) : '',
           color: index ? chartColors[index - 1] : accentColors[colorScheme],
           data: prepareTimeSeriesData(series.data)
         }));
@@ -152,7 +152,8 @@ export class ChartVis extends React.Component<IChartVisProp> {
             name:
               (compareBy && translateEntityField(dimensionCodes[compareBy].codesByNotation[series.id].name)) ||
               (xAxisDimension.type === 'composite' &&
-                translateEntityField(dimensionCodes[xAxisDimension.id].codesByNotation[series.id].name)),
+                translateEntityField(dimensionCodes[xAxisDimension.id].codesByNotation[series.id].name)) ||
+              '',
             color: index ? chartColors[index - 1] : accentColors[colorScheme],
             data: prepareCategorySeriesData(codesByNotation, seriesByParent[''][series.id], seriesByParent)
           }));
@@ -208,12 +209,21 @@ export class ChartVis extends React.Component<IChartVisProp> {
       plotOptions: {
         series: {
           maxPointWidth: 80,
-          stacking: true
+          stacking: true,
+          dataLabels: {
+            enabled: true,
+            format: measure.type === 'percentage' ? '{y:.1f}%' : '{y}'
+          }
         }
       },
       series: chartSeries,
       credits: {
         enabled: false
+      },
+      tooltip: {
+        pointFormat:
+          (this.props.seriesList.length > 1 ? '{series.name}: ' : '') + (measure.type === 'percentage' ? '{point.y:.1f}%' : '{point.y}'),
+        shared: false
       },
       legend: {
         enabled: this.props.seriesList.length > 1
