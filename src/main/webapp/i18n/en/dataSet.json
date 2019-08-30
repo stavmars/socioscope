@@ -32,9 +32,9 @@
         "map": "Map",
         "configure": {
           "menuTitle": "Configure graph",
-          "xAxis": "Results for:",
-          "filter": "related with:",
-          "compare": "compare to:"
+          "xAxis": "I want to view results for:",
+          "filter": "… filtered by:",
+          "compare": "… compare by:"
         },
         "print": "Print",
         "download": "Download as:"
