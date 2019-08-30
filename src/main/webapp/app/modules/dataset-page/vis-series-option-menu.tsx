@@ -85,6 +85,17 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
             />
           </div>
         )}
+        {visType === 'chart' && (
+          <CompareByControl
+            dimensionCodes={dimensionCodes}
+            dataset={dataset}
+            seriesOptions={seriesOptions}
+            toggleCompareValue={this.props.toggleCompareValue}
+            addCode={this.props.addCode}
+            removeCode={this.props.removeCode}
+            removeCompare={this.props.removeCompare}
+          />
+        )}
         <div className="vis-filters vis-options-menu-item">
           <div className="vis-options-menu-label">
             <Image
@@ -113,17 +124,6 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
             />
           )}
         </div>
-        {visType === 'chart' && (
-          <CompareByControl
-            dimensionCodes={dimensionCodes}
-            dataset={dataset}
-            seriesOptions={seriesOptions}
-            toggleCompareValue={this.props.toggleCompareValue}
-            addCode={this.props.addCode}
-            removeCode={this.props.removeCode}
-            removeCompare={this.props.removeCompare}
-          />
-        )}
       </div>
     );
   }
