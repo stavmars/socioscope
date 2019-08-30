@@ -216,7 +216,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
         enabled: false
       },
       legend: {
-        enabled: false
+        enabled: this.props.seriesList.length > 1
       },
       drilldown: {
         allowPointDrilldown: false
