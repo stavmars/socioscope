@@ -11,8 +11,8 @@ import {
   addCode,
   removeCode,
   removeCompare,
-  toggleCompareValue,
-  updateVisOptions
+  updateVisOptions,
+  changeCompareBy
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
 import { Dimmer, Grid, Loader, Ref, Responsive } from 'semantic-ui-react';
@@ -150,7 +150,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   dataset={dataset}
                   setFilterValue={this.props.setFilterValue}
                   updateVisOptions={this.props.updateVisOptions}
-                  toggleCompareValue={this.props.toggleCompareValue}
+                  changeCompareBy={this.props.changeCompareBy}
                   removeFilter={this.props.removeFilter}
                   addCode={this.props.addCode}
                   removeCode={this.props.removeCode}
@@ -261,7 +261,7 @@ const mapDispatchToProps = {
   updateVisOptions,
   setFilterValue,
   initVis,
-  toggleCompareValue,
+  changeCompareBy,
   removeFilter,
   addCode,
   removeCode,

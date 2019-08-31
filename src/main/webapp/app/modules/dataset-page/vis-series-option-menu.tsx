@@ -6,17 +6,17 @@ import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { translate } from 'react-jhipster';
-import CompareByControl from 'app/modules/dataset-page/compareBy-control';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import {
-  removeFilter,
-  setFilterValue,
   addCode,
+  changeCompareBy,
   removeCode,
   removeCompare,
-  toggleCompareValue,
+  removeFilter,
+  setFilterValue,
   updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
+import _ from 'lodash';
 
 export interface IVisSeriesOptionMenuProp {
   dataset: IDataSet;
@@ -29,9 +29,9 @@ export interface IVisSeriesOptionMenuProp {
 
   removeFilter: typeof removeFilter;
 
-  updateVisOptions: typeof updateVisOptions;
+  changeCompareBy: typeof changeCompareBy;
 
-  toggleCompareValue: typeof toggleCompareValue;
+  updateVisOptions: typeof updateVisOptions;
 
   removeCode: typeof removeCode;
 
@@ -48,8 +48,11 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
   handleXAxisChange = (e, { value }) =>
     this.props.updateVisOptions(this.props.dataset, {
       visType: this.props.visType,
-      seriesOptions: { xAxis: value }
+      seriesOptions: { xAxis: value, compareBy: null }
     });
+
+  handleCompareByChange = (e, { value }) =>
+    value ? this.props.changeCompareBy(this.props.dataset, value) : this.props.removeCompare(this.props.dataset);
 
   render() {
     const { dataset, seriesOptions, dimensionCodes, fetchedCodeLists, visType } = this.props;
@@ -60,6 +63,15 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
       text: translateEntityField(dimension.name),
       value: dimension.id
     }));
+
+    const compareByOptions = dimensions.filter(dimension => dimension.type !== 'time' && !dimension.disableFilter).map(dimension => ({
+      id: dimension.id,
+      text: translateEntityField(dimension.name),
+      value: dimension.id,
+      disabled: dimension.id === seriesOptions.xAxis
+    }));
+
+    const xAxisDimension = _.find(dataset.dimensions, { id: seriesOptions.xAxis });
 
     // tslint:disable:jsx-no-lambda
     return (
@@ -80,21 +92,27 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
               options={xAxisOptions}
               selection
               fluid
-              placeholder="Επιλέξτε μεταβλητή για τον άξονα x"
               value={seriesOptions.xAxis}
             />
           </div>
         )}
         {visType === 'chart' && (
-          <CompareByControl
-            dimensionCodes={dimensionCodes}
-            dataset={dataset}
-            seriesOptions={seriesOptions}
-            toggleCompareValue={this.props.toggleCompareValue}
-            addCode={this.props.addCode}
-            removeCode={this.props.removeCode}
-            removeCompare={this.props.removeCompare}
-          />
+          <div className="vis-compareBy vis-options-menu-item">
+            <div className="vis-options-menu-label">
+              <Image inline src={`/content/images/Assets/compare-${colorScheme}.svg`} style={{ paddingRight: '23px' }} />
+              {translate('socioscopeApp.dataSet.visualization.configure.compare')}
+            </div>
+            <Dropdown
+              className={`vis-options-dropdown ${colorScheme}`}
+              onChange={this.handleCompareByChange}
+              options={compareByOptions}
+              selection
+              fluid
+              disabled={xAxisDimension.type === 'composite'}
+              value={seriesOptions.compareBy}
+              clearable
+            />
+          </div>
         )}
         <div className="vis-filters vis-options-menu-item">
           <div className="vis-options-menu-label">

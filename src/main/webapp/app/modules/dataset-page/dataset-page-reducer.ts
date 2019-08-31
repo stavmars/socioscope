@@ -24,7 +24,7 @@ export const ACTION_TYPES = {
   REMOVE_FILTER: 'datasetPage/REMOVE_FILTER',
   ADD_CODE: 'datasetPage/ADD_CODE',
   REMOVE_CODE: 'datasetPage/REMOVE_CODE',
-  REMOVE_COMPARE: 'datasetPage/REMOCE_COMPARE'
+  REMOVE_COMPARE: 'datasetPage/REMOVE_COMPARE'
 };
 
 const initialState = {
@@ -81,7 +81,17 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
         ...state,
         seriesOptions: {
           ...state.seriesOptions,
-          compareBy: action.payload
+          compareBy: action.payload,
+          compareCodes: []
+        }
+      };
+    case ACTION_TYPES.REMOVE_COMPARE:
+      return {
+        ...state,
+        seriesOptions: {
+          ...state.seriesOptions,
+          compareBy: null as string,
+          compareCodes: []
         }
       };
     case ACTION_TYPES.SET_FILTER_VALUE:
@@ -101,41 +111,6 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
         seriesOptions: {
           ...state.seriesOptions,
           dimensionFilters: _.omit(state.seriesOptions.dimensionFilters, action.payload.dimensionId)
-        }
-      };
-    case ACTION_TYPES.ADD_CODE:
-      return {
-        ...state,
-        seriesOptions: {
-          ...state.seriesOptions,
-          compareCodes: state.seriesOptions.compareCodes.concat([action.payload.code])
-        }
-      };
-    case ACTION_TYPES.REMOVE_CODE:
-      return {
-        ...state,
-        seriesOptions: {
-          ...state.seriesOptions,
-          compareCodes: _.filter(state.seriesOptions.compareCodes, el => el !== action.payload.code)
-        }
-      };
-    case ACTION_TYPES.REMOVE_COMPARE:
-      return {
-        ...state,
-        seriesOptions: {
-          ...state.seriesOptions,
-          compareBy: null as string,
-          compareCodes: []
-        }
-      };
-    case ACTION_TYPES.TOGGLE_COMPARE_VALUE:
-      const { compareCode } = action.payload;
-      const compareCodes = state.seriesOptions.compareCodes || [];
-      return {
-        ...state,
-        seriesOptions: {
-          ...state.seriesOptions,
-          compareCodes: _.xor(compareCodes, [compareCode])
         }
       };
     case ACTION_TYPES.UPDATE_VIS_OPTIONS:
@@ -231,24 +206,13 @@ export const removeCompare = (dataset: IDataSet) => (dispatch, getState) => {
   dispatch(getSeries(dataset.id, seriesOptions));
 };
 
-export const toggleCompareValue = (dataset: IDataSet, dimensionId: string, compareCode: string) => (dispatch, getState) => {
-  const { seriesOptions, visType } = getState().datasetPage;
-  if (seriesOptions.compareBy === dimensionId) {
-    dispatch({
-      type: ACTION_TYPES.TOGGLE_COMPARE_VALUE,
-      payload: { compareCode }
-    });
-    const { seriesOptions: updatedSeriesOptions } = getState().datasetPage;
-
-    dispatch(getSeries(dataset.id, updatedSeriesOptions));
-  } else {
-    dispatch(
-      updateVisOptions(dataset, {
-        visType,
-        seriesOptions: { ...seriesOptions, compareBy: dimensionId, compareCodes: [compareCode] }
-      })
-    );
-  }
+export const changeCompareBy = (dataset: IDataSet, compareBy: string) => (dispatch, getState) => {
+  dispatch({
+    type: ACTION_TYPES.CHANGE_COMPARE_BY,
+    payload: compareBy
+  });
+  const { seriesOptions } = getState().datasetPage;
+  dispatch(getSeries(dataset.id, seriesOptions));
 };
 
 export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => (dispatch, getState) => {
