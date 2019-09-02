@@ -5,6 +5,7 @@ import { Storage, Translate } from 'react-jhipster';
 import { Image, Menu, Responsive, Icon } from 'semantic-ui-react';
 import { AccountMenu, AdminMenu, EntitiesMenu } from './menus';
 import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { IRootState } from 'app/shared/reducers';
 import { hasAnyAuthority } from 'app/shared/auth/private-route';
 import { AUTHORITIES } from 'app/config/constants';
@@ -83,7 +84,7 @@ export class Header extends React.Component<IHeaderProps, {}> {
               <Menu.Item onClick={this.props.toggleTopicsMenu} active={this.props.isTopicsMenuVisible}>
                 <Translate contentKey="global.menu.topics">Topics</Translate>
               </Menu.Item>
-              <Menu.Item as={NavLink} to="/about#project" exact isActive={this.isMenuItemActive}>
+              <Menu.Item as={HashLink} to="/about#project" exact isActive={this.isMenuItemActive}>
                 <Translate contentKey="global.menu.about">About</Translate>
               </Menu.Item>
               {isAuthenticated && <EntitiesMenu />}
