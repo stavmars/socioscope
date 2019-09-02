@@ -4,7 +4,7 @@ import './app.scss';
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { toast, ToastContainer, ToastPosition } from 'react-toastify';
 import { IRootState } from 'app/shared/reducers';
 import { getSession } from 'app/shared/reducers/authentication';
