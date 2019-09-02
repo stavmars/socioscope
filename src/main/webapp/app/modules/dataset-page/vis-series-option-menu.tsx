@@ -51,6 +51,12 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
       seriesOptions: { xAxis: value }
     });
 
+  resetGraph = e =>
+    this.props.updateVisOptions(this.props.dataset, {
+      visType: this.props.visType,
+      seriesOptions: {}
+    });
+
   render() {
     const { dataset, seriesOptions, dimensionCodes, fetchedCodeLists, visType } = this.props;
     const { dimensions, colorScheme } = dataset;
@@ -66,7 +72,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
       <div className="vis-options-menu">
         <div className="vis-options-menu-title">
           <span>{translate('socioscopeApp.dataSet.visualization.configure.menuTitle')}</span>
-          <Image src="/content/images/Assets/Reset.svg" />
+          <Image onClick={this.resetGraph} src="/content/images/Assets/Reset.svg" />
         </div>
         {visType === 'chart' && (
           <div className="vis-xAxis vis-options-menu-item">
