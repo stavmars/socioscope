@@ -48,7 +48,7 @@ export class Header extends React.Component<IHeaderProps, {}> {
                 <Image src="/content/images/Assets/icon-white.svg" />
               </Menu.Item>
               <Menu.Item onClick={this.props.toggleMobileMenu} style={{ padding: '21px 20px 21px 18px' }}>
-                <Image src="/content/images/Assets/Mobile-Sidebar.svg" />
+                <Image src="/content/images/Assets/Mobile-Sidebar-white.svg" />
               </Menu.Item>
             </Menu>
           ) : (
@@ -66,7 +66,7 @@ export class Header extends React.Component<IHeaderProps, {}> {
                 <Image src={localeIcon} alt="language switcher" style={{ width: '27px', height: '27px' }} />
               </Menu.Item>
               <Menu.Item onClick={this.props.toggleMobileMenu} style={{ padding: '21px 20px 21px 18px' }}>
-                <Image src="/content/images/Assets/Mobile-Sidebar.svg" />
+                <Image src={`/content/images/Assets/Mobile-Sidebar-${color}.svg`} />
               </Menu.Item>
             </Menu>
           )}
@@ -83,7 +83,7 @@ export class Header extends React.Component<IHeaderProps, {}> {
               <Menu.Item onClick={this.props.toggleTopicsMenu} active={this.props.isTopicsMenuVisible}>
                 <Translate contentKey="global.menu.topics">Topics</Translate>
               </Menu.Item>
-              <Menu.Item as={NavLink} to="/about" exact isActive={this.isMenuItemActive}>
+              <Menu.Item as={NavLink} to="/about#project" exact isActive={this.isMenuItemActive}>
                 <Translate contentKey="global.menu.about">About</Translate>
               </Menu.Item>
               {isAuthenticated && <EntitiesMenu />}

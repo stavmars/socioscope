@@ -152,19 +152,19 @@
       "title": "Scientific Team",
       "theoni": {
         "name": "Theoni Stathopoulou",
-        "role": "Research Director, ΕΚΚΕ, theosta@ekke.gr"
+        "role": "Research Director, ΕΚΚΕ, <a href=\"mailto:theosta@ekke.gr\" target=\"_blank\">theosta@ekke.gr</a>"
       },
       "tsig": {
         "name": "Ioanna Tsiganou",
-        "role": "Research Director, ΕΚΚΕ, jtsiganou@ekke.gr"
+        "role": "Research Director, ΕΚΚΕ, <a href=\"mailto:jtsiganou@ekke.gr\" target=\"_blank\">jtsiganou@ekke.gr</a>"
       },
       "kand": {
         "name": "Giorgos Kandylis",
-        "role": "Researcher, gkandyli@ekke.gr"
+        "role": "Researcher, <a href=\"mailto:gkandyli@ekke.gr\" target=\"_blank\">gkandyli@ekke.gr</a>"
       },
       "manina": {
         "name": "Manina Kapekaki",
-        "role": "Researcher, ΕΚΚΕ, mkakepaki@ekke.gr"
+        "role": "Researcher, ΕΚΚΕ, <a href=\"mailto:mkakepaki@ekke.gr\" target=\"_blank\">mkakepaki@ekke.gr</a>"
       }
     },
     "sources": {
@@ -178,11 +178,15 @@
       "develop": "Kaleidoscope Development",
       "gpapas": {
         "name": "Giorgos Papastefanatos",
-        "role": "Research Associate, (ATHENA R.C.), gpapas@imis.athena-innovation.gr"
+        "role": "Research Associate, (ATHENA R.C.), <a href=\"mailto:gpapas@imis.athena-innovation.gr\" target=\"_blank\">gpapas@imis.athena-innovation.gr</a>"
       },
       "stav": {
         "name": "Stavros Maroulis",
-        "role": "Research Associate, (ATHENA R.C.), stavmars@imis.athena-innovation.gr"
+        "role": "Research Associate, (ATHENA R.C.), <a href=\"mailto:stavmars@imis.athena-innovation.gr\" target=\"_blank\">stavmars@imis.athena-innovation.gr</a>"
+      },
+      "astgian": {
+        "name": "Asteris Giannoudis",
+        "role": "Research Associate, (ATHENA R.C.), <a href=\"mailto:astgian@imis.athena-innovation.gr\" target=\"_blank\">astgian@imis.athena-innovation.gr</a>"
       }
     }
   },
