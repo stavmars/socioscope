@@ -51,6 +51,12 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
       seriesOptions: { xAxis: value, compareBy: null }
     });
 
+  resetGraph = e =>
+    this.props.updateVisOptions(this.props.dataset, {
+      visType: this.props.visType,
+      seriesOptions: {}
+    });
+
   handleCompareByChange = (e, { value }) =>
     value ? this.props.changeCompareBy(this.props.dataset, value) : this.props.removeCompare(this.props.dataset);
 
@@ -78,7 +84,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
       <div className="vis-options-menu">
         <div className="vis-options-menu-title">
           <span>{translate('socioscopeApp.dataSet.visualization.configure.menuTitle')}</span>
-          <Image src="/content/images/Assets/Reset.svg" />
+          <Image onClick={this.resetGraph} src="/content/images/Assets/Reset.svg" />
         </div>
         {visType === 'chart' && (
           <div className="vis-xAxis vis-options-menu-item">

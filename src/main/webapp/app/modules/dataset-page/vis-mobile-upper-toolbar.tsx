@@ -4,6 +4,7 @@ import './dataset-page.scss';
 import { Button, Image, Menu } from 'semantic-ui-react';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { toggleMobileVisMenu } from 'app/shared/reducers/header';
+import { updateVisOptions } from 'app/modules/dataset-page/dataset-page-reducer';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import { IDimension } from 'app/shared/model/dimension.model';
@@ -17,6 +18,12 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
   constructor(props) {
     super(props);
   }
+
+  resetGraph = e =>
+    this.props.updateVisOptions(this.props.dataset, {
+      visType: this.props.visType,
+      seriesOptions: {}
+    });
 
   render() {
     const { dataset, visType } = this.props;
@@ -45,7 +52,7 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
             </h1>
           </Menu.Item>
           <Menu.Item position="right">
-            <Image src="/content/images/Assets/Reset.svg" />
+            <Image onClick={this.resetGraph} src="/content/images/Assets/Reset.svg" />
           </Menu.Item>
           <Menu.Item as={NavLink} to="?type=chart">
             {visType === 'chart' ? (
@@ -73,7 +80,8 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
 }
 
 const mapDispatchToProps = {
-  toggleMobileVisMenu
+  toggleMobileVisMenu,
+  updateVisOptions
 };
 
 type DispatchProps = typeof mapDispatchToProps;
