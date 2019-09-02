@@ -151,19 +151,19 @@
       "title": "Επιστημονική Ομάδα",
       "theoni": {
         "name": "Θεώνη Σταθοπούλου",
-        "role": "Διευθύντρια Ερευνών, ΕΚΚΕ, theosta@ekke.gr"
+        "role": "Διευθύντρια Ερευνών, ΕΚΚΕ, <a href=\"mailto:theosta@ekke.gr\" target=\"_blank\">theosta@ekke.gr</a>"
       },
       "tsig": {
         "name": "Ιωάννα Τσίγγανου",
-        "role": "Διευθύντρια Ερευνών, ΕΚΚΕ, jtsiganou@ekke.gr"
+        "role": "Διευθύντρια Ερευνών, ΕΚΚΕ, <a href=\"mailto:jtsiganou@ekke.gr\" target=\"_blank\">jtsiganou@ekke.gr</a>"
       },
       "kand": {
         "name": "Γιώργος Κανδύλης",
-        "role": "Ερευνητής, gkandyli@ekke.gr"
+        "role": "Ερευνητής, <a href=\"mailto:gkandyli@ekke.gr\" target=\"_blank\">gkandyli@ekke.gr</a>"
       },
       "manina": {
         "name": "Μανίνα Κακεπάκη",
-        "role": "Ερευνήτρια, ΕΚΚΕ, mkakepaki@ekke.gr"
+        "role": "Ερευνήτρια, ΕΚΚΕ, <a href=\"mailto:mkakepaki@ekke.gr\" target=\"_blank\">mkakepaki@ekke.gr</a>"
       }
     },
     "sources": {
@@ -177,11 +177,15 @@
       "develop": "Ανάπτυξη Καλειδοσκοπίου",
       "gpapas": {
         "name": "Γιώργος Παπαστεφανάτος",
-        "role": "Ερευνητικός Συνεργάτης, (Ε.Κ. ΑΘΗΝΑ), gpapas@imis.athena-innovation.gr"
+        "role": "Ερευνητικός Συνεργάτης, (Ε.Κ. ΑΘΗΝΑ), <a href=\"mailto:gpapas@imis.athena-innovation.gr\" target=\"_blank\">gpapas@imis.athena-innovation.gr</a>"
       },
       "stav": {
         "name": "Σταύρος Μαρούλης",
-        "role": "Ερευνητικός Συνεργάτης, (Ε.Κ. ΑΘΗΝΑ), stavmars@imis.athena-innovation.gr"
+        "role": "Ερευνητικός Συνεργάτης, (Ε.Κ. ΑΘΗΝΑ), <a href=\"mailto:stavmars@imis.athena-innovation.gr\" target=\"_blank\">stavmars@imis.athena-innovation.gr</a>"
+      },
+      "astgian": {
+        "name": "Αστέρης Γιαννούδης",
+        "role": "Ερευνητικός Συνεργάτης, (Ε.Κ. ΑΘΗΝΑ), <a href=\"mailto:astgian@imis.athena-innovation.gr\" target=\"_blank\">astgian@imis.athena-innovation.gr</a>"
       }
     }
   },
