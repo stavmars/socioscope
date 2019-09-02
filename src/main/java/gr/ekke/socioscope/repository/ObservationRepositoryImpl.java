@@ -34,8 +34,10 @@ public class ObservationRepositoryImpl implements ObservationRepositoryCustom {
         ).collect(Collectors.toList());
 
         String compareBy = seriesOptions.getCompareBy();
-        if (compareBy != null){
-            criteria.add(Criteria.where("dimensions").elemMatch(Criteria.where("id").is(compareBy).and("value").in(seriesOptions.getCompareCodes())));
+        List<String> compareCodes = seriesOptions.getCompareCodes();
+
+        if (compareBy != null && compareCodes != null && compareCodes.size() > 0) {
+            criteria.add(Criteria.where("dimensions").elemMatch(Criteria.where("id").is(compareBy).and("value").in(compareCodes)));
         }
 
         criteria.add(Criteria.where("measures." + seriesOptions.getMeasure()).exists(true));

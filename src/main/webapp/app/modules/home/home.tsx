@@ -1,7 +1,7 @@
 import './home.scss';
 
 import React from 'react';
-import { HashLink } from 'react-router-hash-link';
+import { NavHashLink } from 'react-router-hash-link';
 import { connect } from 'react-redux';
 import { translate } from 'react-jhipster';
 import { getSession } from 'app/shared/reducers/authentication';
@@ -37,9 +37,9 @@ export class Home extends React.Component<IHomeProp> {
             <Container textAlign="center">
               <h1 className="home-page-view-title">{translate('home.title')}</h1>
               <h2 className="home-page-view-subtitle">{translate('home.subtitle')}</h2>
-              <HashLink to="#discover" className="home-page-view-explore" replace={false}>
+              <NavHashLink to="#discover" className="home-page-view-explore" smooth replace={false}>
                 {translate('home.explore')}
-              </HashLink>
+              </NavHashLink>
             </Container>
           </div>
         </Visibility>
