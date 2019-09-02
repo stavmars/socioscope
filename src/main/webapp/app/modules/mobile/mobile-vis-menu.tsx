@@ -7,7 +7,7 @@ import {
   addCode,
   removeCode,
   removeCompare,
-  toggleCompareValue,
+  changeCompareBy,
   updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import { List } from 'semantic-ui-react';
@@ -61,11 +61,11 @@ export class MobileVisMenu extends React.Component<IMobileVisMenuProps> {
               dataset={dataset}
               setFilterValue={this.props.setFilterValue}
               updateVisOptions={this.props.updateVisOptions}
-              toggleCompareValue={this.props.toggleCompareValue}
               removeFilter={this.props.removeFilter}
               addCode={this.props.addCode}
               removeCode={this.props.removeCode}
               removeCompare={this.props.removeCompare}
+              changeCompareBy={this.props.changeCompareBy}
             />
           </List.Item>
         </List>
@@ -85,8 +85,8 @@ const mapStateToProps = (storeState: IRootState) => ({
 const mapDispatchToProps = {
   toggleMobileVisMenu,
   updateVisOptions,
+  changeCompareBy,
   setFilterValue,
-  toggleCompareValue,
   removeFilter,
   addCode,
   removeCode,
