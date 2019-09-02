@@ -17,7 +17,7 @@ export class DatasetPageAbout extends React.Component<IDatasetPageAboutProp> {
 
     const AboutContent = () => (
       <div className="dataset-page-about-content">
-        {translateEntityField(dataset.comment)}
+        <div dangerouslySetInnerHTML={{ __html: translateEntityField(dataset.comment) }} />
         <br />
         <br />
         {dataset.sources && (
