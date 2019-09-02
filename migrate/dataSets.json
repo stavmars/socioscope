@@ -28,10 +28,10 @@
     ],
     "measures": [
       {
-        "id": "votes"
+        "id": "votes_perc"
       },
       {
-        "id": "votes_perc"
+        "id": "votes"
       }
     ],
     "highlights": [
@@ -168,10 +168,10 @@
     ],
     "measures": [
       {
-        "id": "deputies"
+        "id": "deputies_perc"
       },
       {
-        "id": "deputies_perc"
+        "id": "deputies"
       }
     ],
     "highlights": [
@@ -530,10 +530,10 @@
     ],
     "measures": [
       {
-        "id": "adolescents_count"
+        "id": "adolescents_perc"
       },
       {
-        "id": "adolescents_perc"
+        "id": "adolescents_count"
       }
     ],
     "highlights": [
