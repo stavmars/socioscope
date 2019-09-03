@@ -129,12 +129,16 @@ export class ChartVis extends React.Component<IChartVisProp> {
 
     if (!loadingSeries && seriesList && seriesList.length > 0) {
       if (xAxisDimension.type === 'time') {
-        chartSeries = seriesList.map((series, index) => ({
-          id: series.id,
-          name: compareBy ? translateEntityField(dimensionCodes[compareBy].codesByNotation[series.id].name) : '',
-          color: index ? chartColors[index - 1] : accentColors[colorScheme],
-          data: prepareTimeSeriesData(series.data)
-        }));
+        chartSeries = seriesList.map((series, index) => {
+          const code = compareBy && dimensionCodes[compareBy].codesByNotation[series.id];
+          return {
+            id: series.id,
+            name: code ? translateEntityField(code.name) : '',
+            order: code && code.order,
+            color: index ? chartColors[index - 1] : accentColors[colorScheme],
+            data: prepareTimeSeriesData(series.data)
+          };
+        });
       } else {
         const codesByNotation =
           xAxisDimension.type === 'composite'
@@ -147,19 +151,22 @@ export class ChartVis extends React.Component<IChartVisProp> {
 
         seriesByParent = prepareSeriesByParent(codesByNotation, seriesList);
         if (seriesByParent['']) {
-          chartSeries = seriesList.map((series, index) => ({
-            id: series.id,
-            name:
-              (compareBy && translateEntityField(dimensionCodes[compareBy].codesByNotation[series.id].name)) ||
-              (xAxisDimension.type === 'composite' &&
-                translateEntityField(dimensionCodes[xAxisDimension.id].codesByNotation[series.id].name)) ||
-              '',
-            color: index ? chartColors[index - 1] : accentColors[colorScheme],
-            data: prepareCategorySeriesData(codesByNotation, seriesByParent[''][series.id], seriesByParent)
-          }));
+          chartSeries = seriesList.map((series, index) => {
+            const code =
+              (compareBy && dimensionCodes[compareBy].codesByNotation[series.id]) ||
+              (xAxisDimension.type === 'composite' && dimensionCodes[xAxisDimension.id].codesByNotation[series.id]);
+            return {
+              id: series.id,
+              name: code ? translateEntityField(code.name) : '',
+              order: code && code.order,
+              color: index ? chartColors[index - 1] : accentColors[colorScheme],
+              data: prepareCategorySeriesData(codesByNotation, seriesByParent[''][series.id], seriesByParent)
+            };
+          });
         }
       }
     }
+    chartSeries = _.sortBy(chartSeries, 'order', 'name');
 
     const measure = seriesOptions.measure ? _.find(dataset.measures, { id: seriesOptions.measure }) : dataset.measures[0];
 
