@@ -51,7 +51,7 @@ export class Home extends React.Component<IHomeProp> {
         </Visibility>
         <div id="discover" style={{ height: 120 }} />
         <div className="dataset-cards">
-          {_.at(datasetsById, ['greek-election-results', 'deputies', 'adolescents', 'claims']).map((dataset: IDataSet) => (
+          {_.at(datasetsById, ['adolescents', 'deputies', 'greek-election-results', 'claims']).map((dataset: IDataSet) => (
             <CardCarousel>
               {dataset.highlights
                 ? dataset.highlights.map(highlight => (
