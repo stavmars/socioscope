@@ -231,6 +231,9 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
 
   measure = measure || dataset.measures[0].id;
 
+  // if undefined, the corresponding dropdown is not being cleared
+  compareBy = compareBy || null;
+
   let newSeriesOptions = {};
   if (dataset.type === 'qb') {
     const dimensionFilters = dimensions.filter(dimension => ![xAxis, compareBy].includes(dimension.id)).reduce((acc, dimension) => {
