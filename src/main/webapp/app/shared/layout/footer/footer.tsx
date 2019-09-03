@@ -4,6 +4,7 @@ import React from 'react';
 import { translate } from 'react-jhipster';
 import { Grid, Image, List, Responsive, Menu, Container } from 'semantic-ui-react';
 import { localeImage } from 'app/shared/util/entity-utils';
+import { HashLink } from 'react-router-hash-link';
 
 const Footer = () => (
   <div>
@@ -11,7 +12,7 @@ const Footer = () => (
       <div className="app-footer">
         <Grid rows={4}>
           <Grid.Row centered className="app-footer-logo">
-            <Image src="/content/images/Assets/Logo-white.png" />
+            <Image src="/content/images/Assets/Logo-white.png" as="a" href="/" />
           </Grid.Row>
           <Grid.Row className="app-footer-text" columns={2}>
             <Grid.Column textAlign="center" style={{ padding: '28px 0 0 38px' }}>
@@ -24,8 +25,18 @@ const Footer = () => (
           <Grid.Row centered columns={2}>
             <Grid.Column>
               <Image.Group>
-                <Image src="/content/images/Assets/ekke.png" style={{ height: '36px', width: '36px', marginRight: 20, marginLeft: 30 }} />
-                <Image src="/content/images/Assets/athena.png" style={{ height: '36px', width: '36px', marginLeft: 20 }} />
+                <Image
+                  src="/content/images/Assets/ekke.png"
+                  style={{ height: '36px', width: '36px', marginRight: 20, marginLeft: 30 }}
+                  as="a"
+                  href="https://www.ekke.gr"
+                />
+                <Image
+                  src="/content/images/Assets/athena.png"
+                  style={{ height: '36px', width: '36px', marginLeft: 20 }}
+                  as="a"
+                  href="https://www.athena-innovation.gr"
+                />
               </Image.Group>
             </Grid.Column>
             <Grid.Column>
@@ -47,18 +58,26 @@ const Footer = () => (
           <Grid.Row>
             <Grid.Column compiter={6} tablet={6}>
               <List id="app-footer-links" horizontal bulleted>
-                <List.Item as="a">{translate('footer.about')}</List.Item>
+                <List.Item as={HashLink} to="/about#project">
+                  {translate('footer.about')}
+                </List.Item>
                 <List.Item as="a">{translate('footer.terms')}</List.Item>
                 <List.Item as="a">{translate('footer.policy')}</List.Item>
                 <List.Item as="a">{translate('footer.developers')}</List.Item>
               </List>
-              <Image id="app-footer-logo" src="/content/images/Assets/Logo-white.png" />
+              <Image id="app-footer-logo" src="/content/images/Assets/Logo-white.png" as="a" href="/" />
             </Grid.Column>
             <Grid.Column compiter={4} tablet={4}>
               <div style={{ height: 40 }}>{translate('footer.collaboration')}</div>
               <Image.Group>
-                <Image src="/content/images/Assets/ekke.png" style={{ marginRight: 20 }} />
-                <Image src="/content/images/Assets/athena.png" />
+                <Image
+                  src="/content/images/Assets/ekke.png"
+                  style={{ marginRight: 20 }}
+                  as="a"
+                  href="https://www.ekke.gr"
+                  target="_blank"
+                />
+                <Image src="/content/images/Assets/athena.png" as="a" href="https://www.athena-innovation.gr" target="_blank" />
               </Image.Group>
             </Grid.Column>
             <Grid.Column compiter={2} tablet={3}>
