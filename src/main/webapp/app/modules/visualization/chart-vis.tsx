@@ -6,7 +6,7 @@ import HighchartsReact from 'highcharts-react-official';
 // tslint:disable-next-line
 import drilldown from 'highcharts/modules/drilldown.js';
 import uuid from 'uuid';
-
+import chroma from 'chroma-js';
 import _ from 'lodash';
 import { IDimension } from 'app/shared/model/dimension.model';
 import { ISeriesPoint } from 'app/shared/model/series-point.model';
@@ -123,22 +123,25 @@ export class ChartVis extends React.Component<IChartVisProp> {
     const { dimensions, colorScheme } = dataset;
     const { compareBy } = seriesOptions;
     const xAxisDimension = _.find(dimensions, { id: seriesOptions.xAxis }) as IDimension;
-    let chartSeries = [{ data: [] }];
+    let chartSeries = [{ data: [] }] as any;
 
     let seriesByParent;
 
     if (!loadingSeries && seriesList && seriesList.length > 0) {
       if (xAxisDimension.type === 'time') {
-        chartSeries = seriesList.map((series, index) => {
-          const code = compareBy && dimensionCodes[compareBy].codesByNotation[series.id];
-          return {
-            id: series.id,
-            name: code ? translateEntityField(code.name) : '',
-            order: code && code.order,
-            color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
-            data: prepareTimeSeriesData(series.data)
-          };
-        });
+        chartSeries = _(seriesList)
+          .map((series, index) => {
+            const code = compareBy && dimensionCodes[compareBy].codesByNotation[series.id];
+            return {
+              id: series.id,
+              name: code ? translateEntityField(code.name) : '',
+              order: code && code.order,
+              color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
+              data: prepareTimeSeriesData(series.data)
+            };
+          })
+          .sortBy('order', 'name')
+          .value();
       } else {
         const codesByNotation =
           xAxisDimension.type === 'composite'
@@ -151,22 +154,34 @@ export class ChartVis extends React.Component<IChartVisProp> {
 
         seriesByParent = prepareSeriesByParent(codesByNotation, seriesList);
         if (seriesByParent['']) {
-          chartSeries = seriesList.map((series, index) => {
-            const code =
-              (compareBy && dimensionCodes[compareBy].codesByNotation[series.id]) ||
-              (xAxisDimension.type === 'composite' && dimensionCodes[xAxisDimension.id].codesByNotation[series.id]);
-            return {
-              id: series.id,
-              name: code ? translateEntityField(code.name) : '',
-              order: code && code.order,
-              color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
-              data: prepareCategorySeriesData(codesByNotation, seriesByParent[''][series.id], seriesByParent)
-            };
-          });
+          chartSeries = _(seriesList)
+            .map((series, index) => {
+              const code =
+                (compareBy && dimensionCodes[compareBy].codesByNotation[series.id]) ||
+                (xAxisDimension.type === 'composite' && dimensionCodes[xAxisDimension.id].codesByNotation[series.id]);
+              return {
+                id: series.id,
+                name: code ? translateEntityField(code.name) : '',
+                code,
+                color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
+                order: code && code.order,
+                data: prepareCategorySeriesData(codesByNotation, seriesByParent[''][series.id], seriesByParent)
+              };
+            })
+            .sortBy('order', 'name')
+            .value();
+
+          if (xAxisDimension.type === 'composite') {
+            const colorCount = _.filter(chartSeries, series => !series.code.color).length;
+            const colors = chroma.scale(['#ffffe0', accentColors[colorScheme]]).colors(colorCount);
+            chartSeries = chartSeries.map(series => {
+              const color = series.code.color || colors.shift();
+              return { ...series, color };
+            });
+          }
         }
       }
     }
-    chartSeries = _.sortBy(chartSeries, 'order', 'name');
 
     const measure = seriesOptions.measure ? _.find(dataset.measures, { id: seriesOptions.measure }) : dataset.measures[0];
 
@@ -211,7 +226,8 @@ export class ChartVis extends React.Component<IChartVisProp> {
         },
         labels: {
           style: { fontFamily: 'BPnoScriptBold', fontSize: '16px' }
-        }
+        },
+        reversedStacks: false
       },
       plotOptions: {
         series: {
