@@ -90,9 +90,9 @@ export class Header extends React.Component<IHeaderProps, {}> {
               {isAuthenticated && <EntitiesMenu />}
               {isAuthenticated && isAdmin && <AdminMenu showSwagger={isSwaggerEnabled} />}
               {isAuthenticated && <AccountMenu />}
-              <Menu.Item>
+              {/* <Menu.Item>
                 <Image src={`/content/images/Assets/Search-${color}.svg`} alt="search button" style={{ width: '32.5px', height: 'auto' }} />
-              </Menu.Item>
+              </Menu.Item> */}
               <Menu.Item onClick={this.handleLocaleChange}>
                 <Image src={localeIcon} alt="language switcher" style={{ width: '40px', height: 'auto' }} />
               </Menu.Item>
