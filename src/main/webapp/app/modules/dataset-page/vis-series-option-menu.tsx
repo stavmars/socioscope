@@ -84,7 +84,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
       <div className="vis-options-menu">
         <div className="vis-options-menu-title">
           <span>{translate('socioscopeApp.dataSet.visualization.configure.menuTitle')}</span>
-          <Image onClick={this.resetGraph} src="/content/images/Assets/Reset.svg" />
+          <Image onClick={this.resetGraph} src="/content/images/Assets/Reset.svg" style={{ cursor: 'pointer' }} />
         </div>
         {visType === 'chart' && (
           <div className="vis-xAxis vis-options-menu-item">
