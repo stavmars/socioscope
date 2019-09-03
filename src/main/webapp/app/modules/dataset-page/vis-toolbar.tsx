@@ -162,8 +162,8 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                     </Dropdown.Menu>
                   </Dropdown>
                 </List.Item>
-                <List.Item disabled>
-                  <Image src="/content/images/Assets/Tooltip.svg" style={{ marginTop: '-37px' }} />
+                <List.Item>
+                  <Image src="/content/images/Assets/Tooltip.svg" style={{ marginTop: '-37px' }} disabled />
                 </List.Item>
               </List>
             </Grid.Column>
