@@ -43,13 +43,7 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
     contentBase: './target/www',
     proxy: [{
       context: [
-        /* jhipster-needle-add-entity-to-webpack - JHipster will add entity api paths here */
-        '/api',
-        '/management',
-        '/swagger-resources',
-        '/v2/api-docs',
-        '/h2-console',
-        '/auth'
+       '/'
       ],
       target: `http${options.tls ? 's' : ''}://127.0.0.1:8080`,
       secure: false,

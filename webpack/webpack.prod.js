@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
+const { BaseHrefWebpackPlugin } = require('base-href-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -91,6 +92,7 @@ module.exports = webpackMerge(commonConfig({ env: ENV }), {
     new WorkboxPlugin.GenerateSW({
       clientsClaim: true,
       skipWaiting: true,
-    })
+    }),
+    new BaseHrefWebpackPlugin({ baseHref: '/' })
   ]
 });

@@ -61,7 +61,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
 
   getCurrentURL = () => {
     const encodedVisOptions = urlEncodeVisOptions({ visType: this.props.visType, seriesOptions: this.props.seriesOptions });
-    return window.location.protocol + '//' + window.location.host + '/#/dataset/' + this.props.dataset.id + '/data?' + encodedVisOptions;
+    return window.location.protocol + '//' + window.location.host + '/dataset/' + this.props.dataset.id + '/data?' + encodedVisOptions;
   };
 
   copyCurrentURL = () => {
