@@ -135,7 +135,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
             id: series.id,
             name: code ? translateEntityField(code.name) : '',
             order: code && code.order,
-            color: index ? chartColors[index - 1] : accentColors[colorScheme],
+            color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
             data: prepareTimeSeriesData(series.data)
           };
         });
@@ -159,7 +159,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
               id: series.id,
               name: code ? translateEntityField(code.name) : '',
               order: code && code.order,
-              color: index ? chartColors[index - 1] : accentColors[colorScheme],
+              color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
               data: prepareCategorySeriesData(codesByNotation, seriesByParent[''][series.id], seriesByParent)
             };
           });
