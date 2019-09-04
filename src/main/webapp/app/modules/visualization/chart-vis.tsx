@@ -27,6 +27,8 @@ export interface IChartVisProp {
   seriesOptions: ISeriesOptions;
   dimensionCodes: any;
   loadingSeries: boolean;
+  showLegend: boolean;
+  showLabels: boolean;
 }
 
 const prepareSeriesByParent = (codesByNotation, seriesList: ISeries[]) =>
@@ -119,7 +121,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
   }
 
   render() {
-    const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries } = this.props;
+    const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, showLabels, showLegend } = this.props;
     const { dimensions, colorScheme } = dataset;
     const { compareBy } = seriesOptions;
     const xAxisDimension = _.find(dimensions, { id: seriesOptions.xAxis }) as IDimension;
@@ -212,20 +214,20 @@ export class ChartVis extends React.Component<IChartVisProp> {
         type: xAxisDimension.type === 'time' ? 'datetime' : 'category',
         title: {
           text: translateEntityField(xAxisDimension.name),
-          style: { fontFamily: 'BPnoScriptBold', fontSize: '12px' }
+          style: { fontFamily: 'BPnoScriptBold', fontSize: '15px' }
         },
         labels: {
-          style: { fontFamily: 'BPnoScriptBold', fontSize: '16px' }
+          style: { fontFamily: 'BPnoScriptBold', fontSize: '20px' }
         },
         offset: 2
       },
       yAxis: {
         title: {
           text: translateEntityField(measure.name),
-          style: { fontFamily: 'BPnoScriptBold', fontSize: '12px' }
+          style: { fontFamily: 'BPnoScriptBold', fontSize: '15px' }
         },
         labels: {
-          style: { fontFamily: 'BPnoScriptBold', fontSize: '16px' }
+          style: { fontFamily: 'BPnoScriptBold', fontSize: '20px' }
         },
         reversedStacks: false
       },
@@ -234,7 +236,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
           maxPointWidth: 80,
           stacking: true,
           dataLabels: {
-            enabled: true,
+            enabled: showLabels,
             format: measure.type === 'percentage' ? '{y:.1f}%' : '{y}'
           }
         }
@@ -249,7 +251,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
         shared: false
       },
       legend: {
-        enabled: this.props.seriesList.length > 1
+        enabled: showLegend && this.props.seriesList.length > 1
       },
       drilldown: {
         allowPointDrilldown: false

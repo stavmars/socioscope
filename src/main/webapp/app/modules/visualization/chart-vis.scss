@@ -65,3 +65,8 @@ $axis-labels-font-size: 15px;
     border-radius: 0;
   }
 }
+
+.highcharts-legend-item,
+.highcharts-tooltip {
+  font-family: 'BPnoScriptBold';
+}
