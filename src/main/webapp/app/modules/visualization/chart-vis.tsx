@@ -190,7 +190,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
     const options = {
       chart: {
         type: xAxisDimension.type === 'time' ? 'spline' : 'column',
-        height: '50%',
+        height: window.innerWidth > 768 ? '50%' : null,
         zoomType: 'x',
         className: dataset.colorScheme,
         events: {
@@ -214,20 +214,20 @@ export class ChartVis extends React.Component<IChartVisProp> {
         type: xAxisDimension.type === 'time' ? 'datetime' : 'category',
         title: {
           text: translateEntityField(xAxisDimension.name),
-          style: { fontFamily: 'BPnoScriptBold', fontSize: '15px' }
+          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '15px' : '9px' }
         },
         labels: {
-          style: { fontFamily: 'BPnoScriptBold', fontSize: '20px' }
+          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '20px' : '7px' }
         },
         offset: 2
       },
       yAxis: {
         title: {
           text: translateEntityField(measure.name),
-          style: { fontFamily: 'BPnoScriptBold', fontSize: '15px' }
+          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '15px' : '10px' }
         },
         labels: {
-          style: { fontFamily: 'BPnoScriptBold', fontSize: '20px' }
+          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerHeight > 768 ? '20px' : '10px' }
         },
         reversedStacks: false
       },
