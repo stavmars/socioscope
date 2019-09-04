@@ -628,12 +628,12 @@ a.disabled {
     opacity: 1;
   }
   &.color-scheme-1 {
-    background: $color-scheme-1-accent;
+    background: $color-scheme-1-accent !important;
   }
   &.color-scheme-2 {
-    background: $color-scheme-2-accent;
+    background: $color-scheme-2-accent !important;
   }
   &.color-scheme-3 {
-    background: $color-scheme-3-accent;
+    background: $color-scheme-3-accent !important;
   }
 }

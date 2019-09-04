@@ -156,6 +156,10 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
               dimension={dimension}
               codes={dimensionCodes[dimension.id].codes}
               colorScheme={colorScheme}
+              dataset={dataset}
+              setFilterValue={this.props.setFilterValue}
+              removeFilter={this.props.removeFilter}
+              seriesOptions={seriesOptions}
             />
           ))}
         </div>
