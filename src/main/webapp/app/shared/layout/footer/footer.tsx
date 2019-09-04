@@ -56,7 +56,7 @@ const Footer = () => (
       <div id="app-footer">
         <Grid stackable>
           <Grid.Row>
-            <Grid.Column compiter={6} tablet={6}>
+            <Grid.Column widescreen={4} compiter={6} tablet={6}>
               <List id="app-footer-links" horizontal bulleted>
                 <List.Item as={HashLink} to="/about#project">
                   {translate('footer.about')}
