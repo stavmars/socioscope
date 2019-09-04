@@ -120,7 +120,7 @@ export class VisMobileLowerToolbar extends React.Component<IVisMobileLowerToolba
             </Dropdown>
           </Menu.Item>
           <Menu.Item style={{ marginRight: '5%' }}>
-            <Image src="/content/images/Assets/Tooltip.svg" style={{ width: '34.86px', height: '34.86px' }} />
+            <Image src="/content/images/Assets/Tooltip.svg" style={{ width: '34.86px', height: '34.86px' }} disabled />
           </Menu.Item>
         </Menu>
       </div>
