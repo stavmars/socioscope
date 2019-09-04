@@ -17,6 +17,7 @@ import {
   updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import _ from 'lodash';
+import ButtonGroupFilter from 'app/modules/dataset-page/ButtonGroupFilter';
 
 export interface IVisSeriesOptionMenuProp {
   dataset: IDataSet;
@@ -147,6 +148,16 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
               removeFilter={this.props.removeFilter}
             />
           )}
+        </div>
+        <div className="button-group-filters">
+          {dataset.dimensions.filter(dimension => dimension.filterWidget === 'button-group').map(dimension => (
+            <ButtonGroupFilter
+              key={dimension.id}
+              dimension={dimension}
+              codes={dimensionCodes[dimension.id].codes}
+              colorScheme={colorScheme}
+            />
+          ))}
         </div>
       </div>
     );

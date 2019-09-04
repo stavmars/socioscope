@@ -284,7 +284,7 @@
       "en": "Gender"
     },
     "type": "coded",
-    "filterWidget": "icon-button-group"
+    "filterWidget": "button-group"
   },
   {
     "id": "q2",
@@ -310,7 +310,7 @@
       "en": "Social Class Index"
     },
     "type": "coded",
-    "filterWidget": "icon-button-group"
+    "filterWidget": "button-group"
   },
   {
     "id": "q10a",

@@ -58,36 +58,38 @@ export class RawDatasetFilters extends React.Component<IRawDatasetFiltersProp, I
       <div>
         <Dropdown className={`vis-options-dropdown ${dataset.colorScheme}`} fluid scrolling placeholder="Επιλέξτε 1 ή παραπάνω φίλτρα">
           <Accordion as={Dropdown.Menu}>
-            {dataset.dimensions.filter(dimension => dimension.type !== 'time' && !dimension.disableFilter).map(dimension => (
-              <Dropdown.Item
-                key={dimension.id}
-                disabled={dimension.id === seriesOptions.xAxis || dimension.id === seriesOptions.compareBy}
-                onClick={this.handleAccordionClick}
-                index={dimension.id}
-              >
-                <Accordion.Title
+            {dataset.dimensions
+              .filter(dimension => dimension.type !== 'time' && !dimension.disableFilter && !dimension.filterWidget)
+              .map(dimension => (
+                <Dropdown.Item
+                  key={dimension.id}
+                  disabled={dimension.id === seriesOptions.xAxis || dimension.id === seriesOptions.compareBy}
                   onClick={this.handleAccordionClick}
                   index={dimension.id}
-                  className="filter-accordion-title"
-                  active={expandedId === dimension.id}
-                  content={translateEntityField(dimension.name)}
-                />
-                <Accordion.Content active={expandedId === dimension.id}>
-                  <List relaxed verticalAlign="middle">
-                    {dimensionCodes[dimension.id].codes.map(code => (
-                      <List.Item onClick={this.handleFilterChange(dimension.id)} code={code.notation} key={code.notation}>
-                        <List.Icon
-                          name={code.notation === seriesOptions.dimensionFilters[dimension.id] ? 'dot circle outline' : 'circle outline'}
-                        />
-                        <List.Content>
-                          <List.Description className="dropdown-description">{translateEntityField(code.name)}</List.Description>
-                        </List.Content>
-                      </List.Item>
-                    ))}
-                  </List>
-                </Accordion.Content>
-              </Dropdown.Item>
-            ))}
+                >
+                  <Accordion.Title
+                    onClick={this.handleAccordionClick}
+                    index={dimension.id}
+                    className="filter-accordion-title"
+                    active={expandedId === dimension.id}
+                    content={translateEntityField(dimension.name)}
+                  />
+                  <Accordion.Content active={expandedId === dimension.id}>
+                    <List relaxed verticalAlign="middle">
+                      {dimensionCodes[dimension.id].codes.map(code => (
+                        <List.Item onClick={this.handleFilterChange(dimension.id)} code={code.notation} key={code.notation}>
+                          <List.Icon
+                            name={code.notation === seriesOptions.dimensionFilters[dimension.id] ? 'dot circle outline' : 'circle outline'}
+                          />
+                          <List.Content>
+                            <List.Description className="dropdown-description">{translateEntityField(code.name)}</List.Description>
+                          </List.Content>
+                        </List.Item>
+                      ))}
+                    </List>
+                  </Accordion.Content>
+                </Dropdown.Item>
+              ))}
           </Accordion>
         </Dropdown>
         {
