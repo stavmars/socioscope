@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { IRootState } from 'app/shared/reducers';
 import './dataset-page.scss';
-import { Accordion, Dropdown, List, Image, Button } from 'semantic-ui-react';
+import { Accordion, Dropdown, Image, List } from 'semantic-ui-react';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
@@ -96,6 +96,7 @@ export class RawDatasetFilters extends React.Component<IRawDatasetFiltersProp, I
           <div className="remove-filters">
             {_.map(seriesOptions.dimensionFilters, (value, dimensionId) => {
               const dimension = dataset.dimensions.find(dim => dim.id === dimensionId);
+              if (dimension.filterWidget === 'button-group') return <></>;
               return (
                 <div className="remove-filter" key={dimensionId}>
                   <Image
