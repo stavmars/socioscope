@@ -56,7 +56,7 @@ const Footer = () => (
       <div id="app-footer">
         <Grid stackable>
           <Grid.Row>
-            <Grid.Column widescreen={4} compiter={6} tablet={6}>
+            <Grid.Column computer={window.innerWidth > 1920 ? 4 : 6} tablet={6}>
               <List id="app-footer-links" horizontal bulleted>
                 <List.Item as={HashLink} to="/about#project">
                   {translate('footer.about')}
@@ -67,7 +67,7 @@ const Footer = () => (
               </List>
               <Image id="app-footer-logo" src="/content/images/Assets/Logo-white.png" as="a" href="/" />
             </Grid.Column>
-            <Grid.Column compiter={4} tablet={4}>
+            <Grid.Column computer={4} tablet={4}>
               <div style={{ height: 40 }}>{translate('footer.collaboration')}</div>
               <Image.Group>
                 <Image
@@ -80,14 +80,14 @@ const Footer = () => (
                 <Image src="/content/images/Assets/athena.png" as="a" href="https://www.athena-innovation.gr" target="_blank" />
               </Image.Group>
             </Grid.Column>
-            <Grid.Column compiter={2} tablet={3}>
+            <Grid.Column computer={2} tablet={3}>
               <div style={{ height: 40 }}>CC BY 4.0</div>
               <Image.Group>
                 <Image src="/content/images/Assets/cc.png" />
                 <Image src="/content/images/Assets/person.png" />
               </Image.Group>
             </Grid.Column>
-            <Grid.Column compiter={4} tablet={3}>
+            <Grid.Column computer={4} tablet={3}>
               <div style={{ height: 25 }} />
               <Image src={localeImage()} />
             </Grid.Column>
