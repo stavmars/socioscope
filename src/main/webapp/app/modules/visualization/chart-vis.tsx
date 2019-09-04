@@ -13,7 +13,7 @@ import { ISeriesPoint } from 'app/shared/model/series-point.model';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeries } from 'app/shared/model/series.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
-import { accentColors, chartColors } from 'app/config/constants';
+import { accentColors, backgroundColors, chartColors } from 'app/config/constants';
 // tslint:disable:no-submodule-imports
 import HC_exporting from 'highcharts/modules/exporting';
 import moment from 'moment';
@@ -101,19 +101,47 @@ export class ChartVis extends React.Component<IChartVisProp> {
   }
 
   exportSVG() {
-    this.innerChart.current.chart.exportChart({ type: 'image/svg+xml' }, {});
+    this.innerChart.current.chart.exportChart(
+      { type: 'image/svg+xml' },
+      {
+        chart: {
+          height: '100%'
+        }
+      }
+    );
   }
 
   exportPNG() {
-    this.innerChart.current.chart.exportChart({ type: 'image/png' }, {});
+    this.innerChart.current.chart.exportChart(
+      { type: 'image/png' },
+      {
+        chart: {
+          height: '100%'
+        }
+      }
+    );
   }
 
   exportPDF() {
-    this.innerChart.current.chart.exportChart({ type: 'application/pdf' }, {});
+    this.innerChart.current.chart.exportChart(
+      { type: 'application/pdf' },
+      {
+        chart: {
+          height: '100%'
+        }
+      }
+    );
   }
 
   exportJPEG() {
-    this.innerChart.current.chart.exportChart({ type: 'image/jpeg' }, {});
+    this.innerChart.current.chart.exportChart(
+      { type: 'image/jpeg' },
+      {
+        chart: {
+          height: '100%'
+        }
+      }
+    );
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -237,7 +265,10 @@ export class ChartVis extends React.Component<IChartVisProp> {
           stacking: true,
           dataLabels: {
             enabled: showLabels,
-            format: measure.type === 'percentage' ? '{y:.1f}%' : '{y}'
+            format: measure.type === 'percentage' ? '{y:.1f}%' : '{y}',
+            style: {
+              fontFamily: 'BPnoScriptBold'
+            }
           }
         }
       },
