@@ -12,6 +12,7 @@ export interface IDimension {
   disableFilter?: boolean;
   disableAxis?: boolean;
   composedOf?: string[];
+  filterWidget?: string;
 }
 
 export interface IGeoMap {

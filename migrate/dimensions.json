@@ -283,7 +283,8 @@
       "el": "Φύλο",
       "en": "Gender"
     },
-    "type": "coded"
+    "type": "coded",
+    "filterWidget": "icon-button-group"
   },
   {
     "id": "q2",
@@ -295,7 +296,8 @@
       "el": "Τάξη φοίτησης",
       "en": "Class year"
     },
-    "type": "coded"
+    "type": "coded",
+    "filterWidget": "button-group"
   },
   {
     "id": "INDEX",
@@ -307,7 +309,8 @@
       "el": "Δείκτης Κοινωνικής Προέλευσης",
       "en": "Social Class Index"
     },
-    "type": "coded"
+    "type": "coded",
+    "filterWidget": "icon-button-group"
   },
   {
     "id": "q10a",

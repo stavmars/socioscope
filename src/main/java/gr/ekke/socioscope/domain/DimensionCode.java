@@ -1,10 +1,13 @@
 package gr.ekke.socioscope.domain;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.Document;
-import javax.validation.constraints.*;
+import org.springframework.data.mongodb.core.mapping.Field;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Map;
 import java.util.Objects;
@@ -34,17 +37,25 @@ public class DimensionCode implements Serializable {
     @Field("name")
     private Map<String, @NotBlank String> name;
 
+    private Map<String, @NotBlank String> shortName;
+
     @Field("description")
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private Map<String, String> description;
 
     @Field("parent_id")
     private String parentId;
 
     @Field("order")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Integer order;
 
     @Field("color")
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private String color;
+
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    private String iconURL;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
@@ -59,17 +70,21 @@ public class DimensionCode implements Serializable {
         return dimensionId;
     }
 
+    public void setDimensionId(String dimensionId) {
+        this.dimensionId = dimensionId;
+    }
+
     public DimensionCode dimensionId(String dimensionId) {
         this.dimensionId = dimensionId;
         return this;
     }
 
-    public void setDimensionId(String dimensionId) {
-        this.dimensionId = dimensionId;
-    }
-
     public String getNotation() {
         return notation;
+    }
+
+    public void setNotation(String notation) {
+        this.notation = notation;
     }
 
     public DimensionCode notation(String notation) {
@@ -77,12 +92,12 @@ public class DimensionCode implements Serializable {
         return this;
     }
 
-    public void setNotation(String notation) {
-        this.notation = notation;
-    }
-
     public Map<String, String> getName() {
         return name;
+    }
+
+    public void setName(Map<String, String> name) {
+        this.name = name;
     }
 
     public DimensionCode name(Map<String, String> name) {
@@ -90,12 +105,20 @@ public class DimensionCode implements Serializable {
         return this;
     }
 
-    public void setName(Map<String, String> name) {
-        this.name = name;
+    public Map<String, String> getShortName() {
+        return shortName;
+    }
+
+    public void setShortName(Map<String, String> shortName) {
+        this.shortName = shortName;
     }
 
     public Map<String, String> getDescription() {
         return description;
+    }
+
+    public void setDescription(Map<String, String> description) {
+        this.description = description;
     }
 
     public DimensionCode description(Map<String, String> description) {
@@ -103,12 +126,12 @@ public class DimensionCode implements Serializable {
         return this;
     }
 
-    public void setDescription(Map<String, String> description) {
-        this.description = description;
-    }
-
     public String getParentId() {
         return parentId;
+    }
+
+    public void setParentId(String parentId) {
+        this.parentId = parentId;
     }
 
     public DimensionCode parentId(String parentId) {
@@ -116,12 +139,12 @@ public class DimensionCode implements Serializable {
         return this;
     }
 
-    public void setParentId(String parentId) {
-        this.parentId = parentId;
-    }
-
     public Integer getOrder() {
         return order;
+    }
+
+    public void setOrder(Integer order) {
+        this.order = order;
     }
 
     public DimensionCode order(Integer order) {
@@ -129,12 +152,12 @@ public class DimensionCode implements Serializable {
         return this;
     }
 
-    public void setOrder(Integer order) {
-        this.order = order;
-    }
-
     public String getColor() {
         return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public DimensionCode color(String color) {
@@ -142,9 +165,14 @@ public class DimensionCode implements Serializable {
         return this;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public String getIconURL() {
+        return iconURL;
     }
+
+    public void setIconURL(String iconURL) {
+        this.iconURL = iconURL;
+    }
+
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override

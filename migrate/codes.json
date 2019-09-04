@@ -8658,7 +8658,8 @@
     "name": {
       "el": "κορίτσι",
       "en": "Girl"
-    }
+    },
+    "iconURL": "/content/images/Assets/Girl.svg"
   },
   {
     "dimensionId": "q1",
@@ -8668,7 +8669,8 @@
     "name": {
       "el": "αγόρι",
       "en": "Boy"
-    }
+    },
+    "iconURL": "/content/images/Assets/Boy.svg"
   },
   {
     "dimensionId": "q1",
@@ -8688,6 +8690,10 @@
     "name": {
       "el": "1η Γυμνασίου",
       "en": "7th Grade"
+    },
+    "shortName": {
+      "el": "Α'",
+      "en": "7th"
     }
   },
   {
@@ -8698,6 +8704,10 @@
     "name": {
       "el": "2α Γυμνασίου",
       "en": "8th Grade"
+    },
+    "shortName": {
+      "el": "Β'",
+      "en": "8th"
     }
   },
   {
@@ -8708,6 +8718,10 @@
     "name": {
       "el": "3η Γυμνασίου",
       "en": "9th Grade"
+    },
+    "shortName": {
+      "el": "Γ'",
+      "en": "9th"
     }
   },
   {
@@ -9848,7 +9862,8 @@
     "name": {
       "el": "Χαμηλή κοινωνική προέλευση",
       "en": "Low social origin"
-    }
+    },
+    "iconURL": "/content/images/Assets/Social-1.svg"
   },
   {
     "dimensionId": "INDEX",
@@ -9858,7 +9873,8 @@
     "name": {
       "el": "Μέση κοινωνική προέλευση",
       "en": "Medium social origin"
-    }
+    },
+    "iconURL": "/content/images/Assets/Social-2.svg"
   },
   {
     "dimensionId": "INDEX",
@@ -9868,7 +9884,8 @@
     "name": {
       "el": "Υψηλή κοινωνική προέλευση",
       "en": "High social origin"
-    }
+    },
+    "iconURL": "/content/images/Assets/Social-3.svg"
   },
   {
     "dimensionId": "INDEX",
