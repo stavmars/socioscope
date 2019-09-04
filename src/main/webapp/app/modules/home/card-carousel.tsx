@@ -9,12 +9,15 @@ export class CardCarousel extends React.Component {
       infinite: true,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      useCSS: true
     };
 
     return (
       <div>
-        <Slider {...settings}>{this.props.children}</Slider>
+        <Slider {...settings} className="slider">
+          {this.props.children}
+        </Slider>
         <br />
         <br />
       </div>

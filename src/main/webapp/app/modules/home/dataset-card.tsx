@@ -63,7 +63,8 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
               </Grid.Column>
               <Grid.Column>
                 <div className={`dataset-card-desc ${colorScheme}`}>{this.props.children}</div>
-                <Container textAlign="center">
+                <Container>
+                  <br />
                   <Link
                     className={`dataset-card-link ${colorScheme}`}
                     to={`/dataset/${dataset.id}/data?${urlEncodeVisOptions({ visType, seriesOptions })}`}
