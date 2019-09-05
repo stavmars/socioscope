@@ -16,7 +16,7 @@ import ErrorBoundary from 'app/shared/error/error-boundary';
 import { AUTHORITIES } from 'app/config/constants';
 import AppRoutes from 'app/routes';
 import LoadingBar from 'react-redux-loading-bar';
-import { Storage, Translate } from 'react-jhipster';
+import { Storage, Translate, translate } from 'react-jhipster';
 import { Dimmer, Loader, Menu, Responsive, Sidebar } from 'semantic-ui-react';
 import {
   hideHeader,
@@ -32,6 +32,7 @@ import { getEntities } from 'app/entities/data-set/data-set.reducer';
 import TopicsMegaMenu from 'app/shared/layout/header/topics-mega-menu';
 import MobileMenu from './modules/mobile/mobile-menu';
 import MobileVisMenu from './modules/mobile/mobile-vis-menu';
+import CookieConsent from 'react-cookie-consent';
 
 export interface IAppProps extends StateProps, DispatchProps {}
 
@@ -124,7 +125,7 @@ export class App extends React.Component<IAppProps> {
                 </div>
               </Sidebar.Pusher>
             </Sidebar.Pushable>
-            {/*            <CookieConsent
+            <CookieConsent
               location="bottom"
               buttonText={translate('cookie.dismiss')}
               cookieName="myAwesomeCookieName2"
@@ -134,7 +135,7 @@ export class App extends React.Component<IAppProps> {
             >
               {translate('cookie.message')}{' '}
               <a href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm">{translate('cookie.link')}</a>
-            </CookieConsent>*/}
+            </CookieConsent>
           </div>
         </Router>
       );
