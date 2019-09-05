@@ -157,8 +157,8 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
         </div>
         <div className="button-group-filters">
           {demographics.length > 0 && (
-            <Grid>
-              <Grid.Row centered>
+            <Grid style={{ paddingLeft: '15px' }}>
+              <Grid.Row>
                 <ButtonGroupFilter
                   key={demographics[0].id}
                   dimension={demographics[0]}
@@ -181,7 +181,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
                   seriesOptions={seriesOptions}
                 />
               </Grid.Row>
-              <Grid.Row centered>
+              <Grid.Row>
                 <ButtonGroupFilter
                   key={demographics[2].id}
                   dimension={demographics[2]}
