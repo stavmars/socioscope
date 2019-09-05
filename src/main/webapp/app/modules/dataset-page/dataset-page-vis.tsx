@@ -191,6 +191,8 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       dimensionCodes={dimensionCodes}
                       loadingSeries={loadingSeries}
                       ref={this.chartRef}
+                      showLabels
+                      showLegend
                     />
                   )}
                 </div>

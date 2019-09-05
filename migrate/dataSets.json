@@ -6,7 +6,7 @@
       "en": "Election Results"
     },
     "type": "qb",
-    "colorScheme": "color-scheme-3",
+    "colorScheme": "color-scheme-1",
     "comment": {
       "el": "Το σύνολο δεδομένων περιλαμβάνει όλα τα επίσημα εκλογικά αποτελέσματα των Εθνικών Εκλογών (Σεπτέμβριος 1996 - Ιανουάριος 2015). Δίνεται η δυνατότητα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης σε επίπεδο Εκλογικής Περιφέρειας και Καλλικρατικού Δήμου.",
       "en": "The data set includes all the official election results of the National Elections (September 1996 - January 2015). Users have the option to produce graphs and maps at the level of the electoral district and Municipality."
@@ -248,7 +248,7 @@
       "en": "Profile and Values of Teenagers"
     },
     "type": "raw",
-    "colorScheme": "color-scheme-1",
+    "colorScheme": "color-scheme-3",
     "comment": {
       "el": "<h3>ΤΑΥΤΟΤΗΤΑ:</h3><p>Τα δεδομένα προέρχονται από έρευνα πεδίου σε 4 σχολικές μονάδες της Αθήνας, σε περιοχές διαφορετικού κοινωνικο-οικονομικού status. 792 μαθητές των τριών τάξεων Γυμνασίου συμπλήρωσαν έντυπο ανώνυμο ερωτηματολόγιο. Η συλλογή των δεδομένων έγινε στο διάστημα Φεβρουαρίου-Μαρτίου 2018.</p><h3>ΕΠΙΣΤΗΜΟΝΙΚΗ ΟΜΑΔΑ:</h3><p>Επιστημονικοί Υπεύθυνοι: Κ. Ηλιού, Μ. Κακεπάκη<br/><br/> Διενέργεια έρευνας πεδίου: κ. Ηλιού, Μ. Κακεπάκη, Ν. Κληρονόμος, Κ. Πάσχου, I., Σαχίνης, Α. Σιαφάκας, Ν. Σαριδάκης</p><h3>ΠΗΓΗ ΧΡΗΜΑΤΟΔΟΤΗΣΗΣ:</h3><p>Γενική Γραμματεία Έρευνας και Τεχνολογίας, ΕΣΠΑ 2014-2020<br/><br/>Έργο: «Έρευνα, Εκπαίδευση και Υποδομές: ο τριγωνισμός των αξόνων στρατηγικής ανάπτυξης του ΕΚΚΕ (REDI)», ΠΕ5: «Youth Print Web Platform (YouWeP)»<br/><br/>ΑΡΧΕΣ ΔΕΟΝΤΟΛΟΓΙΑΣ ΕΡΕΥΝΑΣ: Σε όλα τα στάδια της έρευνας υιοθετείται ο <a href=\"https://www.apa.org/ethics/code/index\" target=\"_blank\">APA’s Ethics Code</a>.</p>",
       "en": "<h3>IDENTITY:</h3><p>The data comes from field research in 4 schools in Athens, in areas of different socio-economic status. 792 students of the three Gymnasium classes completed an anonymous questionnaire. Data collection took place between February and March 2018.</p><h3>SCIENTIFIC TEAM:</h3><p>Project Supervisors: K. Iliou, M. Kakepaki<br/><br/> Fieldwork team: K. Iliou, M. Kakepaki, N. Klironomos, K. Paschou, I. Sahinis, A. Siafakas, N. Saridakis</p><h3>FUNDING:</h3><p>General Secretariat for Research and Technology, NSRF 2014-2020<br/><br/>Project: \"Research, Education and Infrastructure: REDI triangulation of strategic development axes\", WP5: \"Youth Print Web Platform (YouWeP)\"<br/><br/>PRINCIPLES OF RESEARCH: <a href=\"https://www.apa.org/ethics/code/index\" target=\"_blank\">APA’s Ethics Code</a> is adopted at all stages of the research.</p>"
@@ -585,7 +585,7 @@
       "en": "Social Protests - PROMAP"
     },
     "type": "raw",
-    "colorScheme": "color-scheme-1",
+    "colorScheme": "color-scheme-3",
     "comment": {
       "el": "Αντικείμενο της θεματικής βάσης PROMAP είναι η συλλογή, κωδικοποίηση, ανάλυση και χαρτογραφική αναπαράσταση των αιτημάτων κοινωνικής διαμαρτυρίας στην Ελλάδα την περίοδο 1996-2014 με υπολογιστικές μεθόδους εξόρυξης και ανάλυσης περιεχομένου οι οποίες βασίζονται σε εργαλεία και τεχνικές γλωσσικών τεχνολογιών (Natural Language Processing tools). Το περιεχόμενο αντλήθηκε από δημοσιεύματα δύο εφημερίδων, της Καθημερινής και της Αυγής, για το προαναφερόμενο διάστημα. Η διαδικτυακή εφαρμογή του Καλειδοσκοπίου (socioscope.gr) προσφέρει στον χρήστη τη δυνατότητα να αναζητήσει και να ανασυνθέσει τις μορφές διαμαρτυρίας, τους κύριους δρώντες, το ακριβές περιεχόμενο των αιτημάτων, αλλά και τη χωρική τους ταυτότητα για το διάστημα αναφοράς του έργου. Το έργο υλοποιήθηκε σε συνεργασία με το Ινστιτούτο Επεξεργασίας Λόγου (ΙΕΛ) και Ινστιτούτο Πληροφοριακών συστημάτων (ΙΠΣΥ) του ερευνητικού κέντρου «Αθηνά».",
       "en": "The aim of the PROMAP thematic database is the collection, coding, analysis and cartographic representation of the social protest claims in Greece durind the period 1996-2014 with computational methods of extraction and analysis of content based on natural language processing tools and techniques. The content was drawn from two newspapers, Kathimerini and Avgi, for the aforementioned period. The Kaleidoscope web application (socioscope.gr) offers the user the opportunity to search for and reconstruct the forms of protest, the main actors, the exact content of the requests, and their spatial identity for the project reference period. The project was implemented in collaboration with the Institute for Language and Speech Processing (ILSP) and the Institute of Information Systems (IIS) of the Athena Research Center."

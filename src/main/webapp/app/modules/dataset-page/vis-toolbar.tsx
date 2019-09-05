@@ -152,7 +152,10 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                     <Dropdown.Menu>
                       <Popup
                         on="click"
-                        content="Copied link!"
+                        content={translate('copy.message')}
+                        style={{
+                          fontSize: '12px'
+                        }}
                         trigger={<Dropdown.Item icon="linkify" text="Link" onClick={this.props.copyCurrentURL} />}
                         basic
                       />

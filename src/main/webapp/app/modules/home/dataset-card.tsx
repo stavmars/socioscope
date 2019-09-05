@@ -55,13 +55,16 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
                         seriesOptions={seriesOptions}
                         dimensionCodes={dimensionCodes}
                         loadingSeries={false}
+                        showLabels={false}
+                        showLegend={false}
                       />
                     ))}
                 </div>
               </Grid.Column>
               <Grid.Column>
                 <div className={`dataset-card-desc ${colorScheme}`}>{this.props.children}</div>
-                <Container textAlign="center">
+                <Container>
+                  <br />
                   <Link
                     className={`dataset-card-link ${colorScheme}`}
                     to={`/dataset/${dataset.id}/data?${urlEncodeVisOptions({ visType, seriesOptions })}`}

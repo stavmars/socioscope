@@ -13,7 +13,7 @@ import { ISeriesPoint } from 'app/shared/model/series-point.model';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeries } from 'app/shared/model/series.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
-import { accentColors, chartColors } from 'app/config/constants';
+import { accentColors, backgroundColors, chartColors } from 'app/config/constants';
 // tslint:disable:no-submodule-imports
 import HC_exporting from 'highcharts/modules/exporting';
 import moment from 'moment';
@@ -27,6 +27,8 @@ export interface IChartVisProp {
   seriesOptions: ISeriesOptions;
   dimensionCodes: any;
   loadingSeries: boolean;
+  showLegend: boolean;
+  showLabels: boolean;
 }
 
 const prepareSeriesByParent = (codesByNotation, seriesList: ISeries[]) =>
@@ -99,19 +101,47 @@ export class ChartVis extends React.Component<IChartVisProp> {
   }
 
   exportSVG() {
-    this.innerChart.current.chart.exportChart({ type: 'image/svg+xml' }, {});
+    this.innerChart.current.chart.exportChart(
+      { type: 'image/svg+xml' },
+      {
+        chart: {
+          height: '100%'
+        }
+      }
+    );
   }
 
   exportPNG() {
-    this.innerChart.current.chart.exportChart({ type: 'image/png' }, {});
+    this.innerChart.current.chart.exportChart(
+      { type: 'image/png' },
+      {
+        chart: {
+          height: '100%'
+        }
+      }
+    );
   }
 
   exportPDF() {
-    this.innerChart.current.chart.exportChart({ type: 'application/pdf' }, {});
+    this.innerChart.current.chart.exportChart(
+      { type: 'application/pdf' },
+      {
+        chart: {
+          height: '100%'
+        }
+      }
+    );
   }
 
   exportJPEG() {
-    this.innerChart.current.chart.exportChart({ type: 'image/jpeg' }, {});
+    this.innerChart.current.chart.exportChart(
+      { type: 'image/jpeg' },
+      {
+        chart: {
+          height: '100%'
+        }
+      }
+    );
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -119,7 +149,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
   }
 
   render() {
-    const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries } = this.props;
+    const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, showLabels, showLegend } = this.props;
     const { dimensions, colorScheme } = dataset;
     const { compareBy } = seriesOptions;
     const xAxisDimension = _.find(dimensions, { id: seriesOptions.xAxis }) as IDimension;
@@ -188,7 +218,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
     const options = {
       chart: {
         type: xAxisDimension.type === 'time' ? 'spline' : 'column',
-        height: '50%',
+        height: window.innerWidth > 768 ? '50%' : null,
         zoomType: 'x',
         className: dataset.colorScheme,
         events: {
@@ -212,20 +242,20 @@ export class ChartVis extends React.Component<IChartVisProp> {
         type: xAxisDimension.type === 'time' ? 'datetime' : 'category',
         title: {
           text: translateEntityField(xAxisDimension.name),
-          style: { fontFamily: 'BPnoScriptBold', fontSize: '12px' }
+          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '15px' : '9px' }
         },
         labels: {
-          style: { fontFamily: 'BPnoScriptBold', fontSize: '16px' }
+          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '20px' : '7px' }
         },
         offset: 2
       },
       yAxis: {
         title: {
           text: translateEntityField(measure.name),
-          style: { fontFamily: 'BPnoScriptBold', fontSize: '12px' }
+          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '15px' : '10px' }
         },
         labels: {
-          style: { fontFamily: 'BPnoScriptBold', fontSize: '16px' }
+          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerHeight > 768 ? '20px' : '10px' }
         },
         reversedStacks: false
       },
@@ -234,8 +264,11 @@ export class ChartVis extends React.Component<IChartVisProp> {
           maxPointWidth: 80,
           stacking: true,
           dataLabels: {
-            enabled: true,
-            format: measure.type === 'percentage' ? '{y:.1f}%' : '{y}'
+            enabled: showLabels,
+            format: measure.type === 'percentage' ? '{y:.1f}%' : '{y}',
+            style: {
+              fontFamily: 'BPnoScriptBold'
+            }
           }
         }
       },
@@ -249,7 +282,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
         shared: false
       },
       legend: {
-        enabled: this.props.seriesList.length > 1
+        enabled: showLegend && this.props.seriesList.length > 1
       },
       drilldown: {
         allowPointDrilldown: false

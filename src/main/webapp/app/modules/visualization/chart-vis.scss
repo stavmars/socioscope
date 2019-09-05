@@ -8,11 +8,22 @@ $axis-labels-font-size: 15px;
 
 .highcharts-axis-title {
   fill: #1e1e1e;
+  @include mobile {
+    font-size: 9px;
+  }
+  @include computer {
+    font-size: 15px;
+  }
 }
 
 .highcharts-axis-labels {
   fill: #1e1e1e;
-  font-size: 16px;
+  @include mobile {
+    font-size: 16px;
+  }
+  @include computer {
+    font-size: 20px;
+  }
 }
 
 .highcharts-grid-line {
@@ -64,4 +75,8 @@ $axis-labels-font-size: 15px;
     font-size: 15px;
     border-radius: 0;
   }
+}
+
+.highcharts-legend-item {
+  font-family: 'BPnoScriptBold';
 }
