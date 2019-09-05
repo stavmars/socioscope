@@ -146,7 +146,8 @@
     "collaboration": "A collaboration of"
   },
   "about": {
-    "title": "Kaleidoscope of Social Data",
+    "title": "Socioscope",
+    "content": "Socioscope is a collaboration between the<a href=\"https://www.ekke.gr\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\"> National Centre for Social Research</a> and the <a href=\"https://www.athena-innovation.gr/el/imis_dm\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\">Institute of Information Systems of ATHENA Research Center</a>. It was developed in the framework of the project \"Dynamic Management of Social Databases and Cartographic Representations\" of the “CRIPIS” invitation of the GSRT(ESPA 2013-2015) and the first version can be found <a href=\"http://sodamap.imis.athena-innovation.gr/\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\">here</a>. It is enriched and redesigned in the framework of the project \"Research, Education and Infrastructure:The Triangle of EKKE Strategic Development Axes (REDI)\", WP5: \"Youth Print Web Platform(YouWeP)\" of the GSRT(ESPA 2014-2020)<br /><br />It is a platform for the visualization and mapping of social and political data with the aim of supporting and enhancing social research and disseminating open social data to the general public. The data are categorized in thematic areas and are open for use under permission <a href=\"http://creativecommons.org/licenses/by/4.0\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\">http://creativecommons.org/licenses/by/4.0/.</a>",
     "project": "Project",
     "team": {
       "title": "Scientific Team",
@@ -175,7 +176,7 @@
     "techTeam": {
       "title": "Tech Team",
       "analysis": "Analysis & Design",
-      "develop": "Kaleidoscope Development",
+      "develop": "Socioscope Development",
       "gpapas": {
         "name": "Giorgos Papastefanatos",
         "role": "Research Associate, (ATHENA R.C.), <a href=\"mailto:gpapas@imis.athena-innovation.gr\" target=\"_blank\">gpapas@imis.athena-innovation.gr</a>"

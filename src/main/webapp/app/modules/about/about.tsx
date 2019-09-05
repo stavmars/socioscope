@@ -56,41 +56,7 @@ export class About extends React.Component<DispatchProps> {
               </Grid.Column>
               <Grid.Column computer={8} mobile={14}>
                 <div className="about-page-content">
-                  Το Καλειδοσκόπιο Κοινωνικών Δεδομένων αποτελεί συνεργασία μεταξύ του
-                  <a
-                    href="https://www.ekke.gr"
-                    style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }}
-                    target="_blank"
-                  >
-                    {' '}
-                    Εθνικού Κέντρου Κοινωνικών Ερευνών{' '}
-                  </a>
-                  και του
-                  <a
-                    href="https://www.athena-innovation.gr/el/imis_dm"
-                    style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }}
-                    target="_blank"
-                  >
-                    {' '}
-                    Ινστιτούτου Πληροφοριακών Συστημάτων του Ερευνητικού Κέντρου «ΑΘΗΝΑ».{' '}
-                  </a>
-                  Αναπτύχθηκε στα πλαίσια του έργου «Δυναμική Διαχείριση Βάσεων Κοινωνικών Δεδομένων και Χαρτογραφικών Αναπαραστάσεων» της
-                  πρόσκλησης «ΚΡΗΠΙΣ» της ΓΓΕΤ (ΕΣΠΑ 2013-2015). Εμπλουτίστηκε και επανασχεδιάστηκε στα πλαίσια του έργου «Έρευνα,
-                  Εκπαίδευση και Υποδομές: ο τριγωνισμός των αξόνων στρατηγικής ανάπτυξης του ΕΚΚΕ (REDI)», ΠΕ5: «Youth Print Web Platform
-                  (YouWeP)» της ΓΓΕΤ (ΕΣΠΑ 2014-2020).
-                  <br />
-                  <br />
-                  Αποτελεί πλατφόρμα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης κοινωνικών και πολιτικών δεδομένων με στόχο την
-                  υποστήριξη και ενίσχυση της κοινωνικής έρευνας και τη διάθεση ανοιχτών κοινωνικών δεδομένων στο ευρύ κοινό. Τα στοιχεία
-                  είναι κατηγοριοποιημένα γύρω από θεματικές περιοχές και διατίθενται ανοιχτά προς χρήση με άδεια
-                  <a
-                    href="http://creativecommons.org/licenses/by/4.0"
-                    style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }}
-                    target="_blank"
-                  >
-                    {' '}
-                    {'http://creativecommons.org/licenses/by/4.0/'}.
-                  </a>
+                  {translate('about.content')}
                   <br />
                   <br />
                   <br />
