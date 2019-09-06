@@ -257,6 +257,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
         labels: {
           style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerHeight > 768 ? '20px' : '10px' }
         },
+        max: measure.type === 'percentage' && this.props.seriesList.length > 1 ? 100 : null,
         reversedStacks: false
       },
       plotOptions: {
