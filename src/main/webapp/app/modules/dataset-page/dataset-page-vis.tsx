@@ -173,7 +173,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
               </Grid.Column>
               <Grid.Column mobile={16} tablet={15} computer={12}>
                 <Responsive {...Responsive.onlyMobile}>
-                  <VisMobileUpperToolbar dataset={dataset} seriesOptions={seriesOptions} visType={visType} />
+                  <VisMobileUpperToolbar dataset={dataset} seriesOptions={seriesOptions} visType={visType} resetGraph={this.resetGraph} />
                 </Responsive>
                 <Responsive minWidth={Responsive.onlyTablet.minWidth}>
                   <VisToolbar
