@@ -242,17 +242,17 @@ export class ChartVis extends React.Component<IChartVisProp> {
         type: xAxisDimension.type === 'time' ? 'datetime' : 'category',
         title: {
           text: translateEntityField(xAxisDimension.name),
-          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '15px' : '9px' }
+          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '20px' : '9px' }
         },
         labels: {
-          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '20px' : '7px' }
+          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '20px' : '9px' }
         },
         offset: 2
       },
       yAxis: {
         title: {
           text: translateEntityField(measure.name),
-          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '15px' : '10px' }
+          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '20px' : '10px' }
         },
         labels: {
           style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerHeight > 768 ? '20px' : '10px' }

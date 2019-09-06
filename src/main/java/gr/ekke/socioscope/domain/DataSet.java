@@ -53,6 +53,9 @@ public class DataSet implements Serializable {
     @Field("highlights")
     private List<Highlight> highlights = new ArrayList<>();
 
+    @Field("defaultOptions")
+    private SeriesOptions defaultOptions;
+
     @Field("colorScheme")
     private String colorScheme;
 
@@ -94,6 +97,19 @@ public class DataSet implements Serializable {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public SeriesOptions getDefaultOptions() {
+        return defaultOptions;
+    }
+
+    public DataSet defaultOptions(SeriesOptions defaultOptions) {
+        this.defaultOptions = defaultOptions;
+        return this;
+    }
+
+    public void setDefaultOptions(SeriesOptions defaultOptions) {
+        this.defaultOptions = defaultOptions;
     }
 
     public String getColorScheme() {

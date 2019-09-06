@@ -4,6 +4,7 @@ import { IUser } from 'app/shared/model/user.model';
 import { IHighlight } from 'app/shared/model/highlight.model';
 import { Moment } from 'moment';
 import { ILang } from 'app/shared/model/language.interface';
+import { ISeriesOptions } from './series-options.model';
 
 export interface IDataSet {
   id?: string;
@@ -17,6 +18,7 @@ export interface IDataSet {
   highlights?: IHighlight[];
   creator?: IUser;
   colorScheme?: string;
+  defaultOptions?: ISeriesOptions;
 }
 
 export const defaultValue: Readonly<IDataSet> = { name: {}, comment: {}, sources: {} };

@@ -40,7 +40,14 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   }
 
   componentDidMount() {
-    this.props.initVis(this.props.dataset, this.props.routeVisOptions);
+    if (this.props.routeVisOptions.visType) {
+      this.props.initVis(this.props.dataset, this.props.routeVisOptions);
+    } else {
+      this.props.initVis(this.props.dataset, {
+        visType: 'chart',
+        seriesOptions: this.props.dataset.defaultOptions
+      });
+    }
   }
 
   componentDidUpdate(prevProps: IDatasetPageVisProp) {
@@ -126,6 +133,12 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
     }
   };
 
+  resetGraph = e =>
+    this.props.updateVisOptions(this.props.dataset, {
+      visType: this.props.visType,
+      seriesOptions: this.props.visType === 'chart' ? this.props.dataset.defaultOptions : {}
+    });
+
   render() {
     const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, fetchedCodeLists, visType, updatingVisOptions } = this.props;
 
@@ -152,11 +165,12 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   addCode={this.props.addCode}
                   removeCode={this.props.removeCode}
                   removeCompare={this.props.removeCompare}
+                  resetGraph={this.resetGraph}
                 />
               </Grid.Column>
               <Grid.Column mobile={16} tablet={15} computer={12}>
                 <Responsive {...Responsive.onlyMobile}>
-                  <VisMobileUpperToolbar dataset={dataset} seriesOptions={seriesOptions} visType={visType} />
+                  <VisMobileUpperToolbar dataset={dataset} seriesOptions={seriesOptions} visType={visType} resetGraph={this.resetGraph} />
                 </Responsive>
                 <Responsive minWidth={Responsive.onlyTablet.minWidth}>
                   <VisToolbar
