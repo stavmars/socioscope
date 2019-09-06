@@ -1,7 +1,6 @@
 import React from 'react';
 import { translate } from 'react-jhipster';
 import { Container, Grid, Image } from 'semantic-ui-react';
-import { NavLink as Link } from 'react-router-dom';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { IHighlight } from 'app/shared/model/highlight.model';
 import { connect } from 'react-redux';
@@ -65,12 +64,12 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
                 <div className={`dataset-card-desc ${colorScheme}`}>{this.props.children}</div>
                 <Container>
                   <br />
-                  <Link
+                  <a
                     className={`dataset-card-link ${colorScheme}`}
-                    to={`/dataset/${dataset.id}/data?${urlEncodeVisOptions({ visType, seriesOptions })}`}
+                    href={`/dataset/${dataset.id}/data?${urlEncodeVisOptions({ visType, seriesOptions })}`}
                   >
                     {translate('home.dataset.explore')}
-                  </Link>
+                  </a>
                 </Container>
               </Grid.Column>
             </Grid.Row>
