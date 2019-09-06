@@ -12,18 +12,14 @@ import { IDimension } from 'app/shared/model/dimension.model';
 export interface IVisMobileUpperToolbarProp extends DispatchProps {
   dataset: IDataSet;
   visType: string;
+
+  resetGraph(e): void;
 }
 
 export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolbarProp> {
   constructor(props) {
     super(props);
   }
-
-  resetGraph = e =>
-    this.props.updateVisOptions(this.props.dataset, {
-      visType: this.props.visType,
-      seriesOptions: {}
-    });
 
   render() {
     const { dataset, visType } = this.props;
@@ -52,7 +48,7 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
             </h1>
           </Menu.Item>
           <Menu.Item position="right">
-            <Image onClick={this.resetGraph} src="/content/images/Assets/Reset.svg" />
+            <Image onClick={this.props.resetGraph} src="/content/images/Assets/Reset.svg" />
           </Menu.Item>
           <Menu.Item as={NavLink} to="?type=chart">
             {visType === 'chart' ? (

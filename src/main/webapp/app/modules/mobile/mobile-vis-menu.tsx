@@ -66,6 +66,7 @@ export class MobileVisMenu extends React.Component<IMobileVisMenuProps> {
               removeCode={this.props.removeCode}
               removeCompare={this.props.removeCompare}
               changeCompareBy={this.props.changeCompareBy}
+              resetGraph={null}
             />
           </List.Item>
         </List>
