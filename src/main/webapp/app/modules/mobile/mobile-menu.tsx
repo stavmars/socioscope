@@ -35,8 +35,8 @@ export class MobileMenu extends React.Component<IMobileMenuProps> {
                       <Container
                         text
                         className={`mobile-menu-list-line-item ${dataset.colorScheme}`}
-                        as={Link}
-                        to={`/dataset/${dataset.id}`}
+                        as="a"
+                        href={`/dataset/${dataset.id}`}
                       >
                         {translateEntityField(dataset.name)}
                         <i />

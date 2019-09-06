@@ -290,6 +290,7 @@
 }
 
 .dataset-page-vis {
+  min-height: 600px;
   @include mobile {
   }
   @include computer {

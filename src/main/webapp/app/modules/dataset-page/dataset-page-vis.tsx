@@ -3,19 +3,19 @@ import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import qs from 'qs';
 import {
+  addCode,
+  changeCompareBy,
   getSeries,
   initVis,
   IVisOptions,
-  removeFilter,
-  setFilterValue,
-  addCode,
   removeCode,
   removeCompare,
-  updateVisOptions,
-  changeCompareBy
+  removeFilter,
+  setFilterValue,
+  updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
-import { Dimmer, Grid, Loader, Ref, Responsive } from 'semantic-ui-react';
+import { Dimmer, Grid, Loader, Responsive } from 'semantic-ui-react';
 import ChartVis from 'app/modules/visualization/chart-vis';
 import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
 import { IRootState } from 'app/shared/reducers';
@@ -127,15 +127,12 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   };
 
   render() {
-    const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, fetchedCodeLists, visType } = this.props;
-    if (!seriesOptions || !fetchedCodeLists) {
-      return null;
-    }
+    const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, fetchedCodeLists, visType, updatingVisOptions } = this.props;
 
     return (
       <div className="dataset-page-vis">
-        {!this.props.fetchedCodeLists ? (
-          <Dimmer active>
+        {updatingVisOptions || !fetchedCodeLists || !seriesOptions ? (
+          <Dimmer active page>
             <Loader />
           </Dimmer>
         ) : (
@@ -253,6 +250,7 @@ const mapStateToProps = (storeState: IRootState, ownProps) => ({
   fetchedCodeLists: storeState.datasetPage.fetchedCodeLists,
   seriesOptions: storeState.datasetPage.seriesOptions,
   loadingSeries: storeState.datasetPage.loadingSeries,
+  updatingVisOptions: storeState.datasetPage.updatingVisOptions,
   visType: storeState.datasetPage.visType
 });
 

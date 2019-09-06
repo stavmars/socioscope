@@ -14,6 +14,7 @@ export interface IVisOptions {
 }
 
 export const ACTION_TYPES = {
+  INIT_VIS: 'datasetPage/INIT_VIS',
   FETCH_SERIES: 'datasetPage/FETCH_SERIES',
   FETCH_DIMENSION_CODELIST: 'datasetPage/FETCH_DIMENSION_CODELIST',
   FETCH_DIMENSION_CODELISTS: 'datasetPage/FETCH_DIMENSION_CODELISTS',
@@ -30,6 +31,7 @@ export const ACTION_TYPES = {
 const initialState = {
   loadingSeries: true,
   fetchedCodeLists: false,
+  updatingVisOptions: true,
   errorMessage: null,
   dimensionCodes: {} as any,
   visType: 'chart',
@@ -69,6 +71,11 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
             codesByNotation: _.keyBy(action.payload.codelist, 'notation')
           }
         }
+      };
+    case REQUEST(ACTION_TYPES.FETCH_DIMENSION_CODELISTS):
+      return {
+        ...state,
+        fetchedCodeLists: false
       };
     case SUCCESS(ACTION_TYPES.FETCH_DIMENSION_CODELISTS):
       return {
@@ -113,9 +120,15 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
           dimensionFilters: _.omit(state.seriesOptions.dimensionFilters, action.payload.dimensionId)
         }
       };
+    case ACTION_TYPES.INIT_VIS:
+      return {
+        ...state,
+        updatingVisOptions: true
+      };
     case ACTION_TYPES.UPDATE_VIS_OPTIONS:
       return {
         ...state,
+        updatingVisOptions: false,
         visType: action.payload.visType,
         seriesOptions: action.payload.seriesOptions
       };
@@ -252,6 +265,9 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
 };
 
 export const initVis = (dataset: IDataSet, visOptions: IVisOptions) => async dispatch => {
+  dispatch({
+    type: ACTION_TYPES.INIT_VIS
+  });
   await dispatch(getDimensionCodeLists(dataset));
   dispatch(updateVisOptions(dataset, visOptions));
 };
