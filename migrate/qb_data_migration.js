@@ -5,7 +5,7 @@ const _ = require('lodash');
 const transformQbData = async (dataset) => {
   // get observations for all measures of the dataset
   let requests = dataset.measures.map(measure => {
-    return axios.post(`http://www.socioscope.gr/api/datasets/${dataset.id}/data`, {
+    return axios.post(`http://sodamap.imis.athena-innovation.gr/api/datasets/${dataset.id}/data`, {
       filters: {measure: measure.id}
     });
   });
@@ -41,7 +41,7 @@ const migrateQbData = async () => {
   });
 
   // Fetch all datasets from old Socioscope
-  let datasetsRes = await axios.get('http://www.socioscope.gr/api/datasets');
+  let datasetsRes = await axios.get('http://sodamap.imis.athena-innovation.gr/api/datasets');
   let datasets = datasetsRes.data;
 
   for (let dataset of datasets) {
@@ -49,7 +49,7 @@ const migrateQbData = async () => {
       console.log(`Uploading data for dataset ${dataset.id}`);
 
       // get dataset metadata
-      let datasetRes = await axios.get(`http://www.socioscope.gr/api/datasets/${dataset.id}`);
+      let datasetRes = await axios.get(`http://sodamap.imis.athena-innovation.gr/api/datasets/${dataset.id}`);
       dataset = datasetRes.data;
       let obsChunks = _.chunk(await transformQbData(dataset), 1000);
 
