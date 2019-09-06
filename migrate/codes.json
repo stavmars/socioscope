@@ -7173,6 +7173,7 @@
   {
     "notation": 1,
     "dimensionId": "elections.assembly",
+    "order": 6,
     "name": {
       "el": "ΙΔ' Περίοδος (06/05/2012 - 19/05/2012)",
       "en": "14th Term (06/05/2012 - 19/05/2012)"
@@ -7181,6 +7182,7 @@
   {
     "notation": 2,
     "dimensionId": "elections.assembly",
+    "order": 7,
     "name": {
       "el": "ΙΕ' Περίοδος (17/06/2012 - 31/12/2014)",
       "en": "15th Term (17/06/2012 - 31/12/2014)"
@@ -7189,6 +7191,7 @@
   {
     "notation": 3,
     "dimensionId": "elections.assembly",
+    "order": 3,
     "name": {
       "el": "ΙΑ' Περίοδος (07/03/2004 - 18/08/2007)",
       "en": "11th Term (07/03/2004 - 18/08/2007)"
@@ -7197,6 +7200,7 @@
   {
     "notation": 4,
     "dimensionId": "elections.assembly",
+    "order": 4,
     "name": {
       "el": "ΙΒ' Περίοδος (16/09/2007 - 07/09/2009)",
       "en": "12th Term (16/09/2007 - 07/09/2009)"
@@ -7205,6 +7209,7 @@
   {
     "notation": 5,
     "dimensionId": "elections.assembly",
+    "order": 5,
     "name": {
       "el": "ΙΓ' Περίοδος (04/10/2009 - 11/04/2012)",
       "en": "13th Term (04/10/2009 - 11/04/2012)"
@@ -7213,6 +7218,7 @@
   {
     "notation": 6,
     "dimensionId": "elections.assembly",
+    "order": 2,
     "name": {
       "el": "Ι' Περίοδος (9/04/2000 - 11/02/2004)",
       "en": "10th Term (9/04/2000 - 11/02/2004)"
@@ -7221,6 +7227,7 @@
   {
     "notation": 7,
     "dimensionId": "elections.assembly",
+    "order": 1,
     "name": {
       "el": "Θ' Περίοδος (22/09/1996 - 14/03/2000)",
       "en": "09th Term (22/09/1996 - 14/03/2000)"
@@ -7229,6 +7236,7 @@
   {
     "notation": 10,
     "dimensionId": "elections.assembly",
+    "order": 0,
     "name": {
       "el": "Η' Περίοδος (10/10/1993 - 24/08/1996)",
       "en": "08th Term (10/10/1993 - 24/08/1996)"
@@ -7237,6 +7245,7 @@
   {
     "notation": 8,
     "dimensionId": "elections.assembly",
+    "order": 8,
     "name": {
       "el": "ΙΣΤ' Περίοδος (25/01/2015 - 28/08/2015)",
       "en": "16th Term (25/01/2015 - 28/08/2015)"
@@ -7245,6 +7254,7 @@
   {
     "notation": 9,
     "dimensionId": "elections.assembly",
+    "order": 9,
     "name": {
       "el": "ΙΖ' Περίοδος (20/09/2015 - σήμερα)",
       "en": "17th Term (20/09/2015 - present)"
