@@ -101,7 +101,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
           </div>
         )}
         {visType === 'chart' &&
-          dataset.id !== 'adolescents' && (
+          !['adolescents', 'greek-election-results'].includes(dataset.id) && (
             <div className="vis-compareBy vis-options-menu-item">
               <div className="vis-options-menu-label">
                 <Image inline src={`/content/images/Assets/compare-${colorScheme}.svg`} style={{ paddingRight: '23px' }} />
