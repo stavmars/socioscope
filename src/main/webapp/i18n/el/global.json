@@ -150,6 +150,10 @@
     "project": "Το έργο",
     "team": {
       "title": "Επιστημονική Ομάδα",
+      "iliou": {
+        "name": "Κατερίνα Ηλιού",
+        "role": "Ερευνήτρια, ΕΚΚΕ, <a href=\"mailto:kiliou@ekke.gr\" target=\"_blank\">kiliou@ekke.gr</a>"
+      },
       "theoni": {
         "name": "Θεώνη Σταθοπούλου",
         "role": "Διευθύντρια Ερευνών, ΕΚΚΕ, <a href=\"mailto:theosta@ekke.gr\" target=\"_blank\">theosta@ekke.gr</a>"
@@ -160,7 +164,7 @@
       },
       "kand": {
         "name": "Γιώργος Κανδύλης",
-        "role": "Ερευνητής, <a href=\"mailto:gkandyli@ekke.gr\" target=\"_blank\">gkandyli@ekke.gr</a>"
+        "role": "Κύριος Ερευνητής, <a href=\"mailto:gkandyli@ekke.gr\" target=\"_blank\">gkandyli@ekke.gr</a>"
       },
       "manina": {
         "name": "Μανίνα Κακεπάκη",
