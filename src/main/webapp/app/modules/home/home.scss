@@ -143,6 +143,7 @@ Main page styles
     }
   }
 }
+
 .grid {
   height: 100%;
 }
@@ -205,6 +206,25 @@ Main page styles
 
 .slider:active {
   cursor: grabbing;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+}
+
+.slick-dots.color-scheme-1 li button:before,
+.slick-dots.color-scheme-1 li.slick-active button:before {
+  color: $color-scheme-1-accent;
+}
+
+.slick-dots.color-scheme-2 li button:before,
+.slick-dots.color-scheme-2 li.slick-active button:before {
+  color: $color-scheme-2-accent;
+}
+
+.slick-dots.color-scheme-3 li button:before,
+.slick-dots.color-scheme-3 li.slick-active button:before {
+  color: $color-scheme-3-accent;
 }
 
 .error {

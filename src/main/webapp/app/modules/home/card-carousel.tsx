@@ -1,7 +1,11 @@
 import React from 'react';
 import Slider from 'react-slick';
 
-export class CardCarousel extends React.Component {
+export interface ICardCarouselProp {
+  colorScheme: string;
+}
+
+export class CardCarousel extends React.Component<ICardCarouselProp> {
   render() {
     const settings = {
       dots: true,
@@ -15,7 +19,7 @@ export class CardCarousel extends React.Component {
 
     return (
       <div>
-        <Slider {...settings} className="slider">
+        <Slider {...settings} className="slider" dotsClass={`slick-dots ${this.props.colorScheme}`}>
           {this.props.children}
         </Slider>
         <br />

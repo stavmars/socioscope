@@ -46,7 +46,7 @@ export class Home extends React.Component<IHomeProp> {
         <div id="discover" style={{ height: 120 }} />
         <div className="dataset-cards">
           {_.at(datasetsById, ['adolescents', 'deputies', 'greek-election-results', 'claims']).map((dataset: IDataSet) => (
-            <CardCarousel>
+            <CardCarousel colorScheme={dataset.colorScheme}>
               {dataset.highlights
                 ? dataset.highlights.map(highlight => (
                     <DatasetCard key={highlight.id} dataset={dataset} highlight={highlight}>
