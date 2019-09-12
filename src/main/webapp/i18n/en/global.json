@@ -151,6 +151,10 @@
     "project": "Project",
     "team": {
       "title": "Scientific Team",
+      "iliou": {
+        "name": "Katerina Iliou",
+        "role": "Researcher, ΕΚΚΕ, <a href=\"mailto:kiliou@ekke.gr\" target=\"_blank\">kiliou@ekke.gr</a>"
+      },
       "theoni": {
         "name": "Theoni Stathopoulou",
         "role": "Research Director, ΕΚΚΕ, <a href=\"mailto:theosta@ekke.gr\" target=\"_blank\">theosta@ekke.gr</a>"
@@ -161,7 +165,7 @@
       },
       "kand": {
         "name": "Giorgos Kandylis",
-        "role": "Researcher, <a href=\"mailto:gkandyli@ekke.gr\" target=\"_blank\">gkandyli@ekke.gr</a>"
+        "role": "Main Researcher, <a href=\"mailto:gkandyli@ekke.gr\" target=\"_blank\">gkandyli@ekke.gr</a>"
       },
       "manina": {
         "name": "Manina Kapekaki",
