@@ -16,6 +16,12 @@ else
 
     # mongo localhost:27017 --eval "use socioscope"
 
+    for collection in dimension_code dimension measure data_set observation deputies adolescents claims
+    do
+        echo "Dropping collection $collection"
+        mongo socioscope --eval "db.$collection.drop()"
+    done
+
     node ./migrate/import.js $1 all
     mongoimport --db socioscope --collection observation --type json --file migrate/observations.json --jsonArray
     mongoimport --db socioscope --collection deputies --type json --file migrate/deputies.json --jsonArray
