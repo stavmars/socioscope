@@ -24,7 +24,7 @@ export class DatasetPageAbout extends React.Component<IDatasetPageAboutProp> {
           <div>
             <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.sources.title')}:</span>
             &nbsp;
-            {translateEntityField(dataset.sources)}
+            <div dangerouslySetInnerHTML={{ __html: translateEntityField(dataset.sources) }} />
           </div>
         )}
       </div>

@@ -62,20 +62,24 @@ export class About extends React.Component<DispatchProps> {
                   <br />
                   <br />
                   <h2 id="team">{translate('about.team.title')}</h2>
-                  <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.theoni.name')}</span> /{' '}
-                  {translate('about.team.theoni.role')}
+                  <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.iliou.name')}</span> /{' '}
+                  {translate('about.team.iliou.role')}
                   <br />
                   <br />
-                  <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.tsig.name')}</span> /{' '}
-                  {translate('about.team.tsig.role')}
+                  <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.manina.name')}</span> /{' '}
+                  {translate('about.team.manina.role')}
                   <br />
                   <br />
                   <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.kand.name')}</span> /{' '}
                   {translate('about.team.kand.role')}
                   <br />
                   <br />
-                  <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.manina.name')}</span> /{' '}
-                  {translate('about.team.manina.role')}
+                  <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.theoni.name')}</span> /{' '}
+                  {translate('about.team.theoni.role')}
+                  <br />
+                  <br />
+                  <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.tsig.name')}</span> /{' '}
+                  {translate('about.team.tsig.role')}
                   <br />
                   <br />
                   <br />
