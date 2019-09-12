@@ -1,9 +1,9 @@
 #!/bin/bash
 
 
-if [ "$#" -ne 1 ]; then
-    echo "Need the url for deployment"
-    echo "e.g.: ./path-to/deploy.sh <url>"
+if [ "$#" -ne 2 ]; then
+    echo "Need the url and pass for deployment"
+    echo "e.g.: ./path-to/deploy.sh <url> <pass>"
 else
     echo "Beginning deployment of Socioscope App."
 
@@ -22,7 +22,7 @@ else
         mongo socioscope --eval "db.$collection.drop()"
     done
 
-    node ./migrate/import.js $1 all
+    node ./migrate/import.js $1 $2 all
     mongoimport --db socioscope --collection observation --type json --file migrate/observations.json --jsonArray
     mongoimport --db socioscope --collection deputies --type json --file migrate/deputies.json --jsonArray
     mongoimport --db socioscope --collection adolescents --type json --file migrate/adolescents.json --jsonArray
