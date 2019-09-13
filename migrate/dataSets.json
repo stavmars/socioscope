@@ -540,6 +540,50 @@
         "id": "q39"
       }
     ],
+    "dimensionGroups": [
+      {
+        "id": "demographics",
+        "name": {
+          "el": "Κοινωνικό-δημογραφικά",
+          "en": "Demographics"
+        }
+      },
+      {
+        "id": "school",
+        "name": {
+          "el": "Σχολείο",
+          "en": "School"
+        }
+      },
+      {
+        "id": "family",
+        "name": {
+          "el": "Οικογένεια",
+          "en": "Family"
+        }
+      },
+      {
+        "id": "politics",
+        "name": {
+          "el": "Πολιτική",
+          "en": "Politics"
+        }
+      },
+      {
+        "id": "nation",
+        "name": {
+          "el": "Έθνος",
+          "en": "Nation"
+        }
+      },
+      {
+        "id": "personality",
+        "name": {
+          "el": "Προσωπικότητα",
+          "en": "Personality"
+        }
+      }
+    ],
     "measures": [
       {
         "id": "adolescents_perc"

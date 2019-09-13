@@ -283,6 +283,7 @@
       "el": "Φύλο",
       "en": "Gender"
     },
+    "groupId": "demographics",
     "type": "coded",
     "filterWidget": "button-group"
   },
@@ -296,6 +297,7 @@
       "el": "Τάξη φοίτησης",
       "en": "Class year"
     },
+    "groupId": "demographics",
     "type": "coded",
     "filterWidget": "button-group"
   },
@@ -309,6 +311,7 @@
       "el": "Δείκτης Κοινωνικής Προέλευσης",
       "en": "Social Class Index"
     },
+    "groupId": "demographics",
     "type": "coded",
     "filterWidget": "button-group"
   },
@@ -322,6 +325,7 @@
       "el": "Μερικοί άνθρωποι  υποστηρίζουν ότι οι μαθητές/τριες πρέπει να κοιτούν τα μαθήματά τους και να αφήνουν τις άλλες ασχολίες για αργότερα",
       "en": "Some people argue that students need to look at their lessons and leave aside other activities for later"
     },
+    "groupId": "school",
     "type": "coded"
   },
   {
@@ -334,6 +338,7 @@
       "el": "Οι μαθητές/τριες πρέπει να ακολουθούν τις οδηγίες των καθηγητών ακόμα και όταν διαφωνούν με αυτές",
       "en": "Students must follow the instructions of their teachers even when they disagree with them"
     },
+    "groupId": "school",
     "type": "coded"
   },
   {
@@ -346,6 +351,7 @@
       "el": "Όταν οι μαθητές/τριες συμμετέχουν στις αποφάσεις που παίρνονται στο σχολείο, τα πράγματα λειτουργούν καλύτερα",
       "en": "When students participate in decisions taken at school, things work better"
     },
+    "groupId": "school",
     "type": "coded"
   },
   {
@@ -358,6 +364,7 @@
       "el": "Οι μαθητές/τριες μπορούν να επηρεάσουν ότι συμβαίνει στο σχολείο τους όταν δρουν όλοι /ες μαζί, παρά ο καθένας μόνος του",
       "en": "Students can influence what happens in their school when they work all together, rather than on their own"
     },
+    "groupId": "school",
     "type": "coded"
   },
   {
@@ -366,6 +373,7 @@
       "el": "Η μητέρα διαβάζει βιβλία",
       "en": "My mother reads books"
     },
+    "groupId": "family",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -376,6 +384,7 @@
       "el": "Συζητούν πολιτικά ζητήματα με τη μητέρα ",
       "en": "I discuss politics with my mother"
     },
+    "groupId": "family",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -386,6 +395,7 @@
       "el": "Η μητέρα παρακολουθεί ειδήσεις",
       "en": "My mother watches the news (TV)"
     },
+    "groupId": "family",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -396,6 +406,7 @@
       "el": "Ο πατέρας διαβάζει βιβλία",
       "en": "My father reads books"
     },
+    "groupId": "family",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -406,6 +417,7 @@
       "el": "Συζητούν πολιτικά ζητήματα με τον πατέρα",
       "en": "I discuss politics with my father"
     },
+    "groupId": "family",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -416,6 +428,7 @@
       "el": "Ο πατέρας παρακολουθεί ειδήσεις",
       "en": "My father watches the news (TV)"
     },
+    "groupId": "family",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -426,6 +439,7 @@
       "el": "Οικογενειακές συνήθειες",
       "en": "Family habits"
     },
+    "groupId": "family",
     "type": "composite",
     "composedOf": [
       "q8a",
@@ -444,6 +458,7 @@
       "en": "Knows mother's political beliefs"
     },
     "type": "coded",
+    "groupId": "family",
     "disableFilter": true,
     "disableAxis": true
   },
@@ -454,6 +469,7 @@
       "en": "Knows father's political beliefs"
     },
     "type": "coded",
+    "groupId": "family",
     "disableFilter": true,
     "disableAxis": true
   },
@@ -463,6 +479,7 @@
       "el": "Πολιτικές απόψεις γονέων",
       "en": "Parent's political beliefs"
     },
+    "groupId": "politics",
     "type": "composite",
     "composedOf": [
       "q20a",
@@ -480,6 +497,7 @@
       "el": "Τι πρέπει να κάνουν οι πολίτες σε περίπτωση που διαφωνούν με μια κυβερνητική απόφαση",
       "en": "What should citizens do in case they disagree with government's decision"
     },
+    "groupId": "politics",
     "type": "coded"
   },
   {
@@ -492,6 +510,7 @@
       "el": "Θα μπορούσες να πεις ότι η πολιτική σε ενδιαφέρει",
       "en": "Would you say that you are interested in politics?"
     },
+    "groupId": "politics",
     "type": "coded"
   },
   {
@@ -500,6 +519,7 @@
       "el": "Έχουν συζητήσει για το δημοψήφισμα του Ιουλίου 2015",
       "en": "Have you ever discussed about the July 2015 referendum?"
     },
+    "groupId": "politics",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -510,6 +530,7 @@
       "el": "Έχουν συζητήσει για τις βουλευτικές εκλογές του 2015",
       "en": "Have you ever discussed about the 2015 national elections?"
     },
+    "groupId": "politics",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -520,6 +541,7 @@
       "el": "Έχουν συζητήσει για τα capital control",
       "en": "Have you ever discussed about the capital controls?"
     },
+    "groupId": "politics",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -530,6 +552,7 @@
       "el": "Έχουν συζητήσει για τους πρόσφυγες που έχουν έρθει στην Ελλάδα",
       "en": "Have you ever discussed about the refugees that came to Greece?"
     },
+    "groupId": "politics",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -540,6 +563,7 @@
       "el": "Έχουν συζητήσει για τους νέους Έλληνες που φεύγουν στο εξωτερικό",
       "en": "Have you ever discussed about the Greeks that left in order to work and live abroad?"
     },
+    "groupId": "politics",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -550,6 +574,7 @@
       "el": "Έχουν συζητήσει για το μνημόνιο",
       "en": "Have you ever discussed about the Memorandum programme?"
     },
+    "groupId": "politics",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -560,6 +585,7 @@
       "el": "Συζητήσεις για πολιτικά και κοινωνικά θέματα",
       "en": "Discussions about political and social issues"
     },
+    "groupId": "politics",
     "type": "composite",
     "composedOf": [
       "q16a",
@@ -581,6 +607,7 @@
       "el": "Άτομα που ασχολούνται με την πολιτική, όπως βουλευτές, υπουργοί κ.λπ., γιατί νομίζεις ότι το κάνουν στην πλειοψηφία τους",
       "en": "People involved in politics, such as deputies, ministers, etc., they do so for\u2026"
     },
+    "groupId": "politics",
     "type": "coded"
   },
   {
@@ -593,6 +620,7 @@
       "el": "Ποια είναι η γενική άποψή σου για την ελληνική κοινωνία",
       "en": "What is your general view of Greek society?"
     },
+    "groupId": "politics",
     "type": "coded"
   },
   {
@@ -605,6 +633,7 @@
       "el": "Νομίζω ότι γνωρίζω περισσότερα πράγματα για την πολιτική σε σχέση με τους συνομήλικούς μου",
       "en": "I think I know more about politics than my peers"
     },
+    "groupId": "politics",
     "type": "coded"
   },
   {
@@ -617,6 +646,7 @@
       "el": "Σε συζητήσεις για πολιτικά θέματα, συνήθως έχω κάτι να πω",
       "en": "In discussions on political issues, I usually have something to say"
     },
+    "groupId": "politics",
     "type": "coded"
   },
   {
@@ -629,6 +659,7 @@
       "el": "Αν ήθελες να συμβουλευτείς κάποιον/α για ένα πολιτικό θέμα, ποιον ή ποια θα προτιμούσες  να ρωτήσεις",
       "en": "If you wanted to consult someone on a political issue, whom would you prefer to ask?"
     },
+    "groupId": "politics",
     "type": "coded"
   },
   {
@@ -641,6 +672,7 @@
       "el": "Σύμφωνα με νόμο που ψηφίστηκε, οι νέοι και οι νέες θα μπορούν πλέον να ψηφίζουν από τα 17. Εσύ θεωρείς αυτήν την αλλαγή",
       "en": "According to a recent voted law, young people of 17 years of age will now be able to vote. You consider this change"
     },
+    "groupId": "politics",
     "type": "coded"
   },
   {
@@ -649,6 +681,7 @@
       "el": "Ψηφίζει πάντα στις εκλογές",
       "en": "Always votes on elections"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -659,6 +692,7 @@
       "el": "Είναι έτοιμος /η να δώσει τη ζωή του /της  για την Ελλάδα, αν χρειαστεί",
       "en": "Is willing to sacrifice his/her life for Greece, if needed"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -669,6 +703,7 @@
       "el": "Συμφωνεί με την κυβέρνηση",
       "en": "Agrees with the government"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -679,6 +714,7 @@
       "el": "Πληρώνει κανονικά φόρους",
       "en": "Pays taxes"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -689,6 +725,7 @@
       "el": "Είναι χριστιανός/ή",
       "en": "Is Christian Orthodox"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -699,6 +736,7 @@
       "el": "Ενδιαφέρεται για τα κοινωνικά και πολιτικά θέματα",
       "en": "Is interested in social and political issues"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -709,6 +747,7 @@
       "el": "Υποστηρίζει πάντα τη δημοκρατία",
       "en": "Always supports Democracy"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -719,6 +758,7 @@
       "el": "Υποστηρίζει την Ευρωπαϊκή Ένωση",
       "en": "Always supports the European Union"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -729,6 +769,7 @@
       "el": "Ιδιότητες του πολίτη",
       "en": "Citizenship"
     },
+    "groupId": "nation",
     "type": "composite",
     "composedOf": [
       "q12a",
@@ -748,6 +789,7 @@
       "el": "Ακόμα και αν διαφωνώ με κάτι που γίνεται στην Ελλάδα, υποστηρίζω παρόλα αυτά τη χώρα μου",
       "en": "Even if I disagree with something that happens in Greece, I still support my country"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -758,6 +800,7 @@
       "el": "Στους Ολυμπιακούς αγώνες υποστηρίζω τους Έλληνες αθλητές ακριβώς επειδή είναι Έλληνες",
       "en": "In the Olympic Games I support the Greek athletes precisely because they are Greeks"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -768,6 +811,7 @@
       "el": "Σε διεθνείς ποδοσφαιρικούς αγώνες θα υποστήριζα την Ελλάδα ακόμα και αν δεν υπήρχε κανένας Έλληνας στην ενδεκάδα",
       "en": "In international football matches I would support Greece even if there were no Greeks in the starting eleven line-up"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -778,6 +822,7 @@
       "el": "Δεν είναι σωστό να ασκώ κριτική στη χώρα μου",
       "en": "It is not right to criticize my country"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -788,6 +833,7 @@
       "el": "Πρέπει να υποστηρίζω τη χώρα μου είτε έχει δίκιο, είτε όχι",
       "en": "I must support my country whether it is right or not"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -798,6 +844,7 @@
       "el": "Εάν αγαπώ την Ελλάδα, πρέπει να δίνω προσοχή στα προβλήματά της και να προσπαθώ να τα λύσω",
       "en": "If I love Greece, I have to pay attention to its problems and try to solve them"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -808,6 +855,7 @@
       "el": "Θα διαφωνούσα με τη συμμετοχή της Ελλάδας σε ένα μουσικό διαγωνισμό (όπως η Eurovision), επειδή ξοδεύονται χρήματα της χώρας μου",
       "en": "I would disagree with Greece's participation in a musical competition (like Eurovision) because my country's money is spent"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -818,6 +866,7 @@
       "el": "Είναι σωστό να αφαιρούνται τα ολυμπιακά μετάλλια από Έλληνες αθλητές που βρίσκονται ντοπαρισμένοι για να μην αποκτά κακή φήμη η χώρα μου",
       "en": "It is right to remove Olympic medals from Greek athletes with a positive dope test in order to avoid a bad reputation for my country"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -828,6 +877,7 @@
       "el": "Ασκώ κριτική στην Ελλάδα, από αγάπη για τη χώρα μου",
       "en": "I criticize Greece, out of love for my country"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -838,6 +888,7 @@
       "el": "Πατριωτισμός",
       "en": "Patriotism"
     },
+    "groupId": "nation",
     "type": "composite",
     "composedOf": [
       "q13a",
@@ -858,6 +909,7 @@
       "el": "Μοιράζεται τις ελληνικές παραδόσεις και τρόπο ζωής",
       "en": "Shares Greek traditions and lifestyle"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -868,6 +920,7 @@
       "el": "Έχει γεννηθεί στην Ελλάδα",
       "en": "Was born in Greece"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -878,6 +931,7 @@
       "el": "Έχει Έλληνες γονείς",
       "en": "Has Greek parents"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -888,6 +942,7 @@
       "el": "Είναι χριστιανός",
       "en": "Is Christian Orthodox"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -898,6 +953,7 @@
       "el": "Σέβεται τους θεσμούς της χώρας",
       "en": "Respects the institutions"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -908,6 +964,7 @@
       "el": "Επιθυμεί να είναι Έλληνας",
       "en": "Desires to be Greek"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -918,6 +975,7 @@
       "el": "Μιλάει τέλεια ελληνικά ",
       "en": "Speaks fluent Greek"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -928,6 +986,7 @@
       "el": "Έχει πάει/πηγαίνει σχολείο στην Ελλάδα",
       "en": "Attended/attends Greek School"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -938,6 +997,7 @@
       "el": "Ο \"πραγματικός Έλληνας\" ",
       "en": "The \"true Greek\""
     },
+    "groupId": "nation",
     "type": "composite",
     "composedOf": [
       "q33a",
@@ -957,6 +1017,7 @@
       "el": "Για τον τρόπο που λειτουργεί εδώ η δημοκρατία",
       "en": "For the way democracy works here"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -967,6 +1028,7 @@
       "el": "Για όσα έχουμε καταφέρει στην οικονομία",
       "en": "For all our economy has achieved"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -977,6 +1039,7 @@
       "el": "Για τις κατακτήσεις στην επιστήμη και την τεχνολογία",
       "en": "For achievements in science and technology"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -987,6 +1050,7 @@
       "el": "Για την ιστορία του τόπου",
       "en": "For the historical legacy of our land"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -997,6 +1061,7 @@
       "el": "Για τις επιτυχίες στην τέχνη και τη λογοτεχνία",
       "en": "For successes in art and literature"
     },
+    "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1007,6 +1072,7 @@
       "el": "Εθνική περηφάνεια",
       "en": "National Pride"
     },
+    "groupId": "nation",
     "type": "composite",
     "composedOf": [
       "q35a",
@@ -1023,6 +1089,7 @@
       "el": "Ικανοποίηση από τη ζωή",
       "en": "Life satisfaction"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1033,6 +1100,7 @@
       "el": "Ικανοποίηση από το σπίτι",
       "en": "Home satisfaction"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1043,6 +1111,7 @@
       "el": "Ικανοποίηση από την οικονομική κατάσταση της οικογένειας",
       "en": "Satisfaction with the family's financial situation"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1053,6 +1122,7 @@
       "el": "Ικανοποίηση από τις σχέσεις με τους άλλους ανθρώπους",
       "en": "Satisfaction with relationships with other people"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1063,6 +1133,7 @@
       "el": "Ικανοποίηση από το σχολείο και τη μόρφωση που δίνει",
       "en": "Satisfaction with the school and the education it provides"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1073,6 +1144,7 @@
       "el": "Ικανοποίηση από το περιβάλλον της γειτονιάς",
       "en": "Neighborhood satisfaction"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1083,6 +1155,7 @@
       "el": "Ικανοποίηση από τις προοπτικές για το μέλλον",
       "en": "Satisfaction from future prospects "
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1093,6 +1166,7 @@
       "el": "Προσωπική ικανοποίηση",
       "en": "Personal satisfaction"
     },
+    "groupId": "personality",
     "type": "composite",
     "composedOf": [
       "q36a",
@@ -1111,6 +1185,7 @@
       "el": "Φιλία",
       "en": "Friendship"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1121,6 +1196,7 @@
       "el": "Οικονομική άνεση της οικογένειας",
       "en": "Financial comfort of the family"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1131,6 +1207,7 @@
       "el": "Αρμονικές οικογενειακές σχέσεις",
       "en": "Harmonious family relationships"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1141,6 +1218,7 @@
       "el": "Επάγγελμα με κύρος και χρήματα",
       "en": "Profession with prestige and money"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1151,6 +1229,7 @@
       "el": "Κοινωνική δικαιοσύνη",
       "en": "Social Justice"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1161,6 +1240,7 @@
       "el": "Επάγγελμα που ικανοποιεί τα ενδιαφέροντα",
       "en": "Profession that meets my interests"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1171,6 +1251,7 @@
       "el": "Πραγματική δημοκρατία",
       "en": "True democracy"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1181,6 +1262,7 @@
       "el": "Μόρφωση",
       "en": "Education"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1191,6 +1273,7 @@
       "el": "Ισότητα μεταξύ γυναικών & ανδρών",
       "en": "Equality between women and men"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1201,6 +1284,7 @@
       "el": "Σεβασμός στο περιβάλλον",
       "en": "Respect for the environment"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1211,6 +1295,7 @@
       "el": "Υλικά αγαθά",
       "en": "Material goods"
     },
+    "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
     "disableAxis": true
@@ -1221,6 +1306,7 @@
       "el": "Αξίες για τη ζωή",
       "en": "Life values"
     },
+    "groupId": "personality",
     "type": "composite",
     "composedOf": [
       "q39aNew",
