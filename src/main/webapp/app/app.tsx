@@ -3,6 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './app.scss';
 
 import React from 'react';
+import ReactGA from 'react-ga';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { toast, ToastContainer, ToastPosition } from 'react-toastify';
@@ -34,6 +35,8 @@ import MobileMenu from './modules/mobile/mobile-menu';
 import MobileVisMenu from './modules/mobile/mobile-vis-menu';
 import CookieConsent from 'react-cookie-consent';
 
+ReactGA.initialize('UA-77335447-1');
+
 export interface IAppProps extends StateProps, DispatchProps {}
 
 export class App extends React.Component<IAppProps> {
@@ -58,6 +61,12 @@ export class App extends React.Component<IAppProps> {
       </div>
     ) : null;
 
+  tracker = ({ location }) => {
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname);
+    return null;
+  };
+
   // tslint:disable:jsx-no-lambda
   render() {
     if (this.props.loadingDatasets) {
@@ -72,6 +81,7 @@ export class App extends React.Component<IAppProps> {
       return (
         <Router>
           <div>
+            <Route render={this.tracker} />
             {this.props.isHeaderVisible &&
               !this.props.isTopicsMenuVisible &&
               !this.props.isMobileMenuVisible && (
