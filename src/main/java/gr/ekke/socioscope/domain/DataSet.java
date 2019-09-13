@@ -46,6 +46,8 @@ public class DataSet implements Serializable {
     @Field("dimensions")
     private List<Dimension> dimensions = new ArrayList<>();
 
+    private List<DimensionGroup> dimensionGroups = new ArrayList<>();
+
     @DBRef
     @Field("measures")
     private List<Measure> measures = new ArrayList<>();
@@ -180,6 +182,14 @@ public class DataSet implements Serializable {
 
     public void setDimensions(List<Dimension> dimensions) {
         this.dimensions = dimensions;
+    }
+
+    public List<DimensionGroup> getDimensionGroups() {
+        return dimensionGroups;
+    }
+
+    public void setDimensionGroups(List<DimensionGroup> dimensionGroups) {
+        this.dimensionGroups = dimensionGroups;
     }
 
     public List<Measure> getMeasures() {

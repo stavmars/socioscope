@@ -5,6 +5,7 @@ import { IHighlight } from 'app/shared/model/highlight.model';
 import { Moment } from 'moment';
 import { ILang } from 'app/shared/model/language.interface';
 import { ISeriesOptions } from './series-options.model';
+import { IDimensionGroup } from 'app/shared/model/dimension-group.model';
 
 export interface IDataSet {
   id?: string;
@@ -14,6 +15,7 @@ export interface IDataSet {
   sources?: ILang;
   createdDate?: Moment;
   dimensions?: IDimension[];
+  dimensionGroups?: IDimensionGroup[];
   measures?: IMeasure[];
   highlights?: IHighlight[];
   creator?: IUser;
