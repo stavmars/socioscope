@@ -380,8 +380,9 @@
     min-width: calc(100% + 6px) !important;
     width: calc(100% + 6px) !important;
   }
-  .menu.item {
-    font-size: 16px;
+  .menu > .item {
+    font-size: 14px;
+    border: none !important;
   }
 }
 
@@ -637,4 +638,13 @@ a.disabled {
   &.color-scheme-3 {
     background: $color-scheme-3-accent !important;
   }
+}
+
+.dim-group-title {
+  font-size: 14px !important;
+  font-family: ProximaNovaBold;
+}
+
+.ui.dropdown .menu > .item.disabled:hover {
+  background: none;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import './dataset-page.scss';
-import { Dropdown, Image, Grid } from 'semantic-ui-react';
+import { Divider, Dropdown, Grid, Image } from 'semantic-ui-react';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
@@ -59,13 +59,30 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
 
   render() {
     const { dataset, seriesOptions, dimensionCodes, fetchedCodeLists, visType } = this.props;
-    const { dimensions, colorScheme } = dataset;
+    const { dimensions, colorScheme, dimensionGroups } = dataset;
 
-    const xAxisOptions = dimensions.filter(dimension => !dimension.disableAxis).map(dimension => ({
-      id: dimension.id,
-      text: translateEntityField(dimension.name),
-      value: dimension.id
-    }));
+    const dimensionsByGroup = _.groupBy(dimensions, dim => dim.groupId || '');
+
+    const getXAxisOptions = (dimList = []) =>
+      dimList.filter(dimension => !dimension.disableAxis).map(dimension => ({
+        id: dimension.id,
+        text: translateEntityField(dimension.name),
+        value: dimension.id
+      }));
+
+    const groupXAxisOptions = _.flatMap(dimensionGroups, group => {
+      const groupTitle = {
+        disabled: true,
+        content: (
+          <Divider horizontal fitted style={{ whiteSpace: 'normal' }}>
+            <span className="dim-group-title">{translateEntityField(group.name)}</span>
+          </Divider>
+        )
+      };
+      return [groupTitle, ...getXAxisOptions(dimensionsByGroup[group.id])];
+    });
+
+    const xAxisOptions = [...getXAxisOptions(dimensionsByGroup['']), ...groupXAxisOptions];
 
     const compareByOptions = dimensions.filter(dimension => dimension.type !== 'time' && !dimension.disableFilter).map(dimension => ({
       id: dimension.id,
