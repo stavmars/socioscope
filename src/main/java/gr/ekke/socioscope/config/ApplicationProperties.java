@@ -11,4 +11,13 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "application", ignoreUnknownFields = false)
 public class ApplicationProperties {
 
+    String migrateDataPath;
+
+    public String getMigrateDataPath() {
+        return migrateDataPath;
+    }
+
+    public void setMigrateDataPath(String migrateDataPath) {
+        this.migrateDataPath = migrateDataPath;
+    }
 }

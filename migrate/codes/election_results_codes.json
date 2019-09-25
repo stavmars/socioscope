@@ -1,0 +1,7157 @@
+[
+  {
+    "dimensionId": "party",
+    "notation": "with_seats",
+    "name": {
+      "el": "Κόμματα με Κοινοβουλευτική εκπροσώπηση",
+      "en": "Parties with seats in Parliament"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "valid",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "anel",
+    "name": {
+      "el": "Ανεξ. Ελλ.",
+      "en": "AN.EL."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "with_seats",
+    "order": "",
+    "color": "#00FFFF"
+  },
+  {
+    "dimensionId": "party",
+    "notation": "dimar",
+    "name": {
+      "el": "ΔΗΜ.ΑΡ.",
+      "en": "DIM.AR."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "with_seats",
+    "order": "",
+    "color": "#AD4B4D"
+  },
+  {
+    "dimensionId": "party",
+    "notation": "golden_dawn",
+    "name": {
+      "el": "Χρυσή Αυγή",
+      "en": "Golden Dawn"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "with_seats",
+    "order": "",
+    "color": "#000C4F"
+  },
+  {
+    "dimensionId": "party",
+    "notation": "kke",
+    "name": {
+      "el": "Κ.Κ.Ε.",
+      "en": "K.K.E."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "with_seats",
+    "order": "",
+    "color": "#D80000"
+  },
+  {
+    "dimensionId": "party",
+    "notation": "laos",
+    "name": {
+      "el": "ΛΑ.Ο.Σ",
+      "en": "LA.O.S."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "with_seats",
+    "order": "",
+    "color": "#000080"
+  },
+  {
+    "dimensionId": "party",
+    "notation": "nd",
+    "name": {
+      "el": "Ν.Δ.",
+      "en": "N.D."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "with_seats",
+    "order": "",
+    "color": "#0C99FF"
+  },
+  {
+    "dimensionId": "party",
+    "notation": "pasok",
+    "name": {
+      "el": "ΠΑ.ΣΟ.Κ.",
+      "en": "P.A.S.O.K"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "with_seats",
+    "order": "",
+    "color": "#00CC0C"
+  },
+  {
+    "dimensionId": "party",
+    "notation": "potami",
+    "name": {
+      "el": "Ποταμι",
+      "en": "Potami"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "with_seats",
+    "order": "",
+    "color": "#AF6300"
+  },
+  {
+    "dimensionId": "party",
+    "notation": "syriza",
+    "name": {
+      "el": "ΣΥΝ/ΣΥΡΙΖΑ",
+      "en": "Synaspismos / Syriza"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "with_seats",
+    "order": "",
+    "color": "#FF8080"
+  },
+  {
+    "dimensionId": "party",
+    "notation": "registered",
+    "name": {
+      "el": "Εγγεγραμμένοι",
+      "en": "Registered"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "abstained",
+    "name": {
+      "el": "Απείχαν",
+      "en": "Abstained"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "registered",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "without_seats",
+    "name": {
+      "el": "Κόμματα χωρίς Κοινοβουλευτική εκπροσώπηση",
+      "en": "Parties without seats in Parliament"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "valid",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "akep",
+    "name": {
+      "el": "ΑΚΕΠ",
+      "en": "AKEP"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "anar",
+    "name": {
+      "el": "ΑΝ ΑΡ...",
+      "en": "AN.AR"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "anoixi",
+    "name": {
+      "el": "Άνοιξη",
+      "en": "Anoixi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "with_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "antarsia",
+    "name": {
+      "el": "ΑΝΤΑΡΣΥΑ",
+      "en": "ANTARSIA"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "antarsya_mars",
+    "name": {
+      "el": "ΑΝΤΑΡΣΥΑ ΜΑΡΣ",
+      "en": "ANTARSYA MARS"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "aske",
+    "name": {
+      "el": "Α.Σ.K.E",
+      "en": "A.S.K.E."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "asym",
+    "name": {
+      "el": "Α.ΣΥΜ",
+      "en": "A.SYM"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "axiopr",
+    "name": {
+      "el": "Αξιοπρ.",
+      "en": "AXIOPR."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "christ",
+    "name": {
+      "el": "ΧΡΙΣΤ",
+      "en": "CHRIST"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "dhmsym",
+    "name": {
+      "el": "Δημ. Συμ.",
+      "en": "DHM.SYM."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "diana",
+    "name": {
+      "el": "ΔΗΑΝΑ",
+      "en": "DIANA"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "dikki",
+    "name": {
+      "el": "ΔH.K.KI.",
+      "en": "Di.K.Ki."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "with_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "dimokratikoi",
+    "name": {
+      "el": "Δημ/τικοί",
+      "en": "Dimokratikoi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "dimxana",
+    "name": {
+      "el": "δημ.ξανά!",
+      "en": "dim.xana!"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "dpe",
+    "name": {
+      "el": "Δ.Π.Ε.",
+      "en": "D.P.E."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "drasi_fs",
+    "name": {
+      "el": "Δράση ΦΣ",
+      "en": "DRASI FS"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "edem",
+    "name": {
+      "el": "ΕΔΕΜ",
+      "en": "EDEM"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "eek_tr",
+    "name": {
+      "el": "ΕΕΚ Τρ.",
+      "en": "EEK TR."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "eldim",
+    "name": {
+      "el": "Ελ.Δημ.",
+      "en": "El.Dim."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "elek",
+    "name": {
+      "el": "Ελ.Ε.Κ.",
+      "en": "El.E.K."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "elksi",
+    "name": {
+      "el": "ΕΛΚΣΙ",
+      "en": "ELKSI"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "ellada",
+    "name": {
+      "el": "ΕΛ.ΛΑ.Δ.Α",
+      "en": "EL.LA.D.A."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "elloik",
+    "name": {
+      "el": "Ελλ.Οικ.",
+      "en": "ELL.OIK."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "elmet",
+    "name": {
+      "el": "ΕΛΜΕΤ",
+      "en": "ELMET"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "en_oik",
+    "name": {
+      "el": "Εν.Οικολ.",
+      "en": "En. Oik."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "enantia",
+    "name": {
+      "el": "ΕΝ.ΑΝΤΙ.Α",
+      "en": "EN.ANTI.A"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "enken",
+    "name": {
+      "el": "Εν.Κεν.",
+      "en": "EN.KEN."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "epak",
+    "name": {
+      "el": "ΕΠΑΚ",
+      "en": "EPAK"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "epen",
+    "name": {
+      "el": "ΕΠΕΝ",
+      "en": "EPEN"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "ethnelp",
+    "name": {
+      "el": "Εθν.Ελπ.",
+      "en": "Ethn.Elp."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "ethnsym",
+    "name": {
+      "el": "Εθν.Συμ.",
+      "en": "Ethn.Sym."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "fad",
+    "name": {
+      "el": "Φ.Α.Δ.",
+      "en": "F.A.D."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "fillanthr",
+    "name": {
+      "el": "Φιλ.Ανθρ.",
+      "en": "Fill.Anthr."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "filsym",
+    "name": {
+      "el": "Φιλ.Συμ.",
+      "en": "Fil.Sym."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "voted",
+    "name": {
+      "el": "Ψήφισαν",
+      "en": "Voted"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "registered",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "invalid",
+    "name": {
+      "el": "Ακυρα-Λευκά",
+      "en": "Invalid/Blank"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "voted",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "kadik",
+    "name": {
+      "el": "Κ.Α.Δικ.",
+      "en": "K.A.Dik."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "kean",
+    "name": {
+      "el": "Κ.Ε.ΑΝ.",
+      "en": "K.E.A.N."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "keell",
+    "name": {
+      "el": "Κ.Ε.Ελλ.",
+      "en": "K.E.Ell."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "kidiso",
+    "name": {
+      "el": "ΚιΔηΣο",
+      "en": "KiDiSo"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "kindpl",
+    "name": {
+      "el": "Κιν.Δ.Πλ.",
+      "en": "KIN.D.PL."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "kinigoi",
+    "name": {
+      "el": "Κυνηγοί",
+      "en": "Kinigoi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "kinonia",
+    "name": {
+      "el": "ΚΟΙΝΩΝΙΑ",
+      "en": "Kinonia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "kke_ml",
+    "name": {
+      "el": "ΚΚΕ μ-λ",
+      "en": "KKE m-l"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "kkk_ml_es",
+    "name": {
+      "el": "ΚΚΕ μ-λ ΕΣ",
+      "en": "KKK m-l ES"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "koinsymf",
+    "name": {
+      "el": "Κοιν.Συμφ.",
+      "en": "Koin.Symf."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "komell",
+    "name": {
+      "el": "Κομ. Ελλ.",
+      "en": "Kom.Ell."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "komfil",
+    "name": {
+      "el": "Κομ.Φιλ.",
+      "en": "Kom.Fil."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "kotes",
+    "name": {
+      "el": "Κ.Ο.Τ.Ε.Σ.",
+      "en": "K.O.T.E.S."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "kpeirell",
+    "name": {
+      "el": "Κ.Πειρ.Ελλ",
+      "en": "K.PEIR.ELL"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "maxar",
+    "name": {
+      "el": "Μαχ.Αρ.",
+      "en": "Max.Ar."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "mera",
+    "name": {
+      "el": "ΜΕ.Ρ.Α",
+      "en": "ME.R.A"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "ml_kke",
+    "name": {
+      "el": "Μ-Λ ΚΚΕ",
+      "en": "M - L KKE"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "nkschrd",
+    "name": {
+      "el": "ΝΚΣΧΔ",
+      "en": "NKSCHRD"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "oakke",
+    "name": {
+      "el": "ΟΑΚΚΕ",
+      "en": "OAKKE"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "oikell",
+    "name": {
+      "el": "Οικ.Ελλ.",
+      "en": "Oik.Ell."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "oikenall",
+    "name": {
+      "el": "Οικ.Εναλ.",
+      "en": "Oik.Enall."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "oikpr",
+    "name": {
+      "el": "Οικ.Πρ.",
+      "en": "Oik.Pr."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "okd",
+    "name": {
+      "el": "Ο.Κ.Δ.",
+      "en": "O.K.D."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "olymp",
+    "name": {
+      "el": "Ολυμπ.",
+      "en": "Olymp."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "other",
+    "name": {
+      "el": "Ανεξ. Υπ. / Λοιπά",
+      "en": "Independent Candidates / Other"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "oxi",
+    "name": {
+      "el": "ΟΧΙ",
+      "en": "Oxi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "paa",
+    "name": {
+      "el": "Π.Α.Α.",
+      "en": "P.A.A."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "padike",
+    "name": {
+      "el": "ΠΑ.ΔΗ.ΚΕ.",
+      "en": "PA.DI.KE"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "paeke",
+    "name": {
+      "el": "ΠΑΕΚΕ",
+      "en": "PAEKE"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "paldim",
+    "name": {
+      "el": "Παλ.Δημ.",
+      "en": "Pal.Dim."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "panki",
+    "name": {
+      "el": "ΠΑΝ.ΚΙ.",
+      "en": "Pan.Ki."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "pras_dimar",
+    "name": {
+      "el": "Πρασ-Δημ.Αρ.",
+      "en": "Pras. - Dim.Ar."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "prgram",
+    "name": {
+      "el": "Πρ. Γραμ.",
+      "en": "Pr.Gram."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "ro_ma",
+    "name": {
+      "el": "ΡΟ ΜΑ",
+      "en": "RO MA"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "sean",
+    "name": {
+      "el": "ΣΕΑΝ",
+      "en": "SEAN"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "synethen",
+    "name": {
+      "el": "Συν.Εθ.Εν.",
+      "en": "Syn.Eth.En."
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "teleia",
+    "name": {
+      "el": "Τελεία",
+      "en": "Teleia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "without_seats",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "valid",
+    "name": {
+      "el": "Εγκυρα",
+      "en": "Valid"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "voted",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2",
+    "name": {
+      "el": "Ροδόπης",
+      "en": "Rodopi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110101",
+    "name": {
+      "el": "Δήμος Κομοτηνής",
+      "en": "Municipality of Komotini"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "2",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110102",
+    "name": {
+      "el": "Δήμος Αρριανών",
+      "en": "Municipality of Arriana"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "2",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110103",
+    "name": {
+      "el": "Δήμος Ιάσμου",
+      "en": "Municipality of Iasmos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "2",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110104",
+    "name": {
+      "el": "Δήμος Μαρωνείας - Σαπών",
+      "en": "Municipality of Maroneia-Sapes"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "2",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4",
+    "name": {
+      "el": "Δράμας",
+      "en": "Drama"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110201",
+    "name": {
+      "el": "Δήμος Δράμας",
+      "en": "Municipality of Drama"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "4",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110202",
+    "name": {
+      "el": "Δήμος Δοξάτου",
+      "en": "Municipality of Doxato"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "4",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110203",
+    "name": {
+      "el": "Δήμος Κάτω Νευροκοπίου",
+      "en": "Municipality of Kato Nevrokopi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "4",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110204",
+    "name": {
+      "el": "Δήμος Παρανεστίου",
+      "en": "Municipality of Paranesti"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "4",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110205",
+    "name": {
+      "el": "Δήμος Προσοτσάνης",
+      "en": "Municipality of Prossotsani"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "4",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1",
+    "name": {
+      "el": "Εβρου",
+      "en": "Evros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110301",
+    "name": {
+      "el": "Δήμος Αλεξανδρούπολης",
+      "en": "Municipality of Alexandroupoli"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "1",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110302",
+    "name": {
+      "el": "Δήμος Διδυμοτείχου",
+      "en": "Municipality of Didymoticho"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "1",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110303",
+    "name": {
+      "el": "Δήμος Ορεστιάδας",
+      "en": "Municipality of Orestiada"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "1",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110304",
+    "name": {
+      "el": "Δήμος Σαμοθράκης",
+      "en": "Municipality of Samothraki"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "1",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110305",
+    "name": {
+      "el": "Δήμος Σουφλίου",
+      "en": "Municipality of Soufli"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "1",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "5",
+    "name": {
+      "el": "Καβάλας",
+      "en": "Kavala"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110401",
+    "name": {
+      "el": "Δήμος Θάσου",
+      "en": "Municipality of Thassos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "5",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110501",
+    "name": {
+      "el": "Δήμος Καβάλας",
+      "en": "Municipality of Kavala"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "5",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110502",
+    "name": {
+      "el": "Δήμος Νέστου",
+      "en": "Municipality of Nestos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "5",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110503",
+    "name": {
+      "el": "Δήμος Παγγαίου",
+      "en": "Municipality of Pagheo"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "5",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3",
+    "name": {
+      "el": "Ξάνθης",
+      "en": "Xanthi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110601",
+    "name": {
+      "el": "Δήμος Ξάνθης",
+      "en": "Municipality of Xanthi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "3",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110602",
+    "name": {
+      "el": "Δήμος Αβδήρων",
+      "en": "Municipality of Avdira"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "3",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110603",
+    "name": {
+      "el": "Δήμος Μύκης",
+      "en": "Municipality of Myki"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "3",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1110604",
+    "name": {
+      "el": "Δήμος Τοπείρου",
+      "en": "Municipality of Topiros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "3",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "6",
+    "name": {
+      "el": "Α' Θεσσαλονίκης",
+      "en": "Thessaloniki A"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120701",
+    "name": {
+      "el": "Δήμος Θεσσαλονίκης",
+      "en": "Municipality of Thessaloniki"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "6",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120702",
+    "name": {
+      "el": "Δήμος Αμπελοκήπων - Μενεμένης",
+      "en": "Municipality of Ampelokipoi-Menemeni"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "6",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "7",
+    "name": {
+      "el": "Β' Θεσσαλονίκης",
+      "en": "Thessaloniki B"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120703",
+    "name": {
+      "el": "Δήμος Βόλβης",
+      "en": "Municipality of Volvi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "7",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120704",
+    "name": {
+      "el": "Δήμος Δέλτα",
+      "en": "Municipality of Delta"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "7",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120705",
+    "name": {
+      "el": "Δήμος Θερμαϊκού",
+      "en": "Municipality of Thermaikos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "7",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120706",
+    "name": {
+      "el": "Δήμος Θέρμης",
+      "en": "Municipality of Thermi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "7",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120707",
+    "name": {
+      "el": "Δήμος Καλαμαριάς",
+      "en": "Municipality of Kalamaria"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "6",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120708",
+    "name": {
+      "el": "Δήμος Κορδελιού -Ευόσμου",
+      "en": "Municipality of Kordelio-Evosmos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "6",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120709",
+    "name": {
+      "el": "Δήμος Λαγκαδά",
+      "en": "Municipality of Lagadas"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "7",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120710",
+    "name": {
+      "el": "Δήμος Νεάπολης - Συκεών",
+      "en": "Municipality of Neapoli-Sykees"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "6",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120711",
+    "name": {
+      "el": "Δήμος Παύλου Μελά",
+      "en": "Municipality of Pavlos Melas"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "6",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120712",
+    "name": {
+      "el": "Δήμος Πυλαίας - Χορτιάτη",
+      "en": "Municipality of Pylaia-Hortiatis"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "7",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120713",
+    "name": {
+      "el": "Δήμος Χαλκηδόνος",
+      "en": "Municipality of Chalkidona"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "7",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120714",
+    "name": {
+      "el": "Δήμος Ωραιοκάστρου",
+      "en": "Municipality of Oreokastro"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "7",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "12",
+    "name": {
+      "el": "Ημαθίας",
+      "en": "Imathia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120801",
+    "name": {
+      "el": "Δήμος Βέροιας",
+      "en": "Municipality of Veria"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "12",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120802",
+    "name": {
+      "el": "Δήμος Αλεξάνδρειας",
+      "en": "Municipality of Alexandria"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "12",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120803",
+    "name": {
+      "el": "Δήμος Νάουσας",
+      "en": "Municipality of Naoussa"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "12",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "10",
+    "name": {
+      "el": "Κιλκίς",
+      "en": "Kilkis"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120901",
+    "name": {
+      "el": "Δήμος Κιλκίς",
+      "en": "Municipality of Kilkis"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "10",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1120902",
+    "name": {
+      "el": "Δήμος Παιονίας",
+      "en": "Municipality of Paionia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "10",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "11",
+    "name": {
+      "el": "Πέλλας",
+      "en": "Pella"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121001",
+    "name": {
+      "el": "Δήμος Εδεσσας",
+      "en": "Municipality of Edessa"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "11",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121002",
+    "name": {
+      "el": "Δήμος Αλμωπίας",
+      "en": "Municipality of Almopia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "11",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121003",
+    "name": {
+      "el": "Δήμος Πέλλας",
+      "en": "Municipality of Pella"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "11",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121004",
+    "name": {
+      "el": "Δήμος Σκύδρας",
+      "en": "Municipality of Skydra"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "11",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "13",
+    "name": {
+      "el": "Πιερίας",
+      "en": "Pieria"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121101",
+    "name": {
+      "el": "Δήμος Κατερίνης",
+      "en": "Municipality of Katerini"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "13",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121102",
+    "name": {
+      "el": "Δήμος Δίου - Ολύμπου",
+      "en": "Municipality of Dion-Olympos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "13",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121103",
+    "name": {
+      "el": "Δήμος Πύδνας - Κολινδρού",
+      "en": "Municipality of Pydna-Kolindros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "13",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "8",
+    "name": {
+      "el": "Σερρών",
+      "en": "Serres"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121201",
+    "name": {
+      "el": "Δήμος Σερρών",
+      "en": "Municipality of Serres"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "8",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121202",
+    "name": {
+      "el": "Δήμος Αμφίπολης",
+      "en": "Municipality of Amfipoli"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "8",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121203",
+    "name": {
+      "el": "Δήμος Βισαλτίας",
+      "en": "Municipality of Vissaltia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "8",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121204",
+    "name": {
+      "el": "Δήμος Εμμανουήλ Παππά",
+      "en": "Municipality of Emmanuel Pappas"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "8",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121205",
+    "name": {
+      "el": "Δήμος Ηρακλείας",
+      "en": "Municipality of Irakleia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "8",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121206",
+    "name": {
+      "el": "Δήμος Νέας Ζίχνης",
+      "en": "Municipality of Nea Zichni"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "8",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121207",
+    "name": {
+      "el": "Δήμος Σιντικής",
+      "en": "Municipality of Sintiki"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "8",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "9",
+    "name": {
+      "el": "Χαλκιδικής",
+      "en": "Halkidiki"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121301",
+    "name": {
+      "el": "Δήμος Πολυγύρου",
+      "en": "Municipality of Polygyros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "9",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121302",
+    "name": {
+      "el": "Δήμος Αριστοτέλη",
+      "en": "Municipality of Aristotelis"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "9",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121303",
+    "name": {
+      "el": "Δήμος Κασσάνδρας",
+      "en": "Municipality of Kassandra"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "9",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121304",
+    "name": {
+      "el": "Δήμος Νέας Προποντίδας",
+      "en": "Municipality of Nea Propontida"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "9",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1121305",
+    "name": {
+      "el": "Δήμος Σιθωνίας",
+      "en": "Municipality of Sithonia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "9",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "15",
+    "name": {
+      "el": "Κοζάνης",
+      "en": "Kozani"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1211401",
+    "name": {
+      "el": "Δήμος Κοζάνης",
+      "en": "Municipality of Kozani"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "15",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1211402",
+    "name": {
+      "el": "Δήμος Βοϊου",
+      "en": "Municipality of Voiou"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "15",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1211403",
+    "name": {
+      "el": "Δήμος Εορδαίας",
+      "en": "Municipality of Eordaia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "15",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1211404",
+    "name": {
+      "el": "Δήμος Σερβίων - Βελβεντού ",
+      "en": "Municipality of Servia-Velvendos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "15",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "17",
+    "name": {
+      "el": "Γρεβενών",
+      "en": "Grevena"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1211501",
+    "name": {
+      "el": "Δήμος Γρεβενών",
+      "en": "Municipality of Grevena"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "17",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1211502",
+    "name": {
+      "el": "Δήμος Δεσκάτης",
+      "en": "Municipality of Deskati"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "17",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "16",
+    "name": {
+      "el": "Καστοριάς",
+      "en": "Kastoria"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1211601",
+    "name": {
+      "el": "Δήμος Καστοριάς",
+      "en": "Municipality of Kastoria"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "16",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1211602",
+    "name": {
+      "el": "Δήμος Νεστορίου",
+      "en": "Municipality of Nestorio"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "16",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1211603",
+    "name": {
+      "el": "Δήμος Ορεστίδος",
+      "en": "Municipality of Orestida"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "16",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "14",
+    "name": {
+      "el": "Φλώρινας",
+      "en": "Florina"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1211701",
+    "name": {
+      "el": "Δήμος Φλώρινας",
+      "en": "Municipality of Florina"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "14",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1211702",
+    "name": {
+      "el": "Δήμος Αμυνταίου",
+      "en": "Municipality of Amynteo"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "14",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1211703",
+    "name": {
+      "el": "Δήμος Πρεσπών",
+      "en": "Municipality of Prespes"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "14",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "18",
+    "name": {
+      "el": "Ιωαννίνων",
+      "en": "Ioannina "
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1221801",
+    "name": {
+      "el": "Δήμος Ιωαννιτών",
+      "en": "Municipality of Ioannina"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "18",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1221802",
+    "name": {
+      "el": "Δήμος Βορείων Τζουμέρκων",
+      "en": "Municipality of Voreia Tzoumerka"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "18",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1221803",
+    "name": {
+      "el": "Δήμος Δωδώνης",
+      "en": "Municipality of Dodoni"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "18",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1221804",
+    "name": {
+      "el": "Δήμος Ζαγορίου",
+      "en": "Municipality of Zagorio"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "18",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1221805",
+    "name": {
+      "el": "Δήμος Ζίτσας",
+      "en": "Municipality of Zitsa"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "18",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1221806",
+    "name": {
+      "el": "Δήμος Κόνιτσας",
+      "en": "Municipality of Konitsa"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "18",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1221807",
+    "name": {
+      "el": "Δήμος Μετσόβου",
+      "en": "Municipality of Metsovo"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "18",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1221808",
+    "name": {
+      "el": "Δήμος Πωγωνίου",
+      "en": "Municipality of Pogonio"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "18",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "19",
+    "name": {
+      "el": "Αρτας",
+      "en": "Arta"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1221901",
+    "name": {
+      "el": "Δήμος Αρταίων",
+      "en": "Municipality of Arta"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "19",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1221902",
+    "name": {
+      "el": "Δήμος Γεωργίου Καραϊσκάκη",
+      "en": "Municipality of Georgios Karaiskakis"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "19",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1221903",
+    "name": {
+      "el": "Δήμος Κεντρικών Τζουμέρκων ",
+      "en": "Municipality of Kentrika Tzoumerka"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "19",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1221904",
+    "name": {
+      "el": "Δήμος Νικολάου Σκουφά",
+      "en": "Municipality of Nikolaos Skoufas"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "19",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "20",
+    "name": {
+      "el": "Θεσπρωτίας",
+      "en": "Thesprotia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1222001",
+    "name": {
+      "el": "Δήμος Ηγουμενίτσας",
+      "en": "Municipality of Igoumenitsa"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "20",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1222002",
+    "name": {
+      "el": "Δήμος Σουλίου",
+      "en": "Municipality of Souli"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "20",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1222003",
+    "name": {
+      "el": "Δήμος Φιλιατών",
+      "en": "Municipality of Filiates"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "20",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "21",
+    "name": {
+      "el": "Πρέβεζας",
+      "en": "Preveza"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1222101",
+    "name": {
+      "el": "Δήμος Πρέβεζας",
+      "en": "Municipality of Preveza"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "21",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1222102",
+    "name": {
+      "el": "Δήμος Ζηρού",
+      "en": "Municipality of Ziros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "21",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "1222103",
+    "name": {
+      "el": "Δήμος Πάργας",
+      "en": "Municipality of Parga"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "21",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "22",
+    "name": {
+      "el": "Λάρισας",
+      "en": "Larissa"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312201",
+    "name": {
+      "el": "Δήμος Λαρισαίων",
+      "en": "Municipality of Larisa"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "22",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312202",
+    "name": {
+      "el": "Δήμος Αγιάς",
+      "en": "Municipality of Aghia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "22",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312203",
+    "name": {
+      "el": "Δήμος Ελασσόνας",
+      "en": "Municipality of Elassona"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "22",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312204",
+    "name": {
+      "el": "Δήμος Κιλελέρ",
+      "en": "Municipality of Kileler"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "22",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312205",
+    "name": {
+      "el": "Δήμος Τεμπών ",
+      "en": "Municipality of Tempi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "22",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312206",
+    "name": {
+      "el": "Δήμος Τυρνάβου",
+      "en": "Municipality of Tyrnavos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "22",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312207",
+    "name": {
+      "el": "Δήμος Φαρσάλων",
+      "en": "Municipality of Farsala"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "22",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "25",
+    "name": {
+      "el": "Καρδίτσας",
+      "en": "Karditsa"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312301",
+    "name": {
+      "el": "Δήμος Καρδίτσας",
+      "en": "Municipality of Karditsa"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "25",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312302",
+    "name": {
+      "el": "Δήμος Αργιθέας",
+      "en": "Municipality of Argithea"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "25",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312303",
+    "name": {
+      "el": "Δήμος Λίμνης Πλαστήρα",
+      "en": "Municipality of Limni Plastira"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "25",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312304",
+    "name": {
+      "el": "Δήμος Μουζακίου",
+      "en": "Municipality of Mouzaki"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "25",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312305",
+    "name": {
+      "el": "Δήμος Παλαμά",
+      "en": "Municipality of Palamas"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "25",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312306",
+    "name": {
+      "el": "Δήμος Σοφάδων",
+      "en": "Municipality of Sofades"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "25",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "23",
+    "name": {
+      "el": "Μαγνησίας",
+      "en": "Magnesia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312401",
+    "name": {
+      "el": "Δήμος Βόλου",
+      "en": "Municipality of Volos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "23",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312402",
+    "name": {
+      "el": "Δήμος Αλμυρού",
+      "en": "Municipality of Almyros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "23",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312403",
+    "name": {
+      "el": "Δήμος Ζαγοράς - Μουρεσίου",
+      "en": "Municipality of Zagora-Mouresio"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "23",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312404",
+    "name": {
+      "el": "Δήμος Νοτίου Πηλίου",
+      "en": "Municipality of Notio Pilio"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "23",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312405",
+    "name": {
+      "el": "Δήμος Ρήγα Φεραίου",
+      "en": "Municipality of Rigas Feraios"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "23",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312501",
+    "name": {
+      "el": "Δήμος Σκιάθου",
+      "en": "Municipality of Skiathos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "23",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312502",
+    "name": {
+      "el": "Δήμος Αλοννήσου",
+      "en": "Municipality of Alonissos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "23",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312503",
+    "name": {
+      "el": "Δήμος Σκοπέλου",
+      "en": "Municipality of Skopelos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "23",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "24",
+    "name": {
+      "el": "Τρικάλων",
+      "en": "Trikala"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312601",
+    "name": {
+      "el": "Δήμος Τρικκαίων",
+      "en": "Municipality of Trikala"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "24",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312602",
+    "name": {
+      "el": "Δήμος Καλαμπάκας",
+      "en": "Municipality of Kalabaka"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "24",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312603",
+    "name": {
+      "el": "Δήμος Πύλης",
+      "en": "Municipality of Pyli"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "24",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2312604",
+    "name": {
+      "el": "Δήμος Φαρκαδόνας",
+      "en": "Municipality of Farkadona"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "24",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "33",
+    "name": {
+      "el": "Φθιώτιδας",
+      "en": "Fthiotida"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322701",
+    "name": {
+      "el": "Δήμος Λαμιέων",
+      "en": "Municipality of Lamia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "33",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322702",
+    "name": {
+      "el": "Δήμος Αμφίκλειας - Ελάτειας",
+      "en": "Municipality of Amfikleia-Elateia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "33",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322703",
+    "name": {
+      "el": "Δήμος Δομοκού",
+      "en": "Municipality of Domokos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "33",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322704",
+    "name": {
+      "el": "Δήμος Λοκρών",
+      "en": "Municipality of Lokroi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "33",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322705",
+    "name": {
+      "el": "Δήμος Μακρακώμης",
+      "en": "Municipality of Makrakomi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "33",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322706",
+    "name": {
+      "el": "Δήμος Μώλου - Αγίου Κωνσταντίνου",
+      "en": "Municipality of Molos-Aghios Konstantinos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "33",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322707",
+    "name": {
+      "el": "Δήμος Στυλίδας",
+      "en": "Municipality of Stylida"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "33",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "36",
+    "name": {
+      "el": "Βοιωτίας",
+      "en": "Viotia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322801",
+    "name": {
+      "el": "Δήμος Λεβαδέων",
+      "en": "Municipality of Levadia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "36",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322802",
+    "name": {
+      "el": "Δήμος Αλιάρτου",
+      "en": "Municipality of Aliartos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "36",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322803",
+    "name": {
+      "el": "Δήμος Διστόμου - Αράχοβας - Αντίκυρας",
+      "en": "Municipality of Distomo-Arahova-Antikyra"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "36",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322804",
+    "name": {
+      "el": "Δήμος Θηβαίων",
+      "en": "Municipality of Thiva"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "36",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322805",
+    "name": {
+      "el": "Δήμος Ορχομενού",
+      "en": "Municipality of Orchomenos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "36",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322806",
+    "name": {
+      "el": "Δήμος Τανάγρας",
+      "en": "Municipality of Tanagra"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "36",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "37",
+    "name": {
+      "el": "Ευβοιας",
+      "en": "Evia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322901",
+    "name": {
+      "el": "Δήμος Χαλκιδέων",
+      "en": "Municipality of Chalkida"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "37",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322902",
+    "name": {
+      "el": "Δήμος Διρφύων - Μεσσαπίων",
+      "en": "Municipality of Dirfioi-Messapes"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "37",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322903",
+    "name": {
+      "el": "Δήμος Ερέτριας",
+      "en": "Municipality of Eretria"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "37",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322904",
+    "name": {
+      "el": "Δήμος Ιστιαίας - Αιδηψού",
+      "en": "Municipality of Istaia-Aedipsos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "37",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322905",
+    "name": {
+      "el": "Δήμος Καρύστου",
+      "en": "Municipality of Karystos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "37",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322906",
+    "name": {
+      "el": "Δήμος Κύμης - Αλιβερίου",
+      "en": "Municipality of Kymi-Aliveri"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "37",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322907",
+    "name": {
+      "el": "Δήμος Μαντουδίου - Λίμνης - Αγίας Αννας",
+      "en": "Municipality of Mantoudi-Limni-Aghia Anna"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "37",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2322908",
+    "name": {
+      "el": "Δήμος Σκύρου",
+      "en": "Municipality of Skyros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "37",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "34",
+    "name": {
+      "el": "Ευρυτανίας",
+      "en": "Evrytania"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2323001",
+    "name": {
+      "el": "Δήμος Καρπενησίου",
+      "en": "Municipality of Karpenissi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "34",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2323002",
+    "name": {
+      "el": "Δήμος Αγράφων",
+      "en": "Municipality of Agrafa"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "34",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "35",
+    "name": {
+      "el": "Φωκίδας",
+      "en": "Fokida"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2323101",
+    "name": {
+      "el": "Δήμος Δελφών",
+      "en": "Municipality of Delfi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "35",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2323102",
+    "name": {
+      "el": "Δήμος Δωρίδος",
+      "en": "Municipality of Dorida"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "35",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "26",
+    "name": {
+      "el": "Κέρκυρας",
+      "en": "Corfu"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2413201",
+    "name": {
+      "el": "Δήμος Κέρκυρας",
+      "en": "Municipality of Kerkyra"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "26",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2413202",
+    "name": {
+      "el": "Δήμος Παξών",
+      "en": "Municipality of Paxi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "26",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "29",
+    "name": {
+      "el": "Ζακύνθου",
+      "en": "Zakynthos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2413301",
+    "name": {
+      "el": "Δήμος Ζακύνθου",
+      "en": "Municipality of Zakynthos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "29",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "28",
+    "name": {
+      "el": "Κεφαλληνίας",
+      "en": "Keffalonia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2413401",
+    "name": {
+      "el": "Δήμος Ιθάκης",
+      "en": "Municipality of Ithaki"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "28",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2413501",
+    "name": {
+      "el": "Δήμος Κεφαλονιάς",
+      "en": "Municipality of Kefalonia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "28",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "27",
+    "name": {
+      "el": "Λευκάδας",
+      "en": "Lefkada"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2413601",
+    "name": {
+      "el": "Δήμος Λευκάδας",
+      "en": "Municipality of Lefkada"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "27",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2413602",
+    "name": {
+      "el": "Δήμος Μεγανησίου",
+      "en": "Municipality of Meganissi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "27",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "31",
+    "name": {
+      "el": "Αχαίας",
+      "en": "Achaia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423701",
+    "name": {
+      "el": "Δήμος Πατρέων",
+      "en": "Municipality of Patra"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "31",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423702",
+    "name": {
+      "el": "Δήμος Αιγιαλείας",
+      "en": "Municipality of Aigialeia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "31",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423703",
+    "name": {
+      "el": "Δήμος Δυτικής Αχαϊας",
+      "en": "Municipality of Dytiki Ahaia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "31",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423704",
+    "name": {
+      "el": "Δήμος Ερυμάνθου",
+      "en": "Municipality of Erymanthos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "31",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423705",
+    "name": {
+      "el": "Δήμος Καλαβρύτων",
+      "en": "Municipality of Kalavryta"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "31",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "30",
+    "name": {
+      "el": "Αιτωλοακαρνανίας",
+      "en": "Aitolo - Akarnania"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423801",
+    "name": {
+      "el": "Δήμος Ιεράς Πόλης Μεσολογγίου",
+      "en": "Municipality of Iera Polis Messologhiou (Holy City of Messologhi)"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "30",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423802",
+    "name": {
+      "el": "Δήμος Ακτιου - Βόνιτσας",
+      "en": "Municipality of Aktio-Vonitsa"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "30",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423803",
+    "name": {
+      "el": "Δήμος Αγρινίου",
+      "en": "Municipality of Agrinio"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "30",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423804",
+    "name": {
+      "el": "Δήμος Αμφιλοχίας",
+      "en": "Municipality of Amfilochia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "30",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423805",
+    "name": {
+      "el": "Δήμος Θέρμου",
+      "en": "Municipality of Thermo"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "30",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423806",
+    "name": {
+      "el": "Δήμος Ναυπακτίας",
+      "en": "Municipality of Nafpaktia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "30",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423807",
+    "name": {
+      "el": "Δήμος Ξηρομέρου",
+      "en": "Municipality of Xiromeros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "30",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "32",
+    "name": {
+      "el": "Ηλείας",
+      "en": "Ileia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423901",
+    "name": {
+      "el": "Δήμος Πύργου",
+      "en": "Municipality of Pyrgos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "32",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423902",
+    "name": {
+      "el": "Δήμος Ηλιδας",
+      "en": "Municipality of Ilida"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "32",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423903",
+    "name": {
+      "el": "Δήμος Ανδραβίδας - Κυλλήνης",
+      "en": "Municipality of Andravida-Kylini"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "32",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423904",
+    "name": {
+      "el": "Δήμος Ανδρίτσαινας - Κρεστένων",
+      "en": "Municipality of Andritsaina-Krestena"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "32",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423905",
+    "name": {
+      "el": "Δήμος Αρχαίας Ολυμπίας",
+      "en": "Municipality of Archea Olympia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "32",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423906",
+    "name": {
+      "el": "Δήμος Ζαχάρως",
+      "en": "Municipality of Zacharo"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "32",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2423907",
+    "name": {
+      "el": "Δήμος Πηνειού",
+      "en": "Municipality of Pinios"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "32",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "45",
+    "name": {
+      "el": "Αρκαδίας",
+      "en": "Arcadia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434001",
+    "name": {
+      "el": "Δήμος Τρίπολης",
+      "en": "Municipality of Tripoli"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "45",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434002",
+    "name": {
+      "el": "Δήμος Βόρειας Κυνουρίας",
+      "en": "Municipality of Voria Kynouria"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "45",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434003",
+    "name": {
+      "el": "Δήμος Γορτυνίας",
+      "en": "Municipality of Gortynia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "45",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434004",
+    "name": {
+      "el": "Δήμος Μεγαλόπολης",
+      "en": "Municipality of Megalopoli"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "45",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434005",
+    "name": {
+      "el": "Δήμος Νότιας Κυνουρίας",
+      "en": "Municipality of Notia Kynouria"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "45",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "44",
+    "name": {
+      "el": "Αργολίδος",
+      "en": "Argolida"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434101",
+    "name": {
+      "el": "Δήμος Ναυπλιέων",
+      "en": "Municipality of Nafplieis"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "44",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434102",
+    "name": {
+      "el": "Δήμος Αργους - Μυκηνών",
+      "en": "Municipality of Argos-Mykines"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "44",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434103",
+    "name": {
+      "el": "Δήμος Επιδαύρου",
+      "en": "Municipality of Epidavros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "44",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434104",
+    "name": {
+      "el": "Δήμος Ερμιονίδας",
+      "en": "Municipality of Ermionida"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "44",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "43",
+    "name": {
+      "el": "Κορινθίας",
+      "en": "Korinthia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434201",
+    "name": {
+      "el": "Δήμος Κορινθίων",
+      "en": "Municipality of Korinthos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "43",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434202",
+    "name": {
+      "el": "Δήμος Βέλου - Βόχας",
+      "en": "Municipality of Velo-Voha"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "43",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434203",
+    "name": {
+      "el": "Δήμος Λουτρακίου - Αγίων Θεοδώρων",
+      "en": "Municipality of Loutraki-Aghioi Theodoroi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "43",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434204",
+    "name": {
+      "el": "Δήμος Νεμέας",
+      "en": "Municipality of Nemea"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "43",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434205",
+    "name": {
+      "el": "Δήμος Ξυλοκάστρου - Ευρωστίνης",
+      "en": "Municipality of Xylokastro-Erostinh"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "43",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434206",
+    "name": {
+      "el": "Δήμος Σικυωνίων",
+      "en": "Municipality of Sykion"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "43",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "47",
+    "name": {
+      "el": "Λακωνίας",
+      "en": "Lakonia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434301",
+    "name": {
+      "el": "Δήμος Σπάρτης",
+      "en": "Municipality of Sparti"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "47",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434302",
+    "name": {
+      "el": "Δήμος Ανατολικής Μάνης",
+      "en": "Municipality of Anatoliki Mani"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "47",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434303",
+    "name": {
+      "el": "Δήμος Ελαφονήσου",
+      "en": "Municipality of Elafonisos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "47",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434304",
+    "name": {
+      "el": "Δήμος Ευρώτα",
+      "en": "Municipality of Evrotas"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "47",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434305",
+    "name": {
+      "el": "Δήμος Μονεμβασίας",
+      "en": "Municipality of Monemvassia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "47",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "46",
+    "name": {
+      "el": "Μεσσηνίας",
+      "en": "Messinia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434401",
+    "name": {
+      "el": "Δήμος Καλαμάτας",
+      "en": "Municipality of Kalamata"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "46",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434402",
+    "name": {
+      "el": "Δήμος Δυτικής Μάνης",
+      "en": "Municipality of Dytikh Mani"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "46",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434403",
+    "name": {
+      "el": "Δήμος Μεσσήνης",
+      "en": "Municipality of Messini"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "46",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434404",
+    "name": {
+      "el": "Δήμος Οιχαλίας",
+      "en": "Municipality of Ichalia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "46",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434405",
+    "name": {
+      "el": "Δήμος Πύλου - Νέστορος",
+      "en": "Municipality of Pylos-Nestoras"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "46",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "2434406",
+    "name": {
+      "el": "Δήμος Τριφυλλίας",
+      "en": "Municipality of Trifylia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "46",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "38",
+    "name": {
+      "el": "Α' Αθηνών",
+      "en": "Athens A"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514501",
+    "name": {
+      "el": "Δήμος Αθηναίων",
+      "en": "Municipality of Athens"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "38",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "39",
+    "name": {
+      "el": "Β' Αθηνών",
+      "en": "Athens B"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514502",
+    "name": {
+      "el": "Δήμος Βύρωνος",
+      "en": "Municipality of Vyron"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514503",
+    "name": {
+      "el": "Δήμος Γαλατσίου",
+      "en": "Municipality of Galatsi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514504",
+    "name": {
+      "el": "Δήμος Δάφνης - Υμηττού",
+      "en": "Municipality of Dafni-Ymitos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514505",
+    "name": {
+      "el": "Δήμος Ζωγράφου",
+      "en": "Municipality of Zografos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514506",
+    "name": {
+      "el": "Δήμος Ηλιουπόλεως",
+      "en": "Municipality of Ilioupolis"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514507",
+    "name": {
+      "el": "Δήμος Καισαριανής",
+      "en": "Municipality of Kessariani"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514508",
+    "name": {
+      "el": "Δήμος Φιλαδέλφειας - Χαλκηδόνος",
+      "en": "Municipality of Philadelphia-Halkidona"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514601",
+    "name": {
+      "el": "Δήμος Αμαρουσίου",
+      "en": "Municipality of Amaroussio"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514602",
+    "name": {
+      "el": "Δήμος Αγίας Παρασκευής",
+      "en": "Municipality of Aghia Paraskevi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514603",
+    "name": {
+      "el": "Δήμος Βριλησσίων",
+      "en": "Municipality of Vrilissia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514604",
+    "name": {
+      "el": "Δήμος Ηρακλείου",
+      "en": "Municipality of Iraklio"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514605",
+    "name": {
+      "el": "Δήμος Κηφισιάς",
+      "en": "Municipality of Kifissia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514606",
+    "name": {
+      "el": "Δήμος Λυκόβρυσης - Πεύκης",
+      "en": "Municipality of Lykovrisi-Pefki"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514607",
+    "name": {
+      "el": "Δήμος Μεταμορφώσεως",
+      "en": "Municipality of Metamorfossi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514608",
+    "name": {
+      "el": "Δήμος Νέας Ιωνίας",
+      "en": "Municipality of Nea Ionia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514609",
+    "name": {
+      "el": "Δήμος Παπάγου - Χολαργού",
+      "en": "Municipality of Papagos-Holargos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514610",
+    "name": {
+      "el": "Δήμος Πεντέλης",
+      "en": "Municipality of Penteli"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514611",
+    "name": {
+      "el": "Δήμος Φιλοθέης - Ψυχικού",
+      "en": "Municipality of Filothei-Psychico"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514612",
+    "name": {
+      "el": "Δήμος Χαλανδρίου",
+      "en": "Municipality of Chalandri"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514701",
+    "name": {
+      "el": "Δήμος Περιστερίου",
+      "en": "Municipality of Peristeri"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514702",
+    "name": {
+      "el": "Δήμος Αγίας Βαρβάρας",
+      "en": "Municipality of Aghia Varvara"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514703",
+    "name": {
+      "el": "Δήμος Αγιων Αναργύρων - Καματερού",
+      "en": "Municipality of Aghioi Anargyroi-Kamatero"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514704",
+    "name": {
+      "el": "Δήμος Αιγάλεω",
+      "en": "Municipality of Aegaleo"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514705",
+    "name": {
+      "el": "Δήμος Ιλίου",
+      "en": "Municipality of Ilion"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514706",
+    "name": {
+      "el": "Δήμος Πετρουπόλεως",
+      "en": "Municipality of Petroupoli"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514707",
+    "name": {
+      "el": "Δήμος Χαϊδαρίου",
+      "en": "Municipality of Chaidari"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514801",
+    "name": {
+      "el": "Δήμος Καλλιθέας",
+      "en": "Municipality of Kallithea"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514802",
+    "name": {
+      "el": "Δήμος Αγίου Δημητρίου",
+      "en": "Municipality of Aghios Dimitrios"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514803",
+    "name": {
+      "el": "Δήμος Αλίμου",
+      "en": "Municipality of Alimos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514804",
+    "name": {
+      "el": "Δήμος Γλυφάδας",
+      "en": "Municipality of Glyfada"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514805",
+    "name": {
+      "el": "Δήμος Ελληνικού - Αργυρούπολης",
+      "en": "Municipality of Helliniko-Argyroupoli"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514806",
+    "name": {
+      "el": "Δήμος Μοσχάτου - Ταύρου",
+      "en": "Municipality of Moshato-Tavros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514807",
+    "name": {
+      "el": "Δήμος Νέας Σμύρνης",
+      "en": "Municipality of Nea Smyrni"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514808",
+    "name": {
+      "el": "Δήμος Παλαιού Φαλήρου",
+      "en": "Municipality of Paleo Faliro"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "39",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "42",
+    "name": {
+      "el": "Αττικής",
+      "en": "Attica"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514901",
+    "name": {
+      "el": "Δήμος Αχαρνών",
+      "en": "Municipality of Acharnes"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514902",
+    "name": {
+      "el": "Δήμος Βάρης - Βούλας - Βουλιαγμένης",
+      "en": "Municipality of Vari-Voula-Vouliagmeni"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514903",
+    "name": {
+      "el": "Δήμος Διονύσου",
+      "en": "Municipality of Dionysos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514904",
+    "name": {
+      "el": "Δήμος Κρωπίας",
+      "en": "Municipality of Koropi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514905",
+    "name": {
+      "el": "Δήμος Λαυρεωτικής",
+      "en": "Municipality of Lavrio"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514906",
+    "name": {
+      "el": "Δήμος Μαραθώνος",
+      "en": "Municipality of Marathon"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514907",
+    "name": {
+      "el": "Δήμος Μαρκοπούλου Μεσογαίας",
+      "en": "Municipality of Markopoulo Messogheas"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514908",
+    "name": {
+      "el": "Δήμος Παιανίας",
+      "en": "Municipality of Peania"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514909",
+    "name": {
+      "el": "Δήμος Παλλήνης",
+      "en": "Municipality of Pallini"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514910",
+    "name": {
+      "el": "Δήμος Ραφήνας - Πικερμίου",
+      "en": "Municipality of Rafina-Pikermi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514911",
+    "name": {
+      "el": "Δήμος Σαρωνικού",
+      "en": "Municipality of Saronikos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514912",
+    "name": {
+      "el": "Δήμος Σπάτων - Αρτέμιδος",
+      "en": "Municipality of Spata-Artemida"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3514913",
+    "name": {
+      "el": "Δήμος Ωρωπού",
+      "en": "Municipality of Oropos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515001",
+    "name": {
+      "el": "Δήμος Ελευσίνας",
+      "en": "Municipality of Elefsina"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515002",
+    "name": {
+      "el": "Δήμος Ασπροπύργου",
+      "en": "Municipality of Aspropyrgos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515003",
+    "name": {
+      "el": "Δήμος Μάνδρας - Ειδυλλίας",
+      "en": "Municipality of Mandra-Eidylia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515004",
+    "name": {
+      "el": "Δήμος Μεγαρέων",
+      "en": "Municipality of Megara"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515005",
+    "name": {
+      "el": "Δήμος Φυλής",
+      "en": "Municipality of Fyli"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "42",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "40",
+    "name": {
+      "el": "Α' Πειραιώς",
+      "en": "Piraeus A"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515101",
+    "name": {
+      "el": "Δήμος Πειραιώς",
+      "en": "Municipality of Pireas"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "40",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "41",
+    "name": {
+      "el": "Β' Πειραιώς",
+      "en": "Piraeus B"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515102",
+    "name": {
+      "el": "Δήμος Κερατσινίου - Δραπετσώνας",
+      "en": "Municipality of Keratsini-Drapetsona"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "41",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515103",
+    "name": {
+      "el": "Δήμος Κορυδαλλού",
+      "en": "Municipality of Korydallos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "41",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515104",
+    "name": {
+      "el": "Δήμος Νίκαιας - Αγίου Ιωάννη Ρέντη",
+      "en": "Municipality of Nikaia-Aghios Ioannis Rentis"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "41",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515105",
+    "name": {
+      "el": "Δήμος Περάματος",
+      "en": "Municipality of Perama"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "41",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515201",
+    "name": {
+      "el": "Δήμος Σαλαμίνας",
+      "en": "Municipality of Salamina"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "41",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515202",
+    "name": {
+      "el": "Δήμος Υδρας",
+      "en": "Municipality of Ydra"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "40",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515203",
+    "name": {
+      "el": "Δήμος Αγκιστρίου",
+      "en": "Municipality of Agistri"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "40",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515204",
+    "name": {
+      "el": "Δήμος Αίγινας",
+      "en": "Municipality of Aegina"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "40",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515205",
+    "name": {
+      "el": "Δήμος Κυθήρων",
+      "en": "Municipality of Kythira"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "40",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515206",
+    "name": {
+      "el": "Δήμος Πόρου",
+      "en": "Municipality of Poros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "40",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515207",
+    "name": {
+      "el": "Δήμος Σπετσών",
+      "en": "Municipality of Spetses"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "40",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "3515208",
+    "name": {
+      "el": "Δήμος Τροιζηνίας",
+      "en": "Municipality of Troizina"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "40",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "48",
+    "name": {
+      "el": "Λέσβου",
+      "en": "Lesvos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4615301",
+    "name": {
+      "el": "Δήμος Λέσβου",
+      "en": "Municipality of Lesvos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "48",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "50",
+    "name": {
+      "el": "Σάμου",
+      "en": "Samos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4615401",
+    "name": {
+      "el": "Δήμος Ικαρίας ",
+      "en": "Municipality of Ikaria"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "50",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4615402",
+    "name": {
+      "el": "Δήμος Φούρνων Κορσεών",
+      "en": "Municipality of Fourni Korseon"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "50",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4615501",
+    "name": {
+      "el": "Δήμος Λήμνου",
+      "en": "Municipality of Limnos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "48",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4615502",
+    "name": {
+      "el": "Δήμος Αγίου Ευστρατίου",
+      "en": "Municipality of Aghios Evstratios"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "48",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4615601",
+    "name": {
+      "el": "Δήμος Σάμου",
+      "en": "Municipality of Samos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "50",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "49",
+    "name": {
+      "el": "Χίου",
+      "en": "Chios"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4615701",
+    "name": {
+      "el": "Δήμος Χίου",
+      "en": "Municipality of Chios"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "49",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4615702",
+    "name": {
+      "el": "Δήμος Οινουσσών",
+      "en": "Municipality of Inousses"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "49",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4615703",
+    "name": {
+      "el": "Δήμος Ψαρών",
+      "en": "Municipality of Psara"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "49",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "51",
+    "name": {
+      "el": "Κυκλάδων",
+      "en": "Cyclades"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4625801",
+    "name": {
+      "el": "Δήμος Σύρου - Ερμούπολης",
+      "en": "Municipality of Syros-Ermoupoli"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4625901",
+    "name": {
+      "el": "Δήμος Ανδρου",
+      "en": "Municipality of Andros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626001",
+    "name": {
+      "el": "Δήμος Θήρας",
+      "en": "Municipality of Thira"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626002",
+    "name": {
+      "el": "Δήμος Ανάφης",
+      "en": "Municipality of Anafi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626003",
+    "name": {
+      "el": "Δήμος Ιητών",
+      "en": "Municipality of Ios"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626004",
+    "name": {
+      "el": "Δήμος Σικίνου",
+      "en": "Municipality of Sikinos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626005",
+    "name": {
+      "el": "Δήμος Φολεγάνδρου",
+      "en": "Municipality of Folegandros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "52",
+    "name": {
+      "el": "Δωδεκανήσου",
+      "en": "Dodecanese Islands"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626101",
+    "name": {
+      "el": "Δήμος Καλυμνίων",
+      "en": "Municipality of Kalymnos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "52",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626102",
+    "name": {
+      "el": "Δήμος Αγαθονησίου",
+      "en": "Municipality of Agathonisi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "52",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626103",
+    "name": {
+      "el": "Δήμος Αστυπάλαιας",
+      "en": "Municipality of Astypalea"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "52",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626104",
+    "name": {
+      "el": "Δήμος Λειψών",
+      "en": "Municipality of Lipsi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "52",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626105",
+    "name": {
+      "el": "Δήμος Λέρου",
+      "en": "Municipality of Leros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "52",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626106",
+    "name": {
+      "el": "Δήμος Πάτμου",
+      "en": "Municipality of Patmos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "52",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626201",
+    "name": {
+      "el": "Δήμος Καρπάθου",
+      "en": "Municipality of Karpathos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "52",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626202",
+    "name": {
+      "el": "Δήμος Κάσου",
+      "en": "Municipality of Kassos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "52",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626301",
+    "name": {
+      "el": "Δήμος Κέας",
+      "en": "Municipality of Kea"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626302",
+    "name": {
+      "el": "Δήμος Κύθνου",
+      "en": "Municipality of Kythnos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626401",
+    "name": {
+      "el": "Δήμος Κω",
+      "en": "Municipality of Kos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "52",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626402",
+    "name": {
+      "el": "Δήμος Νισύρου",
+      "en": "Municipality of Nissyros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "52",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626501",
+    "name": {
+      "el": "Δήμος Μήλου",
+      "en": "Municipality of Milos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626502",
+    "name": {
+      "el": "Δήμος Κιμώλου",
+      "en": "Municipality of Kimolos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626503",
+    "name": {
+      "el": "Δήμος Σερίφου",
+      "en": "Municipality of Serifos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626504",
+    "name": {
+      "el": "Δήμος Σίφνου",
+      "en": "Municipality of Sifnos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626601",
+    "name": {
+      "el": "Δήμος Μυκόνου",
+      "en": "Municipality of Mykonos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626701",
+    "name": {
+      "el": "Δήμος Αμοργού",
+      "en": "Municipality of Amorgos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626702",
+    "name": {
+      "el": "Δήμος Νάξου & Μικρών Κυκλάδων",
+      "en": "Municipality of Naxos And Mikres Kyklades"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626801",
+    "name": {
+      "el": "Δήμος Πάρου",
+      "en": "Municipality of Paros"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626802",
+    "name": {
+      "el": "Δήμος Αντιπάρου",
+      "en": "Municipality of Antiparos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626901",
+    "name": {
+      "el": "Δήμος Ρόδου",
+      "en": "Municipality of Rodos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "52",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626902",
+    "name": {
+      "el": "Δήμος Μεγίστης",
+      "en": "Municipality of Megisti"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "52",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626903",
+    "name": {
+      "el": "Δήμος Σύμης",
+      "en": "Municipality of Symi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "52",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626904",
+    "name": {
+      "el": "Δήμος Τήλου",
+      "en": "Municipality of Tilos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "52",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4626905",
+    "name": {
+      "el": "Δήμος Χάλκης",
+      "en": "Municipality of Chalki"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "52",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4627001",
+    "name": {
+      "el": "Δήμος Τήνου",
+      "en": "Municipality of Tinos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "51",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "55",
+    "name": {
+      "el": "Ηρακλείου",
+      "en": "Iraklio"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717101",
+    "name": {
+      "el": "Δήμος Ηρακλείου",
+      "en": "Municipality of Iraklio"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "55",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717102",
+    "name": {
+      "el": "Δήμος Αρχανών - Αστερουσίων",
+      "en": "Municipality of Arhanes-Asteroysia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "55",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717103",
+    "name": {
+      "el": "Δήμος Βιάννου",
+      "en": "Municipality of Viannos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "55",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717104",
+    "name": {
+      "el": "Δήμος Γόρτυνας",
+      "en": "Municipality of Gortyna"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "55",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717105",
+    "name": {
+      "el": "Δήμος Μαλεβιζίου",
+      "en": "Municipality of Malevizi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "55",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717106",
+    "name": {
+      "el": "Δήμος Μινώα Πεδιάδος",
+      "en": "Municipality of Minoas Pediadas"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "55",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717107",
+    "name": {
+      "el": "Δήμος Φαιστού",
+      "en": "Municipality of Faistos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "55",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717108",
+    "name": {
+      "el": "Δήμος Χερσονήσου",
+      "en": "Municipality of Chersonissos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "55",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "56",
+    "name": {
+      "el": "Λασιθίου",
+      "en": "Lasithi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717201",
+    "name": {
+      "el": "Δήμος Αγίου Νικολάου",
+      "en": "Municipality of Aghios Nikolaos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "56",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717202",
+    "name": {
+      "el": "Δήμος Ιεράπετρας",
+      "en": "Municipality of Ierapetra"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "56",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717203",
+    "name": {
+      "el": "Δήμος Οροπεδίου Λασιθίου",
+      "en": "Municipality of Oropedio Lassithiou"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "56",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717204",
+    "name": {
+      "el": "Δήμος Σητείας",
+      "en": "Municipality of Sitia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "56",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "54",
+    "name": {
+      "el": "Ρεθύμνης",
+      "en": "Rethymno"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717301",
+    "name": {
+      "el": "Δήμος Ρεθύμνης",
+      "en": "Municipality of Rethymno"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "54",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717302",
+    "name": {
+      "el": "Δήμος Αγίου Βασιλείου",
+      "en": "Municipality of Aghios Vasilios"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "54",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717303",
+    "name": {
+      "el": "Δήμος Αμαρίου",
+      "en": "Municipality of Amari"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "54",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717304",
+    "name": {
+      "el": "Δήμος Ανωγείων",
+      "en": "Municipality of Anogia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "54",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717305",
+    "name": {
+      "el": "Δήμος Μυλοποτάμου",
+      "en": "Municipality of Mylopotamos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "54",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "53",
+    "name": {
+      "el": "Χανίων",
+      "en": "Chania"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "0",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717401",
+    "name": {
+      "el": "Δήμος Χανίων",
+      "en": "Municipality of Chania"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "53",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717402",
+    "name": {
+      "el": "Δήμος Αποκορώνου",
+      "en": "Municipality of Apokoronou"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "53",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717403",
+    "name": {
+      "el": "Δήμος Γαύδου",
+      "en": "Municipality of Gavdos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "53",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717404",
+    "name": {
+      "el": "Δήμος Καντάνου - Σελίνου",
+      "en": "Municipality of Kantanos-Selinou"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "53",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717405",
+    "name": {
+      "el": "Δήμος Κισσάμου",
+      "en": "Municipality of Kissamos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "53",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717406",
+    "name": {
+      "el": "Δήμος Πλατανιά",
+      "en": "Municipality of Platanias"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "53",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "4717407",
+    "name": {
+      "el": "Δήμος Σφακίων",
+      "en": "Municipality of Sfakia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "53",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "0",
+    "name": {
+      "el": "Επικράτεια",
+      "en": "State"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "",
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "elections",
+    "notation": "8",
+    "name": {
+      "el": "Ιανουάριος 2015",
+      "en": "January 2015"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "",
+    "order": 8,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections",
+    "notation": "1",
+    "name": {
+      "el": "Σεπτέμβριος 1996",
+      "en": "September 1996"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "",
+    "order": 1,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections",
+    "notation": "2",
+    "name": {
+      "el": "Απρίλιος 2000",
+      "en": "April 2000"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "",
+    "order": 2,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections",
+    "notation": "3",
+    "name": {
+      "el": "Μάρτιος 2004",
+      "en": "March 2004"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "",
+    "order": 3,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections",
+    "notation": "4",
+    "name": {
+      "el": "Σεπτέμβριος 2007",
+      "en": "September 2007"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "",
+    "order": 4,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections",
+    "notation": "5",
+    "name": {
+      "el": "Οκτώβριος 2009",
+      "en": "October 2009"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "",
+    "order": 5,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections",
+    "notation": "6",
+    "name": {
+      "el": "Μάιος 2012",
+      "en": "May 2012"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "",
+    "order": 6,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections",
+    "notation": "7",
+    "name": {
+      "el": "Ιούνιος 2012",
+      "en": "June 2012"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "parentId": "",
+    "order": 7,
+    "color": ""
+  }
+]

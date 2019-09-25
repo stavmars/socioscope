@@ -16,6 +16,7 @@ import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.context.annotation.Profile;
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.core.env.Environment;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 import org.springframework.data.mongodb.config.EnableMongoAuditing;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -57,7 +58,7 @@ public class DatabaseConfiguration {
     }
 
     @Bean
-    public Mongobee mongobee(MongoClient mongoClient, MongoTemplate mongoTemplate, MongoProperties mongoProperties) {
+    public Mongobee mongobee(MongoClient mongoClient, MongoTemplate mongoTemplate, MongoProperties mongoProperties, Environment environment) {
         log.debug("Configuring Mongobee");
         Mongobee mongobee = new Mongobee(mongoClient);
         mongobee.setDbName(mongoProperties.getMongoClientDatabase());
@@ -65,5 +66,6 @@ public class DatabaseConfiguration {
         // package to scan for migrations
         mongobee.setChangeLogsScanPackage("gr.ekke.socioscope.config.dbmigrations");
         mongobee.setEnabled(true);
+        mongobee.setSpringEnvironment(environment);
         return mongobee;
     }}

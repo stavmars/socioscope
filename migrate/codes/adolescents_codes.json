@@ -1,0 +1,1249 @@
+[
+  {
+    "dimensionId": "q1",
+    "notation": "1",
+    "order": 1,
+    "color": "#d146fc",
+    "name": {
+      "el": "κορίτσι",
+      "en": "Girl"
+    },
+    "iconURL": "/content/images/Assets/Girl.svg"
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "2",
+    "order": 2,
+    "color": "#2f7cff",
+    "name": {
+      "el": "αγόρι",
+      "en": "Boy"
+    },
+    "iconURL": "/content/images/Assets/Boy.svg"
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q2",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "1η Γυμνασίου",
+      "en": "7th Grade"
+    },
+    "shortName": {
+      "el": "Α'",
+      "en": "7th"
+    }
+  },
+  {
+    "dimensionId": "q2",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "2α Γυμνασίου",
+      "en": "8th Grade"
+    },
+    "shortName": {
+      "el": "Β'",
+      "en": "8th"
+    }
+  },
+  {
+    "dimensionId": "q2",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "3η Γυμνασίου",
+      "en": "9th Grade"
+    },
+    "shortName": {
+      "el": "Γ'",
+      "en": "9th"
+    }
+  },
+  {
+    "dimensionId": "q2",
+    "notation": "88",
+    "order": 88,
+    "color": null,
+    "name": {
+      "el": "Μη κατανοητό",
+      "en": "Incomprehensible"
+    }
+  },
+  {
+    "dimensionId": "q2",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q6F",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Ελλάδα",
+      "en": "Greece"
+    }
+  },
+  {
+    "dimensionId": "q6F",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Άλλες χώρες",
+      "en": "Other Countries"
+    }
+  },
+  {
+    "dimensionId": "q6F",
+    "notation": "99",
+    "order": 99,
+    "color": null,
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q6M",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Ελλάδα",
+      "en": "Greece"
+    }
+  },
+  {
+    "dimensionId": "q6M",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Άλλες χώρες",
+      "en": "Other Countries"
+    }
+  },
+  {
+    "dimensionId": "q6M",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q7F",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Δημοτικό",
+      "en": "Primary School"
+    }
+  },
+  {
+    "dimensionId": "q7F",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Γυμνάσιο",
+      "en": "Middle School"
+    }
+  },
+  {
+    "dimensionId": "q7F",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Λύκειο",
+      "en": "High School"
+    }
+  },
+  {
+    "dimensionId": "q7F",
+    "notation": "4",
+    "order": 4,
+    "color": null,
+    "name": {
+      "el": "ΤΕΙ, ΙΕΚ, κλπ",
+      "en": "TEI, IEK, etc"
+    }
+  },
+  {
+    "dimensionId": "q7F",
+    "notation": "5",
+    "order": 5,
+    "color": null,
+    "name": {
+      "el": "Πανεπιστήμιο",
+      "en": "University"
+    }
+  },
+  {
+    "dimensionId": "q7F",
+    "notation": "6",
+    "order": 6,
+    "color": null,
+    "name": {
+      "el": "Μεταπτυχιακό δίπλωμα/Διδακτορικό",
+      "en": "Graduate / PhD"
+    }
+  },
+  {
+    "dimensionId": "q7F",
+    "notation": "88",
+    "order": 88,
+    "color": null,
+    "name": {
+      "el": "Μη κατανοητό",
+      "en": "Incomprehensible"
+    }
+  },
+  {
+    "dimensionId": "q7F",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q7M",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Δημοτικό",
+      "en": "Primary School"
+    }
+  },
+  {
+    "dimensionId": "q7M",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Γυμνάσιο",
+      "en": "Middle School"
+    }
+  },
+  {
+    "dimensionId": "q7M",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Λύκειο",
+      "en": "High School"
+    }
+  },
+  {
+    "dimensionId": "q7M",
+    "notation": "4",
+    "order": 4,
+    "color": null,
+    "name": {
+      "el": "ΤΕΙ, ΙΕΚ, κλπ",
+      "en": "TEI, IEK, etc"
+    }
+  },
+  {
+    "dimensionId": "q7M",
+    "notation": "5",
+    "order": 5,
+    "color": null,
+    "name": {
+      "el": "Πανεπιστήμιο",
+      "en": "University"
+    }
+  },
+  {
+    "dimensionId": "q7M",
+    "notation": "6",
+    "order": 6,
+    "color": null,
+    "name": {
+      "el": "Μεταπτυχιακό δίπλωμα/Διδακτορικό",
+      "en": "Graduate / PhD"
+    }
+  },
+  {
+    "dimensionId": "q7M",
+    "notation": "88",
+    "order": 88,
+    "color": null,
+    "name": {
+      "el": "Μη κατανοητό",
+      "en": "Incomprehensible"
+    }
+  },
+  {
+    "dimensionId": "q7M",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q8",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Λίγο",
+      "en": "Little"
+    }
+  },
+  {
+    "dimensionId": "q8",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Μέτρια",
+      "en": "Somewhat"
+    }
+  },
+  {
+    "dimensionId": "q8",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Πολύ",
+      "en": "Very"
+    }
+  },
+  {
+    "dimensionId": "q8",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q10a",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    }
+  },
+  {
+    "dimensionId": "q10a",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    }
+  },
+  {
+    "dimensionId": "q10a",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q10b",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    }
+  },
+  {
+    "dimensionId": "q10b",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    }
+  },
+  {
+    "dimensionId": "q10b",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q10d",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    }
+  },
+  {
+    "dimensionId": "q10d",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    }
+  },
+  {
+    "dimensionId": "q10d",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q10e",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    }
+  },
+  {
+    "dimensionId": "q10e",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    }
+  },
+  {
+    "dimensionId": "q10e",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q11",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Να προσπαθήσουν με τους αντιπροσώπους τους στη Βουλή να πούνε την άποψή τους",
+      "en": "To try with their representatives in the Parliament to express their views"
+    }
+  },
+  {
+    "dimensionId": "q11",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Να κάνουν διαδήλωση στο δρόμο",
+      "en": "To protest"
+    }
+  },
+  {
+    "dimensionId": "q11",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Να μην κάνουν τίιποτα διότι έτσι κι αλλιώς δεν θα αλλάξει η απόφαση",
+      "en": "Not to do anything because the decision will not change anyway"
+    }
+  },
+  {
+    "dimensionId": "q11",
+    "notation": "4",
+    "order": 4,
+    "color": null,
+    "name": {
+      "el": "Να κάνουν απεργία",
+      "en": "To strike"
+    }
+  },
+  {
+    "dimensionId": "q11",
+    "notation": "5",
+    "order": 5,
+    "color": null,
+    "name": {
+      "el": "Στις επόμενες εκλογές να μην ψηφίσουν για την ίδια κυβέρνηση",
+      "en": "In the next elections not to vote for the same government"
+    }
+  },
+  {
+    "dimensionId": "q11",
+    "notation": "6",
+    "order": 6,
+    "color": null,
+    "name": {
+      "el": "Άλλο",
+      "en": "Other "
+    }
+  },
+  {
+    "dimensionId": "q11",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q12",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Καθόλου σημαντικό",
+      "en": "Not at all important"
+    }
+  },
+  {
+    "dimensionId": "q12",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Αρκετά σημαντικό",
+      "en": "Quite important"
+    }
+  },
+  {
+    "dimensionId": "q12",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Πολύ Σημαντικό",
+      "en": "Very important"
+    }
+  },
+  {
+    "dimensionId": "q12",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q13",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Δε συμφωνώ καθόλου",
+      "en": "Fully disagree"
+    }
+  },
+  {
+    "dimensionId": "q13",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Συμφωνώ αρκετά",
+      "en": "Somewhat agree"
+    }
+  },
+  {
+    "dimensionId": "q13",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Fully agree"
+    }
+  },
+  {
+    "dimensionId": "q13",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q15New",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Καθόλου",
+      "en": "Not at all "
+    }
+  },
+  {
+    "dimensionId": "q15New",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Λίγο",
+      "en": "A little"
+    }
+  },
+  {
+    "dimensionId": "q15New",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Αρκετά",
+      "en": "Somewhat"
+    }
+  },
+  {
+    "dimensionId": "q15New",
+    "notation": "4",
+    "order": 4,
+    "color": null,
+    "name": {
+      "el": "Πολύ",
+      "en": "A Lot"
+    }
+  },
+  {
+    "dimensionId": "q15New",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q16",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes "
+    }
+  },
+  {
+    "dimensionId": "q16",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    }
+  },
+  {
+    "dimensionId": "q16",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q17a",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes "
+    }
+  },
+  {
+    "dimensionId": "q17a",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    }
+  },
+  {
+    "dimensionId": "q17a",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q17b",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes "
+    }
+  },
+  {
+    "dimensionId": "q17b",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    }
+  },
+  {
+    "dimensionId": "q17b",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q20",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes "
+    }
+  },
+  {
+    "dimensionId": "q20",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    }
+  },
+  {
+    "dimensionId": "q20",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q23a",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Ένα φίλο/μια φίλη",
+      "en": "A friend"
+    }
+  },
+  {
+    "dimensionId": "q23a",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Τον πατέρα",
+      "en": "My father"
+    }
+  },
+  {
+    "dimensionId": "q23a",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Τη μητέρα",
+      "en": "My mother"
+    }
+  },
+  {
+    "dimensionId": "q23a",
+    "notation": "4",
+    "order": 4,
+    "color": null,
+    "name": {
+      "el": "Τον αδελφό/Την αδελφή",
+      "en": "My brother/sister"
+    }
+  },
+  {
+    "dimensionId": "q23a",
+    "notation": "5",
+    "order": 5,
+    "color": null,
+    "name": {
+      "el": "Έναν καθηγητή/Μια καθηγήτριά",
+      "en": "A professor"
+    }
+  },
+  {
+    "dimensionId": "q23a",
+    "notation": "6",
+    "order": 6,
+    "color": null,
+    "name": {
+      "el": "Άλλο",
+      "en": "Other"
+    }
+  },
+  {
+    "dimensionId": "q23a",
+    "notation": "7",
+    "order": 7,
+    "color": null,
+    "name": {
+      "el": "Και τους δυο γονείς (αυθόρμητο)",
+      "en": "Both parents (spontaneous)"
+    }
+  },
+  {
+    "dimensionId": "q23a",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q26",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Πολύ αρνητική",
+      "en": "Very negative"
+    }
+  },
+  {
+    "dimensionId": "q26",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Μάλλον αρνητική",
+      "en": "Rather negative"
+    }
+  },
+  {
+    "dimensionId": "q26",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Αδιάφορη",
+      "en": "Indifferent"
+    }
+  },
+  {
+    "dimensionId": "q26",
+    "notation": "4",
+    "order": 4,
+    "color": null,
+    "name": {
+      "el": "Μάλλον θετική",
+      "en": "Rather posistive"
+    }
+  },
+  {
+    "dimensionId": "q26",
+    "notation": "5",
+    "order": 5,
+    "color": null,
+    "name": {
+      "el": "Πολύ θετική",
+      "en": "Very positive"
+    }
+  },
+  {
+    "dimensionId": "q26",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q28",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Γιατί θέλουν να βοηθήσουν τους συμπατριώτες τους",
+      "en": "They want to help their compatriots"
+    }
+  },
+  {
+    "dimensionId": "q28",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Γιατί τους αρέσει να έχουν δύναμη και εξουσία",
+      "en": "They like to have power"
+    }
+  },
+  {
+    "dimensionId": "q28",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Γιατί θέλουν να συμμετέχουν ενεργά στην τύχη του τόπου τους",
+      "en": "Τhey want to participate actively in the fate of their place"
+    }
+  },
+  {
+    "dimensionId": "q28",
+    "notation": "4",
+    "order": 4,
+    "color": null,
+    "name": {
+      "el": "Γιατί θέλουν να γίνουν γνωστά και έτσι να ωφεληθούν",
+      "en": "They want to be popular and thus benefit"
+    }
+  },
+  {
+    "dimensionId": "q28",
+    "notation": "5",
+    "order": 5,
+    "color": null,
+    "name": {
+      "el": "Για άλλο λόγο",
+      "en": "For another reason"
+    }
+  },
+  {
+    "dimensionId": "q28",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q33",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Καθόλου σημαντικό",
+      "en": "Not at all important"
+    }
+  },
+  {
+    "dimensionId": "q33",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Αρκετά σημαντικό",
+      "en": "Quite important"
+    }
+  },
+  {
+    "dimensionId": "q33",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Πολύ σημαντικό",
+      "en": "Very important"
+    }
+  },
+  {
+    "dimensionId": "q33",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q35",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Καθόλου",
+      "en": "Not at all"
+    }
+  },
+  {
+    "dimensionId": "q35",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Αρκετά",
+      "en": "Enough"
+    }
+  },
+  {
+    "dimensionId": "q35",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Πολύ",
+      "en": "Very"
+    }
+  },
+  {
+    "dimensionId": "q35",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q36",
+    "notation": "0_4",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Χαμηλή ικανοποίηση",
+      "en": "Low satisfaction"
+    }
+  },
+  {
+    "dimensionId": "q36",
+    "notation": "5_7",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Μεσαία ικανοποίηση",
+      "en": "Average satisfaction"
+    }
+  },
+  {
+    "dimensionId": "q36",
+    "notation": "8_10",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Υψηλή ικανοποίηση",
+      "en": "High satisfaction"
+    }
+  },
+  {
+    "dimensionId": "q36",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q37",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Είναι εντάξει έτσι όπως είναι",
+      "en": "It's OK as it is"
+    }
+  },
+  {
+    "dimensionId": "q37",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Πρέπει να αλλάξει ριζικά με επαναστατικά μέτρα",
+      "en": "It must change radically with revolutionary measures"
+    }
+  },
+  {
+    "dimensionId": "q37",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Πρέπει να αλλάξει σιγά σιγά με μεταρρυθμίσεις",
+      "en": "It needs to change slowly with reforms"
+    }
+  },
+  {
+    "dimensionId": "q37",
+    "notation": "88",
+    "order": 88,
+    "color": null,
+    "name": {
+      "el": "Μη κατανοητό",
+      "en": "Incomprehensible"
+    }
+  },
+  {
+    "dimensionId": "q37",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "q39",
+    "notation": "1",
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Καθόλου σημαντικό",
+      "en": "Not at all important"
+    }
+  },
+  {
+    "dimensionId": "q39",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Ούτε το ένα, ούτε το άλλο",
+      "en": "Neither one nor the other"
+    }
+  },
+  {
+    "dimensionId": "q39",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Πολύ σημαντικό",
+      "en": "Very important"
+    }
+  },
+  {
+    "dimensionId": "q39",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  },
+  {
+    "dimensionId": "INDEX",
+    "notation": 1,
+    "order": 1,
+    "color": null,
+    "name": {
+      "el": "Χαμηλή κοινωνική προέλευση",
+      "en": "Low social origin"
+    },
+    "iconURL": "/content/images/Assets/Social-1.svg"
+  },
+  {
+    "dimensionId": "INDEX",
+    "notation": "2",
+    "order": 2,
+    "color": null,
+    "name": {
+      "el": "Μέση κοινωνική προέλευση",
+      "en": "Medium social origin"
+    },
+    "iconURL": "/content/images/Assets/Social-2.svg"
+  },
+  {
+    "dimensionId": "INDEX",
+    "notation": "3",
+    "order": 3,
+    "color": null,
+    "name": {
+      "el": "Υψηλή κοινωνική προέλευση",
+      "en": "High social origin"
+    },
+    "iconURL": "/content/images/Assets/Social-3.svg"
+  },
+  {
+    "dimensionId": "INDEX",
+    "notation": "99",
+    "order": 99,
+    "color": "#a9a9a9",
+    "name": {
+      "el": "ΔΑ",
+      "en": "DA"
+    }
+  }
+]
