@@ -42,4 +42,13 @@ public class DimensionGroup implements Serializable {
     public void setDescription(Map<String, String> description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return "DimensionGroup{" +
+            "id='" + id + '\'' +
+            ", name=" + name +
+            ", description=" + description +
+            '}';
+    }
 }

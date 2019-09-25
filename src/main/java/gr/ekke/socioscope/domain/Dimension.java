@@ -227,5 +227,21 @@ public class Dimension implements Serializable {
         return Objects.hashCode(getId());
     }
 
-
+    @Override
+    public String toString() {
+        return "Dimension{" +
+            "geoMaps=" + geoMaps +
+            ", id='" + id + '\'' +
+            ", name=" + name +
+            ", description=" + description +
+            ", groupId='" + groupId + '\'' +
+            ", type='" + type + '\'' +
+            ", dependencies=" + dependencies +
+            ", creator=" + creator +
+            ", composedOf=" + composedOf +
+            ", disableAxis=" + disableAxis +
+            ", disableFilter=" + disableFilter +
+            ", filterWidget='" + filterWidget + '\'' +
+            '}';
+    }
 }

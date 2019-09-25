@@ -1,8 +1,7 @@
 package gr.ekke.socioscope.domain;
 
-import java.util.Map;
-
 import javax.validation.constraints.NotBlank;
+import java.util.Map;
 
 /**
  * A Highlight.
@@ -58,5 +57,16 @@ public class Highlight {
 
     public void setLevel(Integer level) {
         this.level = level;
+    }
+
+    @Override
+    public String toString() {
+        return "Highlight{" +
+            "id='" + id + '\'' +
+            ", description=" + description +
+            ", seriesOptions=" + seriesOptions +
+            ", visType='" + visType + '\'' +
+            ", level=" + level +
+            '}';
     }
 }

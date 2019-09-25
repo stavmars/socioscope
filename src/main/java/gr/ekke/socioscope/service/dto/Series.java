@@ -36,4 +36,13 @@ public class Series {
     public void setColor(String color) {
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "Series{" +
+            "id='" + id + '\'' +
+            ", color='" + color + '\'' +
+            ", data=" + data +
+            '}';
+    }
 }

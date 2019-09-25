@@ -198,14 +198,16 @@ public class DimensionCode implements Serializable {
     @Override
     public String toString() {
         return "DimensionCode{" +
-            "id=" + getId() +
-            ", dimensionId='" + getDimensionId() + "'" +
-            ", notation='" + getNotation() + "'" +
-            ", name='" + getName() + "'" +
-            ", description='" + getDescription() + "'" +
-            ", parentId='" + getParentId() + "'" +
-            ", order=" + getOrder() +
-            ", color='" + getColor() + "'" +
-            "}";
+            "id='" + id + '\'' +
+            ", dimensionId='" + dimensionId + '\'' +
+            ", notation='" + notation + '\'' +
+            ", name=" + name +
+            ", shortName=" + shortName +
+            ", description=" + description +
+            ", parentId='" + parentId + '\'' +
+            ", order=" + order +
+            ", color='" + color + '\'' +
+            ", iconURL='" + iconURL + '\'' +
+            '}';
     }
 }

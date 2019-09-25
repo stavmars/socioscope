@@ -81,4 +81,15 @@ public class SeriesOptions {
         this.measure = measure;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "SeriesOptions{" +
+            "xAxis='" + xAxis + '\'' +
+            ", compareBy='" + compareBy + '\'' +
+            ", dimensionFilters=" + dimensionFilters +
+            ", compareCodes=" + compareCodes +
+            ", measure='" + measure + '\'' +
+            '}';
+    }
 }

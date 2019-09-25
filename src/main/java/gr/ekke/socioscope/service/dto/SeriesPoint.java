@@ -26,4 +26,11 @@ public class SeriesPoint {
         this.y = y;
     }
 
+    @Override
+    public String toString() {
+        return "SeriesPoint{" +
+            "x='" + x + '\'' +
+            ", y=" + y +
+            '}';
+    }
 }

@@ -3,14 +3,19 @@ package gr.ekke.socioscope.domain;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Field;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DBRef;
-import javax.validation.constraints.*;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * A DataSet.
@@ -79,17 +84,21 @@ public class DataSet implements Serializable {
         return name;
     }
 
+    public void setName(Map<String, String> name) {
+        this.name = name;
+    }
+
     public DataSet name(Map<String, String> name) {
         this.name = name;
         return this;
     }
 
-    public void setName(Map<String, String> name) {
-        this.name = name;
-    }
-
     public String getType() {
         return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public DataSet type(String type) {
@@ -97,12 +106,12 @@ public class DataSet implements Serializable {
         return this;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public SeriesOptions getDefaultOptions() {
         return defaultOptions;
+    }
+
+    public void setDefaultOptions(SeriesOptions defaultOptions) {
+        this.defaultOptions = defaultOptions;
     }
 
     public DataSet defaultOptions(SeriesOptions defaultOptions) {
@@ -110,12 +119,12 @@ public class DataSet implements Serializable {
         return this;
     }
 
-    public void setDefaultOptions(SeriesOptions defaultOptions) {
-        this.defaultOptions = defaultOptions;
-    }
-
     public String getColorScheme() {
         return colorScheme;
+    }
+
+    public void setColorScheme(String colorScheme) {
+        this.colorScheme = colorScheme;
     }
 
     public DataSet colorScheme(String colorScheme) {
@@ -123,12 +132,12 @@ public class DataSet implements Serializable {
         return this;
     }
 
-    public void setColorScheme(String colorScheme) {
-        this.colorScheme = colorScheme;
-    }
-
     public Map<String, String> getComment() {
         return comment;
+    }
+
+    public void setComment(Map<String, String> comment) {
+        this.comment = comment;
     }
 
     public DataSet comment(Map<String, String> comment) {
@@ -136,25 +145,25 @@ public class DataSet implements Serializable {
         return this;
     }
 
-    public void setComment(Map<String, String> comment) {
-        this.comment = comment;
-    }
-
     public Map<String, String> getSources() {
         return sources;
+    }
+
+    public void setSources(Map<String, String> sources) {
+        this.sources = sources;
     }
 
     public DataSet sources(Map<String, String> sources) {
         this.sources = sources;
         return this;
     }
-    
-    public void setSources(Map<String, String> sources) {
-        this.sources = sources;
-    }
 
     public Instant getCreatedDate() {
         return createdDate;
+    }
+
+    public void setCreatedDate(Instant createdDate) {
+        this.createdDate = createdDate;
     }
 
     public DataSet createdDate(Instant createdDate) {
@@ -162,12 +171,12 @@ public class DataSet implements Serializable {
         return this;
     }
 
-    public void setCreatedDate(Instant createdDate) {
-        this.createdDate = createdDate;
-    }
-
     public List<Dimension> getDimensions() {
         return dimensions;
+    }
+
+    public void setDimensions(List<Dimension> dimensions) {
+        this.dimensions = dimensions;
     }
 
     public DataSet dimensions(List<Dimension> dimensions) {
@@ -178,10 +187,6 @@ public class DataSet implements Serializable {
     public DataSet removeDimension(Dimension dimension) {
         this.dimensions.remove(dimension);
         return this;
-    }
-
-    public void setDimensions(List<Dimension> dimensions) {
-        this.dimensions = dimensions;
     }
 
     public List<DimensionGroup> getDimensionGroups() {
@@ -196,6 +201,10 @@ public class DataSet implements Serializable {
         return measures;
     }
 
+    public void setMeasures(List<Measure> measures) {
+        this.measures = measures;
+    }
+
     public DataSet measures(List<Measure> measures) {
         this.measures = measures;
         return this;
@@ -206,12 +215,12 @@ public class DataSet implements Serializable {
         return this;
     }
 
-    public void setMeasures(List<Measure> measures) {
-        this.measures = measures;
-    }
-
     public List<Highlight> getHighlights() {
         return highlights;
+    }
+
+    public void setHighlights(List<Highlight> highlights) {
+        this.highlights = highlights;
     }
 
     public DataSet addHighlights(List<Highlight> highlights) {
@@ -224,21 +233,17 @@ public class DataSet implements Serializable {
         return this;
     }
 
-    public void setHighlights(List<Highlight> highlights) {
-        this.highlights = highlights;
-    }
-
     public User getCreator() {
         return creator;
+    }
+
+    public void setCreator(User user) {
+        this.creator = user;
     }
 
     public DataSet creator(User user) {
         this.creator = user;
         return this;
-    }
-
-    public void setCreator(User user) {
-        this.creator = user;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
@@ -265,10 +270,19 @@ public class DataSet implements Serializable {
     @Override
     public String toString() {
         return "DataSet{" +
-            "id=" + getId() +
-            ", name='" + getName() + "'" +
-            ", type='" + getType() + "'" +
-            ", comment='" + getComment() + "'" +
-            "}";
+            "id='" + id + '\'' +
+            ", name=" + name +
+            ", type='" + type + '\'' +
+            ", comment=" + comment +
+            ", sources=" + sources +
+            ", createdDate=" + createdDate +
+            ", dimensions=" + dimensions +
+            ", dimensionGroups=" + dimensionGroups +
+            ", measures=" + measures +
+            ", highlights=" + highlights +
+            ", defaultOptions=" + defaultOptions +
+            ", colorScheme='" + colorScheme + '\'' +
+            ", creator=" + creator +
+            '}';
     }
 }

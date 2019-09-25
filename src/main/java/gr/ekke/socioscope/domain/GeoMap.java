@@ -41,4 +41,13 @@ public class GeoMap implements Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
+
+    @Override
+    public String toString() {
+        return "GeoMap{" +
+            "level=" + level +
+            ", name=" + name +
+            ", url='" + url + '\'' +
+            '}';
+    }
 }
