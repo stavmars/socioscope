@@ -106,7 +106,8 @@
     "name": {
       "en": "Parliamentary Term",
       "el": "Κοινοβουλευτική περίοδος"
-    }
+    },
+    "filterWidget": "slider"
   },
   {
     "id": "deputy_sex",

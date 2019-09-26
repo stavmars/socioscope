@@ -32,7 +32,7 @@ export const mapIdList = (idList: ReadonlyArray<any>) =>
  */
 export const translateEntityField = (entityField: ILang) => {
   const currentLocale = TranslatorContext.context.locale || TranslatorContext.context.defaultLocale;
-  return entityField[currentLocale];
+  return entityField && entityField[currentLocale];
 };
 
 /**
