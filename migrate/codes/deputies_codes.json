@@ -1,0 +1,2114 @@
+[
+  {
+    "notation": "1",
+    "name": {
+      "el": "άνδρας",
+      "en": "Male"
+    },
+    "dimensionId": "deputy_sex",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "γυναίκα",
+      "en": "Female"
+    },
+    "dimensionId": "deputy_sex",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "5",
+    "name": {
+      "el": "Ε' Περίοδος (18/6/1989 - 12/10/1989)",
+      "en": "05th Term (18/6/1989 - 12/10/1989)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 5,
+    "shortName": {
+      "el": "Βουλή 1989α",
+      "en": "1989a"
+    }
+  },
+  {
+    "notation": "6",
+    "name": {
+      "el": "ΣΤ' Περίοδος (5/11/1989 - 12/3/1990)",
+      "en": "06th Term (5/11/1989 - 12/3/1990)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 6,
+    "shortName": {
+      "el": "Βουλή 1989β",
+      "en": "1989b"
+    }
+  },
+  {
+    "notation": "7",
+    "name": {
+      "el": "Ζ' Περίοδος (8/4/1990 - 11/9/1993)",
+      "en": "07th Term (8/4/1990 - 11/9/1993)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 7,
+    "shortName": {
+      "el": "Βουλή 1990",
+      "en": "1990"
+    }
+  },
+  {
+    "notation": "8",
+    "name": {
+      "el": "Η' Περίοδος (10/10/1993 - 24/08/1996)",
+      "en": "08th Term (10/10/1993 - 24/08/1996)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 8,
+    "shortName": {
+      "el": "Βουλή 1993",
+      "en": "1993"
+    }
+  },
+  {
+    "notation": "9",
+    "name": {
+      "el": "Θ' Περίοδος (22/09/1996 - 14/03/2000)",
+      "en": "09th Term (22/09/1996 - 14/03/2000)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 9,
+    "shortName": {
+      "el": "Βουλή 1996",
+      "en": "1996"
+    }
+  },
+  {
+    "notation": "10",
+    "name": {
+      "el": "Ι' Περίοδος (9/04/2000 - 11/02/2004)",
+      "en": "10th Term (9/04/2000 - 11/02/2004)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 10,
+    "shortName": {
+      "el": "Βουλή 2000",
+      "en": "2000"
+    }
+  },
+  {
+    "notation": "11",
+    "name": {
+      "el": "ΙΑ' Περίοδος (07/03/2004 - 18/08/2007)",
+      "en": "11th Term (07/03/2004 - 18/08/2007)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 11,
+    "shortName": {
+      "el": "Βουλή 2004",
+      "en": "2004"
+    }
+  },
+  {
+    "notation": "12",
+    "name": {
+      "el": "ΙΒ' Περίοδος (16/09/2007 - 07/09/2009)",
+      "en": "12th Term (16/09/2007 - 07/09/2009)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 12,
+    "shortName": {
+      "el": "Βουλή 2007",
+      "en": "2007"
+    }
+  },
+  {
+    "notation": "13",
+    "name": {
+      "el": "ΙΓ' Περίοδος (04/10/2009 - 11/04/2012)",
+      "en": "13th Term (04/10/2009 - 11/04/2012)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 13,
+    "shortName": {
+      "el": "Βουλή 2009",
+      "en": "2009"
+    }
+  },
+  {
+    "notation": "14",
+    "name": {
+      "el": "ΙΔ' Περίοδος (06/05/2012 - 19/05/2012)",
+      "en": "14th Term (06/05/2012 - 19/05/2012)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 14,
+    "shortName": {
+      "el": "Βουλή 2012α",
+      "en": "2012a"
+    }
+  },
+  {
+    "notation": "15",
+    "name": {
+      "el": "ΙΕ' Περίοδος (17/06/2012 - 31/12/2014)",
+      "en": "15th Term (17/06/2012 - 31/12/2014)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 15,
+    "shortName": {
+      "el": "Βουλή 2012β",
+      "en": "2012b"
+    }
+  },
+  {
+    "notation": "16",
+    "name": {
+      "el": "ΙΣΤ' Περίοδος (25/01/2015 -28/8/2015)",
+      "en": "16th Term (25/01/2015 -28/8/2015)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 16,
+    "shortName": {
+      "el": "Βουλή 2015α",
+      "en": "2015a"
+    }
+  },
+  {
+    "notation": "17",
+    "name": {
+      "el": "ΙΖ' Περίοδος (20/09/2015 -11/06/2019)",
+      "en": "17th Term (20/09/2015 -11/06/2019)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 17,
+    "shortName": {
+      "el": "Βουλή 2015β",
+      "en": "2015b"
+    }
+  },
+  {
+    "notation": "18",
+    "name": {
+      "el": "ΙΗ Περίοδος (07/7/2019 - σήμερα)",
+      "en": "18th Term (07/7/2019 - today)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 18,
+    "shortName": {
+      "el": "Βουλή 2019",
+      "en": "2019"
+    }
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "Νομικά επαγγέλματα",
+      "en": "Legal professions"
+    },
+    "dimensionId": "deputy_profession",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "Ιατροί",
+      "en": "Medical professions"
+    },
+    "dimensionId": "deputy_profession",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "3",
+    "name": {
+      "el": "Καθηγητές Πανεπιστημίου",
+      "en": "University professors"
+    },
+    "dimensionId": "deputy_profession",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "4",
+    "name": {
+      "el": "Οικονομολόγοι",
+      "en": "Economists"
+    },
+    "dimensionId": "deputy_profession",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "5",
+    "name": {
+      "el": "Δημοσιογράφοι",
+      "en": "Journalists"
+    },
+    "dimensionId": "deputy_profession",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "6",
+    "name": {
+      "el": "Μηχανικοί",
+      "en": "Engineers"
+    },
+    "dimensionId": "deputy_profession",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "7",
+    "name": {
+      "el": "Υπάλληλοι Γραφείου / παροχή υπηρεσιών",
+      "en": "Office workers/services"
+    },
+    "dimensionId": "deputy_profession",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "8",
+    "name": {
+      "el": "Εκπαιδευτικοί",
+      "en": "Teachers"
+    },
+    "dimensionId": "deputy_profession",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "9",
+    "name": {
+      "el": "Ενοπλες Δυνάμεις",
+      "en": "Armed Forces"
+    },
+    "dimensionId": "deputy_profession",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "10",
+    "name": {
+      "el": "Καλλιτέχνες / Αθλητές",
+      "en": "Artists/Athletes"
+    },
+    "dimensionId": "deputy_profession",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "11",
+    "name": {
+      "el": "Εργάτες, Αγρότες, Τεχνίτες",
+      "en": "Manual workers/Farmers/Technicians"
+    },
+    "dimensionId": "deputy_profession",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "12",
+    "name": {
+      "el": "Επιχειρηματίες",
+      "en": "Enterpreneurs/Managers"
+    },
+    "dimensionId": "deputy_profession",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "13",
+    "name": {
+      "el": "Λοιπά",
+      "en": "Other"
+    },
+    "dimensionId": "deputy_profession",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "14",
+    "name": {
+      "el": "Ελλιπή στοιχεία",
+      "en": "Missing data"
+    },
+    "dimensionId": "deputy_profession",
+    "order": null,
+    "shortName": null,
+    "color": "#a9a9a9"
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "ΜΑΘΗΜΑΤΙΚΑ",
+      "en": "Mathematics"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "ΑΝΘΡΩΠΟΛΟΓΙΑ (ΜΗ ΦΥΣΙΚΗ)",
+      "en": "Anthropology"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "3",
+    "name": {
+      "el": "ΓΕΩΠΟΝΙΚΕΣ ΕΠΙΣΤΗΜΕΣ",
+      "en": "Agriculture"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "4",
+    "name": {
+      "el": "ΓΛΩΣΣΟΛΟΓΙΑ",
+      "en": "Linguistics"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "5",
+    "name": {
+      "el": "ΕΠΙΣΤΗΜΕΣ ΤΗΣ ΓΗΣ ΚΑΙ ΤΟΥ ΔΙΑΣΤΗΜΑΤΟΣ",
+      "en": "Sciences of Earth and Space"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "6",
+    "name": {
+      "el": "ΕΠΙΣΤΗΜΕΣ ΤΗΣ ΖΩΗΣ",
+      "en": "Life Sciences"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "7",
+    "name": {
+      "el": "ΕΠΙΣΤΗΜΗ ΤΕΧΝΩΝ ΚΑΙ ΓΡΑΜΜΑΤΩΝ",
+      "en": "Arts and Literature"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "8",
+    "name": {
+      "el": "ΘΕΟΛΟΓΙΑ",
+      "en": "Theology"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "9",
+    "name": {
+      "el": "ΙΑΤΡΙΚΕΣ ΕΠΙΣΤΗΜΕΣ",
+      "en": "Medicine"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "10",
+    "name": {
+      "el": "ΙΣΤΟΡΙΑ",
+      "en": "History"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "11",
+    "name": {
+      "el": "ΚΟΙΝΩΝΙΟΛΟΓΙΑ",
+      "en": "Sociology"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "12",
+    "name": {
+      "el": "ΝΟΜΙΚΕΣ ΕΠΙΣΤΗΜΕΣ",
+      "en": "Law"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "13",
+    "name": {
+      "el": "ΟΙΚΟΝΟΜΙΚΕΣ ΕΠΙΣΤΗΜΕΣ",
+      "en": "Economics"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "14",
+    "name": {
+      "el": "ΠΑΙΔΑΓΩΓΙΚΗ-ΕΚΠΑΙΔΕΥΣΗ-ΚΑΤΑΡΤΙΣΗ",
+      "en": "Pedagogics and Education"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "15",
+    "name": {
+      "el": "ΠΛΗΡΟΦΟΡΙΚΗ",
+      "en": "Computer Science"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "16",
+    "name": {
+      "el": "ΠΟΛΙΤΙΚΕΣ ΕΠΙΣΤΗΜΕΣ",
+      "en": "Political Science"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "17",
+    "name": {
+      "el": "ΣΤΡΑΤΙΩΤΙΚΕΣ/ΣΩΜΑΤΑ ΑΣΦΑΛΕΙΑΣ",
+      "en": "Military Studies"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "18",
+    "name": {
+      "el": "ΤΕΧΝΟΛΟΓΙΑ",
+      "en": "Technology"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "19",
+    "name": {
+      "el": "ΦΙΛΟΣΟΦΙΑ",
+      "en": "Philosophy"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "20",
+    "name": {
+      "el": "ΦΥΣΙΚΗ",
+      "en": "Physics"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "21",
+    "name": {
+      "el": "ΧΗΜΕΙΑ",
+      "en": "Chemistry"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "22",
+    "name": {
+      "el": "ΨΥΧΟΛΟΓΙΑ",
+      "en": "Psychology"
+    },
+    "dimensionId": "education_field",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "Πτυχίο ΑΕΙ (Ελλάδα)",
+      "en": "Bachelor Level (in Greece)"
+    },
+    "dimensionId": "education_title",
+    "order": 6,
+    "shortName": null
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "Μεταπτυχιακός Τίτλος (εξωτερικό)",
+      "en": "Master Level (from another country)"
+    },
+    "dimensionId": "education_title",
+    "order": 7,
+    "shortName": null
+  },
+  {
+    "notation": "3",
+    "name": {
+      "el": "Πτυχίο Μεταδευτεροβάθμιας Εκπαίδευσης (ΙΕΚ. ΚΕΚ κ.λπ)",
+      "en": "Post Secondary Non-Tertiary Education"
+    },
+    "dimensionId": "education_title",
+    "order": 2,
+    "shortName": null
+  },
+  {
+    "notation": "4",
+    "name": {
+      "el": "Μεταπτυχιακός Τίτλος (Ελλάδα)",
+      "en": "Master Level (in Greece)"
+    },
+    "dimensionId": "education_title",
+    "order": 4,
+    "shortName": null
+  },
+  {
+    "notation": "5",
+    "name": {
+      "el": "Πλήρης Μέση Εκπαίδευση",
+      "en": "Upper Secondary Education"
+    },
+    "dimensionId": "education_title",
+    "order": 8,
+    "shortName": null
+  },
+  {
+    "notation": "6",
+    "name": {
+      "el": "Διδακτορικό Δίπλωμα (εξωτερικό)",
+      "en": "Doctoral Level (from another country)"
+    },
+    "dimensionId": "education_title",
+    "order": 1,
+    "shortName": null
+  },
+  {
+    "notation": "7",
+    "name": {
+      "el": "Διδακτορικό Δίπλωμα (Ελλάδα)",
+      "en": "Doctoral Level (in Greece)"
+    },
+    "dimensionId": "education_title",
+    "order": 10,
+    "shortName": null
+  },
+  {
+    "notation": "8",
+    "name": {
+      "el": "Πτυχίο ΑΕΙ (εξωτερικό)",
+      "en": "Bachelor Level"
+    },
+    "dimensionId": "education_title",
+    "order": 3,
+    "shortName": null
+  },
+  {
+    "notation": "9",
+    "name": {
+      "el": "Ελλιπή στοιχεία",
+      "en": "Missing data"
+    },
+    "dimensionId": "education_title",
+    "order": 12,
+    "shortName": null,
+    "color": "#a9a9a9"
+  },
+  {
+    "notation": "10",
+    "name": {
+      "el": "Πτυχίο ΑΤΕΙ, ΤΕΙ, ΚΑΤΕ. ΚΑΤΕΕ",
+      "en": "Tertiary Education: Vocational"
+    },
+    "dimensionId": "education_title",
+    "order": 5,
+    "shortName": null
+  },
+  {
+    "notation": "11",
+    "name": {
+      "el": "Απόφοιτος Δημοτικού/μερικές τάξεις Δημοτικού",
+      "en": "Primary Education"
+    },
+    "dimensionId": "education_title",
+    "order": 13,
+    "shortName": null
+  },
+  {
+    "notation": "12",
+    "name": {
+      "el": "Τεχνική Επαγγελματική Σχολή/Τεχνικό Λύκειο",
+      "en": "Upper Secondary Education: Vocational"
+    },
+    "dimensionId": "education_title",
+    "order": 11,
+    "shortName": null
+  },
+  {
+    "notation": "13",
+    "name": {
+      "el": "Μερική Μέση Εκπαίδευση",
+      "en": "Lower Secondary Education"
+    },
+    "dimensionId": "education_title",
+    "order": 9,
+    "shortName": null
+  },
+  {
+    "notation": "25-29",
+    "name": {
+      "el": "25-29",
+      "en": "25-29"
+    },
+    "dimensionId": "first_election_age_group",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "30-39",
+    "name": {
+      "el": "30-39",
+      "en": "30-39"
+    },
+    "dimensionId": "first_election_age_group",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "40-49",
+    "name": {
+      "el": "40-49",
+      "en": "40-49"
+    },
+    "dimensionId": "first_election_age_group",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "50-59",
+    "name": {
+      "el": "50-59",
+      "en": "50-59"
+    },
+    "dimensionId": "first_election_age_group",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "60+",
+    "name": {
+      "el": "60+",
+      "en": "60+"
+    },
+    "dimensionId": "first_election_age_group",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "99",
+    "name": {
+      "el": "Ελλιπή στοιχεία",
+      "en": "Missing data"
+    },
+    "dimensionId": "first_election_age_group",
+    "order": null,
+    "shortName": null,
+    "color": "#a9a9a9"
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "ΑΝΕΛ",
+      "en": "ANEL"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "ΝΔ",
+      "en": "ND"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "3",
+    "name": {
+      "el": "ΣΥΡΙΖΑ",
+      "en": "SYRIZA"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "4",
+    "name": {
+      "el": "ΠΑΣΟΚ",
+      "en": "PASOK"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "5",
+    "name": {
+      "el": "ΚΚΕ",
+      "en": "KKE"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "6",
+    "name": {
+      "el": "ΛΑΟΣ",
+      "en": "LAOS"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "7",
+    "name": {
+      "el": "Λ.Σ. ΧΡΥΣΗ ΑΥΓΗ",
+      "en": "GOLDEN DAWN"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "8",
+    "name": {
+      "el": "ΣΥΝΑΣΠΙΣΜΟΣ",
+      "en": "SYN"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "9",
+    "name": {
+      "el": "ΔΗΜΑΡ",
+      "en": "DHMAR"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "10",
+    "name": {
+      "el": "ΔΗΚΚΙ",
+      "en": "DHKKI"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "11",
+    "name": {
+      "el": "ΤΟ ΠΟΤΑΜΙ",
+      "en": "TO POTAMI"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "12",
+    "name": {
+      "el": "ΕΝΩΣΗ ΚΕΝΤΡΩΩΝ",
+      "en": "UNION OF CENTRISTS"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "13",
+    "name": {
+      "el": "ΔΗΜΟΚΡΑΤΙΚΗ ΣΥΜΠΑΡΑΤΑΞΗ",
+      "en": "DEMOCRATIC COALITION"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "14",
+    "name": {
+      "el": "ΠΟΛΙΤΙΚΗ ΑΝΟΙΞΗ",
+      "en": "POLITICAL SPRING"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "15",
+    "name": {
+      "el": "ΔΗ.ΑΝΑ",
+      "en": "DEMOCRATIC RENEWAL"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "16",
+    "name": {
+      "el": "ΑΝΕΞΑΡΤΗΤΟΙ",
+      "en": "Independent candidates"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "17",
+    "name": {
+      "el": "ΟΙΚΟΛΟΓΟΙ ΕΝΑΛΛΑΚΤΙΚΟΙ",
+      "en": "GREENS"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "18",
+    "name": {
+      "el": "ΚΙΝΗΜΑ ΑΛΛΑΓΗΣ",
+      "en": "KIN.AL."
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "19",
+    "name": {
+      "el": "ΕΛΛΗΝΙΚΗ ΛΥΣΗ",
+      "en": "GREEK SOLUTION"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "20",
+    "name": {
+      "el": "ΜΕΡΑ 25",
+      "en": "DIEM 25"
+    },
+    "dimensionId": "elections.party",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "25-29",
+    "name": {
+      "el": "25-29",
+      "en": "25-29"
+    },
+    "dimensionId": "elections.election_age_group",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "30-39",
+    "name": {
+      "el": "30-39",
+      "en": "30-39"
+    },
+    "dimensionId": "elections.election_age_group",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "40-49",
+    "name": {
+      "el": "40-49",
+      "en": "40-49"
+    },
+    "dimensionId": "elections.election_age_group",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "50-59",
+    "name": {
+      "el": "50-59",
+      "en": "50-59"
+    },
+    "dimensionId": "elections.election_age_group",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "60+",
+    "name": {
+      "el": "60+",
+      "en": "60+"
+    },
+    "dimensionId": "elections.election_age_group",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "99",
+    "name": {
+      "el": "Ελλιπή στοιχεία",
+      "en": "Missing data"
+    },
+    "dimensionId": "elections.election_age_group",
+    "order": null,
+    "shortName": null,
+    "color": "#a9a9a9"
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "Δεν υπάρχει συγγένεια",
+      "en": "No relation / no information"
+    },
+    "dimensionId": "elections.network",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "Συγγένεια με άλλο βουλευτή/πολιτικό",
+      "en": "Relation"
+    },
+    "dimensionId": "elections.network",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "AΡΤΑΣ",
+      "en": "Arta"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "Α' ΑΘΗΝΩΝ",
+      "en": "Athens A"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "3",
+    "name": {
+      "el": "Α' ΘΕΣΣΑΛΟΝΙΚΗΣ",
+      "en": "Thessaloniki A"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "4",
+    "name": {
+      "el": "Α' ΘΕΣΣΑΛΟΝΙΚΗΣ",
+      "en": "Thessaloniki A"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "5",
+    "name": {
+      "el": "ΑΙΤΩΛΙΑΣ ΚΑΙ ΑΚΑΡΝΑΝΙΑΣ",
+      "en": "Aitolo-Akarnania"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "6",
+    "name": {
+      "el": "Α' ΠΕΙΡΑΙΩΣ",
+      "en": "Piraeus A"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "7",
+    "name": {
+      "el": "ΑΡΓΟΛΙΔΟΣ",
+      "en": "Argolida"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "8",
+    "name": {
+      "el": "ΑΡΚΑΔΙΑΣ",
+      "en": "Arcadia"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "9",
+    "name": {
+      "el": "ΑΤΤΙΚΗΣ (ΥΠΟΛΟΙΠΟ)",
+      "en": "Attica"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "10",
+    "name": {
+      "el": "ΑΧΑΙΑΣ",
+      "en": "Achaia"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "11",
+    "name": {
+      "el": "Β' ΑΘΗΝΩΝ",
+      "en": "Athens B"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "12",
+    "name": {
+      "el": "Β' ΘΕΣΣΑΛΟΝΙΚΗΣ",
+      "en": "Thessaloniki B"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "13",
+    "name": {
+      "el": "ΒΟΙΩΤΙΑΣ",
+      "en": "Viotia"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "14",
+    "name": {
+      "el": "Β' ΠΕΙΡΑΙΩΣ",
+      "en": "Piraeus B"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "15",
+    "name": {
+      "el": "ΓΡΕΒΕΝΩΝ",
+      "en": "Grevena"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "16",
+    "name": {
+      "el": "ΔΡΑΜΑΣ",
+      "en": "Drama"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "17",
+    "name": {
+      "el": "ΔΩΔΕΚΑΝΗΣΟΥ",
+      "en": "Dodecanese Islands"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "18",
+    "name": {
+      "el": "ΕΒΡΟΥ",
+      "en": "Evros"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "19",
+    "name": {
+      "el": "ΕΠΙΚΡΑΤΕΙΑΣ",
+      "en": "State"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "20",
+    "name": {
+      "el": "ΕΥΒΟΙΑΣ",
+      "en": "Evia"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "21",
+    "name": {
+      "el": "ΕΥΡΥΤΑΝΙΑΣ",
+      "en": "Evrytania"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "22",
+    "name": {
+      "el": "ΖΑΚΥΝΘΟΥ",
+      "en": "Zakynthos"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "23",
+    "name": {
+      "el": "ΗΛΕΙΑΣ",
+      "en": "Ileia"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "24",
+    "name": {
+      "el": "ΗΜΑΘΙΑΣ",
+      "en": "Imathia"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "25",
+    "name": {
+      "el": "ΗΡΑΚΛΕΙΟΥ",
+      "en": "Iraklio"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "26",
+    "name": {
+      "el": "ΘΕΣΠΡΩΤΙΑΣ",
+      "en": "Thesprotia"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "27",
+    "name": {
+      "el": "ΙΩΑΝΝΙΝΩΝ",
+      "en": "Ioannina"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "28",
+    "name": {
+      "el": "ΚΑΒΑΛΑΣ",
+      "en": "Kavala"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "29",
+    "name": {
+      "el": "ΚΑΡΔΙΤΣΗΣ",
+      "en": "Karditsa"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "30",
+    "name": {
+      "el": "ΚΑΣΤΟΡΙΑΣ",
+      "en": "Kastoria"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "31",
+    "name": {
+      "el": "ΚΕΡΚΥΡΑΣ",
+      "en": "Corfu"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "32",
+    "name": {
+      "el": "ΚΕΦΑΛΛΗΝΙΑΣ",
+      "en": "Keffalonia"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "33",
+    "name": {
+      "el": "ΚΙΛΚΙΣ",
+      "en": "Kilkis"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "34",
+    "name": {
+      "el": "ΚΟΖΑΝΗΣ",
+      "en": "Kozani"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "35",
+    "name": {
+      "el": "ΚΟΡΙΝΘΙΑΣ",
+      "en": "Korinthia"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "36",
+    "name": {
+      "el": "ΚΥΚΛΑΔΩΝ",
+      "en": "Cyclades"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "37",
+    "name": {
+      "el": "ΛΑΚΩΝΙΑΣ",
+      "en": "Lakonia"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "38",
+    "name": {
+      "el": "ΛΑΡΙΣΗΣ",
+      "en": "Larissa"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "39",
+    "name": {
+      "el": "ΛΑΣΙΘΙΟΥ",
+      "en": "Lasithi"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "40",
+    "name": {
+      "el": "ΛΕΣΒΟΥ",
+      "en": "Lesvos"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "41",
+    "name": {
+      "el": "ΛΕΥΚΑΔΟΣ",
+      "en": "Lefkada"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "42",
+    "name": {
+      "el": "ΜΑΓΝΗΣΙΑΣ",
+      "en": "Magnesia"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "43",
+    "name": {
+      "el": "ΜΕΣΣΗΝΙΑΣ",
+      "en": "Messinia"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "44",
+    "name": {
+      "el": "ΞΑΝΘΗΣ",
+      "en": "Xanthi"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "45",
+    "name": {
+      "el": "ΠΕΛΛΗΣ",
+      "en": "Pella"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "46",
+    "name": {
+      "el": "ΠΙΕΡΙΑΣ",
+      "en": "Pieria"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "47",
+    "name": {
+      "el": "ΠΡΕΒΕΖΗΣ",
+      "en": "Preveza"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "48",
+    "name": {
+      "el": "ΡΕΘΥΜΝΗΣ",
+      "en": "Rethymno"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "49",
+    "name": {
+      "el": "ΡΟΔΟΠΗΣ",
+      "en": "Rodopi"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "50",
+    "name": {
+      "el": "ΣΑΜΟΥ",
+      "en": "Samos"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "51",
+    "name": {
+      "el": "ΣΕΡΡΩΝ",
+      "en": "Serres"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "52",
+    "name": {
+      "el": "ΤΡΙΚΑΛΩΝ",
+      "en": "Trikala"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "53",
+    "name": {
+      "el": "ΦΘΙΩΤΙΔΑΣ",
+      "en": "Fthiotida"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "54",
+    "name": {
+      "el": "ΦΛΩΡΙΝΗΣ",
+      "en": "Florina"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "55",
+    "name": {
+      "el": "ΦΩΚΙΔΟΣ",
+      "en": "Fokida"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "56",
+    "name": {
+      "el": "ΧΑΛΚΙΔΙΚΗΣ",
+      "en": "Halkidiki"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "57",
+    "name": {
+      "el": "ΧΑΝΙΩΝ",
+      "en": "Chania"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "58",
+    "name": {
+      "el": "ΧΙΟΥ",
+      "en": "Chios"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "59",
+    "name": {
+      "el": "B1 ΒΟΡΕΙΟΥ ΤΟΜΕΑ ΑΘΗΝΩΝ",
+      "en": "B1 North Athens"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "60",
+    "name": {
+      "el": "Β2 ΔΥΤΙΚΟΥ ΤΟΜΕΑ ΑΘΗΝΩΝ",
+      "en": "B2 West Athens"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "61",
+    "name": {
+      "el": "Β3 ΝΟΤΙΟΥ ΤΟΜΕΑ ΑΘΗΝΩΝ",
+      "en": "B3 South Athens"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "62",
+    "name": {
+      "el": "Α' ΑΝΑΤΟΛΙΚΗΣ ΑΤΤΙΚΗΣ",
+      "en": "A East Attica"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "63",
+    "name": {
+      "el": "Β΄ΔΥΤΙΚΗΣ ΑΤΤΙΚΗΣ",
+      "en": "B West Attica"
+    },
+    "dimensionId": "elections.constituency",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "Επικρατείας",
+      "en": "State"
+    },
+    "dimensionId": "elections.consti_size",
+    "order": 1,
+    "shortName": null
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "Μονοεδρικές",
+      "en": "Single member"
+    },
+    "dimensionId": "elections.consti_size",
+    "order": 2,
+    "shortName": null
+  },
+  {
+    "notation": "3",
+    "name": {
+      "el": "Έως 5 βουλευτές",
+      "en": "Up to 5 MPs"
+    },
+    "dimensionId": "elections.consti_size",
+    "order": 3,
+    "shortName": null
+  },
+  {
+    "notation": "4",
+    "name": {
+      "el": "Έως 10 βουλευτές",
+      "en": "Up to 10 MPs"
+    },
+    "dimensionId": "elections.consti_size",
+    "order": 4,
+    "shortName": null
+  },
+  {
+    "notation": "5",
+    "name": {
+      "el": "Έως 20 βουλευτές",
+      "en": "Up to 20 MPs"
+    },
+    "dimensionId": "elections.consti_size",
+    "order": 5,
+    "shortName": null
+  },
+  {
+    "notation": "6",
+    "name": {
+      "el": "Πάνω από 20 βουλευτές",
+      "en": "More than 20 MPs"
+    },
+    "dimensionId": "elections.consti_size",
+    "order": 6,
+    "shortName": null
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "Τόπος γέννησης ίδιος με τόπο εκλογής",
+      "en": "Place of Birth same as Constituency of Election"
+    },
+    "dimensionId": "elections.consti_geography",
+    "order": 1,
+    "shortName": null
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "Τόπος γέννησης άλλος από τόπο εκλογής",
+      "en": "Different Place of Birth from Constituency of Election"
+    },
+    "dimensionId": "elections.consti_geography",
+    "order": 2,
+    "shortName": null
+  },
+  {
+    "notation": "3",
+    "name": {
+      "el": "Εκλογή στο Επικρατείας",
+      "en": "Not applicable (State)"
+    },
+    "dimensionId": "elections.consti_geography",
+    "order": 3,
+    "shortName": null
+  },
+  {
+    "notation": "4",
+    "name": {
+      "el": "Ελλιπή στοιχεία",
+      "en": "Missing data"
+    },
+    "dimensionId": "elections.consti_geography",
+    "order": 4,
+    "shortName": null,
+    "color": "#a9a9a9"
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "Πρωτοεκλεγέντες",
+      "en": "Newcomers"
+    },
+    "dimensionId": "elections.terms_rec",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "Επανεκλεγέντες",
+      "en": "Re-elected"
+    },
+    "dimensionId": "elections.terms_rec",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "dimensionId": "elections.eu_post",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "dimensionId": "elections.eu_post",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "dimensionId": "elections.goverm_post",
+    "order": null,
+    "shortName": null,
+    "color": "#a9a9a9"
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "Υπουργική Θέση",
+      "en": "Minister"
+    },
+    "dimensionId": "elections.goverm_post",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "3",
+    "name": {
+      "el": "Πρωθυπουργός",
+      "en": "Prime Minister"
+    },
+    "dimensionId": "elections.goverm_post",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "Δήμαρχος",
+      "en": "Mayor"
+    },
+    "dimensionId": "elections.local_post",
+    "order": 7,
+    "shortName": null
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "Διορισμένος Νομάρχης/Περιφερειάρχης",
+      "en": "Appointed Governor"
+    },
+    "dimensionId": "elections.local_post",
+    "order": 6,
+    "shortName": null
+  },
+  {
+    "notation": "3",
+    "name": {
+      "el": "Μέλος Δημοτικού Συμβουλίου",
+      "en": "Member of City Council"
+    },
+    "dimensionId": "elections.local_post",
+    "order": 1,
+    "shortName": null
+  },
+  {
+    "notation": "4",
+    "name": {
+      "el": "Μέλος Νομαρχιακού Συμβουλίου",
+      "en": "Member of Prefectural Council"
+    },
+    "dimensionId": "elections.local_post",
+    "order": 5,
+    "shortName": null
+  },
+  {
+    "notation": "5",
+    "name": {
+      "el": "Μέλος Περιφερειακού Συμβουλίου",
+      "en": "Member of Regional Council"
+    },
+    "dimensionId": "elections.local_post",
+    "order": 4,
+    "shortName": null
+  },
+  {
+    "notation": "6",
+    "name": {
+      "el": "Νομάρχης/Αντινομάρχης",
+      "en": "Perfecture Governor / Vice Governor"
+    },
+    "dimensionId": "elections.local_post",
+    "order": 3,
+    "shortName": null
+  },
+  {
+    "notation": "7",
+    "name": {
+      "el": "Περιφερειάρχης",
+      "en": "Regional Governor"
+    },
+    "dimensionId": "elections.local_post",
+    "order": 2,
+    "shortName": null
+  },
+  {
+    "notation": "8",
+    "name": {
+      "el": "Όχι/Δεν αναφέρεται",
+      "en": "No Role /no information"
+    },
+    "dimensionId": "elections.local_post",
+    "order": 8,
+    "shortName": null,
+    "color": "#a9a9a9"
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "Αρχηγός/διεκδικητής",
+      "en": "Party Leader/ Candidate"
+    },
+    "dimensionId": "elections.party_post",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "Γραμματέας Κεντρικής Επιτροπής/εθνικού συμβουλίου",
+      "en": "General Secretary of the central/national/executive committee"
+    },
+    "dimensionId": "elections.party_post",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "3",
+    "name": {
+      "el": "Γραμματέας/υπεύθυνος Τομέα",
+      "en": "General Secretary / Section Responsible"
+    },
+    "dimensionId": "elections.party_post",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "4",
+    "name": {
+      "el": "Μέλος πολιτικού συμβουλίου/κεντρικής ή εκτελεστικής επιτροπής/ εθνικού συμβουλίου/πολιτικής γραμματείας",
+      "en": "Member of the central/national/executive committee"
+    },
+    "dimensionId": "elections.party_post",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "5",
+    "name": {
+      "el": "Μέλος/πρόεδρος τοπικής οργάνωσης",
+      "en": "Member/Chairman of Local Committee"
+    },
+    "dimensionId": "elections.party_post",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "6",
+    "name": {
+      "el": "Όχι/Δεν αναφέρεται",
+      "en": "No Role /no information"
+    },
+    "dimensionId": "elections.party_post",
+    "order": null,
+    "shortName": null,
+    "color": "#a9a9a9"
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "dimensionId": "elections.past_goverm_post",
+    "order": null,
+    "shortName": null,
+    "color": "#a9a9a9"
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "Υπουργική Θέση",
+      "en": "Minister"
+    },
+    "dimensionId": "elections.past_goverm_post",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "3",
+    "name": {
+      "el": "Πρωθυπουργός",
+      "en": "Prime Minister"
+    },
+    "dimensionId": "elections.past_goverm_post",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "Όχι/δεν αναφέρεται",
+      "en": "No Role /no information"
+    },
+    "dimensionId": "elections.trade_union_rec",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "dimensionId": "elections.trade_union_rec",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "1",
+    "name": {
+      "el": "Καμία αλλαγή/Δεν αναφέρεται",
+      "en": "No change"
+    },
+    "dimensionId": "elections.changes",
+    "order": null,
+    "shortName": null,
+    "color": "#a9a9a9"
+  },
+  {
+    "notation": "2",
+    "name": {
+      "el": "Ακύρωση εκλογής",
+      "en": "Cancellation of Election"
+    },
+    "dimensionId": "elections.changes",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "3",
+    "name": {
+      "el": "Παραίτηση",
+      "en": "Resignation"
+    },
+    "dimensionId": "elections.changes",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "4",
+    "name": {
+      "el": "Ανεξαρτητοποίηση",
+      "en": "Independence"
+    },
+    "dimensionId": "elections.changes",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "5",
+    "name": {
+      "el": "Διαγραφή",
+      "en": "Expelled from Parliamentary Group"
+    },
+    "dimensionId": "elections.changes",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "6",
+    "name": {
+      "el": "Σε άλλο κόμμα",
+      "en": "Moved to another party"
+    },
+    "dimensionId": "elections.changes",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "7",
+    "name": {
+      "el": "Απεβίωσε",
+      "en": "Death"
+    },
+    "dimensionId": "elections.changes",
+    "order": null,
+    "shortName": null
+  },
+  {
+    "notation": "8",
+    "name": {
+      "el": "Στο ίδιο κόμμα",
+      "en": "Accession/ re-affiliation to Parliamentary Group"
+    },
+    "dimensionId": "elections.changes",
+    "order": null,
+    "shortName": null
+  }
+]

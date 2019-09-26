@@ -114,61 +114,58 @@
         "id": "elections.assembly"
       },
       {
-        "id": "dep-sex"
+        "id": "deputy_sex"
       },
       {
-        "id": "birthYearGrouped"
+        "id": "deputy_profession"
       },
       {
-        "id": "dep-profession"
+        "id": "education_field"
       },
       {
-        "id": "educationField"
+        "id": "education_title"
       },
       {
-        "id": "educationTitle"
-      },
-      {
-        "id": "firstElectionAgeGroup"
+        "id": "first_election_age_group"
       },
       {
         "id": "elections.party"
       },
       {
+        "id": "elections.election_age_group"
+      },
+      {
         "id": "elections.constituency"
       },
       {
-        "id": "elections.constitRec"
+        "id": "elections.consti_size"
       },
       {
-        "id": "elections.geography"
+        "id": "elections.consti_geography"
       },
       {
-        "id": "elections.depExperience"
+        "id": "elections.terms_rec"
       },
       {
-        "id": "elections.electionNetwork"
+        "id": "elections.network"
       },
       {
-        "id": "elections.constituencyId"
+        "id": "elections.eu_post"
       },
       {
-        "id": "elections.europeanPost"
+        "id": "elections.goverm_post"
       },
       {
-        "id": "elections.governmentalPost"
+        "id": "elections.local_post"
       },
       {
-        "id": "elections.localPost"
+        "id": "elections.party_post"
       },
       {
-        "id": "elections.partyPost"
+        "id": "elections.past_goverm_post"
       },
       {
-        "id": "elections.pastGovernmentalPost"
-      },
-      {
-        "id": "elections.tradeUnionRecord"
+        "id": "elections.trade_union_rec"
       },
       {
         "id": "elections.changes"
@@ -197,12 +194,8 @@
         "seriesOptions": {
           "xAxis": "elections.assembly",
           "dimensionFilters": {},
-          "measure": "deputies",
-          "compareBy": "dep-sex",
-          "compareCodes": [
-            "1",
-            "2"
-          ]
+          "measure": "deputies_perc",
+          "compareBy": "deputy_sex"
         }
       },
       {
@@ -213,14 +206,10 @@
         },
         "visType": "chart",
         "seriesOptions": {
-          "xAxis": "elections.constitRec",
+          "xAxis": "elections.consti_size",
           "dimensionFilters": {},
-          "measure": "deputies",
-          "compareBy": "elections.electionNetwork",
-          "compareCodes": [
-            "1",
-            "2"
-          ]
+          "measure": "deputies_perc",
+          "compareBy": "elections.network"
         }
       },
       {
@@ -233,22 +222,8 @@
         "seriesOptions": {
           "xAxis": "elections.assembly",
           "dimensionFilters": {},
-          "measure": "deputies",
-          "compareBy": "educationTitle",
-          "compareCodes": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "10",
-            "11",
-            "12",
-            "13"
-          ]
+          "measure": "deputies_perc",
+          "compareBy": "education_title"
         }
       }
     ]

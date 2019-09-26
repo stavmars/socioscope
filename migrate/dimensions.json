@@ -105,11 +105,11 @@
     "type": "coded",
     "name": {
       "en": "Parliamentary Term",
-      "el": "Κοινοβουλευτική περίοδος αναφοράς"
+      "el": "Κοινοβουλευτική περίοδος"
     }
   },
   {
-    "id": "dep-sex",
+    "id": "deputy_sex",
     "type": "coded",
     "name": {
       "en": "Sex",
@@ -117,15 +117,7 @@
     }
   },
   {
-    "id": "birthYearGrouped",
-    "type": "coded",
-    "name": {
-      "en": "Year of Birth",
-      "el": "Έτος Γέννησης"
-    }
-  },
-  {
-    "id": "dep-profession",
+    "id": "deputy_profession",
     "type": "coded",
     "name": {
       "en": "Occupation",
@@ -133,7 +125,7 @@
     }
   },
   {
-    "id": "educationField",
+    "id": "education_field",
     "type": "coded",
     "name": {
       "en": "Field of Education",
@@ -141,7 +133,7 @@
     }
   },
   {
-    "id": "educationTitle",
+    "id": "education_title",
     "type": "coded",
     "name": {
       "en": "Highest level of educational attainment",
@@ -149,11 +141,11 @@
     }
   },
   {
-    "id": "firstElectionAgeGroup",
+    "id": "first_election_age_group",
     "type": "coded",
     "name": {
-      "en": "Age of first Election",
-      "el": "Ηλικία Πρώτης Εκλογής"
+      "en": "Decade of first Election",
+      "el": "Δεκαετία Πρώτης Εκλογής"
     }
   },
   {
@@ -165,6 +157,14 @@
     }
   },
   {
+    "id": "elections.election_age_group",
+    "type": "coded",
+    "name": {
+      "en": "Age of Election",
+      "el": "Ηλικία Εκλογής"
+    }
+  },
+  {
     "id": "elections.constituency",
     "type": "coded",
     "name": {
@@ -173,7 +173,7 @@
     }
   },
   {
-    "id": "elections.constitRec",
+    "id": "elections.consti_size",
     "type": "coded",
     "name": {
       "en": "Magnitude of Electoral District",
@@ -181,7 +181,7 @@
     }
   },
   {
-    "id": "elections.geography",
+    "id": "elections.consti_geography",
     "type": "coded",
     "name": {
       "en": "Relation with constituency of election",
@@ -189,7 +189,7 @@
     }
   },
   {
-    "id": "elections.depExperience",
+    "id": "elections.terms_rec",
     "type": "coded",
     "name": {
       "en": "Parliamentary Experience",
@@ -197,7 +197,7 @@
     }
   },
   {
-    "id": "elections.electionNetwork",
+    "id": "elections.network",
     "type": "coded",
     "name": {
       "en": "Relation with other MP",
@@ -205,20 +205,7 @@
     }
   },
   {
-    "id": "elections.constituencyId",
-    "geoMaps": [
-      {
-        "level": 0,
-        "name": {
-          "el": "Εκλογικές Περιφέρειες",
-          "en": "Constituencies"
-        },
-        "url": "content/geo/constituencies.json"
-      }
-    ]
-  },
-  {
-    "id": "elections.europeanPost",
+    "id": "elections.eu_post",
     "type": "coded",
     "name": {
       "en": "Service in the EU Parliament",
@@ -226,7 +213,7 @@
     }
   },
   {
-    "id": "elections.governmentalPost",
+    "id": "elections.goverm_post",
     "type": "coded",
     "name": {
       "en": "Position in Current Government",
@@ -234,7 +221,7 @@
     }
   },
   {
-    "id": "elections.localPost",
+    "id": "elections.local_post",
     "type": "coded",
     "name": {
       "en": "Participation in local government",
@@ -242,7 +229,7 @@
     }
   },
   {
-    "id": "elections.partyPost",
+    "id": "elections.party_post",
     "type": "coded",
     "name": {
       "en": "Party Role",
@@ -250,7 +237,7 @@
     }
   },
   {
-    "id": "elections.pastGovernmentalPost",
+    "id": "elections.past_goverm_post",
     "type": "coded",
     "name": {
       "en": "Past Governmental Position",
@@ -258,7 +245,7 @@
     }
   },
   {
-    "id": "elections.tradeUnionRecord",
+    "id": "elections.trade_union_rec",
     "type": "coded",
     "name": {
       "en": "Participation in Trade Unions",
