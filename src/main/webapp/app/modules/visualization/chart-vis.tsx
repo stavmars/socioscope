@@ -78,7 +78,7 @@ const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[]
   const chartPoints = seriesPoints.map(seriesPoint => {
     const code = codesByNotation[seriesPoint.x];
     return {
-      name: translateEntityField(code.name),
+      name: translateEntityField(code.shortName) || translateEntityField(code.name),
       codeOrder: code.order,
       y: seriesPoint.y,
       drilldown: seriesByParent[seriesPoint.x] ? seriesPoint.x : undefined,
@@ -164,7 +164,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
             const code = compareBy && dimensionCodes[compareBy].codesByNotation[series.id];
             return {
               id: series.id,
-              name: code ? translateEntityField(code.name) : '',
+              name: code ? translateEntityField(code.shortName) || translateEntityField(code.name) : '',
               order: code && code.order,
               color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
               data: prepareTimeSeriesData(series.data)
@@ -191,7 +191,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
                 (xAxisDimension.type === 'composite' && dimensionCodes[xAxisDimension.id].codesByNotation[series.id]);
               return {
                 id: series.id,
-                name: code ? translateEntityField(code.name) : '',
+                name: code ? translateEntityField(code.shortName) || translateEntityField(code.name) : '',
                 code,
                 color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
                 order: code && code.order,
