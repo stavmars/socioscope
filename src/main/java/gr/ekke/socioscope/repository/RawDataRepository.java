@@ -48,6 +48,14 @@ public class RawDataRepository {
 
         List<AggregationOperation> aggregationOperations = addUnwindSteps(new ArrayList<>(), fields);
 
+        //add extra unwind steps for xAxis and compareBy field in case they're arrays (e.g. election.changes in deputies)
+        //if the field is not an array these steps have no effect
+        //but they remove documents with null or missing values in every case
+        aggregationOperations.add(unwind(xAxis));
+        if (compareBy != null){
+            aggregationOperations.add(unwind(compareBy));
+        }
+
         Map<String, Object> filters = new HashMap<>();
         if (dimensionFilters != null) {
             filters.putAll(dimensionFilters);
@@ -56,11 +64,9 @@ public class RawDataRepository {
             filters.put(compareBy, compareCodes);
         }
 
-        Criteria matchCriteria = Criteria.where(xAxis).ne(null);
         if (filters.size() > 0) {
-            matchCriteria.andOperator(this.getDimensionCriteria(filters));
+            aggregationOperations.add(match(this.getDimensionCriteria(filters)));
         }
-        aggregationOperations.add(match(matchCriteria));
 
         ProjectionOperation xProjectionOperation = xAxisDimension.getType().equals(DimensionType.TIME) ? project("_id").and(xAxis).dateAsFormattedString("%Y-%m").as("x") :
             project("_id").and(xAxis).as("x");
