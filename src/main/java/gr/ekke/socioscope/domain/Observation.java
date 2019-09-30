@@ -19,7 +19,6 @@ public class Observation implements Serializable {
     @Id
     private String id;
 
-    @JsonIgnore
     @Field("datasetId")
     private String datasetId;
 
