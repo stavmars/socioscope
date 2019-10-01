@@ -12,7 +12,6 @@ export interface IButtonGroupFilterProp {
   dataset: IDataSet;
   dimension: IDimension;
   codes: IDimensionCode[];
-  colorScheme: string;
   setFilterValue: typeof setFilterValue;
   removeFilter: typeof removeFilter;
   seriesOptions: ISeriesOptions;
@@ -35,7 +34,7 @@ export class ButtonGroupFilter extends React.Component<IButtonGroupFilterProp> {
   };
 
   render() {
-    const { dimension, codes, colorScheme, seriesOptions } = this.props;
+    const { dimension, codes, dataset, seriesOptions } = this.props;
     const currentFilterValue = seriesOptions.dimensionFilters[dimension.id];
     return (
       <div className="button-group-filter">
@@ -45,7 +44,7 @@ export class ButtonGroupFilter extends React.Component<IButtonGroupFilterProp> {
             <Button
               active={code.notation === currentFilterValue}
               onClick={this.handleFilterChange(code)}
-              className={`button-group-filter-button ${colorScheme}`}
+              className={`button-group-filter-button ${dataset.colorScheme}`}
               key={code.notation}
             >
               {code.iconURL ? <Image src={code.iconURL} /> : <span>{translateEntityField(code.shortName)}</span>}

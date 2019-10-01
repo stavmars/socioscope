@@ -585,7 +585,8 @@
   padding-left: 20px;
 }
 
-.remove-filter {
+.remove-filter,
+.slider-filter {
   img {
     cursor: pointer;
   }
@@ -620,6 +621,14 @@ a.disabled {
   padding-bottom: 12px;
 }
 
+.slider-filter-label {
+  display: inline-block;
+  font-family: ProximaNovaBold;
+  font-size: 16px;
+  color: #1e1e1e;
+  padding-bottom: 15px;
+  margin-right: 5px;
+}
 .button-group-filter-button {
   padding: 10px !important;
   color: #ffffff !important;
@@ -647,4 +656,24 @@ a.disabled {
 
 .ui.dropdown .menu > .item.disabled:hover {
   background: none;
+}
+
+.rc-slider-mark-text {
+  display: none !important;
+  position: relative !important;
+}
+
+.rc-slider-mark-text-active {
+  display: inline-block !important;
+}
+
+.slider-filter {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.slider-filter-mark {
+  font-family: ProximaNovaRegular;
+  font-size: 16px;
+  color: #1e1e1e;
 }

@@ -18,6 +18,7 @@ import {
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import _ from 'lodash';
 import ButtonGroupFilter from 'app/modules/dataset-page/ButtonGroupFilter';
+import SliderFilter from 'app/modules/dataset-page/slider-filter';
 
 export interface IVisSeriesOptionMenuProp {
   dataset: IDataSet;
@@ -94,6 +95,8 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
     const xAxisDimension = _.find(dataset.dimensions, { id: seriesOptions.xAxis });
 
     const demographics = _.filter(dimensions, dimension => dimension.filterWidget === 'button-group');
+    const sliderDimensions = _.filter(dimensions, dimension => dimension.filterWidget === 'slider');
+
     // tslint:disable:jsx-no-lambda
     return (
       <div className="vis-options-menu">
@@ -147,6 +150,20 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
               {translate('socioscopeApp.dataSet.visualization.configure.filter')}
             </div>
           )}
+          {sliderDimensions.map(
+            sliderDim =>
+              sliderDim.id !== seriesOptions.xAxis &&
+              sliderDim.id !== seriesOptions.compareBy && (
+                <SliderFilter
+                  dimension={sliderDim}
+                  codes={dimensionCodes[sliderDim.id].codes}
+                  dataset={dataset}
+                  setFilterValue={this.props.setFilterValue}
+                  removeFilter={this.props.removeFilter}
+                  seriesOptions={seriesOptions}
+                />
+              )
+          )}
           {dataset.type === 'qb' ? (
             <QbDatasetFilters
               dimensionCodes={dimensionCodes}
@@ -176,7 +193,6 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
                   key={demographics[0].id}
                   dimension={demographics[0]}
                   codes={dimensionCodes[demographics[0].id].codes}
-                  colorScheme={colorScheme}
                   dataset={dataset}
                   setFilterValue={this.props.setFilterValue}
                   removeFilter={this.props.removeFilter}
@@ -187,7 +203,6 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
                   key={demographics[1].id}
                   dimension={demographics[1]}
                   codes={dimensionCodes[demographics[1].id].codes}
-                  colorScheme={colorScheme}
                   dataset={dataset}
                   setFilterValue={this.props.setFilterValue}
                   removeFilter={this.props.removeFilter}
@@ -199,7 +214,6 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
                   key={demographics[2].id}
                   dimension={demographics[2]}
                   codes={dimensionCodes[demographics[2].id].codes}
-                  colorScheme={colorScheme}
                   dataset={dataset}
                   setFilterValue={this.props.setFilterValue}
                   removeFilter={this.props.removeFilter}

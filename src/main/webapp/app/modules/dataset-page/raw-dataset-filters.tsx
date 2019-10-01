@@ -96,7 +96,7 @@ export class RawDatasetFilters extends React.Component<IRawDatasetFiltersProp, I
           <div className="remove-filters">
             {_.map(seriesOptions.dimensionFilters, (value, dimensionId) => {
               const dimension = dataset.dimensions.find(dim => dim.id === dimensionId);
-              if (dimension.filterWidget === 'button-group') return <></>;
+              if (dimension.filterWidget) return <></>;
               return (
                 <div className="remove-filter" key={dimensionId}>
                   <Image
