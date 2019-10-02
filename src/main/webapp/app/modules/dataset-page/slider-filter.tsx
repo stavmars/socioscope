@@ -114,9 +114,8 @@ export class SliderFilter extends React.Component<ISliderFilterProp, ISliderFilt
             railStyle={{ backgroundColor: accentColors[dataset.colorScheme], opacity: 0.3 }}
             handleStyle={{ borderColor: accentColors[dataset.colorScheme] }} /*handle={this.handle}*/
             value={this.state.value}
-            /*onBeforeChange={this.onBeforeChange}*/ onChange={this.onChange}
+            onChange={this.onChange}
             onAfterChange={this.onAfterChange}
-            dots={false}
           />
         </div>
       </div>

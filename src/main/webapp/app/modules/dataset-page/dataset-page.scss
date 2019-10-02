@@ -674,6 +674,11 @@ a.disabled {
 
 .slider-filter-mark {
   font-family: ProximaNovaRegular;
-  font-size: 16px;
   color: #1e1e1e;
+  font-size: 11x;
+  letter-spacing: 0.2px;
+}
+
+.rc-slider-dot {
+  border: 2px solid #2f7cff !important;
 }
