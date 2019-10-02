@@ -155,7 +155,10 @@
     "name": {
       "en": "Party of Election",
       "el": "Κόμμα εκλογής"
-    }
+    },
+    "dependencies": [
+      "elections.assembly"
+    ]
   },
   {
     "id": "elections.election_age_group",
@@ -163,7 +166,10 @@
     "name": {
       "en": "Age of Election",
       "el": "Ηλικία Εκλογής"
-    }
+    },
+    "dependencies": [
+      "elections.assembly"
+    ]
   },
   {
     "id": "elections.constituency",
@@ -171,7 +177,10 @@
     "name": {
       "en": "Electoral District",
       "el": "Εκλογική Περιφέρεια"
-    }
+    },
+    "dependencies": [
+      "elections.assembly"
+    ]
   },
   {
     "id": "elections.consti_size",
@@ -179,7 +188,10 @@
     "name": {
       "en": "Magnitude of Electoral District",
       "el": "Μέγεθος εκλογικής περιφέρειας"
-    }
+    },
+    "dependencies": [
+      "elections.assembly"
+    ]
   },
   {
     "id": "elections.consti_geography",
@@ -187,7 +199,10 @@
     "name": {
       "en": "Relation with constituency of election",
       "el": "Σχέση με τόπο εκλογής"
-    }
+    },
+    "dependencies": [
+      "elections.assembly"
+    ]
   },
   {
     "id": "elections.terms_rec",
@@ -195,7 +210,10 @@
     "name": {
       "en": "Parliamentary Experience",
       "el": "Κοινοβουλευτική εμπειρία"
-    }
+    },
+    "dependencies": [
+      "elections.assembly"
+    ]
   },
   {
     "id": "elections.network",
@@ -203,7 +221,10 @@
     "name": {
       "en": "Relation with other MP",
       "el": "Συγγένεια με άλλο βουλευτή"
-    }
+    },
+    "dependencies": [
+      "elections.assembly"
+    ]
   },
   {
     "id": "elections.eu_post",
@@ -211,7 +232,10 @@
     "name": {
       "en": "Service in the EU Parliament",
       "el": "Θητεία σε Ευρωπαϊκό όργανο"
-    }
+    },
+    "dependencies": [
+      "elections.assembly"
+    ]
   },
   {
     "id": "elections.goverm_post",
@@ -219,7 +243,10 @@
     "name": {
       "en": "Position in Current Government",
       "el": "Θέση στην Κυβέρνηση"
-    }
+    },
+    "dependencies": [
+      "elections.assembly"
+    ]
   },
   {
     "id": "elections.local_post",
@@ -227,7 +254,10 @@
     "name": {
       "en": "Participation in local government",
       "el": "Θητεία στην Αυτοδιοίκηση"
-    }
+    },
+    "dependencies": [
+      "elections.assembly"
+    ]
   },
   {
     "id": "elections.party_post",
@@ -235,7 +265,10 @@
     "name": {
       "en": "Party Role",
       "el": "Θέση στο κόμμα"
-    }
+    },
+    "dependencies": [
+      "elections.assembly"
+    ]
   },
   {
     "id": "elections.past_goverm_post",
@@ -243,7 +276,10 @@
     "name": {
       "en": "Past Governmental Position",
       "el": "Θέση στην Κυβέρνηση στο παρελθόν"
-    }
+    },
+    "dependencies": [
+      "elections.assembly"
+    ]
   },
   {
     "id": "elections.trade_union_rec",
@@ -251,7 +287,10 @@
     "name": {
       "en": "Participation in Trade Unions",
       "el": "Θητεία σε συνδικαλιστική οργάνωση"
-    }
+    },
+    "dependencies": [
+      "elections.assembly"
+    ]
   },
   {
     "id": "elections.changes",
@@ -259,7 +298,10 @@
     "name": {
       "en": "Changes during Parliamentary Term",
       "el": "Μεταβολές κατά τη διάρκεια της Θητείας"
-    }
+    },
+    "dependencies": [
+      "elections.assembly"
+    ]
   },
   {
     "id": "q1",
