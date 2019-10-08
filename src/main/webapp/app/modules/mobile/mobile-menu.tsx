@@ -54,15 +54,6 @@ export class MobileMenu extends React.Component<IMobileMenuProps> {
                   </NavLink>
                 </List.Header>
               </List.Content>
-              <List.Content>
-                <List.Header className="mobile-menu-item">{translate('footer.developers')}</List.Header>
-              </List.Content>
-              <List.Content>
-                <List.Header className="mobile-menu-item">{translate('footer.terms')}</List.Header>
-              </List.Content>
-              <List.Content>
-                <List.Header className="mobile-menu-item">{translate('footer.policy')}</List.Header>
-              </List.Content>
             </div>
           </List.Item>
         </List>
