@@ -1,6 +1,6 @@
 import React from 'react';
 import './dataset-page.scss';
-import { Divider, Dropdown, Grid, Image, Accordion, Icon } from 'semantic-ui-react';
+import { Accordion, Divider, Dropdown, Grid, Icon, Image } from 'semantic-ui-react';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
@@ -103,9 +103,108 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
 
     const xAxisDimension = _.find(dataset.dimensions, { id: seriesOptions.xAxis });
 
-    const demographics = _.filter(dimensions, dimension => dimension.filterWidget === 'button-group');
     const sliderDimensions = _.filter(dimensions, dimension => dimension.filterWidget === 'slider');
+    const buttonGroupDimensions = _.filter(dimensions, dimension => dimension.filterWidget === 'button-group');
 
+    const compare = (
+      <div className="vis-compareBy vis-options-menu-item">
+        <div className="vis-options-menu-label">
+          <Image inline src={`/content/images/Assets/compare-${colorScheme}.svg`} style={{ paddingRight: '23px' }} />
+          {translate('socioscopeApp.dataSet.visualization.configure.compare')}
+        </div>
+        <Dropdown
+          className={`vis-options-dropdown ${colorScheme}`}
+          onChange={this.handleCompareByChange}
+          options={compareByOptions}
+          selection
+          fluid
+          disabled={xAxisDimension.type === 'composite'}
+          value={seriesOptions.compareBy}
+          clearable
+        />
+      </div>
+    );
+
+    const filters = (
+      <div className="vis-filters vis-options-menu-item">
+        <div className="vis-options-menu-label">
+          <Image inline src={`/content/images/Assets/indicator-${colorScheme}.svg`} style={{ paddingLeft: '5px', paddingRight: '10px' }} />
+          {translate('socioscopeApp.dataSet.visualization.configure.filter')}
+        </div>
+        {sliderDimensions.map(
+          sliderDim =>
+            sliderDim.id !== seriesOptions.xAxis &&
+            sliderDim.id !== seriesOptions.compareBy && (
+              <SliderFilter
+                dimension={sliderDim}
+                codes={dimensionCodes[sliderDim.id].codes}
+                dataset={dataset}
+                setFilterValue={this.props.setFilterValue}
+                removeFilter={this.props.removeFilter}
+                seriesOptions={seriesOptions}
+              />
+            )
+        )}
+        {dataset.type === 'qb' ? (
+          <QbDatasetFilters
+            dimensionCodes={dimensionCodes}
+            dataset={dataset}
+            fetchedCodeLists={fetchedCodeLists}
+            seriesOptions={seriesOptions}
+            setFilterValue={this.props.setFilterValue}
+          />
+        ) : (
+          <RawDatasetFilters
+            dimensionCodes={dimensionCodes}
+            dataset={dataset}
+            fetchedCodeLists={fetchedCodeLists}
+            seriesOptions={seriesOptions}
+            setFilterValue={this.props.setFilterValue}
+            removeFilter={this.props.removeFilter}
+          />
+        )}
+      </div>
+    );
+
+    let advancedOptions = (
+      <div>
+        {visType === 'chart' && dataset.id !== 'greek-election-results' && compare}
+        {filters}
+      </div>
+    );
+
+    advancedOptions =
+      dataset.id !== 'adolescents' ? (
+        advancedOptions
+      ) : (
+        <Accordion
+          style={{
+            background: 'transparent',
+            boxShadow: 'none'
+          }}
+        >
+          <Accordion.Title
+            active={this.state.moreOptions}
+            onClick={this.handleOptions}
+            style={{
+              fontSize: '15px',
+              fontFamily: 'ProximaNovaSemibold',
+              padding: '10px 0 20px 0'
+            }}
+          >
+            <Icon name="dropdown" />
+            {translate('socioscopeApp.dataSet.visualization.configure.options')}
+          </Accordion.Title>
+          <Accordion.Content
+            style={{
+              padding: 0
+            }}
+            active={this.state.moreOptions}
+          >
+            {advancedOptions}
+          </Accordion.Content>
+        </Accordion>
+      );
     // tslint:disable:jsx-no-lambda
     return (
       <div className="vis-options-menu">
@@ -113,6 +212,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
           <span>{translate('socioscopeApp.dataSet.visualization.configure.menuTitle')}</span>
           <Image onClick={this.props.resetGraph} src="/content/images/Assets/Reset.svg" style={{ cursor: 'pointer' }} />
         </div>
+
         {visType === 'chart' && (
           <div className="vis-xAxis vis-options-menu-item">
             <div className="vis-options-menu-label">
@@ -129,167 +229,24 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
             />
           </div>
         )}
-        {visType === 'chart' &&
-          !['adolescents', 'greek-election-results'].includes(dataset.id) && (
-            <div className="vis-compareBy vis-options-menu-item">
-              <div className="vis-options-menu-label">
-                <Image inline src={`/content/images/Assets/compare-${colorScheme}.svg`} style={{ paddingRight: '23px' }} />
-                {translate('socioscopeApp.dataSet.visualization.configure.compare')}
-              </div>
-              <Dropdown
-                className={`vis-options-dropdown ${colorScheme}`}
-                onChange={this.handleCompareByChange}
-                options={compareByOptions}
-                selection
-                fluid
-                disabled={xAxisDimension.type === 'composite'}
-                value={seriesOptions.compareBy}
-                clearable
-              />
-            </div>
-          )}
-        <div className="vis-filters vis-options-menu-item">
-          {dataset.id !== 'adolescents' && (
-            <div className="vis-options-menu-label">
-              <Image
-                inline
-                src={`/content/images/Assets/indicator-${colorScheme}.svg`}
-                style={{ paddingLeft: '5px', paddingRight: '10px' }}
-              />
-              {translate('socioscopeApp.dataSet.visualization.configure.filter')}
-            </div>
-          )}
-          {sliderDimensions.map(
-            sliderDim =>
-              sliderDim.id !== seriesOptions.xAxis &&
-              sliderDim.id !== seriesOptions.compareBy && (
-                <SliderFilter
-                  dimension={sliderDim}
-                  codes={dimensionCodes[sliderDim.id].codes}
-                  dataset={dataset}
-                  setFilterValue={this.props.setFilterValue}
-                  removeFilter={this.props.removeFilter}
-                  seriesOptions={seriesOptions}
-                />
-              )
-          )}
-          {dataset.type === 'qb' ? (
-            <QbDatasetFilters
-              dimensionCodes={dimensionCodes}
-              dataset={dataset}
-              fetchedCodeLists={fetchedCodeLists}
-              seriesOptions={seriesOptions}
-              setFilterValue={this.props.setFilterValue}
-            />
-          ) : (
-            dataset.id !== 'adolescents' && (
-              <RawDatasetFilters
-                dimensionCodes={dimensionCodes}
-                dataset={dataset}
-                fetchedCodeLists={fetchedCodeLists}
-                seriesOptions={seriesOptions}
-                setFilterValue={this.props.setFilterValue}
-                removeFilter={this.props.removeFilter}
-              />
-            )
-          )}
-        </div>
-        <div className="button-group-filters">
-          {demographics.length > 0 && (
-            <Grid style={{ paddingLeft: '15px' }}>
-              <Grid.Row>
+        {buttonGroupDimensions.length > 0 && (
+          <div className="button-group-filters">
+            <Grid>
+              {buttonGroupDimensions.map(dimension => (
                 <ButtonGroupFilter
-                  key={demographics[0].id}
-                  dimension={demographics[0]}
-                  codes={dimensionCodes[demographics[0].id].codes}
+                  key={dimension.id}
+                  dimension={dimension}
+                  codes={dimensionCodes[dimension.id].codes}
                   dataset={dataset}
                   setFilterValue={this.props.setFilterValue}
                   removeFilter={this.props.removeFilter}
                   seriesOptions={seriesOptions}
                 />
-                <div style={{ marginLeft: '20px', marginRight: '20px' }} />
-                <ButtonGroupFilter
-                  key={demographics[1].id}
-                  dimension={demographics[1]}
-                  codes={dimensionCodes[demographics[1].id].codes}
-                  dataset={dataset}
-                  setFilterValue={this.props.setFilterValue}
-                  removeFilter={this.props.removeFilter}
-                  seriesOptions={seriesOptions}
-                />
-              </Grid.Row>
-              <Grid.Row>
-                <ButtonGroupFilter
-                  key={demographics[2].id}
-                  dimension={demographics[2]}
-                  codes={dimensionCodes[demographics[2].id].codes}
-                  dataset={dataset}
-                  setFilterValue={this.props.setFilterValue}
-                  removeFilter={this.props.removeFilter}
-                  seriesOptions={seriesOptions}
-                />
-              </Grid.Row>
+              ))}
             </Grid>
-          )}
-        </div>
-        {visType === 'chart' &&
-          dataset.id === 'adolescents' && (
-            <Accordion
-              styled
-              style={{
-                background: 'transparent',
-                boxShadow: 'none'
-              }}
-            >
-              <Accordion.Title
-                active={this.state.moreOptions}
-                onClick={this.handleOptions}
-                style={{
-                  fontSize: '16px',
-                  fontFamily: 'ProximaNovaSemibold'
-                }}
-              >
-                <Icon name="dropdown" />
-                {translate('socioscopeApp.dataSet.visualization.configure.options')}
-              </Accordion.Title>
-              <Accordion.Content active={this.state.moreOptions}>
-                <div>
-                  <div className="vis-compareBy vis-options-menu-item">
-                    <div className="vis-options-menu-label">
-                      <Image inline src={`/content/images/Assets/compare-${colorScheme}.svg`} style={{ paddingRight: '23px' }} />
-                      {translate('socioscopeApp.dataSet.visualization.configure.compare')}
-                    </div>
-                    <Dropdown
-                      className={`vis-options-dropdown ${colorScheme}`}
-                      onChange={this.handleCompareByChange}
-                      options={compareByOptions}
-                      selection
-                      fluid
-                      disabled={xAxisDimension.type === 'composite'}
-                      value={seriesOptions.compareBy}
-                      clearable
-                    />
-                  </div>
-                  <div className="vis-options-menu-label">
-                    <Image
-                      inline
-                      src={`/content/images/Assets/indicator-${colorScheme}.svg`}
-                      style={{ paddingLeft: '5px', paddingRight: '10px' }}
-                    />
-                    {translate('socioscopeApp.dataSet.visualization.configure.filter')}
-                  </div>
-                  <RawDatasetFilters
-                    dimensionCodes={dimensionCodes}
-                    dataset={dataset}
-                    fetchedCodeLists={fetchedCodeLists}
-                    seriesOptions={seriesOptions}
-                    setFilterValue={this.props.setFilterValue}
-                    removeFilter={this.props.removeFilter}
-                  />
-                </div>
-              </Accordion.Content>
-            </Accordion>
-          )}
+          </div>
+        )}
+        {advancedOptions}
       </div>
     );
   }
