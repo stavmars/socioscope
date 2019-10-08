@@ -609,9 +609,13 @@ a.disabled {
   pointer-events: none;
 }
 
-// .button-group-filter {
-//   margin-bottom: 40px;
-// }
+.button-group-filters {
+  padding: 10px 0 20px 0;
+}
+
+.button-group-filter {
+  margin-bottom: 20px;
+}
 
 .button-group-filter-label {
   font-size: 16px;
@@ -629,6 +633,7 @@ a.disabled {
   padding-bottom: 15px;
   margin-right: 5px;
 }
+
 .button-group-filter-button {
   padding: 10px !important;
   color: #ffffff !important;
