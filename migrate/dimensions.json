@@ -115,7 +115,8 @@
     "name": {
       "en": "Sex",
       "el": "Φύλο"
-    }
+    },
+    "groupId": "demographics"
   },
   {
     "id": "deputy_profession",
@@ -123,7 +124,8 @@
     "name": {
       "en": "Occupation",
       "el": "Επάγγελμα"
-    }
+    },
+    "groupId": "demographics"
   },
   {
     "id": "education_field",
@@ -131,7 +133,8 @@
     "name": {
       "en": "Field of Education",
       "el": "Πεδίο Σπουδών"
-    }
+    },
+    "groupId": "demographics"
   },
   {
     "id": "education_title",
@@ -139,7 +142,8 @@
     "name": {
       "en": "Highest level of educational attainment",
       "el": "Επίπεδο εκπαίδευσης"
-    }
+    },
+    "groupId": "demographics"
   },
   {
     "id": "first_election_age_group",
@@ -147,7 +151,8 @@
     "name": {
       "en": "Decade of first Election",
       "el": "Δεκαετία Πρώτης Εκλογής"
-    }
+    },
+    "groupId": "electoral_info"
   },
   {
     "id": "elections.party",
@@ -158,7 +163,8 @@
     },
     "dependencies": [
       "elections.assembly"
-    ]
+    ],
+    "groupId": "electoral_info"
   },
   {
     "id": "elections.election_age_group",
@@ -169,7 +175,8 @@
     },
     "dependencies": [
       "elections.assembly"
-    ]
+    ],
+    "groupId": "electoral_info"
   },
   {
     "id": "elections.constituency",
@@ -180,7 +187,8 @@
     },
     "dependencies": [
       "elections.assembly"
-    ]
+    ],
+    "groupId": "electoral_info"
   },
   {
     "id": "elections.consti_size",
@@ -191,7 +199,8 @@
     },
     "dependencies": [
       "elections.assembly"
-    ]
+    ],
+    "groupId": "electoral_info"
   },
   {
     "id": "elections.consti_geography",
@@ -202,7 +211,8 @@
     },
     "dependencies": [
       "elections.assembly"
-    ]
+    ],
+    "groupId": "electoral_info"
   },
   {
     "id": "elections.terms_rec",
@@ -213,7 +223,8 @@
     },
     "dependencies": [
       "elections.assembly"
-    ]
+    ],
+    "groupId": "electoral_info"
   },
   {
     "id": "elections.network",
@@ -224,7 +235,8 @@
     },
     "dependencies": [
       "elections.assembly"
-    ]
+    ],
+    "groupId": "demographics"
   },
   {
     "id": "elections.eu_post",
@@ -235,7 +247,8 @@
     },
     "dependencies": [
       "elections.assembly"
-    ]
+    ],
+    "groupId": "pol_position"
   },
   {
     "id": "elections.goverm_post",
@@ -246,7 +259,8 @@
     },
     "dependencies": [
       "elections.assembly"
-    ]
+    ],
+    "groupId": "pol_position"
   },
   {
     "id": "elections.local_post",
@@ -257,7 +271,8 @@
     },
     "dependencies": [
       "elections.assembly"
-    ]
+    ],
+    "groupId": "pol_position"
   },
   {
     "id": "elections.party_post",
@@ -268,7 +283,8 @@
     },
     "dependencies": [
       "elections.assembly"
-    ]
+    ],
+    "groupId": "pol_position"
   },
   {
     "id": "elections.past_goverm_post",
@@ -279,7 +295,8 @@
     },
     "dependencies": [
       "elections.assembly"
-    ]
+    ],
+    "groupId": "pol_position"
   },
   {
     "id": "elections.trade_union_rec",
@@ -290,7 +307,8 @@
     },
     "dependencies": [
       "elections.assembly"
-    ]
+    ],
+    "groupId": "pol_position"
   },
   {
     "id": "elections.changes",
@@ -301,7 +319,8 @@
     },
     "dependencies": [
       "elections.assembly"
-    ]
+    ],
+    "groupId": "electoral_info"
   },
   {
     "id": "q1",
