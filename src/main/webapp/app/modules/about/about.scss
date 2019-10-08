@@ -58,6 +58,7 @@ About page styles
   .about-page-content {
     font-family: ProximaNovaRegular;
     color: #1e1e1e;
+    text-align: justify;
     @include mobile {
       font-size: 12px;
       line-height: 15px;
@@ -71,7 +72,7 @@ About page styles
   h2 {
     font-family: ProximaNovaBold;
     color: #1e1e1e;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
   }
   h3 {
     font-family: ProximaNovaRegular;
