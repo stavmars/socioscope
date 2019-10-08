@@ -31,7 +31,7 @@ export class DatasetPage extends React.Component<IDatasetPageProp> {
 
     return (
       <div className={`background ${dataset.colorScheme}`}>
-        <Route exact path={`(${match.url}|${match.url}/about)`} render={() => <Header isFixed className={dataset.colorScheme} />} />
+        <Route path={`${match.url}`} render={() => <Header isFixed className={dataset.colorScheme} />} />
         <div className="dataset-page">
           <Switch>
             <Route path={`${match.url}/data`} render={() => <DatasetPageTabMenu dataset={dataset} {...this.props} isMinimized />} />

@@ -62,11 +62,6 @@ export class DatasetPageTabMenu extends React.Component<IDatasetPageTabMenuProp>
                     <Menu.Item>
                       <h1 className={dataset.colorScheme}>{translateEntityField(dataset.name)}</h1>
                     </Menu.Item>
-                    <Menu.Item position="right" onClick={this.props.toggleTopicsMenu} style={{ float: 'right' }}>
-                      <span className="dataset-page-tab-menu-top-topics">
-                        <Translate contentKey="global.menu.topics" />
-                      </span>
-                    </Menu.Item>
                   </Menu>
                 </Responsive>
               </div>
