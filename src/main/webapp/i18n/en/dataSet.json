@@ -34,7 +34,8 @@
           "menuTitle": "Configure graph",
           "xAxis": "I want to view results for:",
           "filter": "… filtered by:",
-          "compare": "… compare by:"
+          "compare": "… compare by:",
+          "options": "More Options"
         },
         "print": "Print",
         "download": "Download as:"

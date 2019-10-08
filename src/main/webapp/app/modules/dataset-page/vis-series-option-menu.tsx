@@ -1,6 +1,6 @@
 import React from 'react';
 import './dataset-page.scss';
-import { Divider, Dropdown, Grid, Image } from 'semantic-ui-react';
+import { Divider, Dropdown, Grid, Image, Accordion, Icon } from 'semantic-ui-react';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
@@ -44,9 +44,16 @@ export interface IVisSeriesOptionMenuProp {
   resetGraph(e): void;
 }
 
-export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuProp> {
+export interface IVisSeriesOptionMenuState {
+  moreOptions: boolean;
+}
+
+export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuProp, IVisSeriesOptionMenuState> {
   constructor(props) {
     super(props);
+    this.state = {
+      moreOptions: false
+    };
   }
 
   handleXAxisChange = (e, { value }) =>
@@ -57,6 +64,8 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
 
   handleCompareByChange = (e, { value }) =>
     value ? this.props.changeCompareBy(this.props.dataset, value) : this.props.removeCompare(this.props.dataset);
+
+  handleOptions = () => this.setState({ moreOptions: !this.state.moreOptions });
 
   render() {
     const { dataset, seriesOptions, dimensionCodes, fetchedCodeLists, visType } = this.props;
@@ -223,6 +232,64 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
             </Grid>
           )}
         </div>
+        {visType === 'chart' &&
+          dataset.id === 'adolescents' && (
+            <Accordion
+              styled
+              style={{
+                background: 'transparent',
+                boxShadow: 'none'
+              }}
+            >
+              <Accordion.Title
+                active={this.state.moreOptions}
+                onClick={this.handleOptions}
+                style={{
+                  fontSize: '16px',
+                  fontFamily: 'ProximaNovaSemibold'
+                }}
+              >
+                <Icon name="dropdown" />
+                {translate('socioscopeApp.dataSet.visualization.configure.options')}
+              </Accordion.Title>
+              <Accordion.Content active={this.state.moreOptions}>
+                <div>
+                  <div className="vis-compareBy vis-options-menu-item">
+                    <div className="vis-options-menu-label">
+                      <Image inline src={`/content/images/Assets/compare-${colorScheme}.svg`} style={{ paddingRight: '23px' }} />
+                      {translate('socioscopeApp.dataSet.visualization.configure.compare')}
+                    </div>
+                    <Dropdown
+                      className={`vis-options-dropdown ${colorScheme}`}
+                      onChange={this.handleCompareByChange}
+                      options={compareByOptions}
+                      selection
+                      fluid
+                      disabled={xAxisDimension.type === 'composite'}
+                      value={seriesOptions.compareBy}
+                      clearable
+                    />
+                  </div>
+                  <div className="vis-options-menu-label">
+                    <Image
+                      inline
+                      src={`/content/images/Assets/indicator-${colorScheme}.svg`}
+                      style={{ paddingLeft: '5px', paddingRight: '10px' }}
+                    />
+                    {translate('socioscopeApp.dataSet.visualization.configure.filter')}
+                  </div>
+                  <RawDatasetFilters
+                    dimensionCodes={dimensionCodes}
+                    dataset={dataset}
+                    fetchedCodeLists={fetchedCodeLists}
+                    seriesOptions={seriesOptions}
+                    setFilterValue={this.props.setFilterValue}
+                    removeFilter={this.props.removeFilter}
+                  />
+                </div>
+              </Accordion.Content>
+            </Accordion>
+          )}
       </div>
     );
   }
