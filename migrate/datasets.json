@@ -171,6 +171,29 @@
         "id": "elections.changes"
       }
     ],
+    "dimensionGroups": [
+      {
+        "id": "demographics",
+        "name": {
+          "el": "Κοινωνικό-δημογραφικά",
+          "en": "Demographics"
+        }
+      },
+      {
+        "id": "electoral_info",
+        "name": {
+          "el": "Πληροφορίες Εκλογής",
+          "en": "Electoral Information"
+        }
+      },
+      {
+        "id": "pol_position",
+        "name": {
+          "el": "Πολιτικές Θέσεις και Προϋπηρεσία",
+          "en": "Political Positions and Past Experience"
+        }
+      }
+    ],
     "measures": [
       {
         "id": "deputies_perc"

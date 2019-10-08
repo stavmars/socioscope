@@ -115,7 +115,8 @@
     "name": {
       "en": "Sex",
       "el": "Φύλο"
-    }
+    },
+    "groupId": "demographics"
   },
   {
     "id": "deputy_profession",
@@ -123,7 +124,8 @@
     "name": {
       "en": "Occupation",
       "el": "Επάγγελμα"
-    }
+    },
+    "groupId": "demographics"
   },
   {
     "id": "education_field",
@@ -131,7 +133,8 @@
     "name": {
       "en": "Field of Education",
       "el": "Πεδίο Σπουδών"
-    }
+    },
+    "groupId": "demographics"
   },
   {
     "id": "education_title",
@@ -139,7 +142,8 @@
     "name": {
       "en": "Highest level of educational attainment",
       "el": "Επίπεδο εκπαίδευσης"
-    }
+    },
+    "groupId": "demographics"
   },
   {
     "id": "first_election_age_group",
@@ -147,7 +151,8 @@
     "name": {
       "en": "Decade of first Election",
       "el": "Δεκαετία Πρώτης Εκλογής"
-    }
+    },
+    "groupId": "electoral_info"
   },
   {
     "id": "elections.party",
@@ -155,7 +160,8 @@
     "name": {
       "en": "Party of Election",
       "el": "Κόμμα εκλογής"
-    }
+    },
+    "groupId": "electoral_info"
   },
   {
     "id": "elections.election_age_group",
@@ -163,7 +169,8 @@
     "name": {
       "en": "Age of Election",
       "el": "Ηλικία Εκλογής"
-    }
+    },
+    "groupId": "electoral_info"
   },
   {
     "id": "elections.constituency",
@@ -171,7 +178,8 @@
     "name": {
       "en": "Electoral District",
       "el": "Εκλογική Περιφέρεια"
-    }
+    },
+    "groupId": "electoral_info"
   },
   {
     "id": "elections.consti_size",
@@ -179,7 +187,8 @@
     "name": {
       "en": "Magnitude of Electoral District",
       "el": "Μέγεθος εκλογικής περιφέρειας"
-    }
+    },
+    "groupId": "electoral_info"
   },
   {
     "id": "elections.consti_geography",
@@ -187,7 +196,8 @@
     "name": {
       "en": "Relation with constituency of election",
       "el": "Σχέση με τόπο εκλογής"
-    }
+    },
+    "groupId": "electoral_info"
   },
   {
     "id": "elections.terms_rec",
@@ -195,7 +205,8 @@
     "name": {
       "en": "Parliamentary Experience",
       "el": "Κοινοβουλευτική εμπειρία"
-    }
+    },
+    "groupId": "electoral_info"
   },
   {
     "id": "elections.network",
@@ -203,7 +214,8 @@
     "name": {
       "en": "Relation with other MP",
       "el": "Συγγένεια με άλλο βουλευτή"
-    }
+    },
+    "groupId": "demographics"
   },
   {
     "id": "elections.eu_post",
@@ -211,7 +223,8 @@
     "name": {
       "en": "Service in the EU Parliament",
       "el": "Θητεία σε Ευρωπαϊκό όργανο"
-    }
+    },
+    "groupId": "pol_position"
   },
   {
     "id": "elections.goverm_post",
@@ -219,7 +232,8 @@
     "name": {
       "en": "Position in Current Government",
       "el": "Θέση στην Κυβέρνηση"
-    }
+    },
+    "groupId": "pol_position"
   },
   {
     "id": "elections.local_post",
@@ -227,7 +241,8 @@
     "name": {
       "en": "Participation in local government",
       "el": "Θητεία στην Αυτοδιοίκηση"
-    }
+    },
+    "groupId": "pol_position"
   },
   {
     "id": "elections.party_post",
@@ -235,7 +250,8 @@
     "name": {
       "en": "Party Role",
       "el": "Θέση στο κόμμα"
-    }
+    },
+    "groupId": "pol_position"
   },
   {
     "id": "elections.past_goverm_post",
@@ -243,7 +259,8 @@
     "name": {
       "en": "Past Governmental Position",
       "el": "Θέση στην Κυβέρνηση στο παρελθόν"
-    }
+    },
+    "groupId": "pol_position"
   },
   {
     "id": "elections.trade_union_rec",
@@ -251,7 +268,8 @@
     "name": {
       "en": "Participation in Trade Unions",
       "el": "Θητεία σε συνδικαλιστική οργάνωση"
-    }
+    },
+    "groupId": "pol_position"
   },
   {
     "id": "elections.changes",
@@ -259,7 +277,8 @@
     "name": {
       "en": "Changes during Parliamentary Term",
       "el": "Μεταβολές κατά τη διάρκεια της Θητείας"
-    }
+    },
+    "groupId": "electoral_info"
   },
   {
     "id": "q1",
