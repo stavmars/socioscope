@@ -144,7 +144,7 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                         <Image src={`/content/images/Assets/share-${colorScheme}.svg`} />
                       )
                     }
-                    className={`download-dropdown ${colorScheme}`}
+                    className={`share-dropdown ${colorScheme}`}
                     onClick={this.toggleShare}
                     onClose={this.toggleShare}
                     pointing="top right"
