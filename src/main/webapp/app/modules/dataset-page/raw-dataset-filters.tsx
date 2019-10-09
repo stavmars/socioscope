@@ -73,6 +73,7 @@ export class RawDatasetFilters extends React.Component<IRawDatasetFiltersProp, I
                     className="filter-accordion-title"
                     active={expandedId === dimension.id}
                     content={translateEntityField(dimension.name)}
+                    icon="sort down"
                   />
                   <Accordion.Content active={expandedId === dimension.id}>
                     <List relaxed verticalAlign="middle">

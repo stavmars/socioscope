@@ -682,3 +682,13 @@ a.disabled {
 .rc-slider-dot {
   border: 2px solid #2f7cff !important;
 }
+
+.sort.down.icon {
+  float: right !important;
+}
+
+.active.title.filter-accordion-title {
+  .sort.down.icon {
+    transform: rotate(90deg);
+  }
+}
