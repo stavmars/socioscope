@@ -101,7 +101,7 @@ export class VisMobileLowerToolbar extends React.Component<IVisMobileLowerToolba
                   <Image src={`/content/images/Assets/share-${colorScheme}.svg`} style={{ width: '34.86px', height: '34.86px' }} />
                 )
               }
-              className={`download-dropdown ${colorScheme}`}
+              className={`share-dropdown ${colorScheme}`}
               onClick={this.toggleShare}
               onClose={this.toggleShare}
               pointing="top right"
