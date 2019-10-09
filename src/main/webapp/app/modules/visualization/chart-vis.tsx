@@ -245,7 +245,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
           style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '20px' : '9px' }
         },
         labels: {
-          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '20px' : '9px' }
+          style: { fontFamily: 'ProximaNovaSemibold', fontSize: window.innerWidth > 768 ? '14px' : '9px' }
         },
         offset: 2
       },
@@ -255,7 +255,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
           style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '20px' : '10px' }
         },
         labels: {
-          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerHeight > 768 ? '20px' : '10px' }
+          style: { fontFamily: 'ProximaNovaSemibold', fontSize: window.innerHeight > 768 ? '14px' : '10px' }
         },
         max: measure.type === 'percentage' && this.props.seriesList.length > 1 ? 100 : null,
         reversedStacks: false
