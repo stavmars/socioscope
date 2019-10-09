@@ -89,7 +89,6 @@ export class About extends React.Component<DispatchProps> {
                   {translate('about.techTeam.gpapas.role')}
                   <br />
                   <br />
-                  <br />
                   <h3>{translate('about.techTeam.develop')}</h3>
                   <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.techTeam.stav.name')}</span> /{' '}
                   {translate('about.techTeam.stav.role')}

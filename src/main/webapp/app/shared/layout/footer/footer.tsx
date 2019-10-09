@@ -61,9 +61,6 @@ const Footer = () => (
                 <List.Item as={HashLink} to="/about#project">
                   {translate('footer.about')}
                 </List.Item>
-                <List.Item as="a">{translate('footer.terms')}</List.Item>
-                <List.Item as="a">{translate('footer.policy')}</List.Item>
-                <List.Item as="a">{translate('footer.developers')}</List.Item>
               </List>
               <Image id="app-footer-logo" src="/content/images/Assets/Logo-white.png" as="a" href="/" />
             </Grid.Column>
