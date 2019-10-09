@@ -13,7 +13,7 @@ import { ISeriesPoint } from 'app/shared/model/series-point.model';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeries } from 'app/shared/model/series.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
-import { accentColors, backgroundColors, chartColors } from 'app/config/constants';
+import { accentColors, chartColors } from 'app/config/constants';
 // tslint:disable:no-submodule-imports
 import HC_exporting from 'highcharts/modules/exporting';
 import moment from 'moment';
@@ -214,7 +214,10 @@ export class ChartVis extends React.Component<IChartVisProp> {
     }
 
     const measure = seriesOptions.measure ? _.find(dataset.measures, { id: seriesOptions.measure }) : dataset.measures[0];
-
+    const xAxisName = translateEntityField(xAxisDimension.name);
+    const xAxisDesc = translateEntityField(xAxisDimension.description);
+    const xAxisText =
+      !xAxisDesc || xAxisName === xAxisDesc ? xAxisName : `<div>${xAxisName}</div><div class="x-axis-subtitle">${xAxisDesc}</div>`;
     const options = {
       chart: {
         type: xAxisDimension.type === 'time' ? 'spline' : 'column',
@@ -241,7 +244,8 @@ export class ChartVis extends React.Component<IChartVisProp> {
       xAxis: {
         type: xAxisDimension.type === 'time' ? 'datetime' : 'category',
         title: {
-          text: translateEntityField(xAxisDimension.name),
+          useHTML: true,
+          text: xAxisText,
           style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '20px' : '9px' }
         },
         labels: {

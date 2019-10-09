@@ -14,6 +14,7 @@ $axis-labels-font-size: 15px;
   @include computer {
     font-size: 15px;
   }
+  text-align: center;
 }
 
 .highcharts-axis-labels {
@@ -78,5 +79,11 @@ $axis-labels-font-size: 15px;
 }
 
 .highcharts-legend-item {
-  font-family: 'BPnoScriptBold';
+  font-family: BPnoScriptBold;
+}
+
+.x-axis-subtitle {
+  font-family: BPnoScriptLight;
+  font-style: italic;
+  font-size: 16px;
 }
