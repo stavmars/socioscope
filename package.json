@@ -58,6 +58,7 @@
     "uuid": "3.3.2"
   },
   "devDependencies": {
+    "@types/downloadjs": "^1.4.1",
     "@types/enzyme": "3.1.13",
     "@types/jest": "23.3.1",
     "@types/lodash": "4.14.136",
