@@ -17,6 +17,9 @@ import { accentColors, chartColors } from 'app/config/constants';
 // tslint:disable:no-submodule-imports
 import HC_exporting from 'highcharts/modules/exporting';
 import moment from 'moment';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
+import download from 'downloadjs';
 
 drilldown(Highcharts);
 HC_exporting(Highcharts);
@@ -112,36 +115,61 @@ export class ChartVis extends React.Component<IChartVisProp> {
   }
 
   exportPNG() {
-    this.innerChart.current.chart.exportChart(
-      { type: 'image/png' },
-      {
-        chart: {
-          height: '100%'
-        }
-      }
-    );
+    html2canvas(document.getElementById('chart')).then(canvas => {
+      const imgData = canvas.toDataURL('image/png');
+      download(imgData, 'chart.png', 'image/png');
+    });
   }
 
   exportPDF() {
-    this.innerChart.current.chart.exportChart(
-      { type: 'application/pdf' },
-      {
-        chart: {
-          height: '100%'
+    html2canvas(document.getElementById('chart')).then(canvas => {
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('l', 'mm', 'a4');
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const pageHeight = pdf.internal.pageSize.getHeight();
+      const pageRatio = pageWidth / pageHeight;
+
+      const imgWidth = canvas.width;
+      const imgHeight = canvas.height;
+      const imgRatio = imgWidth / imgHeight;
+
+      if (imgRatio >= 1) {
+        const wc = imgWidth / pageWidth;
+        if (imgRatio >= pageRatio) {
+          pdf.addImage(imgData, 'JPEG', 0, (pageHeight - imgHeight / wc) / 2, pageWidth, imgHeight / wc);
+        } else {
+          const pi = pageRatio / imgRatio;
+          pdf.addImage(imgData, 'JPEG', (pageWidth - pageWidth / pi) / 2, 0, pageWidth / pi, imgHeight / pi / wc);
+        }
+      } else {
+        const wc = imgWidth / pageHeight;
+        if (1 / imgRatio > pageRatio) {
+          const ip = 1 / imgRatio / pageRatio;
+          const margin = (pageHeight - imgHeight / ip / wc) / 4;
+          pdf.addImage(
+            imgData,
+            'JPEG',
+            (pageWidth - imgHeight / ip / wc) / 2,
+            -(imgHeight / ip / wc + margin),
+            pageHeight / ip,
+            imgHeight / ip / wc,
+            null,
+            null,
+            -90
+          );
+        } else {
+          pdf.addImage(imgData, 'JPEG', (pageWidth - imgHeight / wc) / 2, -(imgHeight / wc), pageHeight, imgHeight / wc, null, null, -90);
         }
       }
-    );
+      pdf.save('chart.pdf');
+    });
   }
 
   exportJPEG() {
-    this.innerChart.current.chart.exportChart(
-      { type: 'image/jpeg' },
-      {
-        chart: {
-          height: '100%'
-        }
-      }
-    );
+    html2canvas(document.getElementById('chart')).then(canvas => {
+      const imgData = canvas.toDataURL('image/jpeg');
+      download(imgData, 'chart.jpeg', 'image/jpeg');
+    });
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -300,7 +328,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
     // todo investigate another solution to handle problems after updates while drilled-down
 
     return (
-      <div>
+      <div id="chart">
         <HighchartsReact
           className={colorScheme}
           key={uuid()}
