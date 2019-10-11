@@ -57,18 +57,15 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
               <Image src={`/content/images/Assets/Chart.svg`} />
             )}
           </Menu.Item>
-          <Menu.Item
-            as={NavLink}
-            to="?type=map"
-            style={{ marginRight: '5%' }}
-            disabled={!_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area')}
-          >
-            {visType === 'map' ? (
-              <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} />
-            ) : (
-              <Image src={`/content/images/Assets/Map.svg`} />
-            )}
-          </Menu.Item>
+          {_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area') && (
+            <Menu.Item as={NavLink} to="?type=map" style={{ marginRight: '5%' }}>
+              {visType === 'map' ? (
+                <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} />
+              ) : (
+                <Image src={`/content/images/Assets/Map.svg`} />
+              )}
+            </Menu.Item>
+          )}
         </Menu>
       </div>
     );
