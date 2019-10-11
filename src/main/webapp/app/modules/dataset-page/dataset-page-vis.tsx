@@ -125,7 +125,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
         window.open(url, 'NewWindow', params);
         break;
       case 'email':
-        url = 'mailto:?to=&body=' + link;
+        url = 'mailto:?to=&body=' + sharable;
         window.open(url, 'NewWindow', params);
         break;
       default:
