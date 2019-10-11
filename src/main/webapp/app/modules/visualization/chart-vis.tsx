@@ -29,6 +29,7 @@ export interface IChartVisProp {
   loadingSeries: boolean;
   showLegend: boolean;
   showLabels: boolean;
+  inverted: boolean;
 }
 
 const prepareSeriesByParent = (codesByNotation, seriesList: ISeries[]) =>
@@ -220,6 +221,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
       !xAxisDesc || xAxisName === xAxisDesc ? xAxisName : `<div>${xAxisName}</div><div class="x-axis-subtitle">${xAxisDesc}</div>`;
     const options = {
       chart: {
+        inverted: this.props.inverted,
         type: xAxisDimension.type === 'time' ? 'spline' : 'column',
         height: window.innerWidth > 768 ? '50%' : null,
         zoomType: 'x',

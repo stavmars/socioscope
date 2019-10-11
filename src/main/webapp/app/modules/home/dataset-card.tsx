@@ -56,6 +56,7 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
                         loadingSeries={false}
                         showLabels={false}
                         showLegend={false}
+                        inverted={false}
                       />
                     ))}
                 </div>
