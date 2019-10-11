@@ -272,7 +272,8 @@ export class ChartVis extends React.Component<IChartVisProp> {
             enabled: showLabels,
             format: measure.type === 'percentage' ? '{y:.1f}%' : '{y}',
             style: {
-              fontFamily: 'BPnoScriptBold'
+              fontFamily: 'BPnoScriptBold',
+              fontSize: '14px'
             }
           }
         }
