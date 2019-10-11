@@ -34,7 +34,7 @@ const initialState = {
   updatingVisOptions: true,
   errorMessage: null,
   dimensionCodes: {} as any,
-  visType: 'chart',
+  visType: 'bar',
   seriesOptions: null as ISeriesOptions,
   seriesList: [] as ISeries[]
 };
@@ -230,7 +230,7 @@ export const changeCompareBy = (dataset: IDataSet, compareBy: string) => (dispat
 
 export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => (dispatch, getState) => {
   const { dimensionCodes } = getState().datasetPage;
-  const { visType = 'chart', seriesOptions } = visOptions;
+  const { visType = 'bar', seriesOptions } = visOptions;
   const { dimensions } = dataset;
   const { compareCodes } = seriesOptions;
   let { xAxis, compareBy, measure } = seriesOptions;
