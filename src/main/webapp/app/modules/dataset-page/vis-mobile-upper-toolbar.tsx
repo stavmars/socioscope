@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './dataset-page.scss';
-import { Button, Image, Menu } from 'semantic-ui-react';
+import { Button, Image, Menu, Checkbox } from 'semantic-ui-react';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { toggleMobileVisMenu } from 'app/shared/reducers/header';
 import { updateVisOptions } from 'app/modules/dataset-page/dataset-page-reducer';
@@ -14,6 +14,7 @@ export interface IVisMobileUpperToolbarProp extends DispatchProps {
   visType: string;
 
   resetGraph(e): void;
+  invertGraph(): void;
 }
 
 export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolbarProp> {
@@ -50,13 +51,26 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
           <Menu.Item position="right">
             <Image onClick={this.props.resetGraph} src="/content/images/Assets/Reset.svg" />
           </Menu.Item>
-          <Menu.Item as={NavLink} to="?type=chart">
-            {visType === 'chart' ? (
+          <Menu.Item as={NavLink} to="?type=bar">
+            {visType !== 'map' ? (
               <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} />
             ) : (
               <Image src={`/content/images/Assets/Chart.svg`} />
             )}
           </Menu.Item>
+          {visType !== 'map' && (
+            <Menu.Item style={{ marginRight: '25px' }}>
+              <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ transform: 'rotate(90deg)' }} />
+              <Checkbox
+                className={colorScheme}
+                toggle
+                style={{ margin: '0 6px' }}
+                onChange={this.props.invertGraph}
+                checked={!(visType === 'column')}
+              />
+              <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} />
+            </Menu.Item>
+          )}
           {_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area') && (
             <Menu.Item as={NavLink} to="?type=map" style={{ marginRight: '5%' }}>
               {visType === 'map' ? (

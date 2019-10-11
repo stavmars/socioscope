@@ -20,6 +20,7 @@ export interface IVisToolBarProp {
   togglePercentage(): void;
   exportChartOrMap(action): void;
   shareChartOrMap(action): void;
+  invertGraph(): void;
 }
 
 export interface IVisToolBarState {
@@ -73,8 +74,8 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                     <Image src="/content/images/Assets/Percentage.svg" />
                   </Menu.Item>
                 )}
-                <Menu.Item as={NavLink} to="?type=chart" active={visType === 'chart'} style={{ marginRight: '50px' }}>
-                  {visType === 'chart' ? (
+                <Menu.Item as={NavLink} to="?type=bar" active={visType !== 'map'} style={{ marginRight: '50px' }}>
+                  {visType !== 'map' ? (
                     <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
                   ) : (
                     <Image src={`/content/images/Assets/Chart.svg`} style={{ marginRight: '20px' }} />
@@ -96,14 +97,19 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                     {translate('socioscopeApp.dataSet.visualization.map')}
                   </Menu.Item>
                 )}
-                {/*<Menu.Item as={NavLink} to="?type=list" active={visType === 'list'}>
-                      {visType === 'list' ? (
-                        <Image src={`/content/images/Assets/List-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
-                      ) : (
-                        <Image src={`/content/images/Assets/List.svg`} style={{ marginRight: '20px' }} />
-                      )}
-                      Αποτελέσματα σε λίστα
-                    </Menu.Item>*/}
+                {visType !== 'map' && (
+                  <Menu.Item style={{ marginRight: '25px' }}>
+                    <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ transform: 'rotate(90deg)' }} />
+                    <Checkbox
+                      className={colorScheme}
+                      toggle
+                      style={{ margin: '0 6px' }}
+                      onChange={this.props.invertGraph}
+                      checked={!(visType === 'column')}
+                    />
+                    <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} />
+                  </Menu.Item>
+                )}
               </Menu>
             </Grid.Column>
             <Grid.Column>

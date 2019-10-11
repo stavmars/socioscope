@@ -44,7 +44,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
       this.props.initVis(this.props.dataset, this.props.routeVisOptions);
     } else {
       this.props.initVis(this.props.dataset, {
-        visType: 'chart',
+        visType: 'bar',
         seriesOptions: this.props.dataset.defaultOptions
       });
     }
@@ -133,10 +133,16 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
     }
   };
 
+  invertGraph = () =>
+    this.props.updateVisOptions(this.props.dataset, {
+      visType: this.props.visType === 'bar' ? 'column' : 'bar',
+      seriesOptions: this.props.seriesOptions
+    });
+
   resetGraph = e =>
     this.props.updateVisOptions(this.props.dataset, {
-      visType: this.props.visType,
-      seriesOptions: this.props.visType === 'chart' ? this.props.dataset.defaultOptions : {}
+      visType: this.props.visType === 'map' ? 'map' : 'bar',
+      seriesOptions: this.props.visType === 'bar' || 'column' ? this.props.dataset.defaultOptions : {}
     });
 
   render() {
@@ -170,7 +176,13 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
               </Grid.Column>
               <Grid.Column mobile={16} tablet={15} computer={12}>
                 <Responsive {...Responsive.onlyMobile}>
-                  <VisMobileUpperToolbar dataset={dataset} seriesOptions={seriesOptions} visType={visType} resetGraph={this.resetGraph} />
+                  <VisMobileUpperToolbar
+                    dataset={dataset}
+                    seriesOptions={seriesOptions}
+                    visType={visType}
+                    resetGraph={this.resetGraph}
+                    invertGraph={this.invertGraph}
+                  />
                 </Responsive>
                 <Responsive minWidth={Responsive.onlyTablet.minWidth}>
                   <VisToolbar
@@ -181,6 +193,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                     togglePercentage={this.togglePercentage}
                     exportChartOrMap={this.exportChartOrMap}
                     shareChartOrMap={this.shareChartOrMap}
+                    invertGraph={this.invertGraph}
                   />
                 </Responsive>
                 <div className="vis-container">
@@ -204,6 +217,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       ref={this.chartRef}
                       showLabels
                       showLegend
+                      inverted={visType === 'column' ? true : false}
                     />
                   )}
                 </div>
