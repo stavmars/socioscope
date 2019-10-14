@@ -291,9 +291,19 @@ export class ChartVis extends React.Component<IChartVisProp> {
       },
       legend: {
         enabled: showLegend && this.props.seriesList.length > 1,
-        itemMarginBottom: 3,
+        useHTML: true,
+        labelFormatter() {
+          if (this.visible) {
+            return (
+              this.name +
+              '<img src="/content/images/Assets/iconfinder_outlined_tick_4280485.svg" style="width: 18px; height: 18px; margin-bottom: -4px;" />'
+            );
+          }
+          return this.name;
+        },
         itemStyle: {
-          fontSize: '14px'
+          fontSize: '14px',
+          fontFamily: 'BPnoScriptBold'
         }
       },
       drilldown: {
