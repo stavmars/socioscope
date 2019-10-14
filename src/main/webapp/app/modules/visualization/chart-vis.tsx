@@ -290,7 +290,11 @@ export class ChartVis extends React.Component<IChartVisProp> {
         shared: false
       },
       legend: {
-        enabled: showLegend && this.props.seriesList.length > 1
+        enabled: showLegend && this.props.seriesList.length > 1,
+        itemMarginBottom: 3,
+        itemStyle: {
+          fontSize: '14px'
+        }
       },
       drilldown: {
         allowPointDrilldown: false
