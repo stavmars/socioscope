@@ -294,15 +294,9 @@ export class ChartVis extends React.Component<IChartVisProp> {
         useHTML: true,
         labelFormatter() {
           if (this.visible) {
-            return (
-              this.name +
-              '<img src="/content/images/Assets/iconfinder_outlined_tick_4280485.svg" style="width: 18px; height: 18px; margin-bottom: -4px;" />'
-            );
+            return '<i class="check circle icon" style="color: ' + this.color + ';"></i>' + this.name;
           }
-          return (
-            this.name +
-            '<img src="/content/images/Assets/iconfinder_outlined_tick_4280485.svg" style="width: 18px; height: 18px; margin-bottom: -4px; opacity: 0.2;" />'
-          );
+          return '<i class="circle outline icon"></i>' + this.name;
         },
         itemStyle: {
           fontSize: '14px',
