@@ -168,7 +168,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
 
     let advancedOptions = (
       <div>
-        {visType === 'bar' || ('column' && dataset.id !== 'greek-election-results' && compare)}
+        {visType !== 'map' && dataset.id !== 'greek-election-results' && compare}
         {filters}
       </div>
     );
