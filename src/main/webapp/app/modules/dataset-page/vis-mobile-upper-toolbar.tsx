@@ -1,20 +1,22 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './dataset-page.scss';
-import { Button, Image, Menu, Checkbox } from 'semantic-ui-react';
+import { Button, Image, Menu, Checkbox, Form } from 'semantic-ui-react';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { toggleMobileVisMenu } from 'app/shared/reducers/header';
 import { updateVisOptions } from 'app/modules/dataset-page/dataset-page-reducer';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import { IDimension } from 'app/shared/model/dimension.model';
+import { urlEncodeVisOptions } from './dataset-page-vis';
+import { ISeriesOptions } from 'app/shared/model/series-options.model';
 
 export interface IVisMobileUpperToolbarProp extends DispatchProps {
   dataset: IDataSet;
   visType: string;
+  seriesOptions: ISeriesOptions;
 
   resetGraph(e): void;
-  invertGraph(): void;
 }
 
 export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolbarProp> {
@@ -23,7 +25,7 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
   }
 
   render() {
-    const { dataset, visType } = this.props;
+    const { dataset, visType, seriesOptions } = this.props;
     const { colorScheme } = dataset;
 
     return (
@@ -51,35 +53,59 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
           <Menu.Item position="right">
             <Image onClick={this.props.resetGraph} src="/content/images/Assets/Reset.svg" />
           </Menu.Item>
-          <Menu.Item as={NavLink} to="?type=bar">
-            {visType !== 'map' ? (
-              <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} />
-            ) : (
-              <Image src={`/content/images/Assets/Chart.svg`} />
-            )}
+          <Menu.Item>
+            <Form style={{ paddingTop: '15px' }}>
+              <Form.Group inline>
+                <Form.Field>
+                  <Checkbox
+                    radio
+                    label={
+                      visType === 'bar' ? (
+                        <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} />
+                      ) : (
+                        <Image src={`/content/images/Assets/Chart.svg`} />
+                      )
+                    }
+                    checked={visType === 'bar'}
+                    as={NavLink}
+                    to={'?' + urlEncodeVisOptions({ visType: 'bar', seriesOptions })}
+                  />
+                </Form.Field>
+                <Form.Field>
+                  <Checkbox
+                    radio
+                    label={
+                      visType === 'column' ? (
+                        <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ transform: 'rotate(90deg)' }} />
+                      ) : (
+                        <Image src={`/content/images/Assets/Chart.svg`} style={{ transform: 'rotate(90deg)' }} />
+                      )
+                    }
+                    checked={visType === 'column'}
+                    as={NavLink}
+                    to={'?' + urlEncodeVisOptions({ visType: 'column', seriesOptions })}
+                  />
+                </Form.Field>
+                {_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area') && (
+                  <Form.Field>
+                    <Checkbox
+                      radio
+                      label={
+                        visType === 'map' ? (
+                          <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} />
+                        ) : (
+                          <Image src={`/content/images/Assets/Map.svg`} />
+                        )
+                      }
+                      checked={visType === 'map'}
+                      as={NavLink}
+                      to={'?' + urlEncodeVisOptions({ visType: 'map', seriesOptions: {} })}
+                    />
+                  </Form.Field>
+                )}
+              </Form.Group>
+            </Form>
           </Menu.Item>
-          {visType !== 'map' && (
-            <Menu.Item style={{ marginRight: '25px' }}>
-              <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ transform: 'rotate(90deg)' }} />
-              <Checkbox
-                className={colorScheme}
-                toggle
-                style={{ margin: '0 6px' }}
-                onChange={this.props.invertGraph}
-                checked={!(visType === 'column')}
-              />
-              <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} />
-            </Menu.Item>
-          )}
-          {_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area') && (
-            <Menu.Item as={NavLink} to="?type=map" style={{ marginRight: '5%' }}>
-              {visType === 'map' ? (
-                <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} />
-              ) : (
-                <Image src={`/content/images/Assets/Map.svg`} />
-              )}
-            </Menu.Item>
-          )}
         </Menu>
       </div>
     );

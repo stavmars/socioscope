@@ -1,13 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './dataset-page.scss';
-import { Checkbox, Dropdown, Grid, Image, List, Menu, Popup } from 'semantic-ui-react';
+import { Checkbox, Dropdown, Grid, Image, List, Menu, Popup, Form } from 'semantic-ui-react';
 import _ from 'lodash';
 import { IMeasure } from 'app/shared/model/measure.model';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { translate } from 'react-jhipster';
 import { IDimension } from 'app/shared/model/dimension.model';
+import { urlEncodeVisOptions } from './dataset-page-vis';
 
 // tslint:disable:jsx-no-lambda
 
@@ -20,7 +21,6 @@ export interface IVisToolBarProp {
   togglePercentage(): void;
   exportChartOrMap(action): void;
   shareChartOrMap(action): void;
-  invertGraph(): void;
 }
 
 export interface IVisToolBarState {
@@ -74,42 +74,59 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                     <Image src="/content/images/Assets/Percentage.svg" />
                   </Menu.Item>
                 )}
-                <Menu.Item as={NavLink} to="?type=bar" active={visType !== 'map'} style={{ marginRight: '50px' }}>
-                  {visType !== 'map' ? (
-                    <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
-                  ) : (
-                    <Image src={`/content/images/Assets/Chart.svg`} style={{ marginRight: '20px' }} />
-                  )}
-                  {translate('socioscopeApp.dataSet.visualization.graph')}
+                <Menu.Item>
+                  <Form style={{ paddingTop: '15px' }}>
+                    <Form.Group inline>
+                      <Form.Field>
+                        <Checkbox
+                          radio
+                          label={
+                            visType === 'bar' ? (
+                              <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} />
+                            ) : (
+                              <Image src={`/content/images/Assets/Chart.svg`} />
+                            )
+                          }
+                          checked={visType === 'bar'}
+                          as={NavLink}
+                          to={'?' + urlEncodeVisOptions({ visType: 'bar', seriesOptions })}
+                        />
+                      </Form.Field>
+                      <Form.Field>
+                        <Checkbox
+                          radio
+                          label={
+                            visType === 'column' ? (
+                              <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ transform: 'rotate(90deg)' }} />
+                            ) : (
+                              <Image src={`/content/images/Assets/Chart.svg`} style={{ transform: 'rotate(90deg)' }} />
+                            )
+                          }
+                          checked={visType === 'column'}
+                          as={NavLink}
+                          to={'?' + urlEncodeVisOptions({ visType: 'column', seriesOptions })}
+                        />
+                      </Form.Field>
+                      {_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area') && (
+                        <Form.Field>
+                          <Checkbox
+                            radio
+                            label={
+                              visType === 'map' ? (
+                                <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} />
+                              ) : (
+                                <Image src={`/content/images/Assets/Map.svg`} />
+                              )
+                            }
+                            checked={visType === 'map'}
+                            as={NavLink}
+                            to={'?' + urlEncodeVisOptions({ visType: 'map', seriesOptions: {} })}
+                          />
+                        </Form.Field>
+                      )}
+                    </Form.Group>
+                  </Form>
                 </Menu.Item>
-                {_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area') && (
-                  <Menu.Item
-                    as={NavLink}
-                    to="?type=map"
-                    active={visType === 'map'}
-                    style={{ marginRight: '50px', a: { pointerEvents: 'none' } }}
-                  >
-                    {visType === 'map' ? (
-                      <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
-                    ) : (
-                      <Image src={`/content/images/Assets/Map.svg`} style={{ marginRight: '20px' }} />
-                    )}
-                    {translate('socioscopeApp.dataSet.visualization.map')}
-                  </Menu.Item>
-                )}
-                {visType !== 'map' && (
-                  <Menu.Item style={{ marginRight: '25px' }}>
-                    <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ transform: 'rotate(90deg)' }} />
-                    <Checkbox
-                      className={colorScheme}
-                      toggle
-                      style={{ margin: '0 6px' }}
-                      onChange={this.props.invertGraph}
-                      checked={!(visType === 'column')}
-                    />
-                    <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} />
-                  </Menu.Item>
-                )}
               </Menu>
             </Grid.Column>
             <Grid.Column>
