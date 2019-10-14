@@ -299,7 +299,10 @@ export class ChartVis extends React.Component<IChartVisProp> {
               '<img src="/content/images/Assets/iconfinder_outlined_tick_4280485.svg" style="width: 18px; height: 18px; margin-bottom: -4px;" />'
             );
           }
-          return this.name;
+          return (
+            this.name +
+            '<img src="/content/images/Assets/iconfinder_outlined_tick_4280485.svg" style="width: 18px; height: 18px; margin-bottom: -4px; opacity: 0.2;" />'
+          );
         },
         itemStyle: {
           fontSize: '14px',
