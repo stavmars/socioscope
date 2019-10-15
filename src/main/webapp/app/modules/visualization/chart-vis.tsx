@@ -299,7 +299,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
           return '<i class="circle outline icon"></i>' + this.name;
         },
         itemStyle: {
-          fontSize: '14px',
+          fontSize: window.innerHeight > 768 ? '14px' : '10px',
           fontFamily: 'BPnoScriptBold'
         }
       },
