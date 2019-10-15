@@ -115,14 +115,22 @@ export class ChartVis extends React.Component<IChartVisProp> {
   }
 
   exportPNG() {
-    html2canvas(document.getElementById('chart')).then(canvas => {
+    const chart = document.getElementById('chart');
+    html2canvas(chart, {
+      width: chart.offsetWidth,
+      height: chart.offsetHeight
+    }).then(canvas => {
       const imgData = canvas.toDataURL('image/png');
       download(imgData, 'chart.png', 'image/png');
     });
   }
 
   exportPDF() {
-    html2canvas(document.getElementById('chart')).then(canvas => {
+    const chart = document.getElementById('chart');
+    html2canvas(chart, {
+      width: chart.offsetWidth,
+      height: chart.offsetHeight
+    }).then(canvas => {
       const imgData = canvas.toDataURL('image/png');
       const pdf = new jsPDF('l', 'mm', 'a4');
       const pageWidth = pdf.internal.pageSize.getWidth();
@@ -166,7 +174,11 @@ export class ChartVis extends React.Component<IChartVisProp> {
   }
 
   exportJPEG() {
-    html2canvas(document.getElementById('chart')).then(canvas => {
+    const chart = document.getElementById('chart');
+    html2canvas(chart, {
+      width: chart.offsetWidth,
+      height: chart.offsetHeight
+    }).then(canvas => {
       const imgData = canvas.toDataURL('image/jpeg');
       download(imgData, 'chart.jpeg', 'image/jpeg');
     });
