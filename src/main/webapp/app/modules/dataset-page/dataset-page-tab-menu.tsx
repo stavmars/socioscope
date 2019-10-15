@@ -38,19 +38,13 @@ export class DatasetPageTabMenu extends React.Component<IDatasetPageTabMenuProp>
             {isMinimized ? (
               <div>
                 <Responsive {...Responsive.onlyMobile}>
-                  <Menu text className="minimized-menu">
-                    <Menu.Item>
-                      <div className="datasetIcon-position">
-                        <Image className="datasetIcon" src={`/content/images/Assets/${dataset.id}-${dataset.colorScheme}.svg`} />
-                      </div>
-                    </Menu.Item>
-                    <Menu.Item>
-                      <h1 className={dataset.colorScheme}>{translateEntityField(dataset.name)}</h1>
-                    </Menu.Item>
-                    <Menu.Item position="right" onClick={this.props.toggleMobileMenu} style={{ float: 'right', paddingBottom: '35%' }}>
-                      <Image src="/content/images/Assets/Mobile-Sidebar.svg" />
-                    </Menu.Item>
-                  </Menu>
+                  <Image
+                    className="datasetIcon"
+                    centered
+                    src={`/content/images/Assets/${dataset.id}-${dataset.colorScheme}.svg`}
+                    style={{ paddingTop: 20 }}
+                  />
+                  <h2 className={dataset.colorScheme}>{translateEntityField(dataset.name)}</h2>
                 </Responsive>
                 <Responsive minWidth={Responsive.onlyTablet.minWidth}>
                   <Menu text className="minimized-menu">

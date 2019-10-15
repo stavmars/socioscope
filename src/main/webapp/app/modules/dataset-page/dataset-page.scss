@@ -53,7 +53,8 @@
   }
   &.minimized {
     @include mobile {
-      height: 89px;
+      height: 100px;
+      margin-top: -37%;
     }
     @include tablet {
       margin-top: -150px;
@@ -61,6 +62,7 @@
     }
     @include computer {
       height: 120px;
+      margin-top: 0;
     }
   }
   .dataset-page-tab-menu-top-topics {
@@ -125,6 +127,19 @@
   }
   &.minimized {
     padding: 0;
+    h2 {
+      text-align: center;
+      font-family: BPnoScriptBold;
+      &.color-scheme-1 {
+        color: $color-scheme-1-bg;
+      }
+      &.color-scheme-2 {
+        color: $color-scheme-2-bg;
+      }
+      &.color-scheme-3 {
+        color: $color-scheme-3-bg;
+      }
+    }
     .minimized-menu {
       margin: 0;
       .datasetIcon-position {
