@@ -16,10 +16,12 @@ import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { accentColors, chartColors } from 'app/config/constants';
 // tslint:disable:no-submodule-imports
 import HC_exporting from 'highcharts/modules/exporting';
+import offlineExporting from 'highcharts/modules/offline-exporting';
 import moment from 'moment';
 
 drilldown(Highcharts);
 HC_exporting(Highcharts);
+offlineExporting(Highcharts);
 
 export interface IChartVisProp {
   dataset: IDataSet;
@@ -100,19 +102,8 @@ export class ChartVis extends React.Component<IChartVisProp> {
     this.innerChart.current.chart.print();
   }
 
-  exportSVG() {
-    this.innerChart.current.chart.exportChart(
-      { type: 'image/svg+xml' },
-      {
-        chart: {
-          height: '100%'
-        }
-      }
-    );
-  }
-
   exportPNG() {
-    this.innerChart.current.chart.exportChart(
+    this.innerChart.current.chart.exportChartLocal(
       { type: 'image/png' },
       {
         chart: {
@@ -123,7 +114,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
   }
 
   exportPDF() {
-    this.innerChart.current.chart.exportChart(
+    this.innerChart.current.chart.exportChartLocal(
       { type: 'application/pdf' },
       {
         chart: {
@@ -134,7 +125,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
   }
 
   exportJPEG() {
-    this.innerChart.current.chart.exportChart(
+    this.innerChart.current.chart.exportChartLocal(
       { type: 'image/jpeg' },
       {
         chart: {
@@ -220,6 +211,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
       !xAxisDesc || xAxisName === xAxisDesc ? xAxisName : `<div>${xAxisName}</div><div class="x-axis-subtitle">${xAxisDesc}</div>`;
     const options = {
       chart: {
+        style: { fontFamily: 'ProximaNovaSemibold' },
         type: xAxisDimension.type === 'time' ? 'spline' : 'column',
         height: window.innerWidth > 768 ? '50%' : null,
         zoomType: 'x',
