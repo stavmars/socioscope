@@ -116,7 +116,38 @@ export class ChartVis extends React.Component<IChartVisProp> {
     this.innerChart.current.chart.exportChart(
       { type: 'image/png', url: 'http://localhost:7801' },
       {
+        xAxis: {
+          title: {
+            style: {
+              fontFamily: 'BPnoScriptBold',
+              fontSize: '12px'
+            }
+          },
+          labels: {
+            style: {
+              fontFamily: 'ProximaNovaSemibold',
+              fontSize: '10px'
+            }
+          }
+        },
+        yAxis: {
+          title: {
+            style: {
+              fontFamily: 'BPnoScriptBold',
+              fontSize: '12px'
+            }
+          },
+          labels: {
+            style: {
+              fontFamily: 'ProximaNovaSemibold',
+              fontSize: '10px'
+            }
+          }
+        },
         chart: {
+          style: {
+            fontFamily: 'BPnoScriptBold'
+          },
           height: '100%'
         }
       }
@@ -124,10 +155,42 @@ export class ChartVis extends React.Component<IChartVisProp> {
   }
 
   exportPDF() {
+    console.log(JSON.stringify(this.innerChart.current.chart.options));
     this.innerChart.current.chart.exportChart(
       { type: 'application/pdf', url: 'http://localhost:7801' },
       {
+        xAxis: {
+          title: {
+            style: {
+              fontFamily: 'BPnoScriptBold',
+              fontSize: '12px'
+            }
+          },
+          labels: {
+            style: {
+              fontFamily: 'ProximaNovaSemibold',
+              fontSize: '10px'
+            }
+          }
+        },
+        yAxis: {
+          title: {
+            style: {
+              fontFamily: 'BPnoScriptBold',
+              fontSize: '12px'
+            }
+          },
+          labels: {
+            style: {
+              fontFamily: 'ProximaNovaSemibold',
+              fontSize: '10px'
+            }
+          }
+        },
         chart: {
+          style: {
+            fontFamily: 'BPnoScriptBold'
+          },
           height: '100%'
         }
       }
@@ -138,7 +201,38 @@ export class ChartVis extends React.Component<IChartVisProp> {
     this.innerChart.current.chart.exportChart(
       { type: 'image/jpeg', url: 'http://localhost:7801' },
       {
+        xAxis: {
+          title: {
+            style: {
+              fontFamily: 'BPnoScriptBold',
+              fontSize: '12px'
+            }
+          },
+          labels: {
+            style: {
+              fontFamily: 'ProximaNovaSemibold',
+              fontSize: '10px'
+            }
+          }
+        },
+        yAxis: {
+          title: {
+            style: {
+              fontFamily: 'BPnoScriptBold',
+              fontSize: '12px'
+            }
+          },
+          labels: {
+            style: {
+              fontFamily: 'ProximaNovaSemibold',
+              fontSize: '10px'
+            }
+          }
+        },
         chart: {
+          style: {
+            fontFamily: 'BPnoScriptBold'
+          },
           height: '100%'
         }
       }
