@@ -114,7 +114,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
 
   exportPNG() {
     this.innerChart.current.chart.exportChart(
-      { type: 'image/png' },
+      { type: 'image/png', url: 'http://localhost:7801' },
       {
         chart: {
           height: '100%'
@@ -125,7 +125,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
 
   exportPDF() {
     this.innerChart.current.chart.exportChart(
-      { type: 'application/pdf' },
+      { type: 'application/pdf', url: 'http://localhost:7801' },
       {
         chart: {
           height: '100%'
@@ -136,7 +136,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
 
   exportJPEG() {
     this.innerChart.current.chart.exportChart(
-      { type: 'image/jpeg' },
+      { type: 'image/jpeg', url: 'http://localhost:7801' },
       {
         chart: {
           height: '100%'
