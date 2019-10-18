@@ -94,6 +94,9 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
       case 'pdf':
         this.props.visType === 'map' ? this.mapRef.current.exportPDF() : this.chartRef.current.exportPDF();
         break;
+      case 'svg':
+        this.props.visType === 'map' ? this.mapRef.current.exportSVG() : this.chartRef.current.exportSVG();
+        break;
       case 'jpeg':
         this.props.visType === 'map' ? this.mapRef.current.exportJPEG() : this.chartRef.current.exportJPEG();
         break;

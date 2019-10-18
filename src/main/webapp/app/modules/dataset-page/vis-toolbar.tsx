@@ -129,6 +129,7 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                       <Dropdown.Header content={translate('socioscopeApp.dataSet.visualization.download')} />
                       <Dropdown.Item text="PNG" onClick={() => this.props.exportChartOrMap('png')} />
                       <Dropdown.Item text="JPEG" onClick={() => this.props.exportChartOrMap('jpeg')} />
+                      <Dropdown.Item text="SVG" onClick={() => this.props.exportChartOrMap('svg')} />
                       <Dropdown.Item text="PDF" onClick={() => this.props.exportChartOrMap('pdf')} />
                     </Dropdown.Menu>
                   </Dropdown>
