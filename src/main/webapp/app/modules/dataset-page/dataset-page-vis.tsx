@@ -204,7 +204,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       ref={this.chartRef}
                       showLabels
                       showLegend
-                      inverted={visType === 'bar' ? true : false}
+                      chartType={visType}
                     />
                   )}
                 </div>
