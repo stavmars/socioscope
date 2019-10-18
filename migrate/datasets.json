@@ -49,7 +49,7 @@
           "el": "<span>Η αποχή από τις εθνικές εκλογές αυξήθηκε σημαντικά την τελευταία δεκαετία. Ενώ στις βουλευτικές εκλογές του 1996, του 2000 και του 2004 η αποχή κυμαίνεται στο 24%, από  το 2007 καταγράφεται μια <span class=\"text-accent\">σημαντική αύξηση της αποχής</span> που κορυφώνεται στο 37% στις εκλογές του Ιουνίου του 2012.</span>",
           "en": "<span>Abstaining from national elections has increased significantly over the last decade. While in the 1996, 2000 and 2004 parliamentary elections the abstention fluctuates around 24%, since 2007 there is a <span class=\"text-accent\">significant increase</span>, culminating in 37% in the June 2012 elections.</span>"
         },
-        "visType": "bar",
+        "visType": "column",
         "seriesOptions": {
           "xAxis": "elections",
           "measure": "votes_perc",
@@ -65,7 +65,7 @@
           "el": "<span>Στις εκλογές του Μαΐου του <span class=\"text-accent\">2012</span> πάνω από <span class=\"text-accent\">1.000.000</span> ψήφοι πήγαν σε κόμματα εκτός Κοινοβουλίου, έναντι μόλις <span class=\"text-accent\">70.079</span> ψήφων το <span class=\"text-accent\">2004</span>.</span>",
           "en": "<span>In the May <span class=\"text-accent\">2012</span> more than <span class=\"text-accent\">1.000.000</span> votes were shared to parties outside Parliament, while in the <span class=\"text-accent\">2004</span> elections the votes to parties without parliamentary representation were only <span class=\"text-accent\">70.079</span>.</span>"
         },
-        "visType": "bar",
+        "visType": "column",
         "seriesOptions": {
           "xAxis": "elections",
           "measure": "votes",
@@ -213,7 +213,7 @@
           "el": "<span>Στις 1476 περιπτώσεις εκλεγμένων Βουλευτών για το διάστημα 1989 – 2019 το 84% είναι <span class=\"text-accent\">άνδρες</span> και το 16% <span class=\"text-accent\">γυναίκες</span>.Η κοινοβουλευτική σύνθεση με τον <span class=\"text-accent\">χαμηλότερο αριθμό γυναικών</span> είναι η <span class=\"text-accent\">περίοδος 1989α</span> με μόλις <span class=\"text-accent\">4% γυναίκες</span>. Το <span class=\"text-accent\">υψηλότερο ποσοστό</span> καταγράφεται την <span class=\"text-accent\">περίοδο 2015α</span> με το ποσοστό των γυναικών να <span class=\"text-accent\">ανέρχεται στο 23,2%</span>.</span>",
           "en": "<span>In 1476 cases of elected MPs between 1989 and 2019, 84% are <span class=\"text-accent\">men</span> and 16% are <span class=\"text-accent\">women</span>.The parliamentary composition with <span class=\"text-accent\">the lowest number of women</span> is the <span class=\"text-accent\">period 1989a</span> with only <span class=\"text-accent\">4% women</span>. By contrast, <span class=\"text-accent\">the highest number of women</span> was recorder in <span class=\"text-accent\">the period 2015a (23,2%)</span>.</span>"
         },
-        "visType": "bar",
+        "visType": "column",
         "seriesOptions": {
           "xAxis": "elections.assembly",
           "dimensionFilters": {},
@@ -227,7 +227,7 @@
           "el": "<span>Οσο <span class=\"text-accent\">πιο μεγάλη είναι μια εκλογική περιφέρεια</span>, τόσο πιθανότερο είναι οι βουλευτές που εκλέγονται σε αυτή να προέρχονται από <span class=\"text-accent\">«πολιτική» οικογένεια</span>. Στην <span class=\"text-accent\">Β Αθήνας</span> σχεδον 1 στους 5 βουλευτές <span class=\"text-accent\">(18,7%)</span> έχει <span class=\"text-accent\">συγγενή με προηγούμενη θητεία</span> στο Κοινοβούλιο.</span>",
           "en": "<span><span class=\"text-accent\">The bigger an electoral constituency</span>, the more likely it is for and MP to derive from a <span class=\"text-accent\">\"political\" family</span>. Thus, <span class=\"text-accent\">in Athens B</span>, almost 1 in 5 MP <span class=\"text-accent\">have a relative previously elected</span> in Parliament.</span>"
         },
-        "visType": "bar",
+        "visType": "column",
         "seriesOptions": {
           "xAxis": "elections.consti_size",
           "dimensionFilters": {},
@@ -241,7 +241,7 @@
           "el": "<span>To <span class=\"text-accent\">53,3%</span> των <span class=\"text-accent\">εκλεγμένων Βουλευτών/τριων</span> από το <span class=\"text-accent\">1989 έως το 2019</span> κατέχουν δίπλωμα <span class=\"text-accent\">ΑΕΙ</span>. Το <span class=\"text-accent\">19,8%</span> είναι κάτοχοι <span class=\"text-accent\">μεταπτυχιακού τίτλου σπουδών</span> και τέλος το <span class=\"text-accent\">10,6% έχει διδακτορικό</span>. Η <span class=\"text-accent\">Βουλή του 2007 - 2009</span> είναι πιθανώς η πιο <span class=\"text-accent\">«μορφωμένη» της Μεταπολίτευσης</span> καθώς έχει τους <span class=\"text-accent\">περισσότερους κατόχους διδακτορικού τίτλου (15,1%)</span> της τελευταίας τριακονταετίας</span>",
           "en": "<span><span class=\"text-accent\">More than half (53,3%)</span> of all elected MPs <span class=\"text-accent\">from 1980 to 2019</span> hold a <span class=\"text-accent\">university degree</span>. <span class=\"text-accent\">Nearly two out of ten (19,8%)</span> hold a <span class=\"text-accent\">postgraduate degree</span> and a <span class=\"text-accent\">10,6% hold a PhD</span>. <span class=\"text-accent\">The Parliament of 2007 - 2009</span> is probably the most <span class=\"text-accent\">\"educated\" of the ‘Metapolitefsi’ era</span> as it has <span class=\"text-accent\">the most PhD holders (15.1%)</span> of the last thirty years.</span>"
         },
-        "visType": "bar",
+        "visType": "column",
         "seriesOptions": {
           "xAxis": "elections.assembly",
           "dimensionFilters": {},
@@ -601,7 +601,7 @@
           "el": "<span><span class=\"text-accent\">Περίπου 1 στους 3 μαθητές</span> έχει συζητήσει για το δημοψήφισμα και τις εκλογές του 2015. <span class=\"text-accent\">Οι 9 στους 10</span> έχουν συζητήσει για τους πρόσφυγες που έχουν έρθει στην Ελλάδα, ενώ <span class=\"text-accent\">πάνω από 8 στους 10</span> έχουν συζητήσει για το ότι πολλοί νέοι δεν βρίσκουν δουλειά στην Ελλάδα και φεύγουν στον εξωτερικό.</span>",
           "en": "<span><span class=\"text-accent\">About one out of three students</span> had a conversion on the referendum and the 2015 national elections. <span class=\"text-accent\">Nine out of ten</span> have discussed about the refugees who came to Greece, and <span class=\"text-accent\">over eight out of ten</span> have discussed that many young people due to the high rates of unemployment have left the country.</span>"
         },
-        "visType": "bar",
+        "visType": "column",
         "seriesOptions": {
           "dimensionFilters": {},
           "measure": "adolescents_perc",
@@ -614,7 +614,7 @@
           "el": "<span>Η <span class=\"text-accent\">πλειοψηφία</span> των μαθητών <span class=\"text-accent\">δηλώνει υπερήφανη «Για την ιστορία του τόπου» μας (81,6%)</span> και περίπου <span class=\"text-accent\">οι μισοί «Για τις επιτυχίες στην Τέχνη και τη λογοτεχνία» (56,2%)</span>. Όσα έχουμε <span class=\"text-accent\">«καταφέρει στην οικονομία»</span> κάνει <span class=\"text-accent\">λιγότερο υπερήφανους</span> τους μαθητές.</span>",
           "en": "<span>The <span class=\"text-accent\">majority</span> of students <span class=\"text-accent\">feel proud \"for the history of our country\" (81.6%)</span> and about <span class=\"text-accent\">half of them \"for successes in Art and Literature\" (56.2%)</span>. <span class=\"text-accent\">\"The achievements of our economy\" make students less proud</span>.</span>"
         },
-        "visType": "bar",
+        "visType": "column",
         "seriesOptions": {
           "xAxis": "q35",
           "measure": "adolescents_perc",
@@ -627,7 +627,7 @@
           "el": "<span><span class=\"text-accent\">Για τους περισσότερους μαθητές «Πραγματικός Έλληνας»</span> είναι εκείνος που <span class=\"text-accent\">«Επιθυμεί να είναι Έλληνας» (60,9%)</span>, και <span class=\"text-accent\">«Σέβεται τους θεσμούς της χώρας» (54,5%)</span>. Οι <span class=\"text-accent\">μαθητές μεγαλύτερης ηλικίας</span> αναγνωρίζουν περισσότερο την <span class=\"text-accent\">αξία του αυτο-προσδιορισμού</span> («Επιθυμεί να είναι Έλληνας»).</span>",
           "en": "<span><span class=\"text-accent\">For most students a \"True Greek\"</span> is someone who <span class=\"text-accent\">\"wishes to be Greek\" (60,9%)</span>, and <span class=\"text-accent\">\"respects the institutions of the country\" (54,5%)</span>. <span class=\"text-accent\">Older students</span> recognize more the <span class=\"text-accent\">value of self-determination</span> (\"Wishes to be a Greek\").</span>"
         },
-        "visType": "bar",
+        "visType": "column",
         "seriesOptions": {
           "xAxis": "q33",
           "measure": "adolescents_perc",
@@ -696,7 +696,7 @@
           "el": "<span>Την περίοδο 1996-2014 τα <span class=\"text-accent\">κυρίαρχα αιτήματα διαμαρτυρίας</span> αφορούν την <span class=\"text-accent\">εργασία</span> και την <span class=\"text-accent\">εκπαίδευση</span>.</span>",
           "en": "<span>During the period 1996-2014 the <span class=\"text-accent\">main protest requests</span> concern <span class=\"text-accent\">work</span> and <span class=\"text-accent\">education</span>.</span>"
         },
-        "visType": "bar",
+        "visType": "column",
         "seriesOptions": {
           "xAxis": "ISSUES.ISFIELD",
           "measure": "claims_count",
@@ -709,7 +709,7 @@
           "el": "<span>Διαχρονικά παρατηρείται <span class=\"text-accent\">κάθετη πτώση της διαμαρτυρίας λίγο πριν τις εθνικές εκλογές</span> ενώ όταν αυτές συνοδεύονται από <span class=\"text-accent\">αλλαγή της κυβέρνησης</span> παρατηρείται <span class=\"text-accent\">σημαντική αύξηση</span>.</span>",
           "en": "<span>Over time, there has been a <span class=\"text-accent\">vertical fall in the protests</span> as a form of action shortly <span class=\"text-accent\">before the national elections</span>, while when accompanied by <span class=\"text-accent\">a change of government</span> there is a <span class=\"text-accent\">significant increase</span>.</span>"
         },
-        "visType": "bar",
+        "visType": "column",
         "seriesOptions": {
           "dimensionFilters": {},
           "measure": "claims_count",

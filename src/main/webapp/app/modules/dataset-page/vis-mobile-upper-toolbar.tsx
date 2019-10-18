@@ -60,30 +60,30 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
                   <Checkbox
                     radio
                     label={
-                      visType === 'bar' ? (
+                      visType === 'column' ? (
                         <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} />
                       ) : (
                         <Image src={`/content/images/Assets/Chart.svg`} />
                       )
                     }
-                    checked={visType === 'bar'}
+                    checked={visType === 'column'}
                     as={NavLink}
-                    to={'?' + urlEncodeVisOptions({ visType: 'bar', seriesOptions })}
+                    to={'?' + urlEncodeVisOptions({ visType: 'column', seriesOptions })}
                   />
                 </Form.Field>
                 <Form.Field>
                   <Checkbox
                     radio
                     label={
-                      visType === 'column' ? (
+                      visType === 'bar' ? (
                         <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ transform: 'rotate(90deg)' }} />
                       ) : (
                         <Image src={`/content/images/Assets/Chart.svg`} style={{ transform: 'rotate(90deg)' }} />
                       )
                     }
-                    checked={visType === 'column'}
+                    checked={visType === 'bar'}
                     as={NavLink}
-                    to={'?' + urlEncodeVisOptions({ visType: 'column', seriesOptions })}
+                    to={'?' + urlEncodeVisOptions({ visType: 'bar', seriesOptions })}
                   />
                 </Form.Field>
                 {_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area') && (

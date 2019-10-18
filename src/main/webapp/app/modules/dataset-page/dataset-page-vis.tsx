@@ -44,7 +44,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
       this.props.initVis(this.props.dataset, this.props.routeVisOptions);
     } else {
       this.props.initVis(this.props.dataset, {
-        visType: 'bar',
+        visType: 'column',
         seriesOptions: this.props.dataset.defaultOptions
       });
     }
@@ -135,8 +135,8 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
 
   resetGraph = e =>
     this.props.updateVisOptions(this.props.dataset, {
-      visType: this.props.visType === 'map' ? 'map' : 'bar',
-      seriesOptions: this.props.visType === 'bar' || 'column' ? this.props.dataset.defaultOptions : {}
+      visType: this.props.visType === 'map' ? 'map' : 'column',
+      seriesOptions: this.props.visType === 'column' || 'bar' ? this.props.dataset.defaultOptions : {}
     });
 
   render() {
@@ -204,7 +204,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       ref={this.chartRef}
                       showLabels
                       showLegend
-                      inverted={visType === 'column' ? true : false}
+                      inverted={visType === 'bar' ? true : false}
                     />
                   )}
                 </div>
