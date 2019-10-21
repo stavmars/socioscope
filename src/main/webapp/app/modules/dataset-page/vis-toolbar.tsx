@@ -92,21 +92,23 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                           to={'?' + urlEncodeVisOptions({ visType: 'column', seriesOptions })}
                         />
                       </Form.Field>
-                      <Form.Field>
-                        <Checkbox
-                          radio
-                          label={
-                            visType === 'bar' ? (
-                              <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ transform: 'rotate(90deg)' }} />
-                            ) : (
-                              <Image src={`/content/images/Assets/Chart.svg`} style={{ transform: 'rotate(90deg)' }} />
-                            )
-                          }
-                          checked={visType === 'bar'}
-                          as={NavLink}
-                          to={'?' + urlEncodeVisOptions({ visType: 'bar', seriesOptions })}
-                        />
-                      </Form.Field>
+                      {_.find(dataset.dimensions, { id: seriesOptions.xAxis }).type !== 'time' && (
+                        <Form.Field>
+                          <Checkbox
+                            radio
+                            label={
+                              visType === 'bar' ? (
+                                <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ transform: 'rotate(90deg)' }} />
+                              ) : (
+                                <Image src={`/content/images/Assets/Chart.svg`} style={{ transform: 'rotate(90deg)' }} />
+                              )
+                            }
+                            checked={visType === 'bar'}
+                            as={NavLink}
+                            to={'?' + urlEncodeVisOptions({ visType: 'bar', seriesOptions })}
+                          />
+                        </Form.Field>
+                      )}
                       {_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area') && (
                         <Form.Field>
                           <Checkbox
@@ -120,7 +122,7 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                             }
                             checked={visType === 'map'}
                             as={NavLink}
-                            to={'?' + urlEncodeVisOptions({ visType: 'map', seriesOptions: {} })}
+                            to={'?' + urlEncodeVisOptions({ visType: 'map', seriesOptions: dataset.defaultOptions })}
                           />
                         </Form.Field>
                       )}
