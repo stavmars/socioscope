@@ -10,6 +10,7 @@ import { unflattenDimensionCodes } from 'app/shared/util/entity-utils';
 
 export interface IVisOptions {
   visType: string;
+  subType?: string;
   seriesOptions: ISeriesOptions;
 }
 
@@ -34,7 +35,8 @@ const initialState = {
   updatingVisOptions: true,
   errorMessage: null,
   dimensionCodes: {} as any,
-  visType: 'column',
+  visType: 'chart',
+  subType: 'column',
   seriesOptions: null as ISeriesOptions,
   seriesList: [] as ISeries[]
 };
@@ -130,6 +132,7 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
         ...state,
         updatingVisOptions: false,
         visType: action.payload.visType,
+        subType: action.payload.subType,
         seriesOptions: action.payload.seriesOptions
       };
     default:
@@ -230,7 +233,7 @@ export const changeCompareBy = (dataset: IDataSet, compareBy: string) => (dispat
 
 export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => (dispatch, getState) => {
   const { dimensionCodes } = getState().datasetPage;
-  const { visType = 'column', seriesOptions } = visOptions;
+  const { visType = 'chart', subType = 'column', seriesOptions } = visOptions;
   const { dimensions } = dataset;
   const { compareCodes } = seriesOptions;
   let { xAxis, compareBy, measure } = seriesOptions;
@@ -259,7 +262,7 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
   }
   dispatch({
     type: ACTION_TYPES.UPDATE_VIS_OPTIONS,
-    payload: { visType, seriesOptions: newSeriesOptions }
+    payload: { visType, subType, seriesOptions: newSeriesOptions }
   });
   dispatch(getSeries(dataset.id, newSeriesOptions));
 };
