@@ -44,7 +44,8 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
       this.props.initVis(this.props.dataset, this.props.routeVisOptions);
     } else {
       this.props.initVis(this.props.dataset, {
-        visType: 'column',
+        visType: 'chart',
+        subType: 'column',
         seriesOptions: this.props.dataset.defaultOptions
       });
     }
@@ -61,13 +62,17 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   }
 
   togglePercentage = () => {
-    const { dataset, visType, seriesOptions } = this.props;
+    const { dataset, visType, subType, seriesOptions } = this.props;
     const measure = dataset.measures.find(m => m.id !== seriesOptions.measure);
-    this.props.updateVisOptions(dataset, { visType, seriesOptions: { ...seriesOptions, measure: measure.id } });
+    this.props.updateVisOptions(dataset, { visType, subType, seriesOptions: { ...seriesOptions, measure: measure.id } });
   };
 
   getCurrentURL = () => {
-    const encodedVisOptions = urlEncodeVisOptions({ visType: this.props.visType, seriesOptions: this.props.seriesOptions });
+    const encodedVisOptions = urlEncodeVisOptions({
+      visType: this.props.visType,
+      subType: this.props.subType,
+      seriesOptions: this.props.seriesOptions
+    });
     return window.location.protocol + '//' + window.location.host + '/dataset/' + this.props.dataset.id + '/data?' + encodedVisOptions;
   };
 
@@ -135,12 +140,23 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
 
   resetGraph = e =>
     this.props.updateVisOptions(this.props.dataset, {
-      visType: this.props.visType === 'map' ? 'map' : 'column',
+      visType: this.props.visType,
+      subType: this.props.subType,
       seriesOptions: this.props.visType === 'column' || 'bar' ? this.props.dataset.defaultOptions : {}
     });
 
   render() {
-    const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, fetchedCodeLists, visType, updatingVisOptions } = this.props;
+    const {
+      dataset,
+      seriesOptions,
+      seriesList,
+      dimensionCodes,
+      loadingSeries,
+      fetchedCodeLists,
+      visType,
+      subType,
+      updatingVisOptions
+    } = this.props;
 
     return (
       <div className="dataset-page-vis">
@@ -170,13 +186,20 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
               </Grid.Column>
               <Grid.Column mobile={16} tablet={15} computer={12}>
                 <Responsive {...Responsive.onlyMobile}>
-                  <VisMobileUpperToolbar dataset={dataset} seriesOptions={seriesOptions} visType={visType} resetGraph={this.resetGraph} />
+                  <VisMobileUpperToolbar
+                    dataset={dataset}
+                    seriesOptions={seriesOptions}
+                    visType={visType}
+                    subType={subType}
+                    resetGraph={this.resetGraph}
+                  />
                 </Responsive>
                 <Responsive minWidth={Responsive.onlyTablet.minWidth}>
                   <VisToolbar
                     dataset={dataset}
                     seriesOptions={seriesOptions}
                     visType={visType}
+                    subType={subType}
                     copyCurrentURL={this.copyCurrentURL}
                     togglePercentage={this.togglePercentage}
                     exportChartOrMap={this.exportChartOrMap}
@@ -204,7 +227,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       ref={this.chartRef}
                       showLabels
                       showLegend
-                      chartType={visType}
+                      chartType={subType}
                     />
                   )}
                 </div>
@@ -228,10 +251,15 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
 }
 
 const parseRouteVisOptions = (query: string): IVisOptions => {
-  const { type: visType, x: xAxis, compare: compareBy, filters: dimensionFilters, measure: measure, codes: compareCodes } = qs.parse(
-    query,
-    { ignoreQueryPrefix: true }
-  );
+  const {
+    type: visType,
+    subType: subType,
+    x: xAxis,
+    compare: compareBy,
+    filters: dimensionFilters,
+    measure: measure,
+    codes: compareCodes
+  } = qs.parse(query, { ignoreQueryPrefix: true });
   const seriesOptions = {
     xAxis,
     compareBy,
@@ -239,14 +267,15 @@ const parseRouteVisOptions = (query: string): IVisOptions => {
     measure,
     compareCodes
   };
-  return { visType, seriesOptions };
+  return { visType, subType, seriesOptions };
 };
 
 export const urlEncodeVisOptions = (visOptions: IVisOptions) => {
-  const { visType, seriesOptions = {} } = visOptions;
+  const { visType, subType, seriesOptions = {} } = visOptions;
   return qs.stringify(
     {
       type: visType,
+      subType,
       x: seriesOptions.xAxis,
       compare: seriesOptions.compareBy,
       filters: seriesOptions.dimensionFilters,
@@ -266,7 +295,8 @@ const mapStateToProps = (storeState: IRootState, ownProps) => ({
   seriesOptions: storeState.datasetPage.seriesOptions,
   loadingSeries: storeState.datasetPage.loadingSeries,
   updatingVisOptions: storeState.datasetPage.updatingVisOptions,
-  visType: storeState.datasetPage.visType
+  visType: storeState.datasetPage.visType,
+  subType: storeState.datasetPage.subType
 });
 
 const mapDispatchToProps = {
