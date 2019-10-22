@@ -75,19 +75,6 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                     <Image src="/content/images/Assets/Percentage.svg" />
                   </Menu.Item>
                 )}
-                <Menu.Item
-                  as={NavLink}
-                  to={'?' + urlEncodeVisOptions({ visType: 'chart', subType: 'column', seriesOptions })}
-                  active={visType === 'chart'}
-                  style={{ marginRight: '50px' }}
-                >
-                  {visType === 'chart' ? (
-                    <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
-                  ) : (
-                    <Image src={`/content/images/Assets/Chart.svg`} style={{ marginRight: '20px' }} />
-                  )}
-                  {translate('socioscopeApp.dataSet.visualization.graph')}
-                </Menu.Item>
                 {visType !== 'map' &&
                   _.find(dataset.dimensions, { id: seriesOptions.xAxis }).type !== 'time' && (
                     <Menu.Item>
@@ -127,6 +114,19 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                       </Form>
                     </Menu.Item>
                   )}
+                <Menu.Item
+                  as={NavLink}
+                  to={'?' + urlEncodeVisOptions({ visType: 'chart', subType: 'column', seriesOptions })}
+                  active={visType === 'chart'}
+                  style={{ marginRight: '50px' }}
+                >
+                  {visType === 'chart' ? (
+                    <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
+                  ) : (
+                    <Image src={`/content/images/Assets/Chart.svg`} style={{ marginRight: '20px' }} />
+                  )}
+                  {translate('socioscopeApp.dataSet.visualization.graph')}
+                </Menu.Item>
                 {_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area') && (
                   <Menu.Item
                     as={NavLink}
