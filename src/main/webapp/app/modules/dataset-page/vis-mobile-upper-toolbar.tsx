@@ -14,9 +14,8 @@ import { ISeriesOptions } from 'app/shared/model/series-options.model';
 export interface IVisMobileUpperToolbarProp extends DispatchProps {
   dataset: IDataSet;
   visType: string;
+  subType: string;
   seriesOptions: ISeriesOptions;
-
-  resetGraph(e): void;
 }
 
 export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolbarProp> {
@@ -25,7 +24,7 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
   }
 
   render() {
-    const { dataset, visType, seriesOptions } = this.props;
+    const { dataset, visType, subType, seriesOptions } = this.props;
     const { colorScheme } = dataset;
 
     return (
@@ -51,24 +50,21 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
             </h1>
           </Menu.Item>
           <Menu.Item position="right">
-            <Image onClick={this.props.resetGraph} src="/content/images/Assets/Reset.svg" />
-          </Menu.Item>
-          <Menu.Item>
             <Form style={{ paddingTop: '15px' }}>
               <Form.Group inline>
                 <Form.Field>
                   <Checkbox
                     radio
                     label={
-                      visType === 'column' ? (
+                      visType === 'chart' && subType === 'column' ? (
                         <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} />
                       ) : (
                         <Image src={`/content/images/Assets/Chart.svg`} />
                       )
                     }
-                    checked={visType === 'column'}
+                    checked={visType === 'chart' && subType === 'column'}
                     as={NavLink}
-                    to={'?' + urlEncodeVisOptions({ visType: 'column', seriesOptions })}
+                    to={'?' + urlEncodeVisOptions({ visType: 'chart', subType: 'column', seriesOptions })}
                   />
                 </Form.Field>
                 {_.find(dataset.dimensions, { id: seriesOptions.xAxis }).type !== 'time' && (
@@ -76,15 +72,15 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
                     <Checkbox
                       radio
                       label={
-                        visType === 'bar' ? (
+                        visType === 'chart' && subType === 'bar' ? (
                           <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ transform: 'rotate(90deg)' }} />
                         ) : (
                           <Image src={`/content/images/Assets/Chart.svg`} style={{ transform: 'rotate(90deg)' }} />
                         )
                       }
-                      checked={visType === 'bar'}
+                      checked={visType === 'chart' && subType === 'bar'}
                       as={NavLink}
-                      to={'?' + urlEncodeVisOptions({ visType: 'bar', seriesOptions })}
+                      to={'?' + urlEncodeVisOptions({ visType: 'chart', subType: 'bar', seriesOptions })}
                     />
                   </Form.Field>
                 )}
