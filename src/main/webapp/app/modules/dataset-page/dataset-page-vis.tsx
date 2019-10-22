@@ -16,7 +16,7 @@ import {
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
 import { Dimmer, Grid, Loader, Responsive } from 'semantic-ui-react';
-import ChartVis from 'app/modules/visualization/chart-vis';
+import ChartVis, { getChartTitle, getChartSubTitle } from 'app/modules/visualization/chart-vis';
 import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
 import { IRootState } from 'app/shared/reducers';
 import { hideHeader, showHeader } from 'app/shared/reducers/header';
@@ -26,6 +26,7 @@ import VisMobileUpperToolbar from 'app/modules/dataset-page/vis-mobile-upper-too
 import VisToolbar from 'app/modules/dataset-page/vis-toolbar';
 import VisMobileLowerToolbar from 'app/modules/dataset-page/vis-mobile-lower-toolbar';
 import VisSeriesOptionMenu from 'app/modules/dataset-page/vis-series-option-menu';
+import { translateEntityField } from 'app/shared/util/entity-utils';
 
 // tslint:disable:jsx-no-lambda
 
@@ -116,6 +117,17 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   shareChartOrMap = action => {
     const link = this.getCurrentURL();
     const sharable = encodeURIComponent(link);
+    const chartTitle = encodeURIComponent(
+      getChartTitle(
+        translateEntityField(this.props.dataset.name),
+        this.props.seriesOptions.xAxis,
+        this.props.seriesOptions.compareBy,
+        this.props.dataset.dimensions
+      )
+    );
+    const chartSubTitle = encodeURIComponent(
+      getChartSubTitle(this.props.seriesOptions, this.props.dataset.dimensions, this.props.dimensionCodes)
+    );
     const left = (screen.width - 570) / 2;
     const top = (screen.height - 570) / 2;
     const params = 'menubar=no,toolbar=no,status=no,width=570,height=570,top=' + top + ',left=' + left;
@@ -126,11 +138,11 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
         window.open(url, 'NewWindow', params);
         break;
       case 'twitter':
-        url = 'https://twitter.com/intent/tweet?url=' + sharable;
+        url = 'https://twitter.com/intent/tweet?text=' + chartTitle + '&url=' + sharable;
         window.open(url, 'NewWindow', params);
         break;
       case 'email':
-        url = 'mailto:?to=&body=' + sharable;
+        url = 'mailto:?to=&body=' + chartTitle + '%0D%0A' + chartSubTitle + '%0D%0A%0D%0A' + sharable;
         window.open(url, 'NewWindow', params);
         break;
       default:
