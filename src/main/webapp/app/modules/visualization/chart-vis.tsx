@@ -12,7 +12,7 @@ import { IDimension } from 'app/shared/model/dimension.model';
 import { ISeriesPoint } from 'app/shared/model/series-point.model';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeries } from 'app/shared/model/series.model';
-import { ISeriesOptions } from 'app/shared/model/series-options.model';
+import { IDimensionFilters, ISeriesOptions } from 'app/shared/model/series-options.model';
 import { accentColors, chartColors } from 'app/config/constants';
 // tslint:disable:no-submodule-imports
 import HC_exporting from 'highcharts/modules/exporting';
@@ -89,6 +89,33 @@ const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[]
   });
   return _.sortBy(chartPoints, 'codeOrder', 'name');
 };
+
+const parseDimensionFilters = (dimensions: IDimension[], dimensionFilters: IDimensionFilters, dimensionCodes: any) => {
+  let result = '';
+  for (const filter in dimensionFilters) {
+    if (dimensionFilters.hasOwnProperty(filter)) {
+      const dimension = _.keyBy(dimensions, 'id')[filter];
+      result +=
+        translateEntityField(dimension.name) +
+        ' - ' +
+        translateEntityField(dimensionCodes[dimension.id].codesByNotation[dimensionFilters[filter]].name) +
+        ', ';
+    }
+  }
+  return result.substr(0, result.length - 2);
+};
+
+export const getChartTitle = (dataSetName: string, xAxis: string, compareBy: string, dimensions: IDimension[]) => {
+  const xAxisDimension = _.find(dimensions, { id: xAxis }) as IDimension;
+  const xAxisName = translateEntityField(xAxisDimension.name);
+
+  return dataSetName + ': ' + xAxisName + (compareBy ? ' - ' + translateEntityField(_.find(dimensions, { id: compareBy }).name) : '');
+};
+
+export const getChartSubTitle = (seriesOptions: ISeriesOptions, dimensions: IDimension[], dimensionCodes: any) =>
+  !_.isEmpty(seriesOptions.dimensionFilters)
+    ? `(${parseDimensionFilters(dimensions, seriesOptions.dimensionFilters, dimensionCodes)})`
+    : '';
 
 export class ChartVis extends React.Component<IChartVisProp> {
   innerChart = React.createRef<HighchartsReact>();
@@ -216,6 +243,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
 
     const measure = seriesOptions.measure ? _.find(dataset.measures, { id: seriesOptions.measure }) : dataset.measures[0];
     const xAxisName = translateEntityField(xAxisDimension.name);
+    const dataSetName = translateEntityField(dataset.name);
     const xAxisDesc = translateEntityField(xAxisDimension.description);
     const xAxisText =
       !xAxisDesc || xAxisName === xAxisDesc ? xAxisName : `<div>${xAxisName}</div><div class="x-axis-subtitle">${xAxisDesc}</div>`;
@@ -306,7 +334,24 @@ export class ChartVis extends React.Component<IChartVisProp> {
         allowPointDrilldown: false
       },
       exporting: {
-        buttons: false
+        buttons: false,
+        chartOptions: {
+          title: {
+            text: getChartTitle(dataSetName, seriesOptions.xAxis, compareBy, dimensions),
+            style: {
+              fontFamily: 'BPnoScript',
+              fontWeight: '900',
+              fontSize: '25px'
+            }
+          },
+          subtitle: {
+            text: getChartSubTitle(seriesOptions, dimensions, dimensionCodes)
+          },
+          style: {
+            fontFamily: 'BPnoScript',
+            fontSize: '18px'
+          }
+        }
       }
     };
 
