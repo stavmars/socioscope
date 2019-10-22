@@ -221,7 +221,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
       !xAxisDesc || xAxisName === xAxisDesc ? xAxisName : `<div>${xAxisName}</div><div class="x-axis-subtitle">${xAxisDesc}</div>`;
     const options = {
       chart: {
-        type: xAxisDimension.type === 'time' ? 'spline' : this.props.chartType,
+        type: xAxisDimension.type === 'time' ? 'spline' : this.props.chartType === null ? 'column' : this.props.chartType,
         height: window.innerWidth > 768 ? '50%' : null,
         zoomType: 'x',
         className: dataset.colorScheme,
