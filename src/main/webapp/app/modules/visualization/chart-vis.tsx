@@ -75,7 +75,7 @@ const prepareTimeSeriesData = (dataPoints: ISeriesPoint[]) => {
   );
 };
 
-const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[], seriesByParent) => {
+const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[], seriesByParent, order: string) => {
   const chartPoints = seriesPoints.map(seriesPoint => {
     const code = codesByNotation[seriesPoint.x];
     return {
@@ -87,7 +87,14 @@ const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[]
       codesByNotation
     };
   });
-  return _.sortBy(chartPoints, 'codeOrder', 'name');
+  switch (order) {
+    case 'value_desc':
+      return _.orderBy(chartPoints, ['y', 'codeOrder', 'name'], ['desc', 'asc', 'asc']);
+    case 'value_asc':
+      return _.sortBy(chartPoints, 'y', 'codeOrder', 'name');
+    default:
+      return _.sortBy(chartPoints, 'codeOrder', 'name');
+  }
 };
 
 const parseDimensionFilters = (dimensions: IDimension[], dimensionFilters: IDimensionFilters, dimensionCodes: any) => {
@@ -201,7 +208,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
                 code,
                 color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
                 order: code && code.order,
-                data: prepareCategorySeriesData(codesByNotation, seriesByParent[''][series.id], seriesByParent)
+                data: prepareCategorySeriesData(codesByNotation, seriesByParent[''][series.id], seriesByParent, xAxisDimension.order)
               };
             })
             .sortBy('order', 'name')
@@ -240,7 +247,8 @@ export class ChartVis extends React.Component<IChartVisProp> {
               data: prepareCategorySeriesData(
                 e.point.codesByNotation,
                 e.point.seriesByParent[e.point.drilldown][e.point.series.id],
-                e.point.seriesByParent
+                e.point.seriesByParent,
+                null
               )
             });
           }

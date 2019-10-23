@@ -46,6 +46,8 @@ public class Dimension implements Serializable {
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private String groupId;
 
+    private String order;
+
     @NotNull
     @Field("type")
     private String type;
@@ -124,6 +126,14 @@ public class Dimension implements Serializable {
 
     public void setGroupId(String groupId) {
         this.groupId = groupId;
+    }
+
+    public String getOrder() {
+        return order;
+    }
+
+    public void setOrder(String order) {
+        this.order = order;
     }
 
     public String getType() {

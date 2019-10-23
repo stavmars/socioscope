@@ -7,6 +7,7 @@ export interface IDimension {
   description?: ILang;
   groupId?: string;
   type?: string;
+  order?: string;
   creator?: IUser;
   geoMaps?: IGeoMap[];
   dependencies?: string[];

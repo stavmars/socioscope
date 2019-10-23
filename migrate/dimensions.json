@@ -125,6 +125,7 @@
       "en": "Occupation",
       "el": "Επάγγελμα"
     },
+    "order": "value_desc",
     "groupId": "demographics"
   },
   {
