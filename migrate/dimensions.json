@@ -135,6 +135,7 @@
       "en": "Field of Education",
       "el": "Πεδίο Σπουδών"
     },
+    "order": "value_desc",
     "groupId": "demographics"
   },
   {
@@ -144,6 +145,7 @@
       "en": "Highest level of educational attainment",
       "el": "Επίπεδο εκπαίδευσης"
     },
+    "order": "value_desc",
     "groupId": "demographics"
   },
   {
