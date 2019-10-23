@@ -208,7 +208,12 @@ export class ChartVis extends React.Component<IChartVisProp> {
                 code,
                 color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
                 order: code && code.order,
-                data: prepareCategorySeriesData(codesByNotation, seriesByParent[''][series.id], seriesByParent, xAxisDimension.order)
+                data: prepareCategorySeriesData(
+                  codesByNotation,
+                  seriesByParent[''][series.id],
+                  seriesByParent,
+                  seriesList.length === 1 ? xAxisDimension.order : null
+                )
               };
             })
             .sortBy('order', 'name')
