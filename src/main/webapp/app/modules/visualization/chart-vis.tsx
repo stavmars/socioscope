@@ -97,7 +97,7 @@ const parseDimensionFilters = (dimensions: IDimension[], dimensionFilters: IDime
       const dimension = _.keyBy(dimensions, 'id')[filter];
       result +=
         translateEntityField(dimension.name) +
-        ' - ' +
+        ': ' +
         translateEntityField(dimensionCodes[dimension.id].codesByNotation[dimensionFilters[filter]].name) +
         ', ';
     }
@@ -105,11 +105,15 @@ const parseDimensionFilters = (dimensions: IDimension[], dimensionFilters: IDime
   return result.substr(0, result.length - 2);
 };
 
-export const getChartTitle = (dataSetName: string, xAxis: string, compareBy: string, dimensions: IDimension[]) => {
-  const xAxisDimension = _.find(dimensions, { id: xAxis }) as IDimension;
-  const xAxisName = translateEntityField(xAxisDimension.name);
-
-  return dataSetName + ': ' + xAxisName + (compareBy ? ' - ' + translateEntityField(_.find(dimensions, { id: compareBy }).name) : '');
+export const getChartTitle = (dataset: IDataSet, seriesOptions: ISeriesOptions) => {
+  const { xAxis, compareBy } = seriesOptions;
+  const xAxisDimension = _.find(dataset.dimensions, { id: xAxis }) as IDimension;
+  return (
+    translateEntityField(dataset.name) +
+    ': ' +
+    translateEntityField(xAxisDimension.name) +
+    (compareBy ? ' - ' + translateEntityField(_.find(dataset.dimensions, { id: compareBy }).name) : '')
+  );
 };
 
 export const getChartSubTitle = (seriesOptions: ISeriesOptions, dimensions: IDimension[], dimensionCodes: any) =>
@@ -128,45 +132,19 @@ export class ChartVis extends React.Component<IChartVisProp> {
     this.innerChart.current.chart.print();
   }
 
-  exportSVG() {
+  exportChart(type) {
+    const { dataset, seriesOptions, dimensionCodes } = this.props;
     this.innerChart.current.chart.exportChart(
-      { type: 'image/svg+xml' },
+      { type },
       {
-        chart: {
-          height: '100%'
-        }
-      }
-    );
-  }
-
-  exportPNG() {
-    this.innerChart.current.chart.exportChart(
-      { type: 'image/png', url: 'http://localhost:7801' },
-      {
-        chart: {
-          height: '100%'
-        }
-      }
-    );
-  }
-
-  exportPDF() {
-    this.innerChart.current.chart.exportChart(
-      { type: 'application/pdf', url: 'http://localhost:7801' },
-      {
-        chart: {
-          height: '100%'
-        }
-      }
-    );
-  }
-
-  exportJPEG() {
-    this.innerChart.current.chart.exportChart(
-      { type: 'image/jpeg', url: 'http://localhost:7801' },
-      {
-        chart: {
-          height: '100%'
+        title: {
+          text: getChartTitle(dataset, seriesOptions),
+          style: {
+            fontSize: '25px'
+          }
+        },
+        subtitle: {
+          text: getChartSubTitle(seriesOptions, dataset.dimensions, dimensionCodes)
         }
       }
     );
@@ -253,6 +231,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
         height: window.innerWidth > 768 ? '50%' : null,
         zoomType: 'x',
         className: dataset.colorScheme,
+        style: { fontFamily: 'BPnoScript', fontWeight: 'bold' },
         events: {
           // tslint:disable-next-line
           drilldown: function(e) {
@@ -267,28 +246,26 @@ export class ChartVis extends React.Component<IChartVisProp> {
           }
         }
       },
-      title: {
-        text: undefined
-      },
+      title: { text: undefined },
       xAxis: {
         type: xAxisDimension.type === 'time' ? 'datetime' : 'category',
         title: {
           useHTML: true,
           text: xAxisText,
-          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '20px' : '9px' }
+          style: { fontSize: window.innerWidth > 768 ? '20px' : '9px' }
         },
         labels: {
-          style: { fontFamily: 'ProximaNovaSemibold', fontSize: window.innerWidth > 768 ? '14px' : '9px' }
+          style: { fontFamily: 'Proxima Nova Semibold', fontSize: window.innerWidth > 768 ? '14px' : '9px' }
         },
         offset: 2
       },
       yAxis: {
         title: {
           text: translateEntityField(measure.name),
-          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '20px' : '10px' }
+          style: { fontSize: window.innerWidth > 768 ? '20px' : '10px' }
         },
         labels: {
-          style: { fontFamily: 'ProximaNovaSemibold', fontSize: window.innerHeight > 768 ? '14px' : '10px' }
+          style: { fontFamily: 'Proxima Nova Semibold', fontSize: window.innerHeight > 768 ? '14px' : '10px' }
         },
         max: measure.type === 'percentage' && this.props.seriesList.length > 1 ? 100 : null,
         reversedStacks: false
@@ -301,7 +278,6 @@ export class ChartVis extends React.Component<IChartVisProp> {
             enabled: showLabels,
             format: measure.type === 'percentage' ? '{y:.1f}%' : '{y}',
             style: {
-              fontFamily: 'BPnoScriptBold',
               fontSize: '14px'
             }
           }
@@ -326,8 +302,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
           return '<i class="circle outline icon"></i>' + this.name;
         },
         itemStyle: {
-          fontSize: window.innerHeight > 768 ? '14px' : '10px',
-          fontFamily: 'BPnoScriptBold'
+          fontSize: window.innerHeight > 768 ? '14px' : '10px'
         }
       },
       drilldown: {
@@ -335,22 +310,9 @@ export class ChartVis extends React.Component<IChartVisProp> {
       },
       exporting: {
         buttons: false,
+        url: 'http://localhost:7801',
         chartOptions: {
-          title: {
-            text: getChartTitle(dataSetName, seriesOptions.xAxis, compareBy, dimensions),
-            style: {
-              fontFamily: 'BPnoScript',
-              fontWeight: '900',
-              fontSize: '25px'
-            }
-          },
-          subtitle: {
-            text: getChartSubTitle(seriesOptions, dimensions, dimensionCodes)
-          },
-          style: {
-            fontFamily: 'BPnoScript',
-            fontSize: '18px'
-          }
+          chart: { height: '100%' }
         }
       }
     };

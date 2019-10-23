@@ -48,20 +48,8 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
     this.innerChart.current.chart.print();
   }
 
-  exportSVG() {
-    this.innerChart.current.chart.exportChart({ type: 'image/svg+xml' }, {});
-  }
-
-  exportPNG() {
-    this.innerChart.current.chart.exportChart({ type: 'image/png' }, {});
-  }
-
-  exportPDF() {
-    this.innerChart.current.chart.exportChart({ type: 'application/pdf' }, {});
-  }
-
-  exportJPEG() {
-    this.innerChart.current.chart.exportChart({ type: 'image/jpeg' }, {});
+  exportChart(type) {
+    this.innerChart.current.chart.exportChart({ type }, {});
   }
 
   fetchGeoJson(geoMap: IGeoMap) {

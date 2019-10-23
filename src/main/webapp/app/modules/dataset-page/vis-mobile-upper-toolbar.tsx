@@ -41,7 +41,7 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
           <Menu.Item>
             <h1
               style={{
-                fontFamily: 'ProximaNovaSemibold',
+                fontFamily: 'Proxima Nova Semibold',
                 color: '#1E1E1E',
                 fontSize: '12px'
               }}

@@ -188,7 +188,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
             onClick={this.handleOptions}
             style={{
               fontSize: '15px',
-              fontFamily: 'ProximaNovaSemibold',
+              fontFamily: 'Proxima Nova Semibold',
               padding: '10px 0 20px 0'
             }}
           >

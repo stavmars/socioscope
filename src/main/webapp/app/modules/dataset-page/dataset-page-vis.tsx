@@ -16,7 +16,7 @@ import {
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
 import { Dimmer, Grid, Loader, Responsive } from 'semantic-ui-react';
-import ChartVis, { getChartTitle, getChartSubTitle } from 'app/modules/visualization/chart-vis';
+import ChartVis, { getChartSubTitle, getChartTitle } from 'app/modules/visualization/chart-vis';
 import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
 import { IRootState } from 'app/shared/reducers';
 import { hideHeader, showHeader } from 'app/shared/reducers/header';
@@ -26,7 +26,6 @@ import VisMobileUpperToolbar from 'app/modules/dataset-page/vis-mobile-upper-too
 import VisToolbar from 'app/modules/dataset-page/vis-toolbar';
 import VisMobileLowerToolbar from 'app/modules/dataset-page/vis-mobile-lower-toolbar';
 import VisSeriesOptionMenu from 'app/modules/dataset-page/vis-series-option-menu';
-import { translateEntityField } from 'app/shared/util/entity-utils';
 
 // tslint:disable:jsx-no-lambda
 
@@ -93,21 +92,22 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   };
 
   exportChartOrMap = action => {
+    const ref = this.props.visType === 'map' ? this.mapRef.current : this.chartRef.current;
     switch (action) {
       case 'png':
-        this.props.visType === 'map' ? this.mapRef.current.exportPNG() : this.chartRef.current.exportPNG();
+        ref.exportChart('image/png');
         break;
       case 'pdf':
-        this.props.visType === 'map' ? this.mapRef.current.exportPDF() : this.chartRef.current.exportPDF();
+        ref.exportChart('application/pdf');
         break;
       case 'svg':
-        this.props.visType === 'map' ? this.mapRef.current.exportSVG() : this.chartRef.current.exportSVG();
+        ref.exportChart('image/svg+xml');
         break;
       case 'jpeg':
-        this.props.visType === 'map' ? this.mapRef.current.exportJPEG() : this.chartRef.current.exportJPEG();
+        ref.exportChart('image/jpeg');
         break;
       case 'print':
-        this.props.visType === 'map' ? this.mapRef.current.printChart() : this.chartRef.current.printChart();
+        ref.printChart();
         break;
       default:
         break;
@@ -117,14 +117,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   shareChartOrMap = action => {
     const link = this.getCurrentURL();
     const sharable = encodeURIComponent(link);
-    const chartTitle = encodeURIComponent(
-      getChartTitle(
-        translateEntityField(this.props.dataset.name),
-        this.props.seriesOptions.xAxis,
-        this.props.seriesOptions.compareBy,
-        this.props.dataset.dimensions
-      )
-    );
+    const chartTitle = encodeURIComponent(getChartTitle(this.props.dataset, this.props.seriesOptions));
     const chartSubTitle = encodeURIComponent(
       getChartSubTitle(this.props.seriesOptions, this.props.dataset.dimensions, this.props.dimensionCodes)
     );
