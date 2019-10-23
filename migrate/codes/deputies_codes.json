@@ -20,35 +20,68 @@
     "shortName": null
   },
   {
+    "notation": "1",
+    "name": {
+      "en": "01st Term (17/11/1974 - 22/10/1977)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 1,
+    "shortName": null
+  },
+  {
+    "notation": "2",
+    "name": {
+      "en": "02nd Term (20/11/1977 - 19/09/1981)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 2,
+    "shortName": null
+  },
+  {
+    "notation": "3",
+    "name": {
+      "en": "03rd Term  (18/10/1981 - 7/05/1985)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 3,
+    "shortName": null
+  },
+  {
+    "notation": "4",
+    "name": {
+      "en": "04th Term  (02/06/1985 - 02/06/1989)"
+    },
+    "dimensionId": "elections.assembly",
+    "order": 4,
+    "shortName": null
+  },
+  {
     "notation": "5",
     "name": {
-      "el": "Ε' Περίοδος (18/6/1989 - 12/10/1989)",
       "en": "05th Term (18/6/1989 - 12/10/1989)"
     },
     "dimensionId": "elections.assembly",
     "order": 5,
     "shortName": {
       "el": "Βουλή 1989α",
-      "en": "1989a"
+      "en": "1989α"
     }
   },
   {
     "notation": "6",
     "name": {
-      "el": "ΣΤ' Περίοδος (5/11/1989 - 12/3/1990)",
       "en": "06th Term (5/11/1989 - 12/3/1990)"
     },
     "dimensionId": "elections.assembly",
     "order": 6,
     "shortName": {
       "el": "Βουλή 1989β",
-      "en": "1989b"
+      "en": "1989β"
     }
   },
   {
     "notation": "7",
     "name": {
-      "el": "Ζ' Περίοδος (8/4/1990 - 11/9/1993)",
       "en": "07th Term (8/4/1990 - 11/9/1993)"
     },
     "dimensionId": "elections.assembly",
@@ -61,7 +94,6 @@
   {
     "notation": "8",
     "name": {
-      "el": "Η' Περίοδος (10/10/1993 - 24/08/1996)",
       "en": "08th Term (10/10/1993 - 24/08/1996)"
     },
     "dimensionId": "elections.assembly",
@@ -74,7 +106,6 @@
   {
     "notation": "9",
     "name": {
-      "el": "Θ' Περίοδος (22/09/1996 - 14/03/2000)",
       "en": "09th Term (22/09/1996 - 14/03/2000)"
     },
     "dimensionId": "elections.assembly",
@@ -87,7 +118,6 @@
   {
     "notation": "10",
     "name": {
-      "el": "Ι' Περίοδος (9/04/2000 - 11/02/2004)",
       "en": "10th Term (9/04/2000 - 11/02/2004)"
     },
     "dimensionId": "elections.assembly",
@@ -100,7 +130,6 @@
   {
     "notation": "11",
     "name": {
-      "el": "ΙΑ' Περίοδος (07/03/2004 - 18/08/2007)",
       "en": "11th Term (07/03/2004 - 18/08/2007)"
     },
     "dimensionId": "elections.assembly",
@@ -113,7 +142,6 @@
   {
     "notation": "12",
     "name": {
-      "el": "ΙΒ' Περίοδος (16/09/2007 - 07/09/2009)",
       "en": "12th Term (16/09/2007 - 07/09/2009)"
     },
     "dimensionId": "elections.assembly",
@@ -126,7 +154,6 @@
   {
     "notation": "13",
     "name": {
-      "el": "ΙΓ' Περίοδος (04/10/2009 - 11/04/2012)",
       "en": "13th Term (04/10/2009 - 11/04/2012)"
     },
     "dimensionId": "elections.assembly",
@@ -139,59 +166,54 @@
   {
     "notation": "14",
     "name": {
-      "el": "ΙΔ' Περίοδος (06/05/2012 - 19/05/2012)",
       "en": "14th Term (06/05/2012 - 19/05/2012)"
     },
     "dimensionId": "elections.assembly",
     "order": 14,
     "shortName": {
       "el": "Βουλή 2012α",
-      "en": "2012a"
+      "en": "2012α"
     }
   },
   {
     "notation": "15",
     "name": {
-      "el": "ΙΕ' Περίοδος (17/06/2012 - 31/12/2014)",
       "en": "15th Term (17/06/2012 - 31/12/2014)"
     },
     "dimensionId": "elections.assembly",
     "order": 15,
     "shortName": {
       "el": "Βουλή 2012β",
-      "en": "2012b"
+      "en": "2012β"
     }
   },
   {
     "notation": "16",
     "name": {
-      "el": "ΙΣΤ' Περίοδος (25/01/2015 -28/8/2015)",
       "en": "16th Term (25/01/2015 -28/8/2015)"
     },
     "dimensionId": "elections.assembly",
     "order": 16,
     "shortName": {
       "el": "Βουλή 2015α",
-      "en": "2015a"
+      "en": "2015α"
     }
   },
   {
     "notation": "17",
     "name": {
-      "el": "ΙΖ' Περίοδος (20/09/2015 -11/06/2019)",
       "en": "17th Term (20/09/2015 -11/06/2019)"
     },
     "dimensionId": "elections.assembly",
     "order": 17,
     "shortName": {
       "el": "Βουλή 2015β",
-      "en": "2015b"
+      "en": "2015β"
     }
   },
   {
     "notation": "18",
     "name": {
-      "el": "ΙΗ Περίοδος (07/7/2019 - σήμερα)",
       "en": "18th Term (07/7/2019 - today)"
     },
     "dimensionId": "elections.assembly",
@@ -569,7 +591,7 @@
       "en": "Bachelor Level (in Greece)"
     },
     "dimensionId": "education_title",
-    "order": 6,
+    "order": 7,
     "shortName": null
   },
   {
@@ -579,17 +601,17 @@
       "en": "Master Level (from another country)"
     },
     "dimensionId": "education_title",
-    "order": 7,
+    "order": 6,
     "shortName": null
   },
   {
     "notation": "3",
     "name": {
-      "el": "Πτυχίο Μεταδευτεροβάθμιας Εκπαίδευσης (ΙΕΚ. ΚΕΚ κ.λπ)",
-      "en": "Post Secondary Non-Tertiary Education"
+      "el": "Χαμηλότερο επίπεδο εκπαίδευσης από ΑΕΙ",
+      "en": "Less than tertiary"
     },
     "dimensionId": "education_title",
-    "order": 2,
+    "order": 4,
     "shortName": null
   },
   {
@@ -599,17 +621,7 @@
       "en": "Master Level (in Greece)"
     },
     "dimensionId": "education_title",
-    "order": 4,
-    "shortName": null
-  },
-  {
-    "notation": "5",
-    "name": {
-      "el": "Πλήρης Μέση Εκπαίδευση",
-      "en": "Upper Secondary Education"
-    },
-    "dimensionId": "education_title",
-    "order": 8,
+    "order": 2,
     "shortName": null
   },
   {
@@ -619,7 +631,7 @@
       "en": "Doctoral Level (from another country)"
     },
     "dimensionId": "education_title",
-    "order": 1,
+    "order": 8,
     "shortName": null
   },
   {
@@ -629,7 +641,7 @@
       "en": "Doctoral Level (in Greece)"
     },
     "dimensionId": "education_title",
-    "order": 10,
+    "order": 1,
     "shortName": null
   },
   {
@@ -649,49 +661,9 @@
       "en": "Missing data"
     },
     "dimensionId": "education_title",
-    "order": 12,
+    "order": 9,
     "shortName": null,
     "color": "#a9a9a9"
-  },
-  {
-    "notation": "10",
-    "name": {
-      "el": "Πτυχίο ΑΤΕΙ, ΤΕΙ, ΚΑΤΕ. ΚΑΤΕΕ",
-      "en": "Tertiary Education: Vocational"
-    },
-    "dimensionId": "education_title",
-    "order": 5,
-    "shortName": null
-  },
-  {
-    "notation": "11",
-    "name": {
-      "el": "Απόφοιτος Δημοτικού/μερικές τάξεις Δημοτικού",
-      "en": "Primary Education"
-    },
-    "dimensionId": "education_title",
-    "order": 13,
-    "shortName": null
-  },
-  {
-    "notation": "12",
-    "name": {
-      "el": "Τεχνική Επαγγελματική Σχολή/Τεχνικό Λύκειο",
-      "en": "Upper Secondary Education: Vocational"
-    },
-    "dimensionId": "education_title",
-    "order": 11,
-    "shortName": null
-  },
-  {
-    "notation": "13",
-    "name": {
-      "el": "Μερική Μέση Εκπαίδευση",
-      "en": "Lower Secondary Education"
-    },
-    "dimensionId": "education_title",
-    "order": 9,
-    "shortName": null
   },
   {
     "notation": "25-29",
@@ -762,7 +734,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#38A3E7"
   },
   {
     "notation": "2",
@@ -772,7 +745,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#1569C7"
   },
   {
     "notation": "3",
@@ -782,7 +756,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#FA8072"
   },
   {
     "notation": "4",
@@ -792,7 +767,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#007838"
   },
   {
     "notation": "5",
@@ -802,7 +778,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#C80000"
   },
   {
     "notation": "6",
@@ -812,7 +789,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#000080"
   },
   {
     "notation": "7",
@@ -822,7 +800,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#000000"
   },
   {
     "notation": "8",
@@ -832,7 +811,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#FFD000"
   },
   {
     "notation": "9",
@@ -842,7 +822,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#FF4100"
   },
   {
     "notation": "10",
@@ -852,7 +833,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#EC5800"
   },
   {
     "notation": "11",
@@ -862,7 +844,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#9C514A"
   },
   {
     "notation": "12",
@@ -872,7 +855,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#FF7F50"
   },
   {
     "notation": "13",
@@ -882,7 +866,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#007838"
   },
   {
     "notation": "14",
@@ -892,7 +877,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#00008B"
   },
   {
     "notation": "15",
@@ -902,7 +888,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#0004fc"
   },
   {
     "notation": "16",
@@ -912,7 +899,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#a9a9a9"
   },
   {
     "notation": "17",
@@ -922,7 +910,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#03C03C"
   },
   {
     "notation": "18",
@@ -932,7 +921,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#55bb36"
   },
   {
     "notation": "19",
@@ -942,7 +932,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#80DAEB"
   },
   {
     "notation": "20",
@@ -952,7 +943,8 @@
     },
     "dimensionId": "elections.party",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#ed3d26"
   },
   {
     "notation": "25-29",

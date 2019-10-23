@@ -152,8 +152,8 @@
     "id": "first_election_age_group",
     "type": "coded",
     "name": {
-      "en": "Decade of first Election",
-      "el": "Δεκαετία Πρώτης Εκλογής"
+      "en": "Age of first election in Parliament",
+      "el": "Ηλικία πρώτης εκλογής στο Κοινοβούλιο"
     },
     "groupId": "electoral_info"
   },
