@@ -50,6 +50,7 @@
           "en": "<span>Abstaining from national elections has increased significantly over the last decade. While in the 1996, 2000 and 2004 parliamentary elections the abstention fluctuates around 24%, since 2007 there is a <span class=\"text-accent\">significant increase</span>, culminating in 37% in the June 2012 elections.</span>"
         },
         "visType": "chart",
+        "subType": "column",
         "seriesOptions": {
           "xAxis": "elections",
           "measure": "votes_perc",
@@ -66,6 +67,7 @@
           "en": "<span>In the May <span class=\"text-accent\">2012</span> more than <span class=\"text-accent\">1.000.000</span> votes were shared to parties outside Parliament, while in the <span class=\"text-accent\">2004</span> elections the votes to parties without parliamentary representation were only <span class=\"text-accent\">70.079</span>.</span>"
         },
         "visType": "chart",
+        "subType": "column",
         "seriesOptions": {
           "xAxis": "elections",
           "measure": "votes",
@@ -214,6 +216,7 @@
           "en": "<span>In 1476 cases of elected MPs between 1989 and 2019, 84% are <span class=\"text-accent\">men</span> and 16% are <span class=\"text-accent\">women</span>.The parliamentary composition with <span class=\"text-accent\">the lowest number of women</span> is the <span class=\"text-accent\">period 1989a</span> with only <span class=\"text-accent\">4% women</span>. By contrast, <span class=\"text-accent\">the highest number of women</span> was recorder in <span class=\"text-accent\">the period 2015a (23,2%)</span>.</span>"
         },
         "visType": "chart",
+        "subType": "column",
         "seriesOptions": {
           "xAxis": "elections.assembly",
           "dimensionFilters": {},
@@ -228,6 +231,7 @@
           "en": "<span><span class=\"text-accent\">The bigger an electoral constituency</span>, the more likely it is for and MP to derive from a <span class=\"text-accent\">\"political\" family</span>. Thus, <span class=\"text-accent\">in Athens B</span>, almost 1 in 5 MP <span class=\"text-accent\">have a relative previously elected</span> in Parliament.</span>"
         },
         "visType": "chart",
+        "subType": "column",
         "seriesOptions": {
           "xAxis": "elections.consti_size",
           "dimensionFilters": {},
@@ -242,6 +246,7 @@
           "en": "<span><span class=\"text-accent\">More than half (53,3%)</span> of all elected MPs <span class=\"text-accent\">from 1980 to 2019</span> hold a <span class=\"text-accent\">university degree</span>. <span class=\"text-accent\">Nearly two out of ten (19,8%)</span> hold a <span class=\"text-accent\">postgraduate degree</span> and a <span class=\"text-accent\">10,6% hold a PhD</span>. <span class=\"text-accent\">The Parliament of 2007 - 2009</span> is probably the most <span class=\"text-accent\">\"educated\" of the ‘Metapolitefsi’ era</span> as it has <span class=\"text-accent\">the most PhD holders (15.1%)</span> of the last thirty years.</span>"
         },
         "visType": "chart",
+        "subType": "column",
         "seriesOptions": {
           "xAxis": "elections.assembly",
           "dimensionFilters": {},
@@ -602,6 +607,7 @@
           "en": "<span><span class=\"text-accent\">About one out of three students</span> had a conversion on the referendum and the 2015 national elections. <span class=\"text-accent\">Nine out of ten</span> have discussed about the refugees who came to Greece, and <span class=\"text-accent\">over eight out of ten</span> have discussed that many young people due to the high rates of unemployment have left the country.</span>"
         },
         "visType": "chart",
+        "subType": "column",
         "seriesOptions": {
           "dimensionFilters": {},
           "measure": "adolescents_perc",
@@ -615,6 +621,7 @@
           "en": "<span>The <span class=\"text-accent\">majority</span> of students <span class=\"text-accent\">feel proud \"for the history of our country\" (81.6%)</span> and about <span class=\"text-accent\">half of them \"for successes in Art and Literature\" (56.2%)</span>. <span class=\"text-accent\">\"The achievements of our economy\" make students less proud</span>.</span>"
         },
         "visType": "chart",
+        "subType": "column",
         "seriesOptions": {
           "xAxis": "q35",
           "measure": "adolescents_perc",
@@ -628,6 +635,7 @@
           "en": "<span><span class=\"text-accent\">For most students a \"True Greek\"</span> is someone who <span class=\"text-accent\">\"wishes to be Greek\" (60,9%)</span>, and <span class=\"text-accent\">\"respects the institutions of the country\" (54,5%)</span>. <span class=\"text-accent\">Older students</span> recognize more the <span class=\"text-accent\">value of self-determination</span> (\"Wishes to be a Greek\").</span>"
         },
         "visType": "chart",
+        "subType": "column",
         "seriesOptions": {
           "xAxis": "q33",
           "measure": "adolescents_perc",
@@ -697,6 +705,7 @@
           "en": "<span>During the period 1996-2014 the <span class=\"text-accent\">main protest requests</span> concern <span class=\"text-accent\">work</span> and <span class=\"text-accent\">education</span>.</span>"
         },
         "visType": "chart",
+        "subType": "column",
         "seriesOptions": {
           "xAxis": "ISSUES.ISFIELD",
           "measure": "claims_count",

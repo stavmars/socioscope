@@ -12,7 +12,7 @@ import { IDimension } from 'app/shared/model/dimension.model';
 import { ISeriesPoint } from 'app/shared/model/series-point.model';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeries } from 'app/shared/model/series.model';
-import { ISeriesOptions } from 'app/shared/model/series-options.model';
+import { IDimensionFilters, ISeriesOptions } from 'app/shared/model/series-options.model';
 import { accentColors, chartColors } from 'app/config/constants';
 // tslint:disable:no-submodule-imports
 import HC_exporting from 'highcharts/modules/exporting';
@@ -29,6 +29,7 @@ export interface IChartVisProp {
   loadingSeries: boolean;
   showLegend: boolean;
   showLabels: boolean;
+  chartType: string;
 }
 
 const prepareSeriesByParent = (codesByNotation, seriesList: ISeries[]) =>
@@ -89,6 +90,37 @@ const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[]
   return _.sortBy(chartPoints, 'codeOrder', 'name');
 };
 
+const parseDimensionFilters = (dimensions: IDimension[], dimensionFilters: IDimensionFilters, dimensionCodes: any) => {
+  let result = '';
+  for (const filter in dimensionFilters) {
+    if (dimensionFilters.hasOwnProperty(filter)) {
+      const dimension = _.keyBy(dimensions, 'id')[filter];
+      result +=
+        translateEntityField(dimension.name) +
+        ': ' +
+        translateEntityField(dimensionCodes[dimension.id].codesByNotation[dimensionFilters[filter]].name) +
+        ', ';
+    }
+  }
+  return result.substr(0, result.length - 2);
+};
+
+export const getChartTitle = (dataset: IDataSet, seriesOptions: ISeriesOptions) => {
+  const { xAxis, compareBy } = seriesOptions;
+  const xAxisDimension = _.find(dataset.dimensions, { id: xAxis }) as IDimension;
+  return (
+    translateEntityField(dataset.name) +
+    ': ' +
+    translateEntityField(xAxisDimension.name) +
+    (compareBy ? ' - ' + translateEntityField(_.find(dataset.dimensions, { id: compareBy }).name) : '')
+  );
+};
+
+export const getChartSubTitle = (seriesOptions: ISeriesOptions, dimensions: IDimension[], dimensionCodes: any) =>
+  !_.isEmpty(seriesOptions.dimensionFilters)
+    ? `(${parseDimensionFilters(dimensions, seriesOptions.dimensionFilters, dimensionCodes)})`
+    : '';
+
 export class ChartVis extends React.Component<IChartVisProp> {
   innerChart = React.createRef<HighchartsReact>();
 
@@ -100,45 +132,19 @@ export class ChartVis extends React.Component<IChartVisProp> {
     this.innerChart.current.chart.print();
   }
 
-  exportSVG() {
+  exportChart(type) {
+    const { dataset, seriesOptions, dimensionCodes } = this.props;
     this.innerChart.current.chart.exportChart(
-      { type: 'image/svg+xml' },
+      { type },
       {
-        chart: {
-          height: '100%'
-        }
-      }
-    );
-  }
-
-  exportPNG() {
-    this.innerChart.current.chart.exportChart(
-      { type: 'image/png' },
-      {
-        chart: {
-          height: '100%'
-        }
-      }
-    );
-  }
-
-  exportPDF() {
-    this.innerChart.current.chart.exportChart(
-      { type: 'application/pdf' },
-      {
-        chart: {
-          height: '100%'
-        }
-      }
-    );
-  }
-
-  exportJPEG() {
-    this.innerChart.current.chart.exportChart(
-      { type: 'image/jpeg' },
-      {
-        chart: {
-          height: '100%'
+        title: {
+          text: getChartTitle(dataset, seriesOptions),
+          style: {
+            fontSize: '25px'
+          }
+        },
+        subtitle: {
+          text: getChartSubTitle(seriesOptions, dataset.dimensions, dimensionCodes)
         }
       }
     );
@@ -215,15 +221,17 @@ export class ChartVis extends React.Component<IChartVisProp> {
 
     const measure = seriesOptions.measure ? _.find(dataset.measures, { id: seriesOptions.measure }) : dataset.measures[0];
     const xAxisName = translateEntityField(xAxisDimension.name);
+    const dataSetName = translateEntityField(dataset.name);
     const xAxisDesc = translateEntityField(xAxisDimension.description);
     const xAxisText =
       !xAxisDesc || xAxisName === xAxisDesc ? xAxisName : `<div>${xAxisName}</div><div class="x-axis-subtitle">${xAxisDesc}</div>`;
     const options = {
       chart: {
-        type: xAxisDimension.type === 'time' ? 'spline' : 'column',
+        type: xAxisDimension.type === 'time' ? 'spline' : this.props.chartType === null ? 'column' : this.props.chartType,
         height: window.innerWidth > 768 ? '50%' : null,
         zoomType: 'x',
         className: dataset.colorScheme,
+        style: { fontFamily: 'BPnoScript', fontWeight: 'bold' },
         events: {
           // tslint:disable-next-line
           drilldown: function(e) {
@@ -238,28 +246,26 @@ export class ChartVis extends React.Component<IChartVisProp> {
           }
         }
       },
-      title: {
-        text: undefined
-      },
+      title: { text: undefined },
       xAxis: {
         type: xAxisDimension.type === 'time' ? 'datetime' : 'category',
         title: {
           useHTML: true,
           text: xAxisText,
-          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '20px' : '9px' }
+          style: { fontSize: window.innerWidth > 768 ? '20px' : '9px' }
         },
         labels: {
-          style: { fontFamily: 'ProximaNovaSemibold', fontSize: window.innerWidth > 768 ? '14px' : '9px' }
+          style: { fontFamily: 'Proxima Nova Semibold', fontSize: window.innerWidth > 768 ? '14px' : '9px' }
         },
         offset: 2
       },
       yAxis: {
         title: {
           text: translateEntityField(measure.name),
-          style: { fontFamily: 'BPnoScriptBold', fontSize: window.innerWidth > 768 ? '20px' : '10px' }
+          style: { fontSize: window.innerWidth > 768 ? '20px' : '10px' }
         },
         labels: {
-          style: { fontFamily: 'ProximaNovaSemibold', fontSize: window.innerHeight > 768 ? '14px' : '10px' }
+          style: { fontFamily: 'Proxima Nova Semibold', fontSize: window.innerHeight > 768 ? '14px' : '10px' }
         },
         max: measure.type === 'percentage' && this.props.seriesList.length > 1 ? 100 : null,
         reversedStacks: false
@@ -272,7 +278,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
             enabled: showLabels,
             format: measure.type === 'percentage' ? '{y:.1f}%' : '{y}',
             style: {
-              fontFamily: 'BPnoScriptBold'
+              fontSize: '14px'
             }
           }
         }
@@ -287,13 +293,27 @@ export class ChartVis extends React.Component<IChartVisProp> {
         shared: false
       },
       legend: {
-        enabled: showLegend && this.props.seriesList.length > 1
+        enabled: showLegend && this.props.seriesList.length > 1,
+        useHTML: true,
+        labelFormatter() {
+          if (this.visible) {
+            return '<i class="check circle icon" style="color: ' + this.color + ';"></i>' + this.name;
+          }
+          return '<i class="circle outline icon"></i>' + this.name;
+        },
+        itemStyle: {
+          fontSize: window.innerHeight > 768 ? '14px' : '10px'
+        }
       },
       drilldown: {
         allowPointDrilldown: false
       },
       exporting: {
-        buttons: false
+        buttons: false,
+        url: 'http://localhost:7801',
+        chartOptions: {
+          chart: { height: '100%' }
+        }
       }
     };
 

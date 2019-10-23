@@ -24,7 +24,7 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
   render() {
     const { dataset, highlight, highlightSeries, dimensionCodes } = this.props;
     const { colorScheme } = dataset;
-    const { visType, seriesOptions } = highlight;
+    const { visType, subType, seriesOptions } = highlight;
     return (
       <div className={`dataset-card ${colorScheme}`}>
         <div className="dataset-card-header">
@@ -38,7 +38,7 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
                 <div className="highlight-vis">
                   {highlightSeries[highlight.id] &&
                     !highlightSeries[highlight.id].loading &&
-                    (highlight.visType === 'map' ? (
+                    (visType === 'map' ? (
                       <ChoroplethMapVis
                         dataset={dataset}
                         series={highlightSeries[highlight.id].series[0]}
@@ -56,6 +56,7 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
                         loadingSeries={false}
                         showLabels={false}
                         showLegend={false}
+                        chartType={subType}
                       />
                     ))}
                 </div>
@@ -66,7 +67,7 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
                   <br />
                   <a
                     className={`dataset-card-link ${colorScheme}`}
-                    href={`/dataset/${dataset.id}/data?${urlEncodeVisOptions({ visType, seriesOptions })}`}
+                    href={`/dataset/${dataset.id}/data?${urlEncodeVisOptions({ visType, subType, seriesOptions })}`}
                   >
                     {translate('home.dataset.explore')}
                   </a>

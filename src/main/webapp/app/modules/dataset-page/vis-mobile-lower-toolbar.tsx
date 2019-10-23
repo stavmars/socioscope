@@ -16,6 +16,7 @@ export interface IVisMobileLowerToolbarProp {
   togglePercentage(): void;
   exportChartOrMap(action): void;
   shareChartOrMap(action): void;
+  resetGraph(e): void;
 }
 
 export interface IVisToolBarState {
@@ -53,7 +54,10 @@ export class VisMobileLowerToolbar extends React.Component<IVisMobileLowerToolba
     return (
       <div className="mob-vis-lower-toolbar">
         <Menu fluid text className={colorScheme}>
-          <Menu.Item style={{ left: '5%' }}>
+          <Menu.Item>
+            <Image onClick={this.props.resetGraph} src="/content/images/Assets/Reset.svg" />
+          </Menu.Item>
+          <Menu.Item>
             <Image src="/content/images/Assets/Metric.svg" />
             <Checkbox
               className={colorScheme}

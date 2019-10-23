@@ -168,7 +168,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
 
     let advancedOptions = (
       <div>
-        {visType === 'chart' && dataset.id !== 'greek-election-results' && compare}
+        {visType !== 'map' && dataset.id !== 'greek-election-results' && compare}
         {filters}
       </div>
     );
@@ -188,7 +188,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
             onClick={this.handleOptions}
             style={{
               fontSize: '15px',
-              fontFamily: 'ProximaNovaSemibold',
+              fontFamily: 'Proxima Nova Semibold',
               padding: '10px 0 20px 0'
             }}
           >
@@ -213,7 +213,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
           <Image onClick={this.props.resetGraph} src="/content/images/Assets/Reset.svg" style={{ cursor: 'pointer' }} />
         </div>
 
-        {visType === 'chart' && (
+        {visType !== 'map' && (
           <div className="vis-xAxis vis-options-menu-item">
             <div className="vis-options-menu-label">
               <Image inline src={`/content/images/Assets/x-axis-${colorScheme}.svg`} style={{ paddingLeft: '5px', paddingRight: '10px' }} />

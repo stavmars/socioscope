@@ -7,6 +7,7 @@ export interface IHighlight {
   seriesOptions?: ISeriesOptions;
   level?: number;
   visType?: string;
+  subType?: string;
 }
 
 export const defaultValue: Readonly<IHighlight> = { description: {} };
