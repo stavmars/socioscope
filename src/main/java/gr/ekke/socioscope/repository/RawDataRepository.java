@@ -18,6 +18,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
 
@@ -52,7 +53,7 @@ public class RawDataRepository {
         //if the field is not an array these steps have no effect
         //but they remove documents with null or missing values in every case
         aggregationOperations.add(unwind(xAxis));
-        if (compareBy != null){
+        if (compareBy != null) {
             aggregationOperations.add(unwind(compareBy));
         }
 
@@ -93,7 +94,23 @@ public class RawDataRepository {
 
         Aggregation agg = Aggregation.newAggregation(aggregationOperations);
         log.debug("Mongo agg query to get multiple series from raw dataset {}: {} ", dataSet.getId(), agg);
-        return mongoTemplate.aggregate(agg, dataSet.getId(), Series.class).getMappedResults();
+
+        List<Series> seriesList = mongoTemplate.aggregate(agg, dataSet.getId(), Series.class).getMappedResults();
+
+        return fillZeroValues(seriesList);
+    }
+
+    private List<Series> fillZeroValues(List<Series> seriesList) {
+        // find distinct series point x values across all series
+        List<String> allKeys = seriesList.stream().flatMap(series -> series.getData().stream().map(SeriesPoint::getX)).distinct().collect(Collectors.toList());
+
+        seriesList.stream()
+            .forEach(series -> {
+                Set keys = series.getData().stream().map(SeriesPoint::getX).collect(Collectors.toSet());
+                List zeroPoints = allKeys.stream().filter(key -> !keys.contains(key)).map(key -> new SeriesPoint(key, 0d)).collect(Collectors.toList());
+                series.getData().addAll(zeroPoints);
+            });
+        return seriesList;
     }
 
 

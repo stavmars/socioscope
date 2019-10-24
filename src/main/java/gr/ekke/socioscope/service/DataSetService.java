@@ -265,7 +265,7 @@ public class DataSetService {
             });
     }
 
-    public List<Series> getCompositeDimensionSeries(DataSet dataset, Dimension xAxisDimension, Measure measure, SeriesOptions seriesOptions) {
+    private List<Series> getCompositeDimensionSeries(DataSet dataset, Dimension xAxisDimension, Measure measure, SeriesOptions seriesOptions) {
         List<String> composedOf = xAxisDimension.getComposedOf();
         Map<String, Series> seriesMap = new HashMap<>();
         DecimalFormat df = new DecimalFormat("#.0");
