@@ -323,7 +323,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
       },
       exporting: {
         buttons: false,
-        url: 'http://localhost:7801',
+        url: 'http://www.socioscope.gr/hc-export',
         chartOptions: {
           chart: { height: '100%' }
         }
