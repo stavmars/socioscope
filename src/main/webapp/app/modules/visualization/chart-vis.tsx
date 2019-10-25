@@ -242,7 +242,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
         type: xAxisDimension.type === 'time' ? 'spline' : this.props.chartType === null ? 'column' : this.props.chartType,
         height: window.innerWidth > 768 ? '50%' : null,
         zoomType: 'x',
-        className: dataset.colorScheme,
+        className: `chart ${dataset.colorScheme}`,
         style: { fontFamily: 'BPnoScript', fontWeight: 'bold' },
         events: {
           // tslint:disable-next-line
