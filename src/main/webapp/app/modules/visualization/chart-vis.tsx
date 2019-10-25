@@ -278,7 +278,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
           style: { fontSize: window.innerWidth > 768 ? '20px' : '10px' }
         },
         labels: {
-          style: { fontFamily: 'Proxima Nova Semibold', fontSize: window.innerHeight > 768 ? '14px' : '10px' }
+          style: { fontFamily: 'Proxima Nova Semibold', fontSize: window.innerWidth > 768 ? '14px' : '10px' }
         },
         max: measure.type === 'percentage' && this.props.seriesList.length > 1 ? 100 : null,
         reversedStacks: false
@@ -315,7 +315,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
           return '<i class="circle outline icon"></i>' + this.name;
         },
         itemStyle: {
-          fontSize: window.innerHeight > 768 ? '14px' : '10px'
+          fontSize: window.innerWidth > 768 ? '14px' : '10px'
         }
       },
       drilldown: {

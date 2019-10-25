@@ -36,6 +36,7 @@ $axis-labels-font-size: 15px;
   stroke: #1e1e1e;
   stroke-width: 4px;
 }
+
 .color-scheme-1 {
   .highcharts-color-0 {
     fill: $color-scheme-1-accent;
@@ -76,10 +77,6 @@ $axis-labels-font-size: 15px;
     font-size: 15px;
     border-radius: 0;
   }
-}
-
-.highcharts-legend-item {
-  font-family: BPnoScriptBold;
 }
 
 .x-axis-subtitle {
