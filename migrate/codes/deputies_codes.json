@@ -20,46 +20,6 @@
     "shortName": null
   },
   {
-    "notation": "1",
-    "name": {
-      "el": "Α' Περίοδος (17/11/1974 - 22/10/1977)",
-      "en": "01st Term (17/11/1974 - 22/10/1977)"
-    },
-    "dimensionId": "elections.assembly",
-    "order": 1,
-    "shortName": null
-  },
-  {
-    "notation": "2",
-    "name": {
-      "el": "Β' Περίοδος (20/11/1977 - 19/09/1981)",
-      "en": "02nd Term (20/11/1977 - 19/09/1981)"
-    },
-    "dimensionId": "elections.assembly",
-    "order": 2,
-    "shortName": null
-  },
-  {
-    "notation": "3",
-    "name": {
-      "el": "Γ' Περίοδος (18/10/1981 - 7/05/1985)",
-      "en": "03rd Term  (18/10/1981 - 7/05/1985)"
-    },
-    "dimensionId": "elections.assembly",
-    "order": 3,
-    "shortName": null
-  },
-  {
-    "notation": "4",
-    "name": {
-      "el": "Δ' Περίοδος (02/06/1985 - 02/06/1989)",
-      "en": "04th Term  (02/06/1985 - 02/06/1989)"
-    },
-    "dimensionId": "elections.assembly",
-    "order": 4,
-    "shortName": null
-  },
-  {
     "notation": "5",
     "name": {
       "el": "Ε' Περίοδος (18/6/1989 - 12/10/1989)",
