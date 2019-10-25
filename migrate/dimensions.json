@@ -374,7 +374,7 @@
       "en": "Compliance with duties"
     },
     "description": {
-      "el": "Μερικοί άνθρωποι  υποστηρίζουν ότι οι μαθητές/τριες πρέπει να κοιτούν τα μαθήματά τους και να αφήνουν τις άλλες ασχολίες για αργότερα",
+      "el": "Ερ. Μερικοί άνθρωποι  υποστηρίζουν ότι οι μαθητές/τριες πρέπει να κοιτούν τα μαθήματά τους και να αφήνουν τις άλλες ασχολίες για αργότερα",
       "en": "Some people argue that students need to look at their lessons and leave aside other activities for later"
     },
     "groupId": "school",
@@ -387,7 +387,7 @@
       "en": "Compliance in school"
     },
     "description": {
-      "el": "Οι μαθητές/τριες πρέπει να ακολουθούν τις οδηγίες των καθηγητών ακόμα και όταν διαφωνούν με αυτές",
+      "el": "Ερ. Οι μαθητές/τριες πρέπει να ακολουθούν τις οδηγίες των καθηγητών ακόμα και όταν διαφωνούν με αυτές",
       "en": "Students must follow the instructions of their teachers even when they disagree with them"
     },
     "groupId": "school",
@@ -400,7 +400,7 @@
       "en": "Participation in school decisions"
     },
     "description": {
-      "el": "Όταν οι μαθητές/τριες συμμετέχουν στις αποφάσεις που παίρνονται στο σχολείο, τα πράγματα λειτουργούν καλύτερα",
+      "el": "Ερ. Όταν οι μαθητές/τριες συμμετέχουν στις αποφάσεις που παίρνονται στο σχολείο, τα πράγματα λειτουργούν καλύτερα",
       "en": "When students participate in decisions taken at school, things work better"
     },
     "groupId": "school",
@@ -413,7 +413,7 @@
       "en": "Collective action in school"
     },
     "description": {
-      "el": "Οι μαθητές/τριες μπορούν να επηρεάσουν ότι συμβαίνει στο σχολείο τους όταν δρουν όλοι /ες μαζί, παρά ο καθένας μόνος του",
+      "el": "Ερ.  Οι μαθητές/τριες μπορούν να επηρεάσουν ότι συμβαίνει στο σχολείο τους όταν δρουν όλοι /ες μαζί, παρά ο καθένας μόνος του",
       "en": "Students can influence what happens in their school when they work all together, rather than on their own"
     },
     "groupId": "school",
@@ -491,6 +491,9 @@
       "el": "Οικογενειακές συνήθειες",
       "en": "Family habits"
     },
+    "description": {
+      "el": "Ερ. Νομίζεις ότι αυτές οι δηλώσεις περιγράφουν σωστά τους γονείς σου;"
+    },
     "groupId": "family",
     "type": "composite",
     "composedOf": [
@@ -531,6 +534,9 @@
       "el": "Πολιτικές απόψεις γονέων",
       "en": "Parent's political beliefs"
     },
+    "description": {
+      "el": "Ερ. Νομίζεις ότι αυτές οι δηλώσεις περιγράφουν σωστά τους γονείς σου;"
+    },
     "groupId": "politics",
     "type": "composite",
     "composedOf": [
@@ -546,10 +552,11 @@
       "en": "Citizen reaction to government decisions"
     },
     "description": {
-      "el": "Τι πρέπει να κάνουν οι πολίτες σε περίπτωση που διαφωνούν με μια κυβερνητική απόφαση",
+      "el": "Ερ. Τι πρέπει να κάνουν οι πολίτες σε περίπτωση που διαφωνούν με μια κυβερνητική απόφαση",
       "en": "What should citizens do in case they disagree with government's decision"
     },
     "groupId": "politics",
+    "order": "value_desc",
     "type": "coded"
   },
   {
@@ -559,7 +566,7 @@
       "en": "Interest in politics"
     },
     "description": {
-      "el": "Θα μπορούσες να πεις ότι η πολιτική σε ενδιαφέρει",
+      "el": "Ερ. Θα μπορούσες να πεις ότι η πολιτική σε ενδιαφέρει",
       "en": "Would you say that you are interested in politics?"
     },
     "groupId": "politics",
@@ -637,6 +644,9 @@
       "el": "Συζητήσεις για πολιτικά και κοινωνικά θέματα",
       "en": "Discussions about political and social issues"
     },
+    "description": {
+      "el": "Ερ. Τα τελευταία χρόνια, έχουν συμβεί στην Ελλάδα διάφορα πράγματα. Σου έτυχε να συζητήσεις για κάποιο από τα παρακάτω;"
+    },
     "groupId": "politics",
     "type": "composite",
     "composedOf": [
@@ -656,10 +666,11 @@
       "en": "Opinion on politicians"
     },
     "description": {
-      "el": "Άτομα που ασχολούνται με την πολιτική, όπως βουλευτές, υπουργοί κ.λπ., γιατί νομίζεις ότι το κάνουν στην πλειοψηφία τους",
+      "el": "Ερ. Άτομα που ασχολούνται με την πολιτική, όπως βουλευτές, υπουργοί κ.λπ., γιατί νομίζεις ότι το κάνουν στην πλειοψηφία τους",
       "en": "People involved in politics, such as deputies, ministers, etc., they do so for\u2026"
     },
     "groupId": "politics",
+    "order": "value_desc",
     "type": "coded"
   },
   {
@@ -669,7 +680,7 @@
       "en": "Opinion on the Greek society"
     },
     "description": {
-      "el": "Ποια είναι η γενική άποψή σου για την ελληνική κοινωνία",
+      "el": "Ερ. Ποια είναι η γενική άποψή σου για την ελληνική κοινωνία",
       "en": "What is your general view of Greek society?"
     },
     "groupId": "politics",
@@ -682,7 +693,7 @@
       "en": "Κnowledge of politics"
     },
     "description": {
-      "el": "Νομίζω ότι γνωρίζω περισσότερα πράγματα για την πολιτική σε σχέση με τους συνομήλικούς μου",
+      "el": "Ερ. Νομίζω ότι γνωρίζω περισσότερα πράγματα για την πολιτική σε σχέση με τους συνομήλικούς μου",
       "en": "I think I know more about politics than my peers"
     },
     "groupId": "politics",
@@ -695,7 +706,7 @@
       "en": "Participation in political discussions"
     },
     "description": {
-      "el": "Σε συζητήσεις για πολιτικά θέματα, συνήθως έχω κάτι να πω",
+      "el": "Ερ. Σε συζητήσεις για πολιτικά θέματα, συνήθως έχω κάτι να πω",
       "en": "In discussions on political issues, I usually have something to say"
     },
     "groupId": "politics",
@@ -708,10 +719,11 @@
       "en": "Consulting on political issues"
     },
     "description": {
-      "el": "Αν ήθελες να συμβουλευτείς κάποιον/α για ένα πολιτικό θέμα, ποιον ή ποια θα προτιμούσες  να ρωτήσεις",
+      "el": "Ερ. Αν ήθελες να συμβουλευτείς κάποιον/α για ένα πολιτικό θέμα, ποιον ή ποια θα προτιμούσες  να ρωτήσεις",
       "en": "If you wanted to consult someone on a political issue, whom would you prefer to ask?"
     },
     "groupId": "politics",
+    "order": "value_desc",
     "type": "coded"
   },
   {
@@ -721,7 +733,7 @@
       "en": "Opinion on the vote at 17"
     },
     "description": {
-      "el": "Σύμφωνα με νόμο που ψηφίστηκε, οι νέοι και οι νέες θα μπορούν πλέον να ψηφίζουν από τα 17. Εσύ θεωρείς αυτήν την αλλαγή",
+      "el": "Ερ. Σύμφωνα με νόμο που ψηφίστηκε, οι νέοι και οι νέες θα μπορούν πλέον να ψηφίζουν από τα 17. Εσύ θεωρείς αυτήν την αλλαγή",
       "en": "According to a recent voted law, young people of 17 years of age will now be able to vote. You consider this change"
     },
     "groupId": "politics",
@@ -820,6 +832,9 @@
     "name": {
       "el": "Ιδιότητες του πολίτη",
       "en": "Citizenship"
+    },
+    "description": {
+      "el": "Ερ. Πόσο σημαντικά είναι τα παρακάτω για να είναι κανείς καλός /ή Έλληνας /Ελληνίδα πολίτης;"
     },
     "groupId": "nation",
     "type": "composite",
@@ -940,6 +955,9 @@
       "el": "Πατριωτισμός",
       "en": "Patriotism"
     },
+    "description": {
+      "el": "Ερ. Ποια είναι η γνώμη σου για τις παρακάτω προτάσεις;"
+    },
     "groupId": "nation",
     "type": "composite",
     "composedOf": [
@@ -1049,6 +1067,9 @@
       "el": "Ο \"πραγματικός Έλληνας\" ",
       "en": "The \"true Greek\""
     },
+    "description": {
+      "el": "Ερ. Οι άνθρωποι έχουν διαφορετικές απόψεις για το τι σημαίνει να είναι κανείς \"πραγματικός  Έλληνας και πραγματική Ελληνίδα\". Κατά την άποψη σου πόσο σημαντικό είναι το καθένα από τα ακόλουθα για να είναι κανείς \"πραγματικός Έλληνας/πραγματική Ελληνίδα\";"
+    },
     "groupId": "nation",
     "type": "composite",
     "composedOf": [
@@ -1123,6 +1144,9 @@
     "name": {
       "el": "Εθνική περηφάνεια",
       "en": "National Pride"
+    },
+    "description": {
+      "el": "Ερ. Πόσο περήφανος /η νιώθεις για τα παρακάτω σχετικά με την Ελλάδα;"
     },
     "groupId": "nation",
     "type": "composite",
@@ -1217,6 +1241,9 @@
     "name": {
       "el": "Προσωπική ικανοποίηση",
       "en": "Personal satisfaction"
+    },
+    "description": {
+      "el": "Ερ. Θα ήθελες να μου πεις πόσο ικανοποιημένος/η νιώθεις τελευταία δίνοντας έναν αριθμό, ξεκινώντας από το 0 που σημαίνει ότι δεν νιώθεις καθόλου ικανοποιημένος/η και φτάνοντας στο 10 που σημαίνει ότι νιώθεις απόλυτα ικανοποιημένος/η:"
     },
     "groupId": "personality",
     "type": "composite",
@@ -1357,6 +1384,9 @@
     "name": {
       "el": "Αξίες για τη ζωή",
       "en": "Life values"
+    },
+    "description": {
+      "el": "Ερ. Αξιολόγησε τη σημασία των παρακάτω στοιχείων για τη ζωή σου, σήμερα αλλά και στο μέλλον"
     },
     "groupId": "personality",
     "type": "composite",
