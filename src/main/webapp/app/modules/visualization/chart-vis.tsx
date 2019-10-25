@@ -325,6 +325,11 @@ export class ChartVis extends React.Component<IChartVisProp> {
         buttons: false,
         url: 'http://www.socioscope.gr/hc-export',
         chartOptions: {
+          credits: {
+            enabled: true,
+            text: 'socioscope.gr',
+            style: { color: '#1e1e1e', fontSize: '18px' }
+          },
           chart: { height: '100%' }
         }
       }
