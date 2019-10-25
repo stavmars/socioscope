@@ -123,6 +123,11 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
       });
     }
     const mapOptions = {
+      chart: {
+        className: 'choropleth-map',
+        zoomType: 'x',
+        style: { fontFamily: 'BPnoScript', fontWeight: 'bold' }
+      },
       title: {
         text: ''
       },
@@ -167,7 +172,16 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
         }
       ],
       exporting: {
-        buttons: false
+        buttons: false,
+        url: 'http://www.socioscope.gr/hc-export',
+        chartOptions: {
+          credits: {
+            enabled: true,
+            text: 'socioscope.gr',
+            style: { color: '#1e1e1e', fontSize: '18px' }
+          },
+          chart: { height: '100%' }
+        }
       }
     };
 
