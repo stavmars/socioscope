@@ -534,9 +534,6 @@
       "el": "Πολιτικές απόψεις γονέων",
       "en": "Parent's political beliefs"
     },
-    "description": {
-      "el": "Ερ. Νομίζεις ότι αυτές οι δηλώσεις περιγράφουν σωστά τους γονείς σου;"
-    },
     "groupId": "politics",
     "type": "composite",
     "composedOf": [
