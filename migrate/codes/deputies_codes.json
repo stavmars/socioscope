@@ -1814,7 +1814,7 @@
       "en": "Mayor"
     },
     "dimensionId": "elections.local_post",
-    "order": 7,
+    "order": 3,
     "shortName": null
   },
   {
@@ -1824,7 +1824,7 @@
       "en": "Appointed Governor"
     },
     "dimensionId": "elections.local_post",
-    "order": 6,
+    "order": 7,
     "shortName": null
   },
   {
@@ -1834,7 +1834,7 @@
       "en": "Member of City Council"
     },
     "dimensionId": "elections.local_post",
-    "order": 1,
+    "order": 6,
     "shortName": null
   },
   {
@@ -1864,7 +1864,7 @@
       "en": "Perfecture Governor / Vice Governor"
     },
     "dimensionId": "elections.local_post",
-    "order": 3,
+    "order": 2,
     "shortName": null
   },
   {
@@ -1874,7 +1874,7 @@
       "en": "Regional Governor"
     },
     "dimensionId": "elections.local_post",
-    "order": 2,
+    "order": 1,
     "shortName": null
   },
   {

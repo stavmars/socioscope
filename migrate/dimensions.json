@@ -275,8 +275,7 @@
     "dependencies": [
       "elections.assembly"
     ],
-    "groupId": "pol_position",
-    "order": "value_desc"
+    "groupId": "pol_position"
   },
   {
     "id": "elections.party_post",
