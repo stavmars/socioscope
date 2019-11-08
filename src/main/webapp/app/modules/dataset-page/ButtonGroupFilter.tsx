@@ -43,7 +43,7 @@ export class ButtonGroupFilter extends React.Component<IButtonGroupFilterProp> {
           <span>{translateEntityField(dimension.name)}</span>
           {details && (
             <Popup wide trigger={<Icon link name="info circle" className={dataset.colorScheme} style={{ verticalAlign: 'top' }} />}>
-              <Popup.Content dangerouslySetInnerHTML={{ __html: details }} />
+              <Popup.Content className="dimension-details-popup" dangerouslySetInnerHTML={{ __html: details }} />
             </Popup>
           )}
         </div>
