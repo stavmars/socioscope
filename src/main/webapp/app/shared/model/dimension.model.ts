@@ -5,6 +5,7 @@ export interface IDimension {
   id?: string;
   name?: ILang;
   description?: ILang;
+  details?: ILang;
   groupId?: string;
   type?: string;
   order?: string;

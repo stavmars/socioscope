@@ -43,6 +43,8 @@ public class Dimension implements Serializable {
     @Field("description")
     private Map<String, @NotBlank String> description;
 
+    private Map<String, @NotBlank String> details;
+
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private String groupId;
 
@@ -118,6 +120,14 @@ public class Dimension implements Serializable {
     public Dimension description(Map<String, String> description) {
         this.description = description;
         return this;
+    }
+
+    public Map<String, String> getDetails() {
+        return details;
+    }
+
+    public void setDetails(Map<String, String> details) {
+        this.details = details;
     }
 
     public String getGroupId() {

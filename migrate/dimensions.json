@@ -363,6 +363,10 @@
       "el": "Δείκτης Κοινωνικής Προέλευσης",
       "en": "Social Class Index"
     },
+    "details": {
+      "el": "Ο ΔΚΠ είναι σύνθετος δείκτης και προκύπτει από:\n<ol>\n  <li>το επάγγελμα γονέων (ανοικτή ερώτηση που κωδικοποιήθηκε με βάση την ταξινόμηση ISCO-08)</li>\n  <li>το επίπεδο μόρφωσης γονέων (κλίμακα ISCED)</li>\n  <li>την περιοχή των σχολικών μονάδων (με βάση στοιχεία από την ΕΛΣΤΑΤ οι περιοχές αυτές κατατάχθηκαν σε υψηλού – μεσαίου – χαμηλού κοινωνικο-οικονομικού προφίλ).</li>\n</ol>  \nΤεκμηρίωση: Δρ. Γιώργος Μπιθυμήτρης, ΕΚΚΕ",
+      "en": "The SCI is a composite indicator formed by:\n<ol>\n  <li>parents’ occupation (open question coded with ISCO-08 classification)</li>\n  <li>parents’ educational level (ISCED classification)</li>\n  <li>the area of school units (based on data by HSA the areas are classified as high-medium-low socio-economic profile).</li>\n</ol>  \nDocumentation: Dr. Giorgos Bithymitris, EKKE"
+    },
     "groupId": "demographics",
     "type": "coded",
     "filterWidget": "button-group"
