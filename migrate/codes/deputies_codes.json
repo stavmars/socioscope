@@ -7,7 +7,8 @@
     },
     "dimensionId": "deputy_sex",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#2f7cff"
   },
   {
     "notation": "2",
@@ -17,7 +18,8 @@
     },
     "dimensionId": "deputy_sex",
     "order": null,
-    "shortName": null
+    "shortName": null,
+    "color": "#e6194B"
   },
   {
     "notation": "5",
