@@ -19,6 +19,8 @@ import { hideTopicsMenu, showTopicsMenu, hideMobileMenu } from 'app/shared/reduc
 import { setLocale } from 'app/shared/reducers/locale';
 import { connect } from 'react-redux';
 import { Header } from 'app/shared/layout/header/header';
+import BlogFeed from 'app/modules/blog/blog-feed';
+import BlogPage from 'app/modules/blog/blog-page';
 
 // tslint:disable:space-in-parens
 const Account = Loadable({
@@ -57,6 +59,8 @@ export class Routes extends React.Component<IRoutesProps> {
           <PrivateRoute path="/entity" component={Entities} hasAnyAuthorities={[AUTHORITIES.USER]} />
           <ErrorBoundaryRoute path="/dataset" component={DataSetPage} />
           <ErrorBoundaryRoute path="/about" component={About} />
+          <ErrorBoundaryRoute path="/blog" component={BlogFeed} />
+          <ErrorBoundaryRoute path="/blog-page" component={BlogPage} />
           <ErrorBoundaryRoute path="/" component={Home} />
         </Switch>
       </div>

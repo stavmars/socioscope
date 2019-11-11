@@ -84,6 +84,9 @@ export class Header extends React.Component<IHeaderProps, {}> {
               <Menu.Item onClick={this.props.toggleTopicsMenu} active={this.props.isTopicsMenuVisible}>
                 <Translate contentKey="global.menu.topics">Topics</Translate>
               </Menu.Item>
+              <Menu.Item as={NavLink} to="/blog" exact isActive={this.isMenuItemActive}>
+                Blog
+              </Menu.Item>
               <Menu.Item as={HashLink} to="/about#project" exact isActive={this.isMenuItemActive}>
                 <Translate contentKey="global.menu.about">About</Translate>
               </Menu.Item>

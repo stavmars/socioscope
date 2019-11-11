@@ -1,0 +1,125 @@
+@import 'app/shared/common.scss';
+
+.blog-feed {
+  .title {
+    text-align: center;
+    font-family: BPnoScriptBold;
+    color: #401b00;
+    @include mobile {
+      font-size: 19px !important;
+      width: 284px;
+      height: 77px;
+    }
+    @include computer {
+      text-align: center;
+      font-size: 40px !important;
+      width: auto;
+      height: auto;
+    }
+    margin-top: 10px;
+  }
+  @include mobile {
+    padding-bottom: 16px;
+    background-color: #fafafa;
+  }
+  @include computer {
+    margin-top: 80px;
+    padding-bottom: 160px;
+    background-color: #e6e6e6;
+  }
+  .blog-feed-item {
+    @include computer {
+      margin-top: 80px;
+    }
+    .blog-feed-item-image {
+    }
+    .blog-feed-item-title {
+      font-family: BPnoScriptBold;
+      color: #401b00;
+      @include mobile {
+        font-size: 19px !important;
+        width: 284px;
+        height: 77px;
+      }
+      @include computer {
+        text-align: center;
+        font-size: 30px !important;
+        width: auto;
+        height: auto;
+      }
+    }
+    .blog-feed-item-subtitle {
+      font-family: ProximaNovaBold;
+      color: #1e1e1e;
+    }
+    .blog-feed-item-text {
+      font-family: ProximaNovaRegular;
+      color: #1e1e1e;
+    }
+    .blog-feed-item-button {
+      font-family: BPnoScriptBold;
+      background-color: transparent !important;
+      border-style: none !important;
+      float: right !important;
+    }
+  }
+}
+
+.blog-page {
+  @include mobile {
+    padding-bottom: 16px;
+    background-color: #fafafa;
+  }
+  @include computer {
+    margin-top: 180px;
+    padding-bottom: 160px;
+    background-color: #e6e6e6;
+  }
+  .blog-page-title {
+    text-align: center;
+    font-family: BPnoScriptBold;
+    color: #401b00;
+    @include mobile {
+      font-size: 19px !important;
+      width: 284px;
+      height: 77px;
+    }
+    @include computer {
+      text-align: center;
+      font-size: 40px !important;
+      width: auto;
+      height: auto;
+    }
+  }
+  .blog-page-divider {
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    border: #1e1e1e 4px solid;
+    width: 4%;
+    margin-left: 46%;
+    margin-bottom: 2%;
+  }
+  .info-row {
+    .blog-page-image {
+      width: 60px;
+      height: 60px;
+    }
+    .blog-page-question {
+      font-family: BPnoScript;
+    }
+    .blog-page-answer {
+      font-family: BPnoScriptBold;
+    }
+  }
+  .blog-page-description {
+    text-align: center;
+    font: 20px/30px ProximaNovaRegular;
+    span {
+      font: 20px/30px ProximaNovaBold;
+    }
+    .blog-page-register {
+      font: 25px/35px ProximaNovaBold;
+    }
+  }
+}
