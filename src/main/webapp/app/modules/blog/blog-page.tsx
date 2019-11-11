@@ -1,3 +1,4 @@
+/* tslint:disable:max-line-length */
 import './blog.scss';
 
 import React from 'react';
