@@ -17,6 +17,7 @@ import { accentColors, chartColors } from 'app/config/constants';
 // tslint:disable:no-submodule-imports
 import HC_exporting from 'highcharts/modules/exporting';
 import moment from 'moment';
+import { translate } from 'react-jhipster';
 
 drilldown(Highcharts);
 HC_exporting(Highcharts);
@@ -115,6 +116,7 @@ const parseDimensionFilters = (dimensions: IDimension[], dimensionFilters: IDime
 export const getChartTitle = (dataset: IDataSet, seriesOptions: ISeriesOptions) => {
   const { xAxis, compareBy } = seriesOptions;
   const xAxisDimension = _.find(dataset.dimensions, { id: xAxis }) as IDimension;
+
   return (
     translateEntityField(dataset.name) +
     ': ' +
@@ -166,6 +168,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
     const { dimensions, colorScheme } = dataset;
     const { compareBy } = seriesOptions;
     const xAxisDimension = _.find(dimensions, { id: seriesOptions.xAxis }) as IDimension;
+
     let chartSeries = [{ data: [] }] as any;
 
     let seriesByParent;
@@ -231,6 +234,10 @@ export class ChartVis extends React.Component<IChartVisProp> {
       }
     }
 
+    if (chartSeries.length > 1) {
+      chartSeries.unshift({ name: translate('socioscopeApp.dataSet.visualization.legend.showAll'), data: [], color: 'black' });
+    }
+
     const measure = seriesOptions.measure ? _.find(dataset.measures, { id: seriesOptions.measure }) : dataset.measures[0];
     const xAxisName = translateEntityField(xAxisDimension.name);
     const dataSetName = translateEntityField(dataset.name);
@@ -245,8 +252,12 @@ export class ChartVis extends React.Component<IChartVisProp> {
         className: `chart ${dataset.colorScheme}`,
         style: { fontFamily: 'BPnoScript', fontWeight: 'bold' },
         events: {
-          // tslint:disable-next-line
-          drilldown: function(e) {
+          load() {
+            if (this.options.chart.forExport && chartSeries.length > 1) {
+              this.series[0].remove();
+            }
+          },
+          drilldown(e) {
             this.addSingleSeriesAsDrilldown(e.point, {
               name: e.point.series.name,
               data: prepareCategorySeriesData(
@@ -293,6 +304,34 @@ export class ChartVis extends React.Component<IChartVisProp> {
             style: {
               fontSize: '14px'
             }
+          },
+          events: {
+            legendItemClick() {
+              if (!this.index) {
+                if (this.visible) {
+                  this.chart.series.forEach(series => {
+                    series.hide();
+                  });
+                } else {
+                  this.chart.series.forEach(series => {
+                    series.show();
+                  });
+                }
+              } else {
+                if (this.visible) {
+                  this.hide();
+                } else {
+                  this.show();
+                }
+              }
+              const allVisible = this.chart.series.slice(1).every(series => series.visible);
+              if (allVisible) {
+                this.chart.series[0].show();
+              } else {
+                this.chart.series[0].hide();
+              }
+              return false;
+            }
           }
         }
       },
@@ -309,10 +348,13 @@ export class ChartVis extends React.Component<IChartVisProp> {
         enabled: showLegend && this.props.seriesList.length > 1,
         useHTML: true,
         labelFormatter() {
-          if (this.visible) {
-            return '<i class="check circle icon" style="color: ' + this.color + ';"></i>' + this.name;
+          const icon = this.visible
+            ? `<i class="check circle icon" style="color: ${this.color};"></i>`
+            : `<i class="circle outline icon"></i>`;
+          if (!this.index) {
+            return `${icon}<span style="font-style: italic">${this.name}</span>`;
           }
-          return '<i class="circle outline icon"></i>' + this.name;
+          return icon + this.name;
         },
         itemStyle: {
           fontSize: window.innerWidth > 768 ? '14px' : '10px'
@@ -330,7 +372,8 @@ export class ChartVis extends React.Component<IChartVisProp> {
             text: 'socioscope.gr',
             style: { color: '#1e1e1e', fontSize: '18px' }
           },
-          chart: { height: '100%' }
+          chart: { height: '100%' },
+          series: chartSeries
         }
       }
     };

@@ -37,6 +37,9 @@
           "compare": "… compare by:",
           "options": "More Options"
         },
+        "legend": {
+          "showAll": "(Show All)&nbsp"
+        },
         "print": "Print",
         "download": "Download as:"
       }
