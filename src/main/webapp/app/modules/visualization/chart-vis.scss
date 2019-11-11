@@ -17,6 +17,10 @@ $axis-labels-font-size: 15px;
   text-align: center;
 }
 
+.highcharts-title {
+  text-align: center;
+}
+
 .highcharts-axis-labels {
   fill: #1e1e1e;
   @include mobile {

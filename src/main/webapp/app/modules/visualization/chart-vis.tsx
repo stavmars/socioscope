@@ -147,6 +147,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
       { type },
       {
         title: {
+          useHTML: false,
           text: getChartTitle(dataset, seriesOptions),
           style: {
             fontSize: '25px'
@@ -164,7 +165,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
   }
 
   render() {
-    const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, showLabels, showLegend } = this.props;
+    const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, showLabels, showLegend, chartType } = this.props;
     const { dimensions, colorScheme } = dataset;
     const { compareBy } = seriesOptions;
     const xAxisDimension = _.find(dimensions, { id: seriesOptions.xAxis }) as IDimension;
@@ -246,7 +247,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
       !xAxisDesc || xAxisName === xAxisDesc ? xAxisName : `<div>${xAxisName}</div><div class="x-axis-subtitle">${xAxisDesc}</div>`;
     const options = {
       chart: {
-        type: xAxisDimension.type === 'time' ? 'spline' : this.props.chartType === null ? 'column' : this.props.chartType,
+        type: xAxisDimension.type === 'time' ? 'spline' : chartType === null ? 'column' : chartType,
         height: window.innerWidth > 768 ? '50%' : null,
         zoomType: 'x',
         className: `chart ${dataset.colorScheme}`,
@@ -270,14 +271,20 @@ export class ChartVis extends React.Component<IChartVisProp> {
           }
         }
       },
-      title: { text: undefined },
+      title: {
+        useHTML: true,
+        text: chartType === 'bar' ? xAxisText : undefined
+      },
       xAxis: {
         type: xAxisDimension.type === 'time' ? 'datetime' : 'category',
-        title: {
-          useHTML: true,
-          text: xAxisText,
-          style: { fontSize: window.innerWidth > 768 ? '20px' : '9px' }
-        },
+        title:
+          chartType === 'bar'
+            ? undefined
+            : {
+                useHTML: true,
+                text: xAxisText,
+                style: { fontSize: window.innerWidth > 768 ? '20px' : '9px' }
+              },
         labels: {
           style: { fontFamily: 'Proxima Nova Semibold', fontSize: window.innerWidth > 768 ? '14px' : '9px' }
         },
@@ -366,6 +373,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
       exporting: {
         buttons: false,
         url: 'http://www.socioscope.gr/hc-export',
+        allowHTML: true,
         chartOptions: {
           credits: {
             enabled: true,
