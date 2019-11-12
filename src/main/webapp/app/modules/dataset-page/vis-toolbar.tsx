@@ -8,7 +8,7 @@ import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { translate } from 'react-jhipster';
 import { IDimension } from 'app/shared/model/dimension.model';
-import { urlEncodeVisOptions } from './dataset-page-vis';
+import { urlEncodeVisOptions } from './dataset-page-reducer';
 
 // tslint:disable:jsx-no-lambda
 

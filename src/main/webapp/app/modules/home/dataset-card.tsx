@@ -5,7 +5,7 @@ import { IDataSet } from 'app/shared/model/data-set.model';
 import { IHighlight } from 'app/shared/model/highlight.model';
 import { connect } from 'react-redux';
 import { loadHighlight } from 'app/modules/highlights/highlights-reducer';
-import { urlEncodeVisOptions } from 'app/modules/dataset-page/dataset-page-vis';
+import { urlEncodeVisOptions } from 'app/modules/dataset-page/dataset-page-reducer';
 import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
 import ChartVis from 'app/modules/visualization/chart-vis';
 import { translateEntityField } from 'app/shared/util/entity-utils';

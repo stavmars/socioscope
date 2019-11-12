@@ -1,11 +1,10 @@
 /* tslint:disable:max-line-length */
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-import qs from 'qs';
 import {
   addCode,
   changeCompareBy,
-  getSeries,
+  getVisURL,
   initVis,
   IVisOptions,
   removeCode,
@@ -26,6 +25,7 @@ import VisMobileUpperToolbar from 'app/modules/dataset-page/vis-mobile-upper-too
 import VisToolbar from 'app/modules/dataset-page/vis-toolbar';
 import VisMobileLowerToolbar from 'app/modules/dataset-page/vis-mobile-lower-toolbar';
 import VisSeriesOptionMenu from 'app/modules/dataset-page/vis-series-option-menu';
+import qs from 'qs';
 
 // tslint:disable:jsx-no-lambda
 
@@ -67,18 +67,13 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
     this.props.updateVisOptions(dataset, { visType, subType, seriesOptions: { ...seriesOptions, measure: measure.id } });
   };
 
-  getCurrentURL = () => {
-    const encodedVisOptions = urlEncodeVisOptions({
+  copyCurrentURL = () => {
+    const textArea = document.createElement('textarea');
+    textArea.value = getVisURL(this.props.dataset.id, {
       visType: this.props.visType,
       subType: this.props.subType,
       seriesOptions: this.props.seriesOptions
     });
-    return window.location.protocol + '//' + window.location.host + '/dataset/' + this.props.dataset.id + '/data?' + encodedVisOptions;
-  };
-
-  copyCurrentURL = () => {
-    const textArea = document.createElement('textarea');
-    textArea.value = this.getCurrentURL();
     document.body.appendChild(textArea);
     textArea.select();
     try {
@@ -115,7 +110,11 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
   };
 
   shareChartOrMap = action => {
-    const link = this.getCurrentURL();
+    const link = getVisURL(this.props.dataset.id, {
+      visType: this.props.visType,
+      subType: this.props.subType,
+      seriesOptions: this.props.seriesOptions
+    });
     const sharable = encodeURIComponent(link);
     const chartTitle = encodeURIComponent(getChartTitle(this.props.dataset, this.props.seriesOptions));
     const chartSubTitle = encodeURIComponent(
@@ -270,22 +269,6 @@ const parseRouteVisOptions = (query: string): IVisOptions => {
   return { visType, subType, seriesOptions };
 };
 
-export const urlEncodeVisOptions = (visOptions: IVisOptions) => {
-  const { visType, subType, seriesOptions = {} } = visOptions;
-  return qs.stringify(
-    {
-      type: visType,
-      subType,
-      x: seriesOptions.xAxis,
-      compare: seriesOptions.compareBy,
-      filters: seriesOptions.dimensionFilters,
-      measure: seriesOptions.measure,
-      codes: seriesOptions.compareCodes
-    },
-    { skipNulls: true }
-  );
-};
-
 const mapStateToProps = (storeState: IRootState, ownProps) => ({
   routeVisOptions: parseRouteVisOptions(ownProps.location.search),
   dataset: ownProps.dataset,
@@ -300,7 +283,6 @@ const mapStateToProps = (storeState: IRootState, ownProps) => ({
 });
 
 const mapDispatchToProps = {
-  getSeries,
   showHeader,
   hideHeader,
   updateVisOptions,

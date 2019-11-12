@@ -8,7 +8,7 @@ import { updateVisOptions } from 'app/modules/dataset-page/dataset-page-reducer'
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import { IDimension } from 'app/shared/model/dimension.model';
-import { urlEncodeVisOptions } from './dataset-page-vis';
+import { urlEncodeVisOptions } from './dataset-page-reducer';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
 
 export interface IVisMobileUpperToolbarProp extends DispatchProps {

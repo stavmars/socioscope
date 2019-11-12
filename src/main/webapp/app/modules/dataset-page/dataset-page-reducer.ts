@@ -7,6 +7,7 @@ import { IDimensionCode } from 'app/shared/model/dimension-code.model';
 import { IDimension } from 'app/shared/model/dimension.model';
 import _ from 'lodash';
 import { unflattenDimensionCodes } from 'app/shared/util/entity-utils';
+import qs from 'qs';
 
 export interface IVisOptions {
   visType: string;
@@ -170,12 +171,14 @@ export const getDimensionCodeLists = (dataSet: IDataSet) => ({
   })
 });
 
-export const getSeries = (id, seriesOptions: ISeriesOptions) => {
+export const getSeries = id => (dispatch, getState) => {
+  const { visType, subType, seriesOptions } = getState().datasetPage;
+  history.pushState(null, null, getVisURL(id, { visType, subType, seriesOptions }));
   const requestUrl = `${datasetApiUrl}/${id}/series`;
-  return {
+  return dispatch({
     type: ACTION_TYPES.FETCH_SERIES,
     payload: axios.post(requestUrl, seriesOptions)
-  };
+  });
 };
 
 export const setFilterValue = (dataset: IDataSet, dimensionId: string, filterValue: string) => (dispatch, getState) => {
@@ -184,7 +187,7 @@ export const setFilterValue = (dataset: IDataSet, dimensionId: string, filterVal
     payload: { dimensionId, filterValue }
   });
   const { seriesOptions } = getState().datasetPage;
-  dispatch(getSeries(dataset.id, seriesOptions));
+  dispatch(getSeries(dataset.id));
 };
 
 export const removeFilter = (dataset: IDataSet, dimensionId: string) => (dispatch, getState) => {
@@ -193,7 +196,7 @@ export const removeFilter = (dataset: IDataSet, dimensionId: string) => (dispatc
     payload: { dimensionId }
   });
   const { seriesOptions } = getState().datasetPage;
-  dispatch(getSeries(dataset.id, seriesOptions));
+  dispatch(getSeries(dataset.id));
 };
 
 export const addCode = (dataset: IDataSet, code: string) => (dispatch, getState) => {
@@ -202,7 +205,7 @@ export const addCode = (dataset: IDataSet, code: string) => (dispatch, getState)
     payload: { code }
   });
   const { seriesOptions } = getState().datasetPage;
-  dispatch(getSeries(dataset.id, seriesOptions));
+  dispatch(getSeries(dataset.id));
 };
 
 export const removeCode = (dataset: IDataSet, code: string) => (dispatch, getState) => {
@@ -211,7 +214,7 @@ export const removeCode = (dataset: IDataSet, code: string) => (dispatch, getSta
     payload: { code }
   });
   const { seriesOptions } = getState().datasetPage;
-  dispatch(getSeries(dataset.id, seriesOptions));
+  dispatch(getSeries(dataset.id));
 };
 
 export const removeCompare = (dataset: IDataSet) => (dispatch, getState) => {
@@ -219,7 +222,7 @@ export const removeCompare = (dataset: IDataSet) => (dispatch, getState) => {
     type: ACTION_TYPES.REMOVE_COMPARE
   });
   const { seriesOptions } = getState().datasetPage;
-  dispatch(getSeries(dataset.id, seriesOptions));
+  dispatch(getSeries(dataset.id));
 };
 
 export const changeCompareBy = (dataset: IDataSet, compareBy: string) => (dispatch, getState) => {
@@ -228,7 +231,7 @@ export const changeCompareBy = (dataset: IDataSet, compareBy: string) => (dispat
     payload: compareBy
   });
   const { seriesOptions } = getState().datasetPage;
-  dispatch(getSeries(dataset.id, seriesOptions));
+  dispatch(getSeries(dataset.id));
 };
 
 export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => (dispatch, getState) => {
@@ -264,7 +267,7 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
     type: ACTION_TYPES.UPDATE_VIS_OPTIONS,
     payload: { visType, subType, seriesOptions: newSeriesOptions }
   });
-  dispatch(getSeries(dataset.id, newSeriesOptions));
+  dispatch(getSeries(dataset.id));
 };
 
 export const initVis = (dataset: IDataSet, visOptions: IVisOptions) => async dispatch => {
@@ -274,3 +277,22 @@ export const initVis = (dataset: IDataSet, visOptions: IVisOptions) => async dis
   await dispatch(getDimensionCodeLists(dataset));
   dispatch(updateVisOptions(dataset, visOptions));
 };
+
+export const urlEncodeVisOptions = (visOptions: IVisOptions) => {
+  const { visType, subType, seriesOptions = {} } = visOptions;
+  return qs.stringify(
+    {
+      type: visType,
+      subType,
+      x: seriesOptions.xAxis,
+      compare: seriesOptions.compareBy,
+      filters: seriesOptions.dimensionFilters,
+      measure: seriesOptions.measure,
+      codes: seriesOptions.compareCodes
+    },
+    { skipNulls: true }
+  );
+};
+
+export const getVisURL = (datasetId: string, visOptions: IVisOptions) =>
+  window.location.protocol + '//' + window.location.host + '/dataset/' + datasetId + '/data?' + urlEncodeVisOptions(visOptions);
