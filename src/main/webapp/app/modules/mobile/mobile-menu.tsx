@@ -49,7 +49,7 @@ export class MobileMenu extends React.Component<IMobileMenuProps> {
             <div className="mobile-menu-items">
               <List.Content>
                 <List.Header>
-                  <NavLink className="mobile-menu-item" to="/blog/six-dogs-event">
+                  <NavLink className="mobile-menu-item" to="/blog" exact>
                     BLOG
                   </NavLink>
                 </List.Header>
