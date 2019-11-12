@@ -54,6 +54,13 @@ export class MobileMenu extends React.Component<IMobileMenuProps> {
                   </NavLink>
                 </List.Header>
               </List.Content>
+              <List.Content style={{ marginTop: '10px' }}>
+                <List.Header>
+                  <NavLink className="mobile-menu-item" to="/blog/six-dogs-event">
+                    BLOG
+                  </NavLink>
+                </List.Header>
+              </List.Content>
             </div>
           </List.Item>
         </List>
