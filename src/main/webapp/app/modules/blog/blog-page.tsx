@@ -5,11 +5,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getSession } from 'app/shared/reducers/authentication';
 import { showHeader } from 'app/shared/reducers/header';
-import { Button, Container, Grid, Image, Menu, Icon } from 'semantic-ui-react';
+import { Button, Container, Grid, Icon, Image, Menu } from 'semantic-ui-react';
 
 export class BlogPage extends React.Component<DispatchProps> {
   componentDidMount() {
-    this.props.getSession();
     this.props.showHeader();
   }
 
@@ -17,12 +16,11 @@ export class BlogPage extends React.Component<DispatchProps> {
     return (
       <div className="blog-page">
         <h1 className="blog-page-title">Πρόσκληση παρουσίασης του νέου Socioscope.gr</h1>
-        <div className="blog-page-divider" />
-        <Grid className="blog-page-grid">
+        <Grid centered padded className="blog-page-grid">
           <Grid.Row className="info-row">
             <Grid.Column className="blog-page-col-1">
               <Image className="blog-page-image" src="/content/images/Assets/Calendar.png" />
-              <span className="blog-page-question">Πότε;</span>
+              Πότε;
             </Grid.Column>
             <Grid.Column computer={3} mobile={10} className="blog-page-answer" verticalAlign="middle">
               Τρίτη 19 Νοεμβρίου 2019
@@ -36,7 +34,7 @@ export class BlogPage extends React.Component<DispatchProps> {
           >
             <Grid.Column className="blog-page-col-1">
               <Image className="blog-page-image" src="/content/images/Assets/Pin.png" />
-              <span className="blog-page-question">Πού;</span>
+              Πού;
             </Grid.Column>
             <Grid.Column computer={3} mobile={10} className="blog-page-answer" verticalAlign="middle">
               s.i.x. dogs (Στο Gig Space) Αμβρωτίου 6-8, Αθήνα 105 51
@@ -45,52 +43,46 @@ export class BlogPage extends React.Component<DispatchProps> {
           <Grid.Row className="info-row">
             <Grid.Column className="blog-page-col-1">
               <Image className="blog-page-image" src="/content/images/Assets/Clock.png" />
-              <span className="blog-page-question">Ώρα;</span>
+              Ώρα;
             </Grid.Column>
             <Grid.Column computer={3} mobile={10} className="blog-page-answer" verticalAlign="middle">
               14:00 - 16:00
             </Grid.Column>
           </Grid.Row>
         </Grid>
-        <Container className="blog-page-description">
+        <Container text className="blog-page-description">
           <p>
-            Σήμερα όπου η ανάγκη για τεκμηριωμένα δεδομένα είναι πιο επιτακτική από ποτέ, το <span>Socioscope.gr</span> του{' '}
-            <span>Εθνικού Κέντρου Κοινωνικών Ερευνών</span>, προσφέρει δεδομένα <span>ανοικτά</span> στο ευρύ κοινό από έρευνες σε ποικίλους
-            τομείς της <span>κοινωνικής</span> και <span>πολιτικής</span> ζωής της Ελλάδας
+            Σήμερα όπου η ανάγκη για τεκμηριωμένα δεδομένα είναι πιο επιτακτική από ποτέ, το <b>Socioscope.gr</b> του{' '}
+            <b>Εθνικού Κέντρου Κοινωνικών Ερευνών</b>, προσφέρει δεδομένα <b>ανοικτά</b> στο ευρύ κοινό από έρευνες σε ποικίλους τομείς της{' '}
+            <b>κοινωνικής</b> και <b>πολιτικής</b> ζωής της Ελλάδας
           </p>
           <p>Στην παρουσίαση θα μάθουμε:</p>
           <ul>
             <li>
-              <span>πώς να αντλούμε τα δεδομένα</span> που μας ενδιαφέρουν
+              <b>πώς να αντλούμε τα δεδομένα</b> που μας ενδιαφέρουν
             </li>
             <li>
-              <span>πώς να τα μεταφράζουμε</span> στα πλαίσια της αρθρογραφίας έρευνας
+              <b>πώς να τα μεταφράζουμε</b> στα πλαίσια της αρθρογραφίας έρευνας
             </li>
             <li>
-              <span>πώς να εξάγουμε γραφήματα</span> έτοιμα προς δημοσίευση
+              <b>πώς να εξάγουμε γραφήματα</b> έτοιμα προς δημοσίευση
             </li>
           </ul>
           <p>
-            και όλα αυτά με μια ανοιχτή <span>συζήτηση</span> μεταξύ διοργανωτών και συμμετεχόντων.
+            και όλα αυτά με μια ανοιχτή <b>συζήτηση</b> μεταξύ διοργανωτών και συμμετεχόντων.
           </p>
           <p>Σας περιμένουμε</p>
           <p>
-            <span>Μανίνα Κακεπάκη</span> Ερευνήτρια ΙΚΕ-ΕΚΚΕ{' '}
-            <span>
-              |{' '}
-              <a href="mailto:mkapekaki@ekke.gr" target="_blank">
-                mkapekaki@ekke.gr
-              </a>
-            </span>
+            <b>Μανίνα Κακεπάκη</b> Ερευνήτρια ΙΚΕ-ΕΚΚΕ /{' '}
+            <a href="mailto:mkapekaki@ekke.gr" target="_blank">
+              mkapekaki@ekke.gr
+            </a>
           </p>
           <p>
-            <span>Κατερίνα Ηλιού</span> Ερευνήτρια ΙΚΕ-ΕΚΚΕ{' '}
-            <span>
-              |{' '}
-              <a href="mailto:kiliou@ekke.gr" target="_blank">
-                kiliou@ekke.gr
-              </a>
-            </span>
+            <b>Κατερίνα Ηλιού</b> Ερευνήτρια ΙΚΕ-ΕΚΚΕ /{' '}
+            <a href="mailto:kiliou@ekke.gr" target="_blank">
+              kiliou@ekke.gr
+            </a>
           </p>
           <Button
             className="blog-page-register"

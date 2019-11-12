@@ -13,7 +13,6 @@ export class About extends React.Component<DispatchProps> {
   contextRef = createRef();
 
   componentDidMount() {
-    this.props.getSession();
     this.props.showHeader();
   }
 
