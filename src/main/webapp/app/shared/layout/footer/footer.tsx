@@ -4,7 +4,7 @@ import React from 'react';
 import { translate } from 'react-jhipster';
 import { Grid, Image, List, Responsive, Menu, Container } from 'semantic-ui-react';
 import { localeImage } from 'app/shared/util/entity-utils';
-import { HashLink } from 'react-router-hash-link';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => (
   <div>
@@ -58,10 +58,10 @@ const Footer = () => (
           <Grid.Row>
             <Grid.Column computer={window.innerWidth > 1920 ? 4 : 6} tablet={6}>
               <List id="app-footer-links" horizontal bulleted>
-                <List.Item as={HashLink} to="/blog">
+                <List.Item as={NavLink} to="/blog" exact>
                   BLOG
                 </List.Item>
-                <List.Item as={HashLink} to="/about#project">
+                <List.Item as={NavLink} to={{ pathname: '/about', hash: '#project' }}>
                   {translate('footer.about')}
                 </List.Item>
                 <List.Item as="a" href="https://www.roleplay.gr/" target="_blank">
