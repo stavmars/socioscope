@@ -59,8 +59,8 @@ export class Routes extends React.Component<IRoutesProps> {
           <PrivateRoute path="/entity" component={Entities} hasAnyAuthorities={[AUTHORITIES.USER]} />
           <ErrorBoundaryRoute path="/dataset" component={DataSetPage} />
           <ErrorBoundaryRoute path="/about" component={About} />
+          <ErrorBoundaryRoute path="/blog/six-dogs-event" component={BlogPage} />
           <ErrorBoundaryRoute path="/blog" component={BlogFeed} />
-          <ErrorBoundaryRoute path="/blog-page" component={BlogPage} />
           <ErrorBoundaryRoute path="/" component={Home} />
         </Switch>
       </div>

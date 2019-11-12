@@ -29,7 +29,7 @@ export class BlogFeed extends React.Component<DispatchProps> {
                 Σήμερα όπου η ανάγκη για τεκμηριωμένα δεδομένα είναι πιο επιτακτική από ποτέ το του Εθνικού Κέντρου Κοινωνικών Ερευνών
                 προσφέρει δεδομένα ανοικτά στο ευρύ κοινό από έρευνες σε ποικίλους τομείς της κοινωνικής και πολιτικής ζωής της Ελλάδας
               </p>
-              <Button className="blog-feed-item-button" as={Link} to="/blog-page">
+              <Button className="blog-feed-item-button" as={Link} to="/blog/six-dogs-event">
                 ΠΕΡΙΣΣΟΤΕΡΑ
               </Button>
             </Grid.Column>
