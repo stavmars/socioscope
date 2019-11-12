@@ -58,8 +58,14 @@ const Footer = () => (
           <Grid.Row>
             <Grid.Column computer={window.innerWidth > 1920 ? 4 : 6} tablet={6}>
               <List id="app-footer-links" horizontal bulleted>
+                <List.Item as={HashLink} to="/blog">
+                  BLOG
+                </List.Item>
                 <List.Item as={HashLink} to="/about#project">
                   {translate('footer.about')}
+                </List.Item>
+                <List.Item as="a" href="https://www.roleplay.gr/" target="_blank">
+                  DESIGN BY: ROLEPLAY
                 </List.Item>
               </List>
               <Image id="app-footer-logo" src="/content/images/Assets/Logo-white.png" as="a" href="/" />
