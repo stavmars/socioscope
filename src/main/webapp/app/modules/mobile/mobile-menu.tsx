@@ -49,9 +49,23 @@ export class MobileMenu extends React.Component<IMobileMenuProps> {
             <div className="mobile-menu-items">
               <List.Content>
                 <List.Header>
+                  <NavLink className="mobile-menu-item" to="/blog" exact>
+                    BLOG
+                  </NavLink>
+                </List.Header>
+              </List.Content>
+              <List.Content style={{ marginTop: '10px' }}>
+                <List.Header>
                   <NavLink className="mobile-menu-item" to="/about">
                     {translate('global.menu.about')}
                   </NavLink>
+                </List.Header>
+              </List.Content>
+              <List.Content style={{ marginTop: '10px' }}>
+                <List.Header>
+                  <a className="mobile-menu-item" href="https://www.roleplay.gr/" target="_blank">
+                    DESIGN BY: ROLEPLAY
+                  </a>
                 </List.Header>
               </List.Content>
             </div>
