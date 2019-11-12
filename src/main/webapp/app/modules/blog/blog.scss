@@ -1,31 +1,28 @@
 @import 'app/shared/common.scss';
 
 .blog-feed {
+  background-color: #e6e6e6;
   .title {
     text-align: center;
     font-family: BPnoScriptBold;
     color: #401b00;
     @include mobile {
       font-size: 19px !important;
-      width: 284px;
-      height: 77px;
+    }
+    @include tablet {
+      margin-top: 12%;
     }
     @include computer {
-      text-align: center;
       font-size: 40px !important;
-      width: auto;
-      height: auto;
     }
     margin-top: 10px;
   }
   @include mobile {
     padding-bottom: 16px;
-    background-color: #fafafa;
   }
   @include computer {
     margin-top: 80px;
     padding-bottom: 160px;
-    background-color: #e6e6e6;
   }
   .blog-feed-item {
     @include computer {
@@ -36,19 +33,22 @@
     .blog-feed-item-title {
       font-family: BPnoScriptBold;
       color: #401b00;
+      text-align: center;
       @include mobile {
         font-size: 19px !important;
-        width: 284px;
-        height: 77px;
       }
       @include computer {
-        text-align: center;
         font-size: 30px !important;
-        width: auto;
-        height: auto;
       }
     }
     .blog-feed-item-subtitle {
+      @include mobile {
+        font-size: 12px;
+        text-align: center;
+      }
+      @include computer {
+        font-size: 18px;
+      }
       font-family: ProximaNovaBold;
       color: #1e1e1e;
     }
@@ -66,29 +66,26 @@
 }
 
 .blog-page {
+  background-color: #e6e6e6;
   @include mobile {
     padding-bottom: 16px;
-    background-color: #fafafa;
+  }
+  @include tablet {
+    margin-top: 100px;
   }
   @include computer {
     margin-top: 180px;
     padding-bottom: 160px;
-    background-color: #e6e6e6;
   }
   .blog-page-title {
     text-align: center;
     font-family: BPnoScriptBold;
     color: #401b00;
     @include mobile {
-      font-size: 19px !important;
-      width: 284px;
-      height: 77px;
+      font-size: 25px !important;
     }
     @include computer {
-      text-align: center;
       font-size: 40px !important;
-      width: auto;
-      height: auto;
     }
   }
   .blog-page-divider {
@@ -100,26 +97,79 @@
     margin-left: 46%;
     margin-bottom: 2%;
   }
-  .info-row {
-    .blog-page-image {
-      width: 60px;
-      height: 60px;
+  .blog-page-grid {
+    @include mobile {
+      margin-left: 3%;
     }
-    .blog-page-question {
-      font-family: BPnoScript;
+    @include tablet {
+      margin-left: 20%;
     }
-    .blog-page-answer {
-      font-family: BPnoScriptBold;
+    @include computer {
+      margin-left: 30%;
+    }
+    .info-row {
+      .blog-page-col-1 {
+        padding: 0 !important;
+        width: 85px !important;
+        .blog-page-image {
+          height: 60px;
+          padding: 0 !important;
+          display: inline-flex !important;
+        }
+        .blog-page-question {
+          font-family: BPnoScript;
+          padding: 0 !important;
+        }
+      }
+      .blog-page-answer {
+        font-family: BPnoScriptBold;
+      }
     }
   }
   .blog-page-description {
     text-align: center;
-    font: 20px/30px ProximaNovaRegular;
+    @include mobile {
+      font: 15px/20px ProximaNovaRegular;
+    }
+    @include tablet {
+      font: 17px/22px ProximaNovaRegular;
+    }
+    @include computer {
+      font: 20px/30px ProximaNovaRegular;
+    }
     span {
-      font: 20px/30px ProximaNovaBold;
+      @include mobile {
+        font: 15px/20px ProximaNovaBold;
+      }
+      @include tablet {
+        font: 17px/22px ProximaNovaBold;
+      }
+      @include computer {
+        font: 20px/30px ProximaNovaBold;
+      }
     }
     .blog-page-register {
-      font: 25px/35px ProximaNovaBold;
+      background-color: white;
+      @include mobile {
+        font: 15px/25px ProximaNovaBold;
+      }
+      @include tablet {
+        font: 20px/30px ProximaNovaBold;
+      }
+      @include computer {
+        font: 25px/35px ProximaNovaBold;
+      }
+    }
+  }
+  .blog-page-contact {
+    @include mobile {
+      margin-left: 10% !important;
+    }
+    @include tablet {
+      margin-left: 33% !important;
+    }
+    @include computer {
+      margin-left: 40% !important;
     }
   }
 }
