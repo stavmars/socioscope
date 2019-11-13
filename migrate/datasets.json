@@ -2,8 +2,8 @@
   {
     "id": "greek-election-results",
     "name": {
-      "el": "Εκλογικά Αποτελέσματα",
-      "en": "Election Results"
+      "el": "Αποτελέσματα Εθνικών Εκλογών (1996 – 2015)",
+      "en": "National Election Results (1996 - 2015)"
     },
     "type": "qb",
     "colorScheme": "color-scheme-1",
@@ -98,8 +98,8 @@
   {
     "id": "deputies",
     "name": {
-      "el": "Πολιτικό Προσωπικό",
-      "en": "Members of Parliament"
+      "el": "Βουλευτές Ελληνικού Κοινοβουλίου (1989-2019)",
+      "en": "Members of the Greek Parliament (1989-2019)"
     },
     "type": "raw",
     "colorScheme": "color-scheme-2",
@@ -647,8 +647,8 @@
   {
     "id": "claims",
     "name": {
-      "el": "Κοινωνικές αντιπαραθέσεις και διαμαρτυρία - PROMAP",
-      "en": "Social Protests - PROMAP"
+      "el": "Κοινωνικές Αντιπαραθέσεις και Διαμαρτυρία-PROMAP",
+      "en": "Social Conflicts and Protest-PROMAP"
     },
     "type": "raw",
     "colorScheme": "color-scheme-3",
