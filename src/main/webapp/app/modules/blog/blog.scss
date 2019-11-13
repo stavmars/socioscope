@@ -1,0 +1,133 @@
+@import 'app/shared/common.scss';
+
+.blog-feed {
+  background-color: #e6e6e6;
+  .title {
+    text-align: center;
+    font-family: BPnoScriptBold;
+    color: #401b00;
+    @include mobile {
+      font-size: 19px !important;
+    }
+    @include computer {
+      font-size: 40px !important;
+    }
+    padding-top: 40px;
+  }
+  @include mobile {
+    padding-bottom: 16px;
+  }
+  @include computer {
+    margin-top: 80px;
+    padding-bottom: 160px;
+  }
+  .blog-feed-item {
+    @include computer {
+      margin-top: 80px;
+    }
+    .blog-feed-item-image {
+    }
+    .blog-feed-item-title {
+      font-family: BPnoScriptBold;
+      color: #401b00;
+      text-align: left;
+      @include mobile {
+        font-size: 19px !important;
+      }
+      @include computer {
+        font-size: 24px !important;
+      }
+    }
+    .blog-feed-item-subtitle {
+      @include mobile {
+        font-size: 12px;
+        text-align: center;
+      }
+      @include computer {
+        font-size: 16px;
+      }
+      font-family: ProximaNovaBold;
+      color: #1e1e1e;
+      margin-bottom: 10px;
+    }
+    .blog-feed-item-text {
+      font-family: ProximaNovaRegular;
+      color: #1e1e1e;
+    }
+    .blog-feed-item-button {
+      font-family: BPnoScriptBold;
+      background-color: transparent !important;
+      border-style: none !important;
+      float: right !important;
+    }
+  }
+}
+
+.blog-page {
+  background-color: #e6e6e6;
+  @include mobile {
+    padding-bottom: 16px;
+  }
+  @include tablet {
+    margin-top: 100px;
+  }
+  @include computer {
+    margin-top: 180px;
+    padding-bottom: 160px;
+  }
+  .blog-page-title {
+    text-align: center;
+    font-family: BPnoScriptBold;
+    color: #401b00;
+    @include mobile {
+      font-size: 16px !important;
+    }
+    @include computer {
+      font-size: 40px !important;
+    }
+  }
+  .blog-page-grid {
+    font-family: BPnoScriptBold;
+    .info-row {
+      font-size: 16px !important;
+      .blog-page-col-1 {
+        padding: 0 !important;
+        width: 85px !important;
+        .blog-page-image {
+          height: 60px;
+          padding: 0 !important;
+          display: inline-flex !important;
+        }
+        .blog-page-question {
+          font-family: BPnoScript;
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+  .blog-page-description {
+    list-style-position: inside;
+    text-align: center;
+    @include mobile {
+      font: 12px/24px ProximaNovaRegular !important;
+    }
+    @include computer {
+      font: 16px/35px ProximaNovaRegular !important;
+    }
+    .blog-page-register {
+      margin-top: 20px;
+      background-color: white;
+      @include mobile {
+        font: 12px/24px ProximaNovaBold !important;
+      }
+      @include computer {
+        font: 20px/30px ProximaNovaBold !important;
+      }
+    }
+  }
+  .blog-page-contact {
+    width: fit-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
