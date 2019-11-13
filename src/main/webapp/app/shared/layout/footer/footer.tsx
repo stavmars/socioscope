@@ -2,7 +2,7 @@ import './footer.scss';
 
 import React from 'react';
 import { translate } from 'react-jhipster';
-import { Grid, Image, List, Responsive, Menu, Container } from 'semantic-ui-react';
+import { Grid, Image, List, Responsive } from 'semantic-ui-react';
 import { localeImage } from 'app/shared/util/entity-utils';
 import { NavLink } from 'react-router-dom';
 
@@ -57,17 +57,16 @@ const Footer = () => (
         <Grid stackable>
           <Grid.Row>
             <Grid.Column computer={window.innerWidth > 1920 ? 4 : 6} tablet={6}>
-              <List id="app-footer-links" horizontal bulleted>
-                <List.Item as={NavLink} to="/blog" exact>
-                  BLOG
-                </List.Item>
-                <List.Item as={NavLink} to={{ pathname: '/about', hash: '#project' }}>
-                  {translate('footer.about')}
-                </List.Item>
-                <List.Item as="a" href="https://www.roleplay.gr/" target="_blank">
-                  DESIGN BY: ROLEPLAY
-                </List.Item>
-              </List>
+              <div>
+                <List id="app-footer-links" horizontal bulleted>
+                  <List.Item as={NavLink} to="/blog" exact>
+                    BLOG
+                  </List.Item>
+                  <List.Item as={NavLink} to={{ pathname: '/about', hash: '#project' }}>
+                    {translate('footer.about')}
+                  </List.Item>
+                </List>
+              </div>
               <Image id="app-footer-logo" src="/content/images/Assets/Logo-white.png" as="a" href="/" />
             </Grid.Column>
             <Grid.Column computer={4} tablet={4}>
@@ -82,6 +81,9 @@ const Footer = () => (
                 />
                 <Image src="/content/images/Assets/athena.png" as="a" href="https://www.athena-innovation.gr" target="_blank" />
               </Image.Group>
+              <a href="https://www.roleplay.gr/" target="_blank" style={{ color: '#ededed' }}>
+                Design by: Roleplay
+              </a>
             </Grid.Column>
             <Grid.Column computer={2} tablet={3}>
               <div style={{ height: 40 }}>CC BY 4.0</div>

@@ -37,7 +37,7 @@ export class BlogPage extends React.Component<DispatchProps> {
               Πού;
             </Grid.Column>
             <Grid.Column computer={3} mobile={10} className="blog-page-answer" verticalAlign="middle">
-              s.i.x. dogs (Στο Gig Space) Αμβρωτίου 6-8, Αθήνα 105 51
+              six d.o.g.s (Στο Gig Space) Αβραμιώτου 6-8, Αθήνα 105 51
             </Grid.Column>
           </Grid.Row>
           <Grid.Row className="info-row">
@@ -53,16 +53,19 @@ export class BlogPage extends React.Component<DispatchProps> {
         <Container text className="blog-page-description">
           <p>
             Σήμερα όπου η ανάγκη για τεκμηριωμένα δεδομένα είναι πιο επιτακτική από ποτέ, το <b>Socioscope.gr</b> του{' '}
-            <b>Εθνικού Κέντρου Κοινωνικών Ερευνών</b>, προσφέρει δεδομένα <b>ανοικτά</b> στο ευρύ κοινό από έρευνες σε ποικίλους τομείς της{' '}
-            <b>κοινωνικής</b> και <b>πολιτικής</b> ζωής της Ελλάδας
+            <a href="https://www.ekke.gr" target="_blank">
+              Εθνικού Κέντρου Κοινωνικών Ερευνών
+            </a>
+            , προσφέρει δεδομένα <b>ανοικτά</b> στο ευρύ κοινό από έρευνες σε ποικίλους τομείς της <b>κοινωνικής</b> και <b>πολιτικής</b>{' '}
+            ζωής της Ελλάδας
           </p>
-          <p>Στην παρουσίαση θα μάθουμε:</p>
+          <p>Στην παρουσίαση μεταξύ άλλων θα μάθουμε:</p>
           <ul>
             <li>
               <b>πώς να αντλούμε τα δεδομένα</b> που μας ενδιαφέρουν
             </li>
             <li>
-              <b>πώς να τα μεταφράζουμε</b> στα πλαίσια της αρθρογραφίας έρευνας
+              <b>πώς να τα μεταφράζουμε</b> στα πλαίσια της αρθρογραφίας/έρευνας
             </li>
             <li>
               <b>πώς να εξάγουμε γραφήματα</b> έτοιμα προς δημοσίευση

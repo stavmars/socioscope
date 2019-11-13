@@ -108,6 +108,9 @@
   .blog-page-description {
     list-style-position: inside;
     text-align: center;
+    b {
+      font-family: ProximaNovaBold;
+    }
     @include mobile {
       font: 12px/24px ProximaNovaRegular !important;
     }
