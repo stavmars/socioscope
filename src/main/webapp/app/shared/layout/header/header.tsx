@@ -32,6 +32,7 @@ export class Header extends React.Component<IHeaderProps, {}> {
     const mobileAboutPage = className === 'about-page-header' ? 'top' : null;
     const localeIcon =
       currentLocale === 'el' ? `/content/images/Assets/Lang-EN-${color}.svg` : `/content/images/Assets/Lang-EL-${color}.svg`;
+    const facebookIcon = `/content/images/Assets/Facebook-${color}.svg`;
 
     return (
       <div>
@@ -62,7 +63,10 @@ export class Header extends React.Component<IHeaderProps, {}> {
               <Menu.Item position="left" header as="a" href="/" style={{ padding: '18px 0 17px 15px' }}>
                 <Image src={`/content/images/Assets/Logo-${color}.svg`} alt="Socioscope Logo" style={{ height: '35', width: '144px' }} />
               </Menu.Item>
-              <Menu.Item onClick={this.handleLocaleChange} style={{ padding: '14px 0 13px 60px' }}>
+              <Menu.Item as="a" href="https://www.facebook.com/socioscope/" target="_blank" style={{ padding: '14px 10px 13px 60px' }}>
+                <Image src={facebookIcon} style={{ width: '27px', height: '27px' }} />
+              </Menu.Item>
+              <Menu.Item onClick={this.handleLocaleChange} style={{ padding: '14px 0 13px 0' }}>
                 <Image src={localeIcon} alt="language switcher" style={{ width: '27px', height: '27px' }} />
               </Menu.Item>
               <Menu.Item onClick={this.props.toggleMobileMenu} style={{ padding: '21px 20px 21px 18px' }}>
@@ -93,8 +97,11 @@ export class Header extends React.Component<IHeaderProps, {}> {
               {isAuthenticated && isAdmin && <AdminMenu showSwagger={isSwaggerEnabled} />}
               {isAuthenticated && <AccountMenu />}
               {/* <Menu.Item>
-                <Image src={`/content/images/Assets/Search-${color}.svg`} alt="search button" style={{ width: '32.5px', height: 'auto' }} />
-              </Menu.Item> */}
+              {/*  <Image src={`/content/images/Assets/Search-${color}.svg`} alt="search button" style={{ width: '32.5px', height: 'auto' }} />*/}
+              {/*</Menu.Item> *!/*/}
+              <Menu.Item as="a" href="https://www.facebook.com/socioscope/" target="_blank">
+                <Image src={facebookIcon} />
+              </Menu.Item>
               <Menu.Item onClick={this.handleLocaleChange}>
                 <Image src={localeIcon} alt="language switcher" style={{ width: '40px', height: 'auto' }} />
               </Menu.Item>
