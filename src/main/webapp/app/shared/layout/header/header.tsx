@@ -60,7 +60,7 @@ export class Header extends React.Component<IHeaderProps, {}> {
               style={{ backgroundColor: mobileAboutPage ? 'white' : null, borderStyle: 'none' }}
             >
               <Menu.Item position="left" header as="a" href="/" style={{ padding: '18px 0 17px 15px' }}>
-                <Image src={`/content/images/Assets/Logo-${color}.png`} alt="Socioscope Logo" style={{ height: '35', width: '144px' }} />
+                <Image src={`/content/images/Assets/Logo-${color}.svg`} alt="Socioscope Logo" style={{ height: '35', width: '144px' }} />
               </Menu.Item>
               <Menu.Item onClick={this.handleLocaleChange} style={{ padding: '14px 0 13px 60px' }}>
                 <Image src={localeIcon} alt="language switcher" style={{ width: '27px', height: '27px' }} />
@@ -75,7 +75,7 @@ export class Header extends React.Component<IHeaderProps, {}> {
           <div className={`app-header ${className || ''}`}>
             <Menu className={`app-header-menu ${className || ''}`} text fixed={isFixed ? 'top' : null}>
               <Menu.Item position="left" header as="a" href="/" style={{ padding: '20px 0 20px 0' }}>
-                <Image src={`/content/images/Assets/Logo-${color}.png`} alt="Socioscope Logo" style={{ height: '40px', width: 'auto' }} />
+                <Image src={`/content/images/Assets/Logo-${color}.svg`} alt="Socioscope Logo" style={{ height: '40px', width: 'auto' }} />
               </Menu.Item>
               <Menu.Item as={NavLink} to="/" exact isActive={this.isMenuItemActive}>
                 <Translate contentKey="global.menu.home">Home</Translate>

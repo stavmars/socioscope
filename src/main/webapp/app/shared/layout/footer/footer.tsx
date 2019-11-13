@@ -12,7 +12,7 @@ const Footer = () => (
       <div className="app-footer">
         <Grid rows={4}>
           <Grid.Row centered className="app-footer-logo">
-            <Image src="/content/images/Assets/Logo-white.png" as="a" href="/" />
+            <Image src="/content/images/Assets/Logo-white.svg" as="a" href="/" />
           </Grid.Row>
           <Grid.Row className="app-footer-text" columns={2}>
             <Grid.Column textAlign="center" style={{ padding: '28px 0 0 38px' }}>
@@ -67,7 +67,7 @@ const Footer = () => (
                   </List.Item>
                 </List>
               </div>
-              <Image id="app-footer-logo" src="/content/images/Assets/Logo-white.png" as="a" href="/" />
+              <Image id="app-footer-logo" src="/content/images/Assets/Logo-white.svg" as="a" href="/" />
             </Grid.Column>
             <Grid.Column computer={4} tablet={4}>
               <div style={{ height: 40 }}>{translate('footer.collaboration')}</div>
