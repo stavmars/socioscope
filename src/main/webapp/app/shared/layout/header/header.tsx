@@ -32,6 +32,7 @@ export class Header extends React.Component<IHeaderProps, {}> {
     const mobileAboutPage = className === 'about-page-header' ? 'top' : null;
     const localeIcon =
       currentLocale === 'el' ? `/content/images/Assets/Lang-EN-${color}.svg` : `/content/images/Assets/Lang-EL-${color}.svg`;
+    const facebookIcon = `/content/images/Assets/Facebook-${color}.svg`;
 
     return (
       <div>
@@ -93,8 +94,11 @@ export class Header extends React.Component<IHeaderProps, {}> {
               {isAuthenticated && isAdmin && <AdminMenu showSwagger={isSwaggerEnabled} />}
               {isAuthenticated && <AccountMenu />}
               {/* <Menu.Item>
-                <Image src={`/content/images/Assets/Search-${color}.svg`} alt="search button" style={{ width: '32.5px', height: 'auto' }} />
-              </Menu.Item> */}
+              {/*  <Image src={`/content/images/Assets/Search-${color}.svg`} alt="search button" style={{ width: '32.5px', height: 'auto' }} />*/}
+              {/*</Menu.Item> *!/*/}
+              <Menu.Item as="a" href="https://www.facebook.com/socioscope/" target="_blank">
+                <Image src={facebookIcon} />
+              </Menu.Item>
               <Menu.Item onClick={this.handleLocaleChange}>
                 <Image src={localeIcon} alt="language switcher" style={{ width: '40px', height: 'auto' }} />
               </Menu.Item>
