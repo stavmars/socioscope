@@ -2,7 +2,7 @@ import './mobile-menu.scss';
 import React from 'react';
 import { translate } from 'react-jhipster';
 import { Container, Image, List } from 'semantic-ui-react';
-import { NavLink as Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { toggleMobileMenu } from 'app/shared/reducers/header';
 import { connect } from 'react-redux';
 import { IRootState } from 'app/shared/reducers';
@@ -76,7 +76,8 @@ export class MobileMenu extends React.Component<IMobileMenuProps> {
   }
 }
 
-const mapStateToProps = ({ dataSet }: IRootState) => ({
+const mapStateToProps = ({ dataSet, locale }: IRootState) => ({
+  currentLocale: locale.currentLocale,
   dataSetsById: dataSet.entitiesById
 });
 
