@@ -64,9 +64,6 @@ const Footer = () => (
                 <List.Item as={NavLink} to={{ pathname: '/about', hash: '#project' }}>
                   {translate('footer.about')}
                 </List.Item>
-                <List.Item as="a" href="https://www.roleplay.gr/" target="_blank">
-                  DESIGN BY: ROLEPLAY
-                </List.Item>
               </List>
               <Image id="app-footer-logo" src="/content/images/Assets/Logo-white.png" as="a" href="/" />
             </Grid.Column>
@@ -82,6 +79,9 @@ const Footer = () => (
                 />
                 <Image src="/content/images/Assets/athena.png" as="a" href="https://www.athena-innovation.gr" target="_blank" />
               </Image.Group>
+              <a href="https://www.roleplay.gr/" target="_blank" style={{ color: '#ededed' }}>
+                Design by: Roleplay
+              </a>
             </Grid.Column>
             <Grid.Column computer={2} tablet={3}>
               <div style={{ height: 40 }}>CC BY 4.0</div>
