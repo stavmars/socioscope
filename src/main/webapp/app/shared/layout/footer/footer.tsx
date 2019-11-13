@@ -57,6 +57,7 @@ const Footer = () => (
         <Grid stackable>
           <Grid.Row>
             <Grid.Column computer={window.innerWidth > 1920 ? 4 : 6} tablet={6}>
+              <Image id="app-footer-logo" src="/content/images/Assets/Logo-white.svg" as="a" href="/" />
               <div>
                 <List id="app-footer-links" horizontal bulleted>
                   <List.Item as={NavLink} to="/blog" exact>
@@ -65,9 +66,11 @@ const Footer = () => (
                   <List.Item as={NavLink} to={{ pathname: '/about', hash: '#project' }}>
                     {translate('footer.about')}
                   </List.Item>
+                  <List.Item as="a" href="https://www.roleplay.gr/" target="_blank" style={{ color: '#ededed' }}>
+                    {translate('footer.design')}: <span style={{ color: 'orange' }}>ROLEPLAY</span>
+                  </List.Item>
                 </List>
               </div>
-              <Image id="app-footer-logo" src="/content/images/Assets/Logo-white.svg" as="a" href="/" />
             </Grid.Column>
             <Grid.Column computer={4} tablet={4}>
               <div style={{ height: 40 }}>{translate('footer.collaboration')}</div>
@@ -81,9 +84,6 @@ const Footer = () => (
                 />
                 <Image src="/content/images/Assets/athena.png" as="a" href="https://www.athena-innovation.gr" target="_blank" />
               </Image.Group>
-              <a href="https://www.roleplay.gr/" target="_blank" style={{ color: '#ededed' }}>
-                Design by: Roleplay
-              </a>
             </Grid.Column>
             <Grid.Column computer={2} tablet={3}>
               <div style={{ height: 40 }}>CC BY 4.0</div>
