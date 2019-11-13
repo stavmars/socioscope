@@ -70,6 +70,8 @@ public class Dimension implements Serializable {
 
     private String filterWidget;
 
+    private Boolean disableStacking;
+
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Dimension() {
@@ -215,6 +217,14 @@ public class Dimension implements Serializable {
 
     public void setDisableFilter(Boolean disableFilter) {
         this.disableFilter = disableFilter;
+    }
+
+    public Boolean getDisableStacking() {
+        return disableStacking;
+    }
+
+    public void setDisableStacking(Boolean disableStacking) {
+        this.disableStacking = disableStacking;
     }
 
     public String getFilterWidget() {

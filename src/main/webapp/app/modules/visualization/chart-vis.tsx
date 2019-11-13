@@ -170,7 +170,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
     const { dimensions, colorScheme } = dataset;
     const { compareBy } = seriesOptions;
     const xAxisDimension = _.find(dimensions, { id: seriesOptions.xAxis }) as IDimension;
-
+    const compareByDimension = compareBy && (_.find(dimensions, { id: seriesOptions.compareBy }) as IDimension);
     let chartSeries = [{ data: [] }] as any;
 
     let seriesByParent;
@@ -305,7 +305,11 @@ export class ChartVis extends React.Component<IChartVisProp> {
       plotOptions: {
         series: {
           maxPointWidth: 80,
-          stacking: true,
+          stacking:
+            (xAxisDimension.type === 'composite' && !xAxisDimension.disableStacking) ||
+            (compareBy && xAxisDimension.type !== 'time' && !compareByDimension.disableStacking)
+              ? 'normal'
+              : undefined,
           dataLabels: {
             enabled: showLabels,
             format: measure.type === 'percentage' ? '{y:.1f}%' : '{y}',

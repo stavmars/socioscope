@@ -14,6 +14,7 @@ export interface IDimension {
   dependencies?: string[];
   disableFilter?: boolean;
   disableAxis?: boolean;
+  disableStacking?: boolean;
   composedOf?: string[];
   filterWidget?: string;
 }
