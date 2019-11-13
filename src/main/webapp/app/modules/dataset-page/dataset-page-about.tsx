@@ -20,9 +20,9 @@ export class DatasetPageAbout extends React.Component<IDatasetPageAboutProp> {
         <div dangerouslySetInnerHTML={{ __html: translateEntityField(dataset.comment) }} />
         <br />
         <br />
-        {dataset.sources && (
+        {translateEntityField(dataset.sources) !== '' && (
           <div>
-            <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.sources.title')}:</span>
+            <span style={{ fontFamily: 'ProximaNovaBold', textTransform: 'uppercase' }}>{translate('about.sources.title')}</span>
             &nbsp;
             <div dangerouslySetInnerHTML={{ __html: translateEntityField(dataset.sources) }} />
           </div>
