@@ -31,6 +31,7 @@ export interface IChartVisProp {
   showLegend: boolean;
   showLabels: boolean;
   chartType: string;
+  currentLocale: string;
 }
 
 const prepareSeriesByParent = (codesByNotation, seriesList: ISeries[]) =>
@@ -161,7 +162,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    return this.props.seriesList !== nextProps.seriesList;
+    return this.props.seriesList !== nextProps.seriesList || this.props.currentLocale !== nextProps.currentLocale;
   }
 
   render() {

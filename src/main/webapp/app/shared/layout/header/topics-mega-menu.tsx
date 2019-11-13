@@ -36,7 +36,8 @@ export class TopicsMegaMenu extends React.Component<ITopicsMegaMenuProps> {
   }
 }
 
-const mapStateToProps = ({ dataSet }: IRootState) => ({
+const mapStateToProps = ({ dataSet, locale }: IRootState) => ({
+  currentLocale: locale.currentLocale,
   dataSetsById: dataSet.entitiesById
 });
 const mapDispatchToProps = { toggleTopicsMenu };

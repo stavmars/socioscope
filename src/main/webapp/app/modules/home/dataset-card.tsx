@@ -7,8 +7,8 @@ import { connect } from 'react-redux';
 import { loadHighlight } from 'app/modules/highlights/highlights-reducer';
 import { urlEncodeVisOptions } from 'app/modules/dataset-page/dataset-page-reducer';
 import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
-import ChartVis from 'app/modules/visualization/chart-vis';
 import { translateEntityField } from 'app/shared/util/entity-utils';
+import { ChartVis } from 'app/modules/visualization/chart-vis';
 
 export interface IDatasetCardProps extends StateProps, DispatchProps {
   dataset: IDataSet;
@@ -22,7 +22,7 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
   }
 
   render() {
-    const { dataset, highlight, highlightSeries, dimensionCodes } = this.props;
+    const { dataset, highlight, highlightSeries, dimensionCodes, currentLocale } = this.props;
     const { colorScheme } = dataset;
     const { visType, subType, seriesOptions } = highlight;
     return (
@@ -49,6 +49,7 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
                       />
                     ) : (
                       <ChartVis
+                        currentLocale={currentLocale}
                         dataset={dataset}
                         seriesList={highlightSeries[highlight.id].series}
                         seriesOptions={seriesOptions}
@@ -82,6 +83,7 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
 }
 
 const mapStateToProps = storeState => ({
+  currentLocale: storeState.locale.currentLocale,
   dimensionCodes: storeState.highlights.dimensionCodes,
   highlightSeries: storeState.highlights.highlightSeries
 });
