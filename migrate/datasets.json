@@ -603,7 +603,7 @@
       {
         "id": "socialTopics",
         "description": {
-          "el": "<span><span class=\"text-accent\">Περίπου 1 στους 3 μαθητές</span> έχει συζητήσει για το δημοψήφισμα και τις εκλογές του 2015. <span class=\"text-accent\">Οι 9 στους 10</span> έχουν συζητήσει για τους πρόσφυγες που έχουν έρθει στην Ελλάδα, ενώ <span class=\"text-accent\">πάνω από 8 στους 10</span> έχουν συζητήσει για το ότι πολλοί νέοι δεν βρίσκουν δουλειά στην Ελλάδα και φεύγουν στον εξωτερικό.</span>",
+          "el": "<span><span class=\"text-accent\">Περίπου 1 στους 3 μαθητές</span> έχει συζητήσει για το δημοψήφισμα και τις εκλογές του 2015. <span class=\"text-accent\">Οι 9 στους 10</span> έχουν συζητήσει για τους πρόσφυγες που έχουν έρθει στην Ελλάδα, ενώ <span class=\"text-accent\">πάνω από 8 στους 10</span> έχουν συζητήσει για το ότι πολλοί νέοι δε βρίσκουν δουλειά στην Ελλάδα και φεύγουν στο εξωτερικό.</span>",
           "en": "<span><span class=\"text-accent\">About one out of three students</span> had a conversion on the referendum and the 2015 national elections. <span class=\"text-accent\">Nine out of ten</span> have discussed about the refugees who came to Greece, and <span class=\"text-accent\">over eight out of ten</span> have discussed that many young people due to the high rates of unemployment have left the country.</span>"
         },
         "visType": "chart",
