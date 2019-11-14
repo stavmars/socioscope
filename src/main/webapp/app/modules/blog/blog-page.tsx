@@ -78,7 +78,7 @@ export class BlogPage extends React.Component<DispatchProps> {
           <p>
             <b>Μανίνα Κακεπάκη</b> Ερευνήτρια ΙΚΕ-ΕΚΚΕ /{' '}
             <a href="mailto:mkakepaki@ekke.gr" target="_blank">
-              mkapekaki@ekke.gr
+              mkakepaki@ekke.gr
             </a>
           </p>
           <p>
