@@ -27,14 +27,10 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
     const { visType, subType, seriesOptions } = highlight;
     return (
       <div className={`dataset-card ${colorScheme}`}>
-        <div className="dataset-card-header">
-          <Image className="dataset-card-header-image" centered src={`/content/images/Assets/${dataset.id}.svg`} />
-          <h3>{translateEntityField(dataset.name)}</h3>
-        </div>
         <div className="dataset-card-content">
           <Grid centered doubling verticalAlign="middle" columns="2">
             <Grid.Row>
-              <Grid.Column>
+              <Grid.Column style={{ padding: '0 1.5%' }}>
                 <div className="highlight-vis">
                   {highlightSeries[highlight.id] &&
                     !highlightSeries[highlight.id].loading &&
@@ -62,7 +58,7 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
                     ))}
                 </div>
               </Grid.Column>
-              <Grid.Column>
+              <Grid.Column style={{ padding: '0 1.5%' }}>
                 <div className={`dataset-card-desc ${colorScheme}`}>{this.props.children}</div>
                 <Container>
                   <br />

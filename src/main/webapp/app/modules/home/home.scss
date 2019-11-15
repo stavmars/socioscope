@@ -81,13 +81,13 @@ Main page styles
 
 .dataset-card {
   @include mobile {
-    height: 920px;
+    height: 780px;
   }
   @include tablet {
     height: 800px;
   }
   @include computer {
-    height: 800px;
+    height: 550px;
   }
   &:not(:last-child) {
     @include mobile {
@@ -110,8 +110,20 @@ Main page styles
 
 .dataset-card-header {
   text-align: center;
+  &.color-scheme-1 {
+    background-color: $color-scheme-1-bg;
+  }
+  &.color-scheme-2 {
+    background-color: $color-scheme-2-bg;
+  }
+  &.color-scheme-3 {
+    background-color: $color-scheme-3-bg;
+  }
   @include mobile {
     padding-top: 15px;
+  }
+  @include tablet {
+    padding-top: 20px;
   }
   @include computer {
     padding-top: 57px;
