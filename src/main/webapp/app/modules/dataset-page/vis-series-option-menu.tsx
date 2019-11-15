@@ -98,7 +98,11 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
     const xAxisDimension = _.find(dataset.dimensions, { id: seriesOptions.xAxis });
 
     const sliderDimensions = _.filter(dimensions, dimension => dimension.filterWidget === 'slider');
-    const buttonGroupDimensions = _.filter(dimensions, dimension => dimension.filterWidget === 'button-group');
+    const buttonGroupDimensions = _.filter(
+      dimensions,
+      dimension =>
+        dimension.filterWidget === 'button-group' && dimension.id !== seriesOptions.xAxis && dimension.id !== seriesOptions.compareBy
+    );
 
     const compare = (
       <div className="vis-compareBy vis-options-menu-item">
