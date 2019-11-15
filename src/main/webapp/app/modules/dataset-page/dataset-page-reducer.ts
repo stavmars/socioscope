@@ -236,17 +236,24 @@ export const changeCompareBy = (dataset: IDataSet, compareBy: string) => (dispat
 
 export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => (dispatch, getState) => {
   const { dimensionCodes } = getState().datasetPage;
-  const { visType = 'chart', subType, seriesOptions } = visOptions;
+  const { visType = 'chart', seriesOptions } = visOptions;
+  let { subType } = visOptions;
+
   const { dimensions } = dataset;
   const { compareCodes } = seriesOptions;
   let { xAxis, compareBy, measure } = seriesOptions;
+  let xAxisDimension: IDimension;
   const filters = seriesOptions.dimensionFilters || {};
   if (visType === 'map') {
-    xAxis = dimensions.find(dim => dim.type === 'geographic-area').id;
+    xAxisDimension = dimensions.find(dim => dim.type === 'geographic-area');
+    xAxis = xAxisDimension.id;
     compareBy = null;
   } else {
     xAxis = xAxis || dimensions[0].id;
+    xAxisDimension = dimensions.find(dim => dim.id === xAxis);
   }
+
+  subType = xAxisDimension.type === 'coded' ? subType || 'column' : null;
 
   measure = measure || dataset.measures[0].id;
 
