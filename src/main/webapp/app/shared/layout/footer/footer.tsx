@@ -47,7 +47,12 @@ const Footer = () => (
             </Grid.Column>
           </Grid.Row>
           <Grid.Row centered>
-            <Image className="app-footer-logo" src={localeImage()} />
+            <Image className="app-footer-logo" centered src={localeImage()} />
+          </Grid.Row>
+          <Grid.Row centered columns="1" style={{ padding: '0' }}>
+            <a href="https://www.roleplay.gr/" target="_blank" style={{ color: '#ededed', fontSize: '10px' }}>
+              {translate('footer.design')}: <span style={{ color: 'orange', fontSize: '10px' }}>ROLEPLAY</span>
+            </a>
           </Grid.Row>
         </Grid>
       </div>

@@ -28,7 +28,7 @@ export class MobileMenu extends React.Component<IMobileMenuProps> {
             <List.Content>
               <List.Header className="mobile-menu-item">{translate('global.menu.topics')}</List.Header>
               <div className="mobile-menu-list">
-                {_.at(dataSetsById, ['greek-election-results', 'deputies', 'adolescents', 'claims']).map((dataset: IDataSet) => (
+                {_.at(dataSetsById, ['adolescents', 'deputies', 'greek-election-results', 'claims']).map((dataset: IDataSet) => (
                   <List.Item className={`mobile-menu-list-line ${dataset.colorScheme}`}>
                     <Container>
                       <Image className="mobile-menu-list-line-image" src={`/content/images/Assets/${dataset.id}.svg`} />
@@ -59,13 +59,6 @@ export class MobileMenu extends React.Component<IMobileMenuProps> {
                   <NavLink className="mobile-menu-item" to="/about">
                     {translate('global.menu.about')}
                   </NavLink>
-                </List.Header>
-              </List.Content>
-              <List.Content style={{ marginTop: '10px' }}>
-                <List.Header>
-                  <a className="mobile-menu-item" href="https://www.roleplay.gr/" target="_blank">
-                    DESIGN BY: ROLEPLAY
-                  </a>
                 </List.Header>
               </List.Content>
             </div>
