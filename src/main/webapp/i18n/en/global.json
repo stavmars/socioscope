@@ -148,7 +148,7 @@
   },
   "about": {
     "title": "Socioscope",
-    "content": "Socioscope is a collaboration between the<a href=\"https://www.ekke.gr\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\"> National Centre for Social Research</a> and the <a href=\"https://www.athena-innovation.gr/el/imis_dm\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\">Institute of Information Systems of ATHENA Research Center</a>. It is a platform for the visualization and mapping of social and political data with the aim of supporting and enhancing social research and disseminating open social data to the general public. The data are categorized in thematic areas and are open for use under permission <a href=\"http://creativecommons.org/licenses/by/4.0\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\">http://creativecommons.org/licenses/by/4.0/.</a><br /><br />It was initially developed for the project \"Dynamic Management of Social Databases and Cartographic Representations - SoDaMap\" (KRIPIS) (funding: GSRT, NSRF 2013 - 2015) and the first version can be found <a href=\"http://sodamap.imis.athena-innovation.gr/\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\">here</a>. It was redesigned for the project \"Research, Education and Infrastructures: the triangulation of EKKE strategic axes (REDI)\", WP5: \"Youth Print Web Platform (YouWeP)\" (funding: GSRT, NSRF 2014 - 2020).",
+    "content": "Socioscope is a collaboration between the<a href=\"https://www.ekke.gr\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\"> National Centre for Social Research</a> and the <a href=\"https://www.athena-innovation.gr/el/imis_dm\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\">Institute of Information Systems of ATHENA Research Center</a>. It is a platform for the visualization and mapping of social and political data. Its major aim is to support social research and disseminate open social data to the general public. The data are categorized in thematic areas and are open for use under permission <a href=\"http://creativecommons.org/licenses/by/4.0\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\">http://creativecommons.org/licenses/by/4.0/.</a><br /><br />It was initially developed for the project “Dynamic Management of Social Databases and Cartographic Representations - SoDaMap” (KRIPIS) (funding: GSRT, NSRF 2013-2015) and the first version can be found <a href=\"http://sodamap.imis.athena-innovation.gr/\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\">here</a>. It was redesigned for the project \"Research, Education and Infrastructures: the triangulation of EKKE strategic axes (REDI)\", WP5: \"Youth Print Web Platform (YouWeP)\" (funding: GSRT, NSRF 2014-2020).",
     "project": "Project",
     "team": {
       "title": "Scientific Team",
@@ -169,7 +169,7 @@
         "role": "Main Researcher, <a href=\"mailto:gkandyli@ekke.gr\" target=\"_blank\">gkandyli@ekke.gr</a>"
       },
       "manina": {
-        "name": "Manina Kapekaki",
+        "name": "Manina Kakepaki",
         "role": "Researcher, ΕΚΚΕ, <a href=\"mailto:mkakepaki@ekke.gr\" target=\"_blank\">mkakepaki@ekke.gr</a>"
       }
     },
@@ -184,15 +184,15 @@
       "develop": "Socioscope Development",
       "gpapas": {
         "name": "Giorgos Papastefanatos",
-        "role": "Research Associate, (ATHENA R.C.), <a href=\"mailto:gpapas@imis.athena-innovation.gr\" target=\"_blank\">gpapas@imis.athena-innovation.gr</a>"
+        "role": "Research Associate, (ATHENA R.C.), <a href=\"mailto:gpapas@athenarc.gr\" target=\"_blank\">gpapas@athenarc.gr</a>"
       },
       "stav": {
         "name": "Stavros Maroulis",
-        "role": "Research Associate, (ATHENA R.C.), <a href=\"mailto:stavmars@imis.athena-innovation.gr\" target=\"_blank\">stavmars@imis.athena-innovation.gr</a>"
+        "role": "Research Associate, (ATHENA R.C.), <a href=\"mailto:stavmars@athenarc.gr\" target=\"_blank\">stavmars@athenarc.gr</a>"
       },
       "astgian": {
         "name": "Asteris Giannoudis",
-        "role": "Research Associate, (ATHENA R.C.), <a href=\"mailto:astgian@imis.athena-innovation.gr\" target=\"_blank\">astgian@imis.athena-innovation.gr</a>"
+        "role": "Research Associate, (ATHENA R.C.), <a href=\"mailto:astgian@athenarc.gr\" target=\"_blank\">astgian@athenarc.gr</a>"
       }
     }
   },

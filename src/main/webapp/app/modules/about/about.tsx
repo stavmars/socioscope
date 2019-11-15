@@ -64,18 +64,14 @@ export class About extends React.Component<DispatchProps> {
                   <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.iliou.name')}</span> /{' '}
                   {translate('about.team.iliou.role')}
                   <br />
-                  <br />
                   <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.manina.name')}</span> /{' '}
                   {translate('about.team.manina.role')}
-                  <br />
                   <br />
                   <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.kand.name')}</span> /{' '}
                   {translate('about.team.kand.role')}
                   <br />
-                  <br />
                   <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.theoni.name')}</span> /{' '}
                   {translate('about.team.theoni.role')}
-                  <br />
                   <br />
                   <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.team.tsig.name')}</span> /{' '}
                   {translate('about.team.tsig.role')}

@@ -147,7 +147,7 @@
   },
   "about": {
     "title": "Socioscope",
-    "content": "Το Socioscope αποτελεί συνεργασία μεταξύ του<a href=\"https://www.ekke.gr\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\"> Εθνικού Κέντρου Κοινωνικών Ερευνών</a> και του <a href=\"https://www.athena-innovation.gr/el/imis_dm\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\">Ινστιτούτου Πληροφοριακών Συστημάτων του Ερευνητικού Κέντρου «ΑΘΗΝΑ»</a>. Αποτελεί πλατφόρμα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης κοινωνικών και πολιτικών δεδομένων με στόχο την υποστήριξη και ενίσχυση της κοινωνικής έρευνας και τη διάθεση ανοιχτών κοινωνικών δεδομένων στο ευρύ κοινό. Τα στοιχεία είναι κατηγοριοποιημένα γύρω από θεματικές περιοχές και διατίθενται ανοιχτά προς χρήση με άδεια <a href=\"http://creativecommons.org/licenses/by/4.0\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\">http://creativecommons.org/licenses/by/4.0/.</a>.<br /><br />Αναπτύχθηκε στα πλαίσια του έργου «Δυναμική Διαχείριση Βάσεων Κοινωνικών Δεδομένων και Χαρτογραφικών Αναπαραστάσεων - SoDaMap» της πρόσκλησης «ΚΡΗΠΙΣ» της ΓΓΕΤ (ΕΣΠΑ 2013-2015) και η πρώτη έκδοση βρίσκεται <a href=\"http://sodamap.imis.athena-innovation.gr/\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\">έδω</a>. Εμπλουτίστηκε και επανασχεδιάστηκε στο πλαίσιο της πράξης «Έρευνα, Εκπαίδευση και Υποδομές: ο τριγωνισμός των αξόνων στρατηγικής ανάπτυξης του ΕΚΚΕ (REDI) » (MIS 5002378) που εντάσσεται στη «Δράση Στρατηγικής Ανάπτυξης Ερευνητικών και Τεχνολογικών Φορέων» και χρηματοδοτείται από το Επιχειρησιακό Πρόγραμμα «Ανταγωνιστικότητα, Επιχειρηματικότητα και Καινοτομία» στο πλαίσιο του ΕΣΠΑ 2014 - 2020, με τη συγχρηματοδότηση της Ελλάδας και της Ευρωπαϊκής Ένωσης (Ευρωπαϊκό Ταμείο Περιφερειακής Ανάπτυξης).",
+    "content": "Το Socioscope είναι προιόν συνεργασίας μεταξύ του<a href=\"https://www.ekke.gr\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\"> Εθνικού Κέντρου Κοινωνικών Ερευνών</a> και του <a href=\"https://www.athena-innovation.gr/el/imis_dm\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\">Ινστιτούτου Πληροφοριακών Συστημάτων του Ερευνητικού Κέντρου «ΑΘΗΝΑ»</a>. Αποτελεί πλατφόρμα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης κοινωνικών και πολιτικών δεδομένων με στόχο την υποστήριξη και ενίσχυση της κοινωνικής έρευνας και τη διάθεση ανοιχτών κοινωνικών δεδομένων στο ευρύ κοινό. Τα στοιχεία είναι κατηγοριοποιημένα γύρω από θεματικές περιοχές και διατίθενται ανοιχτά προς χρήση με άδεια <a href=\"http://creativecommons.org/licenses/by/4.0\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\">http://creativecommons.org/licenses/by/4.0/.</a>.<br /><br />Αναπτύχθηκε στο πλαίσιο του έργου «Δυναμική Διαχείριση Βάσεων Κοινωνικών Δεδομένων και Χαρτογραφικών Αναπαραστάσεων - SoDaMap» της πρόσκλησης «ΚΡΗΠΙΣ» της ΓΓΕΤ (ΕΣΠΑ 2013-2015) και η πρώτη έκδοση βρίσκεται <a href=\"http://sodamap.imis.athena-innovation.gr/\" style={{ fontStyle: 'normal', fontFamily: 'ProximaNovaBold', color: '#FF5D39' }} target=\"_blank\">έδω</a>. Εμπλουτίστηκε και επανασχεδιάστηκε στο πλαίσιο της Πράξης «Έρευνα, Εκπαίδευση και Υποδομές: ο τριγωνισμός των αξόνων στρατηγικής ανάπτυξης του ΕΚΚΕ (REDI» (MIS 5002378) που εντάσσεται στη «Δράση Στρατηγικής Ανάπτυξης Ερευνητικών και Τεχνολογικών Φορέων» και χρηματοδοτείται από το Επιχειρησιακό Πρόγραμμα «Ανταγωνιστικότητα, Επιχειρηματικότητα και Καινοτομία» στο πλαίσιο του ΕΣΠΑ 2014-2020, με τη συγχρηματοδότηση της Ελλάδας και της Ευρωπαϊκής Ένωσης (Ευρωπαϊκό Ταμείο Περιφερειακής Ανάπτυξης).",
     "project": "Το έργο",
     "team": {
       "title": "Επιστημονική Ομάδα",
@@ -160,7 +160,7 @@
         "role": "Διευθύντρια Ερευνών, ΕΚΚΕ, <a href=\"mailto:theosta@ekke.gr\" target=\"_blank\">theosta@ekke.gr</a>"
       },
       "tsig": {
-        "name": "Ιωάννα Τσίγγανου",
+        "name": "Ιωάννα Τσίγκανου",
         "role": "Διευθύντρια Ερευνών, ΕΚΚΕ, <a href=\"mailto:jtsiganou@ekke.gr\" target=\"_blank\">jtsiganou@ekke.gr</a>"
       },
       "kand": {
@@ -183,15 +183,15 @@
       "develop": "Ανάπτυξη Socioscope",
       "gpapas": {
         "name": "Γιώργος Παπαστεφανάτος",
-        "role": "Ερευνητικός Συνεργάτης, (Ε.Κ. ΑΘΗΝΑ), <a href=\"mailto:gpapas@imis.athena-innovation.gr\" target=\"_blank\">gpapas@imis.athena-innovation.gr</a>"
+        "role": "Ερευνητικός Συνεργάτης, (Ε.Κ. ΑΘΗΝΑ), <a href=\"mailto:gpapas@athenarc.gr\" target=\"_blank\">gpapas@athenarc.gr</a>"
       },
       "stav": {
         "name": "Σταύρος Μαρούλης",
-        "role": "Ερευνητικός Συνεργάτης, (Ε.Κ. ΑΘΗΝΑ), <a href=\"mailto:stavmars@imis.athena-innovation.gr\" target=\"_blank\">stavmars@imis.athena-innovation.gr</a>"
+        "role": "Ερευνητικός Συνεργάτης, (Ε.Κ. ΑΘΗΝΑ), <a href=\"mailto:stavmars@athenarc.gr\" target=\"_blank\">stavmars@athenarc.gr</a>"
       },
       "astgian": {
         "name": "Αστέρης Γιαννούδης",
-        "role": "Ερευνητικός Συνεργάτης, (Ε.Κ. ΑΘΗΝΑ), <a href=\"mailto:astgian@imis.athena-innovation.gr\" target=\"_blank\">astgian@imis.athena-innovation.gr</a>"
+        "role": "Ερευνητικός Συνεργάτης, (Ε.Κ. ΑΘΗΝΑ), <a href=\"mailto:astgian@athenarc.gr\" target=\"_blank\">astgian@athenarc.gr</a>"
       }
     }
   },
