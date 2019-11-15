@@ -87,7 +87,7 @@ Main page styles
     height: 800px;
   }
   @include computer {
-    height: 550px;
+    height: 590px;
   }
   &:not(:last-child) {
     @include mobile {
