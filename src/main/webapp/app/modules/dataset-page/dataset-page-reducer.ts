@@ -19,12 +19,10 @@ export const ACTION_TYPES = {
   FETCH_SERIES: 'datasetPage/FETCH_SERIES',
   FETCH_DIMENSION_CODELIST: 'datasetPage/FETCH_DIMENSION_CODELIST',
   FETCH_DIMENSION_CODELISTS: 'datasetPage/FETCH_DIMENSION_CODELISTS',
-  CHANGE_COMPARE_BY: 'datasetPage/CHANGE_COMPARE_BY',
   SET_FILTER_VALUE: 'datasetPage/SET_FILTER_VALUE',
   UPDATE_VIS_OPTIONS: 'datasetPage/UPDATE_VIS_OPTIONS',
   TOGGLE_COMPARE_VALUE: 'datasetPage/TOGGLE_COMPARE_VALUE',
-  REMOVE_FILTER: 'datasetPage/REMOVE_FILTER',
-  REMOVE_COMPARE: 'datasetPage/REMOVE_COMPARE'
+  REMOVE_FILTER: 'datasetPage/REMOVE_FILTER'
 };
 
 const initialState = {
@@ -82,22 +80,6 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
         ...state,
         dimensionCodes: action.payload,
         fetchedCodeLists: true
-      };
-    case ACTION_TYPES.CHANGE_COMPARE_BY:
-      return {
-        ...state,
-        seriesOptions: {
-          ...state.seriesOptions,
-          compareBy: action.payload
-        }
-      };
-    case ACTION_TYPES.REMOVE_COMPARE:
-      return {
-        ...state,
-        seriesOptions: {
-          ...state.seriesOptions,
-          compareBy: null as string
-        }
       };
     case ACTION_TYPES.SET_FILTER_VALUE:
       return {
@@ -185,18 +167,13 @@ export const removeFilter = (dataset: IDataSet, dimensionId: string) => (dispatc
 };
 
 export const removeCompare = (dataset: IDataSet) => (dispatch, getState) => {
-  dispatch({
-    type: ACTION_TYPES.REMOVE_COMPARE
-  });
-  dispatch(getSeries(dataset.id));
+  const { visType, seriesOptions } = getState().datasetPage;
+  dispatch(updateVisOptions(dataset, { visType, seriesOptions: { ...seriesOptions, compareBy: null } }));
 };
 
 export const changeCompareBy = (dataset: IDataSet, compareBy: string) => (dispatch, getState) => {
-  dispatch({
-    type: ACTION_TYPES.CHANGE_COMPARE_BY,
-    payload: compareBy
-  });
-  dispatch(getSeries(dataset.id));
+  const { visType, seriesOptions } = getState().datasetPage;
+  dispatch(updateVisOptions(dataset, { visType, seriesOptions: { ...seriesOptions, compareBy } }));
 };
 
 export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => (dispatch, getState) => {
@@ -225,14 +202,16 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
   compareBy = compareBy || null;
 
   let newSeriesOptions = {};
+  let dimensionFilters;
   if (dataset.type === 'qb') {
-    const dimensionFilters = dimensions.filter(dimension => ![xAxis, compareBy].includes(dimension.id)).reduce((acc, dimension) => {
+    dimensionFilters = dimensions.filter(dimension => ![xAxis, compareBy].includes(dimension.id)).reduce((acc, dimension) => {
       acc[dimension.id] = filters[dimension.id] || dimensionCodes[dimension.id].codes[0].notation;
       return acc;
     }, {}) as IDimensionFilters;
     newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters };
   } else {
-    newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters: filters || {} };
+    dimensionFilters = _.pickBy(filters, (value, key) => key !== xAxis && key !== compareBy);
+    newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters };
   }
   dispatch({
     type: ACTION_TYPES.UPDATE_VIS_OPTIONS,
