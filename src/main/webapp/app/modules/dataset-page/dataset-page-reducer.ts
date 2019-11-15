@@ -236,7 +236,7 @@ export const changeCompareBy = (dataset: IDataSet, compareBy: string) => (dispat
 
 export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => (dispatch, getState) => {
   const { dimensionCodes } = getState().datasetPage;
-  const { visType = 'chart', subType = 'column', seriesOptions } = visOptions;
+  const { visType = 'chart', subType, seriesOptions } = visOptions;
   const { dimensions } = dataset;
   const { compareCodes } = seriesOptions;
   let { xAxis, compareBy, measure } = seriesOptions;
