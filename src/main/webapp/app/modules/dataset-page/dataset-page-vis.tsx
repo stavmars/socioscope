@@ -2,12 +2,10 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import {
-  addCode,
   changeCompareBy,
   getVisURL,
   initVis,
   IVisOptions,
-  removeCode,
   removeCompare,
   removeFilter,
   setFilterValue,
@@ -183,8 +181,6 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                   updateVisOptions={this.props.updateVisOptions}
                   changeCompareBy={this.props.changeCompareBy}
                   removeFilter={this.props.removeFilter}
-                  addCode={this.props.addCode}
-                  removeCode={this.props.removeCode}
                   removeCompare={this.props.removeCompare}
                   resetGraph={this.resetGraph}
                 />
@@ -293,8 +289,6 @@ const mapDispatchToProps = {
   initVis,
   changeCompareBy,
   removeFilter,
-  addCode,
-  removeCode,
   removeCompare
 };
 

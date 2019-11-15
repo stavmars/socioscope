@@ -1,13 +1,11 @@
 import React from 'react';
-import { translate, Translate } from 'react-jhipster';
+import { translate } from 'react-jhipster';
 import { IRootState } from 'app/shared/reducers';
 import {
+  changeCompareBy,
+  removeCompare,
   removeFilter,
   setFilterValue,
-  addCode,
-  removeCode,
-  removeCompare,
-  changeCompareBy,
   updateVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import { List } from 'semantic-ui-react';
@@ -62,8 +60,6 @@ export class MobileVisMenu extends React.Component<IMobileVisMenuProps> {
               setFilterValue={this.props.setFilterValue}
               updateVisOptions={this.props.updateVisOptions}
               removeFilter={this.props.removeFilter}
-              addCode={this.props.addCode}
-              removeCode={this.props.removeCode}
               removeCompare={this.props.removeCompare}
               changeCompareBy={this.props.changeCompareBy}
               resetGraph={null}
@@ -89,8 +85,6 @@ const mapDispatchToProps = {
   changeCompareBy,
   setFilterValue,
   removeFilter,
-  addCode,
-  removeCode,
   removeCompare
 };
 

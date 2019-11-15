@@ -3,7 +3,6 @@ import { FAILURE, REQUEST, SUCCESS } from 'app/shared/reducers/action-type.util'
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeries } from 'app/shared/model/series.model';
 import { IDimensionFilters, ISeriesOptions } from 'app/shared/model/series-options.model';
-import { IDimensionCode } from 'app/shared/model/dimension-code.model';
 import { IDimension } from 'app/shared/model/dimension.model';
 import _ from 'lodash';
 import { unflattenDimensionCodes } from 'app/shared/util/entity-utils';
@@ -25,8 +24,6 @@ export const ACTION_TYPES = {
   UPDATE_VIS_OPTIONS: 'datasetPage/UPDATE_VIS_OPTIONS',
   TOGGLE_COMPARE_VALUE: 'datasetPage/TOGGLE_COMPARE_VALUE',
   REMOVE_FILTER: 'datasetPage/REMOVE_FILTER',
-  ADD_CODE: 'datasetPage/ADD_CODE',
-  REMOVE_CODE: 'datasetPage/REMOVE_CODE',
   REMOVE_COMPARE: 'datasetPage/REMOVE_COMPARE'
 };
 
@@ -91,8 +88,7 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
         ...state,
         seriesOptions: {
           ...state.seriesOptions,
-          compareBy: action.payload,
-          compareCodes: []
+          compareBy: action.payload
         }
       };
     case ACTION_TYPES.REMOVE_COMPARE:
@@ -100,8 +96,7 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
         ...state,
         seriesOptions: {
           ...state.seriesOptions,
-          compareBy: null as string,
-          compareCodes: []
+          compareBy: null as string
         }
       };
     case ACTION_TYPES.SET_FILTER_VALUE:
@@ -144,16 +139,8 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
 };
 
 const datasetApiUrl = 'api/data-sets';
-const dimensionApiUrl = 'api/dimensions';
 
 // Actions
-export const getDimensionCodelist = (dimension: IDimension) => ({
-  type: ACTION_TYPES.FETCH_DIMENSION_CODELIST,
-  payload: axios
-    .get<IDimensionCode>(`${dimensionApiUrl}/${dimension.id}/codelist`)
-    .then(res => ({ dimensionId: dimension.id, codelist: res.data }))
-});
-
 export const getDimensionCodeLists = (dataSet: IDataSet) => ({
   type: ACTION_TYPES.FETCH_DIMENSION_CODELISTS,
   payload: axios.get(`${datasetApiUrl}/${dataSet.id}/codelists`).then(res => {
@@ -186,7 +173,6 @@ export const setFilterValue = (dataset: IDataSet, dimensionId: string, filterVal
     type: ACTION_TYPES.SET_FILTER_VALUE,
     payload: { dimensionId, filterValue }
   });
-  const { seriesOptions } = getState().datasetPage;
   dispatch(getSeries(dataset.id));
 };
 
@@ -195,25 +181,6 @@ export const removeFilter = (dataset: IDataSet, dimensionId: string) => (dispatc
     type: ACTION_TYPES.REMOVE_FILTER,
     payload: { dimensionId }
   });
-  const { seriesOptions } = getState().datasetPage;
-  dispatch(getSeries(dataset.id));
-};
-
-export const addCode = (dataset: IDataSet, code: string) => (dispatch, getState) => {
-  dispatch({
-    type: ACTION_TYPES.ADD_CODE,
-    payload: { code }
-  });
-  const { seriesOptions } = getState().datasetPage;
-  dispatch(getSeries(dataset.id));
-};
-
-export const removeCode = (dataset: IDataSet, code: string) => (dispatch, getState) => {
-  dispatch({
-    type: ACTION_TYPES.REMOVE_CODE,
-    payload: { code }
-  });
-  const { seriesOptions } = getState().datasetPage;
   dispatch(getSeries(dataset.id));
 };
 
@@ -221,7 +188,6 @@ export const removeCompare = (dataset: IDataSet) => (dispatch, getState) => {
   dispatch({
     type: ACTION_TYPES.REMOVE_COMPARE
   });
-  const { seriesOptions } = getState().datasetPage;
   dispatch(getSeries(dataset.id));
 };
 
@@ -230,7 +196,6 @@ export const changeCompareBy = (dataset: IDataSet, compareBy: string) => (dispat
     type: ACTION_TYPES.CHANGE_COMPARE_BY,
     payload: compareBy
   });
-  const { seriesOptions } = getState().datasetPage;
   dispatch(getSeries(dataset.id));
 };
 
@@ -240,7 +205,6 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
   let { subType } = visOptions;
 
   const { dimensions } = dataset;
-  const { compareCodes } = seriesOptions;
   let { xAxis, compareBy, measure } = seriesOptions;
   let xAxisDimension: IDimension;
   const filters = seriesOptions.dimensionFilters || {};
@@ -266,9 +230,9 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
       acc[dimension.id] = filters[dimension.id] || dimensionCodes[dimension.id].codes[0].notation;
       return acc;
     }, {}) as IDimensionFilters;
-    newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters, compareCodes };
+    newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters };
   } else {
-    newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters: filters || {}, compareCodes };
+    newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters: filters || {} };
   }
   dispatch({
     type: ACTION_TYPES.UPDATE_VIS_OPTIONS,
@@ -294,8 +258,7 @@ export const urlEncodeVisOptions = (visOptions: IVisOptions) => {
       x: seriesOptions.xAxis,
       compare: seriesOptions.compareBy,
       filters: seriesOptions.dimensionFilters,
-      measure: seriesOptions.measure,
-      codes: seriesOptions.compareCodes
+      measure: seriesOptions.measure
     },
     { skipNulls: true }
   );

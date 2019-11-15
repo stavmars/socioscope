@@ -8,9 +8,7 @@ import { translateEntityField } from 'app/shared/util/entity-utils';
 import { translate } from 'react-jhipster';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import {
-  addCode,
   changeCompareBy,
-  removeCode,
   removeCompare,
   removeFilter,
   setFilterValue,
@@ -34,10 +32,6 @@ export interface IVisSeriesOptionMenuProp {
   changeCompareBy: typeof changeCompareBy;
 
   updateVisOptions: typeof updateVisOptions;
-
-  removeCode: typeof removeCode;
-
-  addCode: typeof addCode;
 
   removeCompare: typeof removeCompare;
 
