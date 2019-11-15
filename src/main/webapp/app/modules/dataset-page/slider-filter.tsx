@@ -21,6 +21,7 @@ export interface ISliderFilterProp {
   setFilterValue: typeof setFilterValue;
   removeFilter: typeof removeFilter;
   seriesOptions: ISeriesOptions;
+  removable: boolean;
 }
 
 export interface ISliderFilterState {
@@ -86,7 +87,7 @@ export class SliderFilter extends React.Component<ISliderFilterProp, ISliderFilt
 
   // tslint:disable:jsx-no-lambda
   render() {
-    const { dimension, codes, dataset, seriesOptions } = this.props;
+    const { dimension, codes, dataset, seriesOptions, removable } = this.props;
     const currentFilterValue = seriesOptions.dimensionFilters[dimension.id];
     const marks = codes.reduce((acc, code, index) => {
       acc[index] = <span className="slider-filter-mark">{translateEntityField(code.shortName) || translateEntityField(code.name)}</span>;
@@ -95,14 +96,14 @@ export class SliderFilter extends React.Component<ISliderFilterProp, ISliderFilt
     return (
       <div className="slider-filter">
         <div className="slider-filter-label">{translateEntityField(dimension.name)}</div>
-        {this.state.value != null && (
-          <Image
-            inline
-            src={`/content/images/Assets/remove-filter-${dataset.colorScheme}.svg`}
-            dimension={dimension.id}
-            onClick={() => this.handleRemoveFilter(dimension.id)}
-          />
-        )}
+        {this.state.value != null &&
+          removable && (
+            <Image
+              inline
+              src={`/content/images/Assets/remove-filter-${dataset.colorScheme}.svg`}
+              onClick={() => this.handleRemoveFilter(dimension.id)}
+            />
+          )}
         <div style={{ height: 50, paddingTop: 5 }}>
           <Slider
             min={-1}

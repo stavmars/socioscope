@@ -96,6 +96,8 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
     }));
 
     const xAxisDimension = _.find(dataset.dimensions, { id: seriesOptions.xAxis });
+    const compareByDimension = _.find(dataset.dimensions, { id: seriesOptions.compareBy });
+    const dependencies = _.union(xAxisDimension.dependencies, compareByDimension ? compareByDimension.dependencies : []);
 
     const sliderDimensions = _.filter(dimensions, dimension => dimension.filterWidget === 'slider');
     const buttonGroupDimensions = _.filter(
@@ -140,6 +142,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
                 setFilterValue={this.props.setFilterValue}
                 removeFilter={this.props.removeFilter}
                 seriesOptions={seriesOptions}
+                removable={!dependencies.includes(sliderDim.id)}
               />
             )
         )}

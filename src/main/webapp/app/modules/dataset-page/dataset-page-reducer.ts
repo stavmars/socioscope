@@ -200,6 +200,7 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
 
   // if undefined, the corresponding dropdown is not being cleared
   compareBy = compareBy || null;
+  const compareByDimension = dimensions.find(dim => dim.id === compareBy);
 
   let newSeriesOptions = {};
   let dimensionFilters;
@@ -211,6 +212,13 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
     newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters };
   } else {
     dimensionFilters = _.pickBy(filters, (value, key) => key !== xAxis && key !== compareBy);
+    const dependencies = _.union(xAxisDimension.dependencies, compareByDimension ? compareByDimension.dependencies : []);
+    dependencies.forEach(dep => {
+      if (dep !== xAxis && dep !== compareBy && !dimensionFilters[dep]) {
+        const depCodes = dimensionCodes[dep].codes;
+        dimensionFilters[dep] = depCodes[depCodes.length - 1].notation;
+      }
+    });
     newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters };
   }
   dispatch({
