@@ -38,7 +38,7 @@
           "options": "More Options"
         },
         "legend": {
-          "showAll": "(Show All)&nbsp"
+          "showAll": "(all)&nbsp"
         },
         "print": "Print",
         "download": "Download as:"
