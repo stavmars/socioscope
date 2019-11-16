@@ -238,7 +238,12 @@ export class ChartVis extends React.Component<IChartVisProp> {
     }
 
     if (chartSeries.length > 1) {
-      chartSeries.unshift({ name: translate('socioscopeApp.dataSet.visualization.legend.showAll'), data: [], color: 'black' });
+      chartSeries.unshift({
+        name: translate('socioscopeApp.dataSet.visualization.legend.showAll'),
+        isShowAll: true,
+        data: [],
+        color: 'black'
+      });
     }
 
     const measure = seriesOptions.measure ? _.find(dataset.measures, { id: seriesOptions.measure }) : dataset.measures[0];
@@ -320,7 +325,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
           },
           events: {
             legendItemClick() {
-              if (!this.index) {
+              if (this.options.isShowAll) {
                 if (this.visible) {
                   this.chart.series.forEach(series => {
                     series.hide();
@@ -364,7 +369,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
           const icon = this.visible
             ? `<i class="check circle icon" style="color: ${this.color};"></i>`
             : `<i class="circle outline icon"></i>`;
-          if (!this.index) {
+          if (this.userOptions.isShowAll) {
             return `${icon}<span style="font-style: italic">${this.name}</span>`;
           }
           return icon + this.name;
@@ -386,8 +391,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
             text: 'socioscope.gr',
             style: { color: '#1e1e1e', fontSize: '18px' }
           },
-          chart: { height: '100%' },
-          series: chartSeries
+          chart: { height: '100%' }
         }
       }
     };
