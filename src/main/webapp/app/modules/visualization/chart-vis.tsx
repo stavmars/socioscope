@@ -23,6 +23,7 @@ drilldown(Highcharts);
 HC_exporting(Highcharts);
 
 export interface IChartVisProp {
+  className?: string;
   dataset: IDataSet;
   seriesList: ISeries[];
   seriesOptions: ISeriesOptions;
@@ -166,7 +167,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
   }
 
   render() {
-    const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, showLabels, showLegend, chartType } = this.props;
+    const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, showLabels, showLegend, chartType, className } = this.props;
     const { dimensions, colorScheme } = dataset;
     const { compareBy } = seriesOptions;
     const xAxisDimension = _.find(dimensions, { id: seriesOptions.xAxis }) as IDimension;
@@ -249,9 +250,9 @@ export class ChartVis extends React.Component<IChartVisProp> {
     const options = {
       chart: {
         type: xAxisDimension.type === 'time' ? 'spline' : chartType === null ? 'column' : chartType,
-        height: window.innerWidth > 768 ? '50%' : null,
+        // height: window.innerWidth > 768 ? '50%' : null,
         zoomType: 'x',
-        className: `chart ${dataset.colorScheme}`,
+        className: `chart ${colorScheme}`,
         style: { fontFamily: 'BPnoScript', fontWeight: 'bold' },
         events: {
           load() {
@@ -394,16 +395,14 @@ export class ChartVis extends React.Component<IChartVisProp> {
     // todo investigate another solution to handle problems after updates while drilled-down
 
     return (
-      <div>
-        <HighchartsReact
-          className={colorScheme}
-          key={uuid()}
-          highcharts={Highcharts}
-          options={options as any}
-          immutable
-          ref={this.innerChart}
-        />
-      </div>
+      <HighchartsReact
+        containerProps={{ className }}
+        key={uuid()}
+        highcharts={Highcharts}
+        options={options as any}
+        immutable
+        ref={this.innerChart}
+      />
     );
   }
 }

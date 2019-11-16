@@ -204,6 +204,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                 <div className="vis-container">
                   {visType === 'map' ? (
                     <ChoroplethMapVis
+                      className="dataset-page-map"
                       dataset={dataset}
                       series={seriesList[0]}
                       seriesOptions={seriesOptions}
@@ -214,6 +215,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                     />
                   ) : (
                     <ChartVis
+                      className="dataset-page-chart"
                       currentLocale={currentLocale}
                       dataset={dataset}
                       seriesList={seriesList}

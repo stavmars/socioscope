@@ -326,15 +326,6 @@
   }
 }
 
-// .vis-container {
-//   @include mobile {
-//     top: 10px;
-//   }
-//   @include computer {
-//     top: 60px;
-//   }
-// }
-
 .vis-options-menu-title {
   @include mobile {
     display: none;
@@ -456,6 +447,18 @@
   margin-top: 5%;
   @include computer {
     padding-left: 50px;
+  }
+}
+
+.dataset-page-chart {
+  @include mobile {
+    height: 400px;
+  }
+  @include tablet {
+    height: 500px;
+  }
+  @include computer {
+    height: 600px;
   }
 }
 

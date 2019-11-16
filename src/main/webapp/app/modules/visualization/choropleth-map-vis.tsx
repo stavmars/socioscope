@@ -18,6 +18,7 @@ import HC_exporting from 'highcharts/modules/exporting';
 HC_exporting(Highmaps);
 
 export interface IChoroplethVisProp {
+  className?: string;
   dataset: IDataSet;
   series: ISeries;
   seriesOptions: ISeriesOptions;
