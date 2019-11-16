@@ -18,6 +18,7 @@ logging:
         ROOT: INFO
         gr.ekke.socioscope: INFO
         io.github.jhipster: INFO
+    file: /opt/socioscope/logs/socioscope.log
 
 spring:
     devtools:
