@@ -9,6 +9,6 @@ public class MongoConfig {
 
     @Autowired
     void setMapKeyDotReplacement(MappingMongoConverter mappingMongoConverter) {
-        mappingMongoConverter.setMapKeyDotReplacement("_");
+        mappingMongoConverter.setMapKeyDotReplacement("/");
     }
 }
