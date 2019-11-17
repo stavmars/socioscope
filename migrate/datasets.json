@@ -227,14 +227,16 @@
       {
         "id": "family_networks",
         "description": {
-          "el": "<span>Οσο <span class=\"text-accent\">πιο μεγάλη είναι μια εκλογική περιφέρεια</span>, τόσο πιθανότερο είναι οι βουλευτές που εκλέγονται σε αυτή να προέρχονται από <span class=\"text-accent\">«πολιτική» οικογένεια</span>. Στην <span class=\"text-accent\">Β Αθήνας</span> σχεδον 1 στους 5 βουλευτές <span class=\"text-accent\">(18,7%)</span> έχει <span class=\"text-accent\">συγγενή με προηγούμενη θητεία</span> στο Κοινοβούλιο.</span>",
-          "en": "<span><span class=\"text-accent\">The bigger an electoral constituency</span>, the more likely it is for and MP to derive from a <span class=\"text-accent\">\"political\" family</span>. Thus, <span class=\"text-accent\">in Athens B</span>, almost 1 in 5 MP <span class=\"text-accent\">have a relative previously elected</span> in Parliament.</span>"
+          "el": "<span>Με λίγες εξαιρέσεις, όσο <span class=\"text-accent\">πιο μεγάλη είναι μια εκλογική περιφέρεια</span>, τόσο πιθανότερο είναι οι βουλευτές/-τριες που εκλέγονται σε αυτή να προέρχονται από <span class=\"text-accent\">«πολιτική» οικογένεια</span>. Το υψηλότερο ποσοστό καταγράφηκε το 2000, όταν στην <span class=\"text-accent\">Β Αθήνας</span> το <span class=\"text-accent\">27, 9%</span> των βουλευτών/-τριών έχει <span class=\"text-accent\">συγγενή με προηγούμενη θητεία</span> στο Κοινοβούλιο.</span>",
+          "en": "<span>With only a few exceptions, <span class=\"text-accent\">the larger the constituency</span>, the more likely it is for and MP to belong to a <span class=\"text-accent\">\"political\" family</span>. The highest % was recorded in 2000, when <span class=\"text-accent\">27,9%</span>of all MPs elected in <span class=\"text-accent\">Athens B areas</span>had a <span class=\"text-accent\">relative previously elected</span> in Parliament.</span>"
         },
         "visType": "chart",
         "subType": "column",
         "seriesOptions": {
           "xAxis": "elections.consti_size",
-          "dimensionFilters": {},
+          "dimensionFilters": {
+            "elections.assembly": 10
+          },
           "measure": "deputies_perc",
           "compareBy": "elections.network"
         }
