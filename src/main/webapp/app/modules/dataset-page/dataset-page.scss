@@ -53,7 +53,7 @@
   }
   &.minimized {
     @include mobile {
-      height: 100px;
+      height: 125px;
       margin-top: -37%;
     }
     @include tablet {

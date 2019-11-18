@@ -251,7 +251,9 @@ export class ChartVis extends React.Component<IChartVisProp> {
     const dataSetName = translateEntityField(dataset.name);
     const xAxisDesc = translateEntityField(xAxisDimension.description);
     const xAxisText =
-      !xAxisDesc || xAxisName === xAxisDesc ? xAxisName : `<div>${xAxisName}</div><div class="x-axis-subtitle">${xAxisDesc}</div>`;
+      !xAxisDesc || xAxisName === xAxisDesc
+        ? xAxisName
+        : `<div style="text-align: center;font-weight: bold">${xAxisName}</div><div class="x-axis-subtitle">${xAxisDesc}</div>`;
     const options = {
       chart: {
         type: xAxisDimension.type === 'time' ? 'spline' : chartType === null ? 'column' : chartType,
@@ -290,7 +292,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
             : {
                 useHTML: true,
                 text: xAxisText,
-                style: { fontSize: window.innerWidth > 768 ? '20px' : '9px' }
+                style: { fontSize: window.innerWidth > 768 ? '20px' : '10px' }
               },
         labels: {
           style: { fontFamily: 'Proxima Nova Semibold', fontSize: window.innerWidth > 768 ? '14px' : '9px' }
