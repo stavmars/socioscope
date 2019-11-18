@@ -194,7 +194,7 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
     xAxisDimension = dimensions.find(dim => dim.id === xAxis);
   }
 
-  subType = xAxisDimension.type === 'coded' ? subType || 'column' : null;
+  subType = xAxisDimension.type === 'coded' || xAxisDimension.type === 'composite' ? subType || 'column' : null;
 
   measure = measure || dataset.measures[0].id;
 
