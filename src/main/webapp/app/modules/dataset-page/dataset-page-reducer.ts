@@ -17,7 +17,6 @@ export interface IVisOptions {
 export const ACTION_TYPES = {
   INIT_VIS: 'datasetPage/INIT_VIS',
   FETCH_SERIES: 'datasetPage/FETCH_SERIES',
-  FETCH_DIMENSION_CODELIST: 'datasetPage/FETCH_DIMENSION_CODELIST',
   FETCH_DIMENSION_CODELISTS: 'datasetPage/FETCH_DIMENSION_CODELISTS',
   SET_FILTER_VALUE: 'datasetPage/SET_FILTER_VALUE',
   UPDATE_VIS_OPTIONS: 'datasetPage/UPDATE_VIS_OPTIONS',
@@ -59,21 +58,11 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
         seriesList: action.payload.data,
         loadingSeries: false
       };
-    case SUCCESS(ACTION_TYPES.FETCH_DIMENSION_CODELIST):
-      return {
-        ...state,
-        dimensionCodes: {
-          ...state.dimensionCodes,
-          [action.payload.dimensionId]: {
-            codes: unflattenDimensionCodes(action.payload.codelist),
-            codesByNotation: _.keyBy(action.payload.codelist, 'notation')
-          }
-        }
-      };
     case REQUEST(ACTION_TYPES.FETCH_DIMENSION_CODELISTS):
       return {
         ...state,
-        fetchedCodeLists: false
+        fetchedCodeLists: false,
+        loadingSeries: true
       };
     case SUCCESS(ACTION_TYPES.FETCH_DIMENSION_CODELISTS):
       return {
