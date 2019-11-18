@@ -86,6 +86,7 @@ $axis-labels-font-size: 15px;
 .x-axis-subtitle {
   font-family: BPnoScriptLight;
   font-style: italic;
+  margin-bottom: 30px !important;
   @include mobile {
     font-size: 9px;
   }
