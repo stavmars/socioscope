@@ -9,7 +9,7 @@ $axis-labels-font-size: 15px;
 .highcharts-axis-title {
   fill: #1e1e1e;
   @include mobile {
-    font-size: 9px;
+    font-size: 10px;
   }
   @include computer {
     font-size: 15px;
@@ -86,7 +86,12 @@ $axis-labels-font-size: 15px;
 .x-axis-subtitle {
   font-family: BPnoScriptLight;
   font-style: italic;
-  font-size: 16px;
+  @include mobile {
+    font-size: 9px;
+  }
+  @include computer {
+    font-size: 16px;
+  }
 }
 
 .chart .highcharts-legend-item .highcharts-point {

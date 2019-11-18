@@ -290,7 +290,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
             : {
                 useHTML: true,
                 text: xAxisText,
-                style: { fontSize: window.innerWidth > 768 ? '20px' : '9px' }
+                style: { fontSize: window.innerWidth > 768 ? '20px' : '10px' }
               },
         labels: {
           style: { fontFamily: 'Proxima Nova Semibold', fontSize: window.innerWidth > 768 ? '14px' : '9px' }
