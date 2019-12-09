@@ -174,7 +174,7 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
       ],
       exporting: {
         buttons: false,
-        url: 'http://www.socioscope.gr/hc-export',
+        url: 'https://socioscope.gr/hc-export',
         chartOptions: {
           credits: {
             enabled: true,
