@@ -49,7 +49,7 @@ export class BlogFeed extends React.Component {
               />
             </Grid.Column>
             <Grid.Column computer={6} mobile={14}>
-              <NavLink to="/blog/six-dogs-event">
+              <NavLink to="/blog/press-release">
                 <h2 className="blog-feed-item-title">Δελτίο Τύπου Παρουσίασης του Socioscope.gr</h2>
               </NavLink>
               <div className="blog-feed-item-subtitle">Παρασκευή 22 Νοεμβρίου 2019</div>
