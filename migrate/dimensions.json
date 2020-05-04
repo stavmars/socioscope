@@ -172,8 +172,8 @@
     "id": "elections.election_age_group",
     "type": "coded",
     "name": {
-      "en": "Age of Election",
-      "el": "Ηλικία Εκλογής"
+      "en": "Age Group",
+      "el": "Ηλικιακή ομάδα"
     },
     "dependencies": [
       "elections.assembly"
