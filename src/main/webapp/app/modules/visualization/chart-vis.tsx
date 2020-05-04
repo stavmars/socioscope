@@ -95,6 +95,8 @@ const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[]
       return _.orderBy(chartPoints, ['y', 'codeOrder', 'name'], ['desc', 'asc', 'asc']);
     case 'value_asc':
       return _.sortBy(chartPoints, 'y', 'codeOrder', 'name');
+    case 'composite':
+      return chartPoints;
     default:
       return _.sortBy(chartPoints, 'codeOrder', 'name');
   }
@@ -218,7 +220,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
                   codesByNotation,
                   seriesByParent[''][series.id],
                   seriesByParent,
-                  seriesList.length === 1 ? xAxisDimension.order : null
+                  xAxisDimension.type === 'composite' ? 'composite' : seriesList.length === 1 ? xAxisDimension.order : null
                 )
               };
             })

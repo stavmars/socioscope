@@ -504,11 +504,11 @@
     "type": "composite",
     "composedOf": [
       "q8a",
-      "q8b",
-      "q8c",
       "q8d",
-      "q8e",
-      "q8f"
+      "q8c",
+      "q8f",
+      "q8b",
+      "q8e"
     ],
     "disableFilter": true
   },
