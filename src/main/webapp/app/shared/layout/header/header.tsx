@@ -93,7 +93,7 @@ export class Header extends React.Component<IHeaderProps, {}> {
               <Menu.Item as={NavLink} to={{ pathname: '/about', hash: '#project' }} exact isActive={this.isMenuItemActive}>
                 <Translate contentKey="global.menu.about">About</Translate>
               </Menu.Item>
-              {isAuthenticated && <EntitiesMenu />}
+              {isAuthenticated && isAdmin && <EntitiesMenu />}
               {isAuthenticated && isAdmin && <AdminMenu showSwagger={isSwaggerEnabled} />}
               {isAuthenticated && <AccountMenu />}
               {/* <Menu.Item>
