@@ -1,5 +1,5 @@
 import moment from 'moment';
 
-import { APP_LOCAL_DATETIME_FORMAT } from 'app/config/constants';
+import { APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 
-export const convertDateTimeFromServer = date => (date ? moment(date).format(APP_LOCAL_DATETIME_FORMAT) : null);
+export const convertDateTimeFromServer = date => (date ? moment(date).format(APP_LOCAL_DATE_FORMAT) : null);

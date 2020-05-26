@@ -4,8 +4,11 @@ import { Redirect, Route, RouteComponentProps, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { showHeader } from 'app/shared/reducers/header';
 import BlogFeed from 'app/modules/blog/blog-feed';
-import BlogPage from 'app/modules/blog/blog-page';
 import Header from 'app/shared/layout/header/header';
+import PrivateRoute from 'app/shared/auth/private-route';
+import NewsEditor from 'app/modules/blog/news-editor';
+import ErrorBoundaryRoute from 'app/shared/error/error-boundary-route';
+import NewsDisplay from 'app/modules/blog/news-display';
 
 // tslint:disable:jsx-no-lambda
 export interface IBlogProp extends DispatchProps, RouteComponentProps<{ id: string }> {}
@@ -27,8 +30,9 @@ export class Blog extends React.Component<IBlogProp> {
         <Route path={`${match.url}`} render={() => <Header isFixed />} />
         <div>
           <Switch>
-            <Route exact path={`${match.url}/six-dogs-event`} render={() => <BlogPage page="six-dogs-event" />} />
-            <Route exact path={`${match.url}/press-release`} render={() => <BlogPage page="press-release" />} />
+            <PrivateRoute exact path={`${match.url}/editor/new`} component={NewsEditor} />
+            <PrivateRoute path={`${match.url}/editor/:id/edit`} component={NewsEditor} />
+            <ErrorBoundaryRoute path={`${match.url}/display/:id`} component={NewsDisplay} />
             <Route path={`${match.url}`} render={() => <BlogFeed />} />
           </Switch>
         </div>

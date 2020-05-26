@@ -3,69 +3,102 @@ import './blog.scss';
 import React from 'react';
 import { Button, Grid, Image } from 'semantic-ui-react';
 import { Link, NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { IRootState } from 'app/shared/reducers';
+import { deleteEntity, getEntities } from 'app/entities/news-post/news-post.reducer';
+import moment from 'moment';
+import _ from 'lodash';
 
-export class BlogFeed extends React.Component {
+export interface IBlogFeedProps extends StateProps, DispatchProps {}
+
+export class BlogFeed extends React.Component<IBlogFeedProps> {
+  componentDidMount() {
+    this.props.getEntities();
+  }
+
   render() {
+    const { isAuthenticated, loading, newsPosts } = this.props;
+
     return (
       <div className="blog-feed">
-        <h1 className="title">Blog</h1>
-        <Grid centered>
-          {/* Six D.O.G.S Event */}
-          <Grid.Row className="blog-feed-item">
-            <Grid.Column textAlign="center" computer={3} mobile={14}>
-              <Image
-                centered
-                as={NavLink}
-                to="/blog/six-dogs-event"
-                size="medium"
-                className="blog-feed-item-image"
-                src="/content/images/Assets/six-dogs-event-invitation.jpg"
-              />
-            </Grid.Column>
-            <Grid.Column computer={6} mobile={14}>
-              <NavLink to="/blog/six-dogs-event">
-                <h2 className="blog-feed-item-title">Ένα εργαλείο για Δημοσιογράφους: Παρουσίαση του Socioscope.gr</h2>
-              </NavLink>
-              <div className="blog-feed-item-subtitle">Τρίτη 19 Νοεμβρίου 2019</div>
-              <p className="blog-feed-item-text">
-                Σήμερα όπου η ανάγκη για τεκμηριωμένα δεδομένα είναι πιο επιτακτική από ποτέ το του Εθνικού Κέντρου Κοινωνικών Ερευνών
-                προσφέρει δεδομένα ανοικτά στο ευρύ κοινό από έρευνες σε ποικίλους τομείς της κοινωνικής και πολιτικής ζωής της Ελλάδας
-              </p>
-              <Button className="blog-feed-item-button" as={NavLink} to="/blog/six-dogs-event">
-                ΠΕΡΙΣΣΟΤΕΡΑ
-              </Button>
-            </Grid.Column>
-          </Grid.Row>
-          {/* Press Release */}
-          <Grid.Row className="blog-feed-item">
-            <Grid.Column textAlign="center" computer={3} mobile={14}>
-              <Image
-                centered
-                as={NavLink}
-                to="/blog/press-release"
-                size="medium"
-                className="blog-feed-item-image"
-                src="/content/images/Assets/ekke-president.jpg"
-              />
-            </Grid.Column>
-            <Grid.Column computer={6} mobile={14}>
-              <NavLink to="/blog/six-dogs-event">
-                <h2 className="blog-feed-item-title">Δελτίο Τύπου Παρουσίασης του Socioscope.gr</h2>
-              </NavLink>
-              <div className="blog-feed-item-subtitle">Παρασκευή 22 Νοεμβρίου 2019</div>
-              <p className="blog-feed-item-text">
-                Socioscope σημαίνει... έρευνα, δεδομένα, τεκμηριωμένες πληροφορίες και πολλά περισσότερα, τα οποία εξερεύνησαν όσοι και όσες
-                παρευρέθηκαν στην πρώτη επίσημη διαδραστική παρουσίασή του.
-              </p>
-              <Button className="blog-feed-item-button" as={NavLink} to="/blog/press-release">
-                ΠΕΡΙΣΣΟΤΕΡΑ
-              </Button>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
+        <h1 className="title">
+          Blog
+          <br />
+          {isAuthenticated && (
+            <Button
+              content="Create Blog Post"
+              as={NavLink}
+              to="/blog/editor/new"
+              style={{ backgroundColor: 'white', fontFamily: 'ProximaNovaBold' }}
+            />
+          )}
+        </h1>
+        {loading ? (
+          <div />
+        ) : (
+          <Grid centered style={{ marginBottom: '50px' }}>
+            {_.orderBy(newsPosts, post => moment(post.postDate), ['desc']).map(
+              newsPost =>
+                (isAuthenticated || newsPost.published) && (
+                  <Grid.Row key={newsPost.id} className="blog-feed-item" columns={isAuthenticated ? 3 : 2}>
+                    <Grid.Column computer={3} mobile={14}>
+                      {newsPost.previewImage ? (
+                        <Image src={`data:${newsPost.previewImageContentType};base64,${newsPost.previewImage}`} size="medium" />
+                      ) : (
+                        <Image className="news-page-image" src="content/images/HeaderLogo.png" />
+                      )}
+                    </Grid.Column>
+                    <Grid.Column computer={6} mobile={14} verticalAlign="middle">
+                      <h2 className="blog-feed-item-title">{newsPost.previewTitle}</h2>
+                      <div className="blog-feed-item-subtitle">{moment(newsPost.postDate).format('DD.MM.YYYY')}</div>
+                      <p className="blog-feed-item-text">{newsPost.previewSubtitle}</p>
+                      <Button className="news-page-more-button" floated="right" as={NavLink} to={`/blog/display/${newsPost.id}`}>
+                        Περισσότερα
+                      </Button>
+                    </Grid.Column>
+                    {isAuthenticated && (
+                      <Grid.Column only="computer" verticalAlign="middle" computer={1}>
+                        <Button
+                          icon="edit"
+                          as={NavLink}
+                          to={`/blog/editor/${newsPost.id}/edit`}
+                          style={{ backgroundColor: '#777eff', color: 'white' }}
+                        />
+                        <br />
+                        <br />
+                        <Button
+                          icon="delete"
+                          as={NavLink}
+                          to={`/entity/news-post/${newsPost.id}/delete`}
+                          style={{ backgroundColor: '#ff6666', color: 'white' }}
+                        />
+                      </Grid.Column>
+                    )}
+                  </Grid.Row>
+                )
+            )}
+          </Grid>
+        )}
       </div>
     );
   }
 }
 
-export default BlogFeed;
+const mapStateToProps = (storeState: IRootState) => ({
+  isAuthenticated: storeState.authentication.isAuthenticated,
+  newsPosts: storeState.newsPost.entities,
+  loading: storeState.newsPost.loading
+});
+
+const mapDispatchToProps = {
+  getEntities,
+  deleteEntity
+};
+
+type StateProps = ReturnType<typeof mapStateToProps>;
+type DispatchProps = typeof mapDispatchToProps;
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(BlogFeed);

@@ -1,0 +1,27 @@
+{
+  "socioscopeApp": {
+    "newsPost": {
+      "home": {
+        "title": "News Posts",
+        "createLabel": "Δημιουργήστε ένα νέο News Post",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα News Post",
+        "search": "Αναζήτηση για News Post"
+      },
+      "created": "Ένα νέο News Post έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα News Post έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα News Post έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο News Post {{ id }};"
+      },
+      "detail": {
+        "title": "News Post"
+      },
+      "content": "Content",
+      "previewImage": "Preview Image",
+      "previewTitle": "Preview Title",
+      "previewSubtitle": "Preview Subtitle",
+      "published": "Published",
+      "postDate": "Post Date"
+    }
+  }
+}

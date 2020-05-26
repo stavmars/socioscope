@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "content",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "previewImage",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image"
+        },
+        {
+            "fieldName": "previewTitle",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "previewSubtitle",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "published",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "postDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "dto": "no",
+    "searchEngine": "elasticsearch",
+    "service": "serviceClass",
+    "entityTableName": "news_post",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

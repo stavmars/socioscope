@@ -1,0 +1,27 @@
+{
+  "socioscopeApp": {
+    "newsPost": {
+      "home": {
+        "title": "News Posts",
+        "createLabel": "Create a new News Post",
+        "createOrEditLabel": "Create or edit a News Post",
+        "search": "Search for News Post"
+      },
+      "created": "A new News Post is created with identifier {{ param }}",
+      "updated": "A News Post is updated with identifier {{ param }}",
+      "deleted": "A News Post is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete News Post {{ id }}?"
+      },
+      "detail": {
+        "title": "News Post"
+      },
+      "content": "Content",
+      "previewImage": "Preview Image",
+      "previewTitle": "Preview Title",
+      "previewSubtitle": "Preview Subtitle",
+      "published": "Published",
+      "postDate": "Post Date"
+    }
+  }
+}

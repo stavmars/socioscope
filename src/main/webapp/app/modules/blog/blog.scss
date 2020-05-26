@@ -30,7 +30,7 @@
     .blog-feed-item-title {
       font-family: BPnoScriptBold;
       color: #401b00;
-      text-align: left;
+      text-align: left !important;
       @include mobile {
         font-size: 19px !important;
       }
@@ -48,10 +48,12 @@
       }
       font-family: ProximaNovaBold;
       color: #1e1e1e;
+      text-align: left !important;
       margin-bottom: 10px;
     }
     .blog-feed-item-text {
       font-family: ProximaNovaRegular;
+      text-align: left !important;
       color: #1e1e1e;
     }
     .blog-feed-item-button {
