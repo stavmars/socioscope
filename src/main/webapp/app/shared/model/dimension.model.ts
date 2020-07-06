@@ -10,7 +10,7 @@ export interface IDimension {
   type?: string;
   order?: string;
   creator?: IUser;
-  geoMaps?: IGeoMap[];
+  levels?: IDimensionLevel[];
   dependencies?: string[];
   disableFilter?: boolean;
   disableAxis?: boolean;
@@ -19,10 +19,10 @@ export interface IDimension {
   filterWidget?: string;
 }
 
-export interface IGeoMap {
+export interface IDimensionLevel {
   name: ILang;
-  url: string;
-  level: number;
+  mapUrl: string;
+  depth: number;
 }
 
 export const defaultValue: Readonly<IDimension> = { name: {} };

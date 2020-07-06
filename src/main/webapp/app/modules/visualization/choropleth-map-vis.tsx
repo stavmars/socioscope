@@ -3,7 +3,7 @@ import React from 'react';
 import Highmaps from 'highcharts/highmaps';
 import HighchartsReact from 'highcharts-react-official';
 import _ from 'lodash';
-import { IDimension, IGeoMap } from 'app/shared/model/dimension.model';
+import { IDimension, IDimensionLevel } from 'app/shared/model/dimension.model';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeries } from 'app/shared/model/series.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
@@ -30,7 +30,7 @@ export interface IChoroplethVisProp {
 export interface IChoroplethVisState {
   geoJson: any;
   geoJsonLoading: boolean;
-  geoMap: IGeoMap;
+  geoLevel: IDimensionLevel;
 }
 
 export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoroplethVisState> {
@@ -41,7 +41,7 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
     this.state = {
       geoJson: null,
       geoJsonLoading: true,
-      geoMap: null
+      geoLevel: null
     };
   }
 
@@ -53,28 +53,28 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
     this.innerChart.current.chart.exportChart({ type }, {});
   }
 
-  fetchGeoJson(geoMap: IGeoMap) {
+  fetchGeoJson(geoLevel: IDimensionLevel) {
     this.setState({ geoJsonLoading: true });
-    axios.get(geoMap.url).then(response => this.setState({ geoJson: response.data, geoJsonLoading: false, geoMap }));
+    axios.get(geoLevel.mapUrl).then(response => this.setState({ geoJson: response.data, geoJsonLoading: false, geoLevel }));
   }
 
   componentDidMount() {
     const { dataset, seriesOptions } = this.props;
     const xAxisDimension = _.find(dataset.dimensions, { id: seriesOptions.xAxis }) as IDimension;
-    const geoMap = xAxisDimension.geoMaps[0];
+    const geoMap = xAxisDimension.levels[0];
     this.fetchGeoJson(geoMap);
   }
 
   componentDidUpdate(prevProps: IChoroplethVisProp, prevState: IChoroplethVisState) {
-    if (this.state.geoMap !== prevState.geoMap) {
-      this.fetchGeoJson(this.state.geoMap);
+    if (this.state.geoLevel !== prevState.geoLevel) {
+      this.fetchGeoJson(this.state.geoLevel);
     }
   }
 
   render() {
     const { dataset, seriesOptions, series, xAxisCodes, loadingSeries, showButtons } = this.props;
     const { dimensions, colorScheme } = dataset;
-    const { geoJsonLoading, geoJson, geoMap } = this.state;
+    const { geoJsonLoading, geoJson, geoLevel } = this.state;
     const { codesByNotation } = xAxisCodes;
 
     const xAxisDimension = _.find(dimensions, { id: seriesOptions.xAxis }) as IDimension;
@@ -86,19 +86,19 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
     // tslint:disable:jsx-no-lambda
 
     const levelButtons =
-      xAxisDimension.geoMaps.length === 0 ? (
+      xAxisDimension.levels.length === 0 ? (
         ''
       ) : (
         <Button.Group className="map-level-button-group" basic>
-          {xAxisDimension.geoMaps.map(geo => (
-            <Button key={geo.level} active={geo === this.state.geoMap} onClick={() => this.setState({ geoMap: geo })}>
-              {translateEntityField(geo.name)}
+          {xAxisDimension.levels.map(level => (
+            <Button key={level.depth} active={level === this.state.geoLevel} onClick={() => this.setState({ geoLevel: level })}>
+              {translateEntityField(level.name)}
             </Button>
           ))}
         </Button.Group>
       );
 
-    const levelSeriesPoints = series.data.filter(seriesPoint => codesByNotation[seriesPoint.x].level === geoMap.level);
+    const levelSeriesPoints = series.data.filter(seriesPoint => codesByNotation[seriesPoint.x].level === geoLevel.depth);
 
     if (levelSeriesPoints.length === 0) {
       return (

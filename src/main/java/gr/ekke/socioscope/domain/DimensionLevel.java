@@ -4,26 +4,26 @@ import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.util.Map;
 
-public class GeoMap implements Serializable {
+public class DimensionLevel implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private int level = 0;
+    private int depth = 0;
 
     @NotBlank
     private Map<String, @NotBlank String> name;
 
-    private String url;
+    private String mapUrl;
 
-    public GeoMap() {
+    public DimensionLevel() {
     }
 
-    public int getLevel() {
-        return level;
+    public int getDepth() {
+        return depth;
     }
 
-    public void setLevel(int level) {
-        this.level = level;
+    public void setDepth(int depth) {
+        this.depth = depth;
     }
 
     public Map<String, String> getName() {
@@ -34,20 +34,20 @@ public class GeoMap implements Serializable {
         this.name = name;
     }
 
-    public String getUrl() {
-        return url;
+    public String getMapUrl() {
+        return mapUrl;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setMapUrl(String mapUrl) {
+        this.mapUrl = mapUrl;
     }
 
     @Override
     public String toString() {
-        return "GeoMap{" +
-            "level=" + level +
+        return "DimensionLevel{" +
+            "depth=" + depth +
             ", name=" + name +
-            ", url='" + url + '\'' +
+            ", mapUrl='" + mapUrl + '\'' +
             '}';
     }
 }
