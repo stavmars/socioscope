@@ -19,6 +19,7 @@ export interface IDimension {
   filterWidget?: string;
   required?: boolean;
   noFilterText?: ILang;
+  parentDimensionId?: string;
 }
 
 export interface IGeoMap {

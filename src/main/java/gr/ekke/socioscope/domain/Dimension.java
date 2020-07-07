@@ -76,6 +76,8 @@ public class Dimension implements Serializable {
 
     private Map<String, @NotBlank String> noFilterText;
 
+    private String parentDimensionId;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Dimension() {
     }
@@ -254,6 +256,14 @@ public class Dimension implements Serializable {
         this.noFilterText = noFilterText;
     }
 
+    public String getParentDimensionId() {
+        return parentDimensionId;
+    }
+
+    public void setParentDimensionId(String parentDimensionId) {
+        this.parentDimensionId = parentDimensionId;
+    }
+
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -296,6 +306,7 @@ public class Dimension implements Serializable {
             ", disableStacking=" + disableStacking +
             ", required=" + required +
             ", noFilterText=" + noFilterText +
+            ", parentDimensionId='" + parentDimensionId + '\'' +
             '}';
     }
 }
