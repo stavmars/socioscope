@@ -72,6 +72,9 @@ public class Dimension implements Serializable {
 
     private Boolean disableStacking;
 
+    private Boolean required;
+
+    private Map<String, @NotBlank String> noFilterText;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Dimension() {
@@ -235,6 +238,22 @@ public class Dimension implements Serializable {
         this.filterWidget = filterWidget;
     }
 
+    public Boolean getRequired() {
+        return required;
+    }
+
+    public void setRequired(Boolean required) {
+        this.required = required;
+    }
+
+    public Map<String, String> getNoFilterText() {
+        return noFilterText;
+    }
+
+    public void setNoFilterText(Map<String, String> noFilterText) {
+        this.noFilterText = noFilterText;
+    }
+
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -264,7 +283,9 @@ public class Dimension implements Serializable {
             ", id='" + id + '\'' +
             ", name=" + name +
             ", description=" + description +
+            ", details=" + details +
             ", groupId='" + groupId + '\'' +
+            ", order='" + order + '\'' +
             ", type='" + type + '\'' +
             ", dependencies=" + dependencies +
             ", creator=" + creator +
@@ -272,6 +293,9 @@ public class Dimension implements Serializable {
             ", disableAxis=" + disableAxis +
             ", disableFilter=" + disableFilter +
             ", filterWidget='" + filterWidget + '\'' +
+            ", disableStacking=" + disableStacking +
+            ", required=" + required +
+            ", noFilterText=" + noFilterText +
             '}';
     }
 }

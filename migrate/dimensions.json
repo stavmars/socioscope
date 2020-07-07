@@ -89,7 +89,11 @@
         "url": "content/geo/municipalities.json"
       }
     ],
-    "dependencies": []
+    "dependencies": [],
+    "noFilterText": {
+      "el": "Επικράτεια",
+      "en": "State"
+    }
   },
   {
     "id": "municipality",
@@ -127,7 +131,8 @@
       "en": "Elections"
     },
     "type": "coded",
-    "dependencies": []
+    "dependencies": [],
+    "required": true
   },
   {
     "id": "elections.assembly",

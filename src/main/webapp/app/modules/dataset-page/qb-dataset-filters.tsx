@@ -57,6 +57,7 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
                   options={dropdownOptions}
                   selection
                   search
+                  placeholder={translateEntityField(dimension.noFilterText)}
                   fluid
                   clearable
                   noResultsMessage="Δε βρέθηκαν αποτελέσματα"
