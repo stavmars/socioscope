@@ -44,11 +44,9 @@
       }
     ],
     "defaultOptions": {
-      "xAxis": "elections",
-      "measure": "votes",
+      "xAxis": "party",
+      "measure": "votes_perc",
       "dimensionFilters": {
-        "constituency": 0,
-        "party": "with_seats"
       }
     },
     "highlights": [
