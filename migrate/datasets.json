@@ -27,6 +27,12 @@
       },
       {
         "id": "elections"
+      },
+      {
+        "id": "abstention"
+      },
+      {
+        "id": "invalid_vote"
       }
     ],
     "measures": [

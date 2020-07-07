@@ -101,6 +101,24 @@
     "dependencies": []
   },
   {
+    "id": "abstention",
+    "name": {
+      "el": "Αποχή",
+      "en": "Abstention"
+    },
+    "type": "coded",
+    "dependencies": []
+  },
+  {
+    "id": "invalid_vote",
+    "name": {
+      "el": "Άκυρα-Λευκά",
+      "en": "Invalid/Blank"
+    },
+    "type": "coded",
+    "dependencies": []
+  },
+  {
     "id": "elections",
     "name": {
       "el": "Εκλογές",

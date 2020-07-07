@@ -10,7 +10,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": "#00FFFF"
   },
@@ -25,7 +24,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": "#AD4B4D"
   },
@@ -40,7 +38,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": "#000C4F"
   },
@@ -55,7 +52,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": "#D80000"
   },
@@ -70,7 +66,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": "#000080"
   },
@@ -85,7 +80,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": "#0C99FF"
   },
@@ -100,7 +94,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": "#00CC0C"
   },
@@ -115,7 +108,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": "#AF6300"
   },
@@ -130,7 +122,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": "#FF8080"
   },
@@ -145,12 +136,11 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "party",
+    "dimensionId": "abstention",
     "notation": "abstained",
     "name": {
       "el": "Απείχαν",
@@ -160,7 +150,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "registered",
     "order": "",
     "color": ""
   },
@@ -175,7 +164,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -190,7 +178,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -205,7 +192,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -220,7 +206,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -235,7 +220,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -250,7 +234,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -265,7 +248,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -280,7 +262,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -295,7 +276,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -310,7 +290,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -325,7 +304,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -340,7 +318,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -355,7 +332,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -370,7 +346,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -385,7 +360,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -400,7 +374,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -415,7 +388,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -430,7 +402,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -445,7 +416,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -460,7 +430,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -475,7 +444,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -490,7 +458,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -505,7 +472,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -520,7 +486,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -535,7 +500,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -550,7 +514,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -565,7 +528,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -580,7 +542,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -595,7 +556,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -610,7 +570,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -625,7 +584,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -640,7 +598,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -655,7 +612,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -670,12 +626,11 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "party",
+    "dimensionId": "abstention",
     "notation": "voted",
     "name": {
       "el": "Ψήφισαν",
@@ -685,12 +640,11 @@
       "el": "",
       "en": ""
     },
-    "parentId": "registered",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "party",
+    "dimensionId": "invalid_vote",
     "notation": "invalid",
     "name": {
       "el": "Ακυρα-Λευκά",
@@ -700,7 +654,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "voted",
     "order": "",
     "color": ""
   },
@@ -715,7 +668,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -730,7 +682,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -745,7 +696,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -760,7 +710,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -775,7 +724,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -790,7 +738,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -805,7 +752,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -820,7 +766,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -835,7 +780,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -850,7 +794,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -865,7 +808,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -880,7 +822,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -895,7 +836,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -910,7 +850,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -925,7 +864,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -940,7 +878,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -955,7 +892,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -970,7 +906,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -985,7 +920,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1000,7 +934,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1015,7 +948,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1030,7 +962,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1045,7 +976,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1060,7 +990,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1075,7 +1004,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1090,7 +1018,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1105,7 +1032,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1120,7 +1046,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1135,7 +1060,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1150,7 +1074,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1165,7 +1088,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1180,7 +1102,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1195,7 +1116,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1210,7 +1130,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1225,7 +1144,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1240,7 +1158,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
@@ -1255,12 +1172,11 @@
       "el": "",
       "en": ""
     },
-    "parentId": "valid",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "party",
+    "dimensionId": "invalid_vote",
     "notation": "valid",
     "name": {
       "el": "Εγκυρα",
@@ -1270,7 +1186,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "voted",
     "order": "",
     "color": ""
   },
@@ -1285,7 +1200,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1300,7 +1214,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1315,7 +1228,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1330,7 +1242,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1345,7 +1256,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1360,7 +1270,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1375,7 +1284,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1390,7 +1298,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1405,7 +1312,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1420,7 +1326,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1435,7 +1340,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1450,7 +1354,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1465,7 +1368,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1480,7 +1382,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1495,7 +1396,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1510,7 +1410,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1525,7 +1424,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1540,7 +1438,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1555,7 +1452,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1570,7 +1466,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1585,7 +1480,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1600,7 +1494,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1615,7 +1508,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1630,7 +1522,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1645,7 +1536,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1660,7 +1550,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1675,7 +1564,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1690,7 +1578,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1705,7 +1592,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1720,7 +1606,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1735,7 +1620,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1750,7 +1634,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1765,7 +1648,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1780,7 +1662,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1795,7 +1676,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1810,7 +1690,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1825,7 +1704,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1840,7 +1718,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1855,7 +1732,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1870,7 +1746,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1885,7 +1760,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1900,7 +1774,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1915,7 +1788,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1930,7 +1802,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1945,7 +1816,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1960,7 +1830,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1975,7 +1844,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1990,7 +1858,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2005,7 +1872,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2020,7 +1886,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2035,7 +1900,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2050,7 +1914,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2065,7 +1928,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2080,7 +1942,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2095,7 +1956,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2110,7 +1970,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2125,7 +1984,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2140,7 +1998,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2155,7 +2012,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2170,7 +2026,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2185,7 +2040,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2200,7 +2054,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2215,7 +2068,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2230,7 +2082,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2245,7 +2096,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2260,7 +2110,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2275,7 +2124,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2290,7 +2138,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2305,7 +2152,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2320,7 +2166,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2335,7 +2180,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2350,7 +2194,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2365,7 +2208,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2380,7 +2222,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2395,7 +2236,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2410,7 +2250,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2425,7 +2264,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2440,7 +2278,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2455,7 +2292,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2470,7 +2306,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2485,7 +2320,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2500,7 +2334,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2515,7 +2348,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2530,7 +2362,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2545,7 +2376,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2560,7 +2390,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2575,7 +2404,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2590,7 +2418,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2605,7 +2432,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2620,7 +2446,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2635,7 +2460,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2650,7 +2474,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2665,7 +2488,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2680,7 +2502,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2695,7 +2516,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2710,7 +2530,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2725,7 +2544,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2740,7 +2558,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2755,7 +2572,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2770,7 +2586,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2785,7 +2600,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2800,7 +2614,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2815,7 +2628,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2830,7 +2642,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2845,7 +2656,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2860,7 +2670,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2875,7 +2684,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2890,7 +2698,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2905,7 +2712,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2920,7 +2726,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2935,7 +2740,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2950,7 +2754,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2965,7 +2768,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2980,7 +2782,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2995,7 +2796,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3010,7 +2810,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3025,7 +2824,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3040,7 +2838,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3055,7 +2852,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3070,7 +2866,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3085,7 +2880,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3100,7 +2894,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3115,7 +2908,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3130,7 +2922,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3145,7 +2936,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3160,7 +2950,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3175,7 +2964,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3190,7 +2978,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3205,7 +2992,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3220,7 +3006,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3235,7 +3020,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3250,7 +3034,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3265,7 +3048,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3280,7 +3062,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3295,7 +3076,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3310,7 +3090,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3325,7 +3104,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3340,7 +3118,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3355,7 +3132,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3370,7 +3146,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3385,7 +3160,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3400,7 +3174,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3415,7 +3188,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3430,7 +3202,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3445,7 +3216,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3460,7 +3230,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3475,7 +3244,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3490,7 +3258,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3505,7 +3272,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3520,7 +3286,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3535,7 +3300,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3550,7 +3314,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3565,7 +3328,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3580,7 +3342,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3595,7 +3356,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3610,7 +3370,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3625,7 +3384,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3640,7 +3398,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3655,7 +3412,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3670,7 +3426,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3685,7 +3440,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3700,7 +3454,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3715,7 +3468,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3730,7 +3482,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3745,7 +3496,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3760,7 +3510,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3775,7 +3524,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3790,7 +3538,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3805,7 +3552,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3820,7 +3566,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3835,7 +3580,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3850,7 +3594,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3865,7 +3608,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3880,7 +3622,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3895,7 +3636,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3910,7 +3650,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3925,7 +3664,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3940,7 +3678,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3955,7 +3692,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3970,7 +3706,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3985,7 +3720,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4000,7 +3734,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4015,7 +3748,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4030,7 +3762,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4045,7 +3776,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4060,7 +3790,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4075,7 +3804,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4090,7 +3818,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4105,7 +3832,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4120,7 +3846,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4135,7 +3860,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4150,7 +3874,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4165,7 +3888,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4180,7 +3902,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4195,7 +3916,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4210,7 +3930,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4225,7 +3944,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4240,7 +3958,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4255,7 +3972,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4270,7 +3986,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4285,7 +4000,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4300,7 +4014,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4315,7 +4028,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4330,7 +4042,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4345,7 +4056,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4360,7 +4070,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4375,7 +4084,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4390,7 +4098,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4405,7 +4112,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4420,7 +4126,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4435,7 +4140,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4450,7 +4154,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4465,7 +4168,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4480,7 +4182,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4495,7 +4196,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4510,7 +4210,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4525,7 +4224,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4540,7 +4238,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4555,7 +4252,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4570,7 +4266,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4585,7 +4280,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4600,7 +4294,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4615,7 +4308,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4630,7 +4322,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4645,7 +4336,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4660,7 +4350,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4675,7 +4364,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4690,7 +4378,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4705,7 +4392,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4720,7 +4406,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4735,7 +4420,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4750,7 +4434,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4765,7 +4448,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4780,7 +4462,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4795,7 +4476,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4810,7 +4490,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4825,7 +4504,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4840,7 +4518,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4855,7 +4532,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4870,7 +4546,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4885,7 +4560,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4900,7 +4574,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4915,7 +4588,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4930,7 +4602,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4945,7 +4616,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4960,7 +4630,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4975,7 +4644,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4990,7 +4658,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5005,7 +4672,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5020,7 +4686,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5035,7 +4700,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5050,7 +4714,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5065,7 +4728,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5080,7 +4742,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5095,7 +4756,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5110,7 +4770,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5125,7 +4784,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5140,7 +4798,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5155,7 +4812,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5170,7 +4826,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5185,7 +4840,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5200,7 +4854,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5215,7 +4868,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5230,7 +4882,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5245,7 +4896,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5260,7 +4910,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5275,7 +4924,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5290,7 +4938,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5305,7 +4952,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5320,7 +4966,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5335,7 +4980,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5350,7 +4994,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5365,7 +5008,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5380,7 +5022,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5395,7 +5036,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5410,7 +5050,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5425,7 +5064,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5440,7 +5078,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5455,7 +5092,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5470,7 +5106,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5485,7 +5120,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5500,7 +5134,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5515,7 +5148,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5530,7 +5162,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5545,7 +5176,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5560,7 +5190,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5575,7 +5204,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5590,7 +5218,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5605,7 +5232,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5620,7 +5246,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5635,7 +5260,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5650,7 +5274,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5665,7 +5288,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5680,7 +5302,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5695,7 +5316,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5710,7 +5330,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5725,7 +5344,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5740,7 +5358,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5755,7 +5372,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5770,7 +5386,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5785,7 +5400,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5800,7 +5414,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5815,7 +5428,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5830,7 +5442,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5845,7 +5456,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5860,7 +5470,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5875,7 +5484,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5890,7 +5498,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5905,7 +5512,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5920,7 +5526,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5935,7 +5540,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5950,7 +5554,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5965,7 +5568,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5980,7 +5582,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5995,7 +5596,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6010,7 +5610,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6025,7 +5624,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6040,7 +5638,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6055,7 +5652,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6070,7 +5666,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6085,7 +5680,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6100,7 +5694,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6115,7 +5708,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6130,7 +5722,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6145,7 +5736,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6160,7 +5750,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6175,7 +5764,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6190,7 +5778,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6205,7 +5792,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6220,7 +5806,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6235,7 +5820,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6250,7 +5834,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6265,7 +5848,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6280,7 +5862,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6295,7 +5876,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6310,7 +5890,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6325,7 +5904,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6340,7 +5918,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6355,7 +5932,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6370,7 +5946,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6385,7 +5960,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6400,7 +5974,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6415,7 +5988,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6430,7 +6002,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6445,7 +6016,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6460,7 +6030,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6475,7 +6044,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6490,7 +6058,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6505,7 +6072,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6520,7 +6086,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6535,7 +6100,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6550,7 +6114,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6565,7 +6128,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6580,7 +6142,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6595,7 +6156,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6610,7 +6170,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6625,7 +6184,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6640,7 +6198,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6655,7 +6212,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6670,7 +6226,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6685,7 +6240,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6700,7 +6254,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6715,7 +6268,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6730,7 +6282,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6745,7 +6296,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6760,7 +6310,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6775,7 +6324,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6790,7 +6338,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6805,7 +6352,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6820,7 +6366,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6835,7 +6380,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6850,7 +6394,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6865,7 +6408,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6880,7 +6422,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6895,7 +6436,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6910,7 +6450,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6925,7 +6464,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6940,7 +6478,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6955,7 +6492,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6970,7 +6506,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6985,7 +6520,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -7000,7 +6534,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": 8,
     "color": ""
   },
@@ -7015,7 +6548,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": 1,
     "color": ""
   },
@@ -7030,7 +6562,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": 2,
     "color": ""
   },
@@ -7045,7 +6576,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": 3,
     "color": ""
   },
@@ -7060,7 +6590,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": 4,
     "color": ""
   },
@@ -7075,7 +6604,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": 5,
     "color": ""
   },
@@ -7090,7 +6618,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": 6,
     "color": ""
   },
@@ -7105,7 +6632,6 @@
       "el": "",
       "en": ""
     },
-    "parentId": "",
     "order": 7,
     "color": ""
   }
