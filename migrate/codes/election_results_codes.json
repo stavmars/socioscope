@@ -126,20 +126,6 @@
     "color": "#FF8080"
   },
   {
-    "dimensionId": "party",
-    "notation": "registered",
-    "name": {
-      "el": "Εγγεγραμμένοι",
-      "en": "Registered"
-    },
-    "description": {
-      "el": "",
-      "en": ""
-    },
-    "order": "",
-    "color": ""
-  },
-  {
     "dimensionId": "abstention",
     "notation": "abstained",
     "name": {
