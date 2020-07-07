@@ -92,6 +92,15 @@
     "dependencies": []
   },
   {
+    "id": "municipality",
+    "name": {
+      "el": "Δήμος",
+      "en": "Μunicipality"
+    },
+    "type": "coded",
+    "dependencies": []
+  },
+  {
     "id": "elections",
     "name": {
       "el": "Εκλογές",

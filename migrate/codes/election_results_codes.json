@@ -1285,12 +1285,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110101",
     "name": {
       "el": "Δήμος Κομοτηνής",
@@ -1300,12 +1300,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "2",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110102",
     "name": {
       "el": "Δήμος Αρριανών",
@@ -1315,12 +1315,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "2",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110103",
     "name": {
       "el": "Δήμος Ιάσμου",
@@ -1330,12 +1330,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "2",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110104",
     "name": {
       "el": "Δήμος Μαρωνείας - Σαπών",
@@ -1345,7 +1345,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "2",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1360,12 +1360,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110201",
     "name": {
       "el": "Δήμος Δράμας",
@@ -1375,12 +1375,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "4",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110202",
     "name": {
       "el": "Δήμος Δοξάτου",
@@ -1390,12 +1390,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "4",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110203",
     "name": {
       "el": "Δήμος Κάτω Νευροκοπίου",
@@ -1405,12 +1405,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "4",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110204",
     "name": {
       "el": "Δήμος Παρανεστίου",
@@ -1420,12 +1420,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "4",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110205",
     "name": {
       "el": "Δήμος Προσοτσάνης",
@@ -1435,7 +1435,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "4",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1450,12 +1450,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110301",
     "name": {
       "el": "Δήμος Αλεξανδρούπολης",
@@ -1465,12 +1465,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "1",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110302",
     "name": {
       "el": "Δήμος Διδυμοτείχου",
@@ -1480,12 +1480,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "1",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110303",
     "name": {
       "el": "Δήμος Ορεστιάδας",
@@ -1495,12 +1495,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "1",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110304",
     "name": {
       "el": "Δήμος Σαμοθράκης",
@@ -1510,12 +1510,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "1",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110305",
     "name": {
       "el": "Δήμος Σουφλίου",
@@ -1525,7 +1525,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "1",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1540,12 +1540,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110401",
     "name": {
       "el": "Δήμος Θάσου",
@@ -1555,12 +1555,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "5",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110501",
     "name": {
       "el": "Δήμος Καβάλας",
@@ -1570,12 +1570,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "5",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110502",
     "name": {
       "el": "Δήμος Νέστου",
@@ -1585,12 +1585,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "5",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110503",
     "name": {
       "el": "Δήμος Παγγαίου",
@@ -1600,7 +1600,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "5",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1615,12 +1615,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110601",
     "name": {
       "el": "Δήμος Ξάνθης",
@@ -1630,12 +1630,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "3",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110602",
     "name": {
       "el": "Δήμος Αβδήρων",
@@ -1645,12 +1645,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "3",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110603",
     "name": {
       "el": "Δήμος Μύκης",
@@ -1660,12 +1660,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "3",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1110604",
     "name": {
       "el": "Δήμος Τοπείρου",
@@ -1675,7 +1675,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "3",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1690,12 +1690,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120701",
     "name": {
       "el": "Δήμος Θεσσαλονίκης",
@@ -1705,12 +1705,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "6",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120702",
     "name": {
       "el": "Δήμος Αμπελοκήπων - Μενεμένης",
@@ -1720,7 +1720,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "6",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1735,12 +1735,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120703",
     "name": {
       "el": "Δήμος Βόλβης",
@@ -1750,12 +1750,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "7",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120704",
     "name": {
       "el": "Δήμος Δέλτα",
@@ -1765,12 +1765,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "7",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120705",
     "name": {
       "el": "Δήμος Θερμαϊκού",
@@ -1780,12 +1780,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "7",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120706",
     "name": {
       "el": "Δήμος Θέρμης",
@@ -1795,12 +1795,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "7",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120707",
     "name": {
       "el": "Δήμος Καλαμαριάς",
@@ -1810,12 +1810,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "6",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120708",
     "name": {
       "el": "Δήμος Κορδελιού -Ευόσμου",
@@ -1825,12 +1825,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "6",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120709",
     "name": {
       "el": "Δήμος Λαγκαδά",
@@ -1840,12 +1840,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "7",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120710",
     "name": {
       "el": "Δήμος Νεάπολης - Συκεών",
@@ -1855,12 +1855,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "6",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120711",
     "name": {
       "el": "Δήμος Παύλου Μελά",
@@ -1870,12 +1870,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "6",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120712",
     "name": {
       "el": "Δήμος Πυλαίας - Χορτιάτη",
@@ -1885,12 +1885,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "7",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120713",
     "name": {
       "el": "Δήμος Χαλκηδόνος",
@@ -1900,12 +1900,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "7",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120714",
     "name": {
       "el": "Δήμος Ωραιοκάστρου",
@@ -1915,7 +1915,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "7",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1930,12 +1930,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120801",
     "name": {
       "el": "Δήμος Βέροιας",
@@ -1945,12 +1945,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "12",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120802",
     "name": {
       "el": "Δήμος Αλεξάνδρειας",
@@ -1960,12 +1960,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "12",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120803",
     "name": {
       "el": "Δήμος Νάουσας",
@@ -1975,7 +1975,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "12",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -1990,12 +1990,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120901",
     "name": {
       "el": "Δήμος Κιλκίς",
@@ -2005,12 +2005,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "10",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1120902",
     "name": {
       "el": "Δήμος Παιονίας",
@@ -2020,7 +2020,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "10",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2035,12 +2035,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121001",
     "name": {
       "el": "Δήμος Εδεσσας",
@@ -2050,12 +2050,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "11",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121002",
     "name": {
       "el": "Δήμος Αλμωπίας",
@@ -2065,12 +2065,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "11",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121003",
     "name": {
       "el": "Δήμος Πέλλας",
@@ -2080,12 +2080,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "11",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121004",
     "name": {
       "el": "Δήμος Σκύδρας",
@@ -2095,7 +2095,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "11",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2110,12 +2110,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121101",
     "name": {
       "el": "Δήμος Κατερίνης",
@@ -2125,12 +2125,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "13",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121102",
     "name": {
       "el": "Δήμος Δίου - Ολύμπου",
@@ -2140,12 +2140,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "13",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121103",
     "name": {
       "el": "Δήμος Πύδνας - Κολινδρού",
@@ -2155,7 +2155,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "13",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2170,12 +2170,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121201",
     "name": {
       "el": "Δήμος Σερρών",
@@ -2185,12 +2185,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "8",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121202",
     "name": {
       "el": "Δήμος Αμφίπολης",
@@ -2200,12 +2200,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "8",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121203",
     "name": {
       "el": "Δήμος Βισαλτίας",
@@ -2215,12 +2215,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "8",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121204",
     "name": {
       "el": "Δήμος Εμμανουήλ Παππά",
@@ -2230,12 +2230,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "8",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121205",
     "name": {
       "el": "Δήμος Ηρακλείας",
@@ -2245,12 +2245,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "8",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121206",
     "name": {
       "el": "Δήμος Νέας Ζίχνης",
@@ -2260,12 +2260,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "8",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121207",
     "name": {
       "el": "Δήμος Σιντικής",
@@ -2275,7 +2275,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "8",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2290,12 +2290,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121301",
     "name": {
       "el": "Δήμος Πολυγύρου",
@@ -2305,12 +2305,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "9",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121302",
     "name": {
       "el": "Δήμος Αριστοτέλη",
@@ -2320,12 +2320,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "9",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121303",
     "name": {
       "el": "Δήμος Κασσάνδρας",
@@ -2335,12 +2335,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "9",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121304",
     "name": {
       "el": "Δήμος Νέας Προποντίδας",
@@ -2350,12 +2350,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "9",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1121305",
     "name": {
       "el": "Δήμος Σιθωνίας",
@@ -2365,7 +2365,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "9",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2380,12 +2380,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1211401",
     "name": {
       "el": "Δήμος Κοζάνης",
@@ -2395,12 +2395,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "15",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1211402",
     "name": {
       "el": "Δήμος Βοϊου",
@@ -2410,12 +2410,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "15",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1211403",
     "name": {
       "el": "Δήμος Εορδαίας",
@@ -2425,12 +2425,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "15",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1211404",
     "name": {
       "el": "Δήμος Σερβίων - Βελβεντού ",
@@ -2440,7 +2440,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "15",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2455,12 +2455,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1211501",
     "name": {
       "el": "Δήμος Γρεβενών",
@@ -2470,12 +2470,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "17",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1211502",
     "name": {
       "el": "Δήμος Δεσκάτης",
@@ -2485,7 +2485,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "17",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2500,12 +2500,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1211601",
     "name": {
       "el": "Δήμος Καστοριάς",
@@ -2515,12 +2515,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "16",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1211602",
     "name": {
       "el": "Δήμος Νεστορίου",
@@ -2530,12 +2530,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "16",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1211603",
     "name": {
       "el": "Δήμος Ορεστίδος",
@@ -2545,7 +2545,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "16",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2560,12 +2560,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1211701",
     "name": {
       "el": "Δήμος Φλώρινας",
@@ -2575,12 +2575,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "14",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1211702",
     "name": {
       "el": "Δήμος Αμυνταίου",
@@ -2590,12 +2590,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "14",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1211703",
     "name": {
       "el": "Δήμος Πρεσπών",
@@ -2605,7 +2605,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "14",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2620,12 +2620,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1221801",
     "name": {
       "el": "Δήμος Ιωαννιτών",
@@ -2635,12 +2635,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "18",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1221802",
     "name": {
       "el": "Δήμος Βορείων Τζουμέρκων",
@@ -2650,12 +2650,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "18",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1221803",
     "name": {
       "el": "Δήμος Δωδώνης",
@@ -2665,12 +2665,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "18",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1221804",
     "name": {
       "el": "Δήμος Ζαγορίου",
@@ -2680,12 +2680,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "18",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1221805",
     "name": {
       "el": "Δήμος Ζίτσας",
@@ -2695,12 +2695,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "18",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1221806",
     "name": {
       "el": "Δήμος Κόνιτσας",
@@ -2710,12 +2710,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "18",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1221807",
     "name": {
       "el": "Δήμος Μετσόβου",
@@ -2725,12 +2725,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "18",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1221808",
     "name": {
       "el": "Δήμος Πωγωνίου",
@@ -2740,7 +2740,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "18",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2755,12 +2755,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1221901",
     "name": {
       "el": "Δήμος Αρταίων",
@@ -2770,12 +2770,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "19",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1221902",
     "name": {
       "el": "Δήμος Γεωργίου Καραϊσκάκη",
@@ -2785,12 +2785,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "19",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1221903",
     "name": {
       "el": "Δήμος Κεντρικών Τζουμέρκων ",
@@ -2800,12 +2800,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "19",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1221904",
     "name": {
       "el": "Δήμος Νικολάου Σκουφά",
@@ -2815,7 +2815,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "19",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2830,12 +2830,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1222001",
     "name": {
       "el": "Δήμος Ηγουμενίτσας",
@@ -2845,12 +2845,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "20",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1222002",
     "name": {
       "el": "Δήμος Σουλίου",
@@ -2860,12 +2860,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "20",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1222003",
     "name": {
       "el": "Δήμος Φιλιατών",
@@ -2875,7 +2875,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "20",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2890,12 +2890,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1222101",
     "name": {
       "el": "Δήμος Πρέβεζας",
@@ -2905,12 +2905,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "21",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1222102",
     "name": {
       "el": "Δήμος Ζηρού",
@@ -2920,12 +2920,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "21",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "1222103",
     "name": {
       "el": "Δήμος Πάργας",
@@ -2935,7 +2935,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "21",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -2950,12 +2950,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312201",
     "name": {
       "el": "Δήμος Λαρισαίων",
@@ -2965,12 +2965,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "22",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312202",
     "name": {
       "el": "Δήμος Αγιάς",
@@ -2980,12 +2980,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "22",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312203",
     "name": {
       "el": "Δήμος Ελασσόνας",
@@ -2995,12 +2995,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "22",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312204",
     "name": {
       "el": "Δήμος Κιλελέρ",
@@ -3010,12 +3010,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "22",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312205",
     "name": {
       "el": "Δήμος Τεμπών ",
@@ -3025,12 +3025,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "22",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312206",
     "name": {
       "el": "Δήμος Τυρνάβου",
@@ -3040,12 +3040,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "22",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312207",
     "name": {
       "el": "Δήμος Φαρσάλων",
@@ -3055,7 +3055,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "22",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3070,12 +3070,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312301",
     "name": {
       "el": "Δήμος Καρδίτσας",
@@ -3085,12 +3085,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "25",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312302",
     "name": {
       "el": "Δήμος Αργιθέας",
@@ -3100,12 +3100,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "25",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312303",
     "name": {
       "el": "Δήμος Λίμνης Πλαστήρα",
@@ -3115,12 +3115,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "25",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312304",
     "name": {
       "el": "Δήμος Μουζακίου",
@@ -3130,12 +3130,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "25",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312305",
     "name": {
       "el": "Δήμος Παλαμά",
@@ -3145,12 +3145,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "25",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312306",
     "name": {
       "el": "Δήμος Σοφάδων",
@@ -3160,7 +3160,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "25",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3175,12 +3175,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312401",
     "name": {
       "el": "Δήμος Βόλου",
@@ -3190,12 +3190,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "23",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312402",
     "name": {
       "el": "Δήμος Αλμυρού",
@@ -3205,12 +3205,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "23",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312403",
     "name": {
       "el": "Δήμος Ζαγοράς - Μουρεσίου",
@@ -3220,12 +3220,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "23",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312404",
     "name": {
       "el": "Δήμος Νοτίου Πηλίου",
@@ -3235,12 +3235,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "23",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312405",
     "name": {
       "el": "Δήμος Ρήγα Φεραίου",
@@ -3250,12 +3250,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "23",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312501",
     "name": {
       "el": "Δήμος Σκιάθου",
@@ -3265,12 +3265,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "23",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312502",
     "name": {
       "el": "Δήμος Αλοννήσου",
@@ -3280,12 +3280,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "23",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312503",
     "name": {
       "el": "Δήμος Σκοπέλου",
@@ -3295,7 +3295,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "23",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3310,12 +3310,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312601",
     "name": {
       "el": "Δήμος Τρικκαίων",
@@ -3325,12 +3325,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "24",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312602",
     "name": {
       "el": "Δήμος Καλαμπάκας",
@@ -3340,12 +3340,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "24",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312603",
     "name": {
       "el": "Δήμος Πύλης",
@@ -3355,12 +3355,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "24",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2312604",
     "name": {
       "el": "Δήμος Φαρκαδόνας",
@@ -3370,7 +3370,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "24",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3385,12 +3385,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322701",
     "name": {
       "el": "Δήμος Λαμιέων",
@@ -3400,12 +3400,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "33",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322702",
     "name": {
       "el": "Δήμος Αμφίκλειας - Ελάτειας",
@@ -3415,12 +3415,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "33",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322703",
     "name": {
       "el": "Δήμος Δομοκού",
@@ -3430,12 +3430,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "33",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322704",
     "name": {
       "el": "Δήμος Λοκρών",
@@ -3445,12 +3445,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "33",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322705",
     "name": {
       "el": "Δήμος Μακρακώμης",
@@ -3460,12 +3460,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "33",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322706",
     "name": {
       "el": "Δήμος Μώλου - Αγίου Κωνσταντίνου",
@@ -3475,12 +3475,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "33",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322707",
     "name": {
       "el": "Δήμος Στυλίδας",
@@ -3490,7 +3490,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "33",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3505,12 +3505,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322801",
     "name": {
       "el": "Δήμος Λεβαδέων",
@@ -3520,12 +3520,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "36",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322802",
     "name": {
       "el": "Δήμος Αλιάρτου",
@@ -3535,12 +3535,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "36",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322803",
     "name": {
       "el": "Δήμος Διστόμου - Αράχοβας - Αντίκυρας",
@@ -3550,12 +3550,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "36",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322804",
     "name": {
       "el": "Δήμος Θηβαίων",
@@ -3565,12 +3565,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "36",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322805",
     "name": {
       "el": "Δήμος Ορχομενού",
@@ -3580,12 +3580,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "36",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322806",
     "name": {
       "el": "Δήμος Τανάγρας",
@@ -3595,7 +3595,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "36",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3610,12 +3610,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322901",
     "name": {
       "el": "Δήμος Χαλκιδέων",
@@ -3625,12 +3625,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "37",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322902",
     "name": {
       "el": "Δήμος Διρφύων - Μεσσαπίων",
@@ -3640,12 +3640,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "37",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322903",
     "name": {
       "el": "Δήμος Ερέτριας",
@@ -3655,12 +3655,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "37",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322904",
     "name": {
       "el": "Δήμος Ιστιαίας - Αιδηψού",
@@ -3670,12 +3670,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "37",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322905",
     "name": {
       "el": "Δήμος Καρύστου",
@@ -3685,12 +3685,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "37",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322906",
     "name": {
       "el": "Δήμος Κύμης - Αλιβερίου",
@@ -3700,12 +3700,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "37",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322907",
     "name": {
       "el": "Δήμος Μαντουδίου - Λίμνης - Αγίας Αννας",
@@ -3715,12 +3715,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "37",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2322908",
     "name": {
       "el": "Δήμος Σκύρου",
@@ -3730,7 +3730,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "37",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3745,12 +3745,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2323001",
     "name": {
       "el": "Δήμος Καρπενησίου",
@@ -3760,12 +3760,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "34",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2323002",
     "name": {
       "el": "Δήμος Αγράφων",
@@ -3775,7 +3775,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "34",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3790,12 +3790,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2323101",
     "name": {
       "el": "Δήμος Δελφών",
@@ -3805,12 +3805,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "35",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2323102",
     "name": {
       "el": "Δήμος Δωρίδος",
@@ -3820,7 +3820,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "35",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3835,12 +3835,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2413201",
     "name": {
       "el": "Δήμος Κέρκυρας",
@@ -3850,12 +3850,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "26",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2413202",
     "name": {
       "el": "Δήμος Παξών",
@@ -3865,7 +3865,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "26",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3880,12 +3880,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2413301",
     "name": {
       "el": "Δήμος Ζακύνθου",
@@ -3895,7 +3895,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "29",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3910,12 +3910,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2413401",
     "name": {
       "el": "Δήμος Ιθάκης",
@@ -3925,12 +3925,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "28",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2413501",
     "name": {
       "el": "Δήμος Κεφαλονιάς",
@@ -3940,7 +3940,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "28",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -3955,12 +3955,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2413601",
     "name": {
       "el": "Δήμος Λευκάδας",
@@ -3970,12 +3970,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "27",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2413602",
     "name": {
       "el": "Δήμος Μεγανησίου",
@@ -3985,7 +3985,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "27",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4000,12 +4000,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423701",
     "name": {
       "el": "Δήμος Πατρέων",
@@ -4015,12 +4015,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "31",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423702",
     "name": {
       "el": "Δήμος Αιγιαλείας",
@@ -4030,12 +4030,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "31",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423703",
     "name": {
       "el": "Δήμος Δυτικής Αχαϊας",
@@ -4045,12 +4045,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "31",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423704",
     "name": {
       "el": "Δήμος Ερυμάνθου",
@@ -4060,12 +4060,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "31",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423705",
     "name": {
       "el": "Δήμος Καλαβρύτων",
@@ -4075,7 +4075,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "31",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4090,12 +4090,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423801",
     "name": {
       "el": "Δήμος Ιεράς Πόλης Μεσολογγίου",
@@ -4105,12 +4105,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "30",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423802",
     "name": {
       "el": "Δήμος Ακτιου - Βόνιτσας",
@@ -4120,12 +4120,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "30",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423803",
     "name": {
       "el": "Δήμος Αγρινίου",
@@ -4135,12 +4135,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "30",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423804",
     "name": {
       "el": "Δήμος Αμφιλοχίας",
@@ -4150,12 +4150,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "30",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423805",
     "name": {
       "el": "Δήμος Θέρμου",
@@ -4165,12 +4165,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "30",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423806",
     "name": {
       "el": "Δήμος Ναυπακτίας",
@@ -4180,12 +4180,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "30",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423807",
     "name": {
       "el": "Δήμος Ξηρομέρου",
@@ -4195,7 +4195,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "30",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4210,12 +4210,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423901",
     "name": {
       "el": "Δήμος Πύργου",
@@ -4225,12 +4225,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "32",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423902",
     "name": {
       "el": "Δήμος Ηλιδας",
@@ -4240,12 +4240,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "32",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423903",
     "name": {
       "el": "Δήμος Ανδραβίδας - Κυλλήνης",
@@ -4255,12 +4255,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "32",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423904",
     "name": {
       "el": "Δήμος Ανδρίτσαινας - Κρεστένων",
@@ -4270,12 +4270,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "32",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423905",
     "name": {
       "el": "Δήμος Αρχαίας Ολυμπίας",
@@ -4285,12 +4285,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "32",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423906",
     "name": {
       "el": "Δήμος Ζαχάρως",
@@ -4300,12 +4300,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "32",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2423907",
     "name": {
       "el": "Δήμος Πηνειού",
@@ -4315,7 +4315,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "32",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4330,12 +4330,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434001",
     "name": {
       "el": "Δήμος Τρίπολης",
@@ -4345,12 +4345,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "45",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434002",
     "name": {
       "el": "Δήμος Βόρειας Κυνουρίας",
@@ -4360,12 +4360,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "45",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434003",
     "name": {
       "el": "Δήμος Γορτυνίας",
@@ -4375,12 +4375,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "45",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434004",
     "name": {
       "el": "Δήμος Μεγαλόπολης",
@@ -4390,12 +4390,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "45",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434005",
     "name": {
       "el": "Δήμος Νότιας Κυνουρίας",
@@ -4405,7 +4405,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "45",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4420,12 +4420,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434101",
     "name": {
       "el": "Δήμος Ναυπλιέων",
@@ -4435,12 +4435,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "44",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434102",
     "name": {
       "el": "Δήμος Αργους - Μυκηνών",
@@ -4450,12 +4450,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "44",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434103",
     "name": {
       "el": "Δήμος Επιδαύρου",
@@ -4465,12 +4465,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "44",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434104",
     "name": {
       "el": "Δήμος Ερμιονίδας",
@@ -4480,7 +4480,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "44",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4495,12 +4495,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434201",
     "name": {
       "el": "Δήμος Κορινθίων",
@@ -4510,12 +4510,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "43",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434202",
     "name": {
       "el": "Δήμος Βέλου - Βόχας",
@@ -4525,12 +4525,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "43",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434203",
     "name": {
       "el": "Δήμος Λουτρακίου - Αγίων Θεοδώρων",
@@ -4540,12 +4540,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "43",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434204",
     "name": {
       "el": "Δήμος Νεμέας",
@@ -4555,12 +4555,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "43",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434205",
     "name": {
       "el": "Δήμος Ξυλοκάστρου - Ευρωστίνης",
@@ -4570,12 +4570,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "43",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434206",
     "name": {
       "el": "Δήμος Σικυωνίων",
@@ -4585,7 +4585,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "43",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4600,12 +4600,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434301",
     "name": {
       "el": "Δήμος Σπάρτης",
@@ -4615,12 +4615,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "47",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434302",
     "name": {
       "el": "Δήμος Ανατολικής Μάνης",
@@ -4630,12 +4630,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "47",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434303",
     "name": {
       "el": "Δήμος Ελαφονήσου",
@@ -4645,12 +4645,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "47",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434304",
     "name": {
       "el": "Δήμος Ευρώτα",
@@ -4660,12 +4660,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "47",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434305",
     "name": {
       "el": "Δήμος Μονεμβασίας",
@@ -4675,7 +4675,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "47",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4690,12 +4690,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434401",
     "name": {
       "el": "Δήμος Καλαμάτας",
@@ -4705,12 +4705,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "46",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434402",
     "name": {
       "el": "Δήμος Δυτικής Μάνης",
@@ -4720,12 +4720,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "46",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434403",
     "name": {
       "el": "Δήμος Μεσσήνης",
@@ -4735,12 +4735,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "46",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434404",
     "name": {
       "el": "Δήμος Οιχαλίας",
@@ -4750,12 +4750,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "46",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434405",
     "name": {
       "el": "Δήμος Πύλου - Νέστορος",
@@ -4765,12 +4765,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "46",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "2434406",
     "name": {
       "el": "Δήμος Τριφυλλίας",
@@ -4780,7 +4780,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "46",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4795,12 +4795,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514501",
     "name": {
       "el": "Δήμος Αθηναίων",
@@ -4810,7 +4810,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "38",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -4825,12 +4825,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514502",
     "name": {
       "el": "Δήμος Βύρωνος",
@@ -4840,12 +4840,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514503",
     "name": {
       "el": "Δήμος Γαλατσίου",
@@ -4855,12 +4855,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514504",
     "name": {
       "el": "Δήμος Δάφνης - Υμηττού",
@@ -4870,12 +4870,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514505",
     "name": {
       "el": "Δήμος Ζωγράφου",
@@ -4885,12 +4885,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514506",
     "name": {
       "el": "Δήμος Ηλιουπόλεως",
@@ -4900,12 +4900,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514507",
     "name": {
       "el": "Δήμος Καισαριανής",
@@ -4915,12 +4915,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514508",
     "name": {
       "el": "Δήμος Φιλαδέλφειας - Χαλκηδόνος",
@@ -4930,12 +4930,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514601",
     "name": {
       "el": "Δήμος Αμαρουσίου",
@@ -4945,12 +4945,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514602",
     "name": {
       "el": "Δήμος Αγίας Παρασκευής",
@@ -4960,12 +4960,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514603",
     "name": {
       "el": "Δήμος Βριλησσίων",
@@ -4975,12 +4975,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514604",
     "name": {
       "el": "Δήμος Ηρακλείου",
@@ -4990,12 +4990,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514605",
     "name": {
       "el": "Δήμος Κηφισιάς",
@@ -5005,12 +5005,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514606",
     "name": {
       "el": "Δήμος Λυκόβρυσης - Πεύκης",
@@ -5020,12 +5020,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514607",
     "name": {
       "el": "Δήμος Μεταμορφώσεως",
@@ -5035,12 +5035,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514608",
     "name": {
       "el": "Δήμος Νέας Ιωνίας",
@@ -5050,12 +5050,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514609",
     "name": {
       "el": "Δήμος Παπάγου - Χολαργού",
@@ -5065,12 +5065,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514610",
     "name": {
       "el": "Δήμος Πεντέλης",
@@ -5080,12 +5080,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514611",
     "name": {
       "el": "Δήμος Φιλοθέης - Ψυχικού",
@@ -5095,12 +5095,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514612",
     "name": {
       "el": "Δήμος Χαλανδρίου",
@@ -5110,12 +5110,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514701",
     "name": {
       "el": "Δήμος Περιστερίου",
@@ -5125,12 +5125,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514702",
     "name": {
       "el": "Δήμος Αγίας Βαρβάρας",
@@ -5140,12 +5140,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514703",
     "name": {
       "el": "Δήμος Αγιων Αναργύρων - Καματερού",
@@ -5155,12 +5155,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514704",
     "name": {
       "el": "Δήμος Αιγάλεω",
@@ -5170,12 +5170,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514705",
     "name": {
       "el": "Δήμος Ιλίου",
@@ -5185,12 +5185,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514706",
     "name": {
       "el": "Δήμος Πετρουπόλεως",
@@ -5200,12 +5200,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514707",
     "name": {
       "el": "Δήμος Χαϊδαρίου",
@@ -5215,12 +5215,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514801",
     "name": {
       "el": "Δήμος Καλλιθέας",
@@ -5230,12 +5230,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514802",
     "name": {
       "el": "Δήμος Αγίου Δημητρίου",
@@ -5245,12 +5245,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514803",
     "name": {
       "el": "Δήμος Αλίμου",
@@ -5260,12 +5260,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514804",
     "name": {
       "el": "Δήμος Γλυφάδας",
@@ -5275,12 +5275,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514805",
     "name": {
       "el": "Δήμος Ελληνικού - Αργυρούπολης",
@@ -5290,12 +5290,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514806",
     "name": {
       "el": "Δήμος Μοσχάτου - Ταύρου",
@@ -5305,12 +5305,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514807",
     "name": {
       "el": "Δήμος Νέας Σμύρνης",
@@ -5320,12 +5320,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514808",
     "name": {
       "el": "Δήμος Παλαιού Φαλήρου",
@@ -5335,7 +5335,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "39",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5350,12 +5350,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514901",
     "name": {
       "el": "Δήμος Αχαρνών",
@@ -5365,12 +5365,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514902",
     "name": {
       "el": "Δήμος Βάρης - Βούλας - Βουλιαγμένης",
@@ -5380,12 +5380,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514903",
     "name": {
       "el": "Δήμος Διονύσου",
@@ -5395,12 +5395,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514904",
     "name": {
       "el": "Δήμος Κρωπίας",
@@ -5410,12 +5410,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514905",
     "name": {
       "el": "Δήμος Λαυρεωτικής",
@@ -5425,12 +5425,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514906",
     "name": {
       "el": "Δήμος Μαραθώνος",
@@ -5440,12 +5440,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514907",
     "name": {
       "el": "Δήμος Μαρκοπούλου Μεσογαίας",
@@ -5455,12 +5455,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514908",
     "name": {
       "el": "Δήμος Παιανίας",
@@ -5470,12 +5470,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514909",
     "name": {
       "el": "Δήμος Παλλήνης",
@@ -5485,12 +5485,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514910",
     "name": {
       "el": "Δήμος Ραφήνας - Πικερμίου",
@@ -5500,12 +5500,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514911",
     "name": {
       "el": "Δήμος Σαρωνικού",
@@ -5515,12 +5515,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514912",
     "name": {
       "el": "Δήμος Σπάτων - Αρτέμιδος",
@@ -5530,12 +5530,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3514913",
     "name": {
       "el": "Δήμος Ωρωπού",
@@ -5545,12 +5545,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515001",
     "name": {
       "el": "Δήμος Ελευσίνας",
@@ -5560,12 +5560,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515002",
     "name": {
       "el": "Δήμος Ασπροπύργου",
@@ -5575,12 +5575,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515003",
     "name": {
       "el": "Δήμος Μάνδρας - Ειδυλλίας",
@@ -5590,12 +5590,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515004",
     "name": {
       "el": "Δήμος Μεγαρέων",
@@ -5605,12 +5605,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515005",
     "name": {
       "el": "Δήμος Φυλής",
@@ -5620,7 +5620,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "42",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5635,12 +5635,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515101",
     "name": {
       "el": "Δήμος Πειραιώς",
@@ -5650,7 +5650,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "40",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5665,12 +5665,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515102",
     "name": {
       "el": "Δήμος Κερατσινίου - Δραπετσώνας",
@@ -5680,12 +5680,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "41",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515103",
     "name": {
       "el": "Δήμος Κορυδαλλού",
@@ -5695,12 +5695,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "41",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515104",
     "name": {
       "el": "Δήμος Νίκαιας - Αγίου Ιωάννη Ρέντη",
@@ -5710,12 +5710,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "41",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515105",
     "name": {
       "el": "Δήμος Περάματος",
@@ -5725,12 +5725,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "41",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515201",
     "name": {
       "el": "Δήμος Σαλαμίνας",
@@ -5740,12 +5740,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "41",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515202",
     "name": {
       "el": "Δήμος Υδρας",
@@ -5755,12 +5755,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "40",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515203",
     "name": {
       "el": "Δήμος Αγκιστρίου",
@@ -5770,12 +5770,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "40",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515204",
     "name": {
       "el": "Δήμος Αίγινας",
@@ -5785,12 +5785,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "40",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515205",
     "name": {
       "el": "Δήμος Κυθήρων",
@@ -5800,12 +5800,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "40",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515206",
     "name": {
       "el": "Δήμος Πόρου",
@@ -5815,12 +5815,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "40",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515207",
     "name": {
       "el": "Δήμος Σπετσών",
@@ -5830,12 +5830,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "40",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "3515208",
     "name": {
       "el": "Δήμος Τροιζηνίας",
@@ -5845,7 +5845,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "40",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5860,12 +5860,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4615301",
     "name": {
       "el": "Δήμος Λέσβου",
@@ -5875,7 +5875,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "48",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5890,12 +5890,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4615401",
     "name": {
       "el": "Δήμος Ικαρίας ",
@@ -5905,12 +5905,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "50",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4615402",
     "name": {
       "el": "Δήμος Φούρνων Κορσεών",
@@ -5920,12 +5920,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "50",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4615501",
     "name": {
       "el": "Δήμος Λήμνου",
@@ -5935,12 +5935,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "48",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4615502",
     "name": {
       "el": "Δήμος Αγίου Ευστρατίου",
@@ -5950,12 +5950,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "48",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4615601",
     "name": {
       "el": "Δήμος Σάμου",
@@ -5965,7 +5965,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "50",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -5980,12 +5980,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4615701",
     "name": {
       "el": "Δήμος Χίου",
@@ -5995,12 +5995,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "49",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4615702",
     "name": {
       "el": "Δήμος Οινουσσών",
@@ -6010,12 +6010,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "49",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4615703",
     "name": {
       "el": "Δήμος Ψαρών",
@@ -6025,7 +6025,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "49",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6040,12 +6040,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4625801",
     "name": {
       "el": "Δήμος Σύρου - Ερμούπολης",
@@ -6055,12 +6055,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4625901",
     "name": {
       "el": "Δήμος Ανδρου",
@@ -6070,12 +6070,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626001",
     "name": {
       "el": "Δήμος Θήρας",
@@ -6085,12 +6085,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626002",
     "name": {
       "el": "Δήμος Ανάφης",
@@ -6100,12 +6100,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626003",
     "name": {
       "el": "Δήμος Ιητών",
@@ -6115,12 +6115,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626004",
     "name": {
       "el": "Δήμος Σικίνου",
@@ -6130,12 +6130,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626005",
     "name": {
       "el": "Δήμος Φολεγάνδρου",
@@ -6145,7 +6145,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6160,12 +6160,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626101",
     "name": {
       "el": "Δήμος Καλυμνίων",
@@ -6175,12 +6175,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "52",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626102",
     "name": {
       "el": "Δήμος Αγαθονησίου",
@@ -6190,12 +6190,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "52",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626103",
     "name": {
       "el": "Δήμος Αστυπάλαιας",
@@ -6205,12 +6205,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "52",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626104",
     "name": {
       "el": "Δήμος Λειψών",
@@ -6220,12 +6220,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "52",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626105",
     "name": {
       "el": "Δήμος Λέρου",
@@ -6235,12 +6235,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "52",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626106",
     "name": {
       "el": "Δήμος Πάτμου",
@@ -6250,12 +6250,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "52",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626201",
     "name": {
       "el": "Δήμος Καρπάθου",
@@ -6265,12 +6265,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "52",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626202",
     "name": {
       "el": "Δήμος Κάσου",
@@ -6280,12 +6280,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "52",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626301",
     "name": {
       "el": "Δήμος Κέας",
@@ -6295,12 +6295,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626302",
     "name": {
       "el": "Δήμος Κύθνου",
@@ -6310,12 +6310,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626401",
     "name": {
       "el": "Δήμος Κω",
@@ -6325,12 +6325,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "52",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626402",
     "name": {
       "el": "Δήμος Νισύρου",
@@ -6340,12 +6340,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "52",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626501",
     "name": {
       "el": "Δήμος Μήλου",
@@ -6355,12 +6355,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626502",
     "name": {
       "el": "Δήμος Κιμώλου",
@@ -6370,12 +6370,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626503",
     "name": {
       "el": "Δήμος Σερίφου",
@@ -6385,12 +6385,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626504",
     "name": {
       "el": "Δήμος Σίφνου",
@@ -6400,12 +6400,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626601",
     "name": {
       "el": "Δήμος Μυκόνου",
@@ -6415,12 +6415,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626701",
     "name": {
       "el": "Δήμος Αμοργού",
@@ -6430,12 +6430,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626702",
     "name": {
       "el": "Δήμος Νάξου & Μικρών Κυκλάδων",
@@ -6445,12 +6445,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626801",
     "name": {
       "el": "Δήμος Πάρου",
@@ -6460,12 +6460,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626802",
     "name": {
       "el": "Δήμος Αντιπάρου",
@@ -6475,12 +6475,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626901",
     "name": {
       "el": "Δήμος Ρόδου",
@@ -6490,12 +6490,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "52",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626902",
     "name": {
       "el": "Δήμος Μεγίστης",
@@ -6505,12 +6505,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "52",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626903",
     "name": {
       "el": "Δήμος Σύμης",
@@ -6520,12 +6520,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "52",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626904",
     "name": {
       "el": "Δήμος Τήλου",
@@ -6535,12 +6535,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "52",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4626905",
     "name": {
       "el": "Δήμος Χάλκης",
@@ -6550,12 +6550,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "52",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4627001",
     "name": {
       "el": "Δήμος Τήνου",
@@ -6565,7 +6565,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "51",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6580,12 +6580,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717101",
     "name": {
       "el": "Δήμος Ηρακλείου",
@@ -6595,12 +6595,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "55",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717102",
     "name": {
       "el": "Δήμος Αρχανών - Αστερουσίων",
@@ -6610,12 +6610,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "55",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717103",
     "name": {
       "el": "Δήμος Βιάννου",
@@ -6625,12 +6625,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "55",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717104",
     "name": {
       "el": "Δήμος Γόρτυνας",
@@ -6640,12 +6640,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "55",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717105",
     "name": {
       "el": "Δήμος Μαλεβιζίου",
@@ -6655,12 +6655,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "55",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717106",
     "name": {
       "el": "Δήμος Μινώα Πεδιάδος",
@@ -6670,12 +6670,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "55",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717107",
     "name": {
       "el": "Δήμος Φαιστού",
@@ -6685,12 +6685,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "55",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717108",
     "name": {
       "el": "Δήμος Χερσονήσου",
@@ -6700,7 +6700,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "55",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6715,12 +6715,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717201",
     "name": {
       "el": "Δήμος Αγίου Νικολάου",
@@ -6730,12 +6730,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "56",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717202",
     "name": {
       "el": "Δήμος Ιεράπετρας",
@@ -6745,12 +6745,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "56",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717203",
     "name": {
       "el": "Δήμος Οροπεδίου Λασιθίου",
@@ -6760,12 +6760,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "56",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717204",
     "name": {
       "el": "Δήμος Σητείας",
@@ -6775,7 +6775,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "56",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6790,12 +6790,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717301",
     "name": {
       "el": "Δήμος Ρεθύμνης",
@@ -6805,12 +6805,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "54",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717302",
     "name": {
       "el": "Δήμος Αγίου Βασιλείου",
@@ -6820,12 +6820,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "54",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717303",
     "name": {
       "el": "Δήμος Αμαρίου",
@@ -6835,12 +6835,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "54",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717304",
     "name": {
       "el": "Δήμος Ανωγείων",
@@ -6850,12 +6850,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "54",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717305",
     "name": {
       "el": "Δήμος Μυλοποτάμου",
@@ -6865,7 +6865,7 @@
       "el": "",
       "en": ""
     },
-    "parentId": "54",
+    "parentId": "",
     "order": "",
     "color": ""
   },
@@ -6880,12 +6880,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "0",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717401",
     "name": {
       "el": "Δήμος Χανίων",
@@ -6895,12 +6895,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "53",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717402",
     "name": {
       "el": "Δήμος Αποκορώνου",
@@ -6910,12 +6910,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "53",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717403",
     "name": {
       "el": "Δήμος Γαύδου",
@@ -6925,12 +6925,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "53",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717404",
     "name": {
       "el": "Δήμος Καντάνου - Σελίνου",
@@ -6940,12 +6940,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "53",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717405",
     "name": {
       "el": "Δήμος Κισσάμου",
@@ -6955,12 +6955,12 @@
       "el": "",
       "en": ""
     },
-    "parentId": "53",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717406",
     "name": {
       "el": "Δήμος Πλατανιά",
@@ -6970,31 +6970,16 @@
       "el": "",
       "en": ""
     },
-    "parentId": "53",
+    "parentId": "",
     "order": "",
     "color": ""
   },
   {
-    "dimensionId": "constituency",
+    "dimensionId": "municipality",
     "notation": "4717407",
     "name": {
       "el": "Δήμος Σφακίων",
       "en": "Municipality of Sfakia"
-    },
-    "description": {
-      "el": "",
-      "en": ""
-    },
-    "parentId": "53",
-    "order": "",
-    "color": ""
-  },
-  {
-    "dimensionId": "constituency",
-    "notation": "0",
-    "name": {
-      "el": "Επικράτεια",
-      "en": "State"
     },
     "description": {
       "el": "",

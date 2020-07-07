@@ -23,6 +23,9 @@
         "id": "constituency"
       },
       {
+        "id": "municipality"
+      },
+      {
         "id": "elections"
       }
     ],
