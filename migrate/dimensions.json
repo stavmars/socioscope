@@ -107,6 +107,7 @@
       "en": "Abstention"
     },
     "type": "coded",
+    "disableFilter": true,
     "dependencies": []
   },
   {
@@ -116,6 +117,7 @@
       "en": "Invalid/Blank"
     },
     "type": "coded",
+    "disableFilter": true,
     "dependencies": []
   },
   {
