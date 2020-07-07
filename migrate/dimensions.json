@@ -71,22 +71,22 @@
       "en": "Constituency"
     },
     "type": "geographic-area",
-    "levels": [
+    "geoMaps": [
       {
-        "depth": 1,
+        "level": 1,
         "name": {
           "el": "Εκλογικές Περιφέρειες",
           "en": "Constituencies"
         },
-        "mapUrl": "content/geo/constituencies.json"
+        "url": "content/geo/constituencies.json"
       },
       {
-        "depth": 2,
+        "level": 2,
         "name": {
           "el": "Δήμοι",
           "en": "Municipalities"
         },
-        "mapUrl": "content/geo/municipalities.json"
+        "url": "content/geo/municipalities.json"
       }
     ],
     "dependencies": []

@@ -33,7 +33,7 @@ public class Dimension implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    List<DimensionLevel> levels;
+    List<GeoMap> geoMaps;
     @Id
     private String id;
     @Size(min = 1)
@@ -79,13 +79,14 @@ public class Dimension implements Serializable {
 
 
     @JsonCreator
-    public static Dimension create(String jsonString) throws JsonParseException, IOException {
+    public static Dimension create(String jsonString) throws JsonParseException, JsonMappingException, IOException {
         ObjectMapper mapper = new ObjectMapper()
             .registerModule(new ParameterNamesModule())
             .registerModule(new Jdk8Module())
             .registerModule(new JavaTimeModule());
         mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
-        Dimension dimension = mapper.readValue(jsonString, Dimension.class);
+        Dimension dimension = null;
+        dimension = mapper.readValue(jsonString, Dimension.class);
         return dimension;
     }
 
@@ -186,12 +187,12 @@ public class Dimension implements Serializable {
         return this;
     }
 
-    public List<DimensionLevel> getLevels() {
-        return levels;
+    public List<GeoMap> getGeoMaps() {
+        return geoMaps;
     }
 
-    public void setLevels(List<DimensionLevel> levels) {
-        this.levels = levels;
+    public void setGeoMaps(List<GeoMap> geoMaps) {
+        this.geoMaps = geoMaps;
     }
 
     public List<String> getComposedOf() {
@@ -259,13 +260,11 @@ public class Dimension implements Serializable {
     @Override
     public String toString() {
         return "Dimension{" +
-            "levels=" + levels +
+            "geoMaps=" + geoMaps +
             ", id='" + id + '\'' +
             ", name=" + name +
             ", description=" + description +
-            ", details=" + details +
             ", groupId='" + groupId + '\'' +
-            ", order='" + order + '\'' +
             ", type='" + type + '\'' +
             ", dependencies=" + dependencies +
             ", creator=" + creator +
@@ -273,7 +272,6 @@ public class Dimension implements Serializable {
             ", disableAxis=" + disableAxis +
             ", disableFilter=" + disableFilter +
             ", filterWidget='" + filterWidget + '\'' +
-            ", disableStacking=" + disableStacking +
             '}';
     }
 }
