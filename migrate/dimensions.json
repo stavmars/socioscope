@@ -63,7 +63,8 @@
     "dependencies": [
       "elections"
     ],
-    "order": "value_desc"
+    "order": "value_desc",
+    "required": true
   },
   {
     "id": "constituency",

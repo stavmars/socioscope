@@ -49,7 +49,8 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
             dimension =>
               !arr.includes(dimension.id) &&
               !dimension.disableFilter &&
-              (!dimension.parentDimensionId || !arr.includes(dimension.parentDimensionId))
+              (!dimension.parentDimensionId || !arr.includes(dimension.parentDimensionId)) &&
+              (dimension.id !== 'party' || (!arr.includes('abstention') && !arr.includes('invalid_vote')))
           )
           .map(dimension => {
             const dropdownOptions = [];

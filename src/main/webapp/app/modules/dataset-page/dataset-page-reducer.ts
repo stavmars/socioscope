@@ -184,18 +184,28 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
   compareBy = compareBy || null;
   const compareByDimension = dimensions.find(dim => dim.id === compareBy);
 
+  const arr = [xAxis, compareBy];
   let newSeriesOptions = {};
   let dimensionFilters;
   if (dataset.type === 'qb') {
-    dimensionFilters = dimensions.filter(dimension => ![xAxis, compareBy].includes(dimension.id)).reduce((acc, dimension) => {
+    dimensionFilters = dimensions.filter(dimension => !arr.includes(dimension.id)).reduce((acc, dimension) => {
       acc[dimension.id] =
         dimension.parentDimensionId && ([xAxis, compareBy].includes(dimension.parentDimensionId) || !filters[dimension.parentDimensionId])
           ? null
-          : filters[dimension.id] ||
-            (dimension.required && _.last(dimensionCodes[dimension.id].codes as IDimensionCode[]).notation) ||
-            null;
+          : filters[dimension.id] || (dimension.required && dimensionCodes[dimension.id].codes[0].notation) || null;
       return acc;
     }, {}) as IDimensionFilters;
+
+    if (dataset.id === 'greek-election-results') {
+      if (!arr.includes('party') && !arr.includes('abstention') && !arr.includes('invalid_vote')) {
+        if (dimensionFilters['party'] == null) {
+          dimensionFilters.party = dimensionCodes['party'].codes[0].notation;
+        }
+      } else {
+        dimensionFilters.party = null;
+      }
+    }
+
     newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters };
   } else {
     dimensionFilters = _.pickBy(filters, (value, key) => key !== xAxis && key !== compareBy);
