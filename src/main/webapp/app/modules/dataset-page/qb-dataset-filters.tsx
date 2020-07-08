@@ -40,10 +40,17 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
 
   render() {
     const { dataset, dimensionCodes, seriesOptions } = this.props;
+    const arr = [seriesOptions.xAxis, seriesOptions.compareBy];
+
     return (
       <div>
         {dataset.dimensions
-          .filter(dimension => dimension.id !== seriesOptions.xAxis && dimension.id !== seriesOptions.compareBy && !dimension.disableFilter)
+          .filter(
+            dimension =>
+              !arr.includes(dimension.id) &&
+              !dimension.disableFilter &&
+              (!dimension.parentDimensionId || !arr.includes(dimension.parentDimensionId))
+          )
           .map(dimension => {
             const dropdownOptions = [];
             this.createDropdownOptions(dimensionCodes[dimension.id].codes, dropdownOptions, 0);
@@ -59,7 +66,8 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
                   search
                   placeholder={translateEntityField(dimension.noFilterText)}
                   fluid
-                  clearable
+                  clearable={!dimension.required}
+                  disabled={dimension.parentDimensionId && !seriesOptions.dimensionFilters[dimension.parentDimensionId]}
                   noResultsMessage="Δε βρέθηκαν αποτελέσματα"
                   value={seriesOptions.dimensionFilters[dimension.id]}
                 />

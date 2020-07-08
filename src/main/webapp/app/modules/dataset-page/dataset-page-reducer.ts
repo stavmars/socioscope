@@ -189,7 +189,7 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
   if (dataset.type === 'qb') {
     dimensionFilters = dimensions.filter(dimension => ![xAxis, compareBy].includes(dimension.id)).reduce((acc, dimension) => {
       acc[dimension.id] =
-        dimension.parentDimensionId && [xAxis, compareBy].includes(dimension.parentDimensionId)
+        dimension.parentDimensionId && ([xAxis, compareBy].includes(dimension.parentDimensionId) || !filters[dimension.parentDimensionId])
           ? null
           : filters[dimension.id] ||
             (dimension.required && _.last(dimensionCodes[dimension.id].codes as IDimensionCode[]).notation) ||
