@@ -1,15 +1,11 @@
 package gr.ekke.socioscope.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
-import gr.ekke.socioscope.domain.DataSet;
-import gr.ekke.socioscope.domain.DimensionCode;
-import gr.ekke.socioscope.domain.Highlight;
-import gr.ekke.socioscope.domain.Observation;
-import gr.ekke.socioscope.service.dto.Series;
-import gr.ekke.socioscope.domain.SeriesOptions;
+import gr.ekke.socioscope.domain.*;
 import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.ObservationRepository;
 import gr.ekke.socioscope.service.DataSetService;
+import gr.ekke.socioscope.service.dto.Series;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
 import gr.ekke.socioscope.web.rest.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;
@@ -189,7 +185,7 @@ public class DataSetResource {
     /**
      * PUT  /data-sets/:id/highlights : add highlights to dataSet with "id".
      *
-     * @param dataSetId the id of the dataSet to retrieve the highlights
+     * @param dataSetId  the id of the dataSet to retrieve the highlights
      * @param highlights to be added
      * @return the updated dataSet
      */
@@ -252,8 +248,18 @@ public class DataSetResource {
      */
     @GetMapping("/data-sets/{dataSetId}/codelists")
     @Timed
-    public ResponseEntity<Map<String, List<DimensionCode>>>  getCodelists(@PathVariable String dataSetId) throws URISyntaxException {
+    public ResponseEntity<Map<String, List<DimensionCode>>> getCodelists(@PathVariable String dataSetId) throws URISyntaxException {
         log.debug("REST request to get Highlights from DataSet : {}", dataSetId);
         return ResponseUtil.wrapOrNotFound(dataSetService.getCodelists(dataSetId));
+    }
+
+
+    @GetMapping("/data-sets/{dataSetId}/codesForParent")
+    @Timed
+    public List<String> getCodesForParent(@PathVariable String dataSetId, @RequestParam String dimensionId,
+                                          @RequestParam String parentDimensionId,
+                                          @RequestParam String parentDimensionValue) {
+        log.debug("REST request to get codes for parent for DataSet : {}", dataSetId);
+        return observationRepository.findCodesForParent(dataSetId, dimensionId, parentDimensionId, parentDimensionValue);
     }
 }

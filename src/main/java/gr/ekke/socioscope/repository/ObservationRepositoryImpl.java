@@ -3,15 +3,23 @@ package gr.ekke.socioscope.repository;
 import gr.ekke.socioscope.domain.DimensionValue;
 import gr.ekke.socioscope.domain.Observation;
 import gr.ekke.socioscope.domain.SeriesOptions;
+import gr.ekke.socioscope.service.dto.Series;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.aggregation.Aggregation;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
+
+import static org.springframework.data.mongodb.core.aggregation.Aggregation.*;
 
 public class ObservationRepositoryImpl implements ObservationRepositoryCustom {
 
@@ -49,5 +57,15 @@ public class ObservationRepositoryImpl implements ObservationRepositoryCustom {
         log.debug("Mongo query to get series: {} ", query);
 
         return mongoTemplate.find(query, Observation.class);
+    }
+
+    @Override
+    public List<String> findCodesForParent(String datasetId, String dimensionId, String parentDimensionId, String parentDimensionValue) {
+        Criteria criteria = Criteria.where("datasetId").is(datasetId).andOperator(Criteria.where("dimensions").elemMatch(Criteria.where("id").is(dimensionId)),
+            Criteria.where("dimensions").elemMatch(Criteria.where("id").is(parentDimensionId).and("value").is(parentDimensionValue)));
+        Aggregation agg = Aggregation.newAggregation(match(criteria), unwind("$dimensions"), match( Criteria.where("dimensions.id").is(dimensionId)),
+            project().andExpression("dimensions.value").as("value"), group("value"));
+        List<Map> docs = mongoTemplate.aggregate(agg, "observation", Map.class).getMappedResults();
+        return docs.stream().map(doc -> doc.get("_id").toString()).collect(Collectors.toList());
     }
 }
