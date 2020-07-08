@@ -3,8 +3,6 @@ import './chart-vis.scss';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-// tslint:disable-next-line
-import drilldown from 'highcharts/modules/drilldown.js';
 import uuid from 'uuid';
 import chroma from 'chroma-js';
 import _ from 'lodash';
@@ -19,7 +17,6 @@ import HC_exporting from 'highcharts/modules/exporting';
 import moment from 'moment';
 import { translate } from 'react-jhipster';
 
-drilldown(Highcharts);
 HC_exporting(Highcharts);
 
 export interface IChartVisProp {
@@ -34,16 +31,6 @@ export interface IChartVisProp {
   chartType: string;
   currentLocale: string;
 }
-
-const prepareSeriesByParent = (codesByNotation, seriesList: ISeries[]) =>
-  seriesList.reduce((acc, series) => {
-    const pointsByParent = _.groupBy(series.data, seriesPoint => codesByNotation[seriesPoint.x].parentId || '');
-    _.forEach(pointsByParent, (points, parent) => {
-      acc[parent] = acc[parent] || {};
-      acc[parent][series.id] = points;
-    });
-    return acc;
-  }, {});
 
 const prepareTimeSeriesData = (dataPoints: ISeriesPoint[]) => {
   let chartPoints = dataPoints.map(dataPoint => [new Date(dataPoint.x).getTime(), dataPoint.y]);
@@ -78,15 +65,13 @@ const prepareTimeSeriesData = (dataPoints: ISeriesPoint[]) => {
   );
 };
 
-const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[], seriesByParent, order: string) => {
+const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[], order: string) => {
   const chartPoints = seriesPoints.map(seriesPoint => {
     const code = codesByNotation[seriesPoint.x];
     return {
       name: translateEntityField(code.shortName) || translateEntityField(code.name),
       codeOrder: code.order,
       y: seriesPoint.y,
-      drilldown: seriesByParent[seriesPoint.x] ? seriesPoint.x : undefined,
-      seriesByParent,
       codesByNotation
     };
   });
@@ -176,8 +161,6 @@ export class ChartVis extends React.Component<IChartVisProp> {
     const compareByDimension = compareBy && (_.find(dimensions, { id: seriesOptions.compareBy }) as IDimension);
     let chartSeries = [{ data: [] }] as any;
 
-    let seriesByParent;
-
     if (!loadingSeries && seriesList && seriesList.length > 0) {
       if (xAxisDimension.type === 'time') {
         chartSeries = _(seriesList)
@@ -203,38 +186,34 @@ export class ChartVis extends React.Component<IChartVisProp> {
               }, {})
             : dimensionCodes[seriesOptions.xAxis].codesByNotation;
 
-        seriesByParent = prepareSeriesByParent(codesByNotation, seriesList);
-        if (seriesByParent['']) {
-          chartSeries = _(seriesList)
-            .map((series, index) => {
-              const code =
-                (compareBy && dimensionCodes[compareBy].codesByNotation[series.id]) ||
-                (xAxisDimension.type === 'composite' && dimensionCodes[xAxisDimension.id].codesByNotation[series.id]);
-              return {
-                id: series.id,
-                name: code ? translateEntityField(code.shortName) || translateEntityField(code.name) : '',
-                code,
-                color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
-                order: code && code.order,
-                data: prepareCategorySeriesData(
-                  codesByNotation,
-                  seriesByParent[''][series.id],
-                  seriesByParent,
-                  xAxisDimension.type === 'composite' ? 'composite' : seriesList.length === 1 ? xAxisDimension.order : null
-                )
-              };
-            })
-            .sortBy('order', 'name')
-            .value();
+        chartSeries = _(seriesList)
+          .map((series, index) => {
+            const code =
+              (compareBy && dimensionCodes[compareBy].codesByNotation[series.id]) ||
+              (xAxisDimension.type === 'composite' && dimensionCodes[xAxisDimension.id].codesByNotation[series.id]);
+            return {
+              id: series.id,
+              name: code ? translateEntityField(code.shortName) || translateEntityField(code.name) : '',
+              code,
+              color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
+              order: code && code.order,
+              data: prepareCategorySeriesData(
+                codesByNotation,
+                series.data,
+                xAxisDimension.type === 'composite' ? 'composite' : seriesList.length === 1 ? xAxisDimension.order : null
+              )
+            };
+          })
+          .sortBy('order', 'name')
+          .value();
 
-          if (xAxisDimension.type === 'composite') {
-            const colorCount = _.filter(chartSeries, series => !series.code.color).length;
-            const colors = chroma.scale(['#ffffe0', accentColors[colorScheme]]).colors(colorCount);
-            chartSeries = chartSeries.map(series => {
-              const color = series.code.color || colors.shift();
-              return { ...series, color };
-            });
-          }
+        if (xAxisDimension.type === 'composite') {
+          const colorCount = _.filter(chartSeries, series => !series.code.color).length;
+          const colors = chroma.scale(['#ffffe0', accentColors[colorScheme]]).colors(colorCount);
+          chartSeries = chartSeries.map(series => {
+            const color = series.code.color || colors.shift();
+            return { ...series, color };
+          });
         }
       }
     }
@@ -268,17 +247,6 @@ export class ChartVis extends React.Component<IChartVisProp> {
             if (this.options.chart.forExport && chartSeries.length > 1) {
               this.series[0].remove();
             }
-          },
-          drilldown(e) {
-            this.addSingleSeriesAsDrilldown(e.point, {
-              name: e.point.series.name,
-              data: prepareCategorySeriesData(
-                e.point.codesByNotation,
-                e.point.seriesByParent[e.point.drilldown][e.point.series.id],
-                e.point.seriesByParent,
-                null
-              )
-            });
           }
         }
       },
@@ -382,9 +350,6 @@ export class ChartVis extends React.Component<IChartVisProp> {
           fontSize: window.innerWidth > 768 ? '14px' : '10px'
         }
       },
-      drilldown: {
-        allowPointDrilldown: false
-      },
       exporting: {
         buttons: false,
         url: 'https://socioscope.gr/hc-export',
@@ -399,8 +364,6 @@ export class ChartVis extends React.Component<IChartVisProp> {
         }
       }
     };
-
-    // todo investigate another solution to handle problems after updates while drilled-down
 
     return (
       <HighchartsReact
