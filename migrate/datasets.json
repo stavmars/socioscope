@@ -17,6 +17,9 @@
     },
     "dimensions": [
       {
+        "id": "elections"
+      },
+      {
         "id": "party"
       },
       {
@@ -24,9 +27,6 @@
       },
       {
         "id": "municipality"
-      },
-      {
-        "id": "elections"
       },
       {
         "id": "abstention"
