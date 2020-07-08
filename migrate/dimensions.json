@@ -103,7 +103,8 @@
     },
     "type": "coded",
     "dependencies": [],
-    "parentDimensionId": "constituency"
+    "parentDimensionId": "constituency",
+    "disableCompareBy": true
   },
   {
     "id": "abstention",
@@ -113,6 +114,7 @@
     },
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "dependencies": []
   },
   {
@@ -123,6 +125,7 @@
     },
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "dependencies": []
   },
   {

@@ -13,6 +13,7 @@ export interface IDimension {
   geoMaps?: IGeoMap[];
   dependencies?: string[];
   disableFilter?: boolean;
+  disableCompareBy?: boolean;
   disableAxis?: boolean;
   disableStacking?: boolean;
   composedOf?: string[];

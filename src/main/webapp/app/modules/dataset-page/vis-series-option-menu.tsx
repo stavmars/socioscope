@@ -88,12 +88,14 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
 
     const xAxisOptions = [...getXAxisOptions(dimensionsByGroup['']), ...groupXAxisOptions];
 
-    const compareByOptions = dimensions.filter(dimension => dimension.type !== 'time' && !dimension.disableFilter).map(dimension => ({
-      id: dimension.id,
-      text: translateEntityField(dimension.name),
-      value: dimension.id,
-      disabled: dimension.id === seriesOptions.xAxis
-    }));
+    const compareByOptions = dimensions
+      .filter(dimension => dimension.type !== 'time' && !dimension.disableFilter && !dimension.disableCompareBy)
+      .map(dimension => ({
+        id: dimension.id,
+        text: translateEntityField(dimension.name),
+        value: dimension.id,
+        disabled: dimension.id === seriesOptions.xAxis
+      }));
 
     const xAxisDimension = _.find(dataset.dimensions, { id: seriesOptions.xAxis });
     const compareByDimension = _.find(dataset.dimensions, { id: seriesOptions.compareBy });
@@ -169,7 +171,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
 
     let advancedOptions = (
       <div>
-        {visType !== 'map' && dataset.id !== 'greek-election-results' && compare}
+        {visType !== 'map' && compare}
         {filters}
       </div>
     );
