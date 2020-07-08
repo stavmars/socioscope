@@ -7,6 +7,7 @@ import { IDimension } from 'app/shared/model/dimension.model';
 import _ from 'lodash';
 import { unflattenDimensionCodes } from 'app/shared/util/entity-utils';
 import qs from 'qs';
+import { IDimensionCode } from 'app/shared/model/dimension-code.model';
 
 export interface IVisOptions {
   visType: string;
@@ -18,10 +19,8 @@ export const ACTION_TYPES = {
   INIT_VIS: 'datasetPage/INIT_VIS',
   FETCH_SERIES: 'datasetPage/FETCH_SERIES',
   FETCH_DIMENSION_CODELISTS: 'datasetPage/FETCH_DIMENSION_CODELISTS',
-  SET_FILTER_VALUE: 'datasetPage/SET_FILTER_VALUE',
   UPDATE_VIS_OPTIONS: 'datasetPage/UPDATE_VIS_OPTIONS',
-  TOGGLE_COMPARE_VALUE: 'datasetPage/TOGGLE_COMPARE_VALUE',
-  REMOVE_FILTER: 'datasetPage/REMOVE_FILTER'
+  TOGGLE_COMPARE_VALUE: 'datasetPage/TOGGLE_COMPARE_VALUE'
 };
 
 const initialState = {
@@ -69,25 +68,6 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
         ...state,
         dimensionCodes: action.payload,
         fetchedCodeLists: true
-      };
-    case ACTION_TYPES.SET_FILTER_VALUE:
-      return {
-        ...state,
-        seriesOptions: {
-          ...state.seriesOptions,
-          dimensionFilters: {
-            ...state.seriesOptions.dimensionFilters,
-            [action.payload.dimensionId]: action.payload.filterValue
-          }
-        }
-      };
-    case ACTION_TYPES.REMOVE_FILTER:
-      return {
-        ...state,
-        seriesOptions: {
-          ...state.seriesOptions,
-          dimensionFilters: _.omit(state.seriesOptions.dimensionFilters, action.payload.dimensionId)
-        }
       };
     case ACTION_TYPES.INIT_VIS:
       return {
@@ -140,19 +120,32 @@ export const getSeries = id => (dispatch, getState) => {
 };
 
 export const setFilterValue = (dataset: IDataSet, dimensionId: string, filterValue: string) => (dispatch, getState) => {
-  dispatch({
-    type: ACTION_TYPES.SET_FILTER_VALUE,
-    payload: { dimensionId, filterValue }
-  });
-  dispatch(getSeries(dataset.id));
+  const { visType, seriesOptions } = getState().datasetPage;
+  dispatch(
+    updateVisOptions(dataset, {
+      visType,
+      seriesOptions: {
+        ...seriesOptions,
+        dimensionFilters: {
+          ...seriesOptions.dimensionFilters,
+          [dimensionId]: filterValue
+        }
+      }
+    })
+  );
 };
 
 export const removeFilter = (dataset: IDataSet, dimensionId: string) => (dispatch, getState) => {
-  dispatch({
-    type: ACTION_TYPES.REMOVE_FILTER,
-    payload: { dimensionId }
-  });
-  dispatch(getSeries(dataset.id));
+  const { visType, seriesOptions } = getState().datasetPage;
+  dispatch(
+    updateVisOptions(dataset, {
+      visType,
+      seriesOptions: {
+        ...seriesOptions,
+        dimensionFilters: _.omit(seriesOptions.dimensionFilters, dimensionId)
+      }
+    })
+  );
 };
 
 export const removeCompare = (dataset: IDataSet) => (dispatch, getState) => {
@@ -195,7 +188,12 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
   let dimensionFilters;
   if (dataset.type === 'qb') {
     dimensionFilters = dimensions.filter(dimension => ![xAxis, compareBy].includes(dimension.id)).reduce((acc, dimension) => {
-      acc[dimension.id] = filters[dimension.id] || dimensionCodes[dimension.id].codes[0].notation;
+      acc[dimension.id] =
+        dimension.parentDimensionId && [xAxis, compareBy].includes(dimension.parentDimensionId)
+          ? null
+          : filters[dimension.id] ||
+            (dimension.required && _.last(dimensionCodes[dimension.id].codes as IDimensionCode[]).notation) ||
+            null;
       return acc;
     }, {}) as IDimensionFilters;
     newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters };
