@@ -137,7 +137,8 @@
     },
     "type": "coded",
     "dependencies": [],
-    "required": true
+    "required": true,
+    "disableStacking": true
   },
   {
     "id": "elections.assembly",
