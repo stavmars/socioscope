@@ -25,19 +25,23 @@ public class ObservationRepositoryImpl implements ObservationRepositoryCustom {
     public List<Observation> findObservations(String datasetId, SeriesOptions seriesOptions) {
         Query query = new Query();
 
-        List<DimensionValue> dimensionValues = seriesOptions.getDimensionFilters().entrySet().stream().filter(entry -> entry.getValue() != null)
+        List<DimensionValue> dimensionValues = seriesOptions.getDimensionFilters().entrySet().stream()/*.filter(entry -> entry.getValue() != null)*/
             .map(entry -> new DimensionValue(entry.getKey(), entry.getValue())).collect(Collectors.toList());
 
-        List<Criteria> criteria = dimensionValues.stream().map(dimensionValue ->
-            Criteria.where("dimensions").elemMatch(Criteria.where("id").is(dimensionValue.getId())
-                .and("value").is(dimensionValue.getValue()))
+        List<Criteria> criteria = dimensionValues.stream().map(dimensionValue -> {
+            if (dimensionValue.getValue() == null || dimensionValue.getValue().equals("")){
+                return Criteria.where("dimensions").not().elemMatch(Criteria.where("id").is(dimensionValue.getId()));
+            }
+            return Criteria.where("dimensions").elemMatch(Criteria.where("id").is(dimensionValue.getId())
+                .and("value").is(dimensionValue.getValue()));}
         ).collect(Collectors.toList());
 
-        String compareBy = seriesOptions.getCompareBy();
-        List<String> compareCodes = seriesOptions.getCompareCodes();
+        String xAxis = seriesOptions.getxAxis();
+        criteria.add(Criteria.where("dimensions").elemMatch(Criteria.where("id").is(xAxis)));
 
-        if (compareBy != null && compareCodes != null && compareCodes.size() > 0) {
-            criteria.add(Criteria.where("dimensions").elemMatch(Criteria.where("id").is(compareBy).and("value").in(compareCodes)));
+        String compareBy = seriesOptions.getCompareBy();
+        if (compareBy != null) {
+            criteria.add(Criteria.where("dimensions").elemMatch(Criteria.where("id").is(compareBy)));
         }
 
         criteria.add(Criteria.where("measures." + seriesOptions.getMeasure()).exists(true));
