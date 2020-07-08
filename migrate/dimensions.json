@@ -62,7 +62,8 @@
     "type": "coded",
     "dependencies": [
       "elections"
-    ]
+    ],
+    "order": "value_desc"
   },
   {
     "id": "constituency",
