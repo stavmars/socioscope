@@ -63,6 +63,7 @@
     "dependencies": [
       "elections"
     ],
+    "required": true,
     "order": "value_desc"
   },
   {
