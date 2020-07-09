@@ -3,7 +3,6 @@ import './dataset-page.scss';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
-import { IDimensionCode } from 'app/shared/model/dimension-code.model';
 import { Dropdown } from 'semantic-ui-react';
 import { setFilterValue } from 'app/modules/dataset-page/dataset-page-reducer';
 
@@ -28,7 +27,7 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
       value: code.notation,
       className: `filter-option-level-${level}`
     });
-    codes.forEach(code => {
+    codes.filter(code => !code.disabled).forEach(code => {
       arr.push(mapCodeToOption(code));
       code.children && this.createDropdownOptions(code.children, arr, level + 1);
     });

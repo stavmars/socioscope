@@ -254,12 +254,12 @@ public class DataSetResource {
     }
 
 
-    @GetMapping("/data-sets/{dataSetId}/codesForParent")
+    @GetMapping("/data-sets/{dataSetId}/validCodes")
     @Timed
-    public List<String> getCodesForParent(@PathVariable String dataSetId, @RequestParam String dimensionId,
-                                          @RequestParam String parentDimensionId,
-                                          @RequestParam String parentDimensionValue) {
+    public List<String> findValidCodes(@PathVariable String dataSetId, @RequestParam String dimensionId,
+                                          @RequestParam String otherDimensionId,
+                                          @RequestParam String otherDimensionValue) {
         log.debug("REST request to get codes for parent for DataSet : {}", dataSetId);
-        return observationRepository.findCodesForParent(dataSetId, dimensionId, parentDimensionId, parentDimensionValue);
+        return observationRepository.findValidCodes(dataSetId, dimensionId, otherDimensionId, otherDimensionValue);
     }
 }

@@ -60,9 +60,9 @@ public class ObservationRepositoryImpl implements ObservationRepositoryCustom {
     }
 
     @Override
-    public List<String> findCodesForParent(String datasetId, String dimensionId, String parentDimensionId, String parentDimensionValue) {
+    public List<String> findValidCodes(String datasetId, String dimensionId, String otherDimensionId, String otherDimensionValue){
         Criteria criteria = Criteria.where("datasetId").is(datasetId).andOperator(Criteria.where("dimensions").elemMatch(Criteria.where("id").is(dimensionId)),
-            Criteria.where("dimensions").elemMatch(Criteria.where("id").is(parentDimensionId).and("value").is(parentDimensionValue)));
+            Criteria.where("dimensions").elemMatch(Criteria.where("id").is(otherDimensionId).and("value").is(otherDimensionValue)));
         Aggregation agg = Aggregation.newAggregation(match(criteria), unwind("$dimensions"), match( Criteria.where("dimensions.id").is(dimensionId)),
             project().andExpression("dimensions.value").as("value"), group("value"));
         List<Map> docs = mongoTemplate.aggregate(agg, "observation", Map.class).getMappedResults();

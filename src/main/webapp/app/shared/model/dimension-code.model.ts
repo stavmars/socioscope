@@ -13,6 +13,7 @@ export interface IDimensionCode {
   children?: IDimensionCode[];
   level?: number;
   iconURL?: string;
+  disabled?: boolean;
 }
 
 export const defaultValue: Readonly<IDimensionCode> = { name: {}, description: {} };

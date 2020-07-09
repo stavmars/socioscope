@@ -13,6 +13,6 @@ public interface ObservationRepositoryCustom {
 
     List<Observation> findObservations(String datasetId, SeriesOptions seriesOptions);
 
-    List<String> findCodesForParent(String datasetId, String dimensionId, String parentDimensionId, String parentDimensionValue);
+    List<String> findValidCodes(String datasetId, String dimensionId, String otherDimensionId, String otherDimensionValue);
 
 }

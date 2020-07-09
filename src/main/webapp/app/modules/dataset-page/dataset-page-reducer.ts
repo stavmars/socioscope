@@ -20,7 +20,9 @@ export const ACTION_TYPES = {
   FETCH_SERIES: 'datasetPage/FETCH_SERIES',
   FETCH_DIMENSION_CODELISTS: 'datasetPage/FETCH_DIMENSION_CODELISTS',
   UPDATE_VIS_OPTIONS: 'datasetPage/UPDATE_VIS_OPTIONS',
-  TOGGLE_COMPARE_VALUE: 'datasetPage/TOGGLE_COMPARE_VALUE'
+  TOGGLE_COMPARE_VALUE: 'datasetPage/TOGGLE_COMPARE_VALUE',
+  UPDATE_CODE_STATUS: 'datasetPage/UPDATE_CODE_STATUS',
+  FETCH_VALID_CODES: 'datasetPage/FETCH_VALID_CODES'
 };
 
 const initialState = {
@@ -82,6 +84,12 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
         subType: action.payload.subType,
         seriesOptions: action.payload.seriesOptions
       };
+    case SUCCESS(ACTION_TYPES.UPDATE_CODE_STATUS):
+      return {
+        ...state,
+        dimensionCodes: { ...state.dimensionCodes, [action.payload.dimensionId]: action.payload.codes },
+        fetchedCodeLists: true
+      };
     default:
       return {
         ...state
@@ -117,6 +125,32 @@ export const getSeries = id => (dispatch, getState) => {
     type: ACTION_TYPES.FETCH_SERIES,
     payload: axios.post(requestUrl, seriesOptions)
   });
+};
+
+export const fetchValidCodes = (dataset: IDataSet, dimensionId, otherDimensionId, otherDimensionValue) => (dispatch, getState) => {
+  const { dimensionCodes } = getState().datasetPage;
+  return dispatch({
+    type: ACTION_TYPES.FETCH_VALID_CODES,
+    payload: axios
+      .get(`${datasetApiUrl}/${dataset.id}/validCodes`, { params: { dimensionId, otherDimensionId, otherDimensionValue } })
+      .then(res => {
+        const validCodes = res.data;
+        dimensionCodes[dimensionId].codes.forEach((code: IDimensionCode) => (code.disabled = !validCodes.includes(code.notation)));
+        dispatch({
+          type: ACTION_TYPES.UPDATE_CODE_STATUS,
+          payload: { dimensionId, codes: dimensionCodes[dimensionId] }
+        });
+      })
+  });
+};
+
+export const resetCodeStatus = (dataset: IDataSet, dimensionId) => (dispatch, getState) => {
+  const { dimensionCodes } = getState().datasetPage;
+  dimensionCodes[dimensionId].codes.forEach((code: IDimensionCode) => (code.disabled = false));
+  return {
+    type: ACTION_TYPES.UPDATE_CODE_STATUS,
+    payload: { dimensionId, codes: dimensionCodes[dimensionId] }
+  };
 };
 
 export const setFilterValue = (dataset: IDataSet, dimensionId: string, filterValue: string) => (dispatch, getState) => {
@@ -158,8 +192,8 @@ export const changeCompareBy = (dataset: IDataSet, compareBy: string) => (dispat
   dispatch(updateVisOptions(dataset, { visType, seriesOptions: { ...seriesOptions, compareBy } }));
 };
 
-export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => (dispatch, getState) => {
-  const { dimensionCodes } = getState().datasetPage;
+export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => async (dispatch, getState) => {
+  const { dimensionCodes, seriesOptions: oldSeriesOptions } = getState().datasetPage;
   const { visType = 'chart', seriesOptions } = visOptions;
   let { subType } = visOptions;
 
@@ -188,13 +222,37 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
   let newSeriesOptions = {};
   let dimensionFilters;
   if (dataset.type === 'qb') {
+    if (arr.includes('elections') || !filters['elections']) {
+      dispatch(resetCodeStatus(dataset, 'party'));
+      dispatch(resetCodeStatus(dataset, 'constituency'));
+    } else if (oldSeriesOptions && oldSeriesOptions.dimensionFilters['elections'] !== filters['elections']) {
+      await dispatch(fetchValidCodes(dataset, 'party', 'elections', filters['elections']));
+      await dispatch(fetchValidCodes(dataset, 'constituency', 'elections', filters['elections']));
+    }
+
     dimensionFilters = dimensions.filter(dimension => !arr.includes(dimension.id)).reduce((acc, dimension) => {
       acc[dimension.id] =
         dimension.parentDimensionId && ([xAxis, compareBy].includes(dimension.parentDimensionId) || !filters[dimension.parentDimensionId])
           ? null
-          : filters[dimension.id] || (dimension.required && dimensionCodes[dimension.id].codes[0].notation) || null;
+          : filters[dimension.id] || null;
+
+      if (acc[dimension.id] != null && dimensionCodes[dimension.id].codesByNotation[acc[dimension.id]].disabled) {
+        acc[dimension.id] = null;
+      }
+
+      if (acc[dimension.id] == null && dimension.required) {
+        const validCode = dimensionCodes[dimension.id].codes.find(code => !code.disabled);
+        acc[dimension.id] = validCode.notation;
+      }
       return acc;
     }, {}) as IDimensionFilters;
+
+    if (arr.includes('constituency') || !dimensionFilters['constituency']) {
+      dispatch(resetCodeStatus(dataset, 'municipality'));
+    } else if (oldSeriesOptions && oldSeriesOptions.dimensionFilters['constituency'] !== dimensionFilters['constituency']) {
+      dimensionFilters['municipality'] = null;
+      await dispatch(fetchValidCodes(dataset, 'municipality', 'constituency', dimensionFilters['constituency']));
+    }
 
     if (dataset.id === 'greek-election-results') {
       if (!arr.includes('party') && !arr.includes('abstention') && !arr.includes('invalid_vote')) {
@@ -202,10 +260,12 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
           dimensionFilters.party = dimensionCodes['party'].codes[0].notation;
         }
       } else {
-        dimensionFilters.party = null;
+        if (!arr.includes('party')) {
+          dimensionFilters.party = null;
+        }
       }
     }
-
+    // await dispatch(updateCodeStatus(dataset, oldSeriesOptions, seriesOptions));
     newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters };
   } else {
     dimensionFilters = _.pickBy(filters, (value, key) => key !== xAxis && key !== compareBy);
