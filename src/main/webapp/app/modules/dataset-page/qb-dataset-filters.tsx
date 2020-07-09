@@ -4,7 +4,7 @@ import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
 import { setFilterValue } from 'app/modules/dataset-page/dataset-page-reducer';
-import { Dropdown } from 'semantic-ui-react';
+import { Dropdown, Popup } from 'semantic-ui-react';
 
 export interface IQbDatasetFiltersProp {
   dimensionCodes: any;
@@ -24,7 +24,7 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
     const mapCodeToOption = code => ({
       id: code.notation,
       key: code.notation,
-      text: translateEntityField(code.name),
+      text: <span data-tooltip={translateEntityField(code.description)}>{translateEntityField(code.name)}</span>,
       value: dimensionId + '$$$' + code.notation,
       className: `filter-option-level-0`
     });
