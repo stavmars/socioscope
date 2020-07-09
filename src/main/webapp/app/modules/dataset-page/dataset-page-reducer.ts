@@ -222,7 +222,14 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
   compareBy = compareBy || null;
   const compareByDimension = dimensions.find(dim => dim.id === compareBy);
 
+  const composedXAxisParent = dataset.dimensions.find(dim => dim.type === 'combined' && dim.composedOf && dim.composedOf.includes(xAxis));
+  const composedCompareParent =
+    compareBy != null && dataset.dimensions.find(dim => dim.type === 'combined' && dim.composedOf && dim.composedOf.includes(compareBy));
+
   const arr = [xAxis, compareBy];
+  composedXAxisParent && arr.push(...composedXAxisParent.composedOf);
+  composedCompareParent && arr.push(...composedCompareParent.composedOf);
+
   let newSeriesOptions = {};
   let dimensionFilters;
   if (dataset.type === 'qb') {
@@ -233,6 +240,24 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
       await dispatch(fetchValidCodes(dataset, 'party', 'elections', filters['elections']));
       await dispatch(fetchValidCodes(dataset, 'constituency', 'elections', filters['elections']));
     }
+
+    dimensions.filter(dim => dim.type === 'combined').forEach(superDim => {
+      if (!superDim.composedOf || superDim.composedOf.length === 0) {
+        return;
+      }
+      let selectedSubDim = superDim.composedOf.find(subDim => filters[subDim] != null);
+      selectedSubDim = selectedSubDim || (superDim.required ? superDim.composedOf[0] : null);
+      if (!selectedSubDim && superDim.required && superDim.composedOf) {
+        selectedSubDim = superDim.composedOf[0];
+        filters[selectedSubDim] = dimensionCodes[selectedSubDim].codes.find(code => !code.disabled);
+      }
+      selectedSubDim &&
+        superDim.composedOf.forEach(subDim => {
+          if (subDim !== selectedSubDim) {
+            filters[subDim] = null;
+          }
+        });
+    });
 
     dimensionFilters = dimensions
       .filter(dimension => !arr.includes(dimension.id) && dimension.type !== 'combined')
@@ -246,11 +271,7 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
           acc[dimension.id] = null;
         }
 
-        if (
-          acc[dimension.id] == null &&
-          dimension.required &&
-          (dimension.id !== 'party' || (filters['abstention'] == null && filters['invalid_vote'] == null))
-        ) {
+        if (acc[dimension.id] == null && dimension.required) {
           const validCode = dimensionCodes[dimension.id].codes.find(code => !code.disabled);
           acc[dimension.id] = validCode.notation;
         }
@@ -262,15 +283,6 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
     } else if (oldSeriesOptions && oldSeriesOptions.dimensionFilters['constituency'] !== dimensionFilters['constituency']) {
       dimensionFilters['municipality'] = null;
       await dispatch(fetchValidCodes(dataset, 'municipality', 'constituency', dimensionFilters['constituency']));
-    }
-
-    const tmp = ['party', 'abstention', 'invalid_vote'].filter(dim => !arr.includes(dim));
-    if (tmp.length < 3) {
-      tmp.forEach(dim => (dimensionFilters[dim] = null));
-    } else {
-      if (dimensionFilters['party'] == null && dimensionFilters['abstention'] == null && dimensionFilters['invalid_vote'] == null) {
-        dimensionFilters.party = dimensionCodes['party'].codes.find(code => !code.disabled).notation;
-      }
     }
 
     newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters };
