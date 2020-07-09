@@ -6690,5 +6690,75 @@
     },
     "order": 7,
     "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "60",
+    "name": {
+      "el": "Β1' Βόρειου Τομέα Αθηνών",
+      "en": "Athens B1 – North Athens"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "61",
+    "name": {
+      "el": "Β2' Δυτικού Τομέα Αθηνών",
+      "en": "Athens B2 – West Athens"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "62",
+    "name": {
+      "el": "Β3' Νότιου Τομέα Αθηνών",
+      "en": "Athens B3 – South Athens"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "63",
+    "name": {
+      "el": "Α' Ανατολικής Αττικής",
+      "en": "East Attica"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "constituency",
+    "notation": "64",
+    "name": {
+      "el": "Β' Δυτικής Αττικής",
+      "en": "West Attica"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
   }
 ]
