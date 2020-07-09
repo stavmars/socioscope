@@ -1204,6 +1204,90 @@
     "color": ""
   },
   {
+    "dimensionId": "party",
+    "notation": "synek",
+    "name": {
+      "el": "ΣΥΝ...ΦΩΝΙΑ",
+      "en": "SYN...FONIA"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "plefsi",
+    "name": {
+      "el": "Πλεύση Ελευθερίας",
+      "en": "Plefsi Eleftherias"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "mera25",
+    "name": {
+      "el": "ΜέΡΑ25",
+      "en": "MeRA25"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "esy",
+    "name": {
+      "el": "Ελλ. Συνέλευσις",
+      "en": "El.Synelefsis"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "el_lysi",
+    "name": {
+      "el": "Ελληνική Λύση",
+      "en": "El.Synelefsis"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "kinal",
+    "name": {
+      "el": "Κίνημα Αλλαγής",
+      "en": "Kinima Allagis"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
     "dimensionId": "invalid_vote",
     "notation": "valid",
     "name": {
@@ -6584,7 +6668,7 @@
     "notation": "10",
     "name": {
       "el": "Ιούλιος 2019",
-      "en": "July 2015"
+      "en": "July 2019"
     },
     "description": {
       "el": "",
