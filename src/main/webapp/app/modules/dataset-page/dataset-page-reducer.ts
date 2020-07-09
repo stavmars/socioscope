@@ -155,6 +155,10 @@ export const resetCodeStatus = (dataset: IDataSet, dimensionId) => (dispatch, ge
 
 export const setFilterValue = (dataset: IDataSet, dimensionId: string, filterValue: string) => (dispatch, getState) => {
   const { visType, seriesOptions } = getState().datasetPage;
+  const superDimension = dataset.dimensions.find(dim => dim.type === 'combined' && dim.composedOf && dim.composedOf.includes(dimensionId));
+  if (superDimension) {
+    superDimension.composedOf.forEach(subDim => subDim !== dimensionId && (seriesOptions.dimensionFilters[subDim] = null));
+  }
   dispatch(
     updateVisOptions(dataset, {
       visType,
@@ -230,26 +234,28 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
       await dispatch(fetchValidCodes(dataset, 'constituency', 'elections', filters['elections']));
     }
 
-    dimensionFilters = dimensions.filter(dimension => !arr.includes(dimension.id)).reduce((acc, dimension) => {
-      acc[dimension.id] =
-        dimension.parentDimensionId && ([xAxis, compareBy].includes(dimension.parentDimensionId) || !filters[dimension.parentDimensionId])
-          ? null
-          : filters[dimension.id] || null;
+    dimensionFilters = dimensions
+      .filter(dimension => !arr.includes(dimension.id) && dimension.type !== 'combined')
+      .reduce((acc, dimension) => {
+        acc[dimension.id] =
+          dimension.parentDimensionId && ([xAxis, compareBy].includes(dimension.parentDimensionId) || !filters[dimension.parentDimensionId])
+            ? null
+            : filters[dimension.id] || null;
 
-      if (acc[dimension.id] != null && dimensionCodes[dimension.id].codesByNotation[acc[dimension.id]].disabled) {
-        acc[dimension.id] = null;
-      }
+        if (acc[dimension.id] != null && dimensionCodes[dimension.id].codesByNotation[acc[dimension.id]].disabled) {
+          acc[dimension.id] = null;
+        }
 
-      if (
-        acc[dimension.id] == null &&
-        dimension.required &&
-        (dimension.id !== 'party' || (filters['abstention'] == null && filters['invalid_vote'] == null))
-      ) {
-        const validCode = dimensionCodes[dimension.id].codes.find(code => !code.disabled);
-        acc[dimension.id] = validCode.notation;
-      }
-      return acc;
-    }, {}) as IDimensionFilters;
+        if (
+          acc[dimension.id] == null &&
+          dimension.required &&
+          (dimension.id !== 'party' || (filters['abstention'] == null && filters['invalid_vote'] == null))
+        ) {
+          const validCode = dimensionCodes[dimension.id].codes.find(code => !code.disabled);
+          acc[dimension.id] = validCode.notation;
+        }
+        return acc;
+      }, {}) as IDimensionFilters;
 
     if (arr.includes('constituency') || !dimensionFilters['constituency']) {
       dispatch(resetCodeStatus(dataset, 'municipality'));

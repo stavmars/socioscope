@@ -68,7 +68,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
     const dimensionsByGroup = _.groupBy(dimensions, dim => dim.groupId || '');
 
     const getXAxisOptions = (dimList = []) =>
-      dimList.filter(dimension => !dimension.disableAxis).map(dimension => ({
+      dimList.filter(dimension => !dimension.disableAxis && dimension.type !== 'combined').map(dimension => ({
         id: dimension.id,
         text: translateEntityField(dimension.name),
         value: dimension.id
@@ -93,6 +93,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
       .filter(
         dimension =>
           dimension.type !== 'time' &&
+          dimension.type !== 'combined' &&
           !dimension.disableFilter &&
           !dimension.disableCompareBy &&
           (dimension.id !== 'party' || !['abstention', 'invalid_vote'].includes(xAxisDimension.id))

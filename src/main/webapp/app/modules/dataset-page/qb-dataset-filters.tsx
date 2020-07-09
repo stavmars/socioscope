@@ -3,8 +3,8 @@ import './dataset-page.scss';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
-import { Dropdown } from 'semantic-ui-react';
 import { setFilterValue } from 'app/modules/dataset-page/dataset-page-reducer';
+import { Dropdown } from 'semantic-ui-react';
 
 export interface IQbDatasetFiltersProp {
   dimensionCodes: any;
@@ -15,21 +15,21 @@ export interface IQbDatasetFiltersProp {
 }
 
 export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
-  handleFilterChange = dimensionId => (e, { value }) => {
-    this.props.setFilterValue(this.props.dataset, dimensionId, value);
+  handleFilterChange = (e, { value }) => {
+    const splitValue = value.split('$$$');
+    this.props.setFilterValue(this.props.dataset, splitValue[0], splitValue[1]);
   };
 
-  createDropdownOptions = (codes, arr, level) => {
+  createDropdownOptions = (codes, arr, dimensionId) => {
     const mapCodeToOption = code => ({
       id: code.notation,
       key: code.notation,
       text: translateEntityField(code.name),
-      value: code.notation,
-      className: `filter-option-level-${level}`
+      value: dimensionId + '$$$' + code.notation,
+      className: `filter-option-level-0`
     });
     codes.filter(code => !code.disabled).forEach(code => {
       arr.push(mapCodeToOption(code));
-      code.children && this.createDropdownOptions(code.children, arr, level + 1);
     });
   };
 
@@ -48,19 +48,37 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
             dimension =>
               !arr.includes(dimension.id) &&
               !dimension.disableFilter &&
-              (!dimension.parentDimensionId || !arr.includes(dimension.parentDimensionId)) &&
-              (dimension.id !== 'party' || (!arr.includes('abstention') && !arr.includes('invalid_vote')))
+              (!dimension.parentDimensionId || !arr.includes(dimension.parentDimensionId))
           )
           .map(dimension => {
             const dropdownOptions = [];
-            this.createDropdownOptions(dimensionCodes[dimension.id].codes, dropdownOptions, 0);
+            if (dimension.type !== 'combined') {
+              this.createDropdownOptions(dimensionCodes[dimension.id].codes, dropdownOptions, dimension.id);
+            } else {
+              dimension.composedOf.forEach(subDimId => {
+                const subDimCodes = dimensionCodes[subDimId].codes;
+                this.createDropdownOptions(subDimCodes, dropdownOptions, subDimId);
+              });
+            }
+
+            let selectedValue = null;
+            if (dimension.type === 'combined') {
+              const selectedSubDim =
+                dimension.composedOf && dimension.composedOf.find(subDimId => seriesOptions.dimensionFilters[subDimId] != null);
+              if (selectedSubDim != null) {
+                selectedValue = selectedSubDim + '$$$' + seriesOptions.dimensionFilters[selectedSubDim];
+              }
+            } else {
+              const selectionId = seriesOptions.dimensionFilters[dimension.id];
+              selectedValue = selectionId != null ? dimension.id + '$$$' + selectionId : null;
+            }
             return (
               <div key={dimension.id} className="vis-qb-filter">
                 <div className="vis-qb-filter-label">{`${translateEntityField(dimension.name)}:`}</div>
                 <Dropdown
                   className={`vis-options-dropdown ${dataset.colorScheme}`}
                   key={dimension.id}
-                  onChange={this.handleFilterChange(dimension.id)}
+                  onChange={this.handleFilterChange}
                   options={dropdownOptions}
                   selection
                   search
@@ -69,7 +87,7 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
                   clearable={!dimension.required}
                   disabled={dimension.parentDimensionId && !seriesOptions.dimensionFilters[dimension.parentDimensionId]}
                   noResultsMessage="Δε βρέθηκαν αποτελέσματα"
-                  value={seriesOptions.dimensionFilters[dimension.id]}
+                  value={selectedValue}
                 />
               </div>
             );
