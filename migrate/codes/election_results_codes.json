@@ -6525,6 +6525,34 @@
   },
   {
     "dimensionId": "elections",
+    "notation": "9",
+    "name": {
+      "el": "Σεπτέμβριος 2015",
+      "en": "September 2015"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": 9,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections",
+    "notation": "10",
+    "name": {
+      "el": "Ιούλιος 2019",
+      "en": "July 2015"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": 10,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections",
     "notation": "1",
     "name": {
       "el": "Σεπτέμβριος 1996",
