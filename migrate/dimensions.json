@@ -54,6 +54,18 @@
     "dependencies": []
   },
   {
+    "id": "vote",
+    "name": {
+      "el": "Ψήφος",
+      "en": "Vote"
+    },
+    "type": "combined",
+    "composedOf": [
+      "abstention", "invalid_vote", "party"
+    ],
+    "required": true
+  },
+  {
     "id": "party",
     "name": {
       "el": "Κόμμα",
@@ -63,8 +75,30 @@
     "dependencies": [
       "elections"
     ],
-    "order": "value_desc",
-    "required": true
+    "disableFilter": true,
+    "order": "value_desc"
+  },
+  {
+    "id": "abstention",
+    "name": {
+      "el": "Αποχή",
+      "en": "Abstention"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "dependencies": []
+  },
+  {
+    "id": "invalid_vote",
+    "name": {
+      "el": "Άκυρα-Λευκά",
+      "en": "Invalid/Blank"
+    },
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "dependencies": []
   },
   {
     "id": "constituency",
@@ -107,28 +141,6 @@
     "dependencies": ["constituency"],
     "parentDimensionId": "constituency",
     "disableCompareBy": true
-  },
-  {
-    "id": "abstention",
-    "name": {
-      "el": "Αποχή",
-      "en": "Abstention"
-    },
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "dependencies": []
-  },
-  {
-    "id": "invalid_vote",
-    "name": {
-      "el": "Άκυρα-Λευκά",
-      "en": "Invalid/Blank"
-    },
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "dependencies": []
   },
   {
     "id": "elections",

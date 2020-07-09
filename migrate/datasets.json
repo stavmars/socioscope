@@ -20,6 +20,9 @@
         "id": "elections"
       },
       {
+        "id": "vote"
+      },
+      {
         "id": "party"
       },
       {
@@ -62,25 +65,11 @@
           "xAxis": "elections",
           "measure": "votes_perc",
           "dimensionFilters": {
-            "constituency": 0,
-            "party": "abstained"
-          }
-        }
-      },
-      {
-        "id": "may_2012",
-        "description": {
-          "el": "<span>Στις εκλογές του Μαΐου του <span class=\"text-accent\">2012</span> πάνω από <span class=\"text-accent\">1.000.000</span> ψήφοι πήγαν σε κόμματα εκτός Κοινοβουλίου, έναντι μόλις <span class=\"text-accent\">70.079</span> ψήφων το <span class=\"text-accent\">2004</span>.</span>",
-          "en": "<span>In the May <span class=\"text-accent\">2012</span> more than <span class=\"text-accent\">1.000.000</span> votes were shared to parties outside Parliament, while in the <span class=\"text-accent\">2004</span> elections the votes to parties without parliamentary representation were only <span class=\"text-accent\">70.079</span>.</span>"
-        },
-        "visType": "chart",
-        "subType": "column",
-        "seriesOptions": {
-          "xAxis": "elections",
-          "measure": "votes",
-          "dimensionFilters": {
-            "constituency": 0,
-            "party": "without_seats"
+            "constituency": null,
+            "party": null,
+            "abstention": "abstained",
+            "invalid_vote": null,
+            "municipality": null
           }
         }
       },
