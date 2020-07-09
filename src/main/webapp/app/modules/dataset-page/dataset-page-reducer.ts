@@ -240,7 +240,11 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
         acc[dimension.id] = null;
       }
 
-      if (acc[dimension.id] == null && dimension.required) {
+      if (
+        acc[dimension.id] == null &&
+        dimension.required &&
+        (dimension.id !== 'party' || (filters['abstention'] == null && filters['invalid_vote'] == null))
+      ) {
         const validCode = dimensionCodes[dimension.id].codes.find(code => !code.disabled);
         acc[dimension.id] = validCode.notation;
       }
@@ -254,18 +258,15 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
       await dispatch(fetchValidCodes(dataset, 'municipality', 'constituency', dimensionFilters['constituency']));
     }
 
-    if (dataset.id === 'greek-election-results') {
-      if (!arr.includes('party') && !arr.includes('abstention') && !arr.includes('invalid_vote')) {
-        if (dimensionFilters['party'] == null) {
-          dimensionFilters.party = dimensionCodes['party'].codes[0].notation;
-        }
-      } else {
-        if (!arr.includes('party')) {
-          dimensionFilters.party = null;
-        }
+    const tmp = ['party', 'abstention', 'invalid_vote'].filter(dim => !arr.includes(dim));
+    if (tmp.length < 3) {
+      tmp.forEach(dim => (dimensionFilters[dim] = null));
+    } else {
+      if (dimensionFilters['party'] == null && dimensionFilters['abstention'] == null && dimensionFilters['invalid_vote'] == null) {
+        dimensionFilters.party = dimensionCodes['party'].codes.find(code => !code.disabled).notation;
       }
     }
-    // await dispatch(updateCodeStatus(dataset, oldSeriesOptions, seriesOptions));
+
     newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters };
   } else {
     dimensionFilters = _.pickBy(filters, (value, key) => key !== xAxis && key !== compareBy);
