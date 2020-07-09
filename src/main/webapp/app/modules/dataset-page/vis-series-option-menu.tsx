@@ -87,9 +87,16 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
     });
 
     const xAxisOptions = [...getXAxisOptions(dimensionsByGroup['']), ...groupXAxisOptions];
+    const xAxisDimension = _.find(dataset.dimensions, { id: seriesOptions.xAxis });
 
     const compareByOptions = dimensions
-      .filter(dimension => dimension.type !== 'time' && !dimension.disableFilter && !dimension.disableCompareBy)
+      .filter(
+        dimension =>
+          dimension.type !== 'time' &&
+          !dimension.disableFilter &&
+          !dimension.disableCompareBy &&
+          (dimension.id !== 'party' || !['abstention', 'invalid_vote'].includes(xAxisDimension.id))
+      )
       .map(dimension => ({
         id: dimension.id,
         text: translateEntityField(dimension.name),
@@ -97,7 +104,6 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
         disabled: dimension.id === seriesOptions.xAxis
       }));
 
-    const xAxisDimension = _.find(dataset.dimensions, { id: seriesOptions.xAxis });
     const compareByDimension = _.find(dataset.dimensions, { id: seriesOptions.compareBy });
     const dependencies = _.union(xAxisDimension.dependencies, compareByDimension ? compareByDimension.dependencies : []);
 
