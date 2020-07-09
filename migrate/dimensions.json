@@ -61,7 +61,9 @@
     },
     "type": "combined",
     "composedOf": [
-      "abstention", "invalid_vote", "party"
+      "abstention",
+      "invalid_vote",
+      "party"
     ],
     "required": true
   },
@@ -125,11 +127,14 @@
         "url": "content/geo/municipalities.json"
       }
     ],
-    "dependencies": ["elections"],
+    "dependencies": [
+      "elections"
+    ],
     "noFilterText": {
       "el": "Επικράτεια",
       "en": "State"
-    }
+    },
+    "disableStacking": true
   },
   {
     "id": "municipality",
@@ -138,9 +143,12 @@
       "en": "Μunicipality"
     },
     "type": "coded",
-    "dependencies": ["constituency"],
+    "dependencies": [
+      "constituency"
+    ],
     "parentDimensionId": "constituency",
-    "disableCompareBy": true
+    "disableCompareBy": true,
+    "disableStacking": true
   },
   {
     "id": "elections",
@@ -488,6 +496,7 @@
     "groupId": "family",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -499,6 +508,7 @@
     "groupId": "family",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -510,6 +520,7 @@
     "groupId": "family",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -521,6 +532,7 @@
     "groupId": "family",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -532,6 +544,7 @@
     "groupId": "family",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -543,6 +556,7 @@
     "groupId": "family",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -564,7 +578,8 @@
       "q8b",
       "q8e"
     ],
-    "disableFilter": true
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "q20a",
@@ -575,6 +590,7 @@
     "type": "coded",
     "groupId": "family",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -586,6 +602,7 @@
     "type": "coded",
     "groupId": "family",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -600,7 +617,8 @@
       "q20a",
       "q20b"
     ],
-    "disableFilter": true
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "q11",
@@ -638,6 +656,7 @@
     "groupId": "politics",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -649,6 +668,7 @@
     "groupId": "politics",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -660,6 +680,7 @@
     "groupId": "politics",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -671,6 +692,7 @@
     "groupId": "politics",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -682,6 +704,7 @@
     "groupId": "politics",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -693,6 +716,7 @@
     "groupId": "politics",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -714,7 +738,8 @@
       "q16e",
       "q16f"
     ],
-    "disableFilter": true
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "q28",
@@ -805,6 +830,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -816,6 +842,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -827,6 +854,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -838,6 +866,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -849,6 +878,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -860,6 +890,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -871,6 +902,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -882,6 +914,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -905,7 +938,8 @@
       "q12g",
       "q12h"
     ],
-    "disableFilter": true
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "q13a",
@@ -916,6 +950,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -927,6 +962,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -938,6 +974,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -949,6 +986,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -960,6 +998,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -971,6 +1010,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -982,6 +1022,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -993,6 +1034,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1004,6 +1046,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1028,7 +1071,8 @@
       "q13h",
       "q13i"
     ],
-    "disableFilter": true
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "q33a",
@@ -1039,6 +1083,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1050,6 +1095,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1061,6 +1107,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1072,6 +1119,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1083,6 +1131,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1094,6 +1143,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1105,6 +1155,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1116,6 +1167,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1139,7 +1191,8 @@
       "q33g",
       "q33h"
     ],
-    "disableFilter": true
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "q35a",
@@ -1150,6 +1203,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1161,6 +1215,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1172,6 +1227,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1183,6 +1239,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1194,6 +1251,7 @@
     "groupId": "nation",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1214,7 +1272,8 @@
       "q35d",
       "q35e"
     ],
-    "disableFilter": true
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "q36a",
@@ -1225,6 +1284,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1236,6 +1296,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1247,6 +1308,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1258,6 +1320,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1269,6 +1332,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1280,6 +1344,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1291,6 +1356,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1313,7 +1379,8 @@
       "q36f",
       "q36g"
     ],
-    "disableFilter": true
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "q39aNew",
@@ -1324,6 +1391,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1335,6 +1403,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1346,6 +1415,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1357,6 +1427,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1368,6 +1439,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1379,6 +1451,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1390,6 +1463,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1401,6 +1475,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1412,6 +1487,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1423,6 +1499,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1434,6 +1511,7 @@
     "groupId": "personality",
     "type": "coded",
     "disableFilter": true,
+    "disableCompareBy": true,
     "disableAxis": true
   },
   {
@@ -1460,7 +1538,8 @@
       "q39jNew",
       "q39kNew"
     ],
-    "disableFilter": true
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "PAPER",
