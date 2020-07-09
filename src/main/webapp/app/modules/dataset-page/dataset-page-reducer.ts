@@ -304,7 +304,7 @@ export const urlEncodeVisOptions = (visOptions: IVisOptions) => {
       filters: seriesOptions.dimensionFilters,
       measure: seriesOptions.measure
     },
-    { skipNulls: true }
+    { skipNulls: false }
   );
 };
 
