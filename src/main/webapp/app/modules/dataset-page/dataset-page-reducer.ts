@@ -246,10 +246,9 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
         return;
       }
       let selectedSubDim = superDim.composedOf.find(subDim => filters[subDim] != null);
-      selectedSubDim = selectedSubDim || (superDim.required ? superDim.composedOf[0] : null);
       if (!selectedSubDim && superDim.required && superDim.composedOf) {
         selectedSubDim = superDim.composedOf[0];
-        filters[selectedSubDim] = dimensionCodes[selectedSubDim].codes.find(code => !code.disabled);
+        filters[selectedSubDim] = dimensionCodes[selectedSubDim].codes.find(code => !code.disabled).notation;
       }
       selectedSubDim &&
         superDim.composedOf.forEach(subDim => {
