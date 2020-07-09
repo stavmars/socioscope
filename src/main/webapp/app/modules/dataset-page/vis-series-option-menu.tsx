@@ -88,21 +88,16 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
 
     const xAxisOptions = [...getXAxisOptions(dimensionsByGroup['']), ...groupXAxisOptions];
     const xAxisDimension = _.find(dataset.dimensions, { id: seriesOptions.xAxis });
-
+    const composedParent = dataset.dimensions.find(
+      dim => dim.type === 'combined' && dim.composedOf && dim.composedOf.includes(xAxisDimension.id)
+    );
     const compareByOptions = dimensions
-      .filter(
-        dimension =>
-          dimension.type !== 'time' &&
-          dimension.type !== 'combined' &&
-          !dimension.disableFilter &&
-          !dimension.disableCompareBy &&
-          (dimension.id !== 'party' || !['abstention', 'invalid_vote'].includes(xAxisDimension.id))
-      )
+      .filter(dimension => dimension.type !== 'time' && dimension.type !== 'combined' && !dimension.disableCompareBy)
       .map(dimension => ({
         id: dimension.id,
         text: translateEntityField(dimension.name),
         value: dimension.id,
-        disabled: dimension.id === seriesOptions.xAxis
+        disabled: dimension.id === seriesOptions.xAxis || (composedParent && composedParent.composedOf.includes(dimension.id))
       }));
 
     const compareByDimension = _.find(dataset.dimensions, { id: seriesOptions.compareBy });
