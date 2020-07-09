@@ -1162,6 +1162,48 @@
     "color": ""
   },
   {
+    "dimensionId": "party",
+    "notation": "laiki_enotita",
+    "name": {
+      "el": "ΛΑΪΚΗ ΕΝΟΤΗΤΑ",
+      "en": "Laiki Enotita"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "epam",
+    "name": {
+      "el": "ΕΝΙΑΙΟ ΠΑΛΑΙΚΟ ΜΕΤΩΠΟ (Ε.ΠΑ.Μ)",
+      "en": "United Popular Front"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "patriotiki_enosi",
+    "name": {
+      "el": "ΠΑΤΡΙΩΤΙΚΗ ΕΝΩΣΗ - ΕΛΛ. ΛΑΪΚΗ ΣΥΣΠΕΙΡΩΣΙΣ ΕΛ.ΛΑ.Σ.",
+      "en": "Patriotiki Enosi"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
     "dimensionId": "invalid_vote",
     "notation": "valid",
     "name": {

@@ -65,6 +65,7 @@ public class ObservationRepositoryImpl implements ObservationRepositoryCustom {
             Criteria.where("dimensions").elemMatch(Criteria.where("id").is(otherDimensionId).and("value").is(otherDimensionValue)));
         Aggregation agg = Aggregation.newAggregation(match(criteria), unwind("$dimensions"), match( Criteria.where("dimensions.id").is(dimensionId)),
             project().andExpression("dimensions.value").as("value"), group("value"));
+        log.debug("Mongo agg to get valid codes: {} ", agg);
         List<Map> docs = mongoTemplate.aggregate(agg, "observation", Map.class).getMappedResults();
         return docs.stream().map(doc -> doc.get("_id").toString()).collect(Collectors.toList());
     }
