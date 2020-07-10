@@ -155,19 +155,29 @@ export const resetCodeStatus = (dataset: IDataSet, dimensionId) => (dispatch, ge
 
 export const setFilterValue = (dataset: IDataSet, dimensionId: string, filterValue: string) => (dispatch, getState) => {
   const { visType, seriesOptions } = getState().datasetPage;
-  const superDimension = dataset.dimensions.find(dim => dim.type === 'combined' && dim.composedOf && dim.composedOf.includes(dimensionId));
-  if (superDimension) {
-    superDimension.composedOf.forEach(subDim => subDim !== dimensionId && (seriesOptions.dimensionFilters[subDim] = null));
+  const filters = { ...seriesOptions.dimensionFilters };
+  if (filterValue == null) {
+    const dimension = dataset.dimensions.find(dim => dim.id === dimensionId);
+    if (dimension.type === 'combined') {
+      dimension.composedOf && dimension.composedOf.forEach(subDim => (filters[subDim] = null));
+    } else {
+      filters[dimensionId] = null;
+    }
+  } else {
+    filters[dimensionId] = filterValue;
+    const superDimension = dataset.dimensions.find(
+      dim => dim.type === 'combined' && dim.composedOf && dim.composedOf.includes(dimensionId)
+    );
+    if (superDimension) {
+      superDimension.composedOf.forEach(subDim => subDim !== dimensionId && (filters[subDim] = null));
+    }
   }
   dispatch(
     updateVisOptions(dataset, {
       visType,
       seriesOptions: {
         ...seriesOptions,
-        dimensionFilters: {
-          ...seriesOptions.dimensionFilters,
-          [dimensionId]: filterValue
-        }
+        dimensionFilters: filters
       }
     })
   );

@@ -15,9 +15,13 @@ export interface IQbDatasetFiltersProp {
 }
 
 export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
-  handleFilterChange = (e, { value }) => {
-    const splitValue = value.split('$$$');
-    this.props.setFilterValue(this.props.dataset, splitValue[0], splitValue[1]);
+  handleFilterChange = dimension => (e, { value }) => {
+    if (value === '') {
+      this.props.setFilterValue(this.props.dataset, dimension.id, null);
+    } else {
+      const splitValue = value.split('$$$');
+      this.props.setFilterValue(this.props.dataset, splitValue[0], splitValue[1]);
+    }
   };
 
   createDropdownOptions = (codes, arr, dimensionId) => {
@@ -78,7 +82,7 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
                 <Dropdown
                   className={`vis-options-dropdown ${dataset.colorScheme}`}
                   key={dimension.id}
-                  onChange={this.handleFilterChange}
+                  onChange={this.handleFilterChange(dimension)}
                   options={dropdownOptions}
                   selection
                   search
