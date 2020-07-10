@@ -7,8 +7,8 @@
       "en": "AN.EL."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Ανεξάρτητοι Έλληνες (ΑΝ.ΕΛ.)",
+      "en": "Independent Greeks (AN.EL.)"
     },
     "order": "",
     "color": "#00FFFF"
@@ -21,8 +21,8 @@
       "en": "DIM.AR."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Δημοκρατική Αριστερά (ΔΗΜ. ΑΡ.)",
+      "en": "Democratic Left (DIM. AR.)"
     },
     "order": "",
     "color": "#AD4B4D"
@@ -35,8 +35,8 @@
       "en": "Golden Dawn"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Χρυσή Αυγή",
+      "en": "Golden Dawn"
     },
     "order": "",
     "color": "#000C4F"
@@ -49,8 +49,8 @@
       "en": "K.K.E."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Κομμουνιστικό Κόμμα Ελλάδας (Κ.Κ.Ε.)",
+      "en": "Greek Communist Party (KKE)"
     },
     "order": "",
     "color": "#D80000"
@@ -63,8 +63,8 @@
       "en": "LA.O.S."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Λαϊκός Ορθόδοξος Συναγερμός (ΛΑ.Ο.Σ.)",
+      "en": "Popular Orthodox Rally (LAOS)"
     },
     "order": "",
     "color": "#000080"
@@ -77,8 +77,8 @@
       "en": "N.D."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Νέα Δημοκρατία",
+      "en": "New Democracy"
     },
     "order": "",
     "color": "#0C99FF"
@@ -91,8 +91,8 @@
       "en": "P.A.S.O.K"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Πανελλήνιο Σοσιαλιστικό Κίνημα (ΠΑ.ΣΟ.Κ.)",
+      "en": "Panhellenic Socialist Movement (PASOK)"
     },
     "order": "",
     "color": "#00CC0C"
@@ -105,8 +105,8 @@
       "en": "Potami"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Το Ποτάμι",
+      "en": "The River"
     },
     "order": "",
     "color": "#AF6300"
@@ -119,8 +119,8 @@
       "en": "Synaspismos / Syriza"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "ΣΥΝ/ΣΥΡΙΖΑ",
+      "en": "Synaspismos / Syriza"
     },
     "order": "",
     "color": "#FF8080"
@@ -147,8 +147,8 @@
       "en": "AKEP"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Αυτόνομο Κίνημα Εργατικής Πολιτικής (Α.Κ.Ε.Π.)",
+      "en": "Autonomous Movement for Labor Affairs (A.K.E.P.)"
     },
     "order": "",
     "color": ""
@@ -161,8 +161,8 @@
       "en": "AN.AR"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "ΑΝ.ΑΝ.ΑΡΙΣΤ., ΑΝ.ΔΕΞΙΑ, ΑΝ.ΠΑΣΟΚ, ΑΝ.Ν.Δ., ΟΧΙ ΣΤΟΝ ΠΟΛΕΜΟ Κ. ΕΠΙΧ.ΧΑΡ.ΟΙΚ.ΧΑΡ.ΧΡΕΗ ΣΩΖΩ ΖΩΕΣ ΠΑΝ.ΕΡΓ.ΚΙΝ.ΕΛΛ. ΠΑ.Ε.Κ.Ε.",
+      "en": "AN.AN.ARIST., AN.DEXIA, AN.PASOK, AN.N.D., NO TO WAR K. EPICH.CHAR.OIK.CHAR.CHREI save LIVES PAN.ERG.KIN.ELL. PA.E.K.E."
     },
     "order": "",
     "color": ""
@@ -175,8 +175,8 @@
       "en": "Anoixi"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Πολιτική Άνοιξη (ΠΟΛ.ΑΝ.)",
+      "en": "Political Spring (POL.AN.)"
     },
     "order": "",
     "color": ""
@@ -189,8 +189,8 @@
       "en": "ANTARSIA"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Αντικαπιταλιστική Αριστερή Συνεργασία (ΑΝΤ.ΑΡ.ΣΥ.Α.)",
+      "en": "Anticapitalist Left Cooperation (ANT.AR.SY.A.)"
     },
     "order": "",
     "color": ""
@@ -203,8 +203,8 @@
       "en": "ANTARSYA MARS"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "ΑΝΤικαπιταλιστική ΑΡιστερή ΣΥνεργασία για την Ανατροπή Μ.ΑΡ.Σ",
+      "en": "Anti-capitalist left Cooperation for  the Overthrow M.AR.S"
     },
     "order": "",
     "color": ""
@@ -217,8 +217,8 @@
       "en": "A.S.K.E."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Αγωνιστικό Σοσιαλιστικό Κόμμα Ελλάδας (Α.Σ.Κ.Ε.)",
+      "en": "Fighting Socialist Party of Greece (ASKE)"
     },
     "order": "",
     "color": ""
@@ -231,8 +231,8 @@
       "en": "A.SYM"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Αντικαπιταλιστική Συμμαχία",
+      "en": "Anticapitalist Alliance"
     },
     "order": "",
     "color": ""
@@ -245,8 +245,8 @@
       "en": "AXIOPR."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Αξιοπρέπεια",
+      "en": "Dignity"
     },
     "order": "",
     "color": ""
@@ -259,8 +259,8 @@
       "en": "CHRIST"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Χριστοπιστία",
+      "en": "Christopistia"
     },
     "order": "",
     "color": ""
@@ -273,8 +273,8 @@
       "en": "DHM.SYM."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Δημοκρατική Συμμαχία",
+      "en": "Democratic Alliance"
     },
     "order": "",
     "color": ""
@@ -287,8 +287,8 @@
       "en": "DIANA"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Δημοκρατική Αναγέννηση",
+      "en": "Democratic Revival"
     },
     "order": "",
     "color": ""
@@ -301,8 +301,8 @@
       "en": "Di.K.Ki."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Δημοκρατικό Κοινωνικό Κίνημα (ΔΗ.Κ.ΚΙ.)",
+      "en": "Democratic Social Movement (DI.K.KI.)"
     },
     "order": "",
     "color": ""
@@ -315,8 +315,8 @@
       "en": "Dimokratikoi"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Δημοκρατικοί",
+      "en": "Democrats"
     },
     "order": "",
     "color": ""
@@ -329,8 +329,8 @@
       "en": "dim.xana!"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "δημιουργία, ξανά!",
+      "en": "Recreate Greece"
     },
     "order": "",
     "color": ""
@@ -343,8 +343,8 @@
       "en": "D.P.E."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Δημοκρατική Παγκόσμιος Ελλάς",
+      "en": "Democratic World Greece"
     },
     "order": "",
     "color": ""
@@ -357,8 +357,8 @@
       "en": "DRASI FS"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Δράση – Φιλελεύθερη Συμμαχία",
+      "en": "Action - Liberal Alliance"
     },
     "order": "",
     "color": ""
@@ -371,8 +371,8 @@
       "en": "EDEM"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Ένωση Δημοκρατικής Εθνικής Μεταρρύθμισης",
+      "en": "Union of Democratic National Reform"
     },
     "order": "",
     "color": ""
@@ -385,8 +385,8 @@
       "en": "EEK TR."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "ΕΕΚ Τροτσκιστές",
+      "en": "EEK Trotskyists"
     },
     "order": "",
     "color": ""
@@ -399,8 +399,8 @@
       "en": "El.Dim."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Ελεύθερη Δημοκρατία",
+      "en": "Free Democracy"
     },
     "order": "",
     "color": ""
@@ -413,8 +413,8 @@
       "en": "El.E.K."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Ελληνικό Ευρωπαϊκό Κόμμα",
+      "en": "Greek European Party"
     },
     "order": "",
     "color": ""
@@ -427,8 +427,8 @@
       "en": "ELKSI"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Ελληνικό Λευκό Κίνημα Σημερινής Ιδεολογίας",
+      "en": "Greek White Movement of Today's Ideology"
     },
     "order": "",
     "color": ""
@@ -441,8 +441,8 @@
       "en": "EL.LA.D.A."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Ελληνική Λαϊκή Δημοκρατική Απελευθέρωση",
+      "en": "Greek Popular Democratic Liberation"
     },
     "order": "",
     "color": ""
@@ -455,8 +455,8 @@
       "en": "ELL.OIK."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Έλληνες Οικολόγοι",
+      "en": "Greek Ecologists"
     },
     "order": "",
     "color": ""
@@ -469,8 +469,8 @@
       "en": "ELMET"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Ελληνικό Μέτωπο",
+      "en": "Greek Front"
     },
     "order": "",
     "color": ""
@@ -483,8 +483,8 @@
       "en": "En. Oik."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Ένωση Οικολόγων",
+      "en": "Ecologists Union"
     },
     "order": "",
     "color": ""
@@ -497,8 +497,8 @@
       "en": "EN.ANTI.A"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Ενωτική Αντικαπιταλιστική Αριστερά (ΕΝ.ΑΝΤΙ.Α.)",
+      "en": "United Anti-Capitalist Left (EN.ANTI.A.)"
     },
     "order": "",
     "color": ""
@@ -511,8 +511,8 @@
       "en": "EN.KEN."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Ένωση Κεντρώων",
+      "en": "Union of Centrists"
     },
     "order": "",
     "color": ""
@@ -525,8 +525,8 @@
       "en": "EPAK"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Εθνικό Πατριωτικό Κόμμα",
+      "en": "National Patriotic Party"
     },
     "order": "",
     "color": ""
@@ -539,8 +539,8 @@
       "en": "EPEN"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Εθνική Πολιτική Ένωση (Ε.Π.ΕΝ.)",
+      "en": "National Political Union (E.P.EN.)"
     },
     "order": "",
     "color": ""
@@ -553,8 +553,8 @@
       "en": "Ethn.Elp."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Εθνική Ελπίδα",
+      "en": "Mational Hope"
     },
     "order": "",
     "color": ""
@@ -567,8 +567,8 @@
       "en": "Ethn.Sym."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Εθνική Συμμαχία",
+      "en": "National Alliance"
     },
     "order": "",
     "color": ""
@@ -581,8 +581,8 @@
       "en": "F.A.D."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Φως Αλήθεια Δικαιοσύνη ",
+      "en": "Light Truth Justice"
     },
     "order": "",
     "color": ""
@@ -595,8 +595,8 @@
       "en": "Fill.Anthr."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Φίλοι του Ανθρώπου",
+      "en": "Friends of Man"
     },
     "order": "",
     "color": ""
@@ -609,8 +609,8 @@
       "en": "Fil.Sym."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Φιλελεύθερη Συμμαχία",
+      "en": "Liberal Alliance"
     },
     "order": "",
     "color": ""
@@ -651,8 +651,8 @@
       "en": "K.A.Dik."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Κόμμα Ανθρωπίνων Δικαιωμάτων",
+      "en": "Human Rights Party"
     },
     "order": "",
     "color": ""
@@ -665,8 +665,8 @@
       "en": "K.E.A.N."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Κίνημα Εθνικής Αντίστασης (Κ.Ε.ΑΝ.)",
+      "en": "National Resistance Movement (K.E.AN.)"
     },
     "order": "",
     "color": ""
@@ -679,8 +679,8 @@
       "en": "K.E.Ell."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Κόμμα Εργαζομένων Ελλήνων (ΚΟ.Ε.ΕΛ.)",
+      "en": "Greek Workers Party (KO.E.EL.)"
     },
     "order": "",
     "color": ""
@@ -693,8 +693,8 @@
       "en": "KiDiSo"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Κίνημα Δημοκρατών Σοσιαλιστών",
+      "en": "Movement of Democratic Socialists"
     },
     "order": "",
     "color": ""
@@ -707,8 +707,8 @@
       "en": "KIN.D.PL."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Κίνημα δεν πληρώνω",
+      "en": "Movement not paying"
     },
     "order": "",
     "color": ""
@@ -721,8 +721,8 @@
       "en": "Kinigoi"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Κόμμα Ελλήνων Κυνηγών",
+      "en": "Party of Greek Hunters"
     },
     "order": "",
     "color": ""
@@ -735,8 +735,8 @@
       "en": "Kinonia"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Κοινωνία Πολιτική Παράταξη συνεχιστών του Καποδίστρια",
+      "en": "Society Political Alignment successors of Kapodistrias"
     },
     "order": "",
     "color": ""
@@ -749,8 +749,8 @@
       "en": "KKE m-l"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Κομμουνιστικό Κόμμα Ελλάδας μαρξιστικό-λενινιστικό (ΚΚΕ-μλ)",
+      "en": "Greek Communist Party Marxist-Leninist (KKE-ml)"
     },
     "order": "",
     "color": ""
@@ -763,8 +763,8 @@
       "en": "KKK m-l ES"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "ΚΚΕ (μ-λ) – Μ-Λ ΚΚΕ ΕΚΛΟΓΙΚΗ ΣΥΝΕΡΓΑΣΙΑ",
+      "en": "KKE (ml) - ML KKE ELECTORAL COOPERATION"
     },
     "order": "",
     "color": ""
@@ -777,8 +777,8 @@
       "en": "Koin.Symf."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Κοινωνική Συμφωνία",
+      "en": "social Agreement"
     },
     "order": "",
     "color": ""
@@ -791,8 +791,8 @@
       "en": "Kom.Ell."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Κόμμα Ελληνισμού",
+      "en": "Party of Hellenism"
     },
     "order": "",
     "color": ""
@@ -805,8 +805,8 @@
       "en": "Kom.Fil."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Κόμμα Φιλελευθέρων",
+      "en": "Liberal party"
     },
     "order": "",
     "color": ""
@@ -819,8 +819,8 @@
       "en": "K.O.T.E.S."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Κ.Ο.Τ.Ε.Σ. Καπνιστικές Ομάδες για την Τέχνη και την Εικαστική Συγκρότηση",
+      "en": "K.O.T.E.S. Smoking Groups for Art and Artistic Formation"
     },
     "order": "",
     "color": ""
@@ -833,8 +833,8 @@
       "en": "K.PEIR.ELL"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Κόμμα Πειρατών Ελλάδας",
+      "en": "Pirate Party of Greece"
     },
     "order": "",
     "color": ""
@@ -847,8 +847,8 @@
       "en": "Max.Ar."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Μαχόμενη Αριστερά",
+      "en": "Fighting Left"
     },
     "order": "",
     "color": ""
@@ -861,8 +861,8 @@
       "en": "ME.R.A"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Μέτωπο Ριζοσπαστικής Αριστεράς",
+      "en": "Radical Left Front"
     },
     "order": "",
     "color": ""
@@ -875,8 +875,8 @@
       "en": "M - L KKE"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Μαρξιστικό-Λενινιστικό Κομμουνιστικό Κόμμα Ελλάδας (Μ.Λ.-Κ.Κ.Ε.)",
+      "en": "Marxist-Leninist Communist Party of Greece (M.L.-K.K.E.)"
     },
     "order": "",
     "color": ""
@@ -889,8 +889,8 @@
       "en": "NKSCHRD"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Νέο Κόμμα Σωτηρίας Χριστιανική Δημοκρατία",
+      "en": "New Salvation Party Christian Democracy"
     },
     "order": "",
     "color": ""
@@ -903,8 +903,8 @@
       "en": "OAKKE"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Οργάνωση για την Ανασυγκρότηση του ΚΚΕ (Ο.Α.Κ.Κ.Ε.)",
+      "en": "Organization for the Reconstruction of the Communist Party (O.A.K.K.E.)"
     },
     "order": "",
     "color": ""
@@ -917,8 +917,8 @@
       "en": "Oik.Ell."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Οικολόγοι Ελλάδας",
+      "en": "Ecologists of Greece"
     },
     "order": "",
     "color": ""
@@ -931,8 +931,8 @@
       "en": "Oik.Enall."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Οικολόγοι Εναλλακτικοί",
+      "en": "Alternative Εcologists"
     },
     "order": "",
     "color": ""
@@ -945,8 +945,8 @@
       "en": "Oik.Pr."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Οικολόγοι Πράσινοι",
+      "en": "Ecologists Greens"
     },
     "order": "",
     "color": ""
@@ -959,8 +959,8 @@
       "en": "O.K.D."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Οργάνωση Κομμουνιστών Διεθνιστών Ελλάδας (Ο.Κ.Δ.)",
+      "en": "Organisation of Internationalist Communists of Greece (O.K.D.)"
     },
     "order": "",
     "color": ""
@@ -973,8 +973,8 @@
       "en": "Olymp."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Ολυμπισμός",
+      "en": "Olympism"
     },
     "order": "",
     "color": ""
@@ -987,8 +987,8 @@
       "en": "Independent Candidates / Other"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Ανεξάρτητοι υποψήφιοι / Λοιπά",
+      "en": "Independent Candidates / Other"
     },
     "order": "",
     "color": ""
@@ -1001,8 +1001,8 @@
       "en": "Oxi"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Όχι (ΕΠΑΜ – Δημοκρατική Αναγέννηση)",
+      "en": "No (EPAM - Democratic Revival)"
     },
     "order": "",
     "color": ""
@@ -1015,8 +1015,8 @@
       "en": "P.A.A."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Περιφερειακή Αστική Ανάπτυξη",
+      "en": "Regional Urban Development"
     },
     "order": "",
     "color": ""
@@ -1029,8 +1029,8 @@
       "en": "PA.DI.KE"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Πανελλήνιο Δημοκρατικό Κόμμα Ειρήνης (ΠΑ.ΔΗ.ΚΕ.) ",
+      "en": "National Democratic Party of Peace (PA.DI.KE.)"
     },
     "order": "",
     "color": ""
@@ -1043,8 +1043,8 @@
       "en": "PAEKE"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "ΠΑΕΚΕ",
+      "en": "PAEKE"
     },
     "order": "",
     "color": ""
@@ -1057,8 +1057,8 @@
       "en": "Pal.Dim."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Παλαιά Δημοκρατία",
+      "en": "Old Democracy"
     },
     "order": "",
     "color": ""
@@ -1071,8 +1071,8 @@
       "en": "Pan.Ki."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Παναθηναϊκό Κίνημα (ΠΑΝ.ΚΙ.)",
+      "en": "Panathenian Movement (PAN.KI.)"
     },
     "order": "",
     "color": ""
@@ -1085,8 +1085,8 @@
       "en": "Pras. - Dim.Ar."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Πράσινοι - Δημοκρατική Αριστερά",
+      "en": "Greens - Democratic Left"
     },
     "order": "",
     "color": ""
@@ -1099,8 +1099,8 @@
       "en": "Pr.Gram."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Πρώτη Γραμμή - Ελληνικό Μέτωπο",
+      "en": "First Line - Greek Front"
     },
     "order": "",
     "color": ""
@@ -1113,8 +1113,8 @@
       "en": "RO MA"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Ριζοσπαστικό Ορθόδοξο Μέτωπο Αλληλεγγύης",
+      "en": "Radical Orthodox Solidarity Front"
     },
     "order": "",
     "color": ""
@@ -1127,8 +1127,8 @@
       "en": "SEAN"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Συμμαχία ΣΕΑΝ",
+      "en": "SEAN Alliance"
     },
     "order": "",
     "color": ""
@@ -1141,8 +1141,8 @@
       "en": "Syn.Eth.En."
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Σύνδεσμος Εθνικής Ενότητας",
+      "en": "National Unity Association"
     },
     "order": "",
     "color": ""
@@ -1155,8 +1155,8 @@
       "en": "Teleia"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "Τελεία",
+      "en": "Teleia"
     },
     "order": "",
     "color": ""
