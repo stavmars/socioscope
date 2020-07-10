@@ -45,6 +45,16 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
     const { dataset, dimensionCodes, seriesOptions } = this.props;
     const arr = [seriesOptions.xAxis, seriesOptions.compareBy];
 
+    const composedXAxisParent = dataset.dimensions.find(
+      dim => dim.type === 'combined' && dim.composedOf && dim.composedOf.includes(seriesOptions.xAxis)
+    );
+    const composedCompareParent =
+      seriesOptions.compareBy != null &&
+      dataset.dimensions.find(dim => dim.type === 'combined' && dim.composedOf && dim.composedOf.includes(seriesOptions.compareBy));
+
+    composedXAxisParent && arr.push(composedXAxisParent.id);
+    composedCompareParent && arr.push(composedCompareParent.id);
+
     return (
       <div>
         {dataset.dimensions
