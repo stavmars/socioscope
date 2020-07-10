@@ -117,18 +117,4 @@ public class MeasureResource {
         return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert(ENTITY_NAME, "dim_mes", id)).build();
     }
 
-    /**
-     * SEARCH  /_search/measures?query=:query : search for the measure corresponding
-     * to the query.
-     *
-     * @param query the query of the measure search
-     * @return the result of the search
-     */
-    @GetMapping("/_search/measures")
-    @Timed
-    public List<Measure> searchMeasures(@RequestParam String query) {
-        log.debug("REST request to search Measures for query {}", query);
-        return measureService.search(query);
-    }
-
 }

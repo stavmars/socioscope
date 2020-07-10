@@ -22,7 +22,6 @@ import java.util.Objects;
  * A Measure.
  */
 @Document(collection = "measure")
-@org.springframework.data.elasticsearch.annotations.Document(indexName = "measure")
 public class Measure implements Serializable {
 
     private static final long serialVersionUID = 1L;

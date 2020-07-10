@@ -8,14 +8,9 @@ services:
             - SPRING_DATA_MONGODB_URI=mongodb://socioscope-mongodb:27017
             - SPRING_DATA_MONGODB_DATABASE=socioscope
             - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
-            - SPRING_DATA_JEST_URI=http://socioscope-elasticsearch:9200
         ports:
             - 8080:8080
     socioscope-mongodb:
         extends:
             file: mongodb.yml
             service: socioscope-mongodb
-    socioscope-elasticsearch:
-        extends:
-            file: elasticsearch.yml
-            service: socioscope-elasticsearch

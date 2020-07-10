@@ -122,20 +122,6 @@ public class DataSetResource {
     }
 
     /**
-     * SEARCH  /_search/data-sets?query=:query : search for the dataSet corresponding
-     * to the query.
-     *
-     * @param query the query of the dataSet search
-     * @return the result of the search
-     */
-    @GetMapping("/_search/data-sets")
-    @Timed
-    public List<DataSet> searchDataSets(@RequestParam String query) {
-        log.debug("REST request to search DataSets for query {}", query);
-        return dataSetService.search(query);
-    }
-
-    /**
      * PUT  /data-sets/:dataSetId/:dimensionId : Remove a dimension from an existing dataSet.
      *
      * @param dataSetId   the dataSet to update

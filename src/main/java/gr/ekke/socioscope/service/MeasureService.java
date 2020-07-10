@@ -3,7 +3,6 @@ package gr.ekke.socioscope.service;
 import gr.ekke.socioscope.domain.Measure;
 import gr.ekke.socioscope.repository.DataSetRepository;
 import gr.ekke.socioscope.repository.MeasureRepository;
-import gr.ekke.socioscope.repository.search.MeasureSearchRepository;
 import gr.ekke.socioscope.security.SecurityUtils;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
 import org.slf4j.Logger;
@@ -17,7 +16,6 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 import static gr.ekke.socioscope.security.AuthoritiesConstants.ADMIN;
-import static org.elasticsearch.index.query.QueryBuilders.queryStringQuery;
 
 /**
  * Service Implementation for managing Measure.
@@ -29,15 +27,12 @@ public class MeasureService {
 
     private final MeasureRepository measureRepository;
 
-    private final MeasureSearchRepository measureSearchRepository;
-
     private final DataSetRepository dataSetRepository;
 
     private final UserService userService;
 
-    public MeasureService(MeasureRepository measureRepository, MeasureSearchRepository measureSearchRepository, DataSetRepository dataSetRepository, UserService userService) {
+    public MeasureService(MeasureRepository measureRepository, DataSetRepository dataSetRepository, UserService userService) {
         this.measureRepository = measureRepository;
-        this.measureSearchRepository = measureSearchRepository;
         this.dataSetRepository = dataSetRepository;
         this.userService = userService;
     }
@@ -55,7 +50,6 @@ public class MeasureService {
         }
         measure.setCreator(userService.getUserWithAuthorities().orElse(null));
         Measure result = measureRepository.save(measure);
-        measureSearchRepository.save(result);
         return result;
     }
 
@@ -68,7 +62,6 @@ public class MeasureService {
     public Measure update(Measure measure) {
         log.debug("Request to update Measure : {}", measure);
         Measure result = measureRepository.save(measure);
-        measureSearchRepository.save(result);
         return result;
     }
 
@@ -115,22 +108,8 @@ public class MeasureService {
         Optional<Measure> measure = measureRepository.findById(id);
         if (measure.isPresent() && dataSetRepository.findAllByMeasuresContains(measure.get()).isEmpty()) {
             measureRepository.deleteById(id);
-            measureSearchRepository.deleteById(id);
             return true;
         }
         return false;
-    }
-
-    /**
-     * Search for the measure corresponding to the query.
-     *
-     * @param query the query of the search
-     * @return the list of entities
-     */
-    public List<Measure> search(String query) {
-        log.debug("Request to search Measures for query {}", query);
-        return StreamSupport
-            .stream(measureSearchRepository.search(queryStringQuery(query)).spliterator(), false)
-            .collect(Collectors.toList());
     }
 }

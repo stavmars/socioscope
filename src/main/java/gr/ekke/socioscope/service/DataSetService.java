@@ -2,7 +2,6 @@ package gr.ekke.socioscope.service;
 
 import gr.ekke.socioscope.domain.*;
 import gr.ekke.socioscope.repository.*;
-import gr.ekke.socioscope.repository.search.DataSetSearchRepository;
 import gr.ekke.socioscope.service.dto.Series;
 import gr.ekke.socioscope.service.dto.SeriesPoint;
 import gr.ekke.socioscope.service.mapper.ObservationMapper;
@@ -16,8 +15,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-import static org.elasticsearch.index.query.QueryBuilders.queryStringQuery;
-
 /**
  * Service Implementation for managing DataSet.
  */
@@ -27,8 +24,6 @@ public class DataSetService {
     private final Logger log = LoggerFactory.getLogger(DataSetService.class);
 
     private final DataSetRepository dataSetRepository;
-
-    private final DataSetSearchRepository dataSetSearchRepository;
 
     private final DimensionRepository dimensionRepository;
 
@@ -44,11 +39,10 @@ public class DataSetService {
 
     private final UserService userService;
 
-    public DataSetService(DataSetRepository dataSetRepository, DataSetSearchRepository dataSetSearchRepository, DimensionRepository dimensionRepository,
+    public DataSetService(DataSetRepository dataSetRepository, DimensionRepository dimensionRepository,
                           DimensionCodeRepository dimensionCodeRepository, MeasureRepository measureRepository, ObservationRepository observationRepository,
                           ObservationMapper observationMapper, RawDataRepository rawDataRepository, UserService userService) {
         this.dataSetRepository = dataSetRepository;
-        this.dataSetSearchRepository = dataSetSearchRepository;
         this.dimensionRepository = dimensionRepository;
         this.dimensionCodeRepository = dimensionCodeRepository;
         this.measureRepository = measureRepository;
@@ -119,20 +113,6 @@ public class DataSetService {
         log.debug("Request to delete DataSet : {}", id);
         observationRepository.deleteByDatasetId(id);
         dataSetRepository.deleteById(id);
-        dataSetSearchRepository.deleteById(id);
-    }
-
-    /**
-     * Search for the dataSet corresponding to the query.
-     *
-     * @param query the query of the search
-     * @return the list of entities
-     */
-    public List<DataSet> search(String query) {
-        log.debug("Request to search DataSets for query {}", query);
-        return StreamSupport
-            .stream(dataSetSearchRepository.search(queryStringQuery(query)).spliterator(), false)
-            .collect(Collectors.toList());
     }
 
     /**

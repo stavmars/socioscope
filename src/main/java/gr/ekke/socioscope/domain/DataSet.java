@@ -21,7 +21,6 @@ import java.util.Objects;
  * A DataSet.
  */
 @Document(collection = "data_set")
-@org.springframework.data.elasticsearch.annotations.Document(indexName = "dataset")
 public class DataSet implements Serializable {
 
     private static final long serialVersionUID = 1L;

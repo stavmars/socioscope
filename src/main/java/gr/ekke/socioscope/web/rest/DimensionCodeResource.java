@@ -3,7 +3,6 @@ package gr.ekke.socioscope.web.rest;
 import com.codahale.metrics.annotation.Timed;
 import gr.ekke.socioscope.domain.DimensionCode;
 import gr.ekke.socioscope.repository.DimensionCodeRepository;
-import gr.ekke.socioscope.repository.search.DimensionCodeSearchRepository;
 import gr.ekke.socioscope.web.rest.errors.BadRequestAlertException;
 import gr.ekke.socioscope.web.rest.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;
@@ -21,8 +20,6 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-import static org.elasticsearch.index.query.QueryBuilders.*;
-
 /**
  * REST controller for managing DimensionCode.
  */
@@ -36,11 +33,8 @@ public class DimensionCodeResource {
 
     private final DimensionCodeRepository dimensionCodeRepository;
 
-    private final DimensionCodeSearchRepository dimensionCodeSearchRepository;
-
-    public DimensionCodeResource(DimensionCodeRepository dimensionCodeRepository, DimensionCodeSearchRepository dimensionCodeSearchRepository) {
+    public DimensionCodeResource(DimensionCodeRepository dimensionCodeRepository) {
         this.dimensionCodeRepository = dimensionCodeRepository;
-        this.dimensionCodeSearchRepository = dimensionCodeSearchRepository;
     }
 
     /**
@@ -58,7 +52,6 @@ public class DimensionCodeResource {
             throw new BadRequestAlertException("Dimension code already exists", "dimension_code", "dimensioncodeexists");
         }
         DimensionCode result = dimensionCodeRepository.save(dimensionCode);
-        dimensionCodeSearchRepository.save(result);
         return ResponseEntity.created(new URI("/api/dimension-codes/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
             .body(result);
@@ -81,7 +74,6 @@ public class DimensionCodeResource {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
         DimensionCode result = dimensionCodeRepository.save(dimensionCode);
-        dimensionCodeSearchRepository.save(result);
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, dimensionCode.getId().toString()))
             .body(result);
@@ -125,24 +117,6 @@ public class DimensionCodeResource {
         log.debug("REST request to delete DimensionCode : {}", id);
 
         dimensionCodeRepository.deleteById(id);
-        dimensionCodeSearchRepository.deleteById(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id)).build();
     }
-
-    /**
-     * SEARCH  /_search/dimension-codes?query=:query : search for the dimensionCode corresponding
-     * to the query.
-     *
-     * @param query the query of the dimensionCode search
-     * @return the result of the search
-     */
-    @GetMapping("/_search/dimension-codes")
-    @Timed
-    public List<DimensionCode> searchDimensionCodes(@RequestParam String query) {
-        log.debug("REST request to search DimensionCodes for query {}", query);
-        return StreamSupport
-            .stream(dimensionCodeSearchRepository.search(queryStringQuery(query)).spliterator(), false)
-            .collect(Collectors.toList());
-    }
-
 }

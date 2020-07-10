@@ -128,18 +128,4 @@ public class DimensionResource {
         return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert(ENTITY_NAME, "dim_mes", id)).build();
     }
 
-    /**
-     * SEARCH  /_search/dimensions?query=:query : search for the dimension corresponding
-     * to the query.
-     *
-     * @param query the query of the dimension search
-     * @return the result of the search
-     */
-    @GetMapping("/_search/dimensions")
-    @Timed
-    public List<Dimension> searchDimensions(@RequestParam String query) {
-        log.debug("REST request to search Dimensions for query {}", query);
-        return dimensionService.search(query);
-    }
-
 }

@@ -13,7 +13,6 @@
     "indicator": {
       "diskSpace": "Χώρος σκληρού δίσκου",
       "mail": "Email",
-      "elasticsearch": "Elasticsearch",
       "mongo": "MongoDB"
     },
     "table": {

@@ -28,7 +28,6 @@ import java.util.Objects;
  * A Dimension.
  */
 @Document(collection = "dimension")
-@org.springframework.data.elasticsearch.annotations.Document(indexName = "dimension")
 public class Dimension implements Serializable {
 
     private static final long serialVersionUID = 1L;

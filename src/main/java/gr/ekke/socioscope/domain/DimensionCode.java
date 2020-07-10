@@ -16,7 +16,6 @@ import java.util.Objects;
  * A DimensionCode.
  */
 @Document(collection = "dimension_code")
-@org.springframework.data.elasticsearch.annotations.Document(indexName = "dimensioncode")
 public class DimensionCode implements Serializable {
 
     private static final long serialVersionUID = 1L;
