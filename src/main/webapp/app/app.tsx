@@ -69,6 +69,11 @@ export class App extends React.Component<IAppProps> {
 
   // tslint:disable:jsx-no-lambda
   render() {
+    const baseHref = document
+      .querySelector('base')
+      .getAttribute('href')
+      .replace(/\/$/, '');
+
     if (this.props.loadingDatasets) {
       return (
         <Dimmer active>
@@ -79,7 +84,7 @@ export class App extends React.Component<IAppProps> {
       const localeIcon =
         this.props.currentLocale === 'el' ? `/content/images/Assets/Lang-EN-white.svg` : `/content/images/Assets/Lang-EL-white.svg`;
       return (
-        <Router>
+        <Router basename={baseHref}>
           <div>
             <Route render={this.tracker} />
             {this.props.isHeaderVisible &&
