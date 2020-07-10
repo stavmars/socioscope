@@ -139,4 +139,15 @@ public class SocioscopeDataMigration {
         bulkOperations.execute();
     }
 
+    @ChangeSet(order = "10", author = "initiator", id = "addElections2019")
+    public void addElections2019(MongoTemplate mongoTemplate, Environment environment) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        File file = new File(environment.getProperty("application.migrate-data-path") + "/2019.json");
+        TypeFactory typeFactory = mapper.getTypeFactory();
+        List<Observation> observations = mapper.readValue(file, typeFactory.constructCollectionType(List.class, Observation.class));
+        BulkOperations bulkOperations = mongoTemplate.bulkOps(BulkOperations.BulkMode.UNORDERED, Observation.class);
+        bulkOperations.insert(observations);
+        bulkOperations.execute();
+    }
+
 }
