@@ -207,7 +207,7 @@ public class DataSetService {
 
                 // if the dataset contains pre-aggregated cube-like data, we fetch and map the observations to the corresponding series
                 if (dataSet.getType().equals(DatasetType.QB)) {
-                    List<Observation> observations = observationRepository.findObservations(datasetId, seriesOptions);
+                    List<Observation> observations = observationRepository.findObservations(dataSet, seriesOptions);
                     return observationMapper.observationsToMultipleSeries(observations, seriesOptions);
                 } else {
                     // if the dataset contains raw, non-aggregated data, we aggregate it from the corresponding mongo collection
