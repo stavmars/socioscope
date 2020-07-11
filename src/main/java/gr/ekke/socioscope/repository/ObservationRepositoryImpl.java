@@ -26,21 +26,26 @@ public class ObservationRepositoryImpl implements ObservationRepositoryCustom {
     @Override
     public List<Observation> findObservations(DataSet dataset, SeriesOptions seriesOptions) {
         String xAxis = seriesOptions.getxAxis();
+        Dimension xAxisDimension = dataset.getDimensions().stream().filter(dimValue -> dimValue.getId().equals(xAxis)).findFirst().orElse(null);
         String compareBy = seriesOptions.getCompareBy();
+        Dimension compareByDimension = dataset.getDimensions().stream().filter(dimValue -> dimValue.getId().equals(compareBy)).findFirst().orElse(null);
+
         Query query = new Query();
 
         List<DimensionValue> dimensionValues = seriesOptions.getDimensionFilters().entrySet().stream().filter(entry -> entry.getValue() != null)
             .map(entry -> new DimensionValue(entry.getKey(), entry.getValue())).collect(Collectors.toList());
 
-        List<Criteria> criteria = dimensionValues.stream().map(dimensionValue -> {
-                Dimension dimension = dataset.getDimensions().stream().filter(dim -> dim.getId().equals(dimensionValue.getId())).findFirst().get();
-                if (dimension.getParentDimensionId() != null && (dimensionValue.getValue() == null || dimensionValue.getValue().equals(""))) {
-                    return Criteria.where("dimensions").not().elemMatch(Criteria.where("id").is(dimensionValue.getId()));
+        List<Criteria> criteria = dataset.getDimensions().stream().filter(dim -> !dim.getId().equals(xAxis) && !dim.getId().equals(compareBy)).map(dim -> {
+            DimensionValue dimensionValue = dimensionValues.stream().filter(dimValue -> dimValue.getId().equals(dim.getId())).findFirst().orElse(null);
+            if ((dimensionValue == null || dimensionValue.getValue() == null || dimensionValue.getValue().equals(""))) {
+                if ((xAxisDimension != null && dim.getId().equals(xAxisDimension.getParentDimensionId())) ||
+                    (compareByDimension != null && dim.getId().equals(compareByDimension.getParentDimensionId()))) {
+                    return Criteria.where("dimensions").elemMatch(Criteria.where("id").is(dim.getId()));
                 }
-                return Criteria.where("dimensions").elemMatch(Criteria.where("id").is(dimensionValue.getId())
-                    .and("value").is(dimensionValue.getValue()));
+                return Criteria.where("dimensions").not().elemMatch(Criteria.where("id").is(dim.getId()));
             }
-        ).collect(Collectors.toList());
+            return Criteria.where("dimensions").elemMatch(Criteria.where("id").is(dimensionValue.getId()).and("value").is(dimensionValue.getValue()));
+        }).collect(Collectors.toList());
 
         criteria.add(Criteria.where("dimensions").elemMatch(Criteria.where("id").is(xAxis)));
 
