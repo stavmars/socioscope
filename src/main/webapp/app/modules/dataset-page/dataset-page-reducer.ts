@@ -214,7 +214,7 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
   const { dimensions } = dataset;
   let { xAxis, compareBy, measure } = seriesOptions;
   let xAxisDimension: IDimension;
-  const filters = seriesOptions.dimensionFilters || {};
+  const filters = { ...seriesOptions.dimensionFilters };
   if (visType === 'map') {
     xAxisDimension = dimensions.find(dim => dim.type === 'geographic-area');
     xAxis = xAxisDimension.id;
@@ -332,7 +332,7 @@ export const urlEncodeVisOptions = (visOptions: IVisOptions) => {
       filters: seriesOptions.dimensionFilters,
       measure: seriesOptions.measure
     },
-    { skipNulls: false }
+    { skipNulls: true }
   );
 };
 
