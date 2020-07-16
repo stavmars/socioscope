@@ -14,7 +14,8 @@
       "en": "%"
     },
     "type": "percentage",
-    "unit": "PC"
+    "unit": "PC",
+    "decimalPlaces": 2
   },
   {
     "id": "votes",

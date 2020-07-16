@@ -290,7 +290,8 @@ export class ChartVis extends React.Component<IChartVisProp> {
               : undefined,
           dataLabels: {
             enabled: showLabels,
-            format: measure.type === 'percentage' ? '{y:.1f}%' : '{y}',
+            format:
+              measure.type === 'percentage' ? (measure.decimalPlaces != null ? `{y:.${measure.decimalPlaces}f}%` : '{y:.1f}%') : '{y}',
             style: {
               fontSize: '14px'
             }

@@ -6,6 +6,7 @@ export interface IMeasure {
   name?: ILang;
   type?: string;
   unit?: string;
+  decimalPlaces?: number;
   creator?: IUser;
 }
 

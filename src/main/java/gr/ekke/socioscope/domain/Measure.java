@@ -39,6 +39,9 @@ public class Measure implements Serializable {
     @Field("type")
     private String type;
 
+    @Field("decimalPlaces")
+    private Integer decimalPlaces;
+
     @DBRef
     @Field("creator")
     @JsonIgnoreProperties("")
@@ -139,14 +142,11 @@ public class Measure implements Serializable {
         return Objects.hashCode(getId());
     }
 
-    @Override
-    public String toString() {
-        return "Measure{" +
-            "id='" + id + '\'' +
-            ", name=" + name +
-            ", unit='" + unit + '\'' +
-            ", type='" + type + '\'' +
-            ", creator=" + creator +
-            '}';
+    public Integer getDecimalPlaces() {
+        return decimalPlaces;
+    }
+
+    public void setDecimalPlaces(Integer decimalPlaces) {
+        this.decimalPlaces = decimalPlaces;
     }
 }
