@@ -1274,20 +1274,6 @@
     "color": ""
   },
   {
-    "dimensionId": "party",
-    "notation": "kinal",
-    "name": {
-      "el": "Κίνημα Αλλαγής",
-      "en": "Kinima Allagis"
-    },
-    "description": {
-      "el": "",
-      "en": ""
-    },
-    "order": "",
-    "color": ""
-  },
-  {
     "dimensionId": "invalid_vote",
     "notation": "valid",
     "name": {
