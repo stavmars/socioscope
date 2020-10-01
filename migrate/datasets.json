@@ -724,5 +724,388 @@
         }
       }
     ]
+  },
+  {
+    "id": "youwho",
+    "name": {
+      "el": "Προφίλ νέων 17-29",
+      "en": "Profile of young people (aged 17-29)"
+    },
+    "type": "raw",
+    "colorScheme": "color-scheme-2",
+    "comment": {
+      "el": "<h3>ΤΑΥΤΟΤΗΤΑ</h3> <p>Τα δεδομένα προέρχονται από τη διαδικτυακή έρευνα <i>YouWho?</i>  που υλοποιήθηκε κατά την περίοδο <strong>17 Φεβρουαρίου – 5 Απριλίου 2020</strong>. Πληθυσμός στόχος ήταν όσοι/-ες γεννήθηκαν μεταξύ των ετών 1991-2003 και συνεπώς βρίσκονταν στο ηλικιακό εύρος των 17-29 ετών κατά την περίοδο συλλογής των δεδομένων.</p> <p><strong>Συνολικά συλλέχθηκαν 24.525 συμπληρωμένα ερωτηματολόγια.</strong> Ο χρόνος συμπλήρωσης για το 95,4% του δείγματος κυμάνθηκε από 10 έως 30 λεπτά, με μέσο χρόνο συμπλήρωσης τα 18,12 λεπτά. Από την ανάλυση, εξαιρέθηκαν όσοι/όσες είχαν χρόνο απόκρισης κάτω από 10 λεπτά και πάνω από 30 λεπτά, δηλαδή το 4,6% του δείγματος (1.123 άτομα). <strong>Το τελικό δείγμα διαμορφώθηκε στα 23.402 άτομα.</strong> </p> <p>Για την στάθμιση του δείγματος χρησιμοποιήθηκε: α) η μέθοδος design weight για τη μεταβλητή «Φύλο» και β) η μέθοδος population weight για τη μεταβλητή «Τόπος διαμονής». Η τελική στάθμιση διαμορφώθηκε έπειτα από τον συνδυασμό και των δύο παραπάνω μεθόδων στάθμισης. Για τον υπολογισμό των συντελεστών στάθμισης χρησιμοποιήθηκαν δημογραφικά δεδομένα από την EUROSTAT.</p> <p><strong>Στην τρέχουσα εφαρμογή τα δεδομένα παρουσιάζονται χωρίς σταθμίσεις, για αυτό και ενδέχεται να υπάρχουν αποκλίσεις από τα τελικά αποτελέσματα, όπως αυτά παρουσιάζονται στην σελίδα αποτελεσμάτων του έργου: <a href=\"www.youwho.gr\" target=\"_blank\">www.youwho.gr</a></strong></p> <br/> <br/> <h3>ΕΠΙΣΤΗΜΟΝΙΚΗ ΟΜΑΔΑ</h3> <p>Υπεύθυνες έργου: Κατερίνα Ηλιού (<a href=\"mailto:kiliou@ekke.gr\" target=\"_blank\">kiliou@ekke.gr</a>), Μανίνα Κακεπάκη (<a href=\"mailto:mkakepaki@ekke.gr\" target=\"_blank\">mkakepaki@ekke.gr</a>) <br/><br/> Μέλη Ομάδας έργου: Κατερίνα Βεζυργιάννη, Δήμητρα Κονδύλη, Αμαλία Φραγκίσκου, Χριστίνα Φρέντζου <br/><br/> Επιστημονικός συνεργάτης: Κωστής Πιερίδης <br/><br/> Επικοινωνιακός σχεδιασμός έργου – Διαχείριση Social Media: Ειρήνη Κυριαζοπούλου <br/><br/> Επεξεργασία δεδομένων - Στατιστική ανάλυση: Αγγελική Καζάνη <br/><br/> Υπεύθυνος σχεδιασμού πλατφόρμας: Γιώργος Παπαστεφανάτος, <a href=\"mailto:gpapas@athenarc.gr\" target=\"_blank\">gpapas@athenarc.gr</a> <br/><br/> Υπεύθυνος τεχνικής ανάπτυξης: Σταύρος Μαρούλης, <a href=\"mailto:stavmars@athenarc.gr\" target=\"_blank\">stavmars@athenarc.gr</a> <br/><br/> Τεχνικός συνεργάτης: Αστέρης Γιαννούδης, <a href=\"mailto:astgian@athenarc.gr\" target=\"_blank\">astgian@athenarc.gr</a> <br/><br/> Διαχείριση social media (Πρακτική άσκηση): Μάρω Γιαννίκη</p> <h3>ΧΡΗΜΑΤΟΔΟΤΗΣΗ</h3> <p>Το έργο υλοποιείται στο πλαίσιο της Πράξης <a href=\"https://www.ekke.gr/research/project/ereuna-ekpaideusi-kai-ipodomes-o-trigonismos-ton-axonon-stratigikis-anaptixis-tou-ekke-redi\" target=\"_blank\">«Έρευνα, Εκπαίδευση και Υποδομές: ο τριγωνισμός των αξόνων στρατηγικής ανάπτυξης του ΕΚΚΕ - REDI»</a> (MIS 5002378) που εντάσσεται στη «Δράση Στρατηγικής Ανάπτυξης Ερευνητικών και Τεχνολογικών Φορέων» και χρηματοδοτείται από το Επιχειρησιακό Πρόγραμμα «Ανταγωνιστικότητα, Επιχειρηματικότητα και Καινοτομία» στο πλαίσιο του ΕΣΠΑ 2014-2020, με τη συγχρηματοδότηση της Ελλάδας και της Ευρωπαϊκής Ένωσης (Ευρωπαϊκό Ταμείο Περιφερειακής Ανάπτυξης).</p>",
+      "en": "<h3>RESEARCH DESIGN</h3> <p>These data come from the web-based survey <i>YouWho?</i>  that took place between <strong>17 February – 5 Aril 2020</strong>. The survey was open to all people born between 1991-2003 and therefore within the 17-29 age range during data collection. </p> <p><strong>In total, 24.525 full questionnaires were submitted.</strong> The completion time for 95,4% of the sample ranged between 10 and 30 minutes, with an average completion time of 18 minutes 12 seconds. During data cleaning all questionnaires that were completed under 10 and over 30 minutes were excluded from the analysis. This accounted for 4,6% of the sample (1.123 questionnaires). <strong>The final sample consists of 23.402 completed questionnaires.</strong></p> <p>We weighted the data using the design weight method for gender and the population weight method for residence. Final weighting combines the two methods. To calculate weights, data on demographics for Greece were used from EUROSTAT. <strong>In the socioscope platform data are unweighted therefore slight deviations from the final results are expected</strong>. For the full analysis and presentation of weighted data go to: <a href=\"www.youwho.gr\" target=\"_blank\">www.youwho.gr</a></p> <h3>THE TEAM</h3> <p><strong>Scientific Team</strong><br/><br/> Principal Investigators: Katerina Iliou (<a href=\"mailto:kiliou@ekke.gr\" target=\"_blank\">kiliou@ekke.gr</a>), Manina Kakepaki (<a href=\"mailto:mkakepaki@ekke.gr\" target=\"_blank\">mkakepaki@ekke.gr</a>)<br/><br/> Senior Researchers: Katerina Vezyrgianni, Dimitra Kondyli, Amalia Frangiskou, Christina Frentzou<br/><br/> Post-doctoral researcher: Costis Pierides<br/><br/> Communication strategy, social media: Eirini Kyriazopoulou<br/><br/> Social media accounts (internship): Maro Gianniki<br/><br/> Data analysis: Aggeliki Kazani<br/><br/> <strong>Tech Team</strong><br/><br/> Analysis & Design<br/><br/> Giorgos Papastefanatos / Research Associate, (ATHENA R.C.), <a href=\"mailto:gpapas@athenarc.gr\" target=\"_blank\">gpapas@athenarc.gr</a><br/><br/> Development<br/><br/> Stavros Maroulis / Research Associate, (ATHENA R.C.), <a href=\"mailto:stavmars@athenarc.gr\" target=\"_blank\">stavmars@athenarc.gr</a><br/><br/> Asteris Giannoudis / Research Associate, (ATHENA R.C.), <a href=\"mailto:astgian@athenarc.gr\" target=\"_blank\">astgian@athenarc.gr</a></p> <h3>FUNDING</h3> <p>We acknowledge support of this work by the project “\"Research, Education and Infrastructures: the triangulation of EKKE strategic axes (REDI)” (MIS 500238) which is implemented under the “Action for the Strategic Development on the Research and Technological Sector”, funded by the Operational Programme \"Competitiveness, Entrepreneurship and Innovation\" (NSRF 2014-2020) and co-financed by Greece and the European Union (European Regional Development Fund). </p>"
+    },
+    "dimension": [
+      {
+        "id": "yw_q1"
+      },
+      {
+        "id": "yw_q10a"
+      },
+      {
+        "id": "yw_q10b"
+      },
+      {
+        "id": "yw_q10c"
+      },
+      {
+        "id": "yw_q10d"
+      },
+      {
+        "id": "yw_q10e"
+      },
+      {
+        "id": "yw_q10f"
+      },
+      {
+        "id": "yw_q10g"
+      },
+      {
+        "id": "yw_q10h"
+      },
+      {
+        "id": "yw_q11a"
+      },
+      {
+        "id": "yw_q11b"
+      },
+      {
+        "id": "yw_q11c"
+      },
+      {
+        "id": "yw_q11d"
+      },
+      {
+        "id": "yw_q11e"
+      },
+      {
+        "id": "yw_q11f"
+      },
+      {
+        "id": "yw_q11g"
+      },
+      {
+        "id": "yw_q11h"
+      },
+      {
+        "id": "yw_q12"
+      },
+      {
+        "id": "yw_q13a"
+      },
+      {
+        "id": "yw_q13b"
+      },
+      {
+        "id": "yw_q13c"
+      },
+      {
+        "id": "yw_q13d"
+      },
+      {
+        "id": "yw_q13e"
+      },
+      {
+        "id": "yw_q13f"
+      },
+      {
+        "id": "yw_q13g"
+      },
+      {
+        "id": "yw_q13h"
+      },
+      {
+        "id": "yw_q13i"
+      },
+      {
+        "id": "yw_q13j"
+      },
+      {
+        "id": "yw_q14"
+      },
+      {
+        "id": "yw_q15a"
+      },
+      {
+        "id": "yw_q15b"
+      },
+      {
+        "id": "yw_q15c"
+      },
+      {
+        "id": "yw_q15d"
+      },
+      {
+        "id": "yw_q15e"
+      },
+      {
+        "id": "yw_q15f"
+      },
+      {
+        "id": "yw_q16"
+      },
+      {
+        "id": "yw_q17"
+      },
+      {
+        "id": "yw_q18a"
+      },
+      {
+        "id": "yw_q18b"
+      },
+      {
+        "id": "yw_q18c"
+      },
+      {
+        "id": "yw_q18d"
+      },
+      {
+        "id": "yw_q18e"
+      },
+      {
+        "id": "yw_q18f"
+      },
+      {
+        "id": "yw_q18g"
+      },
+      {
+        "id": "yw_q18h"
+      },
+      {
+        "id": "yw_q18i"
+      },
+      {
+        "id": "yw_q18j"
+      },
+      {
+        "id": "yw_q18k"
+      },
+      {
+        "id": "yw_q18l"
+      },
+      {
+        "id": "yw_q19a"
+      },
+      {
+        "id": "yw_q19b"
+      },
+      {
+        "id": "yw_q19c"
+      },
+      {
+        "id": "yw_q19d"
+      },
+      {
+        "id": "yw_q2"
+      },
+      {
+        "id": "yw_q20a"
+      },
+      {
+        "id": "yw_q20b"
+      },
+      {
+        "id": "yw_q20c"
+      },
+      {
+        "id": "yw_q20d"
+      },
+      {
+        "id": "yw_q20e"
+      },
+      {
+        "id": "yw_q20f"
+      },
+      {
+        "id": "yw_q20g"
+      },
+      {
+        "id": "yw_q20h"
+      },
+      {
+        "id": "yw_q20i"
+      },
+      {
+        "id": "yw_q20j"
+      },
+      {
+        "id": "yw_q21a"
+      },
+      {
+        "id": "yw_q21b"
+      },
+      {
+        "id": "yw_q21c"
+      },
+      {
+        "id": "yw_q21d"
+      },
+      {
+        "id": "yw_q21e"
+      },
+      {
+        "id": "yw_q21f"
+      },
+      {
+        "id": "yw_q21g"
+      },
+      {
+        "id": "yw_q21h"
+      },
+      {
+        "id": "yw_q22a"
+      },
+      {
+        "id": "yw_q22b"
+      },
+      {
+        "id": "yw_q22c"
+      },
+      {
+        "id": "yw_q22d"
+      },
+      {
+        "id": "yw_q22e"
+      },
+      {
+        "id": "yw_q22f"
+      },
+      {
+        "id": "yw_q22g"
+      },
+      {
+        "id": "yw_q22h"
+      },
+      {
+        "id": "yw_q22i"
+      },
+      {
+        "id": "yw_q22j"
+      },
+      {
+        "id": "yw_q23a"
+      },
+      {
+        "id": "yw_q23b"
+      },
+      {
+        "id": "yw_q23c"
+      },
+      {
+        "id": "yw_q23d"
+      },
+      {
+        "id": "yw_q23e"
+      },
+      {
+        "id": "yw_q23f"
+      },
+      {
+        "id": "yw_q3"
+      },
+      {
+        "id": "yw_q4"
+      },
+      {
+        "id": "yw_q5"
+      },
+      {
+        "id": "yw_q6"
+      },
+      {
+        "id": "yw_q7a"
+      },
+      {
+        "id": "yw_q7b"
+      },
+      {
+        "id": "yw_q7c"
+      },
+      {
+        "id": "yw_q7d"
+      },
+      {
+        "id": "yw_q8a"
+      },
+      {
+        "id": "yw_q8b"
+      },
+      {
+        "id": "yw_q8c"
+      },
+      {
+        "id": "yw_q8d"
+      },
+      {
+        "id": "yw_q9a"
+      },
+      {
+        "id": "yw_q9b"
+      },
+      {
+        "id": "yw_q9c"
+      },
+      {
+        "id": "yw_q9d"
+      },
+      {
+        "id": "yw_q9e"
+      },
+      {
+        "id": "yw_q9f"
+      }
+    ],
+    "dimensionGroups": [
+      {
+        "id": "yw_socio-demo",
+        "name": {
+          "el": "Κοινωνικό-δημογραφικά",
+          "en": "Socio-demographics"
+        }
+      },
+      {
+        "id": "yw_greece",
+        "name": {
+          "el": "Ελλάδα & κόσμος",
+          "en": "Greece &  the world"
+        }
+      },
+      {
+        "id": "yw_social",
+        "name": {
+          "el": "Κοινωνικές αξίες & δράσεις",
+          "en": "Social values & behaviours"
+        }
+      },
+      {
+        "id": "yw_politics",
+        "name": {
+          "el": "Πολιτική & πρόσωπα",
+          "en": "Politics & Public figures"
+        }
+      },
+      {
+        "id": "yw_lifestyle",
+        "name": {
+          "el": "Lifestyle & προσωπικότητα",
+          "en": "Lifestyle & personality"
+        }
+      }
+    ],
+    "measures": [
+      {
+        "id": "adolescents_perc"
+      },
+      {
+        "id": "adolescents_count"
+      }
+    ],
+    "defaultOptions": {
+      "xAxis": "",
+      "measure": ""
+    },
+    "highlights": []
   }
 ]
