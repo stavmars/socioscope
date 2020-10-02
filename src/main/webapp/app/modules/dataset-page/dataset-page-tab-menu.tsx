@@ -31,7 +31,7 @@ export class DatasetPageTabMenu extends React.Component<IDatasetPageTabMenuProp>
     return (
       <div
         className={`dataset-page-tab-menu` + (isMinimized ? ' minimized' : '')}
-        style={{ background: `url(/content/images/Assets/${dataset.id}.jpg) 0%/cover no-repeat` }}
+        style={{ background: `url(/content/images/Assets/${dataset.id === 'youwho' ? 'adolescents' : dataset.id}.jpg) 0%/cover no-repeat` }}
       >
         <div className={`dataset-page-tab-menu-top` + (isMinimized ? ' minimized' : '')}>
           <div className={`dataset-page-title` + (isMinimized ? ' minimized' : '')}>
