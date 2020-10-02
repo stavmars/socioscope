@@ -1734,7 +1734,7 @@
     },
     "groupId": "yw_greece",
     "type": "composite",
-    "composeOf": [
+    "composedOf": [
       "yw_q8a",
       "yw_q8b",
       "yw_q8c",
@@ -1785,7 +1785,7 @@
     },
     "groupId": "yw_social",
     "type": "composite",
-    "composeOf": [
+    "composedOf": [
       "yw_q9a",
       "yw_q9b",
       "yw_q9c",
@@ -1856,7 +1856,7 @@
     },
     "groupId": "yw_social",
     "type": "composite",
-    "composeOf": [
+    "composedOf": [
       "yw_q10a",
       "yw_q10b",
       "yw_q10c",
@@ -1947,7 +1947,7 @@
     },
     "groupId": "yw_social",
     "type": "composite",
-    "composeOf": [
+    "composedOf": [
       "yw_q11a",
       "yw_q11b",
       "yw_q11c",
@@ -2047,7 +2047,7 @@
     },
     "groupId": "yw_politics",
     "type": "composite",
-    "composeOf": [
+    "composedOf": [
       "yw_q13a",
       "yw_q13b",
       "yw_q13c",
@@ -2167,7 +2167,7 @@
     },
     "groupId": "yw_politics",
     "type": "composite",
-    "composeOf": [
+    "composedOf": [
       "yw_q15a",
       "yw_q15b",
       "yw_q15c",
@@ -2256,7 +2256,7 @@
     },
     "groupId": "yw_lifestyle",
     "type": "composite",
-    "composeOf": [
+    "composedOf": [
       "yw_q18a",
       "yw_q18b",
       "yw_q18c",
@@ -2387,7 +2387,7 @@
     },
     "groupId": "yw_lifestyle",
     "type": "composite",
-    "composeOf": [
+    "composedOf": [
       "yw_q19a",
       "yw_q19b",
       "yw_q19c",
@@ -2438,7 +2438,7 @@
     },
     "groupId": "yw_lifestyle",
     "type": "composite",
-    "composeOf": [
+    "composedOf": [
       "q20a",
       "q20b",
       "q20c",
@@ -2549,7 +2549,7 @@
     },
     "groupId": "yw_lifestyle",
     "type": "composite",
-    "composeOf": [
+    "composedOf": [
       "yw_q21a",
       "yw_q21b",
       "yw_q21c",
@@ -2640,7 +2640,7 @@
     },
     "groupId": "yw_lifestyle",
     "type": "composite",
-    "composeOf": [
+    "composedOf": [
       "yw_q22a",
       "yw_q22b",
       "yw_q22c",
@@ -2751,7 +2751,7 @@
     },
     "groupId": "yw_lifestyle",
     "type": "composite",
-    "composeOf": [
+    "composedOf": [
       "yw_q23a",
       "yw_q23b",
       "yw_q23c",
