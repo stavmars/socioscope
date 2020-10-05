@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { IRootState } from 'app/shared/reducers';
 import './dataset-page.scss';
+import { translate } from 'react-jhipster';
+import { IRootState } from 'app/shared/reducers';
 import { Accordion, Dropdown, Image, List } from 'semantic-ui-react';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IDataSet } from 'app/shared/model/data-set.model';
@@ -56,7 +57,12 @@ export class RawDatasetFilters extends React.Component<IRawDatasetFiltersProp, I
     // tslint:disable:jsx-no-lambda
     return (
       <div>
-        <Dropdown className={`vis-options-dropdown ${dataset.colorScheme}`} fluid scrolling placeholder="Επιλέξτε 1 ή παραπάνω φίλτρα">
+        <Dropdown
+          fluid
+          scrolling
+          className={`vis-options-dropdown ${dataset.colorScheme}`}
+          placeholder={translate('socioscopeApp.dataSet.visualization.configure.filterPlaceholder')}
+        >
           <Accordion as={Dropdown.Menu}>
             {dataset.dimensions
               .filter(dimension => dimension.type !== 'time' && !dimension.disableFilter && !dimension.filterWidget)
