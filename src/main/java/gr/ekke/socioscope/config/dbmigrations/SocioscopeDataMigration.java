@@ -128,7 +128,18 @@ public class SocioscopeDataMigration {
         bulkOperations.execute();
     }
 
-    @ChangeSet(order = "09", author = "initiator", id = "addElections2015b")
+    @ChangeSet(order = "09", author = "initiator", id="addYouWhoData")
+    public void addYouWhoData(MongoTemplate mongoTemplate, Environment environment) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        File file = new File(environment.getProperty("application.migrate-data-path") + "/youwho.json");
+        TypeFactory typeFactory = mapper.getTypeFactory();
+        List youwho = mapper.readValue(file, typeFactory.constructCollectionType(List.class, Object.class));
+        BulkOperations bulkOperations = mongoTemplate.bulkOps(BulkOperations.BulkMode.UNORDERED, Object.class, "youwho");
+        bulkOperations.insert(youwho);
+        bulkOperations.execute();
+    }
+
+    @ChangeSet(order = "10", author = "initiator", id = "addElections2015b")
     public void addElections2015b(MongoTemplate mongoTemplate, Environment environment) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         File file = new File(environment.getProperty("application.migrate-data-path") + "/2015b.json");
@@ -139,7 +150,7 @@ public class SocioscopeDataMigration {
         bulkOperations.execute();
     }
 
-    @ChangeSet(order = "10", author = "initiator", id = "addElections2019")
+    @ChangeSet(order = "11", author = "initiator", id = "addElections2019")
     public void addElections2019(MongoTemplate mongoTemplate, Environment environment) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         File file = new File(environment.getProperty("application.migrate-data-path") + "/2019.json");

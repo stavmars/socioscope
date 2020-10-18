@@ -208,10 +208,10 @@ export class ChartVis extends React.Component<IChartVisProp> {
           .value();
 
         if (xAxisDimension.type === 'composite') {
-          const colorCount = _.filter(chartSeries, series => !series.code.color).length;
+          const colorCount = _.filter(chartSeries, series => series.code && !series.code.color).length;
           const colors = chroma.scale(['#ffffe0', accentColors[colorScheme]]).colors(colorCount);
           chartSeries = chartSeries.map(series => {
-            const color = series.code.color || colors.shift();
+            const color = (series.code && series.code.color) || colors.shift();
             return { ...series, color };
           });
         }

@@ -1,0 +1,1492 @@
+[
+  {
+    "dimensionId": "yw_q1",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "17-18",
+      "en": "17-18"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q1",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "19-24",
+      "en": "19-24"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q1",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "25-29",
+      "en": "25-29"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q2",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Άνδρας",
+      "en": "Male"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q2",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Γυναίκα",
+      "en": "Female"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q2",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Άλλο",
+      "en": "Other"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q2",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q3",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Ανατολική Μακεδονία και Θράκη",
+      "en": "Eastern Macedonia and Thrace"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q3",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Κεντρική Μακεδονία",
+      "en": "Central Macedonia"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q3",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Δυτική Μακεδονία",
+      "en": "Western Macedonia"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q3",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Ήπειρος",
+      "en": "Epirus"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q3",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Θεσσαλία",
+      "en": "Thessaly"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q3",
+    "notation": "6",
+    "order": 6,
+    "name": {
+      "el": "Ιόνιοι Νήσοι",
+      "en": "Ionian Islands"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q3",
+    "notation": "7",
+    "order": 7,
+    "name": {
+      "el": "Δυτική Ελλάδα",
+      "en": "Western Greece"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q3",
+    "notation": "8",
+    "order": 8,
+    "name": {
+      "el": "Στερεά Ελλάδα",
+      "en": "Central Greece"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q3",
+    "notation": "9",
+    "order": 9,
+    "name": {
+      "el": "Αττική",
+      "en": "Attica"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q3",
+    "notation": "10",
+    "order": 10,
+    "name": {
+      "el": "Πελοπόννησος",
+      "en": "Peloponnese"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q3",
+    "notation": "11",
+    "order": 11,
+    "name": {
+      "el": "Βόρειο Αιγαίο",
+      "en": "North Aegean"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q3",
+    "notation": "12",
+    "order": 12,
+    "name": {
+      "el": "Νότιο Αιγαίο",
+      "en": "South Aegean"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q3",
+    "notation": "13",
+    "order": 13,
+    "name": {
+      "el": "Κρήτη",
+      "en": "Crete"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q3",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q4",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Γυμνάσιο",
+      "en": "Lower Secondary School"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q4",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Γενικό Λύκειο",
+      "en": "Upper Secondary School"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q4",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Επαγγελματικό Λύκειο",
+      "en": "Upper Secondary - Vocational School"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q4",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "ΙΕΚ/ΚΕΚ/Μεταλυκειακή Εκπαίδευση",
+      "en": "Post-secondary non tertiary"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q4",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "ΑΕΙ/ΤΕΙ",
+      "en": "University Degree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q4",
+    "notation": "6",
+    "order": 6,
+    "name": {
+      "el": "Μεταπτυχιακό/Διδακτορικό",
+      "en": "Post-graduate/Ph.D"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q4",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q5",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Μεγάλη πόλη",
+      "en": "Big city"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q5",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Κωμόπολη",
+      "en": "Town"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q5",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Χωριό",
+      "en": "Village"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q5",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q6",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Εργάζομαι full-time",
+      "en": "Work full-time"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q6",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Εργάζομαι part-time",
+      "en": "Work part-time"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q6",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Φοιτητής/τρια",
+      "en": "Student"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q6",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Στρατιώτης",
+      "en": "Military service"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q6",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Ψάχνω για δουλειά",
+      "en": "Looking for work"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q6",
+    "notation": "6",
+    "order": 6,
+    "name": {
+      "el": "Αράζω",
+      "en": "Just hanging out"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q6",
+    "notation": "7",
+    "order": 7,
+    "name": {
+      "el": "Στο σπίτι/ μεγαλώνω παιδιά",
+      "en": "At home/raising children"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q6",
+    "notation": "8",
+    "order": 8,
+    "name": {
+      "el": "Άλλο",
+      "en": "Other"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q6",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q7",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Καθόλου",
+      "en": "Not at all"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q7",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Λίγο ",
+      "en": "A little"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q7",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα ",
+      "en": "Neutral"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q7",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Αρκετά",
+      "en": "Somewhat"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q7",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Πάρα πολύ",
+      "en": "A lot"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q7",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q8",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q8",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Μάλλον διαφωνώ",
+      "en": "Somewhat disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q8",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ούτε συμφωνώ ούτε διαφωνώ",
+      "en": "Neither disagree nor agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q8",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Μάλλον συμφωνώ",
+      "en": "Somewhat agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q8",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q8",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q9",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q9",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Μάλλον διαφωνώ",
+      "en": "Somewhat disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q9",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ούτε συμφωνώ ούτε διαφωνώ",
+      "en": "Neither disagree nor agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q9",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Μάλλον συμφωνώ",
+      "en": "Somewhat agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q9",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q9",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q10",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Καθόλου σημαντικό",
+      "en": "Not at all important"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q10",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Ελάχιστο σημαντικό",
+      "en": "A little important"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q10",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερο",
+      "en": "Neither important nor unimportant"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q10",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Αρκετά σημαντικό",
+      "en": "Somewhat important"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q10",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Πολύ σημαντικό",
+      "en": "Very important"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q10",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q11",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q11",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q11",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q12",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Εθνικιστές",
+      "en": "Nationalists"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q12",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Συντηρητικοί",
+      "en": "Conservatists"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q12",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Φιλελεύθεροι",
+      "en": "Liberals"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q12",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Οικολόγοι/Πράσινοι",
+      "en": "Ecologists/Greens"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q12",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Σοσιαλιστές/Σοσιαλδημοκράτες",
+      "en": "Socialists/Social-democrats"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q12",
+    "notation": "6",
+    "order": 6,
+    "name": {
+      "el": "Κομμουνιστές",
+      "en": "Communists"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q12",
+    "notation": "7",
+    "order": 7,
+    "name": {
+      "el": "Αντιεξουσιαστές",
+      "en": "Anti-authoritarians"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q12",
+    "notation": "8",
+    "order": 8,
+    "name": {
+      "el": "Κανένα από αυτά",
+      "en": "None of the above"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q12",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ/ΔΓ",
+      "en": "DK/NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q13",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Αντιπαθώ",
+      "en": "Dislike"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q13",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Αδιαφορώ",
+      "en": "Indifferent"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q13",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Συμπαθώ",
+      "en": "Like"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q13",
+    "notation": "77",
+    "order": 77,
+    "name": {
+      "el": "Άγνωστο πρόσωπο",
+      "en": "Unknown person"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q13",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q14",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "1",
+      "en": "1"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q14",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "2",
+      "en": "2"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q14",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "3",
+      "en": "3"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q14",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "4",
+      "en": "4"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q14",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "5",
+      "en": "5"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q14",
+    "notation": "6",
+    "order": 6,
+    "name": {
+      "el": "6",
+      "en": "6"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q14",
+    "notation": "7",
+    "order": 7,
+    "name": {
+      "el": "7",
+      "en": "7"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q14",
+    "notation": "8",
+    "order": 8,
+    "name": {
+      "el": "8",
+      "en": "8"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q14",
+    "notation": "9",
+    "order": 9,
+    "name": {
+      "el": "9",
+      "en": "9"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q14",
+    "notation": "10",
+    "order": 10,
+    "name": {
+      "el": "10",
+      "en": "10"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q14",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q15",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Πολύ αρνητικά",
+      "en": "Very negative"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q15",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Αρνητικά",
+      "en": "Negative"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q15",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither negative nor positive"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q15",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Θετικά",
+      "en": "Positive"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q15",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Πολύ θετικά",
+      "en": "Very positive"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q15",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q16",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Ο \"Δεκέμβρης\" του 2008",
+      "en": "The December 2008"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q16",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Η υπογραφή των μνημονίων",
+      "en": "The bailout agreements"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q16",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Η δολοφονία του Παύλου Φύσσα",
+      "en": "The murder of Pavlos Fyssas"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q16",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Το δημοψήφισμα του 2015",
+      "en": "The 2015 Referendum"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q16",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Η προσφυγική κρίση",
+      "en": "The refugees crisis"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q16",
+    "notation": "6",
+    "order": 6,
+    "name": {
+      "el": "Η συμφωνία των Πρεσπών",
+      "en": "The Prespes Agreement"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q16",
+    "notation": "7",
+    "order": 7,
+    "name": {
+      "el": "Η πυρκαγιά στο Μάτι",
+      "en": "The Mati fire"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q16",
+    "notation": "8",
+    "order": 8,
+    "name": {
+      "el": "Η δολοφονία του Ζακ Κωστόπουλου",
+      "en": "The murder of Zack Kostopoulos"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q16",
+    "notation": "9",
+    "order": 9,
+    "name": {
+      "el": "Προσωπικά και οικογενειακά βιώματα",
+      "en": "Personal and family experiences"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q16",
+    "notation": "10",
+    "order": 10,
+    "name": {
+      "el": "Κανένα από τα παραπάνω",
+      "en": "None of the above"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q16",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q17",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "ΝΕΑ ΔΗΜΟΚΡΑΤΙΑ",
+      "en": "NEW DEMOCRACY"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q17",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "ΣΥΡΙΖΑ",
+      "en": "SYRIZA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q17",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "ΚΙΝΗΜΑ ΑΛΛΑΓΗΣ",
+      "en": "KINIMA ALLAGIS"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q17",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "ΚΚΕ",
+      "en": "KKE"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q17",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "ΕΛΛΗΝΙΚΗ ΛΥΣΗ",
+      "en": "ELLINIKI LISI"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q17",
+    "notation": "6",
+    "order": 6,
+    "name": {
+      "el": "ΜέΡΑ25",
+      "en": "MERA25"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q17",
+    "notation": "7",
+    "order": 7,
+    "name": {
+      "el": "Λ.Σ. ΧΡΥΣΗ ΑΥΓΗ",
+      "en": "GOLDEN DAWN"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q17",
+    "notation": "8",
+    "order": 8,
+    "name": {
+      "el": "ΠΛΕΥΣΗ ΕΛΕΥΘΕΡΙΑΣ",
+      "en": "PLEYSI ELEFTHERIAS"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q17",
+    "notation": "9",
+    "order": 9,
+    "name": {
+      "el": "ΕΝΩΣΗ ΚΕΝΤΡΩΩΝ",
+      "en": "ENOSI KENTROON"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q17",
+    "notation": "10",
+    "order": 10,
+    "name": {
+      "el": "Άλλο κόμμα",
+      "en": "Other party"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q17",
+    "notation": "11",
+    "order": 11,
+    "name": {
+      "el": "Άκυρο/ Λευκό",
+      "en": "Blank/invalid vote"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q17",
+    "notation": "12",
+    "order": 12,
+    "name": {
+      "el": "Δεν ψήφισα",
+      "en": "Did not vote"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q17",
+    "notation": "13",
+    "order": 13,
+    "name": {
+      "el": "Δεν είχα δικαίωμα ψήφου",
+      "en": "Did not have the right to vote"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q17",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q18",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q18",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q19",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q19",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Μάλλον διαφωνώ",
+      "en": "Somewhat disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q19",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ούτε συμφωνώ ούτε διαφωνώ",
+      "en": "Neither disagree nor agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q19",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Μάλλον συμφωνώ",
+      "en": "Somewhat agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q19",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q19",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q20",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q20",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q20",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q21",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q21",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q22",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q22",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Μάλλον διαφωνώ",
+      "en": "Somewhat disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q22",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ούτε συμφωνώ ούτε διαφωνώ",
+      "en": "Neither disagree nor agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q22",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Μάλλον συμφωνώ",
+      "en": "Somewhat agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q22",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q22",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
+    "dimensionId": "yw_q23",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Πολύ αρνητικά",
+      "en": "Very negative"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q23",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Αρνητικά",
+      "en": "Negative"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q23",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither negative nor positive"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q23",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Θετικά",
+      "en": "Positive"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q23",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Πολύ θετικά",
+      "en": "Very positive"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "yw_q23",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  }
+]
