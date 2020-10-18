@@ -29,6 +29,7 @@ public class ObservationRepositoryImpl implements ObservationRepositoryCustom {
         Dimension xAxisDimension = dataset.getDimensions().stream().filter(dimValue -> dimValue.getId().equals(xAxis)).findFirst().orElse(null);
         String compareBy = seriesOptions.getCompareBy();
         Dimension compareByDimension = dataset.getDimensions().stream().filter(dimValue -> dimValue.getId().equals(compareBy)).findFirst().orElse(null);
+        List<String> compareCodes = seriesOptions.getCompareCodes();
 
         Query query = new Query();
 
@@ -50,7 +51,13 @@ public class ObservationRepositoryImpl implements ObservationRepositoryCustom {
         criteria.add(Criteria.where("dimensions").elemMatch(Criteria.where("id").is(xAxis)));
 
         if (compareBy != null) {
-            criteria.add(Criteria.where("dimensions").elemMatch(Criteria.where("id").is(compareBy)));
+            Criteria compareCriteria;
+            if (compareCodes != null && compareCodes.size() > 0) {
+                compareCriteria = Criteria.where("dimensions").elemMatch(Criteria.where("id").is(compareBy).and("value").in(compareCodes));
+            } else {
+                compareCriteria = Criteria.where("dimensions").elemMatch(Criteria.where("id").is(compareBy));
+            }
+            criteria.add(compareCriteria);
         }
 
         criteria.add(Criteria.where("measures." + seriesOptions.getMeasure()).exists(true));
