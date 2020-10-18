@@ -3,7 +3,7 @@
     "dimensionId": "party",
     "notation": "anel",
     "name": {
-      "el": "Ανεξ. Ελλ.",
+      "el": "ΑΝ.ΕΛ.",
       "en": "AN.EL."
     },
     "description": {
@@ -91,8 +91,8 @@
       "en": "P.A.S.O.K"
     },
     "description": {
-      "el": "Πανελλήνιο Σοσιαλιστικό Κίνημα (ΠΑ.ΣΟ.Κ.)",
-      "en": "Panhellenic Socialist Movement (PASOK)"
+      "el": " Πανελλήνιο Σοσιαλιστικό Κίνημα (ΠΑΣΟΚ). Από το 2015 και μετά το ΠΑΣΟΚ συμμετείχε στις εκλογές ως μέρος συνασπισμού κομμάτων (της Δημοκρατικής Συμπαράταξης τον Σεπ 15 και του Κινήματος Αλλαγής τον Ιουλ 2019)",
+      "en": "Panhellenic Socialist Movement (PASOK). After September 2015 PASOK participates in the elections as part of a coalition (DIMSYM in September 2015 and KINAL in July 2019)."
     },
     "order": "",
     "color": "#00CC0C"
@@ -101,7 +101,7 @@
     "dimensionId": "party",
     "notation": "potami",
     "name": {
-      "el": "Ποταμι",
+      "el": "Ποτάμι",
       "en": "Potami"
     },
     "description": {
@@ -171,8 +171,8 @@
     "dimensionId": "party",
     "notation": "anoixi",
     "name": {
-      "el": "Άνοιξη",
-      "en": "Anoixi"
+      "el": "ΠΟΛ.ΑΝ.",
+      "en": "POL.AN."
     },
     "description": {
       "el": "Πολιτική Άνοιξη (ΠΟΛ.ΑΝ.)",
@@ -189,22 +189,8 @@
       "en": "ANTARSIA"
     },
     "description": {
-      "el": "Αντικαπιταλιστική Αριστερή Συνεργασία (ΑΝΤ.ΑΡ.ΣΥ.Α.)",
-      "en": "Anticapitalist Left Cooperation (ANT.AR.SY.A.)"
-    },
-    "order": "",
-    "color": ""
-  },
-  {
-    "dimensionId": "party",
-    "notation": "antarsya_mars",
-    "name": {
-      "el": "ΑΝΤΑΡΣΥΑ ΜΑΡΣ",
-      "en": "ANTARSYA MARS"
-    },
-    "description": {
-      "el": "ΑΝΤικαπιταλιστική ΑΡιστερή ΣΥνεργασία για την Ανατροπή Μ.ΑΡ.Σ",
-      "en": "Anti-capitalist left Cooperation for  the Overthrow M.AR.S"
+      "el": "Αντικαπιταλιστική Αριστερή Συνεργασία (ΑΝΤ.ΑΡ.ΣΥ.Α.). Στις εκλογές του Ιανουαρίου 2015 συμμετείχε ως ΑΝΤΑΡΣΥΑ ΜΑΡΣ",
+      "en": "Anticapitalist Left Cooperation (ANT.AR.SY.A.). Took part in January 2015 elections under the name ANTARSYA MARS"
     },
     "order": "",
     "color": ""
@@ -1165,12 +1151,12 @@
     "dimensionId": "party",
     "notation": "laiki_enotita",
     "name": {
-      "el": "ΛΑΪΚΗ ΕΝΟΤΗΤΑ",
-      "en": "Laiki Enotita"
+      "el": "ΛΑΕ",
+      "en": "LAE"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "ΛΑΪΚΗ ΕΝΟΤΗΤΑ",
+      "en": "Laiki Enotita"
     },
     "order": "",
     "color": ""
@@ -1179,12 +1165,12 @@
     "dimensionId": "party",
     "notation": "epam",
     "name": {
-      "el": "ΕΝΙΑΙΟ ΠΑΛΑΙΚΟ ΜΕΤΩΠΟ (Ε.ΠΑ.Μ)",
-      "en": "United Popular Front"
+      "el": "ΕΠΑΜ",
+      "en": "EPAM"
     },
     "description": {
-      "el": "",
-      "en": ""
+      "el": "ΕΝΙΑΙΟ ΠΑΛΑΙΚΟ ΜΕΤΩΠΟ (Ε.ΠΑ.Μ)",
+      "en": "United Popular Front"
     },
     "order": "",
     "color": ""
