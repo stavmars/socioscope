@@ -198,12 +198,12 @@ export const removeFilter = (dataset: IDataSet, dimensionId: string) => (dispatc
 
 export const removeCompare = (dataset: IDataSet) => (dispatch, getState) => {
   const { visType, seriesOptions } = getState().datasetPage;
-  dispatch(updateVisOptions(dataset, { visType, seriesOptions: { ...seriesOptions, compareBy: null } }));
+  dispatch(updateVisOptions(dataset, { visType, seriesOptions: { ...seriesOptions, compareBy: null, compareCodes: [] } }));
 };
 
 export const changeCompareBy = (dataset: IDataSet, compareBy: string) => (dispatch, getState) => {
   const { visType, seriesOptions } = getState().datasetPage;
-  dispatch(updateVisOptions(dataset, { visType, seriesOptions: { ...seriesOptions, compareBy } }));
+  dispatch(updateVisOptions(dataset, { visType, seriesOptions: { ...seriesOptions, compareBy, compareCodes: [] } }));
 };
 
 export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => async (dispatch, getState) => {
