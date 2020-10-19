@@ -213,6 +213,7 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
 
   const { dimensions } = dataset;
   let { xAxis, compareBy, measure } = seriesOptions;
+  const { compareCodes } = seriesOptions;
   let xAxisDimension: IDimension;
   const filters = { ...seriesOptions.dimensionFilters };
   if (visType === 'map') {
@@ -294,7 +295,7 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
       await dispatch(fetchValidCodes(dataset, 'municipality', 'constituency', dimensionFilters['constituency']));
     }
 
-    newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters };
+    newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters, compareCodes };
   } else {
     dimensionFilters = _.pickBy(filters, (value, key) => key !== xAxis && key !== compareBy);
     const dependencies = _.union(xAxisDimension.dependencies, compareByDimension ? compareByDimension.dependencies : []);

@@ -59,6 +59,12 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
   handleCompareByChange = (e, { value }) =>
     value ? this.props.changeCompareBy(this.props.dataset, value) : this.props.removeCompare(this.props.dataset);
 
+  handleCompareCodesChange = (e, { value }) =>
+    this.props.updateVisOptions(this.props.dataset, {
+      visType: this.props.visType,
+      seriesOptions: { ...this.props.seriesOptions, compareCodes: value }
+    });
+
   handleOptions = () => this.setState({ moreOptions: !this.state.moreOptions });
 
   render() {
@@ -129,6 +135,24 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
       </div>
     );
 
+    const compareCodes = seriesOptions.compareBy !== null && (
+      <div className="vis-compare-options vis-options-menu-item">
+        <Dropdown
+          className={`vis-options-dropdown ${colorScheme}`}
+          onChange={this.handleCompareCodesChange}
+          options={dimensionCodes[seriesOptions.compareBy].codes.map(code => ({
+            key: code.notation,
+            text: translateEntityField(code.name),
+            value: code.notation
+          }))}
+          multiple
+          selection
+          value={seriesOptions.compareCodes}
+          fluid
+        />
+      </div>
+    );
+
     const filters = (
       <div className="vis-filters vis-options-menu-item">
         <div className="vis-options-menu-label">
@@ -174,6 +198,7 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
     let advancedOptions = (
       <div>
         {visType !== 'map' && compare}
+        {visType !== 'map' && compareCodes}
         {filters}
       </div>
     );

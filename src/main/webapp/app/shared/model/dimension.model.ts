@@ -17,6 +17,7 @@ export interface IDimension {
   disableAxis?: boolean;
   disableStacking?: boolean;
   composedOf?: string[];
+  allowCompareCodes?: boolean;
   filterWidget?: string;
   required?: boolean;
   noFilterText?: ILang;

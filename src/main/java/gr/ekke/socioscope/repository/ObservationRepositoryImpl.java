@@ -9,6 +9,7 @@ import org.springframework.data.mongodb.core.aggregation.Aggregation;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -52,7 +53,8 @@ public class ObservationRepositoryImpl implements ObservationRepositoryCustom {
 
         if (compareBy != null) {
             Criteria compareCriteria;
-            if (compareCodes != null && compareCodes.size() > 0) {
+            if (compareByDimension.getAllowCompareCodes()) {
+                compareCodes = compareCodes == null ? new ArrayList<>() : compareCodes;
                 compareCriteria = Criteria.where("dimensions").elemMatch(Criteria.where("id").is(compareBy).and("value").in(compareCodes));
             } else {
                 compareCriteria = Criteria.where("dimensions").elemMatch(Criteria.where("id").is(compareBy));

@@ -69,6 +69,8 @@ public class Dimension implements Serializable {
 
     private Boolean disableCompareBy;
 
+    private Boolean allowCompareCodes;
+
     private String filterWidget;
 
     private Boolean disableStacking;
@@ -239,6 +241,14 @@ public class Dimension implements Serializable {
 
     public void setDisableStacking(Boolean disableStacking) {
         this.disableStacking = disableStacking;
+    }
+
+    public Boolean getAllowCompareCodes() {
+        return allowCompareCodes;
+    }
+
+    public void setAllowCompareCodes(Boolean allowCompareCodes) {
+        this.allowCompareCodes = allowCompareCodes;
     }
 
     public String getFilterWidget() {
