@@ -2021,9 +2021,9 @@
       "yw_q11c",
       "yw_q11d",
       "yw_q11e",
-      "yw_q11a",
-      "yw_q11b",
-      "yw_q11c"
+      "yw_q11f",
+      "yw_q11g",
+      "yw_q11h"
     ]
   },
   {
@@ -2627,16 +2627,16 @@
     "groupId": "yw_lifestyle",
     "type": "composite",
     "composedOf": [
-      "q20a",
-      "q20b",
-      "q20c",
-      "q20d",
-      "q20e",
-      "q20f",
-      "q20g",
-      "q20h",
-      "q20i",
-      "q20j"
+      "yw_q20a",
+      "yw_q20b",
+      "yw_q20c",
+      "yw_q20d",
+      "yw_q20e",
+      "yw_q20f",
+      "yw_q20g",
+      "yw_q20h",
+      "yw_q20i",
+      "yw_q20j"
     ]
   },
   {
