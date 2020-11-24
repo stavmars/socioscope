@@ -47,9 +47,10 @@
       }
     ],
     "defaultOptions": {
-      "xAxis": "party",
+      "xAxis": "elections",
       "measure": "votes_perc",
       "dimensionFilters": {
+        "invalid_vote": "valid"
       }
     },
     "highlights": [
