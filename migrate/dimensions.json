@@ -78,6 +78,7 @@
       "elections"
     ],
     "disableFilter": true,
+    "disableStacking": true,
     "allowCompareCodes": true,
     "order": "value_desc"
   },
