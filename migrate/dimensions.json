@@ -162,6 +162,7 @@
     "type": "coded",
     "dependencies": [],
     "required": true,
+    "allowCompareCodes": true,
     "disableStacking": true
   },
   {

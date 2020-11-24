@@ -50,10 +50,9 @@ public class ObservationRepositoryImpl implements ObservationRepositoryCustom {
         }).collect(Collectors.toList());
 
         criteria.add(Criteria.where("dimensions").elemMatch(Criteria.where("id").is(xAxis)));
-
         if (compareBy != null) {
             Criteria compareCriteria;
-            if (compareByDimension.getAllowCompareCodes()) {
+            if (compareByDimension.getAllowCompareCodes() != null && compareByDimension.getAllowCompareCodes()) {
                 compareCodes = compareCodes == null ? new ArrayList<>() : compareCodes;
                 compareCriteria = Criteria.where("dimensions").elemMatch(Criteria.where("id").is(compareBy).and("value").in(compareCodes));
             } else {
