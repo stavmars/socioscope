@@ -95,7 +95,9 @@ const parseDimensionFilters = (dimensions: IDimension[], dimensionFilters: IDime
       result +=
         translateEntityField(dimension.name) +
         ': ' +
-        translateEntityField(dimensionCodes[dimension.id].codesByNotation[dimensionFilters[filter]].name) +
+        (dimensionFilters[filter] !== null
+          ? translateEntityField(dimensionCodes[dimension.id].codesByNotation[dimensionFilters[filter]].name)
+          : '') +
         ', ';
     }
   }
