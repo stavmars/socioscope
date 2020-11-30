@@ -331,7 +331,8 @@ export const urlEncodeVisOptions = (visOptions: IVisOptions) => {
       x: seriesOptions.xAxis,
       compare: seriesOptions.compareBy,
       filters: seriesOptions.dimensionFilters,
-      measure: seriesOptions.measure
+      measure: seriesOptions.measure,
+      codes: seriesOptions.compareCodes
     },
     { skipNulls: true }
   );
