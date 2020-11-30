@@ -135,23 +135,25 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
       </div>
     );
 
-    const compareCodes = seriesOptions.compareBy !== null && (
-      <div className="vis-compare-options vis-options-menu-item">
-        <Dropdown
-          className={`vis-options-dropdown ${colorScheme}`}
-          onChange={this.handleCompareCodesChange}
-          options={dimensionCodes[seriesOptions.compareBy].codes.map(code => ({
-            key: code.notation,
-            text: translateEntityField(code.name),
-            value: code.notation
-          }))}
-          multiple
-          selection
-          value={seriesOptions.compareCodes}
-          fluid
-        />
-      </div>
-    );
+    const compareCodes = compareByDimension != null &&
+      compareByDimension.allowCompareCodes && (
+        <div className="vis-compare-options vis-options-menu-item">
+          <Dropdown
+            className={`vis-options-dropdown ${colorScheme}`}
+            onChange={this.handleCompareCodesChange}
+            options={dimensionCodes[seriesOptions.compareBy].codes.map(code => ({
+              key: code.notation,
+              text: translateEntityField(code.name),
+              value: code.notation
+            }))}
+            multiple
+            search
+            selection
+            value={seriesOptions.compareCodes}
+            fluid
+          />
+        </div>
+      );
 
     const filters = (
       <div className="vis-filters vis-options-menu-item">
