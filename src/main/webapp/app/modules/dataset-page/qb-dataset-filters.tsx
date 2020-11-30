@@ -28,7 +28,8 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
     const mapCodeToOption = code => ({
       id: code.notation,
       key: code.notation,
-      text: <div title={translateEntityField(code.description)}>{translateEntityField(code.name)}</div>,
+      // text: <div title={translateEntityField(code.description)}>{translateEntityField(code.name)}</div>,
+      text: translateEntityField(code.name),
       value: dimensionId + '$$$' + code.notation,
       className: `filter-option-level-0`
     });
