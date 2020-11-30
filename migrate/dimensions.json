@@ -90,6 +90,7 @@
     },
     "type": "coded",
     "disableFilter": true,
+    "disableAxis": true,
     "disableCompareBy": true,
     "dependencies": []
   },
@@ -101,6 +102,7 @@
     },
     "type": "coded",
     "disableFilter": true,
+    "disableAxis": true,
     "disableCompareBy": true,
     "dependencies": []
   },
@@ -110,25 +112,7 @@
       "el": "Εκλογική Περιφέρεια",
       "en": "Constituency"
     },
-    "type": "geographic-area",
-    "geoMaps": [
-      {
-        "level": 1,
-        "name": {
-          "el": "Εκλογικές Περιφέρειες",
-          "en": "Constituencies"
-        },
-        "url": "content/geo/constituencies.json"
-      },
-      {
-        "level": 2,
-        "name": {
-          "el": "Δήμοι",
-          "en": "Municipalities"
-        },
-        "url": "content/geo/municipalities.json"
-      }
-    ],
+    "type": "coded",
     "dependencies": [
       "elections"
     ],
@@ -151,6 +135,7 @@
     ],
     "parentDimensionId": "constituency",
     "disableCompareBy": true,
+    "disableAxis": true,
     "disableStacking": true
   },
   {
