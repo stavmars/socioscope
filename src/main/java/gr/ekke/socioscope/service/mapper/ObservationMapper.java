@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -29,22 +30,37 @@ public class ObservationMapper {
 
     public List<Series> observationsToMultipleSeries(List<Observation> observations, SeriesOptions seriesOptions) {
         String compareBy = seriesOptions.getCompareBy();
+        List<Series> seriesList;
         if (compareBy != null) {
             Map<String, List<Observation>> byCompare
                 = observations.stream().collect(Collectors.groupingBy(obs -> obs.getDimensionValue(compareBy)));
-            return byCompare.entrySet().stream().map(entry -> {
+            seriesList = byCompare.entrySet().stream().map(entry -> {
                 Series series = new Series();
                 series.setId(entry.getKey());
                 series.setData(this.observationsToSeriesPoints(entry.getValue(), seriesOptions));
                 return series;
             }).collect(Collectors.toList());
+            seriesList = fillMissingValues(seriesList);
         } else {
             Series series = new Series();
             series.setData(this.observationsToSeriesPoints(observations, seriesOptions));
-            List seriesList = new ArrayList(1);
+            seriesList = new ArrayList(1);
             seriesList.add(series);
-            return seriesList;
         }
+        return seriesList;
+    }
+
+    private List<Series> fillMissingValues(List<Series> seriesList) {
+        // find distinct series point x values across all series
+        List<String> allKeys = seriesList.stream().flatMap(series -> series.getData().stream().map(SeriesPoint::getX)).distinct().collect(Collectors.toList());
+
+        seriesList.stream()
+            .forEach(series -> {
+                Set keys = series.getData().stream().map(SeriesPoint::getX).collect(Collectors.toSet());
+                List missingPoints = allKeys.stream().filter(key -> !keys.contains(key)).map(key -> new SeriesPoint(key, null)).collect(Collectors.toList());
+                series.getData().addAll(missingPoints);
+            });
+        return seriesList;
     }
 
 }

@@ -3,9 +3,9 @@ package gr.ekke.socioscope.service.dto;
 public class SeriesPoint {
 
     private String x;
-    private double y;
+    private Double y;
 
-    public SeriesPoint(String x, double y) {
+    public SeriesPoint(String x, Double y) {
         this.x = x;
         this.y = y;
     }
@@ -18,11 +18,11 @@ public class SeriesPoint {
         this.x = x;
     }
 
-    public double getY() {
+    public Double getY() {
         return y;
     }
 
-    public void setY(double y) {
+    public void setY(Double y) {
         this.y = y;
     }
 
