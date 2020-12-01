@@ -50,7 +50,7 @@
       "xAxis": "elections",
       "measure": "votes_perc",
       "dimensionFilters": {
-        "invalid_vote": "valid"
+        "abstention": "voted"
       }
     },
     "highlights": [
@@ -85,7 +85,9 @@
         "seriesOptions": {
           "xAxis": "elections",
           "compareBy": "party",
-          "compareCodes": ["golden_dawn"],
+          "compareCodes": [
+            "golden_dawn"
+          ],
           "dimensionFilters": {
             "constituency": 42,
             "municipality": 3515002,
@@ -106,7 +108,18 @@
         "seriesOptions": {
           "xAxis": "elections",
           "compareBy": "constituency",
-          "compareCodes": ["38", "63", "40", "39", "64", "41", "60", "61", "62", "42"],
+          "compareCodes": [
+            "38",
+            "63",
+            "40",
+            "39",
+            "64",
+            "41",
+            "60",
+            "61",
+            "62",
+            "42"
+          ],
           "dimensionFilters": {
             "municipality": null,
             "party": "nd",
