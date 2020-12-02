@@ -20,7 +20,7 @@ export class TopicsMegaMenu extends React.Component<ITopicsMegaMenuProps> {
         <Header isFixed={false} />
         <div className="topics-mega-menu-list">
           <List selection verticalAlign="middle">
-            {_.at(dataSetsById, ['adolescents', 'deputies', 'greek-election-results', 'claims', 'youwho']).map((dataset: IDataSet) => (
+            {_.at(dataSetsById, ['adolescents', 'deputies', 'greek-election-results', 'claims']).map((dataset: IDataSet) => (
               <List.Item className={`topics-mega-menu-list-item ${dataset.colorScheme}`} as="a" href={`/dataset/${dataset.id}`}>
                 <div className="topics-mega-menu-img">
                   <Image centered src={`/content/images/Assets/${dataset.id}.svg`} />
