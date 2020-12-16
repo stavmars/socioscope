@@ -1138,17 +1138,10 @@
     ],
     "dimensionGroups": [
       {
-        "id": "yw_socio-demo",
-        "name": {
-          "el": "Κοινωνικό-δημογραφικά",
-          "en": "Socio-demographics"
-        }
-      },
-      {
         "id": "yw_greece",
         "name": {
           "el": "Ελλάδα & κόσμος",
-          "en": "Greece &  the world"
+          "en": "Greece & the world"
         }
       },
       {
@@ -1161,15 +1154,29 @@
       {
         "id": "yw_politics",
         "name": {
-          "el": "Πολιτική & πρόσωπα",
-          "en": "Politics & Public figures"
+          "el": "Ιδεολογία - Πολιτική",
+          "en": "Ideology - Politics"
         }
       },
       {
         "id": "yw_lifestyle",
         "name": {
-          "el": "Lifestyle & προσωπικότητα",
-          "en": "Lifestyle & personality"
+          "el": "Lifestyle & προσωπικές συνήθειες",
+          "en": "Lifestyle & personal habits"
+        }
+      },
+      {
+        "id": "yw_personal",
+        "name": {
+          "el": "Προσωπικότητα & ταυτότητα",
+          "en": "Personality & identity"
+        }
+      },
+      {
+        "id": "yw_socio-demo",
+        "name": {
+          "el": "Κοινωνικό-δημογραφικά",
+          "en": "Socio-demographics"
         }
       }
     ],
@@ -1182,8 +1189,8 @@
       }
     ],
     "defaultOptions": {
-      "xAxis": "",
-      "measure": ""
+      "xAxis": "yw_q7",
+      "measure": "adolescents_perc"
     },
     "highlights": []
   }
