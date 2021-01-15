@@ -13,6 +13,7 @@
         "dimension": "Dimension",
         "measure": "Measure",
         "dimensionCode": "Dimension Code",
+        "blogPost": "Blog Post",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

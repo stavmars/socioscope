@@ -19,6 +19,10 @@ import dimensionCode, { DimensionCodeState } from 'app/entities/dimension-code/d
 import datasetPage, { DatasetPageState } from 'app/modules/dataset-page/dataset-page-reducer';
 import header, { HeaderState } from 'app/shared/reducers/header';
 import highlights, { HighlightsState } from 'app/modules/highlights/highlights-reducer';
+// prettier-ignore
+import blogPost, {
+  BlogPostState
+} from 'app/entities/blog-post/blog-post.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -39,6 +43,7 @@ export interface IRootState {
   readonly datasetPage: DatasetPageState;
   readonly highlights: HighlightsState;
   readonly header: HeaderState;
+  readonly blogPost: BlogPostState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -61,6 +66,7 @@ const rootReducer = combineReducers<IRootState>({
   datasetPage,
   highlights,
   header,
+  blogPost,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });
