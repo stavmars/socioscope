@@ -18,6 +18,8 @@ import { AUTHORITIES } from 'app/config/constants';
 import { hideTopicsMenu, showTopicsMenu, hideMobileMenu } from 'app/shared/reducers/header';
 import { connect } from 'react-redux';
 import Blog from 'app/modules/blog';
+import PostEditor from 'app/modules/post-editor/post-editor';
+import PostDisplay from 'app/modules/post-editor/post-display';
 
 // tslint:disable:space-in-parens
 const Account = Loadable({
@@ -54,9 +56,12 @@ export class Routes extends React.Component<IRoutesProps> {
           <PrivateRoute path="/admin" component={Admin} hasAnyAuthorities={[AUTHORITIES.ADMIN]} />
           <PrivateRoute path="/account" component={Account} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
           <PrivateRoute path="/entity" component={Entities} hasAnyAuthorities={[AUTHORITIES.USER]} />
+          <PrivateRoute path="/post-editor/new" component={PostEditor} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
+          <PrivateRoute path="/post-editor/:id/edit" component={PostEditor} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
           <ErrorBoundaryRoute path="/dataset" component={DataSetPage} />
           <ErrorBoundaryRoute path="/about" component={About} />
           <ErrorBoundaryRoute path="/blog" component={Blog} />
+          <ErrorBoundaryRoute path="/post-display/:id" component={PostDisplay} />
           <ErrorBoundaryRoute path="/" component={Home} />
         </Switch>
       </div>
