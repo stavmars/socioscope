@@ -1,25 +1,47 @@
+/* tslint:disable:jsx-no-lambda */
 import './blog.scss';
 
 import React from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-import { Button, Grid, Image, Menu } from 'semantic-ui-react';
-import { Link, NavLink } from 'react-router-dom';
+import { Button, Dimmer, Grid, Image, Loader, Modal } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 import { IRootState } from 'app/shared/reducers';
 import { deleteEntity, getEntities } from 'app/entities/blog-post/blog-post.reducer';
 import moment from 'moment';
+import { Translate } from 'react-jhipster';
 
 export interface IBlogFeedProps extends StateProps, DispatchProps {}
 
-export class BlogFeed extends React.Component<IBlogFeedProps> {
+export interface IBlogFeedState {
+  deleteModal: boolean;
+}
+
+export class BlogFeed extends React.Component<IBlogFeedProps, IBlogFeedState> {
+  constructor(props) {
+    super(props);
+    this.state = {
+      deleteModal: false
+    };
+  }
+
   componentDidMount() {
     this.props.getEntities();
   }
 
+  confirmDelete = id => {
+    this.props.deleteEntity(id);
+    this.setState({ deleteModal: false });
+  };
+
   render() {
     const { isAuthenticated, loading, blogPosts } = this.props;
 
-    return (
+    return loading ? (
+      <Dimmer active page>
+        <Loader />
+      </Dimmer>
+    ) : (
       <div className="blog-feed">
         <h1 className="title">Blog</h1>
         <Grid centered>
@@ -67,12 +89,29 @@ export class BlogFeed extends React.Component<IBlogFeedProps> {
                       />
                       <br />
                       <br />
-                      <Button
-                        icon="delete"
-                        as={NavLink}
-                        to={`/entity/news-post/${blogPost.id}/delete`}
-                        style={{ backgroundColor: '#ff6666', color: 'white' }}
-                      />
+                      <Modal
+                        open={this.state.deleteModal}
+                        onClose={() => this.setState({ deleteModal: false })}
+                        onOpen={() => this.setState({ deleteModal: true })}
+                        trigger={<Button icon="delete" style={{ backgroundColor: '#ff6666', color: 'white' }} />}
+                      >
+                        <Modal.Header>
+                          <Translate contentKey="entity.delete.title">Confirm delete operation</Translate>
+                        </Modal.Header>
+                        <Modal.Content id="socioscopeApp.blogPost.delete.question">
+                          <Translate contentKey="socioscopeApp.blogPost.delete.question" interpolate={{ id: blogPost.id }}>
+                            Are you sure you want to delete this BlogPost?
+                          </Translate>
+                        </Modal.Content>
+                        <Modal.Actions>
+                          <Button onClick={() => this.setState({ deleteModal: false })}>
+                            <Translate contentKey="entity.action.cancel">Cancel</Translate>
+                          </Button>
+                          <Button id="jhi-confirm-delete-blogPost" color="red" onClick={() => this.confirmDelete(blogPost.id)}>
+                            <Translate contentKey="entity.action.delete">Delete</Translate>
+                          </Button>
+                        </Modal.Actions>
+                      </Modal>
                     </Grid.Column>
                   )}
                 </Grid.Row>
