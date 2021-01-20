@@ -46,9 +46,6 @@ public class BlogPostResource {
     @Timed
     public ResponseEntity<BlogPost> createBlogPost(@Valid @RequestBody BlogPost blogPost) throws URISyntaxException {
         log.debug("REST request to save BlogPost : {}", blogPost);
-        if (blogPost.getId() != null) {
-            throw new BadRequestAlertException("A new blogPost cannot already have an ID", ENTITY_NAME, "idexists");
-        }
         BlogPost result = blogPostService.save(blogPost);
         return ResponseEntity.created(new URI("/api/blog-posts/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
