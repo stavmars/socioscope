@@ -3,7 +3,7 @@ import './post-editor.scss';
 import React from 'react';
 import { connect } from 'react-redux';
 import { IRootState } from 'app/shared/reducers';
-import { Button, Dimmer, Loader, Grid, Image, Input } from 'semantic-ui-react';
+import { Button, Dimmer, Loader, Grid, Image, Form, Container } from 'semantic-ui-react';
 import {
   createEntity as createBlogPost,
   getEntity as getBlogPost,
@@ -17,8 +17,8 @@ import moment, { Moment } from 'moment';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@jgrayfibersmith/ckeditor5-build-classic-full-with-base64-upload';
 import { RouteComponentProps } from 'react-router-dom';
-import { convertDateTimeFromServer } from 'app/shared/util/date-utils';
 import { showHeader } from 'app/shared/reducers/header';
+import greekUtils from 'greek-utils';
 
 export interface IPostEditorProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
@@ -127,6 +127,11 @@ export class PostEditor extends React.Component<IPostEditorProps, IPostEditorSta
     if (this.state.isNew) {
       this.props.createBlogPost({
         ...blogPostEntity,
+        id: greekUtils
+          .toGreeklish(this.state.title)
+          .toLowerCase()
+          .replace(/ /g, '_')
+          .replace(/[^a-zA-Z0-9-_]/g, ''),
         previewTitle: this.state.title,
         previewText: this.state.text,
         postDate: this.state.date,
@@ -162,99 +167,94 @@ export class PostEditor extends React.Component<IPostEditorProps, IPostEditorSta
         <Loader />
       </Dimmer>
     ) : (
-      <div className="blog-editor-page">
+      <Form className="blog-editor-page" onSubmit={this.save}>
         <h1 style={{ fontFamily: 'BPnoScriptBold', textAlign: 'center' }}>Create/Edit a Blog Post</h1>
-        <span style={{ fontFamily: 'BPnoScript' }}>Add a Preview Title...</span>
+        <Container>
+          <Form.Input
+            id="blog-post-previewTitle"
+            type="textarea"
+            name="previewTitle"
+            label="Add a Preview Title..."
+            value={this.state.title}
+            onChange={this.onTitleChange}
+            required
+          />
+          <Form.Input
+            id="blog-post-previewTitle"
+            type="textarea"
+            name="previewText"
+            label="Add a Preview Text..."
+            size="large"
+            value={this.state.text}
+            onChange={this.onTextChange}
+            required
+          />
+          <Form.Input
+            id="blog-post-postDate"
+            type="date"
+            name="postDate"
+            label="Add Post Date..."
+            onChange={this.onDateChange}
+            value={moment(this.state.date).format('YYYY-MM-DD')}
+            required
+          />
+          <Form.Input
+            id="file_previewImage"
+            label="Add a Preview Image..."
+            type="file"
+            onChange={this.onBlobChange(true, 'previewImage')}
+            accept="image/*"
+          />
+          {blogPostEntity && blogPostEntity.previewImage ? (
+            <Grid style={{ width: '30vw' }}>
+              <Grid.Row columns={2}>
+                <Grid.Column>
+                  <Image
+                    src={`data:${blogPostEntity.previewImageContentType};base64,${blogPostEntity.previewImage}`}
+                    style={{ maxHeight: '200px' }}
+                  />
+                </Grid.Column>
+                <Grid.Column>
+                  <Button
+                    onClick={this.clearBlob('previewImage')}
+                    style={{
+                      marginLeft: '20px',
+                      marginTop: '70px'
+                    }}
+                    color="red"
+                    icon="undo"
+                    size="tiny"
+                  />
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          ) : null}
+          <br />
+          <Form.Checkbox
+            type="checkbox"
+            name="published"
+            label="Check if post should be published..."
+            checked={this.state.published}
+            onChange={this.changePublish}
+          />
+        </Container>
         <br />
         <br />
-        <Input
-          id="blog-post-previewTitle"
-          type="textarea"
-          name="previewTitle"
-          value={this.state.title}
-          onChange={this.onTitleChange}
-          style={{
-            width: '50%'
-          }}
-          required
-        />
-        <br />
-        <br />
-        <span style={{ fontFamily: 'BPnoScript' }}>Add a Preview Text...</span>
-        <br />
-        <br />
-        <Input
-          id="blog-post-previewTitle"
-          type="textarea"
-          name="previewText"
-          size="large"
-          value={this.state.text}
-          onChange={this.onTextChange}
-          style={{
-            width: '50%'
-          }}
-        />
-        <br />
-        <br />
-        <span style={{ fontFamily: 'BPnoScript' }}>Add Post Date...</span>
-        <br />
-        <br />
-        <Input
-          id="blog-post-postDate"
-          type="date"
-          name="postDate"
-          onChange={this.onDateChange}
-          value={convertDateTimeFromServer(this.state.date)}
-        />
-        <br />
-        <br />
-        <span style={{ fontFamily: 'BPnoScript' }}>Add a Preview Image...</span>
-        <br />
-        <br />
-        {blogPostEntity && blogPostEntity.previewImage ? (
-          <Grid style={{ width: '30vw' }}>
-            <Grid.Row columns={2}>
-              <Grid.Column>
-                <Image
-                  src={`data:${blogPostEntity.previewImageContentType};base64,${blogPostEntity.previewImage}`}
-                  style={{ maxHeight: '200px' }}
-                />
-              </Grid.Column>
-              <Grid.Column>
-                <Button
-                  onClick={this.clearBlob('previewImage')}
-                  style={{
-                    marginLeft: '20px',
-                    marginTop: '70px'
-                  }}
-                  color="red"
-                  icon="undo"
-                  size="tiny"
-                />
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        ) : null}
-        <br />
-        <Input id="file_previewImage" type="file" onChange={this.onBlobChange(true, 'previewImage')} accept="image/*" />
-        <br />
-        <br />
-        <span style={{ fontFamily: 'BPnoScript' }}>Check if post should be published...</span>{' '}
-        <input type="checkbox" name="published" checked={this.state.published} onChange={this.changePublish} />
-        <br />
-        <br />
-        <span style={{ fontFamily: 'BPnoScript' }}>Create post below...</span>
         <div className="blog-editor-container">
-          <CKEditor editor={ClassicEditor} data={!isNew ? blogPostEntity.content : null} ref={this.editor} />
+          <CKEditor
+            editor={ClassicEditor}
+            data={!isNew ? blogPostEntity.content : '<h1 style="text-align: center">Remove this heading and start writing</h1>'}
+            ref={this.editor}
+          />
         </div>
         <Button
           content="Save post"
           primary
-          onClick={this.save}
+          type="submit"
           loading={this.state.saving}
           style={{ fontFamily: 'BPnoScript', float: 'right', margin: '1em 0 0 1em' }}
         />
-      </div>
+      </Form>
     );
   }
 }
