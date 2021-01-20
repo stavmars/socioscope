@@ -2,6 +2,7 @@ package gr.ekke.socioscope.config.dbmigrations;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.github.mongobee.changeset.ChangeLog;
 import com.github.mongobee.changeset.ChangeSet;
 import gr.ekke.socioscope.domain.*;
@@ -158,6 +159,19 @@ public class SocioscopeDataMigration {
         List<Observation> observations = mapper.readValue(file, typeFactory.constructCollectionType(List.class, Observation.class));
         BulkOperations bulkOperations = mongoTemplate.bulkOps(BulkOperations.BulkMode.UNORDERED, Observation.class);
         bulkOperations.insert(observations);
+        bulkOperations.execute();
+    }
+
+    @ChangeSet(order = "12", author = "initiator", id = "addBlogPosts")
+    public  void addBlogSpots(MongoTemplate mongoTemplate, Environment environment) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        File file = new File(environment.getProperty("application.migrate-data-path") + "/blogPosts.json");
+        TypeFactory typeFactory = mapper.getTypeFactory();
+        JavaTimeModule javaTimeModule = new JavaTimeModule();
+        mapper.registerModule(javaTimeModule);
+        List<BlogPost> blogPosts = mapper.readValue(file, typeFactory.constructCollectionType(List.class, BlogPost.class));
+        BulkOperations bulkOperations = mongoTemplate.bulkOps(BulkOperations.BulkMode.UNORDERED, BlogPost.class);
+        bulkOperations.insert(blogPosts);
         bulkOperations.execute();
     }
 
