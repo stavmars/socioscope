@@ -1666,9 +1666,13 @@
   },
   {
     "id": "yw_q7",
+    "description": {
+      "el": "Ερ. Πόσο δεμένος/η νιώθεις με",
+      "en": "Q. How attached do you feel with"
+    },
     "name": {
-      "el": "Πόσο δεμένος/η νιώθεις με",
-      "en": "How attached do you feel with"
+      "el": "Σύνδεση με τόπο",
+      "en": "Attachment with place"
     },
     "groupId": "yw_greece",
     "type": "composite",
@@ -1677,7 +1681,9 @@
       "yw_q7b",
       "yw_q7c",
       "yw_q7d"
-    ]
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "yw_q7a",
@@ -1729,9 +1735,13 @@
   },
   {
     "id": "yw_q8",
+    "description": {
+      "el": "Ερ. Πόσο συμφωνείς ή διαφωνείς",
+      "en": "Q. How much do you agree or disagree"
+    },
     "name": {
-      "el": "Πόσο συμφωνείς ή διαφωνείς",
-      "en": "How much do you agree or disagree"
+      "el": "Εθνική υπερηφάνεια",
+      "en": "National pride"
     },
     "groupId": "yw_greece",
     "type": "composite",
@@ -1740,7 +1750,9 @@
       "yw_q8b",
       "yw_q8c",
       "yw_q8d"
-    ]
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "yw_q8a",
@@ -1791,99 +1803,14 @@
     }
   },
   {
-    "id": "yw_q9",
-    "name": {
-      "el": "Πόσο συμφωνείς ή διαφωνείς",
-      "en": "How much do you agree or disagree"
-    },
-    "groupId": "yw_social",
-    "type": "composite",
-    "composedOf": [
-      "yw_q9a",
-      "yw_q9b",
-      "yw_q9c",
-      "yw_q9d",
-      "yw_q9e",
-      "yw_q9f"
-    ]
-  },
-  {
-    "id": "yw_q9a",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_social",
-    "name": {
-      "el": "Όταν ένα ζευγάρι συζεί & αποκτήσει παιδί, πρέπει να παντρεύεται/κάνει σύμφωνο συμβίωσης",
-      "en": "When a couple lives together & have a child they should get married/have a civil partnership"
-    }
-  },
-  {
-    "id": "yw_q9b",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_social",
-    "name": {
-      "el": "Πρέπει να βασιζόμαστε περισσότερο στην επιστήμη & λιγότερο στη θρησκευτική πίστη",
-      "en": "We must rely more on science & less on religious faith"
-    }
-  },
-  {
-    "id": "yw_q9c",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_social",
-    "name": {
-      "el": "Οι γυναίκες πρέπει να έχουν την τελική απόφαση για το αν & πότε θα αποκτήσουν παιδί",
-      "en": "Women should have the final decision as to when & if they should have children"
-    }
-  },
-  {
-    "id": "yw_q9d",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_social",
-    "name": {
-      "el": "Πιστεύω ότι υπάρχει Θεός",
-      "en": "I believe that there is God"
-    }
-  },
-  {
-    "id": "yw_q9e",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_social",
-    "name": {
-      "el": "Όταν μια μητέρα έχει παιδί προσχολικής ηλικίας δεν πρέπει να εργάζεται",
-      "en": "When a mother has pre-school aged children, she shouldn't work "
-    }
-  },
-  {
-    "id": "yw_q9f",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_social",
-    "name": {
-      "el": "Τα ομοφυλόφιλα ζευγάρια να έχουν τα ίδια δι&ώματα στην υιοθεσία παιδιών όπως & τα ετεροφυλόφιλα",
-      "en": "Same sex couples should have the same rights for adopting children as heterosexual couples"
-    }
-  },
-  {
     "id": "yw_q10",
+    "description": {
+      "el": "Ερ. Πόσο σημαντικό είναι για έναν σωστό πολίτη",
+      "en": "Q. How important is it for a good citizen "
+    },
     "name": {
-      "el": "Πόσο σημαντικό είναι για έναν σωστό πολίτη",
-      "en": "How important is it for a good citizen "
+      "el": "Ιδιότητες του σωστού πολίτη",
+      "en": "Good citizenship"
     },
     "groupId": "yw_social",
     "type": "composite",
@@ -1896,7 +1823,9 @@
       "yw_q10f",
       "yw_q10g",
       "yw_q10h"
-    ]
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "yw_q10a",
@@ -1996,9 +1925,13 @@
   },
   {
     "id": "yw_q11",
+    "description": {
+      "el": "Ερ. Τον τελευταίο χρόνο",
+      "en": "Q. During the last year, have you"
+    },
     "name": {
-      "el": "Τον τελευταίο χρόνο",
-      "en": "During the last year, have you"
+      "el": "Μορφές πολιτικής συμμετοχής",
+      "en": "Forms of political participation"
     },
     "groupId": "yw_social",
     "type": "composite",
@@ -2011,7 +1944,9 @@
       "yw_q11f",
       "yw_q11g",
       "yw_q11h"
-    ]
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "yw_q11a",
@@ -2110,180 +2045,149 @@
     }
   },
   {
-    "id": "yw_q12",
+    "id": "yw_q9",
+    "description": {
+      "el": "Ερ. Πόσο συμφωνείς ή διαφωνείς",
+      "en": "Q. How much do you agree or disagree"
+    },
     "name": {
-      "el": "Με ποιο πολιτικό ή ιδεολογικό ρεύμα ταυτίζετσαι περισσότερο",
-      "en": "With which political ideology do you identify the most"
+      "el": "Κοινωνικές αξίες",
+      "en": "Social values"
+    },
+    "groupId": "yw_social",
+    "type": "composite",
+    "composedOf": [
+      "yw_q9a",
+      "yw_q9b",
+      "yw_q9c",
+      "yw_q9d",
+      "yw_q9e",
+      "yw_q9f"
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "yw_q9a",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_social",
+    "name": {
+      "el": "Όταν ένα ζευγάρι συζεί & αποκτήσει παιδί, πρέπει να παντρεύεται/κάνει σύμφωνο συμβίωσης",
+      "en": "When a couple lives together & have a child they should get married/have a civil partnership"
+    }
+  },
+  {
+    "id": "yw_q9b",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_social",
+    "name": {
+      "el": "Πρέπει να βασιζόμαστε περισσότερο στην επιστήμη & λιγότερο στη θρησκευτική πίστη",
+      "en": "We must rely more on science & less on religious faith"
+    }
+  },
+  {
+    "id": "yw_q9c",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_social",
+    "name": {
+      "el": "Οι γυναίκες πρέπει να έχουν την τελική απόφαση για το αν & πότε θα αποκτήσουν παιδί",
+      "en": "Women should have the final decision as to when & if they should have children"
+    }
+  },
+  {
+    "id": "yw_q9d",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_social",
+    "name": {
+      "el": "Πιστεύω ότι υπάρχει Θεός",
+      "en": "I believe that there is God"
+    }
+  },
+  {
+    "id": "yw_q9e",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_social",
+    "name": {
+      "el": "Όταν μια μητέρα έχει παιδί προσχολικής ηλικίας δεν πρέπει να εργάζεται",
+      "en": "When a mother has pre-school aged children, she shouldn't work "
+    }
+  },
+  {
+    "id": "yw_q9f",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_social",
+    "name": {
+      "el": "Τα ομοφυλόφιλα ζευγάρια να έχουν τα ίδια δι&ώματα στην υιοθεσία παιδιών όπως & τα ετεροφυλόφιλα",
+      "en": "Same sex couples should have the same rights for adopting children as heterosexual couples"
+    }
+  },
+  {
+    "id": "yw_q12",
+    "description": {
+      "el": "Ερ. Με ποιο πολιτικό ή ιδεολογικό ρεύμα ταυτίζετσαι περισσότερο;",
+      "en": "Q. With which political ideology do you identify the most?"
+    },
+    "name": {
+      "el": "Ταύτιση με ιδεολογικό ρεύμα",
+      "en": "Identification with political ideology"
     },
     "type": "coded",
     "groupId": "yw_politics"
   },
   {
-    "id": "yw_q13",
-    "name": {
-      "el": "Πόσο συμπαθείς ή αντιπαθείς τους",
-      "en": "How much do you like or dislike the following people"
-    },
-    "groupId": "yw_politics",
-    "type": "composite",
-    "composedOf": [
-      "yw_q13a",
-      "yw_q13b",
-      "yw_q13c",
-      "yw_q13d",
-      "yw_q13e",
-      "yw_q13f",
-      "yw_q13g",
-      "yw_q13h",
-      "yw_q13i",
-      "yw_q13j"
-    ]
-  },
-  {
-    "id": "yw_q13a",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_politics",
-    "name": {
-      "el": "Γιάννης Αντετοκούμπο",
-      "en": "Giannis &etokoumbo"
-    }
-  },
-  {
-    "id": "yw_q13b",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_politics",
-    "name": {
-      "el": "Γιώργος Λάνθιμος",
-      "en": "Giorgos Lanthimos"
-    }
-  },
-  {
-    "id": "yw_q13c",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_politics",
-    "name": {
-      "el": "Ηλιάνα Παπαγεωργίου",
-      "en": "Iliana Papageorgiou"
-    }
-  },
-  {
-    "id": "yw_q13d",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_politics",
-    "name": {
-      "el": "ΛΕΞ",
-      "en": "LEX"
-    }
-  },
-  {
-    "id": "yw_q13e",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_politics",
-    "name": {
-      "el": "Στέφανος Τσιτσιπάς",
-      "en": "Stephanos Tsitsipas"
-    }
-  },
-  {
-    "id": "yw_q13f",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_politics",
-    "name": {
-      "el": "Ελένη Φουρέιρα",
-      "en": "Elenoi Foureira"
-    }
-  },
-  {
-    "id": "yw_q13g",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_politics",
-    "name": {
-      "el": "Γιώργος Καπουτζίδης",
-      "en": "Giorgos Kapoutzidis"
-    }
-  },
-  {
-    "id": "yw_q13h",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_politics",
-    "name": {
-      "el": "Μαίρη Συνατσάκη",
-      "en": "Mary Synatsakis"
-    }
-  },
-  {
-    "id": "yw_q13i",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_politics",
-    "name": {
-      "el": "Sin Boy",
-      "en": "Sin Boy"
-    }
-  },
-  {
-    "id": "yw_q13j",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_politics",
-    "name": {
-      "el": "Greta Thunberg",
-      "en": "Greta Thunberg"
-    }
-  },
-  {
     "id": "yw_q14",
+    "description": {
+      "el": "Ερ. Στην πολιτική μιλάμε συνήθως για «Αριστερά» και «Δεξιά». Εσύ που τοποθετείς τον εαυτό σου;",
+      "en": "Q. Where would you place yourself on the Left-Right scale?"
+    },
     "name": {
-      "el": "Στην πολιτική μιλάμε συνήθως για «Αριστερά» και «Δεξιά». Εσύ που τοποθετείς τον εαυτό σου",
-      "en": "Where would you place yourself on the Left-Right scale"
+      "el": "Αυτοποθέτηση στον Άξονα Α-Δ",
+      "en": "Left-Right self placement"
     },
     "type": "coded",
     "groupId": "yw_politics"
   },
   {
     "id": "yw_q15",
+    "description": {
+      "el": "Ερ. Αν κάποιος πόσταρε αυτήν την εικόνα, πως θα αντιδρούσες;",
+      "en": "Q. If someone posted this image, how would you react?"
+    },
     "name": {
-      "el": "Αν κάποιος πόσταρε αυτήν την εικόνα, πως θα αντιδρούσες",
-      "en": "If somenone posted this image, how would you react"
+      "el": "Αντίδραση στην επικαιρότητα",
+      "en": "Reaction to news events"
     },
     "groupId": "yw_politics",
     "type": "composite",
     "composedOf": [
       "yw_q15a",
       "yw_q15b",
-      "yw_q15c",
-      "yw_q15d",
+      "yw_q23a",
+      "yw_q23b",
+      "yw_q23d",
       "yw_q15e",
       "yw_q15f"
-    ]
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "yw_q15a",
@@ -2359,257 +2263,280 @@
   },
   {
     "id": "yw_q16",
+    "description": {
+      "el": "Ερ. Αν έπρεπε να επιλέξεις ένα γεγονός που επέδρασε καθοριστικά στις πολιτικές σου απόψεις, ποιο θα διάλεγες;",
+      "en": "Q. If you had to choose one event that contributed most to your political formation, which would you choose? "
+    },
     "name": {
-      "el": "Αν έπρεπε να επιλέξεις ένα γεγονός που επέδρασε καθοριστικά στις πολιτικές σου απόψεις, ποιο θα διάλεγες;",
-      "en": "If you had to choose one event that contributed most to your political formation, which would you choose? "
+      "el": "Καθοριστικό πολιτικό γεγονός",
+      "en": "Formative political event"
     },
     "type": "coded",
     "groupId": "yw_politics"
   },
   {
     "id": "yw_q17",
+    "description": {
+      "el": "Ερ. Τι ψήφισες στις εθνικές εκλογές της 7ης Ιουλίου 2019;",
+      "en": "Q. What did you vote in the last National Elections of July 7, 2019?"
+    },
     "name": {
-      "el": "Τι ψήφισες στις εθνικές εκλογές της 7ης Ιουλίου 2019;",
-      "en": "What did you vote in the last National Elections of July 7, 2019?"
+      "el": "Ψήφος στις Εθνικές Εκλογές του 2019",
+      "en": "Vote in July 2019 National Elections"
     },
     "type": "coded",
     "groupId": "yw_politics"
   },
   {
-    "id": "yw_q18",
+    "id": "yw_q23",
+    "description": {
+      "el": "Ερ. Αν κάποιος πόσταρε αυτήν την εικόνα, πως θα αντιδρούσες;",
+      "en": "Q. If someone posted this image, how would you react?"
+    },
     "name": {
-      "el": "Ποιες από τις παρακάτω ομάδες σε χαρακτηρίζουν περισσότερο",
-      "en": "Which of the following groups characterizes you the most? (choose up to two)"
+      "el": "Αντίδραση σε επετείους & εορτασμούς",
+      "en": "Reaction to celebrations and anniversaries"
+    },
+    "groupId": "yw_politics",
+    "type": "composite",
+    "composedOf": [
+      "yw_q15c",
+      "yw_q15d",
+      "yw_q23c",
+      "yw_q23e",
+      "yw_q23f"
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "yw_q23a",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_politics",
+    "name": {
+      "el": "Διαμαρτυρία Vegan στη Βαρβάκειο",
+      "en": "Vegan protest outside the Athens central meat market (Varvakeios agora)"
+    }
+  },
+  {
+    "id": "yw_q23b",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_politics",
+    "name": {
+      "el": "Πορεία διαμαρτυρίας",
+      "en": "Street mass demonstration"
+    }
+  },
+  {
+    "id": "yw_q23c",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_politics",
+    "name": {
+      "el": "Εορτασμός επετείου Πολυτεχνείου",
+      "en": "Celebration of the Greek Polytechic uprising"
+    }
+  },
+  {
+    "id": "yw_q23d",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_politics",
+    "name": {
+      "el": "Προσαγωγές στα Εξάρχεια",
+      "en": "Police arrests in Exarcheia Square in Athens "
+    }
+  },
+  {
+    "id": "yw_q23e",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_politics",
+    "name": {
+      "el": "Ελληνικό Πάσχα (έθιμο αρνιού)",
+      "en": "Greek Easter  (lamb roasting)"
+    }
+  },
+  {
+    "id": "yw_q23f",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_politics",
+    "name": {
+      "el": "Μαθητική παρέλαση 28ης Οκτωβρίου",
+      "en": "Student parade for the 28th of October national holiday"
+    }
+  },
+  {
+    "id": "yw_q13",
+    "description": {
+      "el": "Ερ. Πόσο συμπαθείς ή αντιπαθείς τους:",
+      "en": "Q. How much do you like or dislike the following people:"
+    },
+    "name": {
+      "el": "Δημοφιλία προσώπων ",
+      "en": "Popularity of celebrities"
     },
     "groupId": "yw_lifestyle",
     "type": "composite",
     "composedOf": [
-      "yw_q18a",
-      "yw_q18b",
-      "yw_q18c",
-      "yw_q18d",
-      "yw_q18e",
-      "yw_q18f",
-      "yw_q18g",
-      "yw_q18h",
-      "yw_q18i",
-      "yw_q18j",
-      "yw_q18k",
-      "yw_q18l"
-    ]
+      "yw_q13a",
+      "yw_q13b",
+      "yw_q13c",
+      "yw_q13d",
+      "yw_q13e",
+      "yw_q13f",
+      "yw_q13g",
+      "yw_q13h",
+      "yw_q13i",
+      "yw_q13j"
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
-    "id": "yw_q18a",
+    "id": "yw_q13a",
     "type": "coded",
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
     "groupId": "yw_lifestyle",
     "name": {
-      "el": "Το φύλο μου",
-      "en": "My gender"
+      "el": "Γιάννης Αντετοκούμπο",
+      "en": "Giannis &etokoumbo"
     }
   },
   {
-    "id": "yw_q18b",
+    "id": "yw_q13b",
     "type": "coded",
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
     "groupId": "yw_lifestyle",
     "name": {
-      "el": "Η παρέα μου",
-      "en": "My group of friends"
+      "el": "Γιώργος Λάνθιμος",
+      "en": "Giorgos Lanthimos"
     }
   },
   {
-    "id": "yw_q18c",
+    "id": "yw_q13c",
     "type": "coded",
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
     "groupId": "yw_lifestyle",
     "name": {
-      "el": "Η ηλικία μου",
-      "en": "My age"
+      "el": "Ηλιάνα Παπαγεωργίου",
+      "en": "Iliana Papageorgiou"
     }
   },
   {
-    "id": "yw_q18d",
+    "id": "yw_q13d",
     "type": "coded",
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
     "groupId": "yw_lifestyle",
     "name": {
-      "el": "Η θρησκεία μου",
-      "en": "My religion"
+      "el": "ΛΕΞ",
+      "en": "LEX"
     }
   },
   {
-    "id": "yw_q18e",
+    "id": "yw_q13e",
     "type": "coded",
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
     "groupId": "yw_lifestyle",
     "name": {
-      "el": "Το επάγγελμά μου",
-      "en": "My occupation"
+      "el": "Στέφανος Τσιτσιπάς",
+      "en": "Stephanos Tsitsipas"
     }
   },
   {
-    "id": "yw_q18f",
+    "id": "yw_q13f",
     "type": "coded",
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
     "groupId": "yw_lifestyle",
     "name": {
-      "el": "Η ιδελογία μου",
-      "en": "My ideology"
+      "el": "Ελένη Φουρέιρα",
+      "en": "Eleni Foureira"
     }
   },
   {
-    "id": "yw_q18g",
+    "id": "yw_q13g",
     "type": "coded",
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
     "groupId": "yw_lifestyle",
     "name": {
-      "el": "Η οικογένειά μου",
-      "en": "My family"
+      "el": "Γιώργος Καπουτζίδης",
+      "en": "Giorgos Kapoutzidis"
     }
   },
   {
-    "id": "yw_q18h",
+    "id": "yw_q13h",
     "type": "coded",
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
     "groupId": "yw_lifestyle",
     "name": {
-      "el": "Η εθνικότητά μου",
-      "en": "My nationality"
+      "el": "Μαίρη Συνατσάκη",
+      "en": "Mary Synatsakis"
     }
   },
   {
-    "id": "yw_q18i",
+    "id": "yw_q13i",
     "type": "coded",
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
     "groupId": "yw_lifestyle",
     "name": {
-      "el": "Η κοινωνική μου τάξη",
-      "en": "My social class"
+      "el": "Sin Boy",
+      "en": "Sin Boy"
     }
   },
   {
-    "id": "yw_q18j",
+    "id": "yw_q13j",
     "type": "coded",
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
     "groupId": "yw_lifestyle",
     "name": {
-      "el": "Η ομάδα που υποστηρίζω",
-      "en": "My sports team"
-    }
-  },
-  {
-    "id": "yw_q18k",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_lifestyle",
-    "name": {
-      "el": "Η σεξουαλική μου ταυτότητα",
-      "en": "My sexual identity"
-    }
-  },
-  {
-    "id": "yw_q18l",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_lifestyle",
-    "name": {
-      "el": "Τίποτα από αυτά",
-      "en": "None of the above"
-    }
-  },
-  {
-    "id": "yw_q19",
-    "name": {
-      "el": "Πόσο περιγράφουν οι δηλώσεις τον εαυτό σου αυτή τη στιγμή",
-      "en": "How much do the statements apply to you at the moment?"
-    },
-    "groupId": "yw_lifestyle",
-    "type": "composite",
-    "composedOf": [
-      "yw_q19a",
-      "yw_q19b",
-      "yw_q19c",
-      "yw_q19d"
-    ]
-  },
-  {
-    "id": "yw_q19a",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_lifestyle",
-    "name": {
-      "el": "Νιώθω ότι δικαιούμαι γενικά περισσότερα σε όλα",
-      "en": "I feel eintitled to more of everything"
-    }
-  },
-  {
-    "id": "yw_q19b",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_lifestyle",
-    "name": {
-      "el": "Μου αξίζουν περισσότερα πράγματα στη ζωή",
-      "en": "I deserve more things in my life"
-    }
-  },
-  {
-    "id": "yw_q19c",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_lifestyle",
-    "name": {
-      "el": "Τα πράγματα πρέπει να πηγαίνουν όπως τα θέλω",
-      "en": "Things should go my way "
-    }
-  },
-  {
-    "id": "yw_q19d",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_lifestyle",
-    "name": {
-      "el": "Απαιτώ το καλύτερο γιατί μου αξίζει",
-      "en": "I demand the best because I'm worth it"
+      "el": "Greta Thunberg",
+      "en": "Greta Thunberg"
     }
   },
   {
     "id": "yw_q20",
+    "description": {
+      "el": "Ερ. Εσύ προσωπικά:",
+      "en": "Q. Does it apply to you:"
+    },
     "name": {
-      "el": "Εσύ προσωπικά",
-      "en": "Does it apply to you"
+      "el": "Συνήθειες & επιλογές",
+      "en": "Habits & choices"
     },
     "groupId": "yw_lifestyle",
     "type": "composite",
@@ -2624,7 +2551,9 @@
       "yw_q20h",
       "yw_q20i",
       "yw_q20j"
-    ]
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "yw_q20a",
@@ -2748,9 +2677,13 @@
   },
   {
     "id": "yw_q21",
+    "description": {
+      "el": "Ερ. Τι προτιμάς να κάνεις τον ελεύθερο χρόνο σου;",
+      "en": "Q. How do you like to spend your free time? (choose up to two)"
+    },
     "name": {
-      "el": "Τι προτιμάς να κάνεις τον ελεύθερο χρόνο σου",
-      "en": "How do you like to spend your free time  (choose up to two)"
+      "el": "Ελεύθερος χρόνος",
+      "en": "Free time"
     },
     "groupId": "yw_lifestyle",
     "type": "composite",
@@ -2763,7 +2696,9 @@
       "yw_q21f",
       "yw_q21g",
       "yw_q21h"
-    ]
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "yw_q21a",
@@ -2862,12 +2797,258 @@
     }
   },
   {
-    "id": "yw_q22",
-    "name": {
-      "el": "Πόσο περιγράφουν οι δηλώσεις τον εαυτό σου αυτή τη στιγμή",
-      "en": "How much do the statements apply to you at the moment?"
+    "id": "yw_q18",
+    "description": {
+      "el": "Ερ. Ποιες από τις παρακάτω ομάδες σε χαρακτηρίζουν περισσότερο;",
+      "en": "Q. Which of the following groups characterizes you the most? (choose up to two)"
     },
-    "groupId": "yw_lifestyle",
+    "name": {
+      "el": "Ταυτότητα",
+      "en": "Identity"
+    },
+    "groupId": "yw_personal",
+    "type": "composite",
+    "composedOf": [
+      "yw_q18a",
+      "yw_q18b",
+      "yw_q18c",
+      "yw_q18d",
+      "yw_q18e",
+      "yw_q18f",
+      "yw_q18g",
+      "yw_q18h",
+      "yw_q18i",
+      "yw_q18j",
+      "yw_q18k",
+      "yw_q18l"
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "yw_q18a",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Το φύλο μου",
+      "en": "My gender"
+    }
+  },
+  {
+    "id": "yw_q18b",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Η παρέα μου",
+      "en": "My group of friends"
+    }
+  },
+  {
+    "id": "yw_q18c",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Η ηλικία μου",
+      "en": "My age"
+    }
+  },
+  {
+    "id": "yw_q18d",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Η θρησκεία μου",
+      "en": "My religion"
+    }
+  },
+  {
+    "id": "yw_q18e",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Το επάγγελμά μου",
+      "en": "My occupation"
+    }
+  },
+  {
+    "id": "yw_q18f",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Η ιδελογία μου",
+      "en": "My ideology"
+    }
+  },
+  {
+    "id": "yw_q18g",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Η οικογένειά μου",
+      "en": "My family"
+    }
+  },
+  {
+    "id": "yw_q18h",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Η εθνικότητά μου",
+      "en": "My nationality"
+    }
+  },
+  {
+    "id": "yw_q18i",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Η κοινωνική μου τάξη",
+      "en": "My social class"
+    }
+  },
+  {
+    "id": "yw_q18j",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Η ομάδα που υποστηρίζω",
+      "en": "My sports team"
+    }
+  },
+  {
+    "id": "yw_q18k",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Η σεξουαλική μου ταυτότητα",
+      "en": "My sexual identity"
+    }
+  },
+  {
+    "id": "yw_q18l",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Τίποτα από αυτά",
+      "en": "None of the above"
+    }
+  },
+  {
+    "id": "yw_q19",
+    "description": {
+      "el": "Ερ. Πόσο περιγράφουν οι δηλώσεις τον εαυτό σου αυτή τη στιγμή;",
+      "en": "Q. How much do the statements apply to you at the moment?"
+    },
+    "name": {
+      "el": "Προσωπικότητα Ι",
+      "en": "Personality I"
+    },
+    "groupId": "yw_personal",
+    "type": "composite",
+    "composedOf": [
+      "yw_q19a",
+      "yw_q19b",
+      "yw_q19c",
+      "yw_q19d"
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "yw_q19a",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Νιώθω ότι δικαιούμαι γενικά περισσότερα σε όλα",
+      "en": "I feel eintitled to more of everything"
+    }
+  },
+  {
+    "id": "yw_q19b",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Μου αξίζουν περισσότερα πράγματα στη ζωή",
+      "en": "I deserve more things in my life"
+    }
+  },
+  {
+    "id": "yw_q19c",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Τα πράγματα πρέπει να πηγαίνουν όπως τα θέλω",
+      "en": "Things should go my way "
+    }
+  },
+  {
+    "id": "yw_q19d",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "groupId": "yw_personal",
+    "name": {
+      "el": "Απαιτώ το καλύτερο γιατί μου αξίζει",
+      "en": "I demand the best because I'm worth it"
+    }
+  },
+  {
+    "id": "yw_q22",
+    "description": {
+      "el": "Ερ. Πόσο περιγράφουν οι δηλώσεις τον εαυτό σου αυτή τη στιγμή;",
+      "en": "Q. How much do the statements apply to you at the moment?"
+    },
+    "name": {
+      "el": "Προσωπικότητα ΙΙ",
+      "en": "Personality II"
+    },
+    "groupId": "yw_personal",
     "type": "composite",
     "composedOf": [
       "yw_q22a",
@@ -2880,7 +3061,9 @@
       "yw_q22h",
       "yw_q22i",
       "yw_q22j"
-    ]
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
   },
   {
     "id": "yw_q22a",
@@ -2888,7 +3071,7 @@
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
-    "groupId": "yw_lifestyle",
+    "groupId": "yw_personal",
     "name": {
       "el": "Μου αρέσει να μιλάω με διαφορετικούς ανθρώπους ",
       "en": "I like to talk to different people"
@@ -2900,7 +3083,7 @@
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
-    "groupId": "yw_lifestyle",
+    "groupId": "yw_personal",
     "name": {
       "el": "Αντιμετωπίζω τους άλλους με κριτική ματιά ",
       "en": "I critically face up others "
@@ -2912,7 +3095,7 @@
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
-    "groupId": "yw_lifestyle",
+    "groupId": "yw_personal",
     "name": {
       "el": "Μου αρέσει η τάξη ",
       "en": "I like order"
@@ -2924,7 +3107,7 @@
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
-    "groupId": "yw_lifestyle",
+    "groupId": "yw_personal",
     "name": {
       "el": "Αναστατώνομαι εύκολα ",
       "en": "I get easily upset"
@@ -2936,7 +3119,7 @@
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
-    "groupId": "yw_lifestyle",
+    "groupId": "yw_personal",
     "name": {
       "el": "Μου αρέσουν οι νέες εμπειρίες ",
       "en": "I am open to new experiences"
@@ -2948,7 +3131,7 @@
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
-    "groupId": "yw_lifestyle",
+    "groupId": "yw_personal",
     "name": {
       "el": "Συνήθως είμαι ήσυχος/η ",
       "en": "I am usually quiet"
@@ -2960,7 +3143,7 @@
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
-    "groupId": "yw_lifestyle",
+    "groupId": "yw_personal",
     "name": {
       "el": "Συμπάσχω με τα συναισθήματα των άλλων ",
       "en": "I am sympathetize with others'  feelings"
@@ -2972,7 +3155,7 @@
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
-    "groupId": "yw_lifestyle",
+    "groupId": "yw_personal",
     "name": {
       "el": "Συχνά ξεχνώ να βάζω τα πράγματα πίσω στη θέση τους ",
       "en": "I often forget to put things back in their place"
@@ -2984,7 +3167,7 @@
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
-    "groupId": "yw_lifestyle",
+    "groupId": "yw_personal",
     "name": {
       "el": "Είμαι χαλαρός/ή τις περισσότερες φορές ",
       "en": "I am relaxed most of the time"
@@ -2996,99 +3179,10 @@
     "disableFilter": true,
     "disableCompareBy": true,
     "disableAxis": true,
-    "groupId": "yw_lifestyle",
+    "groupId": "yw_personal",
     "name": {
       "el": "Δεν έχω πολλή φαντασία ",
       "en": "I do not have a good imagination"
-    }
-  },
-  {
-    "id": "yw_q23",
-    "name": {
-      "el": "Αν κάποιος πόσταρε αυτήν την εικόνα, πως θα αντιδρούσες",
-      "en": "If someone posted this image, how would you react"
-    },
-    "groupId": "yw_lifestyle",
-    "type": "composite",
-    "composedOf": [
-      "yw_q23a",
-      "yw_q23b",
-      "yw_q23c",
-      "yw_q23d",
-      "yw_q23e",
-      "yw_q23f"
-    ]
-  },
-  {
-    "id": "yw_q23a",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_lifestyle",
-    "name": {
-      "el": "Διαμαρτυρία Vegan στη Βαρβάκειο",
-      "en": "Vegan protest outside the Athens central meat market (Varvakeios agora)"
-    }
-  },
-  {
-    "id": "yw_q23b",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_lifestyle",
-    "name": {
-      "el": "Πορεία διαμαρτυρίας",
-      "en": "Street mass demonstration"
-    }
-  },
-  {
-    "id": "yw_q23c",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_lifestyle",
-    "name": {
-      "el": "Εορτασμός επετείου Πολυτεχνείου",
-      "en": "Celebration of the Greek Polytechic uprising"
-    }
-  },
-  {
-    "id": "yw_q23d",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_lifestyle",
-    "name": {
-      "el": "Προσαγωγές στα Εξάρχεια",
-      "en": "Police arrests in Exarcheia Square in Athens "
-    }
-  },
-  {
-    "id": "yw_q23e",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_lifestyle",
-    "name": {
-      "el": "Ελληνικό Πάσχα (έθιμο αρνιού)",
-      "en": "Greek Easter  (lamb roasting)"
-    }
-  },
-  {
-    "id": "yw_q23f",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true,
-    "disableAxis": true,
-    "groupId": "yw_lifestyle",
-    "name": {
-      "el": "Μαθητική παρέλαση 28ης Οκτωβρίου",
-      "en": "Student parade for the 28th of October national holiday"
     }
   }
 ]
