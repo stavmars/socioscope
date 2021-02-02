@@ -14,7 +14,7 @@
     "@fortawesome/react-fontawesome": "0.1.3",
     "@jgrayfibersmith/ckeditor5-build-classic-full-with-base64-upload": "^22.0.0",
     "availity-reactstrap-validation": "^2.5.4",
-    "axios": "0.18.0",
+    "axios": "0.21.1",
     "chroma-js": "^2.0.4",
     "greek-utils": "^1.3.0",
     "highcharts": "^7.1.2",
