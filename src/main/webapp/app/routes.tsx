@@ -54,8 +54,8 @@ export class Routes extends React.Component<IRoutesProps> {
           <ErrorBoundaryRoute path="/reset/request" component={PasswordResetInit} />
           <ErrorBoundaryRoute path="/reset/finish/:key?" component={PasswordResetFinish} />
           <PrivateRoute path="/admin" component={Admin} hasAnyAuthorities={[AUTHORITIES.ADMIN]} />
-          <PrivateRoute path="/account" component={Account} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
-          <PrivateRoute path="/entity" component={Entities} hasAnyAuthorities={[AUTHORITIES.USER]} />
+          <PrivateRoute path="/account" component={Account} hasAnyAuthorities={[AUTHORITIES.ADMIN]} />
+          <PrivateRoute path="/entity" component={Entities} hasAnyAuthorities={[AUTHORITIES.ADMIN]} />
           <PrivateRoute path="/post-editor/new" component={PostEditor} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
           <PrivateRoute path="/post-editor/:id/edit" component={PostEditor} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
           <ErrorBoundaryRoute path="/dataset" component={DataSetPage} />
