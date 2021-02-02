@@ -1,12 +1,13 @@
 import './dataset-page.scss';
 import React from 'react';
-import { Grid, Menu, Image, Responsive, Icon } from 'semantic-ui-react';
+import { Grid, Image, Menu, Responsive } from 'semantic-ui-react';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { NavLink } from 'react-router-dom';
-import { Translate, translate } from 'react-jhipster';
-import { toggleTopicsMenu, toggleMobileMenu } from 'app/shared/reducers/header';
+import { translate } from 'react-jhipster';
+import { toggleMobileMenu, toggleTopicsMenu } from 'app/shared/reducers/header';
 import { connect } from 'react-redux';
+
 // tslint:disable max-line-length
 
 export interface IDatasetPageTabMenuProp extends DispatchProps {
@@ -31,7 +32,7 @@ export class DatasetPageTabMenu extends React.Component<IDatasetPageTabMenuProp>
     return (
       <div
         className={`dataset-page-tab-menu` + (isMinimized ? ' minimized' : '')}
-        style={{ background: `url(/content/images/Assets/${dataset.id === 'youwho' ? 'adolescents' : dataset.id}.jpg) 0%/cover no-repeat` }}
+        style={{ background: `url(/content/images/Assets/${dataset.id}.jpg) 0%/cover no-repeat` }}
       >
         <div className={`dataset-page-tab-menu-top` + (isMinimized ? ' minimized' : '')}>
           <div className={`dataset-page-title` + (isMinimized ? ' minimized' : '')}>
