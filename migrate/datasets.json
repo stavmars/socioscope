@@ -1192,6 +1192,49 @@
       "xAxis": "yw_q7",
       "measure": "adolescents_perc"
     },
-    "highlights": []
+    "highlights": [
+      {
+        "id": "socialMediaComments",
+        "description": {
+          "el": "<span>Σχετικά με τους τρόπους που συμμετέχουν πολιτικά και κοινωνικά οι ερωτώμενοι/ες, το 47,4% τον τελευταίο χρόνο έχει κάνει κάποιο σχόλιο στα social media για κάποιο πολιτικό/κοινωνικό θέμα, ενώ το 37,2% έχει ποστάρει κάποιο μουσικό κομμάτι με πολιτικό ή κοινωνικό περιεχόμενο.</span>",
+          "en": "<span>Regarding respondents’ modes of participation, during the last year 47.4% have made a comment on social media on a political/social issue, while 37.2% have posted a piece of music with political or social content.</span>"
+        },
+        "visType": "chart",
+        "subType": "column",
+        "seriesOptions": {
+          "dimensionFilters": {},
+          "measure": "adolescents_perc",
+          "xAxis": "yw_q11"
+        }
+      },
+      {
+        "id": "recycling",
+        "description": {
+          "el": "<span>Σχετικά με τις συνήθειες, πρακτικές και καθημερινές επιλογές των νέων, η ανακύκλωση συγκεντρώνει τα υψηλότερα ποσοστά θετικών απαντήσεων καθώς το 69,9% ανακυκλώνει χαρτί, πλαστικό ή γυαλί στο σπίτι. Σχεδόν οι μισοί (46,9%) δηλώνουν ότι έχουν ποστάρει βίντεο του αυτού τους στο διαδίκτυο.</span>",
+          "en": "<span>On young people's habits, practices and daily choices, recycling has the highest rates of positive responses as 69.9% recycle paper, plastic or glass at home. Following that, almost half (46.9%) of those surveyed state that they have posted videos of themselves on the internet.</span>"
+        },
+        "visType": "chart",
+        "subType": "column",
+        "seriesOptions": {
+          "xAxis": "yw_q20",
+          "measure": "adolescents_perc",
+          "dimensionFilters": {}
+        }
+      },
+      {
+        "id": "freeTime",
+        "description": {
+          "el": "<span>Σχετικά με το τι προτιμούν να κάνουν οι νέοι στον ελεύθερο χρόνο τους, το μεγαλύτερο ποσοστό (48%) θετικών απαντήσεων συγκεντρώνεται στην επιλογή «Παρέα με φίλους/ες εκτός σπιτιού», ενώ το αμέσως επόμενο μεγαλύτερο ποσοστό (40%) εμφανίζεται στην επιλογή «Χαλάρωση με ταινίες, social media, video games, διάβασμα κλπ.».</span>",
+          "en": "<span>Regarding the ways young people spend their free time, the highest percentage (48%) in their spare time prefers to spend time “with friends hanging outside\"; following that, 40% prefer to spend their spare time \"relaxing with movies, social media, video games, reading, etc.\".</span>"
+        },
+        "visType": "chart",
+        "subType": "column",
+        "seriesOptions": {
+          "xAxis": "yw_q21",
+          "measure": "adolescents_perc",
+          "dimensionFilters": {}
+        }
+      }
+    ]
   }
 ]
