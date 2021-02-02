@@ -91,7 +91,7 @@ export class App extends React.Component<IAppProps> {
               !this.props.isTopicsMenuVisible &&
               !this.props.isMobileMenuVisible && (
                 <Switch>
-                  <Route path="/about" render={() => <Header isFixed className="about-page-header" />} />
+                  <Route path={'(/about|/post-editor)'} render={() => <Header isFixed className="about-page-header" />} />
                   <Route path="/dataset" render={() => <div />} />
                   <Route path="/" render={() => <Header isFixed />} />
                 </Switch>

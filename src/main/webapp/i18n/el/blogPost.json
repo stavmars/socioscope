@@ -1,0 +1,26 @@
+{
+  "socioscopeApp": {
+    "blogPost": {
+      "home": {
+        "title": "Blog Posts",
+        "createLabel": "Δημιουργήστε ένα νέο Blog Post",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Blog Post"
+      },
+      "created": "Ένα νέο Blog Post έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Blog Post έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Blog Post έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Blog Post {{ id }};"
+      },
+      "detail": {
+        "title": "Blog Post"
+      },
+      "previewTitle": "Preview Title",
+      "previewImage": "Preview Image",
+      "content": "Content",
+      "postDate": "Post Date",
+      "published": "Published",
+      "previewText": "Preview Text"
+    }
+  }
+}
