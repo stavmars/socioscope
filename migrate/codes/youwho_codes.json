@@ -824,8 +824,8 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "1",
-      "en": "1"
+      "el": "Αριστερά",
+      "en": "Left"
     },
     "color": null
   },
@@ -834,8 +834,8 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "2",
-      "en": "2"
+      "el": "Κέντρο",
+      "en": "Center"
     },
     "color": null
   },
@@ -844,90 +844,10 @@
     "notation": "3",
     "order": 3,
     "name": {
-      "el": "3",
-      "en": "3"
+      "el": "Δεξιά",
+      "en": "Right"
     },
     "color": null
-  },
-  {
-    "dimensionId": "yw_q14",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "4",
-      "en": "4"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "yw_q14",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "5",
-      "en": "5"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "yw_q14",
-    "notation": "6",
-    "order": 6,
-    "name": {
-      "el": "6",
-      "en": "6"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "yw_q14",
-    "notation": "7",
-    "order": 7,
-    "name": {
-      "el": "7",
-      "en": "7"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "yw_q14",
-    "notation": "8",
-    "order": 8,
-    "name": {
-      "el": "8",
-      "en": "8"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "yw_q14",
-    "notation": "9",
-    "order": 9,
-    "name": {
-      "el": "9",
-      "en": "9"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "yw_q14",
-    "notation": "10",
-    "order": 10,
-    "name": {
-      "el": "10",
-      "en": "10"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "yw_q14",
-    "notation": "99",
-    "order": 99,
-    "name": {
-      "el": "ΔΑ",
-      "en": "NA"
-    },
-    "color": "#a9a9a9"
   },
   {
     "dimensionId": "yw_q15",
