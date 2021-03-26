@@ -850,6 +850,16 @@
     "color": null
   },
   {
+    "dimensionId": "yw_q14",
+    "notation": "99",
+    "order": 99,
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "color": "#a9a9a9"
+  },
+  {
     "dimensionId": "yw_q15",
     "notation": "1",
     "order": 1,
