@@ -130,16 +130,16 @@ Main page styles
   }
   .dataset-card-header-image {
     @include mobile {
-      width: 31px;
+      //width: 31px;
       height: 30px;
     }
     @include tablet {
-      width: 41px;
+      //width: 41px;
       height: 40px;
     }
     @include computer {
-      width: auto;
-      height: auto;
+      //width: auto;
+      height: 45px;
     }
   }
   h3 {
