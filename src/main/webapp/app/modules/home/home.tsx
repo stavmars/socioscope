@@ -45,7 +45,7 @@ export class Home extends React.Component<IHomeProp> {
         </Visibility>
         <div id="discover" style={{ height: 120 }} />
         <div className="dataset-cards">
-          {_.at(datasetsById, ['adolescents', 'deputies', 'greek-election-results', 'claims']).map((dataset: IDataSet) => (
+          {_.at(datasetsById, ['youwho', 'adolescents', 'deputies', 'greek-election-results', 'claims']).map((dataset: IDataSet) => (
             <div>
               <div className={`dataset-card-header ${dataset.colorScheme}`}>
                 <Image className="dataset-card-header-image" centered src={`/content/images/Assets/${dataset.id}.svg`} />
