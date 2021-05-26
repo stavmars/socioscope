@@ -28,7 +28,7 @@ export class MobileMenu extends React.Component<IMobileMenuProps> {
             <List.Content>
               <List.Header className="mobile-menu-item">{translate('global.menu.topics')}</List.Header>
               <div className="mobile-menu-list">
-                {_.at(dataSetsById, ['adolescents', 'deputies', 'greek-election-results', 'claims']).map((dataset: IDataSet) => (
+                {_.at(dataSetsById, ['adolescents', 'deputies', 'greek-election-results', 'claims', 'youwho']).map((dataset: IDataSet) => (
                   <List.Item className={`mobile-menu-list-line ${dataset.colorScheme}`}>
                     <Container>
                       <Image className="mobile-menu-list-line-image" src={`/content/images/Assets/${dataset.id}.svg`} />
