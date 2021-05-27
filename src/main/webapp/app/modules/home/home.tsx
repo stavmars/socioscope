@@ -7,7 +7,7 @@ import { translate } from 'react-jhipster';
 import { getSession } from 'app/shared/reducers/authentication';
 import { hideHeader, showHeader } from 'app/shared/reducers/header';
 
-import { Container, Image, Visibility } from 'semantic-ui-react';
+import { Container, Embed, Icon, Image, Modal, Visibility } from 'semantic-ui-react';
 import AppHeader from 'app/shared/layout/header/header';
 import CardCarousel from 'app/modules/home/card-carousel';
 import DatasetCard from 'app/modules/home/dataset-card';
@@ -37,6 +37,15 @@ export class Home extends React.Component<IHomeProp> {
             <Container textAlign="center">
               <h1 className="home-page-view-title">{translate('home.title')}</h1>
               <h2 className="home-page-view-subtitle">{translate('home.subtitle')}</h2>
+              <Modal
+                closeIcon
+                trigger={
+                  <span className="home-page-view-video">
+                    {translate('home.video')} <Icon name="play" size="tiny" style={{ verticalAlign: 'top' }} />
+                  </span>
+                }
+                content={<Embed id="GPP1Bijmss4" source="youtube" autoplay defaultActive />}
+              />
               <HashLink to="#discover" className="home-page-view-explore" smooth replace={false}>
                 {translate('home.explore')}
               </HashLink>

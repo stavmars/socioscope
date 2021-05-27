@@ -3,6 +3,7 @@
     "title": "Open Social Data",
     "subtitle": "Socioscope is a platform for the visualization and mapping of social and political data. Choose a topic. Browse data. Create your own graphs and maps. Save or share the created content.",
     "explore": "EXPLORE",
+    "video": "WATCH THE VIDEO",
     "logged": {
       "message": "You are logged in as user \"{{username}}\"."
     },

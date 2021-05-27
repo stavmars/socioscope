@@ -48,21 +48,30 @@ Main page styles
       font-size: 20px;
     }
   }
-  .home-page-view-explore {
+  .home-page-view-explore,
+  .home-page-view-video {
     font-family: BPnoScriptBold;
     color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-color: #ff5d39;
+    margin: 0 10px;
     @include mobile {
       font-size: 16px;
-      border-bottom: 2px solid #ff5d39;
+      border-bottom-width: 2px;
     }
     @include tablet {
       font-size: 20px;
-      border-bottom: 3px solid #ff5d39;
+      border-bottom-width: 3px;
     }
     @include computer {
       font-size: 30px;
-      border-bottom: 4px solid #ff5d39;
+      border-bottom-width: 4px;
     }
+  }
+
+  .home-page-view-video {
+    border-bottom-color: #d146fc;
+    cursor: pointer;
   }
 }
 
