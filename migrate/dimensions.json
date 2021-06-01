@@ -1883,7 +1883,7 @@
     "disableAxis": true,
     "groupId": "yw_social",
     "name": {
-      "el": "Να συμμετέχει σε δράσεις για τα ανθρώπινα δι&ώματα",
+      "el": "Να συμμετέχει σε δράσεις για τα ανθρώπινα δικαιώματα",
       "en": "To participate in actions for the protection of human rights"
     }
   },
@@ -2135,14 +2135,14 @@
     "disableAxis": true,
     "groupId": "yw_social",
     "name": {
-      "el": "Τα ομοφυλόφιλα ζευγάρια να έχουν τα ίδια δι&ώματα στην υιοθεσία παιδιών όπως & τα ετεροφυλόφιλα",
+      "el": "Τα ομοφυλόφιλα ζευγάρια να έχουν τα ίδια δικαιώματα στην υιοθεσία παιδιών όπως & τα ετεροφυλόφιλα",
       "en": "Same sex couples should have the same rights for adopting children as heterosexual couples"
     }
   },
   {
     "id": "yw_q12",
     "description": {
-      "el": "Ερ. Με ποιο πολιτικό ή ιδεολογικό ρεύμα ταυτίζετσαι περισσότερο;",
+      "el": "Ερ. Με ποιο πολιτικό ή ιδεολογικό ρεύμα ταυτίζεσαι περισσότερο;",
       "en": "Q. With which political ideology do you identify the most?"
     },
     "name": {
