@@ -3184,5 +3184,457 @@
       "el": "Δεν έχω πολλή φαντασία ",
       "en": "I do not have a good imagination"
     }
+  },
+  {
+    "id": "ye_q1",
+    "name": {
+      "el": "Ηλικία",
+      "en": "Age"
+    },
+    "description": {
+      "el": "Ηλικία",
+      "en": "Age"
+    },
+    "groupId": "ye_demographics",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q2",
+    "name": {
+      "el": "Φύλο",
+      "en": "Gender"
+    },
+    "description": {
+      "el": "Φύλο",
+      "en": "Gender"
+    },
+    "groupId": "ye_demographics",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q3",
+    "name": {
+      "el": "Περιοχή κατοικίας ",
+      "en": "Area of residence"
+    },
+    "description": {
+      "el": "Περιοχή κατοικίας ",
+      "en": "Area of residence"
+    },
+    "groupId": "ye_demographics",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q4",
+    "name": {
+      "el": "Βαθμός αστικότητας",
+      "en": "Urbanity"
+    },
+    "description": {
+      "el": "Βαθμός αστικότητας",
+      "en": "Urbanity"
+    },
+    "groupId": "ye_demographics",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q5",
+    "name": {
+      "el": "Επίπεδο εκπαίδευσης",
+      "en": "Educational level"
+    },
+    "description": {
+      "el": "Επίπεδο εκπαίδευσης",
+      "en": "Educational level"
+    },
+    "groupId": "ye_demographics",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q8",
+    "name": {
+      "el": "Οικονομικό status",
+      "en": "Economic status"
+    },
+    "description": {
+      "el": "Οικονομικό status",
+      "en": "Economic status"
+    },
+    "groupId": "ye_demographics",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q9_1",
+    "name": {
+      "el": "Προτίμηση για Ελλάδα",
+      "en": "Preferation for Greece"
+    },
+    "description": {
+      "el": "Ερ. Είναι προτιμότερο να ζεις στην Ελλάδα από οποιαδήποτε άλλη χώρα στον κόσμο;        ",
+      "en": "It is better to live in Greece than in any other country in the world"
+    },
+    "groupId": "ye_national_european_identity",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q9_2",
+    "name": {
+      "el": "Προτίμηση για Έλληνες",
+      "en": "Preferation for Greeks"
+    },
+    "description": {
+      "el": "Ερ. Οι Έλληνες/ίδες θα ήταν καλύτεροι/ες εάν έμοιαζαν περισσότερο με τους Ευρωπαίους;",
+      "en": "Greeks would be better if they were more like Europeans"
+    },
+    "groupId": "ye_national_european_identity",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q10",
+    "name": {
+      "el": "Εθνική υπερηφάνεια",
+      "en": "National pride"
+    },
+    "description": {
+      "el": "Ερ. Τι νιώθετε για τα παρακάτω στην Ελλάδα;",
+      "en": "How do you feel about the following in Greece?"
+    },
+    "groupId": "ye_national_european_identity",
+    "type": "composite",
+    "composedOf": [
+      "q10_1",
+      "q10_2",
+      "q10_3",
+      "q10_4",
+      "q10_5",
+      "q10_6"
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q11",
+    "name": {
+      "el": "Ταξίδια στην Ε.Ε.",
+      "en": "Trips to EU"
+    },
+    "description": {
+      "el": "Ερ. Πόσα ταξίδια έχετε κάνει μέχρι σήμερα σε άλλες χώρες της Ε.Ε.;",
+      "en": "How many times have you traveled to another EU country so far?"
+    },
+    "groupId": "ye_common_european_experiences",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q12",
+    "name": {
+      "el": "Λόγοι ταξιδιών στην Ε.Ε.",
+      "en": "Reasons to treavel to EU"
+    },
+    "description": {
+      "el": "Ερ. Ποιοι ήταν οι λόγοι του/των ταξιδιού/ων σας;  ",
+      "en": "What were the reasons for your trip(s)?"
+    },
+    "groupId": "ye_common_european_experiences",
+    "type": "composite",
+    "composedOf": [
+      "q12_1",
+      "q12_2",
+      "q12_3",
+      "q12_4",
+      "q12_5",
+      "q12_6",
+      "q12_7",
+      "q12_8",
+      "q12_9",
+      "q12_10"
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q13",
+    "name": {
+      "el": "Ατομική ταυτότητα",
+      "en": "Personal Identity"
+    },
+    "description": {
+      "el": "Ερ. Θεωρείτε τον εαυτό σας;",
+      "en": "Do you consider yourself?"
+    },
+    "groupId": "ye_national_european_identity",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q14",
+    "name": {
+      "el": "Υποστασιακότητα",
+      "en": "Entitativity "
+    },
+    "description": {
+      "el": "Ερ. Πόσο συμφωνείτε ή διαφωνείτε με τα παρακάτω σχετικά με την Ευρωπαϊκή Ένωση;",
+      "en": "How much do you agree or disagree with the following statements about EU?"
+    },
+    "groupId": "ye_entitativity",
+    "type": "composite",
+    "composedOf": [
+      "q14_1",
+      "q14_2",
+      "q14_3",
+      "q14_4",
+      "q14_5",
+      "q14_6",
+      "q14_7",
+      "q14_8",
+      "q14_9"
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q15",
+    "name": {
+      "el": "Επιδραστικό γεγονός για Ε.Ε.",
+      "en": "Informative europran moment"
+    },
+    "description": {
+      "el": "Ερ. Ποιο γεγονός του 21ου αιώνα πιστεύετε ότι διαμόρφωσε περισσότερο την προσωπική σας εικόνα για την Ευρωπαϊκή Ένωση;",
+      "en": "Which 21st century event shaped more your personal opinion of the European Union? "
+    },
+    "groupId": "ye_common_european_experiences",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q16",
+    "name": {
+      "el": "Επιδραστικό βίωμα για Ε.Ε.",
+      "en": "Informative european experience"
+    },
+    "description": {
+      "el": "Ερ. Ποιο από τα παρακάτω επηρέασε περισσότερο εσάς προσωπικά στο πώς βιώνετε την Ε.Ε.;",
+      "en": "And which event shaped more the way you, personally, experience the EU?"
+    },
+    "groupId": "ye_common_european_experiences",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q17_c",
+    "name": {
+      "el": "Πατριωτισμός",
+      "en": "Patriotism"
+    },
+    "description": {
+      "el": "Ερ. Έστω ότι στο Ευρωκοινοβούλιο συζητείται η μείωση των προγραμμάτων χρηματοδότησης για τις χώρες με υψηλό έλλειμμα προϋπολογισμού. Τι πιστεύετε ότι πρέπει να ψηφίσουν οι Έλληνες ευρωβουλευτές;",
+      "en": "Suppose that the European Parliament discusses the issue of cutting down EU funding programmes for member states with high budget deficit. How do you think Greek MEPs should vote? "
+    },
+    "groupId": "ye_national_european_identity",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q17_b",
+    "name": {
+      "el": "Πατριωτισμός",
+      "en": "Patriotism"
+    },
+    "description": {
+      "el": "Ερ. Έστω ότι στο Ευρωκοινοβούλιο συζητείται το θέμα της ενεργειακής κρίσης και έχει προταθεί η εξοικονόμηση ενέργειας από όλες τις χώρες κατά 10%. Τι πιστεύετε ότι πρέπει να ψηφίσουν οι Έλληνες ευρωβουλευτές;",
+      "en": "Suppose that the European Parliament discusses the issue of energy crisis and there is a resolution to cut down energy consumption by 10% in all member state. How do you think Greek MEPs should vote? "
+    },
+    "groupId": "ye_national_european_identity",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q17",
+    "name": {
+      "el": "Η Ελλάδα στην Ευρώπη",
+      "en": "Greece in EU"
+    },
+    "description": {
+      "el": "Ερ. Πόσο συμφωνείτε ή διαφωνείτε με τα παρακάτω;",
+      "en": "How much do you agree or disagree with the following statements?"
+    },
+    "groupId": "ye_greece_in_europe",
+    "type": "composite",
+    "composedOf": [
+      "q17_1",
+      "q17_2",
+      "q17_3",
+      "q17_4",
+      "q17_5",
+      "q17_6"
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q18",
+    "name": {
+      "el": "Προτεραιότητες Ε.Ε. για ψηφιακά δικαιώματα",
+      "en": "EU priorities for digital rights"
+    },
+    "description": {
+      "el": "Ερ. Ποιες πιστεύετε ότι πρέπει να είναι οι προτεραιότητες στην Ευρώπη για τα ψηφιακά δικαιώματα των πολιτών; ",
+      "en": "What do you think should be the priorities in Europe for citizens' digital rights? "
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "composite",
+    "composedOf": [
+      "q18_1",
+      "q18_2",
+      "q18_3",
+      "q18_4",
+      "q18_5"
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q19",
+    "name": {
+      "el": "Προτεραιότητες Ε.Ε για νέους",
+      "en": "EU priorities for youth"
+    },
+    "description": {
+      "el": "Ερ. Σε ποιους στόχους πιστεύετε ότι πρέπει να δώσει προτεραιότητα η Ευρωπαϊκή Ένωση για να υποστηρίξει το μέλλον των νέων; ",
+      "en": "What objectives do you think the EU should prioritize to support the future of young people?"
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "composite",
+    "composedOf": [
+      "q19_1",
+      "q19_2",
+      "q19_3",
+      "q19_4",
+      "q19_5",
+      "q19_6",
+      "q19_7",
+      "q19_8",
+      "q19_9"
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q20",
+    "name": {
+      "el": "Ανησυχία για κλιματική αλλαγή",
+      "en": "Concern about climate change"
+    },
+    "description": {
+      "el": "Ερ. Πόσο ανήσυχος/η είστε για την κλιματική αλλαγή;",
+      "en": "How worried are you about  climate change?"
+    },
+    "groupId": "ye_climate_change",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q21",
+    "name": {
+      "el": "Ευθύνη για καταπολέμιση κλιματικής αλλαγής",
+      "en": "Responsibility for combating climate change"
+    },
+    "description": {
+      "el": "Ερ. Κατά τη γνώμη σας, ποιος έχει την κύρια ευθύνη για την καταπολέμηση της κλιματικής αλλαγής;",
+      "en": "In your opinion, who has the primary responsibility for tackning climate change?"
+    },
+    "groupId": "ye_climate_change",
+    "type": "composite",
+    "composedOf": [
+      "q21_1",
+      "q21_2",
+      "q21_3",
+      "q21_4",
+      "q21_5",
+      "q21_6",
+      "q21_7",
+      "q21_8",
+      "q21_9"
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q22",
+    "name": {
+      "el": "Ατομικές συνήθειες ",
+      "en": "Personal habits"
+    },
+    "description": {
+      "el": "Ερ. Τι από τα παρακάτω κάνετε;",
+      "en": "Do you?"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "composite",
+    "composedOf": [
+      "q22_1",
+      "q22_2",
+      "q22_3",
+      "q22_4",
+      "q22_5",
+      "q22_6",
+      "q22_7",
+      "q22_8",
+      "q22_9"
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q23",
+    "name": {
+      "el": "Ατομικές δράσεις",
+      "en": "Personal actions"
+    },
+    "description": {
+      "el": "Ερ. Σε σχέση με ενέργειες για το κλίμα και το περιβάλλον τι από τα παρακάτω έχετε κάνει τον τελευταίο χρόνο; ",
+      "en": "In relation to actions about climate and the environment, which of the following have you done in the past year? "
+    },
+    "groupId": "ye_environment_climate",
+    "type": "composite",
+    "composedOf": [
+      "q23_1",
+      "q23_2",
+      "q23_3",
+      "q23_4",
+      "q23_5",
+      "q23_6",
+      "q23_7",
+      "q23_8",
+      "q23_9",
+      "q23_10",
+      "q23_11"
+    ],
+    "disableFilter": true,
+    "disableCompareBy": true
   }
 ]

@@ -1,0 +1,3422 @@
+[
+  {
+    "dimensionId": "q1",
+    "notation": "99",
+    "order": 1,
+    "name": {
+      "el": "Πριν το 1993",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "1993",
+    "order": 2,
+    "name": {
+      "el": "1993",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "1994",
+    "order": 3,
+    "name": {
+      "el": "1994",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "1995",
+    "order": 4,
+    "name": {
+      "el": "1995",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "1996",
+    "order": 5,
+    "name": {
+      "el": "1996",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "1997",
+    "order": 6,
+    "name": {
+      "el": "1997",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "1998",
+    "order": 7,
+    "name": {
+      "el": "1998",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "1999",
+    "order": 8,
+    "name": {
+      "el": "1999",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "2000",
+    "order": 9,
+    "name": {
+      "el": "2000",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "2001",
+    "order": 10,
+    "name": {
+      "el": "2001",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "2002",
+    "order": 11,
+    "name": {
+      "el": "2002",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "2003",
+    "order": 12,
+    "name": {
+      "el": "2003",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "2004",
+    "order": 13,
+    "name": {
+      "el": "2004",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "2005",
+    "order": 14,
+    "name": {
+      "el": "2005",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q1",
+    "notation": "2006",
+    "order": 15,
+    "name": {
+      "el": "Μετά το 2005",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q2",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "ΑΝΔΡΑΣ",
+      "en": "Male"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q2",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "ΓΥΝΑΙΚΑ",
+      "en": "Female"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q2",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "ΑΛΛΟ",
+      "en": "Other"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q3",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Ανατολική Μακεδονία και Θράκη",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q3",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Κεντρική Μακεδονία",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q3",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Πολεοδομικό Συγκρότητα Θεσσαλονίκης",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q3",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Δυτική Μακεδονία",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q3",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Ήπειρος",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q3",
+    "notation": "6",
+    "order": 6,
+    "name": {
+      "el": "Θεσσαλία",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q3",
+    "notation": "7",
+    "order": 7,
+    "name": {
+      "el": "Στερεά Ελλάδα",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q3",
+    "notation": "8",
+    "order": 8,
+    "name": {
+      "el": "Δυτική Ελλάδα",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q3",
+    "notation": "9",
+    "order": 9,
+    "name": {
+      "el": "Αττική",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q3",
+    "notation": "10",
+    "order": 10,
+    "name": {
+      "el": "Πελοπόνησσος",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q3",
+    "notation": "11",
+    "order": 11,
+    "name": {
+      "el": "Ιόνιο",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q3",
+    "notation": "12",
+    "order": 12,
+    "name": {
+      "el": "Βόρειο Αιγαίο",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q3",
+    "notation": "13",
+    "order": 13,
+    "name": {
+      "el": "Νότιο Αιγαίο",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q3",
+    "notation": "14",
+    "order": 14,
+    "name": {
+      "el": "Κρήτη",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q3",
+    "notation": "99",
+    "order": 15,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q4",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Έως 2.500 κατοίκους",
+      "en": "Up to 2.500 residents"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q4",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "2.501 με 50.000 κατοίκους",
+      "en": "2.5001-50.000 residents"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q4",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Άνω των 50.001 κατοίκων",
+      "en": "More than 50.001 residents"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q5",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Γυμνάσιο",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q5",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Γενικό Λύκειο",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q5",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Επαγγελματικό Λύκειο",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q5",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "ΙΕΚ/ΚΕΚ/Μεταλυκειακή εκπαίδευση",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q5",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "ΑΕΙ/ΤΕΙ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q5",
+    "notation": "6",
+    "order": 6,
+    "name": {
+      "el": "Μεταπτυχιακό/Διδακτορικό",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q5",
+    "notation": "99",
+    "order": 7,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q8",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Χωρίς κανένα πρόβλημα",
+      "en": "Without any problem"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q8",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Κάνοντας κάποιες οικονομίες, αλλά γενικά άνετα",
+      "en": "Making some savings, but generally comfortable"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q8",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Μόλις που φτάνει το μηνιαίο εισόδημα μας",
+      "en": "Barely making our monthly income"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q8",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Μέρα με τη μέρα, έχουμε οικονομικά προβλήματα",
+      "en": "Day by day, we have financial problems"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q8",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Με σοβαρές στερήσεις",
+      "en": "With severe shortages"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q8",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q9_1",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q9_1",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q9_1",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q9_1",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q9_1",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q9_1",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q9_2",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q9_2",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q9_2",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q9_2",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q9_2",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q9_2",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_1",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "1Ντροπή",
+      "en": "Embarrassment"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_1",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "2",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_1",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "3Ούτε ντροπή/Ούτε υπερηφάνεια",
+      "en": "Neither embarrassment nor pride"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_1",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "4",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_1",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "5Υπερηφάνεια",
+      "en": "Pride"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_1",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_2",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "1Ντροπή",
+      "en": "Embarrassment"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_2",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "2",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_2",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "3Ούτε ντροπή/Ούτε υπερηφάνεια",
+      "en": "Neither embarrassment nor pride"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_2",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "4",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_2",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "5Υπερηφάνεια",
+      "en": "Pride"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_2",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_3",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "1Ντροπή",
+      "en": "Embarrassment"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_3",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "2",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_3",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "3Ούτε ντροπή/Ούτε υπερηφάνεια",
+      "en": "Neither embarrassment nor pride"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_3",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "4",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_3",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "5Υπερηφάνεια",
+      "en": "Pride"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_3",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_4",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "1Ντροπή",
+      "en": "Embarrassment"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_4",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "2",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_4",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "3Ούτε ντροπή/Ούτε υπερηφάνεια",
+      "en": "Neither embarrassment nor pride"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_4",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "4",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_4",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "5Υπερηφάνεια",
+      "en": "Pride"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_4",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_5",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "1Ντροπή",
+      "en": "Embarrassment"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_5",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "2",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_5",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "3Ούτε ντροπή/Ούτε υπερηφάνεια",
+      "en": "Neither embarrassment nor pride"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_5",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "4",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_5",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "5Υπερηφάνεια",
+      "en": "Pride"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_5",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_6",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "1 Ντροπή",
+      "en": "Embarrassment"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_6",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "2",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_6",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "3 Ούτε ντροπή/Ούτε υπερηφάνεια",
+      "en": "Neither embarrassment nor pride"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_6",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "4",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_6",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "5 Υπερηφάνεια",
+      "en": "Pride"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q10_6",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q11",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "0",
+      "en": "0"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q11",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "1-5",
+      "en": "1-5"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q11",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Από 6 και πάνω",
+      "en": "More than 6"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q11",
+    "notation": "99",
+    "order": 4,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_1",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_1",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_2",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_2",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_3",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_3",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_4",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_4",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_5",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_5",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_6",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_6",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_7",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_7",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_8",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_8",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_9",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q12_9",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q13",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Μόνο Έλληνα/-ιδα",
+      "en": "Only Greek"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q13",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Πρώτα Έλληνα/-ιδα και μετά Ευρωπαίος/α",
+      "en": "First Greek and then European"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q13",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Πρώτα Ευρωπαίο/α και μετά Έλληνας/-ιδα",
+      "en": "First European and then Greek"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q13",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Μόνο Ευρωπαίος/α",
+      "en": "Only European"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q13",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Τίποτα από αυτά",
+      "en": "None of the above"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q13",
+    "notation": "6",
+    "order": 6,
+    "name": {
+      "el": "Πολίτη του κόσμου",
+      "en": "Citizen of the world"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q13",
+    "notation": "99",
+    "order": 7,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_1",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_1",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_1",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_1",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_1",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_1",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_2",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_2",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_2",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_2",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_2",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_2",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_3",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_3",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_3",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_3",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_3",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_3",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_4",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_4",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_4",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_4",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_4",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_4",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_5",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_5",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_5",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_5",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_5",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_5",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_6",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_6",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_6",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_6",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_6",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_6",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_7",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_7",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_7",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_7",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_7",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_7",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_8",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_8",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_8",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_8",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_8",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_8",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_9",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_9",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_9",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_9",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_9",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q14_9",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q15",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Η εισβολή της Ρωσίας στην Ουκρανία (2022)",
+      "en": "The Invasion of Russia in Ukraine (2022)"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q15",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Η πανδημία covid-19 (2019)",
+      "en": "The covid-19 pandemic (2019)"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q15",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Το Brexit (2016)",
+      "en": "Brexit (2016)"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q15",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Η προσφυγική κρίση (2015)",
+      "en": "The refugee crisis (2015)"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q15",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Η κρίση της Ευρωζώνης (2008)",
+      "en": "The Eurozone crisis (2008)"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q15",
+    "notation": "6",
+    "order": 6,
+    "name": {
+      "el": "Η διεύρυνση με 10 νέες χώρες (2004)",
+      "en": "The enlargement with 10 new member states (2004)"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q15",
+    "notation": "7",
+    "order": 7,
+    "name": {
+      "el": "Η καθιέρωση του Ευρώ (2002)",
+      "en": "The common currency - euro (2002)"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q15",
+    "notation": "8",
+    "order": 8,
+    "name": {
+      "el": "Άλλο",
+      "en": "Other"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q15",
+    "notation": "9",
+    "order": 9,
+    "name": {
+      "el": "Κανένα από όλα αυτά",
+      "en": "None of the above"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q15",
+    "notation": "99",
+    "order": 10,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q16",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Να ταξιδεύεις εντός Σένγκεν χωρίς ελέγχους/μόνο με ταυτότητα",
+      "en": "Taveling inside the Schengen Area without passport control/with ID only"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q16",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Να πηγαίνεις για Erasmus σε κάποιο Πανεπιστήμιο της Ε.Ε.",
+      "en": "Going to another EU University with the Erasmus programme"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q16",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Να σπουδάζεις σε κάποιο πανεπιστήμιο της Ε.Ε. ως Ευρωπαίος πολίτη",
+      "en": "Studying in another EU University with the status of an EU citizen"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q16",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Να πληρώνεις με Ευρώ",
+      "en": "Paying with euros"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q16",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Να μιλάς στο κινητό από/σε χώρα της Ε.Ε. χωρίς τέλη περιαγωγής (roaming",
+      "en": "Using the mobile phone without roaming charges"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q16",
+    "notation": "6",
+    "order": 6,
+    "name": {
+      "el": "Να δουλεύεις σε άλλη χώρα της Ε.Ε. χωρίς να χρειάζεται άδεια παραμ",
+      "en": "Working in another EU country without needing visa"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q16",
+    "notation": "7",
+    "order": 7,
+    "name": {
+      "el": "Να κάνεις διαδικτυακές αγορές χωρίς κόστη τελωνείου",
+      "en": "Shopping online without customs charges"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q16",
+    "notation": "8",
+    "order": 8,
+    "name": {
+      "el": "Άλλο",
+      "en": "Other"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q16",
+    "notation": "9",
+    "order": 9,
+    "name": {
+      "el": "Κανένα από όλα αυτά",
+      "en": "None of the above"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q16",
+    "notation": "99",
+    "order": 10,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_1",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_1",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_1",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_1",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_1",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_1",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_2",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_2",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_2",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_2",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_2",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_2",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_3",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_3",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_3",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_3",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_3",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_3",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_4",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_4",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_4",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_4",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_4",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_4",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_5",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_5",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_5",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_5",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_5",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_5",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_6",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_6",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_6",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_6",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_6",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q17_6",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q18_1",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q18_1",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q18_2",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q18_2",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q18_3",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q18_3",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q18_4",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q18_4",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q18_5",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q18_5",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_1",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_1",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_2",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_2",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_3",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_3",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_4",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_4",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_5",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_5",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_6",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_6",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_7",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_7",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_8",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_8",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_9",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q19_9",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q20",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Καθόλου",
+      "en": "Not at all"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q20",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Λίγο",
+      "en": "A little"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q20",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ούτε λίγο/Ούτε πολύ",
+      "en": "Neither a little nor a lot"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q20",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Αρκετά",
+      "en": "Somewhat"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q20",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Εξαιρετικά",
+      "en": "Extremely"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q20",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_1",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_1",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_2",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_2",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_3",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_3",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_4",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_4",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_5",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_5",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_6",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_6",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_7",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_7",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_8",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q21_8",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_1",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Πολύ συχνά",
+      "en": "Very often"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_1",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Μερικές φορές",
+      "en": "Sometimes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_1",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ποτέ",
+      "en": "Never"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_1",
+    "notation": "99",
+    "order": 4,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_2",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Πολύ συχνά",
+      "en": "Very often"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_2",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Μερικές φορές",
+      "en": "Sometimes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_2",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ποτέ",
+      "en": "Never"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_2",
+    "notation": "99",
+    "order": 4,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_3",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Πολύ συχνά",
+      "en": "Very often"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_3",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Μερικές φορές",
+      "en": "Sometimes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_3",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ποτέ",
+      "en": "Never"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_3",
+    "notation": "99",
+    "order": 4,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_4",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Πολύ συχνά",
+      "en": "Very often"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_4",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Μερικές φορές",
+      "en": "Sometimes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_4",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ποτέ",
+      "en": "Never"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_4",
+    "notation": "99",
+    "order": 4,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_5",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Πολύ συχνά",
+      "en": "Very often"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_5",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Μερικές φορές",
+      "en": "Sometimes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_5",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ποτέ",
+      "en": "Never"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_5",
+    "notation": "99",
+    "order": 4,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_6",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Πολύ συχνά",
+      "en": "Very often"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_6",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Μερικές φορές",
+      "en": "Sometimes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_6",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ποτέ",
+      "en": "Never"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_6",
+    "notation": "99",
+    "order": 4,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_7",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Πολύ συχνά",
+      "en": "Very often"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_7",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Μερικές φορές",
+      "en": "Sometimes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_7",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ποτέ",
+      "en": "Never"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_7",
+    "notation": "99",
+    "order": 4,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_8",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Πολύ συχνά",
+      "en": "Very often"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_8",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Μερικές φορές",
+      "en": "Sometimes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_8",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ποτέ",
+      "en": "Never"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_8",
+    "notation": "99",
+    "order": 4,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_9",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Πολύ συχνά",
+      "en": "Very often"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_9",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Μερικές φορές",
+      "en": "Sometimes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_9",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ποτέ",
+      "en": "Never"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q22_9",
+    "notation": "99",
+    "order": 4,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_1",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_1",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_2",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_2",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_3",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_3",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_4",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_4",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_5",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_5",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_6",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_6",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_7",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_7",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_8",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_8",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_9",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_9",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_10",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Όχι",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "q23_10",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "Ναι",
+      "en": "Yes"
+    },
+    "color": null
+  }
+]
