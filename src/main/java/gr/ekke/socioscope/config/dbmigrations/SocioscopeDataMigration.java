@@ -178,10 +178,10 @@ public class SocioscopeDataMigration {
     @ChangeSet(order = "13", author = "initiator", id="addYoungEuropeanData")
     public void addYoungEuropeanData(MongoTemplate mongoTemplate, Environment environment) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        File file = new File(environment.getProperty("application.migrate-data-path") + "/young_european.json");
+        File file = new File(environment.getProperty("application.migrate-data-path") + "/young-europeans.json");
         TypeFactory typeFactory = mapper.getTypeFactory();
         List youngEuropeanData = mapper.readValue(file, typeFactory.constructCollectionType(List.class, Object.class));
-        BulkOperations bulkOperations = mongoTemplate.bulkOps(BulkOperations.BulkMode.UNORDERED, Object.class, "young_european");
+        BulkOperations bulkOperations = mongoTemplate.bulkOps(BulkOperations.BulkMode.UNORDERED, Object.class, "young-europeans");
         bulkOperations.insert(youngEuropeanData);
         bulkOperations.execute();
     }

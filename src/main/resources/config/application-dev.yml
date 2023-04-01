@@ -108,4 +108,4 @@ jhipster:
 # ===================================================================
 
 application:
-    migrate-data-path: C:\Users\stavr\Desktop\projects\redi\code\socioscope\migrate
+    migrate-data-path: C:\Users\stavr\code\socioscope\migrate

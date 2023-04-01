@@ -1323,6 +1323,64 @@
         "id": "ye_q23"
       }
     ],
+    "dimensionGroups": [
+      {
+        "id": "ye_demographics",
+        "name": {
+          "el": "ΚΟΙΝΩΝΙΚΟ-ΔΗΜΟΓΡΑΦΙΚΑ",
+          "en": "DEMOGRAPHICS"
+        }
+      },
+      {
+        "id": "ye_national_european_identity",
+        "name": {
+          "el": "ΕΘΝΙΚΗ & ΕΥΡΩΠΑΪΚΗ ΤΑΥΤΟΤΗΤΑ",
+          "en": "NATIONAL & EUROPEAN IDENTITY"
+        }
+      },
+      {
+        "id": "ye_common_european_experiences",
+        "name": {
+          "el": "ΚΟΙΝΕΣ ΕΥΡΩΠΑΙΚΕΣ ΕΜΠΕΙΡΙΕΣ",
+          "en": "COMMON EUROPEAN EXPERIENCES"
+        }
+      },
+      {
+        "id": "ye_greece_in_europe",
+        "name": {
+          "el": "Η ΕΛΛΑΔΑ ΣΤΗΝ ΕΥΡΩΠΗ",
+          "en": "GREECE IN EUROPE"
+        }
+      },
+      {
+        "id": "ye_entitativity",
+        "name": {
+          "el": "ΥΠΟΣΤΑΣΙΑΚΟΤΗΤΑ ",
+          "en": "ENTITATIVITY"
+        }
+      },
+      {
+        "id": "ye_climate_change",
+        "name": {
+          "el": "ΚΛΙΜΑΤΙΚΗ ΑΛΛΑΓΗ",
+          "en": "CLIMATE CHANGE"
+        }
+      },
+      {
+        "id": "ye_environment_climate",
+        "name": {
+          "el": "ΠΕΡΙΒΑΛΛΟΝ & ΚΛΙΜΑ",
+          "en": "ENVIRONMENT & CLIMATE"
+        }
+      },
+      {
+        "id": "ye_eu_priorities",
+        "name": {
+          "el": "ΠΡΟΤΕΡΑΙΟΤΗΤΕΣ Ε.Ε.",
+          "en": "EU PRIORITIES"
+        }
+      }
+    ],
     "measures": [
       {
         "id": "adolescents_perc"
@@ -1330,6 +1388,10 @@
       {
         "id": "adolescents_count"
       }
-    ]
+    ],
+    "defaultOptions": {
+      "xAxis": "ye_q1",
+      "measure": "adolescents_perc"
+    }
   }
 ]

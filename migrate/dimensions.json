@@ -3197,8 +3197,8 @@
     },
     "groupId": "ye_demographics",
     "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true
+    "disableFilter": false,
+    "disableCompareBy": false
   },
   {
     "id": "ye_q2",
@@ -3212,8 +3212,8 @@
     },
     "groupId": "ye_demographics",
     "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true
+    "disableFilter": false,
+    "disableCompareBy": false
   },
   {
     "id": "ye_q3",
@@ -3227,8 +3227,8 @@
     },
     "groupId": "ye_demographics",
     "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true
+    "disableFilter": false,
+    "disableCompareBy": false
   },
   {
     "id": "ye_q4",
@@ -3242,8 +3242,8 @@
     },
     "groupId": "ye_demographics",
     "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true
+    "disableFilter": false,
+    "disableCompareBy": false
   },
   {
     "id": "ye_q5",
@@ -3257,8 +3257,8 @@
     },
     "groupId": "ye_demographics",
     "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true
+    "disableFilter": false,
+    "disableCompareBy": false
   },
   {
     "id": "ye_q8",
@@ -3272,8 +3272,8 @@
     },
     "groupId": "ye_demographics",
     "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true
+    "disableFilter": false,
+    "disableCompareBy": false
   },
   {
     "id": "ye_q9_1",
