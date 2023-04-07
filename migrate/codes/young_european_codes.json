@@ -490,7 +490,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q9_1",
+    "dimensionId": "ye_q9",
     "notation": "1",
     "order": 1,
     "name": {
@@ -500,7 +500,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q9_1",
+    "dimensionId": "ye_q9",
     "notation": "2",
     "order": 2,
     "name": {
@@ -510,7 +510,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q9_1",
+    "dimensionId": "ye_q9",
     "notation": "3",
     "order": 3,
     "name": {
@@ -520,7 +520,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q9_1",
+    "dimensionId": "ye_q9",
     "notation": "4",
     "order": 4,
     "name": {
@@ -530,7 +530,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q9_1",
+    "dimensionId": "ye_q9",
     "notation": "5",
     "order": 5,
     "name": {
@@ -540,7 +540,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q9_1",
+    "dimensionId": "ye_q9",
     "notation": "99",
     "order": 6,
     "name": {
@@ -550,67 +550,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q9_2",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Διαφωνώ απόλυτα",
-      "en": "Completely disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q9_2",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Διαφωνώ",
-      "en": "Disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q9_2",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ουδέτερα",
-      "en": "Neither agree nor disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q9_2",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "Συμφωνώ",
-      "en": "Agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q9_2",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "Συμφωνώ απόλυτα",
-      "en": "Completely agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q9_2",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_1",
+    "dimensionId": "ye_q10",
     "notation": "1",
     "order": 1,
     "name": {
@@ -620,7 +560,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q10_1",
+    "dimensionId": "ye_q10",
     "notation": "2",
     "order": 2,
     "name": {
@@ -630,7 +570,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q10_1",
+    "dimensionId": "ye_q10",
     "notation": "3",
     "order": 3,
     "name": {
@@ -640,7 +580,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q10_1",
+    "dimensionId": "ye_q10",
     "notation": "4",
     "order": 4,
     "name": {
@@ -650,7 +590,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q10_1",
+    "dimensionId": "ye_q10",
     "notation": "5",
     "order": 5,
     "name": {
@@ -660,307 +600,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q10_1",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_2",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "1Ντροπή",
-      "en": "Embarrassment"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_2",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "2",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_2",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "3Ούτε ντροπή/Ούτε υπερηφάνεια",
-      "en": "Neither embarrassment nor pride"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_2",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "4",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_2",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "5Υπερηφάνεια",
-      "en": "Pride"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_2",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_3",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "1Ντροπή",
-      "en": "Embarrassment"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_3",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "2",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_3",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "3Ούτε ντροπή/Ούτε υπερηφάνεια",
-      "en": "Neither embarrassment nor pride"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_3",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "4",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_3",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "5Υπερηφάνεια",
-      "en": "Pride"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_3",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_4",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "1Ντροπή",
-      "en": "Embarrassment"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_4",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "2",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_4",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "3Ούτε ντροπή/Ούτε υπερηφάνεια",
-      "en": "Neither embarrassment nor pride"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_4",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "4",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_4",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "5Υπερηφάνεια",
-      "en": "Pride"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_4",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_5",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "1Ντροπή",
-      "en": "Embarrassment"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_5",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "2",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_5",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "3Ούτε ντροπή/Ούτε υπερηφάνεια",
-      "en": "Neither embarrassment nor pride"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_5",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "4",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_5",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "5Υπερηφάνεια",
-      "en": "Pride"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_5",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_6",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "1 Ντροπή",
-      "en": "Embarrassment"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_6",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "2",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_6",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "3 Ούτε ντροπή/Ούτε υπερηφάνεια",
-      "en": "Neither embarrassment nor pride"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_6",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "4",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_6",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "5 Υπερηφάνεια",
-      "en": "Pride"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q10_6",
+    "dimensionId": "ye_q10",
     "notation": "99",
     "order": 6,
     "name": {
@@ -1010,7 +650,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q12_1",
+    "dimensionId": "ye_q12",
     "notation": "0",
     "order": 1,
     "name": {
@@ -1020,167 +660,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q12_1",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_2",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_2",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_3",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_3",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_4",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_4",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_5",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_5",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_6",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_6",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_7",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_7",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_8",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_8",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_9",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q12_9",
+    "dimensionId": "ye_q12",
     "notation": "1",
     "order": 2,
     "name": {
@@ -1260,7 +740,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q14_1",
+    "dimensionId": "ye_q14",
     "notation": "1",
     "order": 1,
     "name": {
@@ -1270,7 +750,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q14_1",
+    "dimensionId": "ye_q14",
     "notation": "2",
     "order": 2,
     "name": {
@@ -1280,7 +760,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q14_1",
+    "dimensionId": "ye_q14",
     "notation": "3",
     "order": 3,
     "name": {
@@ -1290,7 +770,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q14_1",
+    "dimensionId": "ye_q14",
     "notation": "4",
     "order": 4,
     "name": {
@@ -1300,7 +780,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q14_1",
+    "dimensionId": "ye_q14",
     "notation": "5",
     "order": 5,
     "name": {
@@ -1310,487 +790,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q14_1",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_2",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Διαφωνώ απόλυτα",
-      "en": "Completely disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_2",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Διαφωνώ",
-      "en": "Disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_2",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ουδέτερα",
-      "en": "Neither agree nor disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_2",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "Συμφωνώ",
-      "en": "Agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_2",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "Συμφωνώ απόλυτα",
-      "en": "Completely agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_2",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_3",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Διαφωνώ απόλυτα",
-      "en": "Completely disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_3",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Διαφωνώ",
-      "en": "Disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_3",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ουδέτερα",
-      "en": "Neither agree nor disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_3",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "Συμφωνώ",
-      "en": "Agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_3",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "Συμφωνώ απόλυτα",
-      "en": "Completely agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_3",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_4",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Διαφωνώ απόλυτα",
-      "en": "Completely disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_4",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Διαφωνώ",
-      "en": "Disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_4",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ουδέτερα",
-      "en": "Neither agree nor disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_4",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "Συμφωνώ",
-      "en": "Agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_4",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "Συμφωνώ απόλυτα",
-      "en": "Completely agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_4",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_5",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Διαφωνώ απόλυτα",
-      "en": "Completely disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_5",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Διαφωνώ",
-      "en": "Disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_5",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ουδέτερα",
-      "en": "Neither agree nor disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_5",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "Συμφωνώ",
-      "en": "Agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_5",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "Συμφωνώ απόλυτα",
-      "en": "Completely agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_5",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_6",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Διαφωνώ απόλυτα",
-      "en": "Completely disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_6",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Διαφωνώ",
-      "en": "Disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_6",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ουδέτερα",
-      "en": "Neither agree nor disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_6",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "Συμφωνώ",
-      "en": "Agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_6",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "Συμφωνώ απόλυτα",
-      "en": "Completely agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_6",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_7",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Διαφωνώ απόλυτα",
-      "en": "Completely disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_7",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Διαφωνώ",
-      "en": "Disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_7",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ουδέτερα",
-      "en": "Neither agree nor disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_7",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "Συμφωνώ",
-      "en": "Agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_7",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "Συμφωνώ απόλυτα",
-      "en": "Completely agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_7",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_8",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Διαφωνώ απόλυτα",
-      "en": "Completely disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_8",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Διαφωνώ",
-      "en": "Disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_8",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ουδέτερα",
-      "en": "Neither agree nor disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_8",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "Συμφωνώ",
-      "en": "Agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_8",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "Συμφωνώ απόλυτα",
-      "en": "Completely agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_8",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_9",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Διαφωνώ απόλυτα",
-      "en": "Completely disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_9",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Διαφωνώ",
-      "en": "Disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_9",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ουδέτερα",
-      "en": "Neither agree nor disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_9",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "Συμφωνώ",
-      "en": "Agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_9",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "Συμφωνώ απόλυτα",
-      "en": "Completely agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q14_9",
+    "dimensionId": "ye_q14",
     "notation": "99",
     "order": 6,
     "name": {
@@ -2000,7 +1000,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q17_1",
+    "dimensionId": "ye_q17",
     "notation": "1",
     "order": 1,
     "name": {
@@ -2010,7 +1010,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q17_1",
+    "dimensionId": "ye_q17",
     "notation": "2",
     "order": 2,
     "name": {
@@ -2020,7 +1020,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q17_1",
+    "dimensionId": "ye_q17",
     "notation": "3",
     "order": 3,
     "name": {
@@ -2030,7 +1030,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q17_1",
+    "dimensionId": "ye_q17",
     "notation": "4",
     "order": 4,
     "name": {
@@ -2040,7 +1040,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q17_1",
+    "dimensionId": "ye_q17",
     "notation": "5",
     "order": 5,
     "name": {
@@ -2050,7 +1050,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q17_1",
+    "dimensionId": "ye_q17",
     "notation": "99",
     "order": 6,
     "name": {
@@ -2060,307 +1060,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q17_2",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Διαφωνώ απόλυτα",
-      "en": "Completely disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_2",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Διαφωνώ",
-      "en": "Disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_2",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ουδέτερα",
-      "en": "Neither agree nor disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_2",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "Συμφωνώ",
-      "en": "Agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_2",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "Συμφωνώ απόλυτα",
-      "en": "Completely agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_2",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_3",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Διαφωνώ απόλυτα",
-      "en": "Completely disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_3",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Διαφωνώ",
-      "en": "Disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_3",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ουδέτερα",
-      "en": "Neither agree nor disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_3",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "Συμφωνώ",
-      "en": "Agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_3",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "Συμφωνώ απόλυτα",
-      "en": "Completely agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_3",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_4",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Διαφωνώ απόλυτα",
-      "en": "Completely disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_4",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Διαφωνώ",
-      "en": "Disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_4",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ουδέτερα",
-      "en": "Neither agree nor disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_4",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "Συμφωνώ",
-      "en": "Agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_4",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "Συμφωνώ απόλυτα",
-      "en": "Completely agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_4",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_5",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Διαφωνώ απόλυτα",
-      "en": "Completely disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_5",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Διαφωνώ",
-      "en": "Disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_5",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ουδέτερα",
-      "en": "Neither agree nor disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_5",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "Συμφωνώ",
-      "en": "Agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_5",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "Συμφωνώ απόλυτα",
-      "en": "Completely agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_5",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_6",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Διαφωνώ απόλυτα",
-      "en": "Completely disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_6",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Διαφωνώ",
-      "en": "Disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_6",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ουδέτερα",
-      "en": "Neither agree nor disagree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_6",
-    "notation": "4",
-    "order": 4,
-    "name": {
-      "el": "Συμφωνώ",
-      "en": "Agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_6",
-    "notation": "5",
-    "order": 5,
-    "name": {
-      "el": "Συμφωνώ απόλυτα",
-      "en": "Completely agree"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q17_6",
-    "notation": "99",
-    "order": 6,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q18_1",
+    "dimensionId": "ye_q18",
     "notation": "0",
     "order": 1,
     "name": {
@@ -2370,7 +1070,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q18_1",
+    "dimensionId": "ye_q18",
     "notation": "1",
     "order": 2,
     "name": {
@@ -2380,7 +1080,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q18_2",
+    "dimensionId": "ye_q19",
     "notation": "0",
     "order": 1,
     "name": {
@@ -2390,247 +1090,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q18_2",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q18_3",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q18_3",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q18_4",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q18_4",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q18_5",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q18_5",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_1",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_1",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_2",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_2",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_3",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_3",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_4",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_4",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_5",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_5",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_6",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_6",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_7",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_7",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_8",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_8",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_9",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q19_9",
+    "dimensionId": "ye_q19",
     "notation": "1",
     "order": 2,
     "name": {
@@ -2700,7 +1160,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q21_1",
+    "dimensionId": "ye_q21",
     "notation": "0",
     "order": 1,
     "name": {
@@ -2710,7 +1170,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q21_1",
+    "dimensionId": "ye_q21",
     "notation": "1",
     "order": 2,
     "name": {
@@ -2720,147 +1180,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q21_2",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q21_2",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q21_3",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q21_3",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q21_4",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q21_4",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q21_5",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q21_5",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q21_6",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q21_6",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q21_7",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q21_7",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q21_8",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q21_8",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_1",
+    "dimensionId": "ye_q22",
     "notation": "1",
     "order": 1,
     "name": {
@@ -2870,7 +1190,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q22_1",
+    "dimensionId": "ye_q22",
     "notation": "2",
     "order": 2,
     "name": {
@@ -2880,7 +1200,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q22_1",
+    "dimensionId": "ye_q22",
     "notation": "3",
     "order": 3,
     "name": {
@@ -2890,7 +1210,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q22_1",
+    "dimensionId": "ye_q22",
     "notation": "99",
     "order": 4,
     "name": {
@@ -2900,327 +1220,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q22_2",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Πολύ συχνά",
-      "en": "Very often"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_2",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Μερικές φορές",
-      "en": "Sometimes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_2",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ποτέ",
-      "en": "Never"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_2",
-    "notation": "99",
-    "order": 4,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_3",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Πολύ συχνά",
-      "en": "Very often"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_3",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Μερικές φορές",
-      "en": "Sometimes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_3",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ποτέ",
-      "en": "Never"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_3",
-    "notation": "99",
-    "order": 4,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_4",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Πολύ συχνά",
-      "en": "Very often"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_4",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Μερικές φορές",
-      "en": "Sometimes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_4",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ποτέ",
-      "en": "Never"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_4",
-    "notation": "99",
-    "order": 4,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_5",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Πολύ συχνά",
-      "en": "Very often"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_5",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Μερικές φορές",
-      "en": "Sometimes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_5",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ποτέ",
-      "en": "Never"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_5",
-    "notation": "99",
-    "order": 4,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_6",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Πολύ συχνά",
-      "en": "Very often"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_6",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Μερικές φορές",
-      "en": "Sometimes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_6",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ποτέ",
-      "en": "Never"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_6",
-    "notation": "99",
-    "order": 4,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_7",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Πολύ συχνά",
-      "en": "Very often"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_7",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Μερικές φορές",
-      "en": "Sometimes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_7",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ποτέ",
-      "en": "Never"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_7",
-    "notation": "99",
-    "order": 4,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_8",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Πολύ συχνά",
-      "en": "Very often"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_8",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Μερικές φορές",
-      "en": "Sometimes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_8",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ποτέ",
-      "en": "Never"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_8",
-    "notation": "99",
-    "order": 4,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_9",
-    "notation": "1",
-    "order": 1,
-    "name": {
-      "el": "Πολύ συχνά",
-      "en": "Very often"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_9",
-    "notation": "2",
-    "order": 2,
-    "name": {
-      "el": "Μερικές φορές",
-      "en": "Sometimes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_9",
-    "notation": "3",
-    "order": 3,
-    "name": {
-      "el": "Ποτέ",
-      "en": "Never"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q22_9",
-    "notation": "99",
-    "order": 4,
-    "name": {
-      "el": "ΔΑ",
-      "en": "nan"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_1",
+    "dimensionId": "ye_q23",
     "notation": "0",
     "order": 1,
     "name": {
@@ -3230,187 +1230,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q23_1",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_2",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_2",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_3",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_3",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_4",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_4",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_5",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_5",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_6",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_6",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_7",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_7",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_8",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_8",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_9",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_9",
-    "notation": "1",
-    "order": 2,
-    "name": {
-      "el": "Ναι",
-      "en": "Yes"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_10",
-    "notation": "0",
-    "order": 1,
-    "name": {
-      "el": "Όχι",
-      "en": "No"
-    },
-    "color": null
-  },
-  {
-    "dimensionId": "ye_q23_10",
+    "dimensionId": "ye_q23",
     "notation": "1",
     "order": 2,
     "name": {
