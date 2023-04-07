@@ -490,7 +490,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q9",
+    "dimensionId": "ye_q9_1",
     "notation": "1",
     "order": 1,
     "name": {
@@ -500,7 +500,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q9",
+    "dimensionId": "ye_q9_1",
     "notation": "2",
     "order": 2,
     "name": {
@@ -510,7 +510,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q9",
+    "dimensionId": "ye_q9_1",
     "notation": "3",
     "order": 3,
     "name": {
@@ -520,7 +520,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q9",
+    "dimensionId": "ye_q9_1",
     "notation": "4",
     "order": 4,
     "name": {
@@ -530,7 +530,7 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q9",
+    "dimensionId": "ye_q9_1",
     "notation": "5",
     "order": 5,
     "name": {
@@ -540,7 +540,67 @@
     "color": null
   },
   {
-    "dimensionId": "ye_q9",
+    "dimensionId": "ye_q9_1",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "ΔΑ",
+      "en": "nan"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ye_q9_2",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Διαφωνώ απόλυτα",
+      "en": "Completely disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ye_q9_2",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Διαφωνώ",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ye_q9_2",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Ουδέτερα",
+      "en": "Neither agree nor disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ye_q9_2",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Συμφωνώ",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ye_q9_2",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Συμφωνώ απόλυτα",
+      "en": "Completely agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ye_q9_2",
     "notation": "99",
     "order": 6,
     "name": {
