@@ -1120,6 +1120,66 @@
     "color": null
   },
   {
+    "dimensionId": "ye_q17_b",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Υπέρ, γιατί έτσι θα γίνουμε πιο υπεύθυνοι πολίτες ως προς την κατανάλωση ενέργειας",
+      "en": "In favour, because we will become more responsible as citizens regarding energy consumption"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ye_q17_b",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Κατά, για να υπερασπιστούν τις ενεργειακές ανάγκες της Ελλάδας με κάθε τρόπο",
+      "en": "Against, because they must defend Greece's energy needs, no matter what"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ye_q17_b",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Λευκό, για να μην πάρουν θέση",
+      "en": "Blank, so that they don’t have to take a stance"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ye_q17_c",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Υπέρ, γιατί έτσι οι ελληνικές κυβερνήσεις μπορεί να γίνουν πιο υπ",
+      "en": "In favour, because in that way Greek governments may become more responsible with the country's economy"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ye_q17_c",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Κατά, για να υπερασπιστούν την οικονομική κατάσταση στη χώρα μας",
+      "en": "Against, because they must defend Greece's economic situaton, no matter what"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ye_q17_c",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Λευκό, για να μην πάρουν θέση",
+      "en": "Blank, so that they don’t have to take a stance"
+    },
+    "color": null
+  },
+  {
     "dimensionId": "ye_q18",
     "notation": "0",
     "order": 1,
