@@ -1150,6 +1150,16 @@
     "color": null
   },
   {
+    "dimensionId": "ye_q17_b",
+    "notation": "99",
+    "order": 4,
+    "name": {
+      "el": "ΔΑ",
+      "en": "ΔΑ"
+    },
+    "color": null
+  },
+  {
     "dimensionId": "ye_q17_c",
     "notation": "1",
     "order": 1,
@@ -1176,6 +1186,16 @@
     "name": {
       "el": "Λευκό, για να μην πάρουν θέση",
       "en": "Blank, so that they don’t have to take a stance"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ye_q17_c",
+    "notation": "99",
+    "order": 4,
+    "name": {
+      "el": "ΔΑ",
+      "en": "ΔΑ"
     },
     "color": null
   },
