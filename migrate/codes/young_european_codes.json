@@ -5,7 +5,7 @@
     "order": 1,
     "name": {
       "el": "Πριν το 1993",
-      "en": "nan"
+      "en": "Πριν το 1993"
     },
     "color": null
   },
@@ -15,7 +15,7 @@
     "order": 2,
     "name": {
       "el": "1993",
-      "en": "nan"
+      "en": "1993"
     },
     "color": null
   },
@@ -25,7 +25,7 @@
     "order": 3,
     "name": {
       "el": "1994",
-      "en": "nan"
+      "en": "1994"
     },
     "color": null
   },
@@ -35,7 +35,7 @@
     "order": 4,
     "name": {
       "el": "1995",
-      "en": "nan"
+      "en": "1995"
     },
     "color": null
   },
@@ -45,7 +45,7 @@
     "order": 5,
     "name": {
       "el": "1996",
-      "en": "nan"
+      "en": "1996"
     },
     "color": null
   },
@@ -55,7 +55,7 @@
     "order": 6,
     "name": {
       "el": "1997",
-      "en": "nan"
+      "en": "1997"
     },
     "color": null
   },
@@ -65,7 +65,7 @@
     "order": 7,
     "name": {
       "el": "1998",
-      "en": "nan"
+      "en": "1998"
     },
     "color": null
   },
@@ -75,7 +75,7 @@
     "order": 8,
     "name": {
       "el": "1999",
-      "en": "nan"
+      "en": "1999"
     },
     "color": null
   },
@@ -85,7 +85,7 @@
     "order": 9,
     "name": {
       "el": "2000",
-      "en": "nan"
+      "en": "2000"
     },
     "color": null
   },
@@ -95,7 +95,7 @@
     "order": 10,
     "name": {
       "el": "2001",
-      "en": "nan"
+      "en": "2001"
     },
     "color": null
   },
@@ -105,7 +105,7 @@
     "order": 11,
     "name": {
       "el": "2002",
-      "en": "nan"
+      "en": "2002"
     },
     "color": null
   },
@@ -115,7 +115,7 @@
     "order": 12,
     "name": {
       "el": "2003",
-      "en": "nan"
+      "en": "2003"
     },
     "color": null
   },
@@ -125,7 +125,7 @@
     "order": 13,
     "name": {
       "el": "2004",
-      "en": "nan"
+      "en": "2004"
     },
     "color": null
   },
@@ -135,7 +135,7 @@
     "order": 14,
     "name": {
       "el": "2005",
-      "en": "nan"
+      "en": "2005"
     },
     "color": null
   },
@@ -145,7 +145,7 @@
     "order": 15,
     "name": {
       "el": "Μετά το 2005",
-      "en": "nan"
+      "en": "Μετά το 2005"
     },
     "color": null
   },
@@ -185,7 +185,7 @@
     "order": 1,
     "name": {
       "el": "Ανατολική Μακεδονία και Θράκη",
-      "en": "nan"
+      "en": "Ανατολική Μακεδονία και Θράκη"
     },
     "color": null
   },
@@ -195,7 +195,7 @@
     "order": 2,
     "name": {
       "el": "Κεντρική Μακεδονία",
-      "en": "nan"
+      "en": "Κεντρική Μακεδονία"
     },
     "color": null
   },
@@ -205,7 +205,7 @@
     "order": 3,
     "name": {
       "el": "Πολεοδομικό Συγκρότητα Θεσσαλονίκης",
-      "en": "nan"
+      "en": "Πολεοδομικό Συγκρότητα Θεσσαλονίκης"
     },
     "color": null
   },
@@ -215,7 +215,7 @@
     "order": 4,
     "name": {
       "el": "Δυτική Μακεδονία",
-      "en": "nan"
+      "en": "Δυτική Μακεδονία"
     },
     "color": null
   },
@@ -225,7 +225,7 @@
     "order": 5,
     "name": {
       "el": "Ήπειρος",
-      "en": "nan"
+      "en": "Ήπειρος"
     },
     "color": null
   },
@@ -235,7 +235,7 @@
     "order": 6,
     "name": {
       "el": "Θεσσαλία",
-      "en": "nan"
+      "en": "Θεσσαλία"
     },
     "color": null
   },
@@ -245,7 +245,7 @@
     "order": 7,
     "name": {
       "el": "Στερεά Ελλάδα",
-      "en": "nan"
+      "en": "Στερεά Ελλάδα"
     },
     "color": null
   },
@@ -255,7 +255,7 @@
     "order": 8,
     "name": {
       "el": "Δυτική Ελλάδα",
-      "en": "nan"
+      "en": "Δυτική Ελλάδα"
     },
     "color": null
   },
@@ -265,7 +265,7 @@
     "order": 9,
     "name": {
       "el": "Αττική",
-      "en": "nan"
+      "en": "Αττική"
     },
     "color": null
   },
@@ -275,7 +275,7 @@
     "order": 10,
     "name": {
       "el": "Πελοπόνησσος",
-      "en": "nan"
+      "en": "Πελοπόνησσος"
     },
     "color": null
   },
@@ -285,7 +285,7 @@
     "order": 11,
     "name": {
       "el": "Ιόνιο",
-      "en": "nan"
+      "en": "Ιόνιο"
     },
     "color": null
   },
@@ -295,7 +295,7 @@
     "order": 12,
     "name": {
       "el": "Βόρειο Αιγαίο",
-      "en": "nan"
+      "en": "Βόρειο Αιγαίο"
     },
     "color": null
   },
@@ -305,7 +305,7 @@
     "order": 13,
     "name": {
       "el": "Νότιο Αιγαίο",
-      "en": "nan"
+      "en": "Νότιο Αιγαίο"
     },
     "color": null
   },
@@ -315,7 +315,7 @@
     "order": 14,
     "name": {
       "el": "Κρήτη",
-      "en": "nan"
+      "en": "Κρήτη"
     },
     "color": null
   },
@@ -325,7 +325,7 @@
     "order": 15,
     "name": {
       "el": "ΔΑ",
-      "en": "nan"
+      "en": "ΔΑ"
     },
     "color": null
   },
@@ -365,7 +365,7 @@
     "order": 1,
     "name": {
       "el": "Γυμνάσιο",
-      "en": "nan"
+      "en": "Γυμνάσιο"
     },
     "color": null
   },
@@ -375,7 +375,7 @@
     "order": 2,
     "name": {
       "el": "Γενικό Λύκειο",
-      "en": "nan"
+      "en": "Γενικό Λύκειο"
     },
     "color": null
   },
@@ -385,7 +385,7 @@
     "order": 3,
     "name": {
       "el": "Επαγγελματικό Λύκειο",
-      "en": "nan"
+      "en": "Επαγγελματικό Λύκειο"
     },
     "color": null
   },
@@ -395,7 +395,7 @@
     "order": 4,
     "name": {
       "el": "ΙΕΚ/ΚΕΚ/Μεταλυκειακή εκπαίδευση",
-      "en": "nan"
+      "en": "ΙΕΚ/ΚΕΚ/Μεταλυκειακή εκπαίδευση"
     },
     "color": null
   },
@@ -405,7 +405,7 @@
     "order": 5,
     "name": {
       "el": "ΑΕΙ/ΤΕΙ",
-      "en": "nan"
+      "en": "ΑΕΙ/ΤΕΙ"
     },
     "color": null
   },
@@ -415,7 +415,7 @@
     "order": 6,
     "name": {
       "el": "Μεταπτυχιακό/Διδακτορικό",
-      "en": "nan"
+      "en": "Μεταπτυχιακό/Διδακτορικό"
     },
     "color": null
   },
@@ -425,7 +425,7 @@
     "order": 7,
     "name": {
       "el": "ΔΑ",
-      "en": "nan"
+      "en": "ΔΑ"
     },
     "color": null
   },
@@ -485,7 +485,7 @@
     "order": 6,
     "name": {
       "el": "ΔΑ",
-      "en": "nan"
+      "en": "ΔΑ"
     },
     "color": null
   },
@@ -545,7 +545,7 @@
     "order": 6,
     "name": {
       "el": "ΔΑ",
-      "en": "nan"
+      "en": "ΔΑ"
     },
     "color": null
   },
@@ -605,7 +605,7 @@
     "order": 6,
     "name": {
       "el": "ΔΑ",
-      "en": "nan"
+      "en": "ΔΑ"
     },
     "color": null
   },
@@ -614,7 +614,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "1Ντροπή",
+      "el": "Ντροπή",
       "en": "Embarrassment"
     },
     "color": null
@@ -624,8 +624,8 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "2",
-      "en": "nan"
+      "el": "Μάλλον ντροπή",
+      "en": "Rahter embarassment"
     },
     "color": null
   },
@@ -634,7 +634,7 @@
     "notation": "3",
     "order": 3,
     "name": {
-      "el": "3Ούτε ντροπή/Ούτε υπερηφάνεια",
+      "el": "Ούτε ντροπή/Ούτε υπερηφάνεια",
       "en": "Neither embarrassment nor pride"
     },
     "color": null
@@ -644,8 +644,8 @@
     "notation": "4",
     "order": 4,
     "name": {
-      "el": "4",
-      "en": "nan"
+      "el": "Μάλλον υπερηφάνεια",
+      "en": "Rather pride"
     },
     "color": null
   },
@@ -654,7 +654,7 @@
     "notation": "5",
     "order": 5,
     "name": {
-      "el": "5Υπερηφάνεια",
+      "el": "Υπερηφάνεια",
       "en": "Pride"
     },
     "color": null
@@ -665,7 +665,7 @@
     "order": 6,
     "name": {
       "el": "ΔΑ",
-      "en": "nan"
+      "en": "ΔΑ"
     },
     "color": null
   },
@@ -705,7 +705,7 @@
     "order": 4,
     "name": {
       "el": "ΔΑ",
-      "en": "nan"
+      "en": "ΔΑ"
     },
     "color": null
   },
@@ -764,7 +764,7 @@
     "notation": "4",
     "order": 4,
     "name": {
-      "el": "Μόνο Ευρωπαίος/α",
+      "el": "Μόνο Ευρωπαίο/α",
       "en": "Only European"
     },
     "color": null
@@ -795,7 +795,7 @@
     "order": 7,
     "name": {
       "el": "ΔΑ",
-      "en": "nan"
+      "en": "ΔΑ"
     },
     "color": null
   },
@@ -855,7 +855,7 @@
     "order": 6,
     "name": {
       "el": "ΔΑ",
-      "en": "nan"
+      "en": "ΔΑ"
     },
     "color": null
   },
@@ -955,7 +955,7 @@
     "order": 10,
     "name": {
       "el": "ΔΑ",
-      "en": "nan"
+      "en": "ΔΑ"
     },
     "color": null
   },
@@ -984,7 +984,7 @@
     "notation": "3",
     "order": 3,
     "name": {
-      "el": "Να σπουδάζεις σε κάποιο πανεπιστήμιο της Ε.Ε. ως Ευρωπαίος πολίτη",
+      "el": "Να σπουδάζεις σε κάποιο πανεπιστήμιο της Ε.Ε. ως Ευρωπαίος πολίτης",
       "en": "Studying in another EU University with the status of an EU citizen"
     },
     "color": null
@@ -1004,7 +1004,7 @@
     "notation": "5",
     "order": 5,
     "name": {
-      "el": "Να μιλάς στο κινητό από/σε χώρα της Ε.Ε. χωρίς τέλη περιαγωγής (roaming",
+      "el": "Να μιλάς στο κινητό από/σε χώρα της Ε.Ε. χωρίς τέλη περιαγωγής (roaming)",
       "en": "Using the mobile phone without roaming charges"
     },
     "color": null
@@ -1055,7 +1055,7 @@
     "order": 10,
     "name": {
       "el": "ΔΑ",
-      "en": "nan"
+      "en": "ΔΑ"
     },
     "color": null
   },
@@ -1115,7 +1115,7 @@
     "order": 6,
     "name": {
       "el": "ΔΑ",
-      "en": "nan"
+      "en": "ΔΑ"
     },
     "color": null
   },
@@ -1215,7 +1215,7 @@
     "order": 6,
     "name": {
       "el": "ΔΑ",
-      "en": "nan"
+      "en": "ΔΑ"
     },
     "color": null
   },
@@ -1275,7 +1275,7 @@
     "order": 4,
     "name": {
       "el": "ΔΑ",
-      "en": "nan"
+      "en": "ΔΑ"
     },
     "color": null
   },
