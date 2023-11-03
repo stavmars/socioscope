@@ -1615,6 +1615,48 @@
     "defaultOptions": {
       "xAxis": "ye_q1",
       "measure": "adolescents_perc"
-    }
+    },
+    "highlights": [
+      {
+        "id": "young_europeans_identity",
+        "description": {
+          "el": "<span>Σχεδόν ένας/μία στους/τις δύο ερωτώμενους/ες αυτο-προσδιορίζονται ως «Πρώτα Έλληνας/ίδα και μετά Ευρωπαίος/α» (45%). Ακολουθούν, όσοι/ες προσδιορίζονται ως «Πολίτες του κόσμου» (27,4%), ενώ λιγότεροι/ες (14,2%) δηλώνουν ότι είναι «Μόνο Έλληνες/ίδες».</span>",
+          "en": "<span>Almost one in two respondents identify themselves as \"First Greek and then European\" (45%), followed by those who identify themselves as \"Citizens of the world\" (27.4%), whilst fewer (14.2%) say they are \"Only Greeks\".</span>"
+        },
+        "visType": "chart",
+        "subType": "bar",
+        "seriesOptions": {
+          "xAxis": "ye_q13",
+          "measure": "adolescents_perc"
+        }
+      },
+      {
+        "id": "young_europeans_climate_concern",
+        "description": {
+          "el": "<span>Οι νέες γυναίκες εκφράζουν σε μεγαλύτερο βαθμό από τους νέους άνδρες την ανησυχία τους για την κλιματική αλλαγή. Σχεδόν 8 στα δέκα άτομα (81,8%) που δήλωσαν ότι δεν ανησυχούν «καθόλου» για την κλιματική αλλαγή είναι άνδρες. Ενώ πάνω από ένα στα δύο άτομα (58,1%) που δήλωσαν ότι ανησυχούν «αρκετά» είναι γυναίκες.</span>",
+          "en": "<span>Young women express their concern about climate change to a greater extent than young men. Almost 8 in 10 (81.8%) who said they are \"not at all\" concerned about climate change are men. Whilst more than one in two (58.1%) who said they are \"somewhat\" worried are women.</span>"
+        },
+        "visType": "chart",
+        "subType": "bar",
+        "seriesOptions": {
+          "xAxis": "ye_q20",
+          "compareBy": "ye_q2",
+          "measure": "adolescents_perc"
+        }
+      },
+      {
+        "id": "young_europeans_eu_citizenship",
+        "description": {
+          "el": "<span>Για την πλειοψηφία των ερωτώμενων «είναι σημαντικό να είναι Ευρωπαίοι/ες πολίτες» (52,8 % απαντούν «Συμφωνώ» και «Συμφωνώ απόλυτα»). Ωστόσο, οι περισσότεροι/ες (66,7%) δηλώνουν ότι «διαφωνούν» ή «διαφωνούν απόλυτα» με τη δήλωση ότι «τα μέλη της Ε.Ε. συμμετέχουν ισότιμα στις αποφάσεις», καθώς και με τη δήλωση ότι «οι επιτυχίες της Ε.Ε. μοιράζονται σε όλες τις χώρες» (65,4%).</span>",
+          "en": "<span>For the majority of respondents \"it is important to be an EU citizen\" (52.8% \"agree\" and \"strongly agree\"). However, most (66.7%) say that they \"disagree\" or \"strongly disagree\" with the statement that \"EU members participate equally in decisions\" and with the statement that \"the EU's successes are shared equally to all countries' (65.4%).</span>"
+        },
+        "visType": "chart",
+        "subType": "bar",
+        "seriesOptions": {
+          "xAxis": "ye_q14",
+          "measure": "adolescents_perc"
+        }
+      }
+    ]
   }
 ]

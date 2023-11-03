@@ -54,23 +54,25 @@ export class Home extends React.Component<IHomeProp> {
         </Visibility>
         <div id="discover" style={{ height: 120 }} />
         <div className="dataset-cards">
-          {_.at(datasetsById, ['youwho', 'adolescents', 'deputies', 'greek-election-results', 'claims']).map((dataset: IDataSet) => (
-            <div>
-              <div className={`dataset-card-header ${dataset.colorScheme}`}>
-                <Image className="dataset-card-header-image" centered src={`/content/images/Assets/${dataset.id}.svg`} />
-                <h3>{translateEntityField(dataset.name)}</h3>
+          {_.at(datasetsById, ['youwho', 'adolescents', 'deputies', 'greek-election-results', 'claims', 'young-europeans']).map(
+            (dataset: IDataSet) => (
+              <div>
+                <div className={`dataset-card-header ${dataset.colorScheme}`}>
+                  <Image className="dataset-card-header-image" centered src={`/content/images/Assets/${dataset.id}.svg`} />
+                  <h3>{translateEntityField(dataset.name)}</h3>
+                </div>
+                <CardCarousel colorScheme={dataset.colorScheme}>
+                  {dataset.highlights
+                    ? dataset.highlights.map(highlight => (
+                        <DatasetCard key={highlight.id} dataset={dataset} highlight={highlight}>
+                          <div dangerouslySetInnerHTML={{ __html: translateEntityField(highlight.description) }} />
+                        </DatasetCard>
+                      ))
+                    : null}
+                </CardCarousel>
               </div>
-              <CardCarousel colorScheme={dataset.colorScheme}>
-                {dataset.highlights
-                  ? dataset.highlights.map(highlight => (
-                      <DatasetCard key={highlight.id} dataset={dataset} highlight={highlight}>
-                        <div dangerouslySetInnerHTML={{ __html: translateEntityField(highlight.description) }} />
-                      </DatasetCard>
-                    ))
-                  : null}
-              </CardCarousel>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </div>
     );
