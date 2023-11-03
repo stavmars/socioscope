@@ -20,15 +20,17 @@ export class TopicsMegaMenu extends React.Component<ITopicsMegaMenuProps> {
         <Header isFixed={false} />
         <div className="topics-mega-menu-list">
           <List selection verticalAlign="middle">
-            {_.at(dataSetsById, ['youwho', 'adolescents', 'deputies', 'greek-election-results', 'claims']).map((dataset: IDataSet) => (
-              <List.Item className={`topics-mega-menu-list-item ${dataset.colorScheme}`} as={Link} to={`/dataset/${dataset.id}`}>
-                <div className="topics-mega-menu-img">
-                  <Image centered src={`/content/images/Assets/${dataset.id}.svg`} />
-                </div>
-                {translateEntityField(dataset.name)}
-                <span className={`topics-mega-menu-list-item-discover ${dataset.colorScheme}`}>{translate('home.dataset.explore')}</span>
-              </List.Item>
-            ))}
+            {_.at(dataSetsById, ['youwho', 'adolescents', 'deputies', 'greek-election-results', 'claims', 'young-europeans']).map(
+              (dataset: IDataSet) => (
+                <List.Item className={`topics-mega-menu-list-item ${dataset.colorScheme}`} as={Link} to={`/dataset/${dataset.id}`}>
+                  <div className="topics-mega-menu-img">
+                    <Image centered src={`/content/images/Assets/${dataset.id}.svg`} />
+                  </div>
+                  {translateEntityField(dataset.name)}
+                  <span className={`topics-mega-menu-list-item-discover ${dataset.colorScheme}`}>{translate('home.dataset.explore')}</span>
+                </List.Item>
+              )
+            )}
           </List>
         </div>
       </div>

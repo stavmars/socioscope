@@ -28,22 +28,24 @@ export class MobileMenu extends React.Component<IMobileMenuProps> {
             <List.Content>
               <List.Header className="mobile-menu-item">{translate('global.menu.topics')}</List.Header>
               <div className="mobile-menu-list">
-                {_.at(dataSetsById, ['youwho', 'adolescents', 'deputies', 'greek-election-results', 'claims']).map((dataset: IDataSet) => (
-                  <List.Item className={`mobile-menu-list-line ${dataset.colorScheme}`}>
-                    <Container>
-                      <Image className="mobile-menu-list-line-image" src={`/content/images/Assets/${dataset.id}.svg`} />
-                      <Container
-                        text
-                        className={`mobile-menu-list-line-item ${dataset.colorScheme}`}
-                        as="a"
-                        href={`/dataset/${dataset.id}`}
-                      >
-                        {translateEntityField(dataset.name)}
-                        <i />
+                {_.at(dataSetsById, ['youwho', 'adolescents', 'deputies', 'greek-election-results', 'claims', 'young-europeans']).map(
+                  (dataset: IDataSet) => (
+                    <List.Item className={`mobile-menu-list-line ${dataset.colorScheme}`}>
+                      <Container>
+                        <Image className="mobile-menu-list-line-image" src={`/content/images/Assets/${dataset.id}.svg`} />
+                        <Container
+                          text
+                          className={`mobile-menu-list-line-item ${dataset.colorScheme}`}
+                          as="a"
+                          href={`/dataset/${dataset.id}`}
+                        >
+                          {translateEntityField(dataset.name)}
+                          <i />
+                        </Container>
                       </Container>
-                    </Container>
-                  </List.Item>
-                ))}
+                    </List.Item>
+                  )
+                )}
               </div>
             </List.Content>
             <div className="mobile-menu-items">
