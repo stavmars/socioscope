@@ -1627,7 +1627,8 @@
         "subType": "bar",
         "seriesOptions": {
           "xAxis": "ye_q13",
-          "measure": "adolescents_perc"
+          "measure": "adolescents_perc",
+          "dimensionFilters": {}
         }
       },
       {
@@ -1641,7 +1642,8 @@
         "seriesOptions": {
           "xAxis": "ye_q20",
           "compareBy": "ye_q2",
-          "measure": "adolescents_perc"
+          "measure": "adolescents_perc",
+          "dimensionFilters": {}
         }
       },
       {
@@ -1654,7 +1656,8 @@
         "subType": "bar",
         "seriesOptions": {
           "xAxis": "ye_q14",
-          "measure": "adolescents_perc"
+          "measure": "adolescents_perc",
+          "dimensionFilters": {}
         }
       }
     ]
