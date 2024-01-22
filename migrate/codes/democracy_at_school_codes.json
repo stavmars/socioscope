@@ -1,0 +1,1082 @@
+[
+  {
+    "dimensionId": "ds_A2",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "2nd grade upper secindary education",
+      "en": "3rd grade upper secindary education"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_A2",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "3nd grade upper secindary education",
+      "en": "3nd grade upper secindary education"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_A2",
+    "notation": "99",
+    "order": 3,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_A5",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "GEL",
+      "en": "GEL"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_A5",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "EPAL",
+      "en": "EPAL"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_URB_LVL",
+    "notation": "2",
+    "order": 1,
+    "name": {
+      "el": "Semi-urban",
+      "en": "Semi-urban"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_URB_LVL",
+    "notation": "3",
+    "order": 2,
+    "name": {
+      "el": "Urban",
+      "en": "Urban"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_A1",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Girl",
+      "en": "Girl"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_A1",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Boy",
+      "en": "Boy"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_A1",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Other",
+      "en": "Other"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_A1",
+    "notation": "99",
+    "order": 4,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_F2_NEW",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Greek parents",
+      "en": "Greek parents"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_F2_NEW",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "One parent non Greek",
+      "en": "One parent non Greek"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_F2_NEW",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Non Greek parents",
+      "en": "Non Greek parents"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_F2_NEW",
+    "notation": "99",
+    "order": 4,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_F4",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Without any problems",
+      "en": "Without any problems"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_F4",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Making some savings, but generally comfortable",
+      "en": "Making some savings, but generally comfortable"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_F4",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Our monthly income is barely enough",
+      "en": "Our monthly income is barely enough"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_F4",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Day by day, we have financial problems",
+      "en": "Day by day, we have financial problems"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_F4",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "With severe deprivation",
+      "en": "With severe deprivation"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_F4",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B1",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Strongly disagree",
+      "en": "Strongly disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B1",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Disagree",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B1",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Neutral",
+      "en": "Neutral"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B1",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Agree",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B1",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Strongly agree",
+      "en": "Strongly agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B1",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B2",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "They should try to express their opinion with their representatives in the 15-member council",
+      "en": "They should try to express their opinion with their representatives in the 15-member council"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B2",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Complain individually",
+      "en": "Complain individually"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B2",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Do nothing because the decision will not be changed anyway",
+      "en": "Do nothing because the decision will not be changed anyway"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B2",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "They should occupy the school",
+      "en": "They should occupy the school"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B2",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Other",
+      "en": "Other"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B2",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B10",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Yes",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B10",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "No",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B10",
+    "notation": "99",
+    "order": 3,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B3",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Because they want to help their classmates",
+      "en": "Because they want to help their classmates"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B3",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Because they like to have power and authority",
+      "en": "Because they like to have power and authority"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B3",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Why they want to be actively involved in the governance of their school",
+      "en": "Why they want to be actively involved in the governance of their school"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B3",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Because they want to be known and thus benefit",
+      "en": "Because they want to be known and thus benefit"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B3",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Other",
+      "en": "Other"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B3",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_Β4",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Yes",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_Β4",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "No",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B5",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Boys and girls have the same opportunities to be voted",
+      "en": "Boys and girls have the same opportunities to be voted"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B5",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Girls have more opportunities than boys to be voted",
+      "en": "Girls have more opportunities than boys to be voted"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B5",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Boys have more opportunities than boys to be voted",
+      "en": "Boys have more opportunities than boys to be voted"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B5",
+    "notation": "99",
+    "order": 4,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B6",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Yes",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B6",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "No",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B7",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Yes",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B7",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "No",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B8",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Yes",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B8",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "No",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B8",
+    "notation": "99",
+    "order": 3,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B9",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Stongly disagree",
+      "en": "Stongly disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B9",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Disagree",
+      "en": "Disagree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B9",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Neutral",
+      "en": "Neutral"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B9",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Agree",
+      "en": "Agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B9",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Strongly agree",
+      "en": "Strongly agree"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_B9",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_C1",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Very little",
+      "en": "Very little"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_C1",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Toa small extent",
+      "en": "Toa small extent"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_C1",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Neither to a small nor to a large extent",
+      "en": "Neither to a small nor to a large extent"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_C1",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "To a large extent",
+      "en": "To a large extent"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_C1",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "To avery large extent",
+      "en": "To avery large extent"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_C1",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_C2",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Very little",
+      "en": "Very little"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_C2",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Toa small extent",
+      "en": "Toa small extent"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_C2",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Neither to a small nor to a large extent",
+      "en": "Neither to a small nor to a large extent"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_C2",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "To a large extent",
+      "en": "To a large extent"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_C2",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "To avery large extent",
+      "en": "To avery large extent"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_C2",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D1",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Yes",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D1",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "No",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D1",
+    "notation": "99",
+    "order": 3,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D2",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Yes",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D2",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "No",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D2",
+    "notation": "99",
+    "order": 3,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D3",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Yes",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D3",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "No",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D3",
+    "notation": "99",
+    "order": 3,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D4",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Yes",
+      "en": "Yes"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D4",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "No",
+      "en": "No"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D4",
+    "notation": "99",
+    "order": 3,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D5",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Very little",
+      "en": "Very little"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D5",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Quite a lot",
+      "en": "Quite a lot"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D5",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "A little",
+      "en": "A little"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D5",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Not at all",
+      "en": "Not at all"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D5",
+    "notation": "99",
+    "order": 5,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D6",
+    "notation": "1",
+    "order": 1,
+    "name": {
+      "el": "Very negative",
+      "en": "Very negative"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D6",
+    "notation": "2",
+    "order": 2,
+    "name": {
+      "el": "Rather negative",
+      "en": "Rather negative"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D6",
+    "notation": "3",
+    "order": 3,
+    "name": {
+      "el": "Indifferent",
+      "en": "Indifferent"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D6",
+    "notation": "4",
+    "order": 4,
+    "name": {
+      "el": "Rather positive",
+      "en": "Rather positive"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D6",
+    "notation": "5",
+    "order": 5,
+    "name": {
+      "el": "Very positive",
+      "en": "Very positive"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_D6",
+    "notation": "99",
+    "order": 6,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_E1",
+    "notation": "0",
+    "order": 1,
+    "name": {
+      "el": "Not satisfied at all",
+      "en": "Not satisfied at all"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_E1",
+    "notation": "1",
+    "order": 2,
+    "name": {
+      "el": "1",
+      "en": "1"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_E1",
+    "notation": "2",
+    "order": 3,
+    "name": {
+      "el": "2",
+      "en": "2"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_E1",
+    "notation": "3",
+    "order": 4,
+    "name": {
+      "el": "3",
+      "en": "3"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_E1",
+    "notation": "4",
+    "order": 5,
+    "name": {
+      "el": "4",
+      "en": "4"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_E1",
+    "notation": "5",
+    "order": 6,
+    "name": {
+      "el": "5",
+      "en": "5"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_E1",
+    "notation": "6",
+    "order": 7,
+    "name": {
+      "el": "6",
+      "en": "6"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_E1",
+    "notation": "7",
+    "order": 8,
+    "name": {
+      "el": "7",
+      "en": "7"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_E1",
+    "notation": "8",
+    "order": 9,
+    "name": {
+      "el": "8",
+      "en": "8"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_E1",
+    "notation": "9",
+    "order": 10,
+    "name": {
+      "el": "9",
+      "en": "9"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_E1",
+    "notation": "10",
+    "order": 11,
+    "name": {
+      "el": "Completely satisfied",
+      "en": "Completely satisfied"
+    },
+    "color": null
+  },
+  {
+    "dimensionId": "ds_E1",
+    "notation": "99",
+    "order": 12,
+    "name": {
+      "el": "NK/NA",
+      "en": "NK/NA"
+    },
+    "color": null
+  }
+]
