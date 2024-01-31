@@ -4,8 +4,8 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "2nd grade upper secindary education",
-      "en": "3rd grade upper secindary education"
+      "el": "Β΄ Λυκείου",
+      "en": "2nd grade upper secondary education"
     },
     "color": null
   },
@@ -14,8 +14,8 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "3nd grade upper secindary education",
-      "en": "3nd grade upper secindary education"
+      "el": "Γ΄ Λυκείου",
+      "en": "3nd grade upper secondary education"
     },
     "color": null
   },
@@ -24,7 +24,7 @@
     "notation": "99",
     "order": 3,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -34,7 +34,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "GEL",
+      "el": "ΓΕΛ",
       "en": "GEL"
     },
     "color": null
@@ -44,7 +44,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "EPAL",
+      "el": "ΕΠΑΛ",
       "en": "EPAL"
     },
     "color": null
@@ -54,7 +54,7 @@
     "notation": "2",
     "order": 1,
     "name": {
-      "el": "Semi-urban",
+      "el": "Ημιαστική",
       "en": "Semi-urban"
     },
     "color": null
@@ -64,7 +64,7 @@
     "notation": "3",
     "order": 2,
     "name": {
-      "el": "Urban",
+      "el": "Αγροτική",
       "en": "Urban"
     },
     "color": null
@@ -74,7 +74,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Girl",
+      "el": "Κορίτσι",
       "en": "Girl"
     },
     "color": null
@@ -84,7 +84,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "Boy",
+      "el": "Αγόρι",
       "en": "Boy"
     },
     "color": null
@@ -94,7 +94,7 @@
     "notation": "3",
     "order": 3,
     "name": {
-      "el": "Other",
+      "el": "Άλλο",
       "en": "Other"
     },
     "color": null
@@ -104,7 +104,7 @@
     "notation": "99",
     "order": 4,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -114,7 +114,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Greek parents",
+      "el": "Έλληνες γονείς",
       "en": "Greek parents"
     },
     "color": null
@@ -124,7 +124,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "One parent non Greek",
+      "el": "Ένας γονέας μη  Έλληνας",
       "en": "One parent non Greek"
     },
     "color": null
@@ -134,7 +134,7 @@
     "notation": "3",
     "order": 3,
     "name": {
-      "el": "Non Greek parents",
+      "el": "Μη Έλληνες γονείς",
       "en": "Non Greek parents"
     },
     "color": null
@@ -144,7 +144,7 @@
     "notation": "99",
     "order": 4,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -154,7 +154,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Without any problems",
+      "el": "Χωρίς κανένα πρόβλημα",
       "en": "Without any problems"
     },
     "color": null
@@ -164,7 +164,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "Making some savings, but generally comfortable",
+      "el": "Κάνοντας κάποιες οικονομίες, αλλά γενικά άνετα",
       "en": "Making some savings, but generally comfortable"
     },
     "color": null
@@ -174,7 +174,7 @@
     "notation": "3",
     "order": 3,
     "name": {
-      "el": "Our monthly income is barely enough",
+      "el": "Μόλις που φτάνει το μηνιαίο εισόδημα μας",
       "en": "Our monthly income is barely enough"
     },
     "color": null
@@ -184,7 +184,7 @@
     "notation": "4",
     "order": 4,
     "name": {
-      "el": "Day by day, we have financial problems",
+      "el": "Μέρα με τη μέρα, έχουμε οικονομικά προβλήματα",
       "en": "Day by day, we have financial problems"
     },
     "color": null
@@ -194,7 +194,7 @@
     "notation": "5",
     "order": 5,
     "name": {
-      "el": "With severe deprivation",
+      "el": "Με σοβαρές στερήσεις",
       "en": "With severe deprivation"
     },
     "color": null
@@ -204,7 +204,7 @@
     "notation": "99",
     "order": 6,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -214,7 +214,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Strongly disagree",
+      "el": "Διαφωνώ απόλυτα",
       "en": "Strongly disagree"
     },
     "color": null
@@ -224,7 +224,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "Disagree",
+      "el": "Διαφωνώ",
       "en": "Disagree"
     },
     "color": null
@@ -234,7 +234,7 @@
     "notation": "3",
     "order": 3,
     "name": {
-      "el": "Neutral",
+      "el": "Ουδέτερα",
       "en": "Neutral"
     },
     "color": null
@@ -244,7 +244,7 @@
     "notation": "4",
     "order": 4,
     "name": {
-      "el": "Agree",
+      "el": "Συμφωνώ",
       "en": "Agree"
     },
     "color": null
@@ -254,7 +254,7 @@
     "notation": "5",
     "order": 5,
     "name": {
-      "el": "Strongly agree",
+      "el": "Συμφωνώ απόλυτα",
       "en": "Strongly agree"
     },
     "color": null
@@ -264,7 +264,7 @@
     "notation": "99",
     "order": 6,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -274,7 +274,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "They should try to express their opinion with their representatives in the 15-member council",
+      "el": "Να προσπαθήσουν με τους αντιπροσώπους τους στο 15μελές να πούνε την άποψη τους",
       "en": "They should try to express their opinion with their representatives in the 15-member council"
     },
     "color": null
@@ -284,7 +284,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "Complain individually",
+      "el": "Να διαμαρτυρηθούν στη Διεύθυνση ατομικά",
       "en": "Complain individually"
     },
     "color": null
@@ -294,7 +294,7 @@
     "notation": "3",
     "order": 3,
     "name": {
-      "el": "Do nothing because the decision will not be changed anyway",
+      "el": "Να μην κάνουν τίποτα διότι έτσι κι αλλιώς δεν θα αλλάξει η απόφαση",
       "en": "Do nothing because the decision will not be changed anyway"
     },
     "color": null
@@ -304,7 +304,7 @@
     "notation": "4",
     "order": 4,
     "name": {
-      "el": "They should occupy the school",
+      "el": "Να κάνουν κατάληψη",
       "en": "They should occupy the school"
     },
     "color": null
@@ -314,7 +314,7 @@
     "notation": "5",
     "order": 5,
     "name": {
-      "el": "Other",
+      "el": "Άλλο",
       "en": "Other"
     },
     "color": null
@@ -324,7 +324,7 @@
     "notation": "99",
     "order": 6,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -334,7 +334,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Yes",
+      "el": "Ναι",
       "en": "Yes"
     },
     "color": null
@@ -344,7 +344,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "No",
+      "el": "Όχι",
       "en": "No"
     },
     "color": null
@@ -354,7 +354,7 @@
     "notation": "99",
     "order": 3,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -364,7 +364,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Because they want to help their classmates",
+      "el": "Γιατί θέλουν να βοηθήσουν τους/τις συμμαθητές/τριες τους",
       "en": "Because they want to help their classmates"
     },
     "color": null
@@ -374,7 +374,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "Because they like to have power and authority",
+      "el": "Γιατί τους αρέσει να έχουν δύναμη και εξουσία",
       "en": "Because they like to have power and authority"
     },
     "color": null
@@ -384,7 +384,7 @@
     "notation": "3",
     "order": 3,
     "name": {
-      "el": "Why they want to be actively involved in the governance of their school",
+      "el": "Γιατί θέλουν να συμμετέχουν ενεργά στην τύχη του σχολείου τους",
       "en": "Why they want to be actively involved in the governance of their school"
     },
     "color": null
@@ -394,7 +394,7 @@
     "notation": "4",
     "order": 4,
     "name": {
-      "el": "Because they want to be known and thus benefit",
+      "el": "Γιατί θέλουν να γίνουν γνωστοί/ές και έτσι να ωφεληθούν",
       "en": "Because they want to be known and thus benefit"
     },
     "color": null
@@ -404,7 +404,7 @@
     "notation": "5",
     "order": 5,
     "name": {
-      "el": "Other",
+      "el": "Για άλλο λόγο",
       "en": "Other"
     },
     "color": null
@@ -414,7 +414,7 @@
     "notation": "99",
     "order": 6,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -424,7 +424,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Yes",
+      "el": "Ναι",
       "en": "Yes"
     },
     "color": null
@@ -434,7 +434,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "No",
+      "el": "Όχι",
       "en": "No"
     },
     "color": null
@@ -444,7 +444,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Boys and girls have the same opportunities to be voted",
+      "el": "Τα αγόρια και τα κορίτσια έχουν τις ίδιες ευκαιρίες για να ψηφιστούν",
       "en": "Boys and girls have the same opportunities to be voted"
     },
     "color": null
@@ -454,7 +454,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "Girls have more opportunities than boys to be voted",
+      "el": "Τα κορίτσια έχουν περισσότερες ευκαιρίες από τα αγόρια να ψηφιστούν",
       "en": "Girls have more opportunities than boys to be voted"
     },
     "color": null
@@ -464,7 +464,7 @@
     "notation": "3",
     "order": 3,
     "name": {
-      "el": "Boys have more opportunities than boys to be voted",
+      "el": "Τα αγόρια έχουν περισσότερες ευκαιρίες από τα αγόρια να ψηφιστούν",
       "en": "Boys have more opportunities than boys to be voted"
     },
     "color": null
@@ -474,7 +474,7 @@
     "notation": "99",
     "order": 4,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -484,7 +484,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Yes",
+      "el": "Ναι",
       "en": "Yes"
     },
     "color": null
@@ -494,7 +494,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "No",
+      "el": "Όχι",
       "en": "No"
     },
     "color": null
@@ -504,7 +504,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Yes",
+      "el": "Ναι",
       "en": "Yes"
     },
     "color": null
@@ -514,7 +514,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "No",
+      "el": "Όχι",
       "en": "No"
     },
     "color": null
@@ -524,7 +524,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Yes",
+      "el": "Ναι",
       "en": "Yes"
     },
     "color": null
@@ -534,7 +534,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "No",
+      "el": "Όχι",
       "en": "No"
     },
     "color": null
@@ -544,7 +544,7 @@
     "notation": "99",
     "order": 3,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -554,7 +554,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Stongly disagree",
+      "el": "Διαφωνώ απόλυτα",
       "en": "Stongly disagree"
     },
     "color": null
@@ -564,7 +564,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "Disagree",
+      "el": "Διαφωνώ",
       "en": "Disagree"
     },
     "color": null
@@ -574,7 +574,7 @@
     "notation": "3",
     "order": 3,
     "name": {
-      "el": "Neutral",
+      "el": "Ουδέτερα",
       "en": "Neutral"
     },
     "color": null
@@ -584,7 +584,7 @@
     "notation": "4",
     "order": 4,
     "name": {
-      "el": "Agree",
+      "el": "Συμφωνώ",
       "en": "Agree"
     },
     "color": null
@@ -594,7 +594,7 @@
     "notation": "5",
     "order": 5,
     "name": {
-      "el": "Strongly agree",
+      "el": "Συμφωνώ απόλυτα",
       "en": "Strongly agree"
     },
     "color": null
@@ -604,7 +604,7 @@
     "notation": "99",
     "order": 6,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -614,7 +614,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Very little",
+      "el": "Ελάχιστα",
       "en": "Very little"
     },
     "color": null
@@ -624,8 +624,8 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "Toa small extent",
-      "en": "Toa small extent"
+      "el": "Σε μικρό βαθμό",
+      "en": "To a small extent"
     },
     "color": null
   },
@@ -634,7 +634,7 @@
     "notation": "3",
     "order": 3,
     "name": {
-      "el": "Neither to a small nor to a large extent",
+      "el": "Ούτε σε μικρό, ούτε σε μεγάλο βαθμό",
       "en": "Neither to a small nor to a large extent"
     },
     "color": null
@@ -644,7 +644,7 @@
     "notation": "4",
     "order": 4,
     "name": {
-      "el": "To a large extent",
+      "el": "Σε μεγάλο βαθμό",
       "en": "To a large extent"
     },
     "color": null
@@ -654,7 +654,7 @@
     "notation": "5",
     "order": 5,
     "name": {
-      "el": "To avery large extent",
+      "el": "Σε πολύ μεγάλο βαθμό",
       "en": "To avery large extent"
     },
     "color": null
@@ -664,7 +664,7 @@
     "notation": "99",
     "order": 6,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -674,7 +674,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Very little",
+      "el": "Καθόλου",
       "en": "Very little"
     },
     "color": null
@@ -684,8 +684,8 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "Toa small extent",
-      "en": "Toa small extent"
+      "el": "Λίγο",
+      "en": "To a small extent"
     },
     "color": null
   },
@@ -694,7 +694,7 @@
     "notation": "3",
     "order": 3,
     "name": {
-      "el": "Neither to a small nor to a large extent",
+      "el": "Ούτε λίγο, ούτε πολύ",
       "en": "Neither to a small nor to a large extent"
     },
     "color": null
@@ -704,7 +704,7 @@
     "notation": "4",
     "order": 4,
     "name": {
-      "el": "To a large extent",
+      "el": "Αρκετά",
       "en": "To a large extent"
     },
     "color": null
@@ -714,7 +714,7 @@
     "notation": "5",
     "order": 5,
     "name": {
-      "el": "To avery large extent",
+      "el": "Πολύ",
       "en": "To avery large extent"
     },
     "color": null
@@ -724,7 +724,7 @@
     "notation": "99",
     "order": 6,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -734,7 +734,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Yes",
+      "el": "Ναι",
       "en": "Yes"
     },
     "color": null
@@ -744,7 +744,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "No",
+      "el": "Όχι",
       "en": "No"
     },
     "color": null
@@ -754,7 +754,7 @@
     "notation": "99",
     "order": 3,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -764,7 +764,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Yes",
+      "el": "Ναι",
       "en": "Yes"
     },
     "color": null
@@ -774,7 +774,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "No",
+      "el": "Όχι",
       "en": "No"
     },
     "color": null
@@ -784,7 +784,7 @@
     "notation": "99",
     "order": 3,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -794,7 +794,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Yes",
+      "el": "Ναι",
       "en": "Yes"
     },
     "color": null
@@ -804,7 +804,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "No",
+      "el": "Όχι",
       "en": "No"
     },
     "color": null
@@ -814,7 +814,7 @@
     "notation": "99",
     "order": 3,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -824,7 +824,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Yes",
+      "el": "Ναι",
       "en": "Yes"
     },
     "color": null
@@ -834,7 +834,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "No",
+      "el": "Όχι",
       "en": "No"
     },
     "color": null
@@ -844,7 +844,7 @@
     "notation": "99",
     "order": 3,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -854,7 +854,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Very little",
+      "el": "Πολύ",
       "en": "Very little"
     },
     "color": null
@@ -864,7 +864,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "Quite a lot",
+      "el": "Αρκετά",
       "en": "Quite a lot"
     },
     "color": null
@@ -874,7 +874,7 @@
     "notation": "3",
     "order": 3,
     "name": {
-      "el": "A little",
+      "el": "Λίγο",
       "en": "A little"
     },
     "color": null
@@ -884,7 +884,7 @@
     "notation": "4",
     "order": 4,
     "name": {
-      "el": "Not at all",
+      "el": "Καθόλου",
       "en": "Not at all"
     },
     "color": null
@@ -894,7 +894,7 @@
     "notation": "99",
     "order": 5,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -904,7 +904,7 @@
     "notation": "1",
     "order": 1,
     "name": {
-      "el": "Very negative",
+      "el": "Πολύ αρνητική",
       "en": "Very negative"
     },
     "color": null
@@ -914,7 +914,7 @@
     "notation": "2",
     "order": 2,
     "name": {
-      "el": "Rather negative",
+      "el": "Μάλλον αρνητική",
       "en": "Rather negative"
     },
     "color": null
@@ -924,7 +924,7 @@
     "notation": "3",
     "order": 3,
     "name": {
-      "el": "Indifferent",
+      "el": "Αδιάφορη",
       "en": "Indifferent"
     },
     "color": null
@@ -934,7 +934,7 @@
     "notation": "4",
     "order": 4,
     "name": {
-      "el": "Rather positive",
+      "el": "Μάλλον θετική",
       "en": "Rather positive"
     },
     "color": null
@@ -944,7 +944,7 @@
     "notation": "5",
     "order": 5,
     "name": {
-      "el": "Very positive",
+      "el": "Πολύ θετική",
       "en": "Very positive"
     },
     "color": null
@@ -954,7 +954,7 @@
     "notation": "99",
     "order": 6,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
@@ -964,7 +964,7 @@
     "notation": "0",
     "order": 1,
     "name": {
-      "el": "Not satisfied at all",
+      "el": "Καθόλου ικανοποιημένος/η",
       "en": "Not satisfied at all"
     },
     "color": null
@@ -1064,7 +1064,7 @@
     "notation": "10",
     "order": 11,
     "name": {
-      "el": "Completely satisfied",
+      "el": "Απόλυτα ικανοποιημένος/η",
       "en": "Completely satisfied"
     },
     "color": null
@@ -1074,7 +1074,7 @@
     "notation": "99",
     "order": 12,
     "name": {
-      "el": "NK/NA",
+      "el": "ΔΓ/ΔΑ",
       "en": "NK/NA"
     },
     "color": null
