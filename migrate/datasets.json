@@ -1673,427 +1673,388 @@
     "comment": {
       "el": "<h3>ΤΑΥΤΟΤΗΤΑ ΕΡΕΥΝΑΣ</h3><p>Τα δεδομένα προέρχονται από την έρευνα με τίτλο «Νέοι, Ευρώπη, Δημοκρατία». Η έρευνα υλοποιήθηκε με online συμπλήρωση δομημένου ερωτηματολογίου (CAWI) κατά το χρονικό διάστημα 21 Νοεμβρίου 2022-20 Ιανουαρίου 2023. Πληθυσμός στόχος ήταν οι μαθητές/ριες Β΄ & Γ΄ Τάξης σε Δημόσια Ημερήσια Γενικά Λύκεια (ΓΕΛ) & Ημερήσια Επαγγελματικά Λύκεια (ΕΠΑΛ).</p><p>Πραγματοποιήθηκε τυχαία στρωματοποιημένη δειγματοληψία με μονάδα ανάλυσης τη σχολική μονάδα ως προς: α) την Περιφερειακή Ενότητα, 2) το είδος του σχολείου (ΓΕΛ, ΕΠΑΛ). Το μέγεθος του δείγματος είναι 4.818 άτομα από 122 σχολικές μονάδες.</p><p>Στην τρέχουσα εφαρμογή τα δεδομένα παρουσιάζονται χωρίς την εφαρμογή βαρών/συντελεστών στάθμισης.</p><h3>ΕΠΙΣΤΗΜΟΝΙΚΗ ΟΜΑΔΑ</h3><p>Υπεύθυνες έργου: Κατερίνα Ηλιού (kiliou@ekke.gr), Μανίνα Κακεπάκη (mkakepaki@ekke.gr)</p><p>Μέλη Ομάδας Έργου: Παύλος Μπαλτάς, Χριστίνα Φρέντζου, Νικόλαος Κληρονόμος, Σταύρος Μαρούλης, Μαρία Περιβολαράκη, Άννα Μαρία Κανελλάκη (Πρακτική άσκηση)</p><h3>ΧΡΗΜΑΤΟΔΟΤΗΣΗ</h3><p>Το έργο «Νέοι, Ευρώπη, Δημοκρατία» εντάσσεται στον εθνικό προγραμματισμό δράσεων της Γενικής Γραμματείας Επαγγελματικής Εκπαίδευσης, Κατάρτισης, Δια Βίου Μάθησης και Νεολαίας (ΓΓ ΕΕΚΔΒ&Ν) του Υπουργείου Παιδείας και Θρησκευμάτων (ΥΠΑΙΘ) ως Εθνικός Συντονιστής στην Ελλάδα για το Ευρωπαϊκό Έτος Νεολαίας 2022 και χρηματοδοτείται από την Ευρωπαϊκή Ένωση. Σε συνεργασία με το Ινστιτούτο Πολιτικών Ερευνών (ΙΠΕ) του Εθνικού Κέντρου Κοινωνικών Ερευνών (ΕΚΚΕ) υλοποιήθηκαν δύο έρευνες με πληθυσμό στόχο τους νέους στην Ελλάδα.</p>",
       "en": "<h3>RESEARCH IDENTITY</h3><p>The data comes from the survey entitled \"Youth, Europe, Democracy\". The survey was implemented by completing an online structured questionnaire (CAWI) during the period from 21 November 2022 to 20 January 2023. The target population was the students of 2nd & 3rd grade in General Upper Secondary Schools (GEL) and Vocational Upper Secondary Schools (EPAL).</p><p>Random stratified sampling was carried out with the unit of analysis being the school unit. Sampling criteria are: a) the Regional Unit, 2) the type of school (GEL, EPAL). The sample size is 4,818 persons from 122 school units.</p><p>In the current application, the data is presented without the application of weights/weightings.</p><h3>RESEARCH TEAM</h3><p>Principal Investigators: Katerina Iliou (kiliou@ekke.gr), Manina Kakepaki (mkakepaki@ekke.gr)</p><p>Research team members: Pavlos Baltas, Christina Frentzou, Nikolaos Klironomos, Stavros Maroulis, Maria Perivolaraki, Anna Maria Kanellaki (Internship)</p><h3>FUNDING</h3><p>The project \"Youth, Europe, Democracy\" is part of the national action plan of the General Secretariat for Vocational Education, Training, Lifelong Learning and Youth (GS VETLL&Y) of the Hellenic Ministry of Education and Religious Affairs (Ministry of Education) as National Coordinator in Greece for the European Year of Youth 2022 and is funded by the European Union. In collaboration with the Institute of Political Research (IPR) of the National Centre for Social Research (EKKE), two surveys have been implemented targeting young people in Greece.</p>"
-    },    
+    },
     "dimensions": [
       {
-        "id": "ds_URB_LVL"
+        "id": "A2"
       },
       {
-        "id": "ds_D5"
+        "id": "A5"
       },
       {
-        "id": "ds_B3"
+        "id": "URB_LVL"
       },
       {
-        "id": "ds_B2"
+        "id": "A1"
       },
       {
-        "id": "ds_D6"
+        "id": "F2_NEW"
       },
       {
-        "id": "ds_B5"
+        "id": "F4"
       },
       {
-        "id": "ds_F2_NEW"
+        "id": "B1a_1"
       },
       {
-        "id": "ds_F4"
+        "id": "B1a_2"
       },
       {
-        "id": "ds_A2"
+        "id": "B1a_3"
       },
       {
-        "id": "ds_A5"
+        "id": "B1b_4"
       },
       {
-        "id": "ds_A1"
+        "id": "B1b_5"
       },
       {
-        "id": "ds_D3"
+        "id": "B1b_6"
       },
       {
-        "id": "ds_E1"
+        "id": "B2"
       },
       {
-        "id": "ds_B1"
+        "id": "B10_1"
       },
       {
-        "id": "ds_B6"
+        "id": "B10_2"
       },
       {
-        "id": "ds_B7"
+        "id": "B10_3"
       },
       {
-        "id": "ds_Β4"
+        "id": "B10_4"
       },
       {
-        "id": "ds_B10"
+        "id": "B10_5"
       },
       {
-        "id": "ds_B9"
+        "id": "B3"
       },
       {
-        "id": "ds_C1"
+        "id": "Β4_1_NEW"
       },
       {
-        "id": "ds_D2"
+        "id": "Β4_2_NEW"
       },
       {
-        "id": "ds_D4"
+        "id": "Β4_3_NEW"
       },
       {
-        "id": "ds_B8"
+        "id": "Β4_4_NEW"
       },
       {
-        "id": "ds_D1"
+        "id": "Β4_5_NEW"
       },
       {
-        "id": "ds_B10_1"
+        "id": "Β4_6_NEW"
       },
       {
-        "id": "ds_B10_2"
+        "id": "Β4_7_NEW"
       },
       {
-        "id": "ds_B10_3"
+        "id": "Β4_8_NEW"
       },
       {
-        "id": "ds_B10_4"
+        "id": "Β4_9_NEW"
       },
       {
-        "id": "ds_B10_5"
+        "id": "Β4_10_NEW"
       },
       {
-        "id": "ds_B1_1"
+        "id": "Β4_11_NEW"
       },
       {
-        "id": "ds_B1_2"
+        "id": "Β4_12_NEW"
       },
       {
-        "id": "ds_B1_3"
+        "id": "Β4_13_NEW"
       },
       {
-        "id": "ds_B1_4"
+        "id": "Β4_14_NEW"
       },
       {
-        "id": "ds_B1_5"
+        "id": "Β4_15_NEW"
       },
       {
-        "id": "ds_B1_6"
+        "id": "Β4_16_NEW"
       },
       {
-        "id": "ds_B6_a_NEW"
+        "id": "Β4_17_NEW"
       },
       {
-        "id": "ds_B6_b_NEW"
+        "id": "Β4_18_NEW"
       },
       {
-        "id": "ds_B6_c_NEW"
+        "id": "Β4_19_NEW"
       },
       {
-        "id": "ds_B6_d_NEW"
+        "id": "Β4_20_NEW"
       },
       {
-        "id": "ds_B6_e_NEW"
+        "id": "Β4_21_NEW"
       },
       {
-        "id": "ds_B6_f_NEW"
+        "id": "B5"
       },
       {
-        "id": "ds_B6_g_NEW"
+        "id": "B6_a_NEW"
       },
       {
-        "id": "ds_B6_h_NEW"
+        "id": "B6_b_NEW"
       },
       {
-        "id": "ds_B6_i_NEW"
+        "id": "B6_c_NEW"
       },
       {
-        "id": "ds_B6_j_NEW"
+        "id": "B6_d_NEW"
       },
       {
-        "id": "ds_B6_k_NEW"
+        "id": "B6_e_NEW"
       },
       {
-        "id": "ds_B6_l_NEW"
+        "id": "B6_f_NEW"
       },
       {
-        "id": "ds_B6_m_NEW"
+        "id": "B6_g_NEW"
       },
       {
-        "id": "ds_B6_n_NEW"
+        "id": "B6_h_NEW"
       },
       {
-        "id": "ds_B6_o_NEW"
+        "id": "B6_i_NEW"
       },
       {
-        "id": "ds_B6_p_NEW"
+        "id": "B6_j_NEW"
       },
       {
-        "id": "ds_B6_q_NEW"
+        "id": "B6_k_NEW"
       },
       {
-        "id": "ds_B6_r_NEW"
+        "id": "B6_l_NEW"
       },
       {
-        "id": "ds_B6_s_NEW"
+        "id": "B6_m_NEW"
       },
       {
-        "id": "ds_B7_a_NEW"
+        "id": "B6_n_NEW"
       },
       {
-        "id": "ds_B7_b_NEW"
+        "id": "B6_o_NEW"
       },
       {
-        "id": "ds_B7_c_NEW"
+        "id": "B6_p_NEW"
       },
       {
-        "id": "ds_B7_d_NEW"
+        "id": "B6_q_NEW"
       },
       {
-        "id": "ds_B7_e_NEW"
+        "id": "B6_r_NEW"
       },
       {
-        "id": "ds_B7_f_NEW"
+        "id": "B6_s_NEW"
       },
       {
-        "id": "ds_B7_g_NEW"
+        "id": "B7_a_NEW"
       },
       {
-        "id": "ds_B7_h_NEW"
+        "id": "B7_b_NEW"
       },
       {
-        "id": "ds_B7_i_NEW"
+        "id": "B7_c_NEW"
       },
       {
-        "id": "ds_B7_j_NEW"
+        "id": "B7_d_NEW"
       },
       {
-        "id": "ds_B7_k_NEW"
+        "id": "B7_e_NEW"
       },
       {
-        "id": "ds_B7_l_NEW"
+        "id": "B7_f_NEW"
       },
       {
-        "id": "ds_B7_m_NEW"
+        "id": "B7_g_NEW"
       },
       {
-        "id": "ds_B7_n_NEW"
+        "id": "B7_h_NEW"
       },
       {
-        "id": "ds_B7_o_NEW"
+        "id": "B7_i_NEW"
       },
       {
-        "id": "ds_B7_p_NEW"
+        "id": "B7_j_NEW"
       },
       {
-        "id": "ds_B7_q_NEW"
+        "id": "B7_k_NEW"
       },
       {
-        "id": "ds_B7_r_NEW"
+        "id": "B7_l_NEW"
       },
       {
-        "id": "ds_B7_s_NEW"
+        "id": "B7_m_NEW"
       },
       {
-        "id": "ds_B8_1"
+        "id": "B7_n_NEW"
       },
       {
-        "id": "ds_B8_2"
+        "id": "B7_o_NEW"
       },
       {
-        "id": "ds_B8_3"
+        "id": "B7_p_NEW"
       },
       {
-        "id": "ds_B8_4"
+        "id": "B7_q_NEW"
       },
       {
-        "id": "ds_B9_1"
+        "id": "B7_r_NEW"
       },
       {
-        "id": "ds_B9_2"
+        "id": "B7_s_NEW"
       },
       {
-        "id": "ds_B9_3"
+        "id": "B8_1"
       },
       {
-        "id": "ds_B9_4"
+        "id": "B8_2"
       },
       {
-        "id": "ds_B9_5"
+        "id": "B8_3"
       },
       {
-        "id": "ds_B9_6"
+        "id": "B8_4"
       },
       {
-        "id": "ds_C1_1"
+        "id": "B9_1"
       },
       {
-        "id": "ds_C1_2"
+        "id": "B9_2"
       },
       {
-        "id": "ds_C1_3"
+        "id": "B9_3"
       },
       {
-        "id": "ds_C1_4"
+        "id": "B9_4"
       },
       {
-        "id": "ds_C1_5"
+        "id": "B9_5"
       },
       {
-        "id": "ds_C1_6"
+        "id": "B9_6"
       },
       {
-        "id": "ds_C2_1"
+        "id": "C1_1"
       },
       {
-        "id": "ds_C2_2"
+        "id": "C1_2"
       },
       {
-        "id": "ds_C2_3"
+        "id": "C1_3"
       },
       {
-        "id": "ds_C2_4"
+        "id": "C1_4"
       },
       {
-        "id": "ds_C2_5"
+        "id": "C1_5"
       },
       {
-        "id": "ds_C2_6"
+        "id": "C1_6"
       },
       {
-        "id": "ds_D1_1"
+        "id": "C2_1"
       },
       {
-        "id": "ds_D1_2"
+        "id": "C2_2"
       },
       {
-        "id": "ds_D1_3"
+        "id": "C2_3"
       },
       {
-        "id": "ds_D1_4"
+        "id": "C2_4"
       },
       {
-        "id": "ds_D1_5"
+        "id": "C2_5"
       },
       {
-        "id": "ds_D1_6"
+        "id": "C2_6"
       },
       {
-        "id": "ds_D1_7"
+        "id": "D1_1"
       },
       {
-        "id": "ds_D2_1"
+        "id": "D1_2"
       },
       {
-        "id": "ds_D2_2"
+        "id": "D1_3"
       },
       {
-        "id": "ds_D2_3"
+        "id": "D1_4"
       },
       {
-        "id": "ds_D2_4"
+        "id": "D1_5"
       },
       {
-        "id": "ds_D2_5"
+        "id": "D1_6"
       },
       {
-        "id": "ds_D3_1"
+        "id": "D1_7"
       },
       {
-        "id": "ds_D3_2"
+        "id": "D2_1"
       },
       {
-        "id": "ds_D3_3"
+        "id": "D2_2"
       },
       {
-        "id": "ds_D3_4"
+        "id": "D2_3"
       },
       {
-        "id": "ds_D3_5"
+        "id": "D2_4"
       },
       {
-        "id": "ds_D4_1"
+        "id": "D2_5"
       },
       {
-        "id": "ds_D4_2"
+        "id": "D3_1"
       },
       {
-        "id": "ds_E1_1"
+        "id": "D3_2"
       },
       {
-        "id": "ds_E1_2"
+        "id": "D3_3"
       },
       {
-        "id": "ds_E1_3"
+        "id": "D3_4"
       },
       {
-        "id": "ds_E1_4"
+        "id": "D3_5"
       },
       {
-        "id": "ds_E1_5"
+        "id": "D4_1"
       },
       {
-        "id": "ds_Β4_10_NEW"
+        "id": "D4_2"
       },
       {
-        "id": "ds_Β4_11_NEW"
+        "id": "D5"
       },
       {
-        "id": "ds_Β4_12_NEW"
+        "id": "D6"
       },
       {
-        "id": "ds_Β4_13_NEW"
+        "id": "E1_1"
       },
       {
-        "id": "ds_Β4_14_NEW"
+        "id": "E1_2"
       },
       {
-        "id": "ds_Β4_15_NEW"
+        "id": "E1_3"
       },
       {
-        "id": "ds_Β4_16_NEW"
+        "id": "E1_4"
       },
       {
-        "id": "ds_Β4_17_NEW"
-      },
-      {
-        "id": "ds_Β4_18_NEW"
-      },
-      {
-        "id": "ds_Β4_19_NEW"
-      },
-      {
-        "id": "ds_Β4_1_NEW"
-      },
-      {
-        "id": "ds_Β4_20_NEW"
-      },
-      {
-        "id": "ds_Β4_21_NEW"
-      },
-      {
-        "id": "ds_Β4_2_NEW"
-      },
-      {
-        "id": "ds_Β4_3_NEW"
-      },
-      {
-        "id": "ds_Β4_4_NEW"
-      },
-      {
-        "id": "ds_Β4_5_NEW"
-      },
-      {
-        "id": "ds_Β4_6_NEW"
-      },
-      {
-        "id": "ds_Β4_7_NEW"
-      },
-      {
-        "id": "ds_Β4_8_NEW"
-      },
-      {
-        "id": "ds_Β4_9_NEW"
+        "id": "E1_5"
       }
     ],
     "dimensionGroups": [
@@ -2107,7 +2068,7 @@
       {
         "id": "ds_compliance_and_participation_in_school",
         "name": {
-          "el": "ΣΥΜΟΡΦΩΣΗ ΚΑΙ ΣΥΜΜΕΤΟΧΗ ΣΤΟ ΣΧΟΛΕΙΟ",
+          "el": "ΣΥΜΜΟΡΦΩΣΗ ΚΑΙ ΣΥΜΜΕΤΟΧΗ ΣΤΟ ΣΧΟΛΕΙΟ",
           "en": "COMPLIANCE AND PARTICIPATION IN SCHOOL"
         }
       },
