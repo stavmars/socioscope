@@ -4526,97 +4526,187 @@
     "disableCompareBy": true
   },
   {
-    "id": "ds_B2",
-    "name": {
-      "el": "Αντίδραση σε διαφωνία",
-      "en": "Reaction to disagreement"
-    },
-    "description": {
-      "el": "Ερ. Σε περίπτωση που το σχολείο πάρει μια απόφαση με την οποία διαφωνούν πολλοί μαθητές/τριες, τι νομίζεις ότι πρέπει να κάνουν; ",
-      "en": "Q. In case the school makes a decision that many students disagree with, what do you think they should do? "
-    },
-    "groupId": "ds_compliance_and_participation_in_school",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true
-  },
-  {
-    "id": "ds_URB_LVL",
+    "id": "ye_q4",
     "name": {
       "el": "Βαθμός αστικότητας",
-      "en": "Degree of urbanity"
+      "en": "Urbanity"
     },
     "description": {
       "el": "Βαθμός αστικότητας",
-      "en": "Degree of urbanity"
+      "en": "Urbanity"
     },
-    "groupId": "ds_demographics",
+    "groupId": "ye_demographics",
     "type": "coded",
     "disableFilter": false,
     "disableCompareBy": false
   },
   {
-    "id": "ds_B3",
+    "id": "ye_q5",
     "name": {
-      "el": "Γνώμη για τους υποψήφιους",
-      "en": "Opinion about canditates "
+      "el": "Επίπεδο εκπαίδευσης",
+      "en": "Educational level"
     },
     "description": {
-      "el": "Ερ. Οι μαθητές/τριες που βάζουν υποψηφιότητα στα 15μελή συμβούλια, γιατί νομίζεις ότι το κάνουν στην πλειοψηφία τους; ",
-      "en": "Q. Why do you think that the majority of students who nun for the 15-member councils do so?"
+      "el": "Επίπεδο εκπαίδευσης",
+      "en": "Educational level"
     },
-    "groupId": "ds_student_councils",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true
-  },
-  {
-    "id": "ds_D5",
-    "name": {
-      "el": "Ενδιαφέρον για πολιτική",
-      "en": "Interest in politics"
-    },
-    "description": {
-      "el": "Ερ. Θα μπορούσες να πεις ότι η πολιτική σε ενδιαφέρει: ",
-      "en": "Q. Could you say that politics interests you?"
-    },
-    "groupId": "ds_forms_of_mobilisation_outside_the_school",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true
-  },
-  {
-    "id": "ds_B5",
-    "name": {
-      "el": "Ισότητα στην εκπροσώπηση",
-      "en": "Equality of representation"
-    },
-    "description": {
-      "el": "Ερ. Τι πιστεύεις ότι ισχύει από τα παρακάτω; ",
-      "en": "Q. Which of the following do you think is true?"
-    },
-    "groupId": "ds_student_councils",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true
-  },
-  {
-    "id": "ds_F2_NEW",
-    "name": {
-      "el": "Καταγωγή ",
-      "en": "National origin"
-    },
-    "description": {
-      "el": "Καταγωγή ",
-      "en": "National origin"
-    },
-    "groupId": "ds_demographics",
+    "groupId": "ye_demographics",
     "type": "coded",
     "disableFilter": false,
     "disableCompareBy": false
   },
   {
-    "id": "ds_F4",
+    "id": "ye_q17_c",
+    "name": {
+      "el": "Πατριωτισμός - Σενάριο 2",
+      "en": "Patriotism - Scenario 2"
+    },
+    "description": {
+      "el": "Ερ. Έστω ότι στο Ευρωκοινοβούλιο συζητείται η μείωση των προγραμμάτων χρηματοδότησης για τις χώρες με υψηλό έλλειμμα προϋπολογισμού. Τι πιστεύετε ότι πρέπει να ψηφίσουν οι Έλληνες ευρωβουλευτές;",
+      "en": "Suppose that the European Parliament discusses the issue of cutting down EU funding programmes for member states with high budget deficit. How do you think Greek MEPs should vote? "
+    },
+    "groupId": "ye_national_european_identity",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q17_b",
+    "name": {
+      "el": "Πατριωτισμός - Σενάριο 1",
+      "en": "Patriotism - Scenario 1"
+    },
+    "description": {
+      "el": "Ερ. Έστω ότι στο Ευρωκοινοβούλιο συζητείται το θέμα της ενεργειακής κρίσης και έχει προταθεί η εξοικονόμηση ενέργειας από όλες τις χώρες κατά 10%. Τι πιστεύετε ότι πρέπει να ψηφίσουν οι Έλληνες ευρωβουλευτές;",
+      "en": "Suppose that the European Parliament discusses the issue of energy crisis and there is a resolution to cut down energy consumption by 10% in all member state. How do you think Greek MEPs should vote? "
+    },
+    "groupId": "ye_national_european_identity",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q9_1",
+    "name": {
+      "el": "Προτίμηση για Ελλάδα",
+      "en": "Preferation for Greece"
+    },
+    "description": {
+      "el": "Ερ. Είναι προτιμότερο να ζεις στην Ελλάδα από οποιαδήποτε άλλη χώρα στον κόσμο;        ",
+      "en": "It is better to live in Greece than in any other country in the world"
+    },
+    "groupId": "ye_national_european_identity",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q13",
+    "name": {
+      "el": "Ατομική ταυτότητα",
+      "en": "Personal Identity"
+    },
+    "description": {
+      "el": "Ερ. Θεωρείτε τον εαυτό σας;",
+      "en": "Do you consider yourself?"
+    },
+    "groupId": "ye_national_european_identity",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q9_2",
+    "name": {
+      "el": "Προτίμηση για Έλληνες",
+      "en": "Preferation for Greeks"
+    },
+    "description": {
+      "el": "Ερ. Οι Έλληνες/ίδες θα ήταν καλύτεροι/ες εάν έμοιαζαν περισσότερο με τους Ευρωπαίους;",
+      "en": "Greeks would be better if they were more like Europeans"
+    },
+    "groupId": "ye_national_european_identity",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q16",
+    "name": {
+      "el": "Επιδραστικό βίωμα για Ε.Ε.",
+      "en": "Informative european experience"
+    },
+    "description": {
+      "el": "Ερ. Ποιο από τα παρακάτω επηρέασε περισσότερο εσάς προσωπικά στο πώς βιώνετε την Ε.Ε.;",
+      "en": "And which event shaped more the way you, personally, experience the EU?"
+    },
+    "groupId": "ye_common_european_experiences",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q15",
+    "name": {
+      "el": "Επιδραστικό γεγονός για Ε.Ε.",
+      "en": "Informative europran moment"
+    },
+    "description": {
+      "el": "Ερ. Ποιο γεγονός του 21ου αιώνα πιστεύετε ότι διαμόρφωσε περισσότερο την προσωπική σας εικόνα για την Ευρωπαϊκή Ένωση;",
+      "en": "Which 21st century event shaped more your personal opinion of the European Union? "
+    },
+    "groupId": "ye_common_european_experiences",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q11",
+    "name": {
+      "el": "Ταξίδια στην Ε.Ε.",
+      "en": "Trips to EU"
+    },
+    "description": {
+      "el": "Ερ. Πόσα ταξίδια έχετε κάνει μέχρι σήμερα σε άλλες χώρες της Ε.Ε.;",
+      "en": "How many times have you traveled to another EU country so far?"
+    },
+    "groupId": "ye_common_european_experiences",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q20",
+    "name": {
+      "el": "Ανησυχία για κλιματική αλλαγή",
+      "en": "Concern about climate change"
+    },
+    "description": {
+      "el": "Ερ. Πόσο ανήσυχος/η είστε για την κλιματική αλλαγή;",
+      "en": "How worried are you about  climate change?"
+    },
+    "groupId": "ye_climate_change",
+    "type": "coded",
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q1",
+    "name": {
+      "el": "Ηλικία",
+      "en": "Age"
+    },
+    "description": {
+      "el": "Ηλικία",
+      "en": "Age"
+    },
+    "groupId": "ye_demographics",
+    "type": "coded",
+    "disableFilter": false,
+    "disableCompareBy": false
+  },
+  {
+    "id": "ye_q8",
     "name": {
       "el": "Οικονομικό status",
       "en": "Economic status"
@@ -4625,43 +4715,28 @@
       "el": "Οικονομικό status",
       "en": "Economic status"
     },
-    "groupId": "ds_demographics",
+    "groupId": "ye_demographics",
     "type": "coded",
     "disableFilter": false,
     "disableCompareBy": false
   },
   {
-    "id": "ds_A2",
+    "id": "ye_q3",
     "name": {
-      "el": "Τάξη φοίτησης",
-      "en": "Class"
+      "el": "Περιοχή κατοικίας ",
+      "en": "Area of residence"
     },
     "description": {
-      "el": "Τάξη φοίτησης",
-      "en": "Class"
+      "el": "Περιοχή κατοικίας ",
+      "en": "Area of residence"
     },
-    "groupId": "ds_demographics",
+    "groupId": "ye_demographics",
     "type": "coded",
     "disableFilter": false,
     "disableCompareBy": false
   },
   {
-    "id": "ds_A5",
-    "name": {
-      "el": "Τύπος σχολείου ",
-      "en": "School type"
-    },
-    "description": {
-      "el": "Τύπος σχολείου ",
-      "en": "School type"
-    },
-    "groupId": "ds_demographics",
-    "type": "coded",
-    "disableFilter": false,
-    "disableCompareBy": false
-  },
-  {
-    "id": "ds_A1",
+    "id": "ye_q2",
     "name": {
       "el": "Φύλο",
       "en": "Gender"
@@ -4670,572 +4745,1121 @@
       "el": "Φύλο",
       "en": "Gender"
     },
-    "groupId": "ds_demographics",
+    "groupId": "ye_demographics",
     "type": "coded",
     "disableFilter": false,
     "disableCompareBy": false
   },
   {
-    "id": "ds_D6",
+    "id": "ye_q21",
     "name": {
-      "el": "Ψήφος στα 17",
-      "en": "Vote at the age of of 17"
+      "el": "Ευθύνη για καταπολέμιση κλιματικής αλλαγής",
+      "en": "Responsibility for combating climate change"
     },
     "description": {
-      "el": "Ερ. Σύμφωνα με νόμο που ψηφίστηκε, οι νέοι και οι νέες θα μπορούν πλέον να ψηφίζουν από τα 17. Εσύ θεωρείς αυτήν την αλλαγή: ",
-      "en": "Q. According to an new law, young people will now be able to vote from the age of 17. Do you consider this change?"
+      "el": "Ερ. Κατά τη γνώμη σας, ποιος έχει την κύρια ευθύνη για την καταπολέμηση της κλιματικής αλλαγής;",
+      "en": "In your opinion, who has the primary responsibility for tackning climate change?"
     },
-    "groupId": "ds_forms_of_mobilisation_outside_the_school",
-    "type": "coded",
-    "disableFilter": true,
-    "disableCompareBy": true
-  },
-  {
-    "id": "ds_B9",
-    "name": {
-      "el": "Αποτίμηση Μαθητικών Συμβουλίων",
-      "en": "Evaluation of Student Councils"
-    },
-    "description": {
-      "el": "Ερ. Πόσο συμφωνείς ή διαφωνείς με τις παρακάτω προτάσεις; ",
-      "en": "Q. How much do you agree or disagree with the following statements?"
-    },
-    "groupId": "ds_student_councils",
+    "groupId": "ye_climate_change",
     "type": "composite",
     "composedOf": [
-      "ds_B9_1",
-      "ds_B9_2",
-      "ds_B9_3",
-      "ds_B9_4",
-      "ds_B9_5",
-      "ds_B9_6"
+      "ye_q21_1",
+      "ye_q21_2",
+      "ye_q21_3",
+      "ye_q21_4",
+      "ye_q21_5",
+      "ye_q21_6",
+      "ye_q21_7",
+      "ye_q21_8",
+      "ye_q21_9"
     ],
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_C1",
+    "id": "ye_q18",
     "name": {
-      "el": "Διδασκαλία",
-      "en": "Teaching"
+      "el": "Προτεραιότητες Ε.Ε. για ψηφιακά δικαιώματα",
+      "en": "EU priorities for digital rights"
     },
     "description": {
-      "el": "Ερ. Σε ποιο βαθμό κατά την άποψή σου συμβαίνουν τα παρακάτω στη διδασκαλία των μαθημάτων στο σχολείο σου; ",
-      "en": "Q. To what extent, in your opinion, do the following occur in the teaching of lessons in your school?"
+      "el": "Ερ. Ποιες πιστεύετε ότι πρέπει να είναι οι προτεραιότητες στην Ευρώπη για τα ψηφιακά δικαιώματα των πολιτών; ",
+      "en": "What do you think should be the priorities in Europe for citizens' digital rights? "
     },
-    "groupId": "ds_school_culture",
+    "groupId": "ye_eu_priorities",
     "type": "composite",
     "composedOf": [
-      "ds_C1_1",
-      "ds_C1_2",
-      "ds_C1_3",
-      "ds_C1_4",
-      "ds_C1_5",
-      "ds_C1_6"
+      "ye_q18_1",
+      "ye_q18_2",
+      "ye_q18_3",
+      "ye_q18_4",
+      "ye_q18_5"
     ],
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_B6",
+    "id": "ye_q12",
     "name": {
-      "el": "Ζητήματα που απασχολούν τα Συμβούλια",
-      "en": "Main issues that Student Councils deal with"
+      "el": "Λόγοι ταξιδιών στην Ε.Ε.",
+      "en": "Reasons to treavel to EU"
     },
     "description": {
-      "el": "Ερ. Ποια είναι τα βασικά ζητήματα με τα οποία ασχολείται το 15μελές/5μελές συμβούλιο στο σχολείο σου;  ",
-      "en": "Q. Which are the main issues that the 15/5-member council in your school deals with?"
+      "el": "Ερ. Ποιοι ήταν οι λόγοι του/των ταξιδιού/ων σας;  ",
+      "en": "What were the reasons for your trip(s)?"
     },
-    "groupId": "ds_student_councils",
+    "groupId": "ye_common_european_experiences",
     "type": "composite",
     "composedOf": [
-      "ds_B6_a_NEW",
-      "ds_B6_b_NEW",
-      "ds_B6_c_NEW",
-      "ds_B6_d_NEW",
-      "ds_B6_e_NEW",
-      "ds_B6_f_NEW",
-      "ds_B6_g_NEW",
-      "ds_B6_h_NEW",
-      "ds_B6_i_NEW",
-      "ds_B6_j_NEW",
-      "ds_B6_k_NEW",
-      "ds_B6_l_NEW",
-      "ds_B6_m_NEW",
-      "ds_B6_n_NEW",
-      "ds_B6_o_NEW",
-      "ds_B6_p_NEW",
-      "ds_B6_q_NEW",
-      "ds_B6_r_NEW",
-      "ds_B6_s_NEW"
+      "ye_q12_1",
+      "ye_q12_2",
+      "ye_q12_3",
+      "ye_q12_4",
+      "ye_q12_5",
+      "ye_q12_6",
+      "ye_q12_7",
+      "ye_q12_8",
+      "ye_q12_9",
+      "ye_q12_10"
     ],
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_B7",
+    "id": "ye_q14",
     "name": {
-      "el": "Ζητήματα που θα ήθελαν να απασχολούν τα Συμβούλια",
-      "en": "Issues they would like the Councils to deal with"
+      "el": "Υποστασιακότητα",
+      "en": "Entitativity "
     },
     "description": {
-      "el": "Ερ. Ποια είναι τα βασικά ζητήματα με τα οποία δεν ασχολείται το 15μελές/5μελές συμβούλιο στο σχολείο σου;  αλλά θα ήθελες να ασχοληθεί; ",
-      "en": "q. Which are the main issues that the 15-member/5-member council at your school do not deal with, but that you would like it to adress?"
+      "el": "Ερ. Πόσο συμφωνείτε ή διαφωνείτε με τα παρακάτω σχετικά με την Ευρωπαϊκή Ένωση;",
+      "en": "How much do you agree or disagree with the following statements about EU?"
     },
-    "groupId": "ds_student_councils",
+    "groupId": "ye_entitativity",
     "type": "composite",
     "composedOf": [
-      "ds_B7_a_NEW",
-      "ds_B7_b_NEW",
-      "ds_B7_c_NEW",
-      "ds_B7_d_NEW",
-      "ds_B7_e_NEW",
-      "ds_B7_f_NEW",
-      "ds_B7_g_NEW",
-      "ds_B7_h_NEW",
-      "ds_B7_i_NEW",
-      "ds_B7_j_NEW",
-      "ds_B7_k_NEW",
-      "ds_B7_l_NEW",
-      "ds_B7_m_NEW",
-      "ds_B7_n_NEW",
-      "ds_B7_o_NEW",
-      "ds_B7_p_NEW",
-      "ds_B7_q_NEW",
-      "ds_B7_r_NEW",
-      "ds_B7_s_NEW"
+      "ye_q14_1",
+      "ye_q14_2",
+      "ye_q14_3",
+      "ye_q14_4",
+      "ye_q14_5",
+      "ye_q14_6",
+      "ye_q14_7",
+      "ye_q14_8",
+      "ye_q14_9"
     ],
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_D1",
+    "id": "ye_q17",
     "name": {
-      "el": "Κινητοποίηση εκτός σχολείου",
-      "en": "Mobilisation outside the school"
+      "el": "Η Ελλάδα στην Ευρώπη",
+      "en": "Greece in EU"
     },
     "description": {
-      "el": "Ερ. Τον τελευταίο χρόνο…",
-      "en": "Q. During the last year…"
+      "el": "Ερ. Πόσο συμφωνείτε ή διαφωνείτε με τα παρακάτω;",
+      "en": "How much do you agree or disagree with the following statements?"
     },
-    "groupId": "ds_forms_of_mobilisation_outside_the_school",
+    "groupId": "ye_greece_in_europe",
     "type": "composite",
     "composedOf": [
-      "ds_D1_1",
-      "ds_D1_2",
-      "ds_D1_3",
-      "ds_D1_4",
-      "ds_D1_5",
-      "ds_D1_6",
-      "ds_D1_7"
+      "ye_q17_1",
+      "ye_q17_2",
+      "ye_q17_3",
+      "ye_q17_4",
+      "ye_q17_5",
+      "ye_q17_6"
     ],
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_B10",
+    "id": "ye_q19",
     "name": {
-      "el": "Κινητοποίηση στο σχολείο ",
-      "en": "Mobilisation at school "
+      "el": "Προτεραιότητες Ε.Ε. για νέους",
+      "en": "EU priorities for youth"
     },
     "description": {
-      "el": "Ερ. Προσωπικά, τους τελευταίους 12 μήνες... ",
-      "en": "Q. Personally, in the last 12 months... "
+      "el": "Ερ. Σε ποιους στόχους πιστεύετε ότι πρέπει να δώσει προτεραιότητα η Ευρωπαϊκή Ένωση για να υποστηρίξει το μέλλον των νέων; ",
+      "en": "What objectives do you think the EU should prioritize to support the future of young people?"
     },
-    "groupId": "ds_compliance_and_participation_in_school",
+    "groupId": "ye_eu_priorities",
     "type": "composite",
     "composedOf": [
-      "ds_B10_1",
-      "ds_B10_2",
-      "ds_B10_3",
-      "ds_B10_4",
-      "ds_B10_5"
+      "ye_q19_1",
+      "ye_q19_2",
+      "ye_q19_3",
+      "ye_q19_4",
+      "ye_q19_5",
+      "ye_q19_6",
+      "ye_q19_7",
+      "ye_q19_8",
+      "ye_q19_9"
     ],
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_Β4",
+    "id": "ye_q23",
     "name": {
-      "el": "Κριτήριο επιλογής υποψήφιου",
-      "en": "Candidate selection criterion"
+      "el": "Ατομικές δράσεις",
+      "en": "Personal actions"
     },
     "description": {
-      "el": "Ερ. Ποιους μαθητές ή μαθήτριες ψηφίζεις συνήθως για να σε εκπροσωπήσουν στα 5μελή και 15μελή Μαθητικά Συμβούλια; ",
-      "en": "Q. Which students do you usually vote as representatives for the 5-member and the 15-member Student Councils?"
+      "el": "Ερ. Σε σχέση με ενέργειες για το κλίμα και το περιβάλλον τι από τα παρακάτω έχετε κάνει τον τελευταίο χρόνο; ",
+      "en": "In relation to actions about climate and the environment, which of the following have you done in the past year? "
     },
-    "groupId": "ds_student_councils",
+    "groupId": "ye_environment_climate",
     "type": "composite",
     "composedOf": [
-      "ds_Β4_1_NEW",
-      "ds_Β4_2_NEW",
-      "ds_Β4_3_NEW",
-      "ds_Β4_4_NEW",
-      "ds_Β4_5_NEW",
-      "ds_Β4_6_NEW",
-      "ds_Β4_7_NEW",
-      "ds_Β4_8_NEW",
-      "ds_Β4_9_NEW",
-      "ds_Β4_10_NEW",
-      "ds_Β4_11_NEW",
-      "ds_Β4_12_NEW",
-      "ds_Β4_13_NEW",
-      "ds_Β4_14_NEW",
-      "ds_Β4_15_NEW",
-      "ds_Β4_16_NEW",
-      "ds_Β4_17_NEW",
-      "ds_Β4_18_NEW",
-      "ds_Β4_19_NEW",
-      "ds_Β4_20_NEW",
-      "ds_Β4_21_NEW"
+      "ye_q23_1",
+      "ye_q23_2",
+      "ye_q23_3",
+      "ye_q23_4",
+      "ye_q23_5",
+      "ye_q23_6",
+      "ye_q23_7",
+      "ye_q23_8",
+      "ye_q23_9",
+      "ye_q23_10",
+      "ye_q23_11"
     ],
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_B1a",
+    "id": "ye_q22",
     "name": {
-      "el": "Μορφές συμμόρφωσης",
-      "en": "Forms of compliance"
+      "el": "Ατομικές συνήθειες ",
+      "en": "Personal habits"
     },
     "description": {
-      "el": "Ερ. Ποια είναι η γνώμη σου για τις παρακάτω προτάσεις",
-      "en": "Q. What is your opinion about the following?"
+      "el": "Ερ. Τι από τα παρακάτω κάνετε;",
+      "en": "Do you?"
     },
-    "groupId": "ds_compliance_and_participation_in_school",
+    "groupId": "ye_environment_climate",
     "type": "composite",
     "composedOf": [
-      "ds_B1a_1",
-      "ds_B1a_2",
-      "ds_B1a_3"
+      "ye_q22_1",
+      "ye_q22_2",
+      "ye_q22_3",
+      "ye_q22_4",
+      "ye_q22_5",
+      "ye_q22_6",
+      "ye_q22_7",
+      "ye_q22_8",
+      "ye_q22_9"
     ],
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_B8",
+    "id": "ye_q10",
     "name": {
-      "el": "Οργάνωση και λειτουργία των Συμβουλίων",
-      "en": "Organisation and functioning of the Councils"
+      "el": "Εθνική υπερηφάνεια",
+      "en": "National pride"
     },
     "description": {
-      "el": "Ερ. Τι ισχύει από τα παρακάτω σχετικά με τις εκλογές και τη λειτουργία για τα μαθητικά συμβούλια στο σχολείο σου; ",
-      "en": "Q. Which of the following is true about elections and function of student councils at your school?"
+      "el": "Ερ. Τι νιώθετε για τα παρακάτω στην Ελλάδα;",
+      "en": "How do you feel about the following in Greece?"
     },
-    "groupId": "ds_student_councils",
+    "groupId": "ye_national_european_identity",
     "type": "composite",
     "composedOf": [
-      "ds_B8_1",
-      "ds_B8_2",
-      "ds_B8_3",
-      "ds_B8_4"
+      "ye_q10_1",
+      "ye_q10_2",
+      "ye_q10_3",
+      "ye_q10_4",
+      "ye_q10_5",
+      "ye_q10_6"
     ],
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_E1",
+    "id": "ye_q10_1",
     "name": {
-      "el": "Ποιότητα ζωής",
-      "en": "Quality of life"
+      "el": "Για τον τρόπο που λειτουργεί η δημοκρατία",
+      "en": "For the way Democracy works"
     },
-    "description": {
-      "el": "Ερ. Θα ήθελες να μας πεις πόσο ικανοποιημένος/η νιώθεις τελευταία δίνοντας έναν αριθμό, ξεκινώντας από το 0 που σημαίνει ότι δεν νιώθεις καθόλου ικανοποιημένος/η και φτάνοντας στο 10 που σημαίνει ότι νιώθεις απόλυτα ικανοποιημένος/η: ",
-      "en": "Q. Whould you like to tell us how satisfied you feel lately by choosing a number, starting from 0, which means that you do not feel satisfied at all and reaching to 10, which means that you feel completely satisfied?"
-    },
-    "groupId": "ds_quality_of_life",
-    "type": "composite",
-    "composedOf": [
-      "ds_E1_1",
-      "ds_E1_2",
-      "ds_E1_3",
-      "ds_E1_4",
-      "ds_E1_5"
-    ],
-    "disableFilter": true,
-    "disableCompareBy": true
-  },
-  {
-    "id": "ds_D4",
-    "name": {
-      "el": "Πολιτική επάρκεια ",
-      "en": "Political efficacy"
-    },
-    "description": {
-      "el": "Ερ. Τι από τα παρακάτω ισχύει για εσένα: ",
-      "en": "Q. Which of the following apply to you?"
-    },
-    "groupId": "ds_forms_of_mobilisation_outside_the_school",
-    "type": "composite",
-    "composedOf": [
-      "ds_D4_1",
-      "ds_D4_2"
-    ],
-    "disableFilter": true,
-    "disableCompareBy": true
-  },
-  {
-    "id": "ds_D2",
-    "name": {
-      "el": "Συζητήσεις για επικαιρότητα",
-      "en": "Discussions on current affairs"
-    },
-    "description": {
-      "el": "Ερ. Τα τελευταία χρόνια, έχουν συμβεί στην Ελλάδα και διεθνώς διάφορα πράγματα. Σου έχει τύχει να συζητήσεις για κάποιο από τα παρακάτω; ",
-      "en": "Q. In recent years, various things have happened in Greece and internationally. Have you ever discussed any of the following?"
-    },
-    "groupId": "ds_forms_of_mobilisation_outside_the_school",
-    "type": "composite",
-    "composedOf": [
-      "ds_D2_1",
-      "ds_D2_2",
-      "ds_D2_3",
-      "ds_D2_4",
-      "ds_D2_5"
-    ],
-    "disableFilter": true,
-    "disableCompareBy": true
-  },
-  {
-    "id": "ds_B1b",
-    "name": {
-      "el": "Συμμετοχή & συνεργασία ",
-      "en": "Participation and cooperation"
-    },
-    "description": {
-      "el": "Ερ. Ποια είναι η γνώμη σου για τις παρακάτω προτάσεις",
-      "en": "Q. What is your opinion about the following?"
-    },
-    "groupId": "ds_compliance_and_participation_in_school",
-    "type": "composite",
-    "composedOf": [
-      "ds_B1b_4",
-      "ds_B1b_5",
-      "ds_B1b_6"
-    ],
-    "disableFilter": true,
-    "disableCompareBy": true
-  },
-  {
-    "id": "ds_D3",
-    "name": {
-      "el": "Συνήθειες",
-      "en": "Habits"
-    },
-    "description": {
-      "el": "Ερ. Εγώ προσωπικά... ",
-      "en": "Q. I personally…"
-    },
-    "groupId": "ds_forms_of_mobilisation_outside_the_school",
-    "type": "composite",
-    "composedOf": [
-      "ds_D3_1",
-      "ds_D3_2",
-      "ds_D3_3",
-      "ds_D3_4",
-      "ds_D3_5"
-    ],
-    "disableFilter": true,
-    "disableCompareBy": true
-  },
-  {
-    "id": "ds_C2",
-    "name": {
-      "el": "Ταύτιση και ικανοποίση από σχολείο",
-      "en": "Identification and satisfaction with school"
-    },
-    "description": {
-      "el": "Ερ. Πόσο συμφωνείς ή διαφωνείς με τις παρακάτω προτάσεις; ",
-      "en": "Q. How much do you agree or disagree with the following statements?"
-    },
-    "groupId": "ds_school_culture",
-    "type": "composite",
-    "composedOf": [
-      "ds_C2_1",
-      "ds_C2_2",
-      "ds_C2_3",
-      "ds_C2_4",
-      "ds_C2_5",
-      "ds_C2_6"
-    ],
-    "disableFilter": true,
-    "disableCompareBy": true
-  },
-  {
-    "id": "ds_B9_1",
-    "name": {
-      "el": "Τα 15μελή/5μελή συμβούλια ενισχύουν την δημοκρατική λειτουργία των σχολείων",
-      "en": "The 15/5-member student councils strengthen the democratic functioning of schools"
-    },
-    "groupId": "ds_student_councils",
+    "groupId": "ye_national_european_identity",
     "type": "coded",
     "disableAxis": true,
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_C1_1",
+    "id": "ye_q10_2",
     "name": {
-      "el": "Δίνεται μεγάλη έμφαση στα μαθήματα των Πανελληνίων σε βάρος των υπολοίπων",
-      "en": "Teaching emphasises on Panhellenic lessons at the expense of the rest "
+      "el": "Για όσα έχουμε καταφέρει στην οικονομία",
+      "en": "For our economic achievements "
     },
-    "groupId": "ds_school_culture",
+    "groupId": "ye_national_european_identity",
     "type": "coded",
     "disableAxis": true,
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_B6_a_NEW",
+    "id": "ye_q10_3",
     "name": {
-      "el": "Διοργάνωση εκδρομών",
-      "en": "Organisation of school escursions"
+      "el": "Για τις κατακτήσεις στην επιστήμη και την τεχνολογία",
+      "en": "For our achievements in science and technology"
     },
-    "groupId": "ds_student_councils",
+    "groupId": "ye_national_european_identity",
     "type": "coded",
     "disableAxis": true,
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_B7_a_NEW",
+    "id": "ye_q10_4",
     "name": {
-      "el": "Διοργάνωση εκδρομών",
-      "en": "Organisation of school escursions"
+      "el": "Για την ιστορία του τόπου",
+      "en": "For our history"
     },
-    "groupId": "ds_student_councils",
+    "groupId": "ye_national_european_identity",
     "type": "coded",
     "disableAxis": true,
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_D1_1",
+    "id": "ye_q10_5",
     "name": {
-      "el": "Έχω μποϋκοτάρει ή αγοράσει κάποιο προϊόν για πολιτικούς/ηθικούς λόγους",
-      "en": "I boycotted or buycotted a product for political/social content"
+      "el": "Για τις επιτυχίες στην τέχνη και τη λογοτεχνία",
+      "en": "For our achievements in Arts and Literature"
     },
-    "groupId": "ds_forms_of_mobilisation_outside_the_school",
+    "groupId": "ye_national_european_identity",
     "type": "coded",
     "disableAxis": true,
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_B10_1",
+    "id": "ye_q10_6",
     "name": {
-      "el": "Έβαλα υποψηφιότητα για κάποια θέση στο σχολείο μου (15μελές, 5μελές συμβούλιο)",
-      "en": "I ran for the Students Council of my school (15-member, 5-member)"
+      "el": "Για την ίση και δίκαιη μεταχείριση όλων των κοινωνικών ομάδων",
+      "en": "For the fair and equal treatment of all social groups"
     },
-    "groupId": "ds_compliance_and_participation_in_school",
+    "groupId": "ye_national_european_identity",
     "type": "coded",
     "disableAxis": true,
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_Β4_1_NEW",
+    "id": "ye_q12_1",
     "name": {
-      "el": "Τους καλούς/ες φίλους/ες",
-      "en": "Those who are good friends"
+      "el": "Σπουδές/Επιμόρφωση",
+      "en": "Study/Training"
     },
-    "groupId": "ds_student_councils",
+    "groupId": "ye_common_european_experiences",
     "type": "coded",
     "disableAxis": true,
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_B1a_1",
+    "id": "ye_q12_10",
     "name": {
-      "el": "Οι μαθητές/τριες πρέπει να κοιτούν τα μαθήματά τους και να αφήνουν τις άλλες ασχολίες για αργότερα",
-      "en": "Students should concentrate on their studies and leave aside other activities for later"
+      "el": "ΔΑ",
+      "en": "NA"
     },
-    "groupId": "ds_compliance_and_participation_in_school",
+    "groupId": "ye_common_european_experiences",
     "type": "coded",
     "disableAxis": true,
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_B8_1",
+    "id": "ye_q12_2",
     "name": {
-      "el": "Υπάρχει επαρκής ενημέρωση για τη διαδικασία των εκλογών",
-      "en": "There is sufficient information about the election process"
+      "el": "Συνέδριο",
+      "en": "Conference"
     },
-    "groupId": "ds_student_councils",
+    "groupId": "ye_common_european_experiences",
     "type": "coded",
     "disableAxis": true,
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_E1_1",
+    "id": "ye_q12_3",
     "name": {
-      "el": "Από τη ζωή σου γενικά",
-      "en": "With your life in general"
+      "el": "Καλλιτεχνική εκδήλωση (π.χ. συναυλία, θέατρο, φεστιβάλ κλπ)",
+      "en": "Arts event (e.g. concert, theatre, festival etc)"
     },
-    "groupId": "ds_quality_of_life",
+    "groupId": "ye_common_european_experiences",
     "type": "coded",
     "disableAxis": true,
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_D4_1",
+    "id": "ye_q12_4",
     "name": {
-      "el": "Νομίζω ότι γνωρίζω περισσότερα πράγματα για την πολιτική σε σχέση με τους συνομήλικους μου",
-      "en": "I think I know more about politics than people of my age"
+      "el": "Αθλητικό γεγονός (π.χ. αγώνες)",
+      "en": "Sports event "
     },
-    "groupId": "ds_forms_of_mobilisation_outside_the_school",
+    "groupId": "ye_common_european_experiences",
     "type": "coded",
     "disableAxis": true,
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_D2_1",
+    "id": "ye_q12_5",
     "name": {
-      "el": "Για τις βουλευτικές εκλογές που έγιναν το\n2019",
-      "en": "Parliamentary elections held in 2019"
+      "el": "Εθελοντική δράση",
+      "en": "Volunteer work"
     },
-    "groupId": "ds_forms_of_mobilisation_outside_the_school",
+    "groupId": "ye_common_european_experiences",
     "type": "coded",
     "disableAxis": true,
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_B1b_4",
+    "id": "ye_q12_6",
     "name": {
-      "el": "Όταν οι μαθητές/τριες συμμετέχουν στις αποφάσεις που λαμβάνονται στο σχολείο, τα πράγματα λειτουργούν καλύτερα",
-      "en": "When students participate in decisions taken at school, things work better"
+      "el": "Εργασία",
+      "en": "Work"
     },
-    "groupId": "ds_compliance_and_participation_in_school",
+    "groupId": "ye_common_european_experiences",
     "type": "coded",
     "disableAxis": true,
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_D3_1",
+    "id": "ye_q12_7",
     "name": {
-      "el": "Ανακυκλώνω χαρτί, πλαστικό ή γυαλί στο σπίτι",
-      "en": "Recycle paper, plastic or glass t home"
+      "el": "Πολιτική δράση (π.χ. διαμαρτυρία κλπ.)",
+      "en": "Political event (eg. demonstration)"
     },
-    "groupId": "ds_forms_of_mobilisation_outside_the_school",
+    "groupId": "ye_common_european_experiences",
     "type": "coded",
     "disableAxis": true,
     "disableFilter": true,
     "disableCompareBy": true
   },
   {
-    "id": "ds_C2_1",
+    "id": "ye_q12_8",
     "name": {
-      "el": "Αισθάνομαι ότι ανήκω στην κοινότητα του σχολείου μου",
-      "en": "I feel that I belong to the school's community"
+      "el": "Αναψυχή/Τουρισμός",
+      "en": "Leisure/Tourism"
     },
-    "groupId": "ds_school_culture",
+    "groupId": "ye_common_european_experiences",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q12_9",
+    "name": {
+      "el": "Άλλο",
+      "en": "Other"
+    },
+    "groupId": "ye_common_european_experiences",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q14_1",
+    "name": {
+      "el": "Η Ε.Ε. είναι μια ουσιαστική ένωση",
+      "en": "The EU is an essential union"
+    },
+    "groupId": "ye_entitativity",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q14_2",
+    "name": {
+      "el": "Τα μέλη της Ε.Ε. έχουν κοινές αξίες",
+      "en": "EU members share common values"
+    },
+    "groupId": "ye_entitativity",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q14_3",
+    "name": {
+      "el": "Τα μέλη της Ε.Ε. συμμετέχουν ισότιμα στις αποφάσεις",
+      "en": "EU members participate equally in decisions"
+    },
+    "groupId": "ye_entitativity",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q14_4",
+    "name": {
+      "el": "Τα σύγχρονα κοινωνικο-οικονομικά προβλήματα μπορούν να λυθούν μόνο μέσα από την Ε.Ε.",
+      "en": "Contemporary social and economic problems can only be solved through the EU"
+    },
+    "groupId": "ye_entitativity",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q14_5",
+    "name": {
+      "el": "Η Ε.Ε. είναι αρκετά μεγάλη και δεν χρειάζεται να διευρυνθεί με νέα κράτη μέλη",
+      "en": "The EU is large enough and there is no need for enlargements with more member states"
+    },
+    "groupId": "ye_entitativity",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q14_6",
+    "name": {
+      "el": "Τα μέλη της Ε.Ε. μοιράζονται ένα κοινό ιστορικό παρελθόν",
+      "en": "EU member states share a common historical past"
+    },
+    "groupId": "ye_entitativity",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q14_7",
+    "name": {
+      "el": "Οι επιτυχίες της Ε.Ε. μοιράζονται σε όλες τις χώρες",
+      "en": "EU successes are shared equally to all counties"
+    },
+    "groupId": "ye_entitativity",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q14_8",
+    "name": {
+      "el": "Τα προβλήματα της Ε.Ε. μοιράζονται σε όλες τις χώρες",
+      "en": "EU problems are shared equally to all counties"
+    },
+    "groupId": "ye_entitativity",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q14_9",
+    "name": {
+      "el": "Είναι σημαντικό για εμένα να είμαι πολίτης της Ε.Ε.",
+      "en": "It is important for me to be an EU citizen"
+    },
+    "groupId": "ye_entitativity",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q17_1",
+    "name": {
+      "el": "Έχω αρκετές γνώσεις για να κατανοώ τη λειτουργία της Ε.Ε.",
+      "en": "I have enough knowledge to understand the way the EU functions"
+    },
+    "groupId": "ye_greece_in_europe",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q17_2",
+    "name": {
+      "el": "Νιώθω ότι οι αποφάσεις που λαμβάνονται σε επίπεδο Ε.Ε. επηρεάζουν τη ζωή μου",
+      "en": "I feel that the decisions that are taken at the EU level have and effect on my life"
+    },
+    "groupId": "ye_greece_in_europe",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q17_3",
+    "name": {
+      "el": "Η Ελλάδα δεν θα μπορούσε να αντιμετωπίσει την πανδημία covid-19 χωρίς τη βοήθεια της Ε.Ε. ",
+      "en": "Greece would not be able to deal with the Covid-19 pandemic were it not for/without the EU's assistance"
+    },
+    "groupId": "ye_greece_in_europe",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q17_4",
+    "name": {
+      "el": "Η Ελλάδα επιβαρύνεται όταν ξεσπάει οικονομική κρίση, επειδή είναι στην Ε.Ε.",
+      "en": " Greece is burdened whenever an economic crisis arises, simply [να φύγει] because it is an EU member/due to EU membership"
+    },
+    "groupId": "ye_greece_in_europe",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q17_5",
+    "name": {
+      "el": "Η Ελλάδα χρειάζεται την Ε.Ε. για την αντιμετώπιση των διαφορών της με την Τουρκία",
+      "en": "Greece needs the EU to deal with it’s differenes with Turkey"
+    },
+    "groupId": "ye_greece_in_europe",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q17_6",
+    "name": {
+      "el": "Η Ελλάδα κινδυνεύει να χάσει την πολιτισμική της ταυτότητα εξαιτίας της συμμετοχής της στην Ε.Ε.",
+      "en": "Greece is in danger of loosing its cultural identity from being an EU member/due to EU membership"
+    },
+    "groupId": "ye_greece_in_europe",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q18_1",
+    "name": {
+      "el": "Εκπαίδευση των πολιτών που δεν διαθέτουν ψηφιακές δεξιότητες",
+      "en": "Educate citizens that do not have digital skills"
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q18_2",
+    "name": {
+      "el": "Εξασφάλιση της προστασίας των προσωπικών δεδομένων των πολιτών στο διαδίκτυο",
+      "en": "Secure the protection of citizens' personal data online"
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q18_3",
+    "name": {
+      "el": "Εξασφάλιση της ελευθερίας του λόγου στο διαδίκτυο",
+      "en": "Protect online freedom of speech"
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q18_4",
+    "name": {
+      "el": "Προστασία από την εξαπάτηση στο διαδίκτυο",
+      "en": "Protect from online fraud"
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q18_5",
+    "name": {
+      "el": "Προστασία από την προσβολή στο διαδίκτυο",
+      "en": "Protect from online abuse"
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q19_1",
+    "name": {
+      "el": "Στην αύξηση της χρηματοδότηση των προγραμμάτων για τους νέους",
+      "en": "Increase funding for youth programmes"
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q19_2",
+    "name": {
+      "el": "Στην καταπολέμηση των διακρίσεων και τη διασφάλιση ίσων δικαιωμάτων για όλα τα φύλα",
+      "en": "Combat discrimination and secure equal rights for all genders"
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q19_3",
+    "name": {
+      "el": "Στη διασφάλιση βασικών δικαιωμάτων στέγασης, εργασίας, υγείας για κοινωνικά αποκλεισμένους νέους",
+      "en": "Secure basic rights for housing, work, health, for the socially excluded youth"
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q19_4",
+    "name": {
+      "el": "Στην ενδυνάμωση των νέων ώστε να αντιμετωπίζουν κριτικά και υπεύθυνα τη χρήση και την παραγωγή πληροφορίας ",
+      "en": "Empower young people so that they can critically and responsibly address the use and production of information"
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q19_5",
+    "name": {
+      "el": "Στη λήψη μέτρων πρόληψης για την καλύτερη ψυχική υγεία των νέων",
+      "en": "Take preventive measures for youth's mental health"
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q19_6",
+    "name": {
+      "el": "Στη πρόσβαση των νέων σε βιώσιμες και υψηλής ποιότητας θέσεις εργασίας στις αγροτικές περιοχές",
+      "en": "Provide young people access to sustainable and high quality jobs in rural areas"
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q19_7",
+    "name": {
+      "el": "Στη δημιουργία μηχανισμών υποστήριξης ώστε οι νέοι να  προετοιμαστούν για το μέλλον της εργασίας στη μεταβαλλόμενη εποχή",
+      "en": "Create support mechanisms so that young people are ready for the future of work in an ever changing world"
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q19_8",
+    "name": {
+      "el": "Στον σχεδιασμό και εφαρμογή πιο προσωποποιημένων και συμμετοχικών μεθόδων μάθησης σε όλες τις βαθμίδες εκπαίδευσης",
+      "en": "Design and implement more personalized and participatory learning methods at all educational levels"
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q19_9",
+    "name": {
+      "el": "Στην αύξηση της συμμετοχής των νέων στις εκλογές και στα όργανα λήψης αποφάσεων",
+      "en": "Increase youth participation in elections and decision making bodies "
+    },
+    "groupId": "ye_eu_priorities",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q21_1",
+    "name": {
+      "el": "Ο καθένας/η καθεμία ατομικά",
+      "en": "Each one individually"
+    },
+    "groupId": "ye_climate_change",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q21_2",
+    "name": {
+      "el": "Οι εθνικές κυβερνήσεις",
+      "en": "National governments"
+    },
+    "groupId": "ye_climate_change",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q21_3",
+    "name": {
+      "el": "Οι επιχειρήσεις και οι βιομηχανίες",
+      "en": "Big bussines and industries"
+    },
+    "groupId": "ye_climate_change",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q21_4",
+    "name": {
+      "el": "Η Ευρωπαϊκή Ένωση",
+      "en": "The European Union"
+    },
+    "groupId": "ye_climate_change",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q21_5",
+    "name": {
+      "el": "Η Τοπική Αυτοδιοίκηση",
+      "en": "Local government"
+    },
+    "groupId": "ye_climate_change",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q21_6",
+    "name": {
+      "el": "Οι περιβαλλοντικές οργανώσεις",
+      "en": "Environmental organizations"
+    },
+    "groupId": "ye_climate_change",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q21_7",
+    "name": {
+      "el": "Άλλο",
+      "en": "Other"
+    },
+    "groupId": "ye_climate_change",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q21_8",
+    "name": {
+      "el": "Κανένας",
+      "en": "Noone"
+    },
+    "groupId": "ye_climate_change",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q21_9",
+    "name": {
+      "el": "",
+      "en": "NA"
+    },
+    "groupId": "ye_climate_change",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q22_1",
+    "name": {
+      "el": "Αγοράζω τρόφιμα βιολογικής παραγωγής",
+      "en": "Buy organic food"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q22_2",
+    "name": {
+      "el": "Αγοράζω προϊόντα δίκαιου εμπορίου (fair trade)",
+      "en": "Buy fair trade products"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q22_3",
+    "name": {
+      "el": "Ανακυκλώνω χαρτί, γυαλί, αλουμίνιο κ.λπ.",
+      "en": "Recycle paper, glass, aluminium etc."
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q22_4",
+    "name": {
+      "el": "Αποφεύγω να αγοράζω καινούργια πράγματα και προτιμώ να αγοράζω μεταχειρισμένα/από δεύτερο χέρι",
+      "en": "Avoid buying new things and opt for used/second hand "
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q22_5",
+    "name": {
+      "el": "Προσπαθώ να εξοικονομώ ενέργεια στο σπίτι, π.χ με το να κλείνω τα φώτα ή τις συσκευές όταν είναι εκτός λειτουργίας ή να μειώνω την κατανάλωση νερού",
+      "en": "Try to save energy e.g. by turning off the lights, or appliances when not in use, or reduce water consumption"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q22_6",
+    "name": {
+      "el": "Επιλέγω το περπάτημα, το ποδήλατο ή την χρήση ΜΜΜ αντί του αυτοκινήτου",
+      "en": "Opt to walk, cycle, use public transport instead of car"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q22_7",
+    "name": {
+      "el": "Επιλέγω τρόφιμα τοπικών παραγωγών/από λαϊκές αγορές για να μειώσω το ενεργειακό αποτύπωμα των τροφίμων",
+      "en": "Prefer local products / farmers markets, to reduce food's cartbon footprint"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q22_8",
+    "name": {
+      "el": "Προτιμώ να αγοράζω προϊόντα χύμα ή χωρίς πλαστικές συσκευασίες",
+      "en": "Buy in bulk, without plastic packaging"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q22_9",
+    "name": {
+      "el": "Αποφεύγω να αγοράζω προϊόντα μιας χρήσης ",
+      "en": "Avoid buying single-use products"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q23_1",
+    "name": {
+      "el": "Έχω μποϋκοτάρει ή αγοράσει κάποιο προϊόν για σχετικό λόγο",
+      "en": "Have boycotted or buycotted a product for a relevant reason"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q23_10",
+    "name": {
+      "el": "Επικοινώνησα με κάποιο πολιτικό πρόσωπο στα social media για να εκφράσω την ανησυχία μου για κάποιο σχετικό θέμα",
+      "en": "Got in touch with a politician on social media, to express my concern for a relevant issue"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q23_11",
+    "name": {
+      "el": "ΔΑ",
+      "en": "NA"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q23_2",
+    "name": {
+      "el": "Δούλεψα εθελοντικά για κάτι σχετικό στη γειτονιά μου",
+      "en": "Did voluntary work in my neighborhood for a relevant reason"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q23_3",
+    "name": {
+      "el": "Δούλεψα εθελοντικά σε κάποια περιβαλλοντική οργάνωση/ΜΚΟ",
+      "en": "Did voluntary work in an environmental organization/NGO for a relevant reason"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q23_4",
+    "name": {
+      "el": "Πήγα σε κάποια σχετική πολιτική εκδήλωση",
+      "en": "Went to a relevant political event"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q23_5",
+    "name": {
+      "el": "Πήρα μέρος σε σχετική διαδήλωση",
+      "en": "Participated in a relevant demonstration"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q23_6",
+    "name": {
+      "el": "Έκανα κάποιο σχόλιο στα social media για κάποιο περιβαλλοντικό θέμα",
+      "en": "Commented on social media for an environmental issue"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q23_7",
+    "name": {
+      "el": "Ενθάρρυνα κόσμο να κινητοποιηθεί μέσα από τα social media",
+      "en": "Encouraged others to mobilize through social media"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q23_8",
+    "name": {
+      "el": "Πόσταρα κάτι με περιβαλλοντικό περιεχόμενο;",
+      "en": "Posted somehting online with an environmental context"
+    },
+    "groupId": "ye_environment_climate",
+    "type": "coded",
+    "disableAxis": true,
+    "disableFilter": true,
+    "disableCompareBy": true
+  },
+  {
+    "id": "ye_q23_9",
+    "name": {
+      "el": "Έδωσα χρήματα σε κάποιο σχετικό διαδικτυακό έρανο (crowdfunding)",
+      "en": "Donated money to a relevant cause (crowdfunding)"
+    },
+    "groupId": "ye_environment_climate",
     "type": "coded",
     "disableAxis": true,
     "disableFilter": true,
