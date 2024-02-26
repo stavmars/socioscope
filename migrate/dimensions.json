@@ -4792,7 +4792,7 @@
     "id": "ds_B10_3",
     "name": {
       "el": "Πήρα μέρος σε κάποια διαμαρτυρία για κάποιο σχολικό θέμα",
-      "en": "I took part in a protesto for a school issue"
+      "en": "I took part in a protest for a school issue"
     },
     "groupId": "ds_compliance_and_participation_in_school",
     "type": "coded",
@@ -5340,7 +5340,7 @@
     "id": "ds_B6_n_NEW",
     "name": {
       "el": "Αυθαιρεσίες κάποιου/ας καθηγητή/τριας ή του/της Διευθυντή/τριας",
-      "en": "Arbitraries of oa teacher or the school director"
+      "en": "Arbitraries of a teacher or the school director"
     },
     "groupId": "ds_student_councils",
     "type": "coded",
@@ -5604,7 +5604,7 @@
     "id": "ds_B7_n_NEW",
     "name": {
       "el": "Αυθαιρεσίες κάποιου/ας καθηγητή/τριας ή του/της Διευθυντή/τριας",
-      "en": "Arbitraries of oa teacher or the school director"
+      "en": "Arbitraries of a teacher or the school director"
     },
     "groupId": "ds_student_councils",
     "type": "coded",
@@ -5816,7 +5816,7 @@
     "id": "ds_B9_5",
     "name": {
       "el": "Αν αύριο αποφασιζόταν ξαφνικά η κατάργηση των 15μελών/ 5μελών συμβουλίων δεν θα με ενοχλούσε καθόλου",
-      "en": "If tomorrow it way suddenly decided to abolish the 15-5-member councils it would not bother me at all"
+      "en": "If tomorrow it was suddenly decided to abolish the 15-5-member councils it would not bother me at all"
     },
     "groupId": "ds_student_councils",
     "type": "coded",
@@ -6054,7 +6054,7 @@
     "id": "ds_D1_1",
     "name": {
       "el": "Έχω μποϋκοτάρει ή αγοράσει κάποιο προϊόν για πολιτικούς/ηθικούς λόγους",
-      "en": "I boycotted or buycotted a product for political/social content"
+      "en": "I boycotted or buycotted a product for political/social reasons"
     },
     "groupId": "ds_forms_of_mobilisation_outside_the_school",
     "type": "coded",
@@ -6242,7 +6242,7 @@
     "id": "ds_D3_1",
     "name": {
       "el": "Ανακυκλώνω χαρτί, πλαστικό ή γυαλί στο σπίτι",
-      "en": "Recycle paper, plastic or glass t home"
+      "en": "Recycle paper, plastic or glass at home"
     },
     "groupId": "ds_forms_of_mobilisation_outside_the_school",
     "type": "coded",
