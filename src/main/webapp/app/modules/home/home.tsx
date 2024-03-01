@@ -1,19 +1,19 @@
 import './home.scss';
 
-import React from 'react';
-import { HashLink } from 'react-router-hash-link';
-import { connect } from 'react-redux';
-import { translate } from 'react-jhipster';
 import { getSession } from 'app/shared/reducers/authentication';
 import { hideHeader, showHeader } from 'app/shared/reducers/header';
+import React from 'react';
+import { translate } from 'react-jhipster';
+import { connect } from 'react-redux';
+import { HashLink } from 'react-router-hash-link';
 
-import { Container, Embed, Icon, Image, Modal, Visibility } from 'semantic-ui-react';
-import AppHeader from 'app/shared/layout/header/header';
 import CardCarousel from 'app/modules/home/card-carousel';
 import DatasetCard from 'app/modules/home/dataset-card';
+import AppHeader from 'app/shared/layout/header/header';
+import { IDataSet } from 'app/shared/model/data-set.model';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import _ from 'lodash';
-import { IDataSet } from 'app/shared/model/data-set.model';
+import { Container, Embed, Icon, Image, Modal, Visibility } from 'semantic-ui-react';
 
 export interface IHomeProp extends StateProps, DispatchProps {}
 
@@ -54,25 +54,31 @@ export class Home extends React.Component<IHomeProp> {
         </Visibility>
         <div id="discover" style={{ height: 120 }} />
         <div className="dataset-cards">
-          {_.at(datasetsById, ['youwho', 'adolescents', 'deputies', 'greek-election-results', 'claims', 'young-europeans']).map(
-            (dataset: IDataSet) => (
-              <div>
-                <div className={`dataset-card-header ${dataset.colorScheme}`}>
-                  <Image className="dataset-card-header-image" centered src={`/content/images/Assets/${dataset.id}.svg`} />
-                  <h3>{translateEntityField(dataset.name)}</h3>
-                </div>
-                <CardCarousel colorScheme={dataset.colorScheme}>
-                  {dataset.highlights
-                    ? dataset.highlights.map(highlight => (
-                        <DatasetCard key={highlight.id} dataset={dataset} highlight={highlight}>
-                          <div dangerouslySetInnerHTML={{ __html: translateEntityField(highlight.description) }} />
-                        </DatasetCard>
-                      ))
-                    : null}
-                </CardCarousel>
+          {_.at(datasetsById, [
+            'democracy-at-school',
+            'young-europeans',
+            'youwho',
+            'adolescents',
+            'deputies',
+            'greek-election-results',
+            'claims'
+          ]).map((dataset: IDataSet) => (
+            <div>
+              <div className={`dataset-card-header ${dataset.colorScheme}`}>
+                <Image className="dataset-card-header-image" centered src={`/content/images/Assets/${dataset.id}.svg`} />
+                <h3>{translateEntityField(dataset.name)}</h3>
               </div>
-            )
-          )}
+              <CardCarousel colorScheme={dataset.colorScheme}>
+                {dataset.highlights
+                  ? dataset.highlights.map(highlight => (
+                      <DatasetCard key={highlight.id} dataset={dataset} highlight={highlight}>
+                        <div dangerouslySetInnerHTML={{ __html: translateEntityField(highlight.description) }} />
+                      </DatasetCard>
+                    ))
+                  : null}
+              </CardCarousel>
+            </div>
+          ))}
         </div>
       </div>
     );

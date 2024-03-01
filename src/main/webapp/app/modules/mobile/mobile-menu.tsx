@@ -1,14 +1,14 @@
-import './mobile-menu.scss';
-import React from 'react';
-import { translate } from 'react-jhipster';
-import { Container, Image, List } from 'semantic-ui-react';
-import { NavLink } from 'react-router-dom';
-import { toggleMobileMenu } from 'app/shared/reducers/header';
-import { connect } from 'react-redux';
+import { IDataSet } from 'app/shared/model/data-set.model';
 import { IRootState } from 'app/shared/reducers';
+import { toggleMobileMenu } from 'app/shared/reducers/header';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import _ from 'lodash';
-import { IDataSet } from 'app/shared/model/data-set.model';
+import React from 'react';
+import { translate } from 'react-jhipster';
+import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { Container, Image, List } from 'semantic-ui-react';
+import './mobile-menu.scss';
 
 export interface IMobileMenuProps extends StateProps, DispatchProps {}
 
@@ -28,24 +28,30 @@ export class MobileMenu extends React.Component<IMobileMenuProps> {
             <List.Content>
               <List.Header className="mobile-menu-item">{translate('global.menu.topics')}</List.Header>
               <div className="mobile-menu-list">
-                {_.at(dataSetsById, ['youwho', 'adolescents', 'deputies', 'greek-election-results', 'claims', 'young-europeans']).map(
-                  (dataset: IDataSet) => (
-                    <List.Item className={`mobile-menu-list-line ${dataset.colorScheme}`}>
-                      <Container>
-                        <Image className="mobile-menu-list-line-image" src={`/content/images/Assets/${dataset.id}.svg`} />
-                        <Container
-                          text
-                          className={`mobile-menu-list-line-item ${dataset.colorScheme}`}
-                          as="a"
-                          href={`/dataset/${dataset.id}`}
-                        >
-                          {translateEntityField(dataset.name)}
-                          <i />
-                        </Container>
+                {_.at(dataSetsById, [
+                  'democracy-at-school',
+                  'young-europeans',
+                  'youwho',
+                  'adolescents',
+                  'deputies',
+                  'greek-election-results',
+                  'claims'
+                ]).map((dataset: IDataSet) => (
+                  <List.Item className={`mobile-menu-list-line ${dataset.colorScheme}`}>
+                    <Container>
+                      <Image className="mobile-menu-list-line-image" src={`/content/images/Assets/${dataset.id}.svg`} />
+                      <Container
+                        text
+                        className={`mobile-menu-list-line-item ${dataset.colorScheme}`}
+                        as="a"
+                        href={`/dataset/${dataset.id}`}
+                      >
+                        {translateEntityField(dataset.name)}
+                        <i />
                       </Container>
-                    </List.Item>
-                  )
-                )}
+                    </Container>
+                  </List.Item>
+                ))}
               </div>
             </List.Content>
             <div className="mobile-menu-items">
