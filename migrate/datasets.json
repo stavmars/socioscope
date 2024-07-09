@@ -2203,5 +2203,80 @@
         }
       }
     ]
+  },
+  {
+    "id": "media-gender-rep",
+    "name": {
+      "el": "Φύλο και εκπροσώπηση στα Ελληνικά ΜΜΕ",
+      "en": "Gender and Representation in Greek Media"
+    },
+    "type": "raw",
+    "colorScheme": "color-scheme-4",
+    "comment": {
+      "el": "",
+      "en": ""
+    },
+    "sources": {
+      "el": "",
+      "en": ""
+    },
+    "dimensions": [
+      {
+        "id": "mgr_election_id"
+      },
+      {
+        "id": "mgr_sex"
+      },
+      {
+        "id": "mgr_age_group"
+      },
+      {
+        "id": "mgr_media"
+      },
+      {
+        "id": "mgr_party"
+      },
+      {
+        "id": "mgr_program_type"
+      },
+      {
+        "id": "mgr_participation_mode"
+      },
+      {
+        "id": "mgr_capacity"
+      },
+      {
+        "id": "mgr_candidate"
+      },
+      {
+        "id": "mgr_profession"
+      },
+      {
+        "id": "mgr_ministerial_post"
+      },
+      {
+        "id": "mgr_eu_post"
+      },
+      {
+        "id": "mgr_parliament_post"
+      },
+      {
+        "id": "mgr_local_post"
+      }
+    ],
+    "dimensionGroups": [],
+    "measures": [
+      {
+        "id": "media_appearances_perc"
+      },
+      {
+        "id": "media_appearances"
+      }
+    ],
+    "defaultOptions": {
+      "xAxis": "mgr_sex",
+      "measure": "media_appearances_perc"
+    },
+    "highlights": []
   }
 ]

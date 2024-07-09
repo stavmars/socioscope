@@ -6452,5 +6452,173 @@
     "disableAxis": true,
     "disableFilter": true,
     "disableCompareBy": true
+  },
+  {
+    "id": "mgr_election_id",
+    "name": {
+      "el": "Εκλογική Αναμέτρηση",
+      "en": "Elections"
+    },
+    "groupId": null,
+    "type": "coded",
+    "disableAxis": false,
+    "disableFilter": false,
+    "disableCompareBy": false
+  },
+  {
+    "id": "mgr_sex",
+    "name": {
+      "el": "Φύλο",
+      "en": "Sex"
+    },
+    "groupId": null,
+    "type": "coded",
+    "disableAxis": false,
+    "disableFilter": false,
+    "disableCompareBy": false
+  },
+  {
+    "id": "mgr_age_group",
+    "name": {
+      "el": "Ηλιακή Ομάδα",
+      "en": "Age Group"
+    },
+    "groupId": null,
+    "type": "coded",
+    "disableAxis": false,
+    "disableFilter": false,
+    "disableCompareBy": false
+  },
+  {
+    "id": "mgr_media",
+    "name": {
+      "el": "Μέσα Ενημέρωσης",
+      "en": "Media"
+    },
+    "groupId": null,
+    "type": "coded",
+    "disableAxis": false,
+    "disableFilter": false,
+    "disableCompareBy": false
+  },
+  {
+    "id": "mgr_party",
+    "name": {
+      "el": "Κόμμα",
+      "en": "Party"
+    },
+    "groupId": null,
+    "type": "coded",
+    "disableAxis": false,
+    "disableFilter": false,
+    "disableCompareBy": false
+  },
+  {
+    "id": "mgr_program_type",
+    "name": {
+      "el": "Τύπος Προγράμματος",
+      "en": "Program Type"
+    },
+    "groupId": null,
+    "type": "coded",
+    "disableAxis": false,
+    "disableFilter": false,
+    "disableCompareBy": false
+  },
+  {
+    "id": "mgr_participation_mode",
+    "name": {
+      "el": "Τρόπος Συμμετοχής",
+      "en": "Participation Mode"
+    },
+    "groupId": null,
+    "type": "coded",
+    "disableAxis": false,
+    "disableFilter": false,
+    "disableCompareBy": false
+  },
+  {
+    "id": "mgr_capacity",
+    "name": {
+      "el": "Ικανότητα",
+      "en": "Capacity"
+    },
+    "groupId": null,
+    "type": "coded",
+    "disableAxis": false,
+    "disableFilter": false,
+    "disableCompareBy": false
+  },
+  {
+    "id": "mgr_candidate",
+    "name": {
+      "el": "Υποψήφιος",
+      "en": "Candidate"
+    },
+    "groupId": null,
+    "type": "coded",
+    "disableAxis": false,
+    "disableFilter": false,
+    "disableCompareBy": false
+  },
+  {
+    "id": "mgr_profession",
+    "name": {
+      "el": "Επάγγελμα",
+      "en": "Profession"
+    },
+    "groupId": null,
+    "type": "coded",
+    "disableAxis": false,
+    "disableFilter": false,
+    "disableCompareBy": false
+  },
+  {
+    "id": "mgr_ministerial_post",
+    "name": {
+      "el": "Υπουργική Θέση",
+      "en": "Ministerial Post"
+    },
+    "groupId": null,
+    "type": "coded",
+    "disableAxis": false,
+    "disableFilter": false,
+    "disableCompareBy": false
+  },
+  {
+    "id": "mgr_eu_post",
+    "name": {
+      "el": "Θέση στην ΕΕ",
+      "en": "EU Post"
+    },
+    "groupId": null,
+    "type": "coded",
+    "disableAxis": false,
+    "disableFilter": false,
+    "disableCompareBy": false
+  },
+  {
+    "id": "mgr_parliament_post",
+    "name": {
+      "el": "Κοινοβουλευτική Θέση",
+      "en": "Parliament Post"
+    },
+    "groupId": null,
+    "type": "coded",
+    "disableAxis": false,
+    "disableFilter": false,
+    "disableCompareBy": false
+  },
+  {
+    "id": "mgr_local_post",
+    "name": {
+      "el": "Θέση στην Τοπική Αυτοδιοίκηση",
+      "en": "Local Post"
+    },
+    "groupId": null,
+    "type": "coded",
+    "disableAxis": false,
+    "disableFilter": false,
+    "disableCompareBy": false
   }
 ]

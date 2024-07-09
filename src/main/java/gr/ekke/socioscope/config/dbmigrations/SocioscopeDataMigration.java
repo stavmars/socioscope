@@ -197,4 +197,15 @@ public class SocioscopeDataMigration {
         bulkOperations.execute();
     }
 
+    @ChangeSet(order = "14", author = "initiator", id="addMediaGenderRepData")
+    public void addMediaGenderRepData(MongoTemplate mongoTemplate, Environment environment) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        File file = new File(environment.getProperty("application.migrate-data-path") + "/mgr_data.json");
+        TypeFactory typeFactory = mapper.getTypeFactory();
+        List data = mapper.readValue(file, typeFactory.constructCollectionType(List.class, Object.class));
+        BulkOperations bulkOperations = mongoTemplate.bulkOps(BulkOperations.BulkMode.UNORDERED, Object.class, "media-gender-rep");
+        bulkOperations.insert(data);
+        bulkOperations.execute();
+    }
+
 }

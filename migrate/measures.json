@@ -79,5 +79,23 @@
     },
     "type": "percentage",
     "unit": "PC"
+  },
+  {
+    "id": "media_appearances_perc",
+    "name": {
+      "el": "%",
+      "en": "%"
+    },
+    "type": "percentage",
+    "unit": "PC"
+  },
+  {
+    "id": "media_appearances",
+    "name": {
+      "el": "Εμφανίσεις στα Media",
+      "en": "Media Appearances"
+    },
+    "type": "count",
+    "unit": "Media Appearances"
   }
 ]

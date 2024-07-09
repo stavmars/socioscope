@@ -1,0 +1,832 @@
+[
+    {
+        "dimensionId": "mgr_election_id",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Εθνικές Εκλογές 21ης Μαίου 2023",
+            "en": ""
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_election_id",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Εθνικές Εκλογές 25ης Ιουνίου 2023",
+            "en": ""
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_election_id",
+        "notation": "3",
+        "order": 3,
+        "name": {
+            "el": "Ευρωεκλογές 9ης Ιουνίου 2024",
+            "en": ""
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_sex",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "άνδρας",
+            "en": "Male"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_sex",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "γυναίκα",
+            "en": "Female"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_age_group",
+        "notation": "25-29",
+        "order": 1,
+        "name": {
+            "el": "25-29",
+            "en": "25-29"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_age_group",
+        "notation": "30-39",
+        "order": 2,
+        "name": {
+            "el": "30-39",
+            "en": "30-39"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_age_group",
+        "notation": "40-49",
+        "order": 3,
+        "name": {
+            "el": "40-49",
+            "en": "40-49"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_age_group",
+        "notation": "50-59",
+        "order": 4,
+        "name": {
+            "el": "50-59",
+            "en": "50-59"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_age_group",
+        "notation": "60+",
+        "order": 5,
+        "name": {
+            "el": "60+",
+            "en": "60+"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_age_group",
+        "notation": "99",
+        "order": 6,
+        "name": {
+            "el": "Ελλιπή στοιχεία",
+            "en": "Missing data"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "ΕΡΤ 1",
+            "en": "ERT 1"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "ΕΡΤ ενημερωτικό κανάλι",
+            "en": "ERT NEWS"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "3",
+        "order": 3,
+        "name": {
+            "el": "ΑΝΤΕΝΝΑ",
+            "en": "ANT1"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "4",
+        "order": 4,
+        "name": {
+            "el": "ΜΕΓΚΑ",
+            "en": "MEGA"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "5",
+        "order": 5,
+        "name": {
+            "el": "ΣΚΑΙ",
+            "en": "SKAI"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "6",
+        "order": 6,
+        "name": {
+            "el": "ΣTΑΡ",
+            "en": "STAR CHANNEL"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "7",
+        "order": 7,
+        "name": {
+            "el": "ΟΠΕΝ",
+            "en": "OPEN TV"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "8",
+        "order": 8,
+        "name": {
+            "el": "ΑΛΦΑ ΤΒ",
+            "en": "ALPHA TV"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "9",
+        "order": 9,
+        "name": {
+            "el": "",
+            "en": ""
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "10",
+        "order": 10,
+        "name": {
+            "el": "",
+            "en": ""
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Νέα Δημοκρατία",
+            "en": "Nea Dimokratia"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Σύριζα",
+            "en": "Syriza"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "3",
+        "order": 3,
+        "name": {
+            "el": "ΠΑΣΟΚ - Κίνημα Αλλαγής",
+            "en": "PASOK -KInal"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "4",
+        "order": 4,
+        "name": {
+            "el": "ΚΚΕ",
+            "en": "KKE"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "5",
+        "order": 5,
+        "name": {
+            "el": "Ελληνική Λύση",
+            "en": "Elliniki Lysi"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "6",
+        "order": 6,
+        "name": {
+            "el": "Νέα Αριστερά",
+            "en": "Nea Aristera"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "7",
+        "order": 7,
+        "name": {
+            "el": "Σπαρτιάτες",
+            "en": "Spartiates"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "8",
+        "order": 8,
+        "name": {
+            "el": "Νίκη",
+            "en": "Niki"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "9",
+        "order": 9,
+        "name": {
+            "el": "Πλεύση Ελευθερίας",
+            "en": "Pleusi ELeftherias"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "10",
+        "order": 10,
+        "name": {
+            "el": "Μέρα 25",
+            "en": "Mera 25"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "11",
+        "order": 11,
+        "name": {
+            "el": "Δημοκράτες",
+            "en": "Dimokrates"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "12",
+        "order": 12,
+        "name": {
+            "el": "Φωνή Λογικής",
+            "en": "Foni Logikis"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "13",
+        "order": 13,
+        "name": {
+            "el": "Κόσμος",
+            "en": "Kosmos"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "14",
+        "order": 14,
+        "name": {
+            "el": "",
+            "en": ""
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "15",
+        "order": 15,
+        "name": {
+            "el": "",
+            "en": ""
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "16",
+        "order": 16,
+        "name": {
+            "el": "",
+            "en": ""
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "17",
+        "order": 17,
+        "name": {
+            "el": "",
+            "en": ""
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "18",
+        "order": 18,
+        "name": {
+            "el": "",
+            "en": ""
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "19",
+        "order": 19,
+        "name": {
+            "el": "",
+            "en": ""
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "20",
+        "order": 20,
+        "name": {
+            "el": "",
+            "en": ""
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_program_type",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Κεντρικό δελτίο ειδήσεων",
+            "en": "Evening news"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_program_type",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Πρωινή ζώνη",
+            "en": "Morning show"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_program_type",
+        "notation": "3",
+        "order": 3,
+        "name": {
+            "el": "Βραδυνή εκλογική εκπομπή",
+            "en": "Night show"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_program_type",
+        "notation": "4",
+        "order": 4,
+        "name": {
+            "el": "Εκλογική βραδιά",
+            "en": "Election coverage"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_participation_mode",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Ατομική παρουσία",
+            "en": "Individual presense"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_participation_mode",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Μέρος πάνελ",
+            "en": "Panel member"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_capacity",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Πολιτικό πρόσωπο",
+            "en": "Politician"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_capacity",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Ακαδημαϊκός",
+            "en": "Member of the Academia"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_capacity",
+        "notation": "3",
+        "order": 3,
+        "name": {
+            "el": "Ειδικός εμπειρογνώμονας",
+            "en": "Expert"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_capacity",
+        "notation": "4",
+        "order": 4,
+        "name": {
+            "el": "Δημοσιογράφος",
+            "en": "Journalist"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_capacity",
+        "notation": "5",
+        "order": 5,
+        "name": {
+            "el": "Συνδικαλιστής/τρια",
+            "en": "Trade union representative"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_capacity",
+        "notation": "6",
+        "order": 6,
+        "name": {
+            "el": "Άλλο",
+            "en": "Other"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_candidate",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Ναι",
+            "en": "YEs"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_candidate",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Οχι",
+            "en": "No"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Νομικά επαγγέλματα",
+            "en": "Legal professions"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Ιατροί",
+            "en": "Medical professions"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "3",
+        "order": 3,
+        "name": {
+            "el": "Καθηγητές Πανεπιστημίου",
+            "en": "University professors"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "4",
+        "order": 4,
+        "name": {
+            "el": "Οικονομολόγοι",
+            "en": "Economists"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "5",
+        "order": 5,
+        "name": {
+            "el": "Δημοσιογράφοι",
+            "en": "Journalists"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "6",
+        "order": 6,
+        "name": {
+            "el": "Μηχανικοί",
+            "en": "Engineers"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "7",
+        "order": 7,
+        "name": {
+            "el": "Υπάλληλοι Γραφείου / παροχή υπηρεσιών",
+            "en": "Office workers/services"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "8",
+        "order": 8,
+        "name": {
+            "el": "Εκπαιδευτικοί",
+            "en": "Teachers"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "9",
+        "order": 9,
+        "name": {
+            "el": "Ενοπλες Δυνάμεις",
+            "en": "Armed Forces"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "10",
+        "order": 10,
+        "name": {
+            "el": "Καλλιτέχνες / Αθλητές",
+            "en": "Artists/Athletes"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "11",
+        "order": 11,
+        "name": {
+            "el": "Εργάτες, Αγρότες, Τεχνίτες",
+            "en": "Manual workers/Farmers/Technicians"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "12",
+        "order": 12,
+        "name": {
+            "el": "Επιχειρηματίες",
+            "en": "Enterpreneurs/Managers"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "13",
+        "order": 13,
+        "name": {
+            "el": "Λοιπά",
+            "en": "Other"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "14",
+        "order": 14,
+        "name": {
+            "el": "Ελλιπή στοιχεία",
+            "en": "Missing data"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "15",
+        "order": 15,
+        "name": {
+            "el": "Στατιστικολόγοι",
+            "en": "Statistics experts/ gallop experts"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "16",
+        "order": 16,
+        "name": {
+            "el": "Αστυνομικοί",
+            "en": "Police"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "17",
+        "order": 17,
+        "name": {
+            "el": "Διπλωμάτες",
+            "en": "Diplomats"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "18",
+        "order": 18,
+        "name": {
+            "el": "Επικοινωνιολόγοι - υπεύθυνοι επικοινωνίας",
+            "en": "communications experts"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_profession",
+        "notation": "19",
+        "order": 19,
+        "name": {
+            "el": "Ψυχολόγοι",
+            "en": "psychologists"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_ministerial_post",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Υπουργική Θέση",
+            "en": "Minister"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_ministerial_post",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Όχι",
+            "en": "Νο"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_ministerial_post",
+        "notation": "3",
+        "order": 3,
+        "name": {
+            "el": "Πρωθυπουργός",
+            "en": "Prime Minister"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_eu_post",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Ναι",
+            "en": "Yes"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_eu_post",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Όχι",
+            "en": "No"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_parliament_post",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Ναι",
+            "en": "Yes"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_parliament_post",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Όχι",
+            "en": "No"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_local_post",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Ναι",
+            "en": "Yes"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_local_post",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Όχι/Δεν αναφέρεται",
+            "en": "No"
+        },
+        "color": null
+    }
+]
