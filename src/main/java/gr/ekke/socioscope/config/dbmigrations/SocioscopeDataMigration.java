@@ -197,7 +197,7 @@ public class SocioscopeDataMigration {
         bulkOperations.execute();
     }
 
-    @ChangeSet(order = "14", author = "initiator", id="addMediaGenderRepData")
+    @ChangeSet(order = "15", author = "initiator", id="addMediaGenderRepData")
     public void addMediaGenderRepData(MongoTemplate mongoTemplate, Environment environment) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         File file = new File(environment.getProperty("application.migrate-data-path") + "/mgr_data.json");
