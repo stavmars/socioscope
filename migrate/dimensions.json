@@ -6454,6 +6454,18 @@
     "disableCompareBy": true
   },
   {
+    "id": "mgr_week",
+    "name": {
+      "el": "Εβδομάδα",
+      "en": "Week"
+    },
+    "groupId": null,
+    "type": "coded",
+    "disableAxis": false,
+    "disableFilter": false,
+    "disableCompareBy": false
+  },
+  {
     "id": "mgr_election_id",
     "name": {
       "el": "Εκλογική Αναμέτρηση",

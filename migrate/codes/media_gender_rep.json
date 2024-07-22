@@ -1,5 +1,35 @@
 [
     {
+        "dimensionId": "mgr_week",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Εβδομάδα 1",
+            "en": "Week 1"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_week",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Εβδομάδα 2",
+            "en": "Week 2"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_week",
+        "notation": "3",
+        "order": 3,
+        "name": {
+            "el": "Εβδομάδα 3",
+            "en": "Week 3"
+        },
+        "color": null
+    },
+    {
         "dimensionId": "mgr_election_id",
         "notation": "1",
         "order": 1,
