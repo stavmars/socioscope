@@ -340,3 +340,9 @@ export const urlEncodeVisOptions = (visOptions: IVisOptions) => {
 
 export const getVisURL = (datasetId: string, visOptions: IVisOptions) =>
   window.location.protocol + '//' + window.location.host + '/dataset/' + datasetId + '/data?' + urlEncodeVisOptions(visOptions);
+
+export const resetUpdatingVisOptions = () => async dispatch => {
+  dispatch({
+    type: ACTION_TYPES.INIT_VIS
+  });
+};
