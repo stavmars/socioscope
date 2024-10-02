@@ -59,8 +59,8 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
     return (
       <div className={`vis-toolbar ${colorScheme}`}>
         <div className={colorScheme}>
-          <Grid columns="equal">
-            <Grid.Column>
+          <Grid>
+            <Grid.Column width={12}>
               <Menu text className={colorScheme}>
                 {dataset.measures.length === 2 && (
                   <Menu.Item style={{ marginRight: '25px' }}>
@@ -114,39 +114,40 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                       </Form>
                     </Menu.Item>
                   )}
-                {_.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area') && (
-                  <div style={{ display: 'inherit' }}>
-                    <Menu.Item
-                      as={NavLink}
-                      to={'?' + urlEncodeVisOptions({ visType: 'chart', subType: 'column', seriesOptions })}
-                      active={visType === 'chart'}
-                      style={{ marginRight: '50px' }}
-                    >
-                      {visType === 'chart' ? (
-                        <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
-                      ) : (
-                        <Image src={`/content/images/Assets/Chart.svg`} style={{ marginRight: '20px' }} />
-                      )}
-                      {translate('socioscopeApp.dataSet.visualization.graph')}
-                    </Menu.Item>
-                    <Menu.Item
-                      as={NavLink}
-                      to={'?' + urlEncodeVisOptions({ visType: 'map', seriesOptions: dataset.defaultOptions })}
-                      active={visType === 'map'}
-                      style={{ marginRight: '50px', a: { pointerEvents: 'none' } }}
-                    >
-                      {visType === 'map' ? (
-                        <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
-                      ) : (
-                        <Image src={`/content/images/Assets/Map.svg`} style={{ marginRight: '20px' }} />
-                      )}
-                      {translate('socioscopeApp.dataSet.visualization.map')}
-                    </Menu.Item>
-                  </div>
-                )}
+                {false &&
+                  _.find(dataset.dimensions as IDimension[], obj => obj.id === 'constituency') && (
+                    <div style={{ display: 'inherit' }}>
+                      <Menu.Item
+                        as={NavLink}
+                        to={'?' + urlEncodeVisOptions({ visType: 'chart', subType: 'column', seriesOptions })}
+                        active={visType === 'chart'}
+                        style={{ marginRight: '20px' }}
+                      >
+                        {visType === 'chart' ? (
+                          <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
+                        ) : (
+                          <Image src={`/content/images/Assets/Chart.svg`} style={{ marginRight: '20px' }} />
+                        )}
+                        {translate('socioscopeApp.dataSet.visualization.graph')}
+                      </Menu.Item>
+                      <Menu.Item
+                        as={NavLink}
+                        to={'?' + urlEncodeVisOptions({ visType: 'map', seriesOptions: dataset.defaultOptions })}
+                        active={visType === 'map'}
+                        style={{ marginRight: '20px' }}
+                      >
+                        {visType === 'map' ? (
+                          <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
+                        ) : (
+                          <Image src={`/content/images/Assets/Map.svg`} style={{ marginRight: '20px' }} />
+                        )}
+                        {translate('socioscopeApp.dataSet.visualization.map')}
+                      </Menu.Item>
+                    </div>
+                  )}
               </Menu>
             </Grid.Column>
-            <Grid.Column>
+            <Grid.Column width={4}>
               <List horizontal floated="right">
                 <List.Item>
                   <Dropdown

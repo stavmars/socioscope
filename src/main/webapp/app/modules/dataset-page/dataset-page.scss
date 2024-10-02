@@ -450,7 +450,8 @@
   }
 }
 
-.dataset-page-chart {
+.dataset-page-chart,
+.dataset-page-map {
   @include mobile {
     height: 400px;
   }
