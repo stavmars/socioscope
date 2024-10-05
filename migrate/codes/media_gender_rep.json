@@ -4,8 +4,8 @@
         "notation": "1",
         "order": 1,
         "name": {
-            "el": "Εβδομάδα 1",
-            "en": "Week 1"
+            "el": "Εβδομάδα 10-16/5",
+            "en": "Week May 10-16"
         },
         "color": null
     },
@@ -14,8 +14,8 @@
         "notation": "2",
         "order": 2,
         "name": {
-            "el": "Εβδομάδα 2",
-            "en": "Week 2"
+            "el": "Εβδομάδα 17-23/5",
+            "en": "Week May 17-23"
         },
         "color": null
     },
@@ -24,8 +24,18 @@
         "notation": "3",
         "order": 3,
         "name": {
-            "el": "Εβδομάδα 3",
-            "en": "Week 3"
+            "el": "Εβδομάδα 24-30/5",
+            "en": "Week May 24-30"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_week",
+        "notation": "4",
+        "order": 4,
+        "name": {
+            "el": "Εβδομάδα 31/5-7/6",
+            "en": "Week May 31 - June 7"
         },
         "color": null
     },
@@ -80,66 +90,6 @@
         "color": null
     },
     {
-        "dimensionId": "mgr_age_group",
-        "notation": "25-29",
-        "order": 1,
-        "name": {
-            "el": "25-29",
-            "en": "25-29"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_age_group",
-        "notation": "30-39",
-        "order": 2,
-        "name": {
-            "el": "30-39",
-            "en": "30-39"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_age_group",
-        "notation": "40-49",
-        "order": 3,
-        "name": {
-            "el": "40-49",
-            "en": "40-49"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_age_group",
-        "notation": "50-59",
-        "order": 4,
-        "name": {
-            "el": "50-59",
-            "en": "50-59"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_age_group",
-        "notation": "60+",
-        "order": 5,
-        "name": {
-            "el": "60+",
-            "en": "60+"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_age_group",
-        "notation": "99",
-        "order": 6,
-        "name": {
-            "el": "Ελλιπή στοιχεία",
-            "en": "Missing data"
-        },
-        "color": null
-    },
-    {
         "dimensionId": "mgr_media",
         "notation": "1",
         "order": 1,
@@ -151,18 +101,8 @@
     },
     {
         "dimensionId": "mgr_media",
-        "notation": "2",
-        "order": 2,
-        "name": {
-            "el": "ΕΡΤ ενημερωτικό κανάλι",
-            "en": "ERT NEWS"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_media",
         "notation": "3",
-        "order": 3,
+        "order": 2,
         "name": {
             "el": "ΑΝΤΕΝΝΑ",
             "en": "ANT1"
@@ -172,7 +112,7 @@
     {
         "dimensionId": "mgr_media",
         "notation": "4",
-        "order": 4,
+        "order": 3,
         "name": {
             "el": "ΜΕΓΚΑ",
             "en": "MEGA"
@@ -182,7 +122,7 @@
     {
         "dimensionId": "mgr_media",
         "notation": "5",
-        "order": 5,
+        "order": 4,
         "name": {
             "el": "ΣΚΑΙ",
             "en": "SKAI"
@@ -192,7 +132,7 @@
     {
         "dimensionId": "mgr_media",
         "notation": "6",
-        "order": 6,
+        "order": 5,
         "name": {
             "el": "ΣTΑΡ",
             "en": "STAR CHANNEL"
@@ -202,7 +142,7 @@
     {
         "dimensionId": "mgr_media",
         "notation": "7",
-        "order": 7,
+        "order": 6,
         "name": {
             "el": "ΟΠΕΝ",
             "en": "OPEN TV"
@@ -212,30 +152,10 @@
     {
         "dimensionId": "mgr_media",
         "notation": "8",
-        "order": 8,
+        "order": 7,
         "name": {
             "el": "ΑΛΦΑ ΤΒ",
             "en": "ALPHA TV"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_media",
-        "notation": "9",
-        "order": 9,
-        "name": {
-            "el": "",
-            "en": ""
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_media",
-        "notation": "10",
-        "order": 10,
-        "name": {
-            "el": "",
-            "en": ""
         },
         "color": null
     },
@@ -265,7 +185,7 @@
         "order": 3,
         "name": {
             "el": "ΠΑΣΟΚ - Κίνημα Αλλαγής",
-            "en": "PASOK -KInal"
+            "en": "PASOK -Kinal"
         },
         "color": null
     },
@@ -335,7 +255,7 @@
         "order": 10,
         "name": {
             "el": "Μέρα 25",
-            "en": "Mera 25"
+            "en": "Mera25"
         },
         "color": null
     },
@@ -354,7 +274,7 @@
         "notation": "12",
         "order": 12,
         "name": {
-            "el": "Φωνή Λογικής",
+            "el": "Φωνή λογικής",
             "en": "Foni Logikis"
         },
         "color": null
@@ -371,70 +291,10 @@
     },
     {
         "dimensionId": "mgr_party",
-        "notation": "14",
+        "notation": "0",
         "order": 14,
         "name": {
-            "el": "",
-            "en": ""
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_party",
-        "notation": "15",
-        "order": 15,
-        "name": {
-            "el": "",
-            "en": ""
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_party",
-        "notation": "16",
-        "order": 16,
-        "name": {
-            "el": "",
-            "en": ""
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_party",
-        "notation": "17",
-        "order": 17,
-        "name": {
-            "el": "",
-            "en": ""
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_party",
-        "notation": "18",
-        "order": 18,
-        "name": {
-            "el": "",
-            "en": ""
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_party",
-        "notation": "19",
-        "order": 19,
-        "name": {
-            "el": "",
-            "en": ""
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_party",
-        "notation": "20",
-        "order": 20,
-        "name": {
-            "el": "",
+            "el": "Ελλιπή Στοιχεία",
             "en": ""
         },
         "color": null
@@ -456,26 +316,6 @@
         "name": {
             "el": "Πρωινή ζώνη",
             "en": "Morning show"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_program_type",
-        "notation": "3",
-        "order": 3,
-        "name": {
-            "el": "Βραδυνή εκλογική εκπομπή",
-            "en": "Night show"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_program_type",
-        "notation": "4",
-        "order": 4,
-        "name": {
-            "el": "Εκλογική βραδιά",
-            "en": "Election coverage"
         },
         "color": null
     },
@@ -580,282 +420,72 @@
         "color": null
     },
     {
-        "dimensionId": "mgr_profession",
+        "dimensionId": "mgr_thematic_general",
         "notation": "1",
         "order": 1,
         "name": {
-            "el": "Νομικά επαγγέλματα",
-            "en": "Legal professions"
+            "el": "Ευρωεκλογές",
+            "en": "European Elections"
         },
         "color": null
     },
     {
-        "dimensionId": "mgr_profession",
+        "dimensionId": "mgr_thematic_general",
         "notation": "2",
         "order": 2,
         "name": {
-            "el": "Ιατροί",
-            "en": "Medical professions"
+            "el": "Οικονομία/ακρίβεια",
+            "en": "Economy/Rising prices"
         },
         "color": null
     },
     {
-        "dimensionId": "mgr_profession",
+        "dimensionId": "mgr_thematic_general",
         "notation": "3",
         "order": 3,
         "name": {
-            "el": "Καθηγητές Πανεπιστημίου",
-            "en": "University professors"
+            "el": "Διεθνή/εξωτερική πολιτική",
+            "en": "Foreign affairs/foreign policy"
         },
         "color": null
     },
     {
-        "dimensionId": "mgr_profession",
+        "dimensionId": "mgr_thematic_general",
         "notation": "4",
         "order": 4,
         "name": {
-            "el": "Οικονομολόγοι",
-            "en": "Economists"
+            "el": "Διαφθορά/σκάνδαλα",
+            "en": "Corruption/scandals"
         },
         "color": null
     },
     {
-        "dimensionId": "mgr_profession",
+        "dimensionId": "mgr_thematic_general",
         "notation": "5",
         "order": 5,
         "name": {
-            "el": "Δημοσιογράφοι",
-            "en": "Journalists"
+            "el": "Υγεία",
+            "en": "Health"
         },
         "color": null
     },
     {
-        "dimensionId": "mgr_profession",
+        "dimensionId": "mgr_thematic_general",
         "notation": "6",
         "order": 6,
         "name": {
-            "el": "Μηχανικοί",
-            "en": "Engineers"
+            "el": "Γυναικοκτονίες/έμφυλη βία",
+            "en": "Femicides/gender based violence"
         },
         "color": null
     },
     {
-        "dimensionId": "mgr_profession",
+        "dimensionId": "mgr_thematic_general",
         "notation": "7",
         "order": 7,
         "name": {
-            "el": "Υπάλληλοι Γραφείου / παροχή υπηρεσιών",
-            "en": "Office workers/services"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_profession",
-        "notation": "8",
-        "order": 8,
-        "name": {
-            "el": "Εκπαιδευτικοί",
-            "en": "Teachers"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_profession",
-        "notation": "9",
-        "order": 9,
-        "name": {
-            "el": "Ενοπλες Δυνάμεις",
-            "en": "Armed Forces"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_profession",
-        "notation": "10",
-        "order": 10,
-        "name": {
-            "el": "Καλλιτέχνες / Αθλητές",
-            "en": "Artists/Athletes"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_profession",
-        "notation": "11",
-        "order": 11,
-        "name": {
-            "el": "Εργάτες, Αγρότες, Τεχνίτες",
-            "en": "Manual workers/Farmers/Technicians"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_profession",
-        "notation": "12",
-        "order": 12,
-        "name": {
-            "el": "Επιχειρηματίες",
-            "en": "Enterpreneurs/Managers"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_profession",
-        "notation": "13",
-        "order": 13,
-        "name": {
             "el": "Λοιπά",
-            "en": "Other"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_profession",
-        "notation": "14",
-        "order": 14,
-        "name": {
-            "el": "Ελλιπή στοιχεία",
-            "en": "Missing data"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_profession",
-        "notation": "15",
-        "order": 15,
-        "name": {
-            "el": "Στατιστικολόγοι",
-            "en": "Statistics experts/ gallop experts"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_profession",
-        "notation": "16",
-        "order": 16,
-        "name": {
-            "el": "Αστυνομικοί",
-            "en": "Police"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_profession",
-        "notation": "17",
-        "order": 17,
-        "name": {
-            "el": "Διπλωμάτες",
-            "en": "Diplomats"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_profession",
-        "notation": "18",
-        "order": 18,
-        "name": {
-            "el": "Επικοινωνιολόγοι - υπεύθυνοι επικοινωνίας",
-            "en": "communications experts"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_profession",
-        "notation": "19",
-        "order": 19,
-        "name": {
-            "el": "Ψυχολόγοι",
-            "en": "psychologists"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_ministerial_post",
-        "notation": "1",
-        "order": 1,
-        "name": {
-            "el": "Υπουργική Θέση",
-            "en": "Minister"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_ministerial_post",
-        "notation": "2",
-        "order": 2,
-        "name": {
-            "el": "Όχι",
-            "en": "Νο"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_ministerial_post",
-        "notation": "3",
-        "order": 3,
-        "name": {
-            "el": "Πρωθυπουργός",
-            "en": "Prime Minister"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_eu_post",
-        "notation": "1",
-        "order": 1,
-        "name": {
-            "el": "Ναι",
-            "en": "Yes"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_eu_post",
-        "notation": "2",
-        "order": 2,
-        "name": {
-            "el": "Όχι",
-            "en": "No"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_parliament_post",
-        "notation": "1",
-        "order": 1,
-        "name": {
-            "el": "Ναι",
-            "en": "Yes"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_parliament_post",
-        "notation": "2",
-        "order": 2,
-        "name": {
-            "el": "Όχι",
-            "en": "No"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_local_post",
-        "notation": "1",
-        "order": 1,
-        "name": {
-            "el": "Ναι",
-            "en": "Yes"
-        },
-        "color": null
-    },
-    {
-        "dimensionId": "mgr_local_post",
-        "notation": "2",
-        "order": 2,
-        "name": {
-            "el": "Όχι/Δεν αναφέρεται",
-            "en": "No"
+            "en": "Miscellaneous"
         },
         "color": null
     }
