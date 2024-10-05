@@ -9,7 +9,8 @@ import {
   removeCompare,
   removeFilter,
   setFilterValue,
-  updateVisOptions
+  updateVisOptions,
+  resetUpdatingVisOptions
 } from 'app/modules/dataset-page/dataset-page-reducer';
 import './dataset-page.scss';
 import { Dimmer, Grid, Loader, Responsive } from 'semantic-ui-react';
@@ -57,6 +58,10 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
     if (!_.isEqual(prevProps.routeVisOptions, this.props.routeVisOptions)) {
       this.props.updateVisOptions(this.props.dataset, this.props.routeVisOptions);
     }
+  }
+
+  componentWillUnmount() {
+    this.props.resetUpdatingVisOptions();
   }
 
   togglePercentage = () => {
@@ -291,7 +296,8 @@ const mapDispatchToProps = {
   initVis,
   changeCompareBy,
   removeFilter,
-  removeCompare
+  removeCompare,
+  resetUpdatingVisOptions
 };
 
 type StateProps = ReturnType<typeof mapStateToProps>;
