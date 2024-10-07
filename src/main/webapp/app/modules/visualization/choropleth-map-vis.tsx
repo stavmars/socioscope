@@ -22,6 +22,7 @@ export interface IChoroplethVisProp {
   dataset: IDataSet;
   series: ISeries;
   seriesOptions: ISeriesOptions;
+  dimensionCodes: any;
   xAxisCodes: any;
   loadingSeries: boolean;
   showButtons: boolean;
@@ -31,6 +32,7 @@ export interface IChoroplethVisState {
   geoJson: any;
   geoJsonLoading: boolean;
   geoMap: IGeoMap;
+  currentElectionsNotation: any;
 }
 
 export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoroplethVisState> {
@@ -41,11 +43,8 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
     this.state = {
       geoJson: null,
       geoJsonLoading: true,
-      geoMap: {
-        level: 0,
-        name: { el: 'Εκλογικές Περιφέρειες', en: 'Constituencies' },
-        url: 'content/geo/constituencies.json'
-      }
+      geoMap: null,
+      currentElectionsNotation: null
     };
   }
 
@@ -63,15 +62,22 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
   }
 
   componentDidMount() {
-    // const { dataset, seriesOptions } = this.props;
-    // const xAxisDimension = _.find(dataset.dimensions, { id: seriesOptions.xAxis }) as IDimension;
-    // const geoMap = xAxisDimension.geoMaps[0];
-    this.fetchGeoJson(this.state.geoMap);
+    const { seriesOptions, dimensionCodes } = this.props;
+    const electionNotation = seriesOptions.dimensionFilters.elections;
+    const electionsDimension = _.find(dimensionCodes.elections.codesByNotation, { notation: electionNotation }) as IDimension;
+    const geoMaps = electionsDimension.geoMaps;
+    this.setState({ currentElectionsNotation: electionNotation });
+    this.fetchGeoJson(geoMaps[0]);
   }
 
   componentDidUpdate(prevProps: IChoroplethVisProp, prevState: IChoroplethVisState) {
-    if (this.state.geoMap !== prevState.geoMap) {
-      this.fetchGeoJson(this.state.geoMap);
+    const { seriesOptions, dimensionCodes } = this.props;
+    const electionNotation = seriesOptions.dimensionFilters.elections;
+    if (this.state.currentElectionsNotation !== electionNotation) {
+      const electionsDimension = _.find(dimensionCodes.elections.codesByNotation, { notation: electionNotation }) as IDimension;
+      const geoMaps = electionsDimension.geoMaps;
+      this.setState({ currentElectionsNotation: electionNotation });
+      this.fetchGeoJson(geoMaps[0]);
     }
   }
 

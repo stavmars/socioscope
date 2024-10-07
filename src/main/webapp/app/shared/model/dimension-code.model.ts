@@ -1,4 +1,5 @@
 import { ILang } from 'app/shared/model/language.interface';
+import { IGeoMap } from './dimension.model';
 
 export interface IDimensionCode {
   id?: string;
@@ -14,6 +15,7 @@ export interface IDimensionCode {
   level?: number;
   iconURL?: string;
   disabled?: boolean;
+  geoMaps?: IGeoMap[];
 }
 
 export const defaultValue: Readonly<IDimensionCode> = { name: {}, description: {} };
