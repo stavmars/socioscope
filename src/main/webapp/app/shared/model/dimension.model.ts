@@ -10,7 +10,7 @@ export interface IDimension {
   type?: string;
   order?: string;
   creator?: IUser;
-  geoMaps?: IGeoMap[];
+  geoMaps?: { [key: string]: IGeoMap };
   dependencies?: string[];
   disableFilter?: boolean;
   disableCompareBy?: boolean;
@@ -22,6 +22,9 @@ export interface IDimension {
   required?: boolean;
   noFilterText?: ILang;
   parentDimensionId?: string;
+  defaultGeoMapXAxis?: boolean;
+  geoMapDependency?: string;
+  defaultGeoMapKey?: string;
 }
 
 export interface IGeoMap {

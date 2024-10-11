@@ -217,8 +217,12 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
   let xAxisDimension: IDimension;
   const filters = { ...seriesOptions.dimensionFilters };
   if (visType === 'map') {
-    xAxisDimension = dimensions.find(dim => dim.id === 'constituency');
-    xAxis = xAxisDimension.id;
+    if (!xAxis || !dimensions.find(dim => dim.id === xAxis && dim.type === 'geographic-area')) {
+      xAxisDimension = dimensions.find(dim => dim.type === 'geographic-area' && dim.defaultGeoMapXAxis);
+      xAxis = xAxisDimension.id;
+    } else {
+      xAxisDimension = dimensions.find(dim => dim.id === xAxis);
+    }
     compareBy = null;
   } else {
     xAxis = xAxis || dimensions[0].id;

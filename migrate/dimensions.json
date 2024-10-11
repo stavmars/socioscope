@@ -112,7 +112,7 @@
       "el": "Εκλογική Περιφέρεια",
       "en": "Constituency"
     },
-    "type": "coded",
+    "type": "geographic-area",
     "dependencies": [
       "elections"
     ],
@@ -121,7 +121,22 @@
       "en": "State"
     },
     "disableStacking": true,
-    "allowCompareCodes": true
+    "allowCompareCodes": true,
+    "defaultGeoMapXAxis": true,
+    "geoMapDependency": "elections",
+    "defaultGeoMapKey": "0",
+    "geoMaps": {
+      "0": {
+          "level": 0,
+          "name": { "el": "Εκλογικές Περιφέρειες", "en": "Constituencies" },
+          "url": "content/geo/constituencies.json"
+        },
+      "10": {
+          "level": 0,
+          "name": { "el": "Εκλογικές Περιφέρειες", "en": "Constituencies" },
+          "url": "content/geo/constituencies_2019.json"
+        }
+    }
   },
   {
     "id": "municipality",
@@ -129,14 +144,23 @@
       "el": "Δήμος",
       "en": "Μunicipality"
     },
-    "type": "coded",
+    "type": "geographic-area",
     "dependencies": [
       "constituency"
     ],
     "parentDimensionId": "constituency",
     "disableCompareBy": true,
     "disableAxis": true,
-    "disableStacking": true
+    "disableStacking": true,
+    "geoMapDependency": "elections",
+    "defaultGeoMapKey": "0",
+    "geoMaps": {
+      "0": {
+          "level": 0,
+          "name": {"el": "Δήμοι", "en": "Municipalities"},
+          "url": "content/geo/municipalities.json"
+        }
+    }
   },
   {
     "id": "elections",

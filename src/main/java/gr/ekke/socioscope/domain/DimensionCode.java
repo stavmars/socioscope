@@ -57,9 +57,6 @@ public class DimensionCode implements Serializable {
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private String iconURL;
 
-    @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    List<GeoMap> geoMaps;
-
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
         return id;
@@ -176,15 +173,6 @@ public class DimensionCode implements Serializable {
         this.iconURL = iconURL;
     }
 
-    public List<GeoMap> getGeoMaps() {
-        return geoMaps;
-    }
-
-    public void setGeoMaps(List<GeoMap> geoMaps) {
-        this.geoMaps = geoMaps;
-    }
-
-
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -220,7 +208,6 @@ public class DimensionCode implements Serializable {
             ", order=" + order +
             ", color='" + color + '\'' +
             ", iconURL='" + iconURL + '\'' +
-            ", geoMaps='" + geoMaps + '\'' +
             '}';
     }
 }

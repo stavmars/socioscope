@@ -85,7 +85,7 @@ export class VisMobileUpperToolbar extends React.Component<IVisMobileUpperToolba
                   </Form.Field>
                 )}
                 {false &&
-                  _.find(dataset.dimensions as IDimension[], obj => obj.id === 'constituency') && (
+                  _.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area') && (
                     <Form.Field>
                       <Checkbox
                         radio

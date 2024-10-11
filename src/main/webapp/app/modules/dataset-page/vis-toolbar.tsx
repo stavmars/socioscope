@@ -115,7 +115,7 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                     </Menu.Item>
                   )}
                 {false &&
-                  _.find(dataset.dimensions as IDimension[], obj => obj.id === 'constituency') && (
+                  _.find(dataset.dimensions as IDimension[], obj => obj.type === 'geographic-area') && (
                     <div style={{ display: 'inherit' }}>
                       <Menu.Item
                         as={NavLink}
