@@ -78,7 +78,7 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
   };
 
   handleGeographicAreaChange = (value, geoMap: IGeoMap) => {
-    this.setState({ geoMap: geoMap });
+    this.setState({ geoMap });
     this.handleXAxisChange(value);
   };
 
@@ -121,7 +121,7 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
     const levelButtons = (
       <Button.Group className="map-level-button-group" basic>
         {geographicDimensions.map(dim => {
-          if (dim.geoMaps[geoMapKey])
+          if (dim.geoMaps[geoMapKey]) {
             return (
               <Button
                 key={dim.id}
@@ -131,7 +131,7 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
                 {translateEntityField(dim.name)}
               </Button>
             );
-          else
+          } else {
             return (
               <Button
                 key={dim.id}
@@ -141,6 +141,7 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
                 {translateEntityField(dim.name)}
               </Button>
             );
+          }
         })}
       </Button.Group>
     );
