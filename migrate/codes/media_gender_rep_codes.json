@@ -77,7 +77,7 @@
             "el": "άνδρας",
             "en": "Male"
         },
-        "color": null
+        "color": "#3cb44b"
     },
     {
         "dimensionId": "mgr_sex",
@@ -87,7 +87,7 @@
             "el": "γυναίκα",
             "en": "Female"
         },
-        "color": null
+        "color": "#ff5d39"
     },
     {
         "dimensionId": "mgr_media",
@@ -104,7 +104,7 @@
         "notation": "3",
         "order": 2,
         "name": {
-            "el": "ΑΝΤΕΝΝΑ",
+            "el": "ANT1",
             "en": "ANT1"
         },
         "color": null
@@ -114,7 +114,7 @@
         "notation": "4",
         "order": 3,
         "name": {
-            "el": "ΜΕΓΚΑ",
+            "el": "MEGA",
             "en": "MEGA"
         },
         "color": null
@@ -134,7 +134,7 @@
         "notation": "6",
         "order": 5,
         "name": {
-            "el": "ΣTΑΡ",
+            "el": "STAR",
             "en": "STAR CHANNEL"
         },
         "color": null
@@ -144,7 +144,7 @@
         "notation": "7",
         "order": 6,
         "name": {
-            "el": "ΟΠΕΝ",
+            "el": "OPEN",
             "en": "OPEN TV"
         },
         "color": null
@@ -154,7 +154,7 @@
         "notation": "8",
         "order": 7,
         "name": {
-            "el": "ΑΛΦΑ ΤΒ",
+            "el": "ALPHA",
             "en": "ALPHA TV"
         },
         "color": null
@@ -167,7 +167,7 @@
             "el": "Νέα Δημοκρατία",
             "en": "Nea Dimokratia"
         },
-        "color": null
+        "color": "#0C99FF"
     },
     {
         "dimensionId": "mgr_party",
@@ -177,7 +177,7 @@
             "el": "Σύριζα",
             "en": "Syriza"
         },
-        "color": null
+        "color": "#FF8080"
     },
     {
         "dimensionId": "mgr_party",
@@ -187,7 +187,7 @@
             "el": "ΠΑΣΟΚ - Κίνημα Αλλαγής",
             "en": "PASOK -Kinal"
         },
-        "color": null
+        "color": "#00CC0C"
     },
     {
         "dimensionId": "mgr_party",
@@ -197,7 +197,7 @@
             "el": "ΚΚΕ",
             "en": "KKE"
         },
-        "color": null
+        "color": "#D80000"
     },
     {
         "dimensionId": "mgr_party",
@@ -207,7 +207,7 @@
             "el": "Ελληνική Λύση",
             "en": "Elliniki Lysi"
         },
-        "color": null
+        "color": "#4DB2EC"
     },
     {
         "dimensionId": "mgr_party",
@@ -217,7 +217,7 @@
             "el": "Νέα Αριστερά",
             "en": "Nea Aristera"
         },
-        "color": null
+        "color": "#CB3233"
     },
     {
         "dimensionId": "mgr_party",
@@ -227,7 +227,7 @@
             "el": "Σπαρτιάτες",
             "en": "Spartiates"
         },
-        "color": null
+        "color": "#E9B460"
     },
     {
         "dimensionId": "mgr_party",
@@ -237,7 +237,7 @@
             "el": "Νίκη",
             "en": "Niki"
         },
-        "color": null
+        "color": "#C0522B"
     },
     {
         "dimensionId": "mgr_party",
@@ -247,7 +247,7 @@
             "el": "Πλεύση Ελευθερίας",
             "en": "Pleusi ELeftherias"
         },
-        "color": null
+        "color": "#AC3288"
     },
     {
         "dimensionId": "mgr_party",
@@ -257,7 +257,7 @@
             "el": "Μέρα 25",
             "en": "Mera25"
         },
-        "color": null
+        "color": "#E60E19"
     },
     {
         "dimensionId": "mgr_party",
@@ -267,7 +267,7 @@
             "el": "Δημοκράτες",
             "en": "Dimokrates"
         },
-        "color": null
+        "color": "#011689"
     },
     {
         "dimensionId": "mgr_party",
@@ -277,7 +277,7 @@
             "el": "Φωνή λογικής",
             "en": "Foni Logikis"
         },
-        "color": null
+        "color": "#020C6A"
     },
     {
         "dimensionId": "mgr_party",
@@ -287,17 +287,27 @@
             "el": "Κόσμος",
             "en": "Kosmos"
         },
-        "color": null
+        "color": "#020C6A"
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "14",
+        "order": 14,
+        "name": {
+            "el": "Ανεξάρτητοι",
+            "en": "Independent"
+        },
+        "color": "#fffac8"
     },
     {
         "dimensionId": "mgr_party",
         "notation": "0",
-        "order": 14,
+        "order": 15,
         "name": {
-            "el": "Ελλιπή Στοιχεία",
+            "el": "Χωρίς κομματική ιδιότητα",
             "en": ""
         },
-        "color": null
+        "color": "#a9a9a9"
     },
     {
         "dimensionId": "mgr_program_type",
@@ -354,8 +364,8 @@
         "notation": "2",
         "order": 2,
         "name": {
-            "el": "Ακαδημαϊκός",
-            "en": "Member of the Academia"
+            "el": "Πανεπιστημιακός",
+            "en": "University Professor"
         },
         "color": null
     },
@@ -444,7 +454,7 @@
         "notation": "3",
         "order": 3,
         "name": {
-            "el": "Διεθνή/εξωτερική πολιτική",
+            "el": "Διεθνή θέματα/εξωτερική πολιτική",
             "en": "Foreign affairs/foreign policy"
         },
         "color": null

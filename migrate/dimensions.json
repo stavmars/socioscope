@@ -6481,7 +6481,7 @@
     "id": "mgr_sex",
     "name": {
       "el": "Φύλο",
-      "en": "Sex"
+      "en": "Gender"
     },
     "groupId": null,
     "type": "coded",
@@ -6492,8 +6492,8 @@
   {
     "id": "mgr_media",
     "name": {
-      "el": "Μέσα Ενημέρωσης",
-      "en": "Media"
+      "el": "Τηλεοπτικός σταθμός",
+      "en": "TV station"
     },
     "groupId": null,
     "type": "coded",
@@ -6540,7 +6540,7 @@
   {
     "id": "mgr_capacity",
     "name": {
-      "el": "Ικανότητα",
+      "el": "Ιδιότητα",
       "en": "Capacity"
     },
     "groupId": null,
@@ -6552,7 +6552,7 @@
   {
     "id": "mgr_candidate",
     "name": {
-      "el": "Υποψήφιος",
+      "el": "Υποψήφιος/α",
       "en": "Candidate"
     },
     "groupId": null,
