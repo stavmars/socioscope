@@ -30,7 +30,6 @@ export interface IDimension {
 export interface IGeoMap {
   name: ILang;
   url: string;
-  level: number;
 }
 
 export const defaultValue: Readonly<IDimension> = { name: {} };

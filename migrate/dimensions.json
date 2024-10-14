@@ -127,12 +127,10 @@
     "defaultGeoMapKey": "0",
     "geoMaps": {
       "0": {
-          "level": 0,
           "name": { "el": "Εκλογικές Περιφέρειες", "en": "Constituencies" },
           "url": "content/geo/constituencies.json"
         },
       "10": {
-          "level": 0,
           "name": { "el": "Εκλογικές Περιφέρειες", "en": "Constituencies" },
           "url": "content/geo/constituencies_2019.json"
         }
@@ -156,7 +154,6 @@
     "defaultGeoMapKey": "0",
     "geoMaps": {
       "0": {
-          "level": 0,
           "name": {"el": "Δήμοι", "en": "Municipalities"},
           "url": "content/geo/municipalities.json"
         }
