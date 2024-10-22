@@ -29,6 +29,7 @@ export class MobileMenu extends React.Component<IMobileMenuProps> {
               <List.Header className="mobile-menu-item">{translate('global.menu.topics')}</List.Header>
               <div className="mobile-menu-list">
                 {_.at(dataSetsById, [
+                  'media-gender-rep',
                   'democracy-at-school',
                   'young-europeans',
                   'youwho',

@@ -21,6 +21,7 @@ export class TopicsMegaMenu extends React.Component<ITopicsMegaMenuProps> {
         <div className="topics-mega-menu-list">
           <List selection verticalAlign="middle">
             {_.at(dataSetsById, [
+              'media-gender-rep',
               'democracy-at-school',
               'young-europeans',
               'youwho',
