@@ -5,7 +5,7 @@ import ThreadItem from './thread-item';
 
 export interface IMetricsModalProps {
   showModal: boolean;
-  handleClose: Function;
+  handleClose: () => void;
   threadDump: any;
 }
 
