@@ -88,7 +88,7 @@
     "notation": "pasok",
     "name": {
       "el": "ΠΑ.ΣΟ.Κ.",
-      "en": "P.A.S.O.K"
+      "en": "PA.SO.K."
     },
     "description": {
       "el": " Πανελλήνιο Σοσιαλιστικό Κίνημα (ΠΑΣΟΚ). Από το 2015 και μετά το ΠΑΣΟΚ συμμετείχε στις εκλογές ως μέρος συνασπισμού κομμάτων (της Δημοκρατικής Συμπαράταξης τον Σεπ 15 και του Κινήματος Αλλαγής τον Ιουλ 2019)",
@@ -269,8 +269,8 @@
     "dimensionId": "party",
     "notation": "diana",
     "name": {
-      "el": "ΔΗΑΝΑ",
-      "en": "DIANA"
+      "el": "Δημ.Ανα.",
+      "en": "Dim.Ana."
     },
     "description": {
       "el": "Δημοκρατική Αναγέννηση",
@@ -913,7 +913,7 @@
     "dimensionId": "party",
     "notation": "oikenall",
     "name": {
-      "el": "Οικ.Εναλ.",
+      "el": "Οικ.Εναλλ.",
       "en": "Oik.Enall."
     },
     "description": {
@@ -1254,6 +1254,384 @@
     },
     "description": {
       "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "lefko",
+    "name": {
+      "el": "\"Λευκό\"",
+      "en": "Lefko"
+    },
+    "description": {
+      "el": "\"Λευκό\"",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "dhana",
+    "name": {
+      "el": "ΔΗ.ΑΝΑ.",
+      "en": "DIANA"
+    },
+    "description": {
+      "el": "Δημοκρατική Ανανέωση",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "ekke",
+    "name": {
+      "el": "Ε.Κ.Κ.Ε.",
+      "en": "EKKE"
+    },
+    "description": {
+      "el": "Ε.Κ.Κ.Ε. (Επαναστατικό Κομμουνιστικό Κίνημα Ελλάδας)",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "ethnsymb",
+    "name": {
+      "el": "Εθν.Συμπ.",
+      "en": "Ethn.Symb."
+    },
+    "description": {
+      "el": "Εθνικιστική Συμπαράταξις",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "kkees_aa",
+    "name": {
+      "el": "Κ.Κ.Ε. ες - Α.Α.",
+      "en": "Lefko"
+    },
+    "description": {
+      "el": "ΚΚΕ Εσωτερικού - Ανανεωτική Αριστερά",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "kollatos",
+    "name": {
+      "el": "Κολλάτος",
+      "en": "Kollatos"
+    },
+    "description": {
+      "el": "Κολλάτος - Ανεξάρτητο Πολιτικό Κίνημα - Οικολογικό Ελληνικό",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "nar_la",
+    "name": {
+      "el": "ΝΑΡ -Λ.Α.",
+      "en": "NAR - LA"
+    },
+    "description": {
+      "el": "Νέο Αριστερό Ρεύμα - Λαϊκή Αντιπολίτευση",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "oikeir_pr",
+    "name": {
+      "el": "Οικ.Ειρ. - Πρ.",
+      "en": "Oik.Eir. - Pr."
+    },
+    "description": {
+      "el": "Οικολόγοι - Ειρηνιστές -Πράσινοι",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "synaspismos",
+    "name": {
+      "el": "ΣΥΝΑΣΠΙΣΜΟΣ",
+      "en": "SYNASPISMOS"
+    },
+    "description": {
+      "el": "Συνασπισμός της Αριστεράς και της Πρόοδου",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "empistosini",
+    "name": {
+      "el": "ΕΜΠΙΣΤΟΣΥΝΗ",
+      "en": "EMPISTISINI"
+    },
+    "description": {
+      "el": "Συνδυασμός Ανεξάρτητων στην Εκλογική Περιφέρεια του Ν. Ροδόπης με τίτλο \"Εμπιστοσύνη\"",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "akida",
+    "name": {
+      "el": "Α.ΚΙ.Δ.Α",
+      "en": "AKIDA"
+    },
+    "description": {
+      "el": "Ανεξάρτητο Κίνημα Δημοκρατικής Αναγέννησης (Α.ΚΙ.Δ.Α.)",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "asa",
+    "name": {
+      "el": "Α.Σ.Α.",
+      "en": "ASA"
+    },
+    "description": {
+      "el": "Ανεξάρτητος Σοσιαλδημοκρατική Αναγέννησις (Α.Σ.Α.)",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "aftosevasmos",
+    "name": {
+      "el": "Αυτοσεβασμός",
+      "en": "Aftosevasmos"
+    },
+    "description": {
+      "el": "Αυτοσεβασμός",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "vassilomahos",
+    "name": {
+      "el": "Βασιλομάχος",
+      "en": "Vassilomahos"
+    },
+    "description": {
+      "el": "Βασιλομάχος",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "kdke",
+    "name": {
+      "el": "ΚΔΚΕ",
+      "en": "KDKE"
+    },
+    "description": {
+      "el": "\"Κέντρο\" Δημοκρατικό Κόμμα Ελλάδας",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "prasinoi",
+    "name": {
+      "el": "Πράσινοι",
+      "en": "Prasinoi"
+    },
+    "description": {
+      "el": "Οι Πράσινοι - Οικολογικό Κόμμα Αντικόμμα - Πανελλήνια Πράσινη Εναλλακτική Κίνηση",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "elen",
+    "name": {
+      "el": "ΕΛ.ΕΝ.",
+      "en": "EI. EN."
+    },
+    "description": {
+      "el": "Ελληνική Ενότητα ΕΛ.ΕΝ.",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "sedk",
+    "name": {
+      "el": "ΣΕΔΚ",
+      "en": "SEDK"
+    },
+    "description": {
+      "el": "\"Σημαία\" Ελληνικής Δημοκρατικής Συμπαράταξης",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "anthei",
+    "name": {
+      "el": "ΑΝΘ-ΕΙ",
+      "en": "ANTH.EI."
+    },
+    "description": {
+      "el": "Ανθρωπιά και Ειρήνη",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "elk",
+    "name": {
+      "el": "Ε.Λ.Κ.",
+      "en": "ELK"
+    },
+    "description": {
+      "el": "Ελληνικό Λαϊκό Κόμμα",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "ema",
+    "name": {
+      "el": "Ε.Μ.Α.",
+      "en": "EMA"
+    },
+    "description": {
+      "el": "Εργάτης Μαχητής Ανεξαρτήτων (Ε.Μ.Α.)",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "dimppae",
+    "name": {
+      "el": "Δημ.Π.Π.Α.Ε.",
+      "en": "Dim.P.P.A.E."
+    },
+    "description": {
+      "el": "Δημοκρατική Πρωτοβουλία για Πρόοδο και Ανάπτυξη της Ευρυτανίας",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "dimskikpoa",
+    "name": {
+      "el": "Δημ.Σ.Κ.Ι.Κ.Π.Ο.Α.",
+      "en": "Dim.SKIKPOA"
+    },
+    "description": {
+      "el": "Δημοκρατική Συνεργασία Κεφαλλονιάς και Ιθάκης για Κοινωνική Πρόοδο και Οικονομική Ανάπτυξη",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "zppaaa",
+    "name": {
+      "el": "Ζ.Π.Π.Α.Αα",
+      "en": "ZPPAAa"
+    },
+    "description": {
+      "el": "Ζακυνθινή Πρωτοβουλία για Πρόοδο - Ανάπτυξη - Απλή Αναλογική",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "aneksartitoi",
+    "name": {
+      "el": "Ανεξάρτητοι",
+      "en": "Aneksartitoi"
+    },
+    "description": {
+      "el": "Συνδυασμός Ανεξάρτητων στην Εκλογική Περιφέρεια του Ν. Λευκάδος με τίτλο ΔΗΜΟΚΡΑΤΙΚΗ ΠΡΟΟΔΕΥΤΙΚΉ ΣΥΝΕΡΓΑΣΙΑ",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "aneksartitoi_sinergasia",
+    "name": {
+      "el": "Ανεξάρτητοι - Συνεργασία",
+      "en": "Aneksartitoi - Sinergasia"
+    },
+    "description": {
+      "el": "Συνδυασμός Ανεξάρτητων στην Εκλογική Περιφέρεια του Ν. Σάμου με τίτλο Συνεργασία",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party",
+    "notation": "pepromeno",
+    "name": {
+      "el": "Πεπρωμένο",
+      "en": "Pepromeno"
+    },
+    "description": {
+      "el": "Συνδυασμός Ανεξάρτητων στην Εκλογική Περιφέρεια του Ν. Ξάνθης με τίτλο \"Πεπρωμένο\"",
       "en": ""
     },
     "order": "",
@@ -6609,6 +6987,20 @@
   },
   {
     "dimensionId": "elections",
+    "notation": "11",
+    "name": {
+      "el": "Απρίλιος 1990",
+      "en": "April 1990"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": 1,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections",
     "notation": "8",
     "name": {
       "el": "Ιανουάριος 2015",
@@ -6618,7 +7010,7 @@
       "el": "",
       "en": ""
     },
-    "order": 8,
+    "order": 9,
     "color": ""
   },
   {
@@ -6632,7 +7024,7 @@
       "el": "",
       "en": ""
     },
-    "order": 9,
+    "order": 10,
     "color": ""
   },
   {
@@ -6646,7 +7038,7 @@
       "el": "",
       "en": ""
     },
-    "order": 10,
+    "order": 11,
     "color": ""
   },
   {
@@ -6660,7 +7052,7 @@
       "el": "",
       "en": ""
     },
-    "order": 1,
+    "order": 2,
     "color": ""
   },
   {
@@ -6674,7 +7066,7 @@
       "el": "",
       "en": ""
     },
-    "order": 2,
+    "order": 3,
     "color": ""
   },
   {
@@ -6688,7 +7080,7 @@
       "el": "",
       "en": ""
     },
-    "order": 3,
+    "order": 4,
     "color": ""
   },
   {
@@ -6702,7 +7094,7 @@
       "el": "",
       "en": ""
     },
-    "order": 4,
+    "order": 5,
     "color": ""
   },
   {
@@ -6716,7 +7108,7 @@
       "el": "",
       "en": ""
     },
-    "order": 5,
+    "order": 6,
     "color": ""
   },
   {
@@ -6730,7 +7122,7 @@
       "el": "",
       "en": ""
     },
-    "order": 6,
+    "order": 7,
     "color": ""
   },
   {
@@ -6744,7 +7136,7 @@
       "el": "",
       "en": ""
     },
-    "order": 7,
+    "order": 8,
     "color": ""
   },
   {
