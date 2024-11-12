@@ -55,6 +55,7 @@ export class Home extends React.Component<IHomeProp> {
         <div id="discover" style={{ height: 120 }} />
         <div className="dataset-cards">
           {_.at(datasetsById, [
+            'media-gender-rep',
             'democracy-at-school',
             'young-europeans',
             'youwho',

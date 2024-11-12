@@ -1,0 +1,502 @@
+[
+    {
+        "dimensionId": "mgr_week",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Εβδομάδα 10-16/5",
+            "en": "Week May 10-16"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_week",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Εβδομάδα 17-23/5",
+            "en": "Week May 17-23"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_week",
+        "notation": "3",
+        "order": 3,
+        "name": {
+            "el": "Εβδομάδα 24-30/5",
+            "en": "Week May 24-30"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_week",
+        "notation": "4",
+        "order": 4,
+        "name": {
+            "el": "Εβδομάδα 31/5-7/6",
+            "en": "Week May 31 - June 7"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_election_id",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Εθνικές Εκλογές 21ης Μαίου 2023",
+            "en": ""
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_election_id",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Εθνικές Εκλογές 25ης Ιουνίου 2023",
+            "en": ""
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_election_id",
+        "notation": "3",
+        "order": 3,
+        "name": {
+            "el": "Ευρωεκλογές 9ης Ιουνίου 2024",
+            "en": ""
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_sex",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "άνδρας",
+            "en": "Male"
+        },
+        "color": "#3cb44b"
+    },
+    {
+        "dimensionId": "mgr_sex",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "γυναίκα",
+            "en": "Female"
+        },
+        "color": "#ff5d39"
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "ΕΡΤ 1",
+            "en": "ERT 1"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "3",
+        "order": 2,
+        "name": {
+            "el": "ANT1",
+            "en": "ANT1"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "4",
+        "order": 3,
+        "name": {
+            "el": "MEGA",
+            "en": "MEGA"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "5",
+        "order": 4,
+        "name": {
+            "el": "ΣΚΑΙ",
+            "en": "SKAI"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "6",
+        "order": 5,
+        "name": {
+            "el": "STAR",
+            "en": "STAR CHANNEL"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "7",
+        "order": 6,
+        "name": {
+            "el": "OPEN",
+            "en": "OPEN TV"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_media",
+        "notation": "8",
+        "order": 7,
+        "name": {
+            "el": "ALPHA",
+            "en": "ALPHA TV"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Νέα Δημοκρατία",
+            "en": "Nea Dimokratia"
+        },
+        "color": "#0C99FF"
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Σύριζα",
+            "en": "Syriza"
+        },
+        "color": "#FF8080"
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "3",
+        "order": 3,
+        "name": {
+            "el": "ΠΑΣΟΚ - Κίνημα Αλλαγής",
+            "en": "PASOK -Kinal"
+        },
+        "color": "#00CC0C"
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "4",
+        "order": 4,
+        "name": {
+            "el": "ΚΚΕ",
+            "en": "KKE"
+        },
+        "color": "#D80000"
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "5",
+        "order": 5,
+        "name": {
+            "el": "Ελληνική Λύση",
+            "en": "Elliniki Lysi"
+        },
+        "color": "#4DB2EC"
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "6",
+        "order": 6,
+        "name": {
+            "el": "Νέα Αριστερά",
+            "en": "Nea Aristera"
+        },
+        "color": "#CB3233"
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "7",
+        "order": 7,
+        "name": {
+            "el": "Σπαρτιάτες",
+            "en": "Spartiates"
+        },
+        "color": "#E9B460"
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "8",
+        "order": 8,
+        "name": {
+            "el": "Νίκη",
+            "en": "Niki"
+        },
+        "color": "#C0522B"
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "9",
+        "order": 9,
+        "name": {
+            "el": "Πλεύση Ελευθερίας",
+            "en": "Pleusi ELeftherias"
+        },
+        "color": "#AC3288"
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "10",
+        "order": 10,
+        "name": {
+            "el": "Μέρα 25",
+            "en": "Mera25"
+        },
+        "color": "#E60E19"
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "11",
+        "order": 11,
+        "name": {
+            "el": "Δημοκράτες",
+            "en": "Dimokrates"
+        },
+        "color": "#011689"
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "12",
+        "order": 12,
+        "name": {
+            "el": "Φωνή λογικής",
+            "en": "Foni Logikis"
+        },
+        "color": "#020C6A"
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "13",
+        "order": 13,
+        "name": {
+            "el": "Κόσμος",
+            "en": "Kosmos"
+        },
+        "color": "#020C6A"
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "14",
+        "order": 14,
+        "name": {
+            "el": "Ανεξάρτητοι",
+            "en": "Independent"
+        },
+        "color": "#fffac8"
+    },
+    {
+        "dimensionId": "mgr_party",
+        "notation": "0",
+        "order": 15,
+        "name": {
+            "el": "Χωρίς κομματική ιδιότητα",
+            "en": ""
+        },
+        "color": "#a9a9a9"
+    },
+    {
+        "dimensionId": "mgr_program_type",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Κεντρικό δελτίο ειδήσεων",
+            "en": "Evening news"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_program_type",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Πρωινή ζώνη",
+            "en": "Morning show"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_participation_mode",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Ατομική παρουσία",
+            "en": "Individual presense"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_participation_mode",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Μέρος πάνελ",
+            "en": "Panel member"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_capacity",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Πολιτικό πρόσωπο",
+            "en": "Politician"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_capacity",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Πανεπιστημιακός",
+            "en": "University Professor"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_capacity",
+        "notation": "3",
+        "order": 3,
+        "name": {
+            "el": "Ειδικός εμπειρογνώμονας",
+            "en": "Expert"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_capacity",
+        "notation": "4",
+        "order": 4,
+        "name": {
+            "el": "Δημοσιογράφος",
+            "en": "Journalist"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_capacity",
+        "notation": "5",
+        "order": 5,
+        "name": {
+            "el": "Συνδικαλιστής/τρια",
+            "en": "Trade union representative"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_capacity",
+        "notation": "6",
+        "order": 6,
+        "name": {
+            "el": "Άλλο",
+            "en": "Other"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_candidate",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Ναι",
+            "en": "YEs"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_candidate",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Οχι",
+            "en": "No"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_thematic_general",
+        "notation": "1",
+        "order": 1,
+        "name": {
+            "el": "Ευρωεκλογές",
+            "en": "European Elections"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_thematic_general",
+        "notation": "2",
+        "order": 2,
+        "name": {
+            "el": "Οικονομία/ακρίβεια",
+            "en": "Economy/Rising prices"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_thematic_general",
+        "notation": "3",
+        "order": 3,
+        "name": {
+            "el": "Διεθνή θέματα/εξωτερική πολιτική",
+            "en": "Foreign affairs/foreign policy"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_thematic_general",
+        "notation": "4",
+        "order": 4,
+        "name": {
+            "el": "Διαφθορά/σκάνδαλα",
+            "en": "Corruption/scandals"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_thematic_general",
+        "notation": "5",
+        "order": 5,
+        "name": {
+            "el": "Υγεία",
+            "en": "Health"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_thematic_general",
+        "notation": "6",
+        "order": 6,
+        "name": {
+            "el": "Γυναικοκτονίες/έμφυλη βία",
+            "en": "Femicides/gender based violence"
+        },
+        "color": null
+    },
+    {
+        "dimensionId": "mgr_thematic_general",
+        "notation": "7",
+        "order": 7,
+        "name": {
+            "el": "Λοιπά",
+            "en": "Miscellaneous"
+        },
+        "color": null
+    }
+]

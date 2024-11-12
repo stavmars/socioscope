@@ -2211,10 +2211,10 @@
       "en": "Gender and Representation in Greek Media"
     },
     "type": "raw",
-    "colorScheme": "color-scheme-4",
+    "colorScheme": "color-scheme-3",
     "comment": {
-      "el": "",
-      "en": ""
+      "el": "<h3>ΤΑΥΤΟΤΗΤΑ</h3><p>Βασικός στόχος του έργου είναι η καταγραφή, μέτρηση και αξιολόγηση της δημόσιας παρουσίας ανδρών και γυναικών πολιτικών, αλλά και ειδικών και σχολιαστών, στα ελληνικά μέσα ενημέρωσης, με έμφαση σε τηλεοπτικούς σταθμούς και εφημερίδες. Αντικείμενο μελέτης του έργου ήταν η προεκλογική περίοδος των Ευρωεκλογών του Ιουνίου του 2024.</p><p>Στην τρέχουσα εφαρμογή παρουσιάζονται τα δεδομένα που καταγράφηκαν από εφτά τηλεοπτικούς σταθμούς εθνικής εμβέλειας: έναν δημόσιο (ΕΡΤ 1) και έξι ιδιωτικούς (ΑΛΦΑ, ΑΝΤΕΝΝΑ, ΜΕΓΚΑ, ΟΠΕΝ, ΣΚΑΙ, ΣΤΑΡ) κατά το χρονικό διάστημα <strong>10/05/2024 – 07/06/2024</strong>. Κωδικοποιήθηκαν όλες οι παρουσίες στα κεντρικά δελτία ειδήσεων καθώς και στις πρωινές ενημερωτικές εκπομπές των παραπάνω σταθμών (για περισσότερες πληροφορίες σχετικά με την κωδικοποίηση βλ. <a href=\"https://socioscope.gr/content/codebooks/Gender_Inequality_Greek_Media_Politics_Codebook_2024_FINAL_GR.docx\">εδώ</a>).</p><h3>ΕΠΙΣΤΗΜΟΝΙΚΗ ΟΜΑΔΑ</h3><p>Επιστημονική Υπεύθυνη: Μανίνα Κακεπάκη (<a href=\"mailto:mkakepaki@ekke.gr\">mkakepaki@ekke.gr</a>)</p><p>Επιστημονικά Συν-υπεύθυνος: Γιώργος Κατσαμπέκης (<a href=\"mailto:katsambekis@ekke.gr\">katsambekis@ekke.gr</a>)</p><p>Επιστημονική συνεργάτιδα: Σοφία Καναούτη (<a href=\"mailto:skanaouti@hotmail.com\">skanaouti@hotmail.com</a>)</p><p>Πρακτική Άσκηση: Ναταλία Κολυμπάρη, Παναγιώτης Ριζόγιαννης, Γιώργος Διονυσόπουλος</p><p>Εθελοντική εργασία: Αγγελική Ανδριανοπούλου, Χριστίνα Χιωτάκη</p><p>Υπεύθυνος τεχνικής ανάπτυξης: Σταύρος Μαρούλης (<a href=\"mailto:stavmars@athenarc.gr\">stavmars@athenarc.gr</a>)</p><h3>ΧΡΗΜΑΤΟΔΟΤΗΣΗ</h3><p>Το έργο χρηματοδοτείται από το Ίδρυμα Χάινριχ Μπελ, Θεσσαλονίκη - <a href=\"https://gr.boell.org/el\">https://gr.boell.org/el</a></p>",
+      "en": "<h3>RESEARCH IDENTITY:</h3><p>The main objective of the project is to record, measure, and evaluate the public presence of male and female politicians, as well as experts and commentators, in Greek media, with a focus on television stations and newspapers. The project specifically studied the pre-election period of the European Elections of June 2024.</p><p>In this application, data are presented from seven nationwide television stations: one public (ERT 1) and six private (ALPHA, ANTENNA, MEGA, OPEN, SKAI, STAR) during the period <strong>from May 10, 2024, to June 7, 2024</strong>. All appearances in the main news bulletins as well as the morning news programs of these stations were coded (for more information on the coding process, see <a href=\"https://socioscope.gr/content/codebooks/Gender_Inequality_Greek_Media_Politics_Codebook_2024_FINAL_GR.docx\">here</a>).</p><h3>RESEARCH TEAM</h3><p>Principal Investigator: Manina Kakepaki (<a href=\"mailto:mkakepaki@ekke.gr\">mkakepaki@ekke.gr</a>)</p><p>Co-Principal Investigator: George Katsambekis (<a href=\"mailto:katsambekis@ekke.gr\">katsambekis@ekke.gr</a>)</p><p>Research Associate: Sophia Kanaouti (<a href=\"mailto:skanaouti@hotmail.com\">skanaouti@hotmail.com</a>)</p><p>Internship: Natalia Kolymbari, Panagiotis Rizogiannis, Giorgos Dionysopoulos</p><p>Volunteer Work: Angeliki Andrianopoulou, Christina Chiotaki</p><p>Technical Development Lead: Stavros Maroulis (<a href=\"mailto:stavmars@athenarc.gr\">stavmars@athenarc.gr</a>)</p><h3>FUNDING:</h3><p>The project is funded by the Heinrich Böll Foundation, Thessaloniki - <a href=\"https://gr.boell.org/en\">https://gr.boell.org/en</a></p>"
     },
     "sources": {
       "el": "",
@@ -2225,13 +2225,7 @@
         "id": "mgr_week"
       },
       {
-        "id": "mgr_election_id"
-      },
-      {
         "id": "mgr_sex"
-      },
-      {
-        "id": "mgr_age_group"
       },
       {
         "id": "mgr_media"
@@ -2252,19 +2246,7 @@
         "id": "mgr_candidate"
       },
       {
-        "id": "mgr_profession"
-      },
-      {
-        "id": "mgr_ministerial_post"
-      },
-      {
-        "id": "mgr_eu_post"
-      },
-      {
-        "id": "mgr_parliament_post"
-      },
-      {
-        "id": "mgr_local_post"
+        "id": "mgr_thematic_general"
       }
     ],
     "dimensionGroups": [],
@@ -2280,6 +2262,54 @@
       "xAxis": "mgr_sex",
       "measure": "media_appearances_perc"
     },
-    "highlights": []
+    "highlights": [
+      {
+        "id": "gender_media_capacity_appearance",
+        "description": {
+          "el": "<span>Σχετικά με τις ιδιότητες με τις οποίες εμφανίζονται άνδρες και γυναίκες στην τηλεόραση, από τα πολιτικά πρόσωπα που καταγράψαμε, το 86,2% ήταν άνδρες και το 13,8% γυναίκες.</span>",
+          "en": "<span>Regarding the capacity under which men and women appear on television, 86.2% of the political figures recorded were men and 13.8% were women.</span>"
+        },
+        "visType": "chart",
+        "subType": "bar",
+        "seriesOptions": {
+          "xAxis": "mgr_capacity",
+          "compareBy": "mgr_sex",
+          "measure": "media_appearances_perc",
+          "dimensionFilters": {}
+        }
+      },
+      {
+        "id": "gender_media_participation_mode",
+        "description": {
+          "el": "<span>Σχετικά με τον τρόπο συμμετοχής στα δελτία και τις ενημερωτικές εκπομπές, οι άνδρες έχουν ατομική παρουσία σε ποσοστό 85,6% έναντι 74,5% των γυναικών, ενώ οι γυναίκες εμφανίζονται ως μέρος πάνελ σε υψηλότερο ποσοστό από τους άνδρες.</span>",
+          "en": "<span>In terms of how men and women participate in news shows, men have an individual presence at a rate of 85.6% compared to 74.5% of women, while women appear as part of a panel at a higher rate than men.</span>"
+        },
+        "visType": "chart",
+        "subType": "column",
+        "seriesOptions": {
+          "xAxis": "mgr_participation_mode",
+          "compareBy": "mgr_sex",
+          "measure": "media_appearances_perc",
+          "dimensionFilters": {}
+        }
+      },
+      {
+        "id": "gender_media_thematic_focus",
+        "description": {
+          "el": "<span>Οι κύριες θεματικές για τις οποίες μιλάνε τα πολιτικά πρόσωπα που καλούνται να μιλήσουν αφορούν τις Ευρωεκλογές εν γένει. Ωστόσο οι άνδρες μιλάνε σε λίγο υψηλότερα ποσοστά για οικονομία και διεθνή θέματα, ενώ οι γυναίκες για θέματα έμφυλης βίας και υγείας.</span>",
+          "en": "<span>The main topics which politicians talk about on TV concern the European elections in general. In addition, men tend to speak more about the economy and international issues, and women more about gender-based violence and health.</span>"
+        },
+        "visType": "chart",
+        "subType": "bar",
+        "seriesOptions": {
+          "xAxis": "mgr_sex",
+          "compareBy": "mgr_thematic_general",
+          "measure": "media_appearances_perc",
+          "dimensionFilters": {
+            "mgr_capacity": 1
+          }
+        }
+      }
+    ]
   }
 ]

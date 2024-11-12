@@ -6466,34 +6466,10 @@
     "disableCompareBy": false
   },
   {
-    "id": "mgr_election_id",
-    "name": {
-      "el": "Εκλογική Αναμέτρηση",
-      "en": "Elections"
-    },
-    "groupId": null,
-    "type": "coded",
-    "disableAxis": false,
-    "disableFilter": false,
-    "disableCompareBy": false
-  },
-  {
     "id": "mgr_sex",
     "name": {
       "el": "Φύλο",
-      "en": "Sex"
-    },
-    "groupId": null,
-    "type": "coded",
-    "disableAxis": false,
-    "disableFilter": false,
-    "disableCompareBy": false
-  },
-  {
-    "id": "mgr_age_group",
-    "name": {
-      "el": "Ηλιακή Ομάδα",
-      "en": "Age Group"
+      "en": "Gender"
     },
     "groupId": null,
     "type": "coded",
@@ -6504,8 +6480,8 @@
   {
     "id": "mgr_media",
     "name": {
-      "el": "Μέσα Ενημέρωσης",
-      "en": "Media"
+      "el": "Τηλεοπτικός σταθμός",
+      "en": "TV station"
     },
     "groupId": null,
     "type": "coded",
@@ -6552,7 +6528,7 @@
   {
     "id": "mgr_capacity",
     "name": {
-      "el": "Ικανότητα",
+      "el": "Ιδιότητα",
       "en": "Capacity"
     },
     "groupId": null,
@@ -6564,7 +6540,7 @@
   {
     "id": "mgr_candidate",
     "name": {
-      "el": "Υποψήφιος",
+      "el": "Υποψήφιος/α",
       "en": "Candidate"
     },
     "groupId": null,
@@ -6574,58 +6550,10 @@
     "disableCompareBy": false
   },
   {
-    "id": "mgr_profession",
+    "id": "mgr_thematic_general",
     "name": {
-      "el": "Επάγγελμα",
-      "en": "Profession"
-    },
-    "groupId": null,
-    "type": "coded",
-    "disableAxis": false,
-    "disableFilter": false,
-    "disableCompareBy": false
-  },
-  {
-    "id": "mgr_ministerial_post",
-    "name": {
-      "el": "Υπουργική Θέση",
-      "en": "Ministerial Post"
-    },
-    "groupId": null,
-    "type": "coded",
-    "disableAxis": false,
-    "disableFilter": false,
-    "disableCompareBy": false
-  },
-  {
-    "id": "mgr_eu_post",
-    "name": {
-      "el": "Θέση στην ΕΕ",
-      "en": "EU Post"
-    },
-    "groupId": null,
-    "type": "coded",
-    "disableAxis": false,
-    "disableFilter": false,
-    "disableCompareBy": false
-  },
-  {
-    "id": "mgr_parliament_post",
-    "name": {
-      "el": "Κοινοβουλευτική Θέση",
-      "en": "Parliament Post"
-    },
-    "groupId": null,
-    "type": "coded",
-    "disableAxis": false,
-    "disableFilter": false,
-    "disableCompareBy": false
-  },
-  {
-    "id": "mgr_local_post",
-    "name": {
-      "el": "Θέση στην Τοπική Αυτοδιοίκηση",
-      "en": "Local Post"
+      "el": "Θεματική",
+      "en": "Thematic"
     },
     "groupId": null,
     "type": "coded",
