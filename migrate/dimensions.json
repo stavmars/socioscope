@@ -68,7 +68,7 @@
     "required": true
   },
   {
-    "id": "vote_tmp",
+    "id": "vote-tmp",
     "name": {
       "el": "Ψήφος",
       "en": "Vote"
