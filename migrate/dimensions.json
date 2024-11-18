@@ -68,6 +68,20 @@
     "required": true
   },
   {
+    "id": "vote-tmp",
+    "name": {
+      "el": "Ψήφος",
+      "en": "Vote"
+    },
+    "type": "combined",
+    "composedOf": [
+      "abstention",
+      "invalid_vote",
+      "party-tmp"
+    ],
+    "required": true
+  },
+  {
     "id": "party",
     "name": {
       "el": "Κόμμα",
@@ -76,6 +90,21 @@
     "type": "coded",
     "dependencies": [
       "elections"
+    ],
+    "disableFilter": true,
+    "disableStacking": true,
+    "allowCompareCodes": true,
+    "order": "value_desc"
+  },
+  {
+    "id": "party-tmp",
+    "name": {
+      "el": "Κόμμα",
+      "en": "Party"
+    },
+    "type": "coded",
+    "dependencies": [
+      "elections-tmp"
     ],
     "disableFilter": true,
     "disableStacking": true,
@@ -124,6 +153,23 @@
     "allowCompareCodes": true
   },
   {
+    "id": "constituency-tmp",
+    "name": {
+      "el": "Εκλογική Περιφέρεια",
+      "en": "Constituency"
+    },
+    "type": "coded",
+    "dependencies": [
+      "elections-tmp"
+    ],
+    "noFilterText": {
+      "el": "Επικράτεια",
+      "en": "State"
+    },
+    "disableStacking": true,
+    "allowCompareCodes": true
+  },
+  {
     "id": "municipality",
     "name": {
       "el": "Δήμος",
@@ -139,7 +185,34 @@
     "disableStacking": true
   },
   {
+    "id": "municipality-tmp",
+    "name": {
+      "el": "Δήμος",
+      "en": "Μunicipality"
+    },
+    "type": "coded",
+    "dependencies": [
+      "constituency-tmp"
+    ],
+    "parentDimensionId": "constituency-tmp",
+    "disableCompareBy": true,
+    "disableAxis": true,
+    "disableStacking": true
+  },
+  {
     "id": "elections",
+    "name": {
+      "el": "Εκλογές",
+      "en": "Elections"
+    },
+    "type": "coded",
+    "dependencies": [],
+    "required": true,
+    "allowCompareCodes": true,
+    "disableStacking": true
+  },
+  {
+    "id": "elections-tmp",
     "name": {
       "el": "Εκλογές",
       "en": "Elections"
