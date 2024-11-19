@@ -257,14 +257,16 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
       .reduce((acc, dependencies) => acc.concat(dependencies), [])
       .filter((value, index, self) => self.indexOf(value) === index);
 
-    dependencyDimensions.forEach(dimId => {
+    for (const dimId of dependencyDimensions) {
       const dependentDimensions = dimensions.filter(dim => dim.dependencies && dim.dependencies.includes(dimId) && !dim.parentDimensionId);
       if (!filters[dimId]) {
         dependentDimensions.forEach(dim => dispatch(resetCodeStatus(dataset, dim.id)));
       } else if (oldSeriesOptions && oldSeriesOptions.dimensionFilters[dimId] !== filters[dimId]) {
-        dependentDimensions.forEach(dim => dispatch(fetchValidCodes(dataset, dim.id, dimId, filters[dimId])));
+        for (const dim of dependentDimensions) {
+          await dispatch(fetchValidCodes(dataset, dim.id, dimId, filters[dimId]));
+        }
       }
-    });
+    }
 
     dimensions.filter(dim => dim.type === 'combined').forEach(superDim => {
       if (!superDim.composedOf || superDim.composedOf.length === 0) {
@@ -315,15 +317,17 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
       .reduce((acc, dependencies) => acc.concat(dependencies), [])
       .filter((value, index, self) => self.indexOf(value) === index);
 
-    dependencyDimensions.forEach(dimId => {
+    for (const dimId of dependencyDimensions) {
       const dependentDimensions = dimensions.filter(dim => dim.dependencies && dim.dependencies.includes(dimId) && dim.parentDimensionId);
       if (!dimensionFilters[dimId]) {
         dependentDimensions.forEach(dim => dispatch(resetCodeStatus(dataset, dim.id)));
       } else if (oldSeriesOptions && oldSeriesOptions.dimensionFilters[dimId] !== dimensionFilters[dimId]) {
         dependentDimensions.forEach(dim => (dimensionFilters[dim.id] = null));
-        dependentDimensions.forEach(dim => dispatch(fetchValidCodes(dataset, dim.id, dimId, dimensionFilters[dimId])));
+        for (const dim of dependentDimensions) {
+          await dispatch(fetchValidCodes(dataset, dim.id, dimId, dimensionFilters[dimId]));
+        }
       }
-    });
+    }
 
     newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters, compareCodes };
   } else {
