@@ -1725,7 +1725,7 @@
     "dimensionId": "party-tmp",
     "notation": "eek",
     "name": {
-      "el": "E.E.K",
+      "el": "Ε.Ε.Κ",
       "en": "E.E.K"
     },
     "description": {
@@ -7757,142 +7757,30 @@
   },
   {
     "dimensionId": "elections-tmp",
-    "notation": "8",
+    "notation": "12",
     "name": {
-      "el": "Ιανουάριος 2015",
-      "en": "January 2015"
+      "el": "Νοέμβριος 1974",
+      "en": "November 1974"
     },
     "description": {
       "el": "",
       "en": ""
     },
-    "order": 9,
+    "order": 1,
     "color": ""
   },
   {
     "dimensionId": "elections-tmp",
-    "notation": "9",
+    "notation": "13",
     "name": {
-      "el": "Σεπτέμβριος 2015",
-      "en": "September 2015"
-    },
-    "description": {
-      "el": "",
-      "en": ""
-    },
-    "order": 10,
-    "color": ""
-  },
-  {
-    "dimensionId": "elections-tmp",
-    "notation": "10",
-    "name": {
-      "el": "Ιούλιος 2019",
-      "en": "July 2019"
-    },
-    "description": {
-      "el": "",
-      "en": ""
-    },
-    "order": 11,
-    "color": ""
-  },
-  {
-    "dimensionId": "elections-tmp",
-    "notation": "1",
-    "name": {
-      "el": "Σεπτέμβριος 1996",
-      "en": "September 1996"
+      "el": "Νοέμβριος 1989",
+      "en": "November 1989"
     },
     "description": {
       "el": "",
       "en": ""
     },
     "order": 2,
-    "color": ""
-  },
-  {
-    "dimensionId": "elections-tmp",
-    "notation": "2",
-    "name": {
-      "el": "Απρίλιος 2000",
-      "en": "April 2000"
-    },
-    "description": {
-      "el": "",
-      "en": ""
-    },
-    "order": 3,
-    "color": ""
-  },
-  {
-    "dimensionId": "elections-tmp",
-    "notation": "3",
-    "name": {
-      "el": "Μάρτιος 2004",
-      "en": "March 2004"
-    },
-    "description": {
-      "el": "",
-      "en": ""
-    },
-    "order": 4,
-    "color": ""
-  },
-  {
-    "dimensionId": "elections-tmp",
-    "notation": "4",
-    "name": {
-      "el": "Σεπτέμβριος 2007",
-      "en": "September 2007"
-    },
-    "description": {
-      "el": "",
-      "en": ""
-    },
-    "order": 5,
-    "color": ""
-  },
-  {
-    "dimensionId": "elections-tmp",
-    "notation": "5",
-    "name": {
-      "el": "Οκτώβριος 2009",
-      "en": "October 2009"
-    },
-    "description": {
-      "el": "",
-      "en": ""
-    },
-    "order": 6,
-    "color": ""
-  },
-  {
-    "dimensionId": "elections-tmp",
-    "notation": "6",
-    "name": {
-      "el": "Μάιος 2012",
-      "en": "May 2012"
-    },
-    "description": {
-      "el": "",
-      "en": ""
-    },
-    "order": 7,
-    "color": ""
-  },
-  {
-    "dimensionId": "elections-tmp",
-    "notation": "7",
-    "name": {
-      "el": "Ιούνιος 2012",
-      "en": "June 2012"
-    },
-    "description": {
-      "el": "",
-      "en": ""
-    },
-    "order": 8,
     "color": ""
   },
   {
@@ -7906,7 +7794,147 @@
       "el": "",
       "en": ""
     },
-    "order": 1,
+    "order": 3,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections-tmp",
+    "notation": "1",
+    "name": {
+      "el": "Σεπτέμβριος 1996",
+      "en": "September 1996"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": 4,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections-tmp",
+    "notation": "2",
+    "name": {
+      "el": "Απρίλιος 2000",
+      "en": "April 2000"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": 5,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections-tmp",
+    "notation": "3",
+    "name": {
+      "el": "Μάρτιος 2004",
+      "en": "March 2004"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": 6,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections-tmp",
+    "notation": "4",
+    "name": {
+      "el": "Σεπτέμβριος 2007",
+      "en": "September 2007"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": 7,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections-tmp",
+    "notation": "5",
+    "name": {
+      "el": "Οκτώβριος 2009",
+      "en": "October 2009"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": 8,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections-tmp",
+    "notation": "6",
+    "name": {
+      "el": "Μάιος 2012",
+      "en": "May 2012"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": 9,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections-tmp",
+    "notation": "7",
+    "name": {
+      "el": "Ιούνιος 2012",
+      "en": "June 2012"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": 10,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections-tmp",
+    "notation": "8",
+    "name": {
+      "el": "Ιανουάριος 2015",
+      "en": "January 2015"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": 11,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections-tmp",
+    "notation": "9",
+    "name": {
+      "el": "Σεπτέμβριος 2015",
+      "en": "September 2015"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": 12,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections-tmp",
+    "notation": "10",
+    "name": {
+      "el": "Ιούλιος 2019",
+      "en": "July 2019"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": 13,
     "color": ""
   },
   {
