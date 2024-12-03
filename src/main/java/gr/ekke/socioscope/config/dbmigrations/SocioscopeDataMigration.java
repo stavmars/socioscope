@@ -241,37 +241,14 @@ public class SocioscopeDataMigration {
         bulkOperations.execute();
     }
 
-    @ChangeSet(order = "19", author = "initiator", id = "addElections1990")
-    public void addElections1990(MongoTemplate mongoTemplate, Environment environment) throws IOException {
+    @ChangeSet(order = "19", author = "initiator", id = "addObservationsbData")
+    public void addObservationsbData(MongoTemplate mongoTemplate, Environment environment) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        File file = new File(environment.getProperty("application.migrate-data-path") + "/1990.json");
+        File file = new File(environment.getProperty("application.migrate-data-path") + "/observationsb.json");
         TypeFactory typeFactory = mapper.getTypeFactory();
         List<Observation> observations = mapper.readValue(file, typeFactory.constructCollectionType(List.class, Observation.class));
         BulkOperations bulkOperations = mongoTemplate.bulkOps(BulkOperations.BulkMode.UNORDERED, Observation.class);
         bulkOperations.insert(observations);
         bulkOperations.execute();
     }
-
-    @ChangeSet(order = "20", author = "initiator", id = "addElections1974")
-    public void addElections1974(MongoTemplate mongoTemplate, Environment environment) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        File file = new File(environment.getProperty("application.migrate-data-path") + "/1974.json");
-        TypeFactory typeFactory = mapper.getTypeFactory();
-        List<Observation> observations = mapper.readValue(file, typeFactory.constructCollectionType(List.class, Observation.class));
-        BulkOperations bulkOperations = mongoTemplate.bulkOps(BulkOperations.BulkMode.UNORDERED, Observation.class);
-        bulkOperations.insert(observations);
-        bulkOperations.execute();
-    }
-    
-    @ChangeSet(order = "21", author = "initiator", id = "addElections1989a")
-    public void addElections1989a(MongoTemplate mongoTemplate, Environment environment) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        File file = new File(environment.getProperty("application.migrate-data-path") + "/1989a.json");
-        TypeFactory typeFactory = mapper.getTypeFactory();
-        List<Observation> observations = mapper.readValue(file, typeFactory.constructCollectionType(List.class, Observation.class));
-        BulkOperations bulkOperations = mongoTemplate.bulkOps(BulkOperations.BulkMode.UNORDERED, Observation.class);
-        bulkOperations.insert(observations);
-        bulkOperations.execute();
-    }
-
 }
