@@ -11746,218 +11746,137 @@
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "abstention", "value": "voted" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "abstention", "value": "voted" }],
     "measures": { "votes_perc": 77.39, "votes": 6697994 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "abstention", "value": "abstained" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "abstention", "value": "abstained" }],
     "measures": { "votes_perc": 22.61, "votes": 1957020 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "invalid_vote", "value": "invalid" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "invalid_vote", "value": "invalid" }],
     "measures": { "votes_perc": 1.68, "votes": 112454 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "invalid_vote", "value": "valid" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "invalid_vote", "value": "valid" }],
     "measures": { "votes_perc": 98.32, "votes": 6585540 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "nd" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "nd" }],
     "measures": { "votes_perc": 46.88, "votes": 3087546 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "pasok" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "pasok" }],
     "measures": { "votes_perc": 38.62, "votes": 2543046 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "synaspismos" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "synaspismos" }],
     "measures": { "votes_perc": 10.28, "votes": 677092 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "oikenall" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "oikenall" }],
     "measures": { "votes_perc": 0.77, "votes": 50922 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "dhana" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "dhana" }],
     "measures": { "votes_perc": 0.67, "votes": 44007 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "nar_la" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "nar_la" }],
     "measures": { "votes_perc": 0.22, "votes": 14270 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "kkees_aa" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "kkees_aa" }],
     "measures": { "votes_perc": 0.13, "votes": 8870 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "kollatos" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "kollatos" }],
     "measures": { "votes_perc": 0.12, "votes": 7681 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "oikell" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "oikell" }],
     "measures": { "votes_perc": 0.09, "votes": 5775 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "lefko" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "lefko" }],
     "measures": { "votes_perc": 0.06, "votes": 3764 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "kke_ml" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "kke_ml" }],
     "measures": { "votes_perc": 0.04, "votes": 2537 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "akep" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "akep" }],
     "measures": { "votes_perc": 0.02, "votes": 1182 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "ml_kke" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "ml_kke" }],
     "measures": { "votes_perc": 0.02, "votes": 1413 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "olymp" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "olymp" }],
     "measures": { "votes_perc": 0.01, "votes": 694 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "oikeir_pr" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "oikeir_pr" }],
     "measures": { "votes_perc": 0.05, "votes": 3427 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "kinigoi" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "kinigoi" }],
     "measures": { "votes_perc": 0.08, "votes": 5044 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "epen" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "epen" }],
     "measures": { "votes_perc": 0.1, "votes": 6647 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "ekke" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "ekke" }],
     "measures": { "votes_perc": 0.02, "votes": 1353 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "ethnsymb" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "ethnsymb" }],
     "measures": { "votes_perc": 0.03, "votes": 2070 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "en_oik" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "en_oik" }],
     "measures": { "votes_perc": 0.05, "votes": 3155 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "other" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "other" }],
     "measures": { "votes_perc": 1.29, "votes": 84707 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "kadik" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "kadik" }],
     "measures": { "votes_perc": 0.01, "votes": 732 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "11" },
-      { "id": "party-tmp", "value": "empistosini" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "11" }, { "id": "party-tmp", "value": "empistosini" }],
     "measures": { "votes_perc": 0.45, "votes": 29547 }
   },
   {
@@ -16059,15 +15978,6 @@
     "datasetId": "greek-election-results-tmp",
     "dimensions": [
       { "id": "elections-tmp", "value": "12" },
-      { "id": "constituency-tmp", "value": "2" },
-      { "id": "party-tmp", "value": "dek" }
-    ],
-    "measures": { "votes_perc": 13.72, "votes": 8509 }
-  },
-  {
-    "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "12" },
       { "id": "constituency-tmp", "value": "52" },
       { "id": "abstention", "value": "voted" }
     ],
@@ -16144,6 +16054,15 @@
       { "id": "party-tmp", "value": "ea" }
     ],
     "measures": { "votes_perc": 2.39, "votes": 1472 }
+  },
+  {
+    "datasetId": "greek-election-results-tmp",
+    "dimensions": [
+      { "id": "elections-tmp", "value": "12" },
+      { "id": "constituency-tmp", "value": "52" },
+      { "id": "party-tmp", "value": "dek" }
+    ],
+    "measures": { "votes_perc": 13.82, "votes": 8509 }
   },
   {
     "datasetId": "greek-election-results-tmp",
@@ -16840,106 +16759,67 @@
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "12" },
-      { "id": "abstention", "value": "voted" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "12" }, { "id": "abstention", "value": "voted" }],
     "measures": { "votes_perc": 79.38, "votes": 4963558 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "12" },
-      { "id": "abstention", "value": "abstained" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "12" }, { "id": "abstention", "value": "abstained" }],
     "measures": { "votes_perc": 20.62, "votes": 1289167 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "12" },
-      { "id": "invalid_vote", "value": "invalid" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "12" }, { "id": "invalid_vote", "value": "invalid" }],
     "measures": { "votes_perc": 1.1, "votes": 54584 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "12" },
-      { "id": "invalid_vote", "value": "valid" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "12" }, { "id": "invalid_vote", "value": "valid" }],
     "measures": { "votes_perc": 98.9, "votes": 4908973 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "12" },
-      { "id": "party-tmp", "value": "nd" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "12" }, { "id": "party-tmp", "value": "nd" }],
     "measures": { "votes_perc": 54.37, "votes": 2669133 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "12" },
-      { "id": "party-tmp", "value": "ek_nd" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "12" }, { "id": "party-tmp", "value": "ek_nd" }],
     "measures": { "votes_perc": 20.42, "votes": 1002559 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "12" },
-      { "id": "party-tmp", "value": "pasok" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "12" }, { "id": "party-tmp", "value": "pasok" }],
     "measures": { "votes_perc": 13.58, "votes": 666413 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "12" },
-      { "id": "party-tmp", "value": "ede" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "12" }, { "id": "party-tmp", "value": "ede" }],
     "measures": { "votes_perc": 1.07, "votes": 52768 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "12" },
-      { "id": "party-tmp", "value": "ea" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "12" }, { "id": "party-tmp", "value": "ea" }],
     "measures": { "votes_perc": 9.47, "votes": 464787 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "12" },
-      { "id": "party-tmp", "value": "fdeske" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "12" }, { "id": "party-tmp", "value": "fdeske" }],
     "measures": { "votes_perc": 0.02, "votes": 975 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "12" },
-      { "id": "party-tmp", "value": "ekke" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "12" }, { "id": "party-tmp", "value": "ekke" }],
     "measures": { "votes_perc": 0.03, "votes": 1539 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "12" },
-      { "id": "party-tmp", "value": "other" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "12" }, { "id": "party-tmp", "value": "other" }],
     "measures": { "votes_perc": 0.86, "votes": 42326 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "12" },
-      { "id": "party-tmp", "value": "dek" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "12" }, { "id": "party-tmp", "value": "dek" }],
     "measures": { "votes_perc": 0.17, "votes": 8509 }
   },
   {
@@ -26754,178 +26634,112 @@
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "abstention", "value": "voted" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "abstention", "value": "voted" }],
     "measures": { "votes_perc": 78.71, "votes": 6798159 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "abstention", "value": "abstained" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "abstention", "value": "abstained" }],
     "measures": { "votes_perc": 21.29, "votes": 1839164 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "invalid_vote", "value": "invalid" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "invalid_vote", "value": "invalid" }],
     "measures": { "votes_perc": 1.5, "votes": 101675 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "invalid_vote", "value": "valid" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "invalid_vote", "value": "valid" }],
     "measures": { "votes_perc": 98.5, "votes": 6696484 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "nd" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "nd" }],
     "measures": { "votes_perc": 46.19, "votes": 3093055 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "pasok" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "pasok" }],
     "measures": { "votes_perc": 40.67, "votes": 2723739 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "synaspismos" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "synaspismos" }],
     "measures": { "votes_perc": 10.97, "votes": 734552 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "apkro" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "apkro" }],
     "measures": { "votes_perc": 0.2, "votes": 13554 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "komfil" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "komfil" }],
     "measures": { "votes_perc": 0.08, "votes": 5101 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "oikenall" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "oikenall" }],
     "measures": { "votes_perc": 0.58, "votes": 39130 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "kollatos" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "kollatos" }],
     "measures": { "votes_perc": 0.19, "votes": 13035 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "kke_ml" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "kke_ml" }],
     "measures": { "votes_perc": 0.05, "votes": 3234 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "aske" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "aske" }],
     "measures": { "votes_perc": 0.02, "votes": 1590 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "akep" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "akep" }],
     "measures": { "votes_perc": 0.02, "votes": 1246 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "ml_kke" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "ml_kke" }],
     "measures": { "votes_perc": 0.02, "votes": 1378 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "olymp" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "olymp" }],
     "measures": { "votes_perc": 0.01, "votes": 846 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "oakke" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "oakke" }],
     "measures": { "votes_perc": 0.01, "votes": 617 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "oikell" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "oikell" }],
     "measures": { "votes_perc": 0.15, "votes": 10146 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "ergantm" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "ergantm" }],
     "measures": { "votes_perc": 0.02, "votes": 1321 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "lefko" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "lefko" }],
     "measures": { "votes_perc": 0.07, "votes": 4417 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "eek" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "eek" }],
     "measures": { "votes_perc": 0.02, "votes": 1062 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "13" },
-      { "id": "party-tmp", "value": "other" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "13" }, { "id": "party-tmp", "value": "other" }],
     "measures": { "votes_perc": 0.72, "votes": 48047 }
   },
   {
@@ -36938,226 +36752,142 @@
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "abstention", "value": "voted" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "abstention", "value": "voted" }],
     "measures": { "votes_perc": 78.23, "votes": 7019268 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "abstention", "value": "abstained" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "abstention", "value": "abstained" }],
     "measures": { "votes_perc": 21.77, "votes": 1953092 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "invalid_vote", "value": "invalid" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "invalid_vote", "value": "invalid" }],
     "measures": { "votes_perc": 1.7, "votes": 119560 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "invalid_vote", "value": "valid" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "invalid_vote", "value": "valid" }],
     "measures": { "votes_perc": 98.3, "votes": 6899708 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "nd" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "nd" }],
     "measures": { "votes_perc": 39.3, "votes": 2711341 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "pasok" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "pasok" }],
     "measures": { "votes_perc": 46.88, "votes": 3234754 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "synaspismos" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "synaspismos" }],
     "measures": { "votes_perc": 2.94, "votes": 203007 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "kke" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "kke" }],
     "measures": { "votes_perc": 4.54, "votes": 313068 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "anoixi" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "anoixi" }],
     "measures": { "votes_perc": 4.87, "votes": 336321 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "en_oik" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "en_oik" }],
     "measures": { "votes_perc": 0.08, "votes": 5586 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "enken" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "enken" }],
     "measures": { "votes_perc": 0.23, "votes": 15942 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "kinigoi" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "kinigoi" }],
     "measures": { "votes_perc": 0.05, "votes": 3598 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "oikell" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "oikell" }],
     "measures": { "votes_perc": 0.08, "votes": 5562 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "olymp" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "olymp" }],
     "measures": { "votes_perc": 0.01, "votes": 745 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "epen" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "epen" }],
     "measures": { "votes_perc": 0.14, "votes": 9505 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "lefko" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "lefko" }],
     "measures": { "votes_perc": 0.1, "votes": 7176 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "oakke" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "oakke" }],
     "measures": { "votes_perc": 0.01, "votes": 690 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "aske" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "aske" }],
     "measures": { "votes_perc": 0.02, "votes": 1559 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "ml_kke" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "ml_kke" }],
     "measures": { "votes_perc": 0.03, "votes": 1812 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "maharist" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "maharist" }],
     "measures": { "votes_perc": 0.12, "votes": 8166 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "sake" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "sake" }],
     "measures": { "votes_perc": 0.01, "votes": 470 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "empistosini" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "empistosini" }],
     "measures": { "votes_perc": 0.38, "votes": 26228 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "pepromeno" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "pepromeno" }],
     "measures": { "votes_perc": 0.18, "votes": 12434 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "other" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "other" }],
     "measures": { "votes_perc": 0.01, "votes": 380 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "kypp" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "kypp" }],
     "measures": { "votes_perc": 0.0, "votes": 11 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "prasinoi" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "prasinoi" }],
     "measures": { "votes_perc": 0.0, "votes": 5 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "christ" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "christ" }],
     "measures": { "votes_perc": 0.0, "votes": 67 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "14" },
-      { "id": "party-tmp", "value": "anthei" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "14" }, { "id": "party-tmp", "value": "anthei" }],
     "measures": { "votes_perc": 0.0, "votes": 261 }
   },
   {
@@ -44992,170 +44722,107 @@
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "abstention", "value": "voted" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "abstention", "value": "voted" }],
     "measures": { "votes_perc": 79.3, "votes": 6422474 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "abstention", "value": "abstained" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "abstention", "value": "abstained" }],
     "measures": { "votes_perc": 20.7, "votes": 1676836 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "invalid_vote", "value": "invalid" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "invalid_vote", "value": "invalid" }],
     "measures": { "votes_perc": 0.89, "votes": 57357 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "invalid_vote", "value": "valid" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "invalid_vote", "value": "valid" }],
     "measures": { "votes_perc": 99.11, "votes": 6365117 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "pasok" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "pasok" }],
     "measures": { "votes_perc": 45.82, "votes": 2916642 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "nd" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "nd" }],
     "measures": { "votes_perc": 40.84, "votes": 2599776 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "kke" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "kke" }],
     "measures": { "votes_perc": 9.89, "votes": 629551 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "kkees" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "kkees" }],
     "measures": { "votes_perc": 1.84, "votes": 117068 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "komfil" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "komfil" }],
     "measures": { "votes_perc": 0.17, "votes": 10641 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "eleftheroi" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "eleftheroi" }],
     "measures": { "votes_perc": 0.08, "votes": 5186 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "epen" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "epen" }],
     "measures": { "votes_perc": 0.6, "votes": 37933 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "aske" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "aske" }],
     "measures": { "votes_perc": 0.16, "votes": 10359 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "ekke" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "ekke" }],
     "measures": { "votes_perc": 0.11, "votes": 7080 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "kommarist" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "kommarist" }],
     "measures": { "votes_perc": 0.08, "votes": 5334 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "ede_trot" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "ede_trot" }],
     "measures": { "votes_perc": 0.06, "votes": 3631 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "exe" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "exe" }],
     "measures": { "votes_perc": 0.0, "votes": 253 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "odi" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "odi" }],
     "measures": { "votes_perc": 0.0, "votes": 161 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "prasinoi" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "prasinoi" }],
     "measures": { "votes_perc": 0.0, "votes": 5 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "kinanthr" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "kinanthr" }],
     "measures": { "votes_perc": 0.0, "votes": 46 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "pd" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "pd" }],
     "measures": { "votes_perc": 0.0, "votes": 177 }
   },
   {
     "datasetId": "greek-election-results-tmp",
-    "dimensions": [
-      { "id": "elections-tmp", "value": "15" },
-      { "id": "party-tmp", "value": "other" }
-    ],
+    "dimensions": [{ "id": "elections-tmp", "value": "15" }, { "id": "party-tmp", "value": "other" }],
     "measures": { "votes_perc": 0.33, "votes": 21268 }
   }
 ]
