@@ -18,6 +18,8 @@ export interface IVisOptions {
 export const ACTION_TYPES = {
   INIT_VIS: 'datasetPage/INIT_VIS',
   FETCH_SERIES: 'datasetPage/FETCH_SERIES',
+  FETCH_SECONDARY_SERIES: 'datasetPage/FETCH_SECONDARY_SERIES',
+  REMOVE_SECONDARY_SERIES: 'datasetPage/REMOVE_SECONDARY_SERIES',
   FETCH_DIMENSION_CODELISTS: 'datasetPage/FETCH_DIMENSION_CODELISTS',
   UPDATE_VIS_OPTIONS: 'datasetPage/UPDATE_VIS_OPTIONS',
   TOGGLE_COMPARE_VALUE: 'datasetPage/TOGGLE_COMPARE_VALUE',
@@ -34,7 +36,9 @@ const initialState = {
   visType: 'chart',
   subType: 'column',
   seriesOptions: null as ISeriesOptions,
-  seriesList: [] as ISeries[]
+  seriesList: [] as ISeries[],
+  secondarySeriesList: [] as ISeries[],
+  secondarySeriesOptions: null as ISeriesOptions
 };
 
 export type DatasetPageState = Readonly<typeof initialState>;
@@ -59,6 +63,21 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
         seriesList: action.payload.data,
         loadingSeries: false
       };
+    case FAILURE(ACTION_TYPES.FETCH_SECONDARY_SERIES):
+      return {
+        ...state,
+        errorMessage: action.payload
+      };
+    case SUCCESS(ACTION_TYPES.FETCH_SECONDARY_SERIES):
+      return {
+        ...state,
+        secondarySeriesList: action.payload.data
+      };
+    case ACTION_TYPES.REMOVE_SECONDARY_SERIES:
+      return {
+        ...state,
+        secondarySeriesList: []
+      };
     case REQUEST(ACTION_TYPES.FETCH_DIMENSION_CODELISTS):
       return {
         ...state,
@@ -82,7 +101,8 @@ export default (state: DatasetPageState = initialState, action): DatasetPageStat
         updatingVisOptions: false,
         visType: action.payload.visType,
         subType: action.payload.subType,
-        seriesOptions: action.payload.seriesOptions
+        seriesOptions: action.payload.seriesOptions,
+        secondarySeriesOptions: action.payload.secondarySeriesOptions
       };
     case SUCCESS(ACTION_TYPES.UPDATE_CODE_STATUS):
       return {
@@ -124,6 +144,15 @@ export const getSeries = id => (dispatch, getState) => {
   return dispatch({
     type: ACTION_TYPES.FETCH_SERIES,
     payload: axios.post(requestUrl, seriesOptions)
+  });
+};
+
+export const getSecondarySeries = id => (dispatch, getState) => {
+  const { secondarySeriesOptions } = getState().datasetPage;
+  const requestUrl = `${datasetApiUrl}/${id}/series`;
+  return dispatch({
+    type: ACTION_TYPES.FETCH_SECONDARY_SERIES,
+    payload: axios.post(requestUrl, secondarySeriesOptions)
   });
 };
 
@@ -242,6 +271,7 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
   composedCompareParent && arr.push(...composedCompareParent.composedOf);
 
   let newSeriesOptions = {};
+  let secondaryNewSeriesOptions = {};
   let dimensionFilters;
   if (dataset.type === 'qb') {
     arr.forEach(dimId => {
@@ -330,6 +360,13 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
     }
 
     newSeriesOptions = { xAxis, compareBy, measure, dimensionFilters, compareCodes };
+    const measureDimension = dataset.measures.find(dimension => dimension.id === measure);
+
+    if (xAxisDimension.allowThreshold && measureDimension.allowThreshold && measureDimension.thresholdDependency) {
+      const secondaryMeasureDimension = dataset.measures.find(dimension => (dimension.id = measureDimension.thresholdDependency));
+      const secondaryMeasure = secondaryMeasureDimension.id;
+      secondaryNewSeriesOptions = { xAxis, compareBy, measure: secondaryMeasure, dimensionFilters, compareCodes };
+    }
   } else {
     dimensionFilters = _.pickBy(filters, (value, key) => key !== xAxis && key !== compareBy);
     const dependencies = _.union(xAxisDimension.dependencies, compareByDimension ? compareByDimension.dependencies : []);
@@ -343,8 +380,17 @@ export const updateVisOptions = (dataset: IDataSet, visOptions: IVisOptions) => 
   }
   dispatch({
     type: ACTION_TYPES.UPDATE_VIS_OPTIONS,
-    payload: { visType, subType, seriesOptions: newSeriesOptions }
+    payload: { visType, subType, seriesOptions: newSeriesOptions, secondarySeriesOptions: secondaryNewSeriesOptions }
   });
+
+  if (Object.keys(secondaryNewSeriesOptions).length > 0) {
+    await dispatch(getSecondarySeries(dataset.id));
+  } else {
+    dispatch({
+      type: ACTION_TYPES.REMOVE_SECONDARY_SERIES
+    });
+  }
+
   dispatch(getSeries(dataset.id));
 };
 

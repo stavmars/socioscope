@@ -5,7 +5,7 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import uuid from 'uuid';
 import chroma from 'chroma-js';
-import _ from 'lodash';
+import _, { filter } from 'lodash';
 import { IDimension } from 'app/shared/model/dimension.model';
 import { ISeriesPoint } from 'app/shared/model/series-point.model';
 import { IDataSet } from 'app/shared/model/data-set.model';
@@ -16,6 +16,7 @@ import { accentColors, chartColors } from 'app/config/constants';
 import HC_exporting from 'highcharts/modules/exporting';
 import moment from 'moment';
 import { translate } from 'react-jhipster';
+import Slider from 'rc-slider';
 
 HC_exporting(Highcharts);
 
@@ -30,6 +31,12 @@ export interface IChartVisProp {
   showLabels: boolean;
   chartType: string;
   currentLocale: string;
+  secondarySeriesList: ISeries[];
+}
+
+export interface IChartVisState {
+  sliderValue: number;
+  filteredChartSeries: any;
 }
 
 const prepareTimeSeriesData = (dataPoints: ISeriesPoint[]) => {
@@ -89,14 +96,14 @@ const prepareCategorySeriesData = (codesByNotation, seriesPoints: ISeriesPoint[]
 
 const parseDimensionFilters = (dimensions: IDimension[], dimensionFilters: IDimensionFilters, dimensionCodes: any) => {
   let result = '';
-  for (const filter in dimensionFilters) {
-    if (dimensionFilters.hasOwnProperty(filter)) {
-      const dimension = _.keyBy(dimensions, 'id')[filter];
+  for (const dimensionFilter in dimensionFilters) {
+    if (dimensionFilters.hasOwnProperty(dimensionFilter)) {
+      const dimension = _.keyBy(dimensions, 'id')[dimensionFilter];
       result +=
         translateEntityField(dimension.name) +
         ': ' +
-        (dimensionFilters[filter] !== null
-          ? translateEntityField(dimensionCodes[dimension.id].codesByNotation[dimensionFilters[filter]].name)
+        (dimensionFilters[dimensionFilter] !== null
+          ? translateEntityField(dimensionCodes[dimension.id].codesByNotation[dimensionFilters[dimensionFilter]].name)
           : '') +
         ', ';
     }
@@ -121,11 +128,15 @@ export const getChartSubTitle = (seriesOptions: ISeriesOptions, dimensions: IDim
     ? `(${parseDimensionFilters(dimensions, seriesOptions.dimensionFilters, dimensionCodes)})`
     : '';
 
-export class ChartVis extends React.Component<IChartVisProp> {
+export class ChartVis extends React.Component<IChartVisProp, IChartVisState> {
   innerChart = React.createRef<HighchartsReact>();
 
   constructor(props) {
     super(props);
+    this.state = {
+      sliderValue: null,
+      filteredChartSeries: null
+    };
   }
 
   printChart() {
@@ -152,34 +163,206 @@ export class ChartVis extends React.Component<IChartVisProp> {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    return this.props.seriesList !== nextProps.seriesList || this.props.currentLocale !== nextProps.currentLocale;
+    return (
+      this.props.seriesList !== nextProps.seriesList ||
+      this.props.currentLocale !== nextProps.currentLocale ||
+      nextState.filteredChartSeries !== this.state.filteredChartSeries
+    );
   }
 
+  componentDidUpdate(prevProps: IChartVisProp, prevState: IChartVisState) {
+    const { seriesList, currentLocale } = this.props;
+    if (seriesList !== prevProps.seriesList || currentLocale !== prevProps.currentLocale) {
+      this.setState({
+        sliderValue: null,
+        filteredChartSeries: null
+      });
+    }
+  }
+
+  handleSliderChange = (chartSeries, secondaryChartSeries, codesByNotation, measure, thresholdMin, value) => {
+    let filteredChartSeries;
+    const accumulatorCode = codesByNotation[measure.thresholdAccumulator];
+
+    if (value === thresholdMin) {
+      this.setState({ sliderValue: value, filteredChartSeries: null });
+      return;
+    }
+
+    if (secondaryChartSeries && secondaryChartSeries.length > 0) {
+      filteredChartSeries = chartSeries.map(series => {
+        if (chartSeries.length === 1) {
+          return {
+            ...series,
+            data: series.data.filter(
+              point => secondaryChartSeries[0].data.find(secondaryPoint => secondaryPoint.name === point.name).y >= value
+            )
+          };
+        } else {
+          return {
+            ...series,
+            data: series.data.filter(
+              point =>
+                secondaryChartSeries
+                  .find(secondarySeries => secondarySeries.id === series.id)
+                  .data.find(secondaryPoint => secondaryPoint.name === point.name).y >= value
+            )
+          };
+        }
+      });
+    } else {
+      filteredChartSeries = chartSeries.map(series => ({
+        ...series,
+        data: series.data.filter(point => point.y >= value)
+      }));
+    }
+    filteredChartSeries = accumulatorCode
+      ? this.getSeriesWithSumBelowThreshold(filteredChartSeries, chartSeries, secondaryChartSeries, accumulatorCode, codesByNotation, value)
+      : filteredChartSeries;
+    this.setState({ sliderValue: value, filteredChartSeries });
+  };
+
+  getSeriesWithSumBelowThreshold = (
+    filteredChartSeries,
+    chartSeries,
+    secondaryChartSeries,
+    accumulatorCode,
+    codesByNotation,
+    sliderValue
+  ) => {
+    chartSeries.forEach(series => {
+      let sumBelowThreshold;
+
+      if (secondaryChartSeries && secondaryChartSeries.length > 0) {
+        sumBelowThreshold =
+          chartSeries.length === 1
+            ? series.data.reduce(
+                (acc, point) =>
+                  secondaryChartSeries[0].data.find(secondaryPoint => secondaryPoint.name === point.name).y < sliderValue
+                    ? acc + point.y
+                    : acc,
+                0
+              )
+            : series.data.reduce(
+                (acc, point) =>
+                  secondaryChartSeries
+                    .find(secondarySeries => secondarySeries.id === series.id)
+                    .data.find(secondaryPoint => secondaryPoint.name === point.name).y < sliderValue
+                    ? acc + point.y
+                    : acc,
+                0
+              );
+      } else {
+        sumBelowThreshold = series.data.reduce((acc, point) => (point.y < sliderValue ? acc + point.y : acc), 0);
+      }
+
+      if (series.id) {
+        const accumulatorIndex = filteredChartSeries
+          .find(filteredSeries => filteredSeries.id === series.id)
+          .data.findIndex(point => point.name === translateEntityField(accumulatorCode.name));
+        if (accumulatorIndex !== -1) {
+          sumBelowThreshold =
+            filteredChartSeries.find(filteredSeries => filteredSeries.id === series.id).data[accumulatorIndex].y + sumBelowThreshold;
+          filteredChartSeries.find(filteredSeries => filteredSeries.id === series.id).data.splice(accumulatorIndex, 1);
+        }
+        if (sumBelowThreshold > 0) {
+          const accumulatorPoint = { x: accumulatorCode.notation, y: sumBelowThreshold };
+          filteredChartSeries
+            .find(filteredSeries => filteredSeries.id === series.id)
+            .data.push(prepareCategorySeriesData(codesByNotation, [accumulatorPoint], null)[0]);
+        }
+      } else if (!chartSeries[0].isShowAll) {
+        const accumulatorIndex = filteredChartSeries[0].data.findIndex(point => point.name === translateEntityField(accumulatorCode.name));
+        if (accumulatorIndex !== -1) {
+          sumBelowThreshold = filteredChartSeries[0].data[accumulatorIndex].y + sumBelowThreshold;
+          filteredChartSeries[0].data.splice(accumulatorIndex, 1);
+        }
+        if (sumBelowThreshold > 0) {
+          const accumulatorPoint = { x: accumulatorCode.notation, y: sumBelowThreshold };
+          filteredChartSeries[0].data.push(prepareCategorySeriesData(codesByNotation, [accumulatorPoint], null)[0]);
+        }
+      }
+    });
+    return filteredChartSeries;
+  };
+
+  getSliderString = (value, sliderMeasure) => (sliderMeasure.type === 'percentage' ? `${value}%` : value);
+
+  getSliderProps = (secondarySeriesList, dataset, measure) => {
+    const dependencyMeasure =
+      secondarySeriesList.length > 0 ? dataset.measures.find(depMeasure => depMeasure.id === measure.thresholdDependency) : null;
+    const sliderMeasure = dependencyMeasure ? dependencyMeasure : measure;
+    const thresholdMin = sliderMeasure.thresholdMin;
+    const thresholdMax = sliderMeasure.thresholdMax;
+    const thresholdStep = sliderMeasure.thresholdStep;
+    return { sliderMeasure, thresholdMin, thresholdMax, thresholdStep };
+  };
+
+  prepareTimeChartSeries = (seriesList, compareBy, dimensionCodes, colorScheme) =>
+    _(seriesList)
+      .map((series, index) => {
+        const code = compareBy && dimensionCodes[compareBy].codesByNotation[series.id];
+        return {
+          id: series.id,
+          name: code ? translateEntityField(code.shortName) || translateEntityField(code.name) : '',
+          order: code && code.order,
+          color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
+          data: prepareTimeSeriesData(series.data)
+        };
+      })
+      .sortBy('order', 'name')
+      .value();
+
+  prepareCategoryChartSeries = (seriesList, compareBy, dimensionCodes, codesByNotation, xAxisDimension, colorScheme) =>
+    _(seriesList)
+      .map((series, index) => {
+        const code =
+          (compareBy && dimensionCodes[compareBy].codesByNotation[series.id]) ||
+          (xAxisDimension.type === 'composite' && dimensionCodes[xAxisDimension.id].codesByNotation[series.id]);
+        return {
+          id: series.id,
+          name: code ? translateEntityField(code.shortName) || translateEntityField(code.name) : '',
+          code,
+          color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
+          order: code && code.order,
+          data: prepareCategorySeriesData(
+            codesByNotation,
+            series.data,
+            xAxisDimension.type === 'composite' ? 'composite' : seriesList.length === 1 ? xAxisDimension.order : null
+          )
+        };
+      })
+      .sortBy('order', 'name')
+      .value();
+
   render() {
-    const { dataset, seriesOptions, seriesList, dimensionCodes, loadingSeries, showLabels, showLegend, chartType, className } = this.props;
+    const {
+      dataset,
+      seriesOptions,
+      seriesList,
+      dimensionCodes,
+      loadingSeries,
+      showLabels,
+      showLegend,
+      chartType,
+      className,
+      secondarySeriesList
+    } = this.props;
     const { dimensions, colorScheme } = dataset;
+    const { sliderValue, filteredChartSeries } = this.state;
     const { compareBy } = seriesOptions;
     const xAxisDimension = _.find(dimensions, { id: seriesOptions.xAxis }) as IDimension;
     const compareByDimension = compareBy && (_.find(dimensions, { id: seriesOptions.compareBy }) as IDimension);
     let chartSeries = [{ data: [] }] as any;
+    let secondaryChartSeries = [] as any;
+    let codesByNotation;
 
     if (!loadingSeries && seriesList && seriesList.length > 0) {
       if (xAxisDimension.type === 'time') {
-        chartSeries = _(seriesList)
-          .map((series, index) => {
-            const code = compareBy && dimensionCodes[compareBy].codesByNotation[series.id];
-            return {
-              id: series.id,
-              name: code ? translateEntityField(code.shortName) || translateEntityField(code.name) : '',
-              order: code && code.order,
-              color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
-              data: prepareTimeSeriesData(series.data)
-            };
-          })
-          .sortBy('order', 'name')
-          .value();
+        chartSeries = this.prepareTimeChartSeries(seriesList, compareBy, dimensionCodes, colorScheme);
+        secondaryChartSeries = this.prepareTimeChartSeries(secondarySeriesList, compareBy, dimensionCodes, colorScheme);
       } else {
-        const codesByNotation =
+        codesByNotation =
           xAxisDimension.type === 'composite'
             ? xAxisDimension.composedOf.reduce((acc, dimId) => {
                 const dim = _.find(dimensions, { id: dimId });
@@ -188,26 +371,15 @@ export class ChartVis extends React.Component<IChartVisProp> {
               }, {})
             : dimensionCodes[seriesOptions.xAxis].codesByNotation;
 
-        chartSeries = _(seriesList)
-          .map((series, index) => {
-            const code =
-              (compareBy && dimensionCodes[compareBy].codesByNotation[series.id]) ||
-              (xAxisDimension.type === 'composite' && dimensionCodes[xAxisDimension.id].codesByNotation[series.id]);
-            return {
-              id: series.id,
-              name: code ? translateEntityField(code.shortName) || translateEntityField(code.name) : '',
-              code,
-              color: (code && code.color) || (index ? chartColors[index - 1] : accentColors[colorScheme]),
-              order: code && code.order,
-              data: prepareCategorySeriesData(
-                codesByNotation,
-                series.data,
-                xAxisDimension.type === 'composite' ? 'composite' : seriesList.length === 1 ? xAxisDimension.order : null
-              )
-            };
-          })
-          .sortBy('order', 'name')
-          .value();
+        chartSeries = this.prepareCategoryChartSeries(seriesList, compareBy, dimensionCodes, codesByNotation, xAxisDimension, colorScheme);
+        secondaryChartSeries = this.prepareCategoryChartSeries(
+          secondarySeriesList,
+          compareBy,
+          dimensionCodes,
+          codesByNotation,
+          xAxisDimension,
+          colorScheme
+        );
 
         if (xAxisDimension.type === 'composite') {
           const colorCount = _.filter(chartSeries, series => series.code && !series.code.color).length;
@@ -237,6 +409,35 @@ export class ChartVis extends React.Component<IChartVisProp> {
       !xAxisDesc || xAxisName === xAxisDesc
         ? xAxisName
         : `<div style="text-align: center;font-weight: bold">${xAxisName}</div><div class="x-axis-subtitle">${xAxisDesc}</div>`;
+    const { sliderMeasure, thresholdMin, thresholdMax, thresholdStep } = this.getSliderProps(secondarySeriesList, dataset, measure);
+
+    const sliderButton =
+      xAxisDimension.allowThreshold && measure.allowThreshold ? (
+        <div style={{ width: '30%', marginRight: '20px', marginBottom: '50px', marginLeft: 'auto' }}>
+          <span style={{ fontFamily: 'Proxima Nova Semibold', fontSize: window.innerWidth > 768 ? '14px' : '9px' }}>
+            {`${translate('socioscopeApp.dataSet.visualization.configure.thresholdTitle')}:`}
+          </span>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <span style={{ marginRight: '10px', fontFamily: 'Proxima Nova Semibold', fontSize: window.innerWidth > 768 ? '14px' : '9px' }}>
+              {this.getSliderString(thresholdMin, sliderMeasure)}
+            </span>
+            <Slider
+              min={thresholdMin}
+              max={thresholdMax}
+              value={sliderValue}
+              step={thresholdStep}
+              onChange={this.handleSliderChange.bind(this, chartSeries, secondaryChartSeries, codesByNotation, measure, thresholdMin)}
+              railStyle={{ backgroundColor: accentColors[dataset.colorScheme] }}
+              handleStyle={{ borderColor: accentColors[dataset.colorScheme] }}
+              className={dataset.colorScheme}
+            />
+            <span style={{ marginLeft: '10px', fontFamily: 'Proxima Nova Semibold', fontSize: window.innerWidth > 768 ? '14px' : '9px' }}>
+              {this.getSliderString(thresholdMax, sliderMeasure)}
+            </span>
+          </div>
+        </div>
+      ) : null;
+
     const options = {
       chart: {
         type: xAxisDimension.type === 'time' ? 'spline' : chartType === null ? 'column' : chartType,
@@ -328,7 +529,7 @@ export class ChartVis extends React.Component<IChartVisProp> {
           }
         }
       },
-      series: chartSeries,
+      series: filteredChartSeries ? filteredChartSeries : chartSeries,
       credits: {
         enabled: false
       },
@@ -369,14 +570,17 @@ export class ChartVis extends React.Component<IChartVisProp> {
     };
 
     return (
-      <HighchartsReact
-        containerProps={{ className }}
-        key={uuid()}
-        highcharts={Highcharts}
-        options={options as any}
-        immutable
-        ref={this.innerChart}
-      />
+      <div>
+        {sliderButton}
+        <HighchartsReact
+          containerProps={{ className }}
+          key={uuid()}
+          highcharts={Highcharts}
+          options={options as any}
+          immutable
+          ref={this.innerChart}
+        />
+      </div>
     );
   }
 }

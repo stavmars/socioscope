@@ -163,7 +163,8 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
       visType,
       subType,
       updatingVisOptions,
-      currentLocale
+      currentLocale,
+      secondarySeriesList
     } = this.props;
 
     return (
@@ -231,6 +232,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       showLabels
                       showLegend
                       chartType={subType}
+                      secondarySeriesList={secondarySeriesList}
                     />
                   )}
                 </div>
@@ -285,7 +287,8 @@ const mapStateToProps = (storeState: IRootState, ownProps) => ({
   updatingVisOptions: storeState.datasetPage.updatingVisOptions,
   visType: storeState.datasetPage.visType,
   subType: storeState.datasetPage.subType,
-  currentLocale: storeState.locale.currentLocale
+  currentLocale: storeState.locale.currentLocale,
+  secondarySeriesList: storeState.datasetPage.secondarySeriesList
 });
 
 const mapDispatchToProps = {

@@ -109,7 +109,8 @@
     "disableFilter": true,
     "disableStacking": true,
     "allowCompareCodes": true,
-    "order": "value_desc"
+    "order": "value_desc",
+    "allowThreshold": true
   },
   {
     "id": "abstention",
