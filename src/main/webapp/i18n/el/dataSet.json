@@ -36,7 +36,8 @@
           "filter": "… με φίλτρα:",
           "filterPlaceholder": "Επιλέξτε 1 ή παραπάνω φίλτρα",
           "compare": "… να συγκρίνω:",
-          "options": "Περισσότερες Επιλογές"
+          "options": "Περισσότερες Επιλογές",
+          "thresholdTitle": "Ελάχιστη τιμή"
         },
         "legend": {
           "showAll": "(όλα)&nbsp"

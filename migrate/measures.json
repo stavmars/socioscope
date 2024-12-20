@@ -15,7 +15,12 @@
     },
     "type": "percentage",
     "unit": "PC",
-    "decimalPlaces": 2
+    "decimalPlaces": 2,
+    "thresholdMin": 0,
+    "thresholdMax": 3,
+    "thresholdStep": 1,
+    "allowThreshold": true,
+    "thresholdAccumulator": "other"
   },
   {
     "id": "votes",
@@ -24,7 +29,10 @@
       "en": "Votes"
     },
     "type": "count",
-    "unit": "VTS"
+    "unit": "VTS",
+    "allowThreshold": true,
+    "thresholdDependency": "votes_perc",
+    "thresholdAccumulator": "other"
   },
   {
     "id": "deputies_perc",

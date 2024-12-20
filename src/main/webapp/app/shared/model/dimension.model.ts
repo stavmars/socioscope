@@ -22,6 +22,7 @@ export interface IDimension {
   required?: boolean;
   noFilterText?: ILang;
   parentDimensionId?: string;
+  allowThreshold?: boolean;
 }
 
 export interface IGeoMap {

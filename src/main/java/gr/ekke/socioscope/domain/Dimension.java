@@ -81,6 +81,8 @@ public class Dimension implements Serializable {
 
     private String parentDimensionId;
 
+    private Boolean allowThreshold;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Dimension() {
     }
@@ -283,6 +285,15 @@ public class Dimension implements Serializable {
         this.parentDimensionId = parentDimensionId;
     }
 
+    public Boolean getAllowThreshold() {
+        return allowThreshold;
+    }
+
+    public void setAllowThreshold(Boolean allowThreshold) {
+        this.allowThreshold = allowThreshold;
+    }
+
+
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -327,6 +338,7 @@ public class Dimension implements Serializable {
             ", required=" + required +
             ", noFilterText=" + noFilterText +
             ", parentDimensionId='" + parentDimensionId + '\'' +
+            ", allowThreshold='" + allowThreshold + '\'' +
             '}';
     }
 }

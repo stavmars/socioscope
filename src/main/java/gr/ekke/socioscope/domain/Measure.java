@@ -42,6 +42,24 @@ public class Measure implements Serializable {
     @Field("decimalPlaces")
     private Integer decimalPlaces;
 
+    @Field("thresholdMin")
+    private Integer thresholdMin;
+
+    @Field("thresholdMax")
+    private Integer thresholdMax;
+
+    @Field("thresholdStep")
+    private Integer thresholdStep;
+
+    @Field("thresholdDependency")
+    private String thresholdDependency;
+
+    @Field("allowThreshold")
+    private Boolean allowThreshold;
+
+    @Field("thresholdAccumulator")
+    private String thresholdAccumulator;
+
     @DBRef
     @Field("creator")
     @JsonIgnoreProperties("")
@@ -149,4 +167,52 @@ public class Measure implements Serializable {
     public void setDecimalPlaces(Integer decimalPlaces) {
         this.decimalPlaces = decimalPlaces;
     }
+
+    public Integer getThresholdMin() {
+        return thresholdMin;
+    }
+
+    public void setThresholdMin(Integer thresholdMin) {
+        this.thresholdMin = thresholdMin;
+    }
+
+    public Integer getThresholdMax() {
+        return thresholdMax;
+    }
+
+    public void setThresholdMax(Integer thresholdMax) {
+        this.thresholdMax = thresholdMax;
+    }
+
+    public Integer getThresholdStep() {
+        return thresholdStep;
+    }
+
+    public void setThresholdStep(Integer thresholdStep) {
+        this.thresholdStep = thresholdStep;
+    }
+
+    public String getThresholdDependency() {
+        return thresholdDependency;
+    }
+
+    public void setThresholdDependency(String thresholdDependency) {
+        this.thresholdDependency = thresholdDependency;
+    }
+    public Boolean getAllowThreshold() {
+        return allowThreshold;
+    }
+
+    public void setAllowThreshold(Boolean allowThreshold) {
+        this.allowThreshold = allowThreshold;
+    }
+
+    public String getThresholdAccumulator() {
+        return thresholdAccumulator;
+    }
+
+    public void setThresholdAccumulator(String thresholdAccumulator) {
+        this.thresholdAccumulator = thresholdAccumulator;
+    }
+
 }

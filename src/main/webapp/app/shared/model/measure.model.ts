@@ -8,6 +8,12 @@ export interface IMeasure {
   unit?: string;
   decimalPlaces?: number;
   creator?: IUser;
+  thresholdMin?: number;
+  thresholdMax?: number;
+  thresholdStep?: number;
+  allowThreshold?: boolean;
+  thresholdDependency?: string;
+  thresholdAccumulator?: string;
 }
 
 export const defaultValue: Readonly<IMeasure> = { name: {} };

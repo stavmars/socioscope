@@ -54,6 +54,7 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
                         showLabels={false}
                         showLegend={false}
                         chartType={subType}
+                        secondarySeriesList={[]}
                       />
                     ))}
                 </div>
