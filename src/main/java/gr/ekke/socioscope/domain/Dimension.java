@@ -82,6 +82,7 @@ public class Dimension implements Serializable {
     private String parentDimensionId;
 
     private Boolean allowThreshold;
+
     private Boolean defaultGeoMapXAxis;
 
     private String geoMapDependency;

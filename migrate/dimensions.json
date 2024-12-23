@@ -142,7 +142,7 @@
       "el": "Εκλογική Περιφέρεια",
       "en": "Constituency"
     },
-    "type": "geographic-area",
+    "type": "coded",
     "dependencies": [
       "elections"
     ],
@@ -151,9 +151,26 @@
       "en": "State"
     },
     "disableStacking": true,
+    "allowCompareCodes": true
+  },
+  {
+    "id": "constituency-tmp",
+    "name": {
+      "el": "Εκλογική Περιφέρεια",
+      "en": "Constituency"
+    },
+    "type": "geographic-area",
+    "dependencies": [
+      "elections-tmp"
+    ],
+    "noFilterText": {
+      "el": "Επικράτεια",
+      "en": "State"
+    },
+    "disableStacking": true,
     "allowCompareCodes": true,
     "defaultGeoMapXAxis": true,
-    "geoMapDependency": "elections",
+    "geoMapDependency": "elections-tmp",
     "defaultGeoMapKey": "0",
     "geoMaps": {
       "0": {
@@ -167,37 +184,20 @@
     }
   },
   {
-    "id": "constituency-tmp",
-    "name": {
-      "el": "Εκλογική Περιφέρεια",
-      "en": "Constituency"
-    },
-    "type": "coded",
-    "dependencies": [
-      "elections-tmp"
-    ],
-    "noFilterText": {
-      "el": "Επικράτεια",
-      "en": "State"
-    },
-    "disableStacking": true,
-    "allowCompareCodes": true
-  },
-  {
-    "id": "municipality",
+    "id": "municipality-tmp",
     "name": {
       "el": "Δήμος",
       "en": "Μunicipality"
     },
     "type": "geographic-area",
     "dependencies": [
-      "constituency"
+      "constituency-tmp"
     ],
-    "parentDimensionId": "constituency",
+    "parentDimensionId": "constituency-tmp",
     "disableCompareBy": true,
     "disableAxis": true,
     "disableStacking": true,
-    "geoMapDependency": "elections",
+    "geoMapDependency": "elections-tmp",
     "defaultGeoMapKey": "0",
     "geoMaps": {
       "0": {
@@ -207,16 +207,16 @@
     }
   },
   {
-    "id": "municipality-tmp",
+    "id": "municipality",
     "name": {
       "el": "Δήμος",
       "en": "Μunicipality"
     },
     "type": "coded",
     "dependencies": [
-      "constituency-tmp"
+      "constituency"
     ],
-    "parentDimensionId": "constituency-tmp",
+    "parentDimensionId": "constituency",
     "disableCompareBy": true,
     "disableAxis": true,
     "disableStacking": true
