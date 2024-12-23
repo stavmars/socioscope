@@ -134,7 +134,7 @@ export class ChartVis extends React.Component<IChartVisProp, IChartVisState> {
   constructor(props) {
     super(props);
     this.state = {
-      sliderValue: null,
+      sliderValue: 0,
       filteredChartSeries: null
     };
   }
@@ -174,7 +174,7 @@ export class ChartVis extends React.Component<IChartVisProp, IChartVisState> {
     const { seriesList, currentLocale } = this.props;
     if (seriesList !== prevProps.seriesList || currentLocale !== prevProps.currentLocale) {
       this.setState({
-        sliderValue: null,
+        sliderValue: 0,
         filteredChartSeries: null
       });
     }
@@ -298,6 +298,19 @@ export class ChartVis extends React.Component<IChartVisProp, IChartVisState> {
     return { sliderMeasure, thresholdMin, thresholdMax, thresholdStep };
   };
 
+  getSliderMarks = (min, max, step, measure) => {
+    const marks: { [key: number]: any } = {};
+    for (let i = min; i <= max; i += step) {
+      marks[i] = (
+        <span style={{ fontFamily: 'Proxima Nova Semibold', fontSize: window.innerWidth > 768 ? '14px' : '9px' }}>
+          {i}
+          {measure.type === 'percentage' && '%'}
+        </span>
+      );
+    }
+    return marks;
+  };
+
   prepareTimeChartSeries = (seriesList, compareBy, dimensionCodes, colorScheme) =>
     _(seriesList)
       .map((series, index) => {
@@ -360,7 +373,6 @@ export class ChartVis extends React.Component<IChartVisProp, IChartVisState> {
     if (!loadingSeries && seriesList && seriesList.length > 0) {
       if (xAxisDimension.type === 'time') {
         chartSeries = this.prepareTimeChartSeries(seriesList, compareBy, dimensionCodes, colorScheme);
-        secondaryChartSeries = this.prepareTimeChartSeries(secondarySeriesList, compareBy, dimensionCodes, colorScheme);
       } else {
         codesByNotation =
           xAxisDimension.type === 'composite'
@@ -413,28 +425,22 @@ export class ChartVis extends React.Component<IChartVisProp, IChartVisState> {
 
     const sliderButton =
       xAxisDimension.allowThreshold && measure.allowThreshold ? (
-        <div style={{ width: '30%', marginRight: '20px', marginBottom: '50px', marginLeft: 'auto' }}>
+        <div style={{ width: '20%', marginRight: '20px', marginBottom: '50px', marginLeft: 'auto' }}>
           <span style={{ fontFamily: 'Proxima Nova Semibold', fontSize: window.innerWidth > 768 ? '14px' : '9px' }}>
             {`${translate('socioscopeApp.dataSet.visualization.configure.thresholdTitle')}:`}
           </span>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <span style={{ marginRight: '10px', fontFamily: 'Proxima Nova Semibold', fontSize: window.innerWidth > 768 ? '14px' : '9px' }}>
-              {this.getSliderString(thresholdMin, sliderMeasure)}
-            </span>
-            <Slider
-              min={thresholdMin}
-              max={thresholdMax}
-              value={sliderValue}
-              step={thresholdStep}
-              onChange={this.handleSliderChange.bind(this, chartSeries, secondaryChartSeries, codesByNotation, measure, thresholdMin)}
-              railStyle={{ backgroundColor: accentColors[dataset.colorScheme] }}
-              handleStyle={{ borderColor: accentColors[dataset.colorScheme] }}
-              className={dataset.colorScheme}
-            />
-            <span style={{ marginLeft: '10px', fontFamily: 'Proxima Nova Semibold', fontSize: window.innerWidth > 768 ? '14px' : '9px' }}>
-              {this.getSliderString(thresholdMax, sliderMeasure)}
-            </span>
-          </div>
+          <Slider
+            min={thresholdMin}
+            max={thresholdMax}
+            value={sliderValue}
+            step={thresholdStep}
+            marks={this.getSliderMarks(thresholdMin, thresholdMax, thresholdStep, sliderMeasure)}
+            onChange={this.handleSliderChange.bind(this, chartSeries, secondaryChartSeries, codesByNotation, measure, thresholdMin)}
+            railStyle={{ backgroundColor: accentColors[dataset.colorScheme] }}
+            handleStyle={{ borderColor: accentColors[dataset.colorScheme] }}
+            className={dataset.colorScheme}
+            included={false}
+          />
         </div>
       ) : null;
 
