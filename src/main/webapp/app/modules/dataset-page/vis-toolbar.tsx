@@ -59,8 +59,8 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
     return (
       <div className={`vis-toolbar ${colorScheme}`}>
         <div className={colorScheme}>
-          <Grid columns="equal">
-            <Grid.Column>
+          <Grid>
+            <Grid.Column width={12}>
               <Menu text className={colorScheme}>
                 {dataset.measures.length === 2 && (
                   <Menu.Item style={{ marginRight: '25px' }}>
@@ -120,7 +120,7 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                       as={NavLink}
                       to={'?' + urlEncodeVisOptions({ visType: 'chart', subType: 'column', seriesOptions })}
                       active={visType === 'chart'}
-                      style={{ marginRight: '50px' }}
+                      style={{ marginRight: '20px' }}
                     >
                       {visType === 'chart' ? (
                         <Image src={`/content/images/Assets/Chart-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
@@ -133,7 +133,7 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                       as={NavLink}
                       to={'?' + urlEncodeVisOptions({ visType: 'map', seriesOptions: dataset.defaultOptions })}
                       active={visType === 'map'}
-                      style={{ marginRight: '50px', a: { pointerEvents: 'none' } }}
+                      style={{ marginRight: '20px' }}
                     >
                       {visType === 'map' ? (
                         <Image src={`/content/images/Assets/Map-${colorScheme}.svg`} style={{ marginRight: '20px' }} />
@@ -146,7 +146,7 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                 )}
               </Menu>
             </Grid.Column>
-            <Grid.Column>
+            <Grid.Column width={4}>
               <List horizontal floated="right">
                 <List.Item>
                   <Dropdown

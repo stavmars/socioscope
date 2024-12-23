@@ -33,7 +33,7 @@ export class Login extends React.Component<ILoginProps, ILoginState> {
 
   render() {
     const { location, isAuthenticated } = this.props;
-    const { from } = location.state || { from: { pathname: '/', search: location.search } };
+    const { from } = (location.state as any) || { from: { pathname: '/', search: location.search } };
     const { showModal } = this.state;
     if (isAuthenticated) {
       return <Redirect to={from} />;
