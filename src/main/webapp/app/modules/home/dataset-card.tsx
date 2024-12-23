@@ -5,7 +5,7 @@ import { IDataSet } from 'app/shared/model/data-set.model';
 import { IHighlight } from 'app/shared/model/highlight.model';
 import { connect } from 'react-redux';
 import { loadHighlight } from 'app/modules/highlights/highlights-reducer';
-import { urlEncodeVisOptions } from 'app/modules/dataset-page/dataset-page-reducer';
+import { updateVisOptions, urlEncodeVisOptions } from 'app/modules/dataset-page/dataset-page-reducer';
 import ChoroplethMapVis from 'app/modules/visualization/choropleth-map-vis';
 import { translateEntityField } from 'app/shared/util/entity-utils';
 import { ChartVis } from 'app/modules/visualization/chart-vis';
@@ -42,6 +42,8 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
                         xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
                         loadingSeries={false}
                         showButtons={false}
+                        visType={visType}
+                        updateVisOptions={this.props.updateVisOptions}
                       />
                     ) : (
                       <ChartVis
@@ -88,7 +90,8 @@ const mapStateToProps = storeState => ({
 type StateProps = ReturnType<typeof mapStateToProps>;
 
 const mapDispatchToProps = {
-  loadHighlight
+  loadHighlight,
+  updateVisOptions
 };
 
 type DispatchProps = typeof mapDispatchToProps;

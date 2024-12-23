@@ -32,7 +32,7 @@ public class Dimension implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    List<GeoMap> geoMaps;
+    Map<String, @NotBlank GeoMap> geoMaps;
     @Id
     private String id;
     @Size(min = 1)
@@ -82,6 +82,11 @@ public class Dimension implements Serializable {
     private String parentDimensionId;
 
     private Boolean allowThreshold;
+    private Boolean defaultGeoMapXAxis;
+
+    private String geoMapDependency;
+
+    private String defaultGeoMapKey;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Dimension() {
@@ -197,11 +202,11 @@ public class Dimension implements Serializable {
         return this;
     }
 
-    public List<GeoMap> getGeoMaps() {
+    public Map<String, GeoMap> getGeoMaps() {
         return geoMaps;
     }
 
-    public void setGeoMaps(List<GeoMap> geoMaps) {
+    public void setGeoMaps(Map<String, GeoMap> geoMaps) {
         this.geoMaps = geoMaps;
     }
 
@@ -294,6 +299,31 @@ public class Dimension implements Serializable {
     }
 
 
+    public Boolean getDefaultGeoMapXAxis() {
+        return defaultGeoMapXAxis;
+    }
+
+    public void setDefaultGeoMapXAxis(Boolean defaultGeoMapXAxis) {
+        this.defaultGeoMapXAxis = defaultGeoMapXAxis;
+    }
+
+    public String getGeoMapDependency() {
+        return geoMapDependency;
+    }
+
+    public void setGeoMapDependency(String geoMapDependency) {
+        this.geoMapDependency = geoMapDependency;
+    }
+
+
+    public String getDefaultGeoMapKey() {
+        return defaultGeoMapKey;
+    }
+
+    public void setDefaultGeoMapKey(String defaultGeoMapKey) {
+        this.defaultGeoMapKey = defaultGeoMapKey;
+    }
+
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -339,6 +369,8 @@ public class Dimension implements Serializable {
             ", noFilterText=" + noFilterText +
             ", parentDimensionId='" + parentDimensionId + '\'' +
             ", allowThreshold='" + allowThreshold + '\'' +
+            ", defaultGeoMapXAxis='" + defaultGeoMapXAxis + '\'' +
+            ", defaultGeoMapKey='" + defaultGeoMapKey + '\'' +
             '}';
     }
 }

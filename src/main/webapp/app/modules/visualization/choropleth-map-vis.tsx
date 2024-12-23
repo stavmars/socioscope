@@ -7,6 +7,7 @@ import { IDimension, IGeoMap } from 'app/shared/model/dimension.model';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeries } from 'app/shared/model/series.model';
 import { ISeriesOptions } from 'app/shared/model/series-options.model';
+import { updateVisOptions } from '../dataset-page/dataset-page-reducer';
 import axios from 'axios';
 import chroma from 'chroma-js';
 import { accentColors } from 'app/config/constants';
@@ -25,12 +26,16 @@ export interface IChoroplethVisProp {
   xAxisCodes: any;
   loadingSeries: boolean;
   showButtons: boolean;
+  visType: string;
+
+  updateVisOptions: typeof updateVisOptions;
 }
 
 export interface IChoroplethVisState {
   geoJson: any;
   geoJsonLoading: boolean;
   geoMap: IGeoMap;
+  currentGeoMapKey: any;
 }
 
 export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoroplethVisState> {
@@ -41,7 +46,8 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
     this.state = {
       geoJson: null,
       geoJsonLoading: true,
-      geoMap: null
+      geoMap: null,
+      currentGeoMapKey: null
     };
   }
 
@@ -58,26 +64,51 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
     axios.get(geoMap.url).then(response => this.setState({ geoJson: response.data, geoJsonLoading: false, geoMap }));
   }
 
+  getGeoMap(xAxisDimension: IDimension, geoMapKey) {
+    const geoMap = xAxisDimension.geoMaps[geoMapKey];
+    if (!geoMap) return xAxisDimension.geoMaps[xAxisDimension.defaultGeoMapKey];
+    return geoMap;
+  }
+
+  handleXAxisChange = value => {
+    this.props.updateVisOptions(this.props.dataset, {
+      visType: this.props.visType,
+      seriesOptions: { xAxis: value, compareBy: null }
+    });
+  };
+
   componentDidMount() {
-    const { dataset, seriesOptions } = this.props;
+    const { seriesOptions, dataset } = this.props;
     const xAxisDimension = _.find(dataset.dimensions, { id: seriesOptions.xAxis }) as IDimension;
-    const geoMap = xAxisDimension.geoMaps[0];
+    const geoMapKey = seriesOptions.dimensionFilters[xAxisDimension.geoMapDependency];
+    const geoMap = this.getGeoMap(xAxisDimension, geoMapKey);
+    this.setState({ currentGeoMapKey: geoMapKey });
     this.fetchGeoJson(geoMap);
   }
 
   componentDidUpdate(prevProps: IChoroplethVisProp, prevState: IChoroplethVisState) {
-    if (this.state.geoMap !== prevState.geoMap) {
-      this.fetchGeoJson(this.state.geoMap);
+    const { seriesOptions, dataset } = this.props;
+    const xAxisDimension = _.find(dataset.dimensions, { id: seriesOptions.xAxis }) as IDimension;
+    const geoMapKey = seriesOptions.dimensionFilters[xAxisDimension.geoMapDependency];
+    if (this.state.currentGeoMapKey !== geoMapKey) {
+      const geoMap = this.getGeoMap(xAxisDimension, geoMapKey);
+      this.setState({ currentGeoMapKey: geoMapKey });
+      this.fetchGeoJson(geoMap);
+    } else if (seriesOptions.xAxis !== prevProps.seriesOptions.xAxis) {
+      const geoMap = this.getGeoMap(xAxisDimension, geoMapKey);
+      this.fetchGeoJson(geoMap);
     }
   }
 
   render() {
-    const { dataset, seriesOptions, series, xAxisCodes, loadingSeries, showButtons } = this.props;
+    const { dataset, seriesOptions, series, xAxisCodes, loadingSeries, showButtons, className } = this.props;
     const { dimensions, colorScheme } = dataset;
     const { geoJsonLoading, geoJson, geoMap } = this.state;
     const { codesByNotation } = xAxisCodes;
 
     const xAxisDimension = _.find(dimensions, { id: seriesOptions.xAxis }) as IDimension;
+    const geographicDimensions = dimensions.filter(dim => dim.type === 'geographic-area');
+    const geoMapKey = seriesOptions.dimensionFilters[xAxisDimension.geoMapDependency];
 
     if (geoJsonLoading || loadingSeries) {
       return <div />;
@@ -85,24 +116,30 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
 
     // tslint:disable:jsx-no-lambda
 
-    const levelButtons =
-      xAxisDimension.geoMaps.length === 0 ? (
-        ''
-      ) : (
-        <Button.Group className="map-level-button-group" basic>
-          {xAxisDimension.geoMaps.map(geo => (
-            <Button key={geo.level} active={geo === this.state.geoMap} onClick={() => this.setState({ geoMap: geo })}>
-              {translateEntityField(geo.name)}
-            </Button>
-          ))}
-        </Button.Group>
-      );
+    const xAxisButtons = (
+      <Button.Group className="map-xAxis-button-group" basic>
+        {geographicDimensions.map(dim => {
+          if (dim.geoMaps[geoMapKey]) {
+            return (
+              <Button key={dim.id} active={dim.geoMaps[geoMapKey] === geoMap} onClick={() => this.handleXAxisChange(dim.id)}>
+                {translateEntityField(dim.geoMaps[geoMapKey].name)}
+              </Button>
+            );
+          } else {
+            return (
+              <Button key={dim.id} active={dim.geoMaps[dim.defaultGeoMapKey] === geoMap} onClick={() => this.handleXAxisChange(dim.id)}>
+                {translateEntityField(dim.geoMaps[dim.defaultGeoMapKey].name)}
+              </Button>
+            );
+          }
+        })}
+      </Button.Group>
+    );
 
-    const levelSeriesPoints = series.data.filter(seriesPoint => codesByNotation[seriesPoint.x].level === geoMap.level);
-
-    if (levelSeriesPoints.length === 0) {
+    if (series.data.length === 0) {
       return (
-        <div>
+        <div className={className}>
+          {showButtons ? xAxisButtons : null}
           <Header as="h2" icon textAlign="center" style={{ marginTop: '165px', fontFamily: 'ProximaNovaBold' }}>
             <Icon name="database" />
             No data found
@@ -112,7 +149,7 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
       );
     }
 
-    const bounds = chroma.limits(levelSeriesPoints.map(seriesPoint => seriesPoint.y), 'q', 6);
+    const bounds = chroma.limits(series.data.map(seriesPoint => seriesPoint.y), 'q', 6);
     const colorScale = chroma.scale(['white', accentColors[colorScheme]]).classes(bounds);
 
     const dataClasses = [];
@@ -127,7 +164,15 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
       chart: {
         className: 'choropleth-map',
         zoomType: 'x',
-        style: { fontFamily: 'BPnoScript', fontWeight: 'bold' }
+        style: { fontFamily: 'BPnoScript', fontWeight: 'bold' },
+        resetZoomButton: {
+          position: {
+            align: 'right',
+            verticalAlign: 'top',
+            x: -15,
+            y: 40
+          }
+        }
       },
       title: {
         text: ''
@@ -169,7 +214,7 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
           mapData: geoJson,
           joinBy: ['id', 'key'],
           keys: ['id'],
-          data: levelSeriesPoints.map(seriesPoint => ({ key: seriesPoint.x, value: seriesPoint.y }))
+          data: series.data.map(seriesPoint => ({ key: seriesPoint.x, value: seriesPoint.y }))
         }
       ],
       exporting: {
@@ -188,8 +233,14 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
 
     return (
       <div>
-        {showButtons ? levelButtons : null}
-        <HighchartsReact highcharts={Highmaps} constructorType="mapChart" options={mapOptions as any} ref={this.innerChart} />
+        {showButtons ? xAxisButtons : null}
+        <HighchartsReact
+          containerProps={{ className }}
+          highcharts={Highmaps}
+          constructorType="mapChart"
+          options={mapOptions as any}
+          ref={this.innerChart}
+        />
       </div>
     );
   }

@@ -217,6 +217,8 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       xAxisCodes={dimensionCodes[seriesOptions.xAxis]}
                       loadingSeries={loadingSeries}
                       showButtons
+                      visType={visType}
+                      updateVisOptions={this.props.updateVisOptions}
                       ref={this.mapRef}
                     />
                   ) : (

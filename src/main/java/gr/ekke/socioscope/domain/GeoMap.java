@@ -8,22 +8,12 @@ public class GeoMap implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private int level = 0;
-
     @NotBlank
     private Map<String, @NotBlank String> name;
 
     private String url;
 
     public GeoMap() {
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
     }
 
     public Map<String, String> getName() {
@@ -45,7 +35,6 @@ public class GeoMap implements Serializable {
     @Override
     public String toString() {
         return "GeoMap{" +
-            "level=" + level +
             ", name=" + name +
             ", url='" + url + '\'' +
             '}';
