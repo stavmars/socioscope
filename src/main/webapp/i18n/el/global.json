@@ -154,7 +154,7 @@
       "title": "Επιστημονική Ομάδα",
       "iliou": {
         "name": "Κατερίνα Ηλιού",
-        "role": "Ερευνήτρια, ΕΚΚΕ, <a href=\"mailto:kiliou@ekke.gr\" target=\"_blank\">kiliou@ekke.gr</a>"
+        "role": "Κύρια Ερευνήτρια, ΕΚΚΕ, <a href=\"mailto:kiliou@ekke.gr\" target=\"_blank\">kiliou@ekke.gr</a>"
       },
       "theoni": {
         "name": "Θεώνη Σταθοπούλου",
@@ -170,7 +170,7 @@
       },
       "manina": {
         "name": "Μανίνα Κακεπάκη",
-        "role": "Ερευνήτρια, ΕΚΚΕ, <a href=\"mailto:mkakepaki@ekke.gr\" target=\"_blank\">mkakepaki@ekke.gr</a>"
+        "role": "Κύρια Ερευνήτρια, ΕΚΚΕ, <a href=\"mailto:mkakepaki@ekke.gr\" target=\"_blank\">mkakepaki@ekke.gr</a>"
       }
     },
     "sources": {
@@ -179,20 +179,24 @@
       "web": "Ιστότοποι"
     },
     "techTeam": {
-      "title": "Τεχνικοί Υπεύθυνοι",
+      "title": "Ομάδα Σχεδιασμού και Ανάπτυξης",
       "analysis": "Ανάλυση & Σχεδιασμός",
       "develop": "Ανάπτυξη Socioscope",
       "gpapas": {
         "name": "Γιώργος Παπαστεφανάτος",
-        "role": "Ερευνητικός Συνεργάτης, (Ε.Κ. ΑΘΗΝΑ), <a href=\"mailto:gpapas@athenarc.gr\" target=\"_blank\">gpapas@athenarc.gr</a>"
+        "role": "Κύριος Ερευνητής, Ε.Κ. ΑΘΗΝΑ, <a href=\"mailto:gpapas@athenarc.gr\" target=\"_blank\">gpapas@athenarc.gr</a>"
       },
       "stav": {
         "name": "Σταύρος Μαρούλης",
-        "role": "Ερευνητικός Συνεργάτης, (Ε.Κ. ΑΘΗΝΑ), <a href=\"mailto:stavmars@athenarc.gr\" target=\"_blank\">stavmars@athenarc.gr</a>"
+        "role": "Ερευνητικός Συνεργάτης, Ε.Κ. ΑΘΗΝΑ, <a href=\"mailto:stavmars@athenarc.gr\" target=\"_blank\">stavmars@athenarc.gr</a>"
       },
       "astgian": {
         "name": "Αστέρης Γιαννούδης",
         "role": "Ερευνητικός Συνεργάτης, (Ε.Κ. ΑΘΗΝΑ), <a href=\"mailto:astgian@athenarc.gr\" target=\"_blank\">astgian@athenarc.gr</a>"
+      },
+      "nmasouras": {
+        "name": "Νίκος Μασούρας",
+        "role": "Ερευνητικός Συνεργάτης, (Ε.Κ. ΑΘΗΝΑ), <a href=\"mailto:nmasouras@athenarc.gr\" target=\"_blank\">nmasouras@athenarc.gr</a>"
       }
     }
   },

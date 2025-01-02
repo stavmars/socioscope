@@ -155,7 +155,7 @@
       "title": "Scientific Team",
       "iliou": {
         "name": "Katerina Iliou",
-        "role": "Researcher, ΕΚΚΕ, <a href=\"mailto:kiliou@ekke.gr\" target=\"_blank\">kiliou@ekke.gr</a>"
+        "role": "Principal Researcher, ΕΚΚΕ, <a href=\"mailto:kiliou@ekke.gr\" target=\"_blank\">kiliou@ekke.gr</a>"
       },
       "theoni": {
         "name": "Theoni Stathopoulou",
@@ -167,11 +167,11 @@
       },
       "kand": {
         "name": "Giorgos Kandylis",
-        "role": "Main Researcher, <a href=\"mailto:gkandyli@ekke.gr\" target=\"_blank\">gkandyli@ekke.gr</a>"
+        "role": "Principal Researcher, <a href=\"mailto:gkandyli@ekke.gr\" target=\"_blank\">gkandyli@ekke.gr</a>"
       },
       "manina": {
         "name": "Manina Kakepaki",
-        "role": "Researcher, ΕΚΚΕ, <a href=\"mailto:mkakepaki@ekke.gr\" target=\"_blank\">mkakepaki@ekke.gr</a>"
+        "role": "Principal Researcher, ΕΚΚΕ, <a href=\"mailto:mkakepaki@ekke.gr\" target=\"_blank\">mkakepaki@ekke.gr</a>"
       }
     },
     "sources": {
@@ -180,20 +180,24 @@
       "web": "Web Pages"
     },
     "techTeam": {
-      "title": "Tech Team",
+      "title": "Design and Development Team",
       "analysis": "Analysis & Design",
       "develop": "Socioscope Development",
       "gpapas": {
         "name": "Giorgos Papastefanatos",
-        "role": "Research Associate, (ATHENA R.C.), <a href=\"mailto:gpapas@athenarc.gr\" target=\"_blank\">gpapas@athenarc.gr</a>"
+        "role": "Principal Researcher, ATHENA R.C., <a href=\"mailto:gpapas@athenarc.gr\" target=\"_blank\">gpapas@athenarc.gr</a>"
       },
       "stav": {
         "name": "Stavros Maroulis",
-        "role": "Research Associate, (ATHENA R.C.), <a href=\"mailto:stavmars@athenarc.gr\" target=\"_blank\">stavmars@athenarc.gr</a>"
+        "role": "Research Associate, ATHENA R.C., <a href=\"mailto:stavmars@athenarc.gr\" target=\"_blank\">stavmars@athenarc.gr</a>"
       },
       "astgian": {
         "name": "Asteris Giannoudis",
         "role": "Research Associate, (ATHENA R.C.), <a href=\"mailto:astgian@athenarc.gr\" target=\"_blank\">astgian@athenarc.gr</a>"
+      },
+      "nmasouras": {
+        "name": "Nikos Masouras",
+        "role": "Research Associate, (ATHENA R.C.), <a href=\"mailto:nmasouras@athenarc.gr\" target=\"_blank\">nmasouras@athenarc.gr</a>"
       }
     }
   },
