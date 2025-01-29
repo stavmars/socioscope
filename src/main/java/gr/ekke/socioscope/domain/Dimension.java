@@ -89,6 +89,8 @@ public class Dimension implements Serializable {
 
     private String defaultGeoMapKey;
 
+    private Boolean colorDimension;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Dimension() {
     }
@@ -325,6 +327,15 @@ public class Dimension implements Serializable {
         this.defaultGeoMapKey = defaultGeoMapKey;
     }
 
+    public Boolean getColorDimension() {
+        return colorDimension;
+    }
+
+    public void setColorDimension(Boolean colorDimension) {
+        this.colorDimension = colorDimension;
+    }
+
+
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -372,6 +383,7 @@ public class Dimension implements Serializable {
             ", allowThreshold='" + allowThreshold + '\'' +
             ", defaultGeoMapXAxis='" + defaultGeoMapXAxis + '\'' +
             ", defaultGeoMapKey='" + defaultGeoMapKey + '\'' +
+            ", colorDimension='" + colorDimension + '\'' +
             '}';
     }
 }

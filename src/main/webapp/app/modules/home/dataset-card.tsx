@@ -44,6 +44,7 @@ export class DatasetCard extends React.Component<IDatasetCardProps> {
                         showButtons={false}
                         visType={visType}
                         updateVisOptions={this.props.updateVisOptions}
+                        dimensionCodes={dimensionCodes}
                       />
                     ) : (
                       <ChartVis

@@ -27,6 +27,7 @@ export interface IChoroplethVisProp {
   loadingSeries: boolean;
   showButtons: boolean;
   visType: string;
+  dimensionCodes: any;
 
   updateVisOptions: typeof updateVisOptions;
 }
@@ -100,11 +101,38 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
     }
   }
 
+  findMapColor(dimensionFilters, dimensionCodes, dimensions) {
+    const filteredDimensionCodes = {};
+    let color = null;
+
+    const colorDimension = dimensions.find(dim => dim.colorDimension);
+
+    if (!colorDimension) return color;
+
+    for (const [key, value] of Object.entries(dimensionFilters)) {
+      if (value !== null && dimensionCodes[key]) {
+        const filteredCode = dimensionCodes[key].codesByNotation[String(value)];
+        if (filteredCode) {
+          filteredDimensionCodes[key] = filteredCode;
+        }
+      }
+    }
+
+    for (const [key, value] of Object.entries(filteredDimensionCodes)) {
+      if (key === colorDimension.id && value['color']) {
+        color = value['color'];
+        break;
+      }
+    }
+    return color;
+  }
+
   render() {
-    const { dataset, seriesOptions, series, xAxisCodes, loadingSeries, showButtons, className } = this.props;
+    const { dataset, seriesOptions, series, xAxisCodes, loadingSeries, showButtons, className, dimensionCodes } = this.props;
     const { dimensions, colorScheme } = dataset;
     const { geoJsonLoading, geoJson, geoMap } = this.state;
     const { codesByNotation } = xAxisCodes;
+    const mapColor = this.findMapColor(seriesOptions.dimensionFilters, dimensionCodes, dimensions);
 
     const xAxisDimension = _.find(dimensions, { id: seriesOptions.xAxis }) as IDimension;
     const geographicDimensions = dimensions.filter(dim => dim.type === 'geographic-area');
@@ -150,7 +178,9 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
     }
 
     const bounds = chroma.limits(series.data.map(seriesPoint => seriesPoint.y), 'q', 6);
-    const colorScale = chroma.scale(['white', accentColors[colorScheme]]).classes(bounds);
+    const colorScale = mapColor
+      ? chroma.scale(['white', mapColor]).classes(bounds)
+      : chroma.scale(['#edf8b1', '#7fcdbb', '#2c7fb8']).classes(bounds);
 
     const dataClasses = [];
     for (let i = 0; i < bounds.length - 1; i++) {

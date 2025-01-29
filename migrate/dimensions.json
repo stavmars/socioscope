@@ -110,7 +110,8 @@
     "disableStacking": true,
     "allowCompareCodes": true,
     "order": "value_desc",
-    "allowThreshold": true
+    "allowThreshold": true,
+    "colorDimension": true
   },
   {
     "id": "abstention",

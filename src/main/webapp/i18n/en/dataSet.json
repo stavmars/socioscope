@@ -36,6 +36,7 @@
           "filter": "… filtered by:",
           "filterPlaceholder": "Choose 1 or more filters",
           "compare": "… compare by:",
+          "compareOptions": "Select items to compare:",
           "options": "More Options",
           "thresholdTitle": "Minimum value"
         },

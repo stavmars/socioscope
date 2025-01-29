@@ -1,6 +1,6 @@
 import React from 'react';
 import './dataset-page.scss';
-import { Accordion, Divider, Dropdown, Grid, Icon, Image } from 'semantic-ui-react';
+import { Accordion, Divider, Dropdown, Grid, Icon, Image, Popup } from 'semantic-ui-react';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { QbDatasetFilters } from 'app/modules/dataset-page/qb-dataset-filters';
 import { RawDatasetFilters } from 'app/modules/dataset-page/raw-dataset-filters';
@@ -66,6 +66,18 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
     });
 
   handleOptions = () => this.setState({ moreOptions: !this.state.moreOptions });
+
+  normalizeText = (text: string) =>
+    text
+      .normalize('NFD') // Normalizes Unicode to decompose diacritics
+      .replace(/[\u0300-\u036f]/g, '') // Removes diacritic marks (accents)
+      .replace(/\./g, '') // Removes periods
+      .toLowerCase(); // Converts to lowercase
+
+  handleSearch = (options: any[], query: string) => {
+    const sanitizedQuery = this.normalizeText(query);
+    return options.filter(({ text }) => this.normalizeText(text).includes(sanitizedQuery));
+  };
 
   render() {
     const { dataset, seriesOptions, dimensionCodes, fetchedCodeLists, visType } = this.props;
@@ -138,16 +150,27 @@ export class VisSeriesOptionMenu extends React.Component<IVisSeriesOptionMenuPro
     const compareCodes = compareByDimension != null &&
       compareByDimension.allowCompareCodes && (
         <div className="vis-compare-options vis-options-menu-item">
+          <div className="vis-options-menu-label">{translate('socioscopeApp.dataSet.visualization.configure.compareOptions')}</div>
           <Dropdown
             className={`vis-options-dropdown ${colorScheme}`}
             onChange={this.handleCompareCodesChange}
             options={dimensionCodes[seriesOptions.compareBy].codes.map(code => ({
               key: code.notation,
               text: translateEntityField(code.name),
-              value: code.notation
+              value: code.notation,
+              content: (
+                <Popup
+                  content={translateEntityField(code.description)} // Popup for descriptions
+                  trigger={<span>{translateEntityField(code.name)}</span>} // Hover trigger
+                  disabled={
+                    !translateEntityField(code.description) || translateEntityField(code.description) === translateEntityField(code.name)
+                  }
+                  on="hover"
+                />
+              )
             }))}
             multiple
-            search
+            search={this.handleSearch}
             selection
             value={seriesOptions.compareCodes}
             fluid
