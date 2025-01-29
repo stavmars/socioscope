@@ -79,17 +79,17 @@ export class About extends React.Component<DispatchProps> {
                   <br />
                   <br />
                   <h2 id="techTeam">{translate('about.techTeam.title')}</h2>
-                  <h3>{translate('about.techTeam.analysis')}</h3>
                   <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.techTeam.gpapas.name')}</span> /{' '}
                   {translate('about.techTeam.gpapas.role')}
                   <br />
-                  <br />
-                  <h3>{translate('about.techTeam.develop')}</h3>
                   <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.techTeam.stav.name')}</span> /{' '}
                   {translate('about.techTeam.stav.role')}
                   <br />
                   <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.techTeam.astgian.name')}</span> /{' '}
                   {translate('about.techTeam.astgian.role')}
+                  <br />
+                  <span style={{ fontFamily: 'ProximaNovaBold' }}>{translate('about.techTeam.nmasouras.name')}</span> /{' '}
+                  {translate('about.techTeam.nmasouras.role')}
                 </div>
               </Grid.Column>
             </Grid.Row>
