@@ -28,12 +28,15 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
     const mapCodeToOption = code => ({
       id: code.notation,
       key: code.notation,
-      text:
-        translateEntityField(code.description) && translateEntityField(code.description) !== translateEntityField(code.name) ? (
-          <Popup content={translateEntityField(code.description)} trigger={<span>{translateEntityField(code.name)}</span>} />
-        ) : (
-          translateEntityField(code.name)
-        ),
+      text: translateEntityField(code.name),
+      content: (
+        <Popup
+          content={translateEntityField(code.description)}
+          trigger={<span>{translateEntityField(code.name)}</span>}
+          disabled={!translateEntityField(code.description) || translateEntityField(code.description) === translateEntityField(code.name)}
+          on="hover"
+        />
+      ),
       value: dimensionId + '$$$' + code.notation,
       className: `filter-option-level-0`
     });
@@ -45,6 +48,18 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
   constructor(props) {
     super(props);
   }
+
+  normalizeText = (text: string) =>
+    text
+      .normalize('NFD') // Normalizes Unicode to decompose diacritics
+      .replace(/[\u0300-\u036f]/g, '') // Removes diacritic marks (accents)
+      .replace(/\./g, '') // Removes periods
+      .toLowerCase(); // Converts to lowercase
+
+  handleSearch = (options: any[], query: string) => {
+    const sanitizedQuery = this.normalizeText(query);
+    return options.filter(({ text }) => this.normalizeText(text).includes(sanitizedQuery));
+  };
 
   render() {
     const { dataset, dimensionCodes, seriesOptions } = this.props;
@@ -100,7 +115,7 @@ export class QbDatasetFilters extends React.Component<IQbDatasetFiltersProp> {
                   onChange={this.handleFilterChange(dimension)}
                   options={dropdownOptions}
                   selection
-                  search
+                  search={this.handleSearch}
                   placeholder={translateEntityField(dimension.noFilterText)}
                   fluid
                   clearable={!dimension.required}

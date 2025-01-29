@@ -26,6 +26,7 @@ export interface IDimension {
   defaultGeoMapXAxis?: boolean;
   geoMapDependency?: string;
   defaultGeoMapKey?: string;
+  colorDimension?: boolean;
 }
 
 export interface IGeoMap {

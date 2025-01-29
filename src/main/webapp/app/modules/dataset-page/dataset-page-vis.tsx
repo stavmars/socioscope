@@ -220,6 +220,7 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
                       visType={visType}
                       updateVisOptions={this.props.updateVisOptions}
                       ref={this.mapRef}
+                      dimensionCodes={dimensionCodes}
                     />
                   ) : (
                     <ChartVis
