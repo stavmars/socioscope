@@ -6,7 +6,7 @@ import _ from 'lodash';
 import { IDimension, IGeoMap } from 'app/shared/model/dimension.model';
 import { IDataSet } from 'app/shared/model/data-set.model';
 import { ISeries } from 'app/shared/model/series.model';
-import { ISeriesOptions } from 'app/shared/model/series-options.model';
+import { ISeriesOptions, IDimensionFilters } from 'app/shared/model/series-options.model';
 import { updateVisOptions } from '../dataset-page/dataset-page-reducer';
 import axios from 'axios';
 import chroma from 'chroma-js';
@@ -39,6 +39,39 @@ export interface IChoroplethVisState {
   currentGeoMapKey: any;
 }
 
+const parseDimensionFilters = (dimensions: IDimension[], dimensionFilters: IDimensionFilters, dimensionCodes: any) => {
+  let result = '';
+  for (const dimensionFilter in dimensionFilters) {
+    if (dimensionFilters.hasOwnProperty(dimensionFilter)) {
+      const dimension = _.keyBy(dimensions, 'id')[dimensionFilter];
+      result +=
+        translateEntityField(dimension.name) +
+        ': ' +
+        (dimensionFilters[dimensionFilter] !== null
+          ? translateEntityField(dimensionCodes[dimension.id].codesByNotation[dimensionFilters[dimensionFilter]].name)
+          : '') +
+        ', ';
+    }
+  }
+  return result.substr(0, result.length - 2);
+};
+
+export const getChartTitle = (dataset: IDataSet, seriesOptions: ISeriesOptions) => {
+  const { xAxis, compareBy } = seriesOptions;
+  const xAxisDimension = _.find(dataset.dimensions, { id: xAxis }) as IDimension;
+
+  return (
+    translateEntityField(dataset.name) +
+    ': ' +
+    translateEntityField(xAxisDimension.name) +
+    (compareBy ? ' - ' + translateEntityField(_.find(dataset.dimensions, { id: compareBy }).name) : '')
+  );
+};
+
+export const getChartSubTitle = (seriesOptions: ISeriesOptions, dimensions: IDimension[], dimensionCodes: any) =>
+  !_.isEmpty(seriesOptions.dimensionFilters)
+    ? `(${parseDimensionFilters(dimensions, seriesOptions.dimensionFilters, dimensionCodes)})`
+    : '';
 export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoroplethVisState> {
   innerChart = React.createRef<HighchartsReact>();
 
@@ -57,7 +90,22 @@ export class ChoroplethMapVis extends React.Component<IChoroplethVisProp, IChoro
   }
 
   exportChart(type) {
-    this.innerChart.current.chart.exportChart({ type }, {});
+    const { dataset, seriesOptions, dimensionCodes } = this.props;
+    this.innerChart.current.chart.exportChart(
+      { type },
+      {
+        title: {
+          useHTML: false,
+          text: getChartTitle(dataset, seriesOptions),
+          style: {
+            fontSize: '25px'
+          }
+        },
+        subtitle: {
+          text: getChartSubTitle(seriesOptions, dataset.dimensions, dimensionCodes)
+        }
+      }
+    );
   }
 
   fetchGeoJson(geoMap: IGeoMap) {
