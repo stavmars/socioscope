@@ -97,7 +97,7 @@
       {
         "id": "noudou_tmp",
         "description": {
-          "el": "Το <span class=\"text-accent\">υψηλότερο ποσοστό</span> που έχει λάβει ποτέ κάποιο κόμμα μεταπολιτευτικά, το έλαβε η <span class=\"text-accent\">Νέα Δημοκρατία</span> στις <span class=\"text-accent\">εκλογές του 1974</span> στην εκλογική <span class=\"text-accent\">περιφέρεια Λακωνίας</span>, όπου και συγκέντρωσε το <span class=\"text-accent\">76,04%</span> των ψήφων. Στις ίδιες εκλογές, το  <span class=\"text-accent\">χαμηλότερο ποσοστό</span> του κόμματος ήταν στην <span class=\"text-accent\">εκλογική περιφέρεια Χανίων</span> ( <span class=\"text-accent\">15,26%</span>).",
+          "el": "Το <span class=\"text-accent\">υψηλότερο ποσοστό</span> που έχει λάβει ποτέ κάποιο κόμμα μεταπολιτευτικά, το έλαβε η <span class=\"text-accent\">Νέα Δημοκρατία</span> στις <span class=\"text-accent\">εκλογές του 1974</span> στην εκλογική <span class=\"text-accent\">περιφέρεια Λακωνίας</span>, όπου και συγκέντρωσε το <span class=\"text-accent\">76,04%</span> των ψήφων. Στις ίδιες εκλογές, το  <span class=\"text-accent\">χαμηλότερο ποσοστό</span> του κόμματος ήταν στην εκλογική<span class=\"text-accent\"> περιφέρεια Χανίων</span> ( <span class=\"text-accent\">15,26%</span>).",
           "en": "The <span class=\"text-accent\">highest percentage</span> ever received by a party post-dictatorship was achieved by <span class=\"text-accent\">New Democracy</span> in the <span class=\"text-accent\">1974 elections</span> in the <span class=\"text-accent\">Laconica electoral district</span>, where it secured <span class=\"text-accent\">76.04%</span> of the votes. In the same elections, the party’s <span class=\"text-accent\">lowest percentage</span> was recorded in the <span class=\"text-accent\">Chania electoral district</span> (<span class=\"text-accent\">15.26% of the votes</span>)."
         },
         "visType": "chart",
@@ -116,18 +116,14 @@
   {
     "id": "greek-election-results",
     "name": {
-      "el": "Αποτελέσματα Εθνικών Εκλογών (1996 – 2019)",
-      "en": "National Election Results (1996 - 2019)"
+      "el": "Αποτελέσματα Εθνικών Εκλογών (1974 – 2019)",
+      "en": "National Election Results (1974 - 2019)"
     },
     "type": "qb",
     "colorScheme": "color-scheme-1",
     "comment": {
-      "el": "Το σύνολο δεδομένων περιλαμβάνει όλα τα επίσημα εκλογικά αποτελέσματα των Εθνικών Εκλογών (Σεπτέμβριος 1996 - Ιούλιος 2019). Δίνεται η δυνατότητα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης σε επίπεδο Εκλογικής Περιφέρειας και από το 2000 και έπειτα και σε επίπεδο Καλλικρατικού Δήμου.<br /><br /><h3>ΜΕΘΟΔΟΛΟΓΙΚΗ ΕΠΙΣΗΜΑΝΣΗ:</h3>Σε περιπτώσεις που ένα κόμμα αλλάζει ονομασία, είτε λόγω εκλογικής συνεργασίας είτε κατόπιν σχετικής πολιτικής απόφασης, για λόγους ευχερέστερης αποτύπωσης της εκλογικής επιρροής του διαχρονικά, διατηρείται ο αρχικός τίτλος. Για παράδειγμα, το ΠΑΣΟΚ κατέρχεται τον Σεπτέμβριο του 2015 ως «Δημοκρατική Συμπαράταξη» και τον Ιούλιο του 2019 ως «Κίνημα Αλλαγής». Ωστόσο στα γραφήματα διατηρούμε την ονομασία ΠΑΣΟΚ για όλη την περίοδο αναφοράς.<br /><br /><h3>ΕΠΙΣΤΗΜΟΝΙΚΗ ΟΜΑΔΑ:</h3>Υπεύθυνη έργου: Μανίνα Κακεπάκη (<a href=\"mailto:mkakepaki@ekke.gr\" target=\"_blank\">mkakepaki@ekke.gr</a>)<br />Ομάδα Έργου: Κωστής Πιερίδης, Σταύρος Σκρίνης",
-      "en": "The data set includes all the official election results of the National Elections (September 1996 - July 2019). Users have the option to produce graphs and maps at the level of the electoral district and, after the 2000 elections, also at the level of Municipality.<br /><br /><h3>METHODOLOGICAL NOTE:</h3>In some cases, parties change their names, either because they become part of an electoral coalition, or because of a political decision. For reasons of clarity and better mapping of their electoral strength over time, we keep the original name as a label throughout the years (e.g., PASOK, which in September 2015 becomes Democratic Alliance and in July 2019 Movement of Change – KIN.AL, remains as PASOK thoughout the period).<br /><br /><h3>THE TEAM:</h3>Scientific investigator: Manina Kakepaki(<a href=\"mailto:mkakepaki@ekke.gr\" target=\"_blank\">mkakepaki@ekke.gr</a>)<br />Researchers: Costis Pierides, Stavros Skrinis"
-    },
-    "sources": {
-      "el": "Singular Logic, Υπουργείο Εσωτερικών – Διεύθυνση Εκλογών.",
-      "en": "Singular Logic, Ministry of Interior – Department of Elections."
+      "el": "Το σύνολο δεδομένων περιλαμβάνει όλα τα επίσημα εκλογικά αποτελέσματα των Εθνικών Εκλογών (Νοέμβριος 1974 - Ιούλιος 2019). Δίνεται η δυνατότητα οπτικής ανάλυσης και χαρτογραφικής αναπαράστασης σε επίπεδο Εκλογικής Περιφέρειας και από το 2000 και έπειτα και σε επίπεδο Καλλικρατικού Δήμου.<br /><br /><h3>ΜΕΘΟΔΟΛΟΓΙΚΕΣ ΕΠΙΣΗΜΑΝΣΕΙΣ:</h3><p>Για τις εκλογές της περιόδου 1974-1993 οι υπολογισμοί προέκυψαν μετά από λογικούς ελέγχους και διορθώσεις στα έντυπα τεύχη των εκλογών, επομένως ενδέχεται να υπάρχουν πολύ μικρές παραλλαγές/αποκλίσεις από άλλες πηγές.</p><p>Σε περιπτώσεις που ένα κόμμα αλλάζει ονομασία, είτε λόγω εκλογικής συνεργασίας είτε κατόπιν σχετικής πολιτικής απόφασης, για λόγους ευχερέστερης αποτύπωσης της εκλογικής επιρροής του διαχρονικά, διατηρείται ο αρχικός τίτλος. Για παράδειγμα, το ΠΑΣΟΚ κατέρχεται τον Σεπτέμβριο του 2015 ως «Δημοκρατική Συμπαράταξη» και τον Ιούλιο του 2019 ως «Κίνημα Αλλαγής». Ωστόσο στα γραφήματα διατηρούμε την ονομασία ΠΑΣΟΚ για όλη την περίοδο αναφοράς.</p><br /><h3>ΕΠΙΣΤΗΜΟΝΙΚΗ ΟΜΑΔΑ Α ΦΑΣΗΣ ΕΡΓΟΥ:</h3>Υπεύθυνη έργου: Μανίνα Κακεπάκη (<a href=\"mailto:mkakepaki@ekke.gr\" target=\"_blank\">mkakepaki@ekke.gr</a>)<br />Εξωτερικοί συνεργάτες ΕΚΚΕ: Κωστής Πιερίδης, Σταύρος Σκρίνης<br /><br /><h3>Πηγές:</h3>Singular Logic, Υπουργείο Εσωτερικών – Διεύθυνση Εκλογών.<br /><br /><h3>ΕΠΙΣΤΗΜΟΝΙΚΗ ΟΜΑΔΑ Β ΦΑΣΗΣ ΕΡΓΟΥ:</h3>Υπεύθυνη έργου: Μανίνα Κακεπάκη, Κύρια Ερευνήτρια ΙΠΕ/ΕΚΚΕ (<a href=\"mailto:mkakepaki@ekke.gr\" target=\"_blank\">mkakepaki@ekke.gr</a>)<br /><br />Διόρθωση και επιμέλεια εκλογικών αποτελεσμάτων 1974-1993:<br />Δανάη Κολτσίδα (Εξωτερική Συνεργάτις ΙΠΕ/ΕΚΚΕ)<br /> Νίκος Σαρρής (Ερευνητής ΙΠΕ/ΕΚΚΕ)<br /><br />Ψηφιοποίηση και οπτικοποίηση δεδομένων, ανάπτυξη θεματικής:<br />Γιώργος Παπαστεφανάτος (Κύριος Ερευνητής, ΙΠΣΥ/Ε.Κ. ΑΘΗΝΑ)<br /> Σταύρος Μαρούλης (Μεταδιδακτορικός ερευνητής, ΙΠΣΥ/Ε.Κ. ΑΘΗΝΑ)<br />Νίκος Μασούρας, (Ερευνητικός συνεργάτης, ΙΠΣΥ/Ε.Κ. ΑΘΗΝΑ)<br /><br /><h3>Πηγές:</h3>Τόμοι Αποτελεσμάτων Βουλευτικών Εκλογών 1974, 1977, 1981, 1985, Ιούνιος 1989, Νοέμβριος 1989, 1990, 1993. Υπουργείο Εσωτερικών - Διεύθυνση Εκλογών (Αθήνα, Εθνικό Τυπογραφείο)<br /><br /><h3>Χρηματοδότηση Β Φάσης Έργου:</h3>Έργο «Προγραμματική Σύμβαση μεταξύ του Ελληνικού Δημοσίου (Υπουργείο Εσωτερικών) και του ΕΚΚΕ».",
+      "en": "The data set includes the official results of the National Elections (November 1974 - July 2019). Users have the option to produce graphs and maps at the level of an electoral district and, after the 2000 elections, at the level of a Municipality.<br /><br /><h3>METHODOLOGICAL NOTE:</h3><p>For the elections held between 1974 and 1993, all results were based on validations and corrections made to the printed records; therefore, there may be minor variations or deviations compared to other sources.</p><p>In some cases, parties change their names, either due to their inclusion in an electoral coalition, or because of a political decision. For clarity and better mapping of their electoral strength over time, we retained the original name as a label throughout the years (e.g., PASOK, became the Democratic Alliance in September 2015 and the Movement of Change – KIN.AL in July 2019, remains labeled as PASOK throughout the period).</p><br /><h3>THE TEAM (PHASE A):</h3>Project Leader: Manina Kakepaki(<a href=\"mailto:mkakepaki@ekke.gr\" target=\"_blank\">mkakepaki@ekke.gr</a>)<br />Research assistants: Costis Pierides, Stavros Skrinis <br /><br /><h3>Sources:</h3>Singular Logic, Ministry of Interior – Election Directorate.<br /><br /><h3>THE TEAM (PHASE B):</h3>Project Leader: Manina Kakepaki, Senior Researcher, IPE/EKKE(<a href=\"mailto:mkakepaki@ekke.gr\" target=\"_blank\">mkakepaki@ekke.gr</a>)<br /><br />Editing and corrections of electoral results 1974-1993:<br /> Danae Koltsida (Research assistant, IPE/EKKE)<br /> Nikos Sarris (Researcher, IPE/EKKE)<br /><br /> Digitization, data visualization and platform development:<br /> George Papastefanatos (Principal Researcher, IMSI/ATHENA Research Center)<br /> Stavros Maroulis (Postdoctoral Researcher, IMSI/ATHENA Research Center)<br /> Nikos Masouras (Research Collaborator, IMSI/ATHENA Research Center)<br /><br /><h3>Sources:</h3>Volumes of Results for Parliamentary Elections 1974, 1977, 1981, 1985, June 1989, November 1989, 1990, 1993. Ministry of Interior - Election Directorate (Athens, National Printing House)<br /><br /><h3>Funding for Phase B:</h3>Project “Programmatic Agreement between the Greek State (Ministry of Interior) and EKKE.”"
     },
     "dimensions": [
       {
@@ -215,31 +211,16 @@
       {
         "id": "noudou",
         "description": {
-          "el": "<span>Στις <span class=\"text-accent\">εκλογές του 2019</span> η <span class=\"text-accent\">Νέα Δημοκρατία</span> κατέγραψε ποσοστό <span class=\"text-accent\">45,8%</span> στην <span class=\"text-accent\">Β1 Περιφέρεια Βορείου Τομέα</span>. Μετά το 1996 αυτό είναι <span class=\"text-accent\">το δεύτερο υψηλότερο ποσοστό</span> που έχει καταγράψει το κόμμα σε εκλογική περιφέρεια του <span class=\"text-accent\">Λεκανοπεδίου Αττικής</span>, με πρώτο το <span class=\"text-accent\">46,3%</span> στην <span class=\"text-accent\">Α΄ Πειραιώς</span> τον <span class=\"text-accent\">Μάρτιο του 2004</span>.</span>",
-          "en": "<span>In <span class=\"text-accent\">2019</span>, <span class=\"text-accent\">ND</span> gained a <span class=\"text-accent\">45.8%</span> share of votes in the <span class=\"text-accent\">Athens B1 – North Athens Constituency</span>. After 1996, this is <span class=\"text-accent\">the second highest share</span> of the party in an <span class=\"text-accent\">Attica constituency</span>, the <span class=\"text-accent\">highest being 46.3%</span> at the <span class=\"text-accent\">Piraeus A Constituency</span> in <span class=\"text-accent\">March 2004</span>.</span>"
+          "el": "Το <span class=\"text-accent\">υψηλότερο ποσοστό</span> που έχει λάβει ποτέ κάποιο κόμμα μεταπολιτευτικά, το έλαβε η <span class=\"text-accent\">Νέα Δημοκρατία</span> στις <span class=\"text-accent\">εκλογές του 1974</span> στην εκλογική <span class=\"text-accent\">περιφέρεια Λακωνίας</span>, όπου και συγκέντρωσε το <span class=\"text-accent\">76,04%</span> των ψήφων. Στις ίδιες εκλογές, το  <span class=\"text-accent\">χαμηλότερο ποσοστό</span> του κόμματος ήταν στην εκλογική<span class=\"text-accent\"> περιφέρεια Χανίων</span> ( <span class=\"text-accent\">15,26%</span>).",
+          "en": "The <span class=\"text-accent\">highest percentage</span> ever received by a party post-dictatorship was achieved by <span class=\"text-accent\">New Democracy</span> in the <span class=\"text-accent\">1974 elections</span> in the <span class=\"text-accent\">Laconica electoral district</span>, where it secured <span class=\"text-accent\">76.04%</span> of the votes. In the same elections, the party’s <span class=\"text-accent\">lowest percentage</span> was recorded in the <span class=\"text-accent\">Chania electoral district</span> (<span class=\"text-accent\">15.26% of the votes</span>)."
         },
         "visType": "chart",
         "subType": "column",
         "seriesOptions": {
-          "xAxis": "elections",
-          "compareBy": "constituency",
-          "compareCodes": [
-            "38",
-            "63",
-            "40",
-            "39",
-            "64",
-            "41",
-            "60",
-            "61",
-            "62",
-            "42"
-          ],
+          "xAxis": "constituency",
           "dimensionFilters": {
-            "municipality": null,
-            "party": "nd",
-            "abstention": null,
-            "invalid_vote": null
+            "elections": "12",
+            "party": "nd"
           },
           "measure": "votes_perc"
         }

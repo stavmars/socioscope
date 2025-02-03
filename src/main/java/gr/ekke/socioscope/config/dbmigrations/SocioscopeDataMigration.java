@@ -251,4 +251,15 @@ public class SocioscopeDataMigration {
         bulkOperations.insert(observations);
         bulkOperations.execute();
     }
+
+    @ChangeSet(order = "20", author = "initiator", id = "addObservationsbtmpData")
+    public void addObservationsbtmpData(MongoTemplate mongoTemplate, Environment environment) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        File file = new File(environment.getProperty("application.migrate-data-path") + "/observationsb-tmp.json");
+        TypeFactory typeFactory = mapper.getTypeFactory();
+        List<Observation> observations = mapper.readValue(file, typeFactory.constructCollectionType(List.class, Observation.class));
+        BulkOperations bulkOperations = mongoTemplate.bulkOps(BulkOperations.BulkMode.UNORDERED, Observation.class);
+        bulkOperations.insert(observations);
+        bulkOperations.execute();
+    }
 }
