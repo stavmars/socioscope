@@ -2422,6 +2422,384 @@
     "color": ""
   },
   {
+    "dimensionId": "party-tmp",
+    "notation": "social",
+    "name": {
+      "el": "SOCIAL",
+      "en": "SOCIAL"
+    },
+    "description": {
+      "el": "SOCIAL Σύγχρονο Δημοκρατικό Κόμμα",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "anatropi",
+    "name": {
+      "el": "ΑΝΑΤΡΟΠΗ",
+      "en": "ANATROPI"
+    },
+    "description": {
+      "el": "Ανατροπή",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "vorlega",
+    "name": {
+      "el": "ΒΟΡ. ΛΕΓΚΑ",
+      "en": "Vor. Lega"
+    },
+    "description": {
+      "el": "Βόρεια Λέγκα - Κράμα",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "ean",
+    "name": {
+      "el": "ΕΑΝ...",
+      "en": "EAN..."
+    },
+    "description": {
+      "el": "ΕΑΝ...",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "ethnikdhm",
+    "name": {
+      "el": "ΕΘΝΙΚ. ΔΗΜ.",
+      "en": "Ethnik. Dhm."
+    },
+    "description": {
+      "el": "Εθνική Δημιουργία Θάνος Τζήμερος",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "eleftheroiksana",
+    "name": {
+      "el": "ΕΛΕΥΘΕΡΟΙ",
+      "en": "Eleftheroi"
+    },
+    "description": {
+      "el": "Ελεύθεροι Ξανά",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "ell_orama",
+    "name": {
+      "el": "ΕΛΛ. ΟΡΑΜΑ",
+      "en": "Ell. Orama"
+    },
+    "description": {
+      "el": "Ελληνικό Όραμα",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "en_a",
+    "name": {
+      "el": "ΕΝ.Α.",
+      "en": "EN. A."
+    },
+    "description": {
+      "el": "Ενότητα - Αλήθεια ΕΝ.Α.",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "kin_ftoxon",
+    "name": {
+      "el": "ΚΙΝ. ΦΤΩΧΩΝ",
+      "en": "KIN. FTOXON"
+    },
+    "description": {
+      "el": "Κίνημα Φτωχών Ελλάδος",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "kinima21",
+    "name": {
+      "el": "Κίνημα 21",
+      "en": "Kinima 21"
+    },
+    "description": {
+      "el": "Κίνημα 21",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "koin_aksion",
+    "name": {
+      "el": "κοιν.αξιών",
+      "en": "koin. aksion"
+    },
+    "description": {
+      "el": "κοιν.αξιών",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "nea_domh",
+    "name": {
+      "el": "ΝΕΑ ΔΟΜΗ",
+      "en": "NEA DOMH"
+    },
+    "description": {
+      "el": "Νέα Δομή",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "nikh",
+    "name": {
+      "el": "ΝΙΚΗ",
+      "en": "NIKH"
+    },
+    "description": {
+      "el": "Νίκη",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "pnoh_dhm",
+    "name": {
+      "el": "ΠΝΟΗ ΔΗΜ.",
+      "en": "PNOH DHM."
+    },
+    "description": {
+      "el": "Πνοή Δημοκρατίας - Δημήτριος Κούβελας",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "pol_prot",
+    "name": {
+      "el": "ΠΟΛ. ΠΡΩΤ",
+      "en": "POL. PROT"
+    },
+    "description": {
+      "el": "Πολιτική Πρωτοβουλία",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "prasino",
+    "name": {
+      "el": "ΠΡΑΣΙΝΟ",
+      "en": "PRASINO"
+    },
+    "description": {
+      "el": "Πράσινο και Μώβ",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "sym_eley",
+    "name": {
+      "el": "ΣΥΜ. ΕΛΕΥΘ",
+      "en": "SYM. ELEY."
+    },
+    "description": {
+      "el": "Ενώνω Συμμαχία Ελευθερίας",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "tolma",
+    "name": {
+      "el": "Τ.ΟΛ.ΜΑ",
+      "en": "T. OL. MA"
+    },
+    "description": {
+      "el": "Τώρα Όλοι Μαζί",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "ethnmet",
+    "name": {
+      "el": "ΕΘΝ. ΜΕΤ.",
+      "en": "ETHN. MET."
+    },
+    "description": {
+      "el": "Εθνικό Μέτωπο",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "eukinisi",
+    "name": {
+      "el": "ΕΥ – ΚΙΝΗΣΗ",
+      "en": "EY-KINISI"
+    },
+    "description": {
+      "el": "ΕΥ – ΚΙΝΗΣΗ",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "lek",
+    "name": {
+      "el": "Λ.Ε.Κ.",
+      "en": "L.E.K"
+    },
+    "description": {
+      "el": "Λαϊκό Ευρωπαϊκό Κόμμα",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "orama",
+    "name": {
+      "el": "ΟΡΑΜΑ",
+      "en": "ORAMA"
+    },
+    "description": {
+      "el": "Όραμα Αναγέννησης Ελλάδος",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "patriotiko",
+    "name": {
+      "el": "ΠΑΤΡΙΩΤΙΚΟ",
+      "en": "PATRIOTIKO"
+    },
+    "description": {
+      "el": "Πατριωτικός Συνασπισμός",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "republic",
+    "name": {
+      "el": "Ρεπουμπλικ",
+      "en": "Republic"
+    },
+    "description": {
+      "el": "Ρεπουμπλικανικό Κόμμα Ελλάδος - Τ.Ρ.Α.Μ.Π.",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "spartiates",
+    "name": {
+      "el": "ΣΠΑΡΤΙΑΤΕΣ",
+      "en": "Spartiates"
+    },
+    "description": {
+      "el": "Σπαρτιάτες",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "foni_logikis",
+    "name": {
+      "el": "ΦΩΝΗ ΛΟΓΙΚΗΣ",
+      "en": "Foni logikis"
+    },
+    "description": {
+      "el": "Φωνή Λογικής",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "party-tmp",
+    "notation": "psifellolon",
+    "name": {
+      "el": "Ψηφ.Ελλ.'Ολον",
+      "en": "Psif.Ell. Olon"
+    },
+    "description": {
+      "el": "Ψηφιακός Ελληνισμός εν το Όλον",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
     "dimensionId": "constituency-tmp",
     "notation": "2",
     "name": {
@@ -3514,6 +3892,34 @@
     "color": ""
   },
   {
+    "dimensionId": "municipality-tmp",
+    "notation": "1211405",
+    "name": {
+      "el": "Δήμος Σερβίων ",
+      "en": "Municipality of Servia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "municipality-tmp",
+    "notation": "1211406",
+    "name": {
+      "el": "Δήμος Βελβεντού",
+      "en": "Municipality of Velvendos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
     "dimensionId": "constituency-tmp",
     "notation": "17",
     "name": {
@@ -4355,6 +4761,20 @@
   },
   {
     "dimensionId": "municipality-tmp",
+    "notation": "2312605",
+    "name": {
+      "el": "Δήμος Μετεώρων",
+      "en": "Municipality of Meteora"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "municipality-tmp",
     "notation": "2312603",
     "name": {
       "el": "Δήμος Πύλης",
@@ -4471,6 +4891,20 @@
     "name": {
       "el": "Δήμος Μώλου - Αγίου Κωνσταντίνου",
       "en": "Municipality of Molos-Aghios Konstantinos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "municipality-tmp",
+    "notation": "2322708",
+    "name": {
+      "el": "Καμμένων Βούρλων",
+      "en": "Municipality Kammena Vourla"
     },
     "description": {
       "el": "",
@@ -4844,6 +5278,48 @@
     "color": ""
   },
   {
+    "dimensionId": "municipality-tmp",
+    "notation": "2413203",
+    "name": {
+      "el": "Δήμος Βόρειας Κέρκυρας",
+      "en": "Municipality of Voria Kerkyra"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "municipality-tmp",
+    "notation": "2413204",
+    "name": {
+      "el": "Δήμος Κεντρικής Κέρκυρας και Διαποντίων Νήσων",
+      "en": "Municipality of Kentriki Kerkyra and Diapontian Islands"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "municipality-tmp",
+    "notation": "2413205",
+    "name": {
+      "el": "Δήμος Νότιας Κέρκυρας",
+      "en": "Municipality of Notia Kerkyra"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
     "dimensionId": "constituency-tmp",
     "notation": "29",
     "name": {
@@ -4905,6 +5381,48 @@
     "name": {
       "el": "Δήμος Κεφαλονιάς",
       "en": "Municipality of Kefalonia"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "municipality-tmp",
+    "notation": "2413701",
+    "name": {
+      "el": "Δήμος Αργοστολίου",
+      "en": "Municipality of Argostoli"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "municipality-tmp",
+    "notation": "2413801",
+    "name": {
+      "el": "Δήμος Ληξουρίου",
+      "en": "Municipality of Lixouri"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "municipality-tmp",
+    "notation": "2413901",
+    "name": {
+      "el": "Δήμος Σάμης",
+      "en": "Municipality of Sami"
     },
     "description": {
       "el": "",
@@ -6720,6 +7238,34 @@
     "color": ""
   },
   {
+    "dimensionId": "municipality-tmp",
+    "notation": "4615302",
+    "name": {
+      "el": "Δήμος Δυτικής Λέσβου",
+      "en": "Municipality of Dytikh Lesvos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "municipality-tmp",
+    "notation": "4615303",
+    "name": {
+      "el": "Δήμος Μυτιλήνης",
+      "en": "Municipality of Mytilini"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
     "dimensionId": "constituency-tmp",
     "notation": "50",
     "name": {
@@ -6795,6 +7341,34 @@
     "name": {
       "el": "Δήμος Σάμου",
       "en": "Municipality of Samos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "municipality-tmp",
+    "notation": "4615602",
+    "name": {
+      "el": "Δήμος Ανατολικής Σάμου",
+      "en": "Municipality of Anatoliki Samos"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
+  },
+  {
+    "dimensionId": "municipality-tmp",
+    "notation": "4615603",
+    "name": {
+      "el": "Δήμος Δυτικής Σάμου",
+      "en": "Municipality of Dytikh Samos"
     },
     "description": {
       "el": "",
@@ -7783,7 +8357,6 @@
     "order": 2,
     "color": ""
   },
-
   {
     "dimensionId": "elections-tmp",
     "notation": "16",
@@ -8006,6 +8579,34 @@
       "en": ""
     },
     "order": 18,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections-tmp",
+    "notation": "19",
+    "name": {
+      "el": "Μάιος 2023",
+      "en": "May 2023"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": 19,
+    "color": ""
+  },
+  {
+    "dimensionId": "elections-tmp",
+    "notation": "20",
+    "name": {
+      "el": "Ιούνιος 2023",
+      "en": "June 2023"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": 20,
     "color": ""
   },
   {
