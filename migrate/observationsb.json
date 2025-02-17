@@ -9312,7 +9312,7 @@
   {
     "datasetId": "greek-election-results",
     "dimensions": [{ "id": "elections", "value": "12" }, { "id": "constituency", "value": "22" }, { "id": "party", "value": "other" }],
-    "measures": { "votes_perc": 0.03, "votes": 40 }
+    "measures": { "votes_perc": 0.00, "votes": 5 }
   },
   {
     "datasetId": "greek-election-results",

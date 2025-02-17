@@ -8678,5 +8678,19 @@
     },
     "order": "",
     "color": ""
+  },
+  {
+    "dimensionId": "constituency-tmp",
+    "notation": "65",
+    "name": {
+      "el": "Εξωτερικού",
+      "en": "Overseas"
+    },
+    "description": {
+      "el": "",
+      "en": ""
+    },
+    "order": "",
+    "color": ""
   }
 ]

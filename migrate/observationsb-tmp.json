@@ -14577,7 +14577,7 @@
       { "id": "constituency-tmp", "value": "22" },
       { "id": "party-tmp", "value": "other" }
     ],
-    "measures": { "votes_perc": 0.03, "votes": 40 }
+    "measures": { "votes_perc": 0.00, "votes": 5 }
   },
   {
     "datasetId": "greek-election-results-tmp",
