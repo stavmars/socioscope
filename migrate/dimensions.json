@@ -166,6 +166,14 @@
       "10": {
           "name": { "el": "Εκλογικές Περιφέρειες", "en": "Constituencies" },
           "url": "content/geo/constituencies_2019.json"
+        },
+      "19": {
+          "name": { "el": "Εκλογικές Περιφέρειες", "en": "Constituencies" },
+          "url": "content/geo/constituencies_2019.json"
+        },
+      "20": {
+          "name": { "el": "Εκλογικές Περιφέρειες", "en": "Constituencies" },
+          "url": "content/geo/constituencies_2019.json"
         }
     }
   },
@@ -260,7 +268,17 @@
       "0": {
           "name": {"el": "Δήμοι", "en": "Municipalities"},
           "url": "content/geo/municipalities.json"
-        }
+        },
+      "19": {
+          "name": {"el": "Δήμοι", "en": "Municipalities"},
+          "url": "content/geo/cleisthenes.json"
+  
+        },
+      "20": {
+          "name": {"el": "Δήμοι", "en": "Municipalities"},
+          "url": "content/geo/cleisthenes.json"
+  
+        }  
     }
   },
   {
