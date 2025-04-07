@@ -172,6 +172,7 @@ export class VisToolbar extends React.Component<IVisToolBarProp, IVisToolBarStat
                       <Dropdown.Item text="JPEG" onClick={() => this.props.exportChartOrMap('jpeg')} />
                       <Dropdown.Item text="SVG" onClick={() => this.props.exportChartOrMap('svg')} />
                       <Dropdown.Item text="PDF" onClick={() => this.props.exportChartOrMap('pdf')} />
+                      {visType === 'chart' && <Dropdown.Item text="CSV" onClick={() => this.props.exportChartOrMap('csv')} />}
                     </Dropdown.Menu>
                   </Dropdown>
                 </List.Item>

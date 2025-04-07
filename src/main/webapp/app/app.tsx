@@ -2,10 +2,10 @@ import 'semantic-ui-css/semantic.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import './app.scss';
 
-import React from 'react';
-import ReactGA from 'react-ga';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga4';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, withRouter, RouteComponentProps } from 'react-router-dom';
 import { toast, ToastContainer, ToastPosition } from 'react-toastify';
 import { IRootState } from 'app/shared/reducers';
 import { getSession } from 'app/shared/reducers/authentication';
@@ -35,12 +35,29 @@ import MobileMenu from './modules/mobile/mobile-menu';
 import MobileVisMenu from './modules/mobile/mobile-vis-menu';
 import CookieConsent from 'react-cookie-consent';
 
-ReactGA.initialize('UA-77335447-1');
+ReactGA.initialize('G-FTJN2BFBR7');
+
+const GAListener = withRouter(({ history }: RouteComponentProps) => {
+  useEffect(
+    () => {
+      const unlisten = history.listen(location => {
+        ReactGA.send({ hitType: 'pageview', page: location.pathname + location.search });
+      });
+
+      return () => unlisten();
+    },
+    [history]
+  );
+
+  return null;
+});
 
 export interface IAppProps extends StateProps, DispatchProps {}
 
 export class App extends React.Component<IAppProps> {
   componentDidMount() {
+    ReactGA.send({ hitType: 'pageview', page: window.location.pathname + window.location.search });
+
     this.props.getSession();
     this.props.getProfile();
     this.props.getEntities();
@@ -61,12 +78,6 @@ export class App extends React.Component<IAppProps> {
       </div>
     ) : null;
 
-  tracker = ({ location }) => {
-    ReactGA.set({ page: location.pathname });
-    ReactGA.pageview(location.pathname);
-    return null;
-  };
-
   // tslint:disable:jsx-no-lambda
   render() {
     const baseHref = document
@@ -86,7 +97,7 @@ export class App extends React.Component<IAppProps> {
       return (
         <Router basename={baseHref}>
           <div>
-            <Route render={this.tracker} />
+            <GAListener />
             {this.props.isHeaderVisible &&
               !this.props.isTopicsMenuVisible &&
               !this.props.isMobileMenuVisible && (

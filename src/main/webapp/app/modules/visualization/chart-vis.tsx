@@ -17,8 +17,10 @@ import HC_exporting from 'highcharts/modules/exporting';
 import moment from 'moment';
 import { translate } from 'react-jhipster';
 import Slider from 'rc-slider';
+import HC_exportData from 'highcharts/modules/export-data';
 
 HC_exporting(Highcharts);
+HC_exportData(Highcharts);
 
 export interface IChartVisProp {
   className?: string;
@@ -145,21 +147,38 @@ export class ChartVis extends React.Component<IChartVisProp, IChartVisState> {
 
   exportChart(type) {
     const { dataset, seriesOptions, dimensionCodes } = this.props;
-    this.innerChart.current.chart.exportChart(
-      { type },
-      {
-        title: {
-          useHTML: false,
-          text: getChartTitle(dataset, seriesOptions),
-          style: {
-            fontSize: '25px'
+
+    if (this.innerChart.current && this.innerChart.current.chart) {
+      const chart = this.innerChart.current.chart;
+
+      if (type === 'csv') {
+        const csvContent = chart.getCSV();
+
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement('a');
+        const url = URL.createObjectURL(blob);
+        link.href = url;
+        link.download = 'chart_data.csv';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      } else {
+        chart.exportChart(
+          { type },
+          {
+            title: {
+              useHTML: false,
+              text: getChartTitle(dataset, seriesOptions),
+              style: { fontSize: '25px' }
+            },
+            subtitle: {
+              text: getChartSubTitle(seriesOptions, dataset.dimensions, dimensionCodes)
+            }
           }
-        },
-        subtitle: {
-          text: getChartSubTitle(seriesOptions, dataset.dimensions, dimensionCodes)
-        }
+        );
       }
-    );
+    }
   }
 
   shouldComponentUpdate(nextProps, nextState) {

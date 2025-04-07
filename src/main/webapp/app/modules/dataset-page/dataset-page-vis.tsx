@@ -107,6 +107,9 @@ export class DatasetPageVis extends React.Component<IDatasetPageVisProp> {
       case 'print':
         ref.printChart();
         break;
+      case 'csv':
+        ref.exportChart('csv');
+        break;
       default:
         break;
     }
