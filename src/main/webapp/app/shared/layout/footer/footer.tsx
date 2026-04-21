@@ -98,8 +98,10 @@ const Footer = () => (
               </Image.Group>
             </Grid.Column>
             <Grid.Column computer={4} tablet={3}>
-              <div style={{ height: 25 }} />
-              <Image src={localeImage()} />
+              <div className="app-footer-logos-stack">
+                <Image src="/content/images/Assets/Greece-2.0_NextGeneration_gr_1.jpg" />
+                <Image src={localeImage()} />
+              </div>
             </Grid.Column>
           </Grid.Row>
         </Grid>

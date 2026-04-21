@@ -38,3 +38,16 @@
     }
   }
 }
+
+.app-footer-logos-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  img {
+    height: 50px;
+    width: auto;
+    max-width: 100%;
+  }
+}
